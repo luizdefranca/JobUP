@@ -725,8 +725,6 @@
     <Content Include="bower_components\datatables-responsive\.bower.json" />
     <Content Include="bower_components\datatables-responsive\bower.json" />
     <Content Include="bower_components\datatables-responsive\css\dataTables.responsive.scss" />
-    <Content Include="bower_components\datatables-responsive\examples\.DS_Store" />
-    <Content Include="bower_components\datatables-responsive\examples\initialisation\.DS_Store" />
     <Content Include="bower_components\datatables-responsive\make.sh" />
     <Content Include="bower_components\datatables-responsive\Readme.md" />
     <Content Include="bower_components\datatables\.bower.json" />
