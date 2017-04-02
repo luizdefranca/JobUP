@@ -1,0 +1,63 @@
+﻿@model IEnumerable<JOB.WEB.Models.UsuarioViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RgUF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RgNR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_NASCIMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APROVADO)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RgUF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RgNR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DT_NASCIMENTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APROVADO)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID_USUARIO }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID_USUARIO }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID_USUARIO })
+            </td>
+        </tr>
+    }
+</table>
