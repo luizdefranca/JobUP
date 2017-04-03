@@ -1,14 +1,13 @@
 ﻿using JOB.DATA;
 using JOB.DATA.Domain;
-using System.Collections.Generic;
+using JsonNet.PrivateSettersContractResolvers;
+using Newtonsoft.Json;
 using System.Data.Entity;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using System.Linq;
-using System.Net.Http;
-using System.Net;
-using System.Net.Http.Formatting;
-using Newtonsoft.Json;
 
 namespace JOB.API.Controllers
 {
@@ -38,31 +37,60 @@ namespace JOB.API.Controllers
         //}
 
         [HttpPost]
-        public HttpResponseMessage Post(FormDataCollection form)
+        public HttpResponseMessage Post(HttpRequestMessage request)
         {
-            var values = form.Get("values");
+            var values = request.Content.ReadAsStringAsync().Result;
 
-            var obj = new object();
-            JsonConvert.PopulateObject(values, obj);
+            var settings = new JsonSerializerSettings
+            {
+                ContractResolver = new PrivateSetterContractResolver(),
+                ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
+            };
+
+            var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
 
             Validate(obj);
             if (!ModelState.IsValid)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            ctx.Usuario.Add((USUARIO)obj);
+            ctx.Usuario.Add(obj);
             ctx.SaveChanges();
 
             return Request.CreateResponse(HttpStatusCode.Created);
         }
 
         // PUT: api/Usuario/5
-        public void Put(int id, [FromBody]string value)
+        public async Task<HttpResponseMessage> Put(int id, HttpRequestMessage request)
         {
+            var values = request.Content.ReadAsStringAsync().Result;
+
+            var settings = new JsonSerializerSettings
+            {
+                ContractResolver = new PrivateSetterContractResolver()
+            };
+
+            var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
+
+            item.AtualizaDados(obj.NOME, obj.CPF, obj.RG, obj.DT_NASCIMENTO);
+            ctx.Entry(item).State = EntityState.Modified;
+
+            Validate(item);
+            if (!ModelState.IsValid)
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+
+            await ctx.SaveChangesAsync();
+
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
 
         // DELETE: api/Usuario/5
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
+            var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+
+            ctx.Usuario.Remove(item);
+            await ctx.SaveChangesAsync();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using JOB.DATA.ValueObject;
+using Newtonsoft.Json;
 using System;
 
 namespace JOB.DATA.Domain
@@ -8,6 +9,7 @@ namespace JOB.DATA.Domain
         /// <summary>
         /// ENTITY
         /// </summary>
+        [JsonConstructor]
         protected USUARIO()
         {
             this.InicializaVariaveis();
@@ -25,6 +27,19 @@ namespace JOB.DATA.Domain
 
             this.DT_INCLUSAO = DateTime.Now;
             this.DT_ORDENACAO = DateTime.Now;
+        }
+
+        public void AtualizaDados(string NOME, CPF CPF, RG RG, DateTime DT_NASCIMENTO)
+        {
+            this.InicializaVariaveis();
+
+            this.NOME = NOME;
+            this.CPF = CPF;
+            this.CPF = CPF;
+            this.RG = RG;
+            this.DT_NASCIMENTO = DT_NASCIMENTO;
+
+            this.DT_ALTERACAO = DateTime.Now;
         }
 
         private void InicializaVariaveis()
