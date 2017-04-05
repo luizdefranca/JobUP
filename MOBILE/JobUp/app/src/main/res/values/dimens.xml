@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="standard_margin">16dp</dimen>
-    <dimen name="small_image_size">24dp</dimen>
-    <dimen name="mediun_image_size">48dp</dimen>
-    <dimen name="big_image_size">96dp</dimen>
-</resources>
