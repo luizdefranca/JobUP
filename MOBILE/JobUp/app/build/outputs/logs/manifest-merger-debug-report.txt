@@ -1,0 +1,103 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:3:5-34
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+application
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:5:5-26:19
+MERGED from [com.android.support:appcompat-v7:25.3.0] /Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /Users/luizramos/.android/build-cache/57d835635f5a8b15b37a726964c6c5cd7b4311e8/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /Users/luizramos/.android/build-cache/58a9b116502600453dbd3e4688fde8828969e654/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.0] /Users/luizramos/.android/build-cache/aae72036a8c9c6447bc3f54034b89f41b4f6fc2a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.0] /Users/luizramos/.android/build-cache/a7c96d8d8faff312a031c8a58416b4447b3d05e1/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.0] /Users/luizramos/.android/build-cache/3a8a0b0accaf5119089f01df5fb9a4e5575c1d85/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.0] /Users/luizramos/.android/build-cache/a50fa4797bacef495135a644ad4c0e4e94acf19b/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.0] /Users/luizramos/.android/build-cache/35f06c6ad4c6ddd0c2f9053cb8f3851a49a65d8f/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.0] /Users/luizramos/.android/build-cache/78e90be4c837e5ae20d7971bec77959f5a774bc8/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:9:5-20
+MERGED from [com.mikhaellopez:circularimageview:2.0.1] /Users/luizramos/.android/build-cache/91d8652bb5865a707a42da3e94c9907343f9668c/output/AndroidManifest.xml:11:5-13:38
+	android:label
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:9-40
+activity#br.com.workup.jobup.LoginActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:9-21:20
+	android:screenOrientation
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:14:13-49
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:19-48
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:18:27-74
+activity#br.com.workup.jobup.RegistrationActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:9-24:20
+	android:screenOrientation
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:56-92
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:19-55
+activity#br.com.workup.jobup.MainActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:25:9-96
+	android:screenOrientation
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:25:48-84
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:25:19-47
+uses-sdk
+INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.3.0] /Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /Users/luizramos/.android/build-cache/57d835635f5a8b15b37a726964c6c5cd7b4311e8/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /Users/luizramos/.android/build-cache/58a9b116502600453dbd3e4688fde8828969e654/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.3.0] /Users/luizramos/.android/build-cache/aae72036a8c9c6447bc3f54034b89f41b4f6fc2a/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.0] /Users/luizramos/.android/build-cache/a7c96d8d8faff312a031c8a58416b4447b3d05e1/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.0] /Users/luizramos/.android/build-cache/3a8a0b0accaf5119089f01df5fb9a4e5575c1d85/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.0] /Users/luizramos/.android/build-cache/a50fa4797bacef495135a644ad4c0e4e94acf19b/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.0] /Users/luizramos/.android/build-cache/35f06c6ad4c6ddd0c2f9053cb8f3851a49a65d8f/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.0] /Users/luizramos/.android/build-cache/78e90be4c837e5ae20d7971bec77959f5a774bc8/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.mikhaellopez:circularimageview:2.0.1] /Users/luizramos/.android/build-cache/91d8652bb5865a707a42da3e94c9907343f9668c/output/AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.0] /Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.0] /Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /Users/luizramos/.android/build-cache/57d835635f5a8b15b37a726964c6c5cd7b4311e8/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /Users/luizramos/.android/build-cache/58a9b116502600453dbd3e4688fde8828969e654/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.0] /Users/luizramos/.android/build-cache/aae72036a8c9c6447bc3f54034b89f41b4f6fc2a/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.0] /Users/luizramos/.android/build-cache/a7c96d8d8faff312a031c8a58416b4447b3d05e1/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.0] /Users/luizramos/.android/build-cache/3a8a0b0accaf5119089f01df5fb9a4e5575c1d85/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.0] /Users/luizramos/.android/build-cache/a50fa4797bacef495135a644ad4c0e4e94acf19b/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.0] /Users/luizramos/.android/build-cache/35f06c6ad4c6ddd0c2f9053cb8f3851a49a65d8f/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.0] /Users/luizramos/.android/build-cache/78e90be4c837e5ae20d7971bec77959f5a774bc8/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.0] /Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.0] /Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/AndroidManifest.xml:26:9-47

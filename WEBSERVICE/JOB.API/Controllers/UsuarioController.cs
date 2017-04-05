@@ -31,11 +31,6 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        //// POST: api/Usuario
-        //public void Post([FromBody]string value)
-        //{
-        //}
-
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {

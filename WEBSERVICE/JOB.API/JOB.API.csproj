@@ -97,6 +97,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ContatoController.cs" />
+    <Compile Include="Controllers\EnderecoController.cs" />
+    <Compile Include="Controllers\AvaliacaoController.cs" />
+    <Compile Include="Controllers\FormacaoController.cs" />
+    <Compile Include="Controllers\PerfilProfissionalController.cs" />
+    <Compile Include="Controllers\EspecialidadeController.cs" />
+    <Compile Include="Controllers\UsuarioFullController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -116,7 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">
