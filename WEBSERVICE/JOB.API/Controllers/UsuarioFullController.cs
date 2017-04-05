@@ -11,14 +11,14 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
-    public class UsuarioController : ApiController
+    public class UsuarioFullController : ApiController
     {
         private Contexto ctx = new Contexto();
 
         // GET: api/Usuario
         public HttpResponseMessage Get()
         {
-            var result = ctx.Usuario.ToList();
+            var result = ctx.Usuario.Include(i => i.ENDERECO).Include(i => i.CONTATO).ToList();
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
@@ -26,7 +26,7 @@ namespace JOB.API.Controllers
         // GET: api/Usuario/5
         public HttpResponseMessage Get(int id)
         {
-            var result = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var result = ctx.Usuario.Include(i => i.ENDERECO).Include(i => i.CONTATO).FirstOrDefault(w => w.ID_USUARIO == id);
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }

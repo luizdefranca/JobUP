@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Infrastructure.Annotations;
 using System.Data.Entity.ModelConfiguration;
 
-namespace JOB.DATA
+namespace JOB.DATA.Config
 {
     public class UsuarioConfig : EntityTypeConfiguration<USUARIO>
     {
@@ -27,6 +27,19 @@ namespace JOB.DATA
             Property(p => p.RG.NR)
                 .HasMaxLength(8)
                 .IsRequired();
+
+            HasOptional(n => n.ENDERECO)
+                .WithRequired(n => n.USUARIO)
+                .WillCascadeOnDelete(true);
+
+            HasOptional(n => n.CONTATO)
+                .WithRequired(n => n.USUARIO)
+                .WillCascadeOnDelete(true);
+
+            HasMany(n => n.PERFIS_PROFISSIONAIS)
+                .WithRequired(n => n.USUARIO)
+                .HasForeignKey(n => n.ID_USUARIO)
+                .WillCascadeOnDelete(true);
         }
     }
 }

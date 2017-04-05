@@ -1,39 +1,39 @@
 ﻿using AgendaCirurgicaBeta.Domain.Core;
 using JOB.DATA.ValueObject;
+using Newtonsoft.Json;
 
-namespace AgendaCirurgicaBeta.Domain.Entities
+namespace JOB.DATA.Domain
 {
     public class CONTATO : EntityBase
     {
-        //public EnumTipoContato TIPO { get; protected set; }
-        public string VALOR { get; protected set; }
-    }
-
-    public class CONTATO_UNIDADE : CONTATO
-    {
-        protected CONTATO_UNIDADE()
+        /// <summary>
+        /// ENTITY
+        /// </summary>
+        [JsonConstructor]
+        protected CONTATO()
         {
         }
 
-        public CONTATO_UNIDADE(int ID_HOSPITAL, int ID_UNIDADE, string VALOR)
+        public CONTATO(int ID_USUARIO, Telefone FIXO, Telefone CELULAR, Email EMAIL)
         {
-            //this.ID_HOSPITAL = ID_HOSPITAL;
-            //this.ID_UNIDADE = ID_UNIDADE;
-            //base.TIPO = TIPO;
-            base.VALOR = VALOR;
+            this.ID_USUARIO = ID_USUARIO;
+            this.FIXO = FIXO;
+            this.CELULAR = CELULAR;
+            this.EMAIL = EMAIL;
         }
 
-        public void AtualizarValor(string VALOR)
+        public void AtualizarValor(Telefone FIXO, Telefone CELULAR, Email EMAIL)
         {
-            base.VALOR = VALOR;
+            this.FIXO = FIXO;
+            this.CELULAR = CELULAR;
+            this.EMAIL = EMAIL;
         }
 
         public int ID_USUARIO { get; private set; }
-        public Telefone FIXO { get; set; }
+        public Telefone FIXO { get; private set; }
+        public Telefone CELULAR { get; private set; }
+        public Email EMAIL { get; private set; }
 
-        public Telefone CELULAR { get; set; }
-        public Email EMAIL { get; set; }
-
-        //public UNIDADE_HOSPITAL UNIDADE { get; private set; }
+        public USUARIO USUARIO { get; private set; }
     }
 }

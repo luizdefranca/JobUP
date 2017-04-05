@@ -1,44 +1,37 @@
 ﻿using AgendaCirurgicaBeta.Domain.Core;
 using JOB.DATA.Enum;
 using JOB.HELPERS.Validation;
+using Newtonsoft.Json;
 
-namespace AgendaCirurgicaBeta.Domain.Entities
+namespace JOB.DATA.Domain
 {
-    public class ENDERECO : EntityBase
+    public class ENDERECO: EntityBase
     {
-        public int ID_USUARIO { get; set; }
-
-        //public EnumTipoEndereco TIPO { get; protected set; }
-        public EnumUF UF { get; protected set; }
-
-        public string CEP { get; protected set; }
-        public string LOGRADOURO { get; protected set; }
-        public string COMPLEMENTO { get; protected set; }
-        public string BAIRRO { get; protected set; }
-        public string CIDADE { get; protected set; }
-    }
-
-    public class ENDERECO_MEDICO : ENDERECO
-    {
-        protected ENDERECO_MEDICO()
+        /// <summary>
+        /// ENTITY
+        /// </summary>
+        [JsonConstructor]
+        protected ENDERECO()
         {
+            this.InicializaVariaveis();
         }
 
-        public ENDERECO_MEDICO(int ID, EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
+        public ENDERECO(int ID_USUARIO, EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
         {
             AssertionConcern.AssertArgumentNotEmptyNotNull(CEP, "CEP");
             AssertionConcern.AssertArgumentNotEmptyNotNull(LOGRADOURO, "LOGRADOURO");
             AssertionConcern.AssertArgumentNotEmptyNotNull(BAIRRO, "BAIRRO");
             AssertionConcern.AssertArgumentNotEmptyNotNull(CIDADE, "CIDADE");
 
-            this.ID = ID;
-            //base.TIPO = TIPO;
-            base.UF = UF;
-            base.CEP = CEP;
-            base.LOGRADOURO = LOGRADOURO;
-            base.COMPLEMENTO = COMPLEMENTO;
-            base.BAIRRO = BAIRRO;
-            base.CIDADE = CIDADE;
+            this.InicializaVariaveis();
+
+            this.ID_USUARIO = ID_USUARIO;
+            this.UF = UF;
+            this.CEP = CEP;
+            this.LOGRADOURO = LOGRADOURO;
+            this.COMPLEMENTO = COMPLEMENTO;
+            this.BAIRRO = BAIRRO;
+            this.CIDADE = CIDADE;
         }
 
         public void AtualizaValores(EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
@@ -48,16 +41,28 @@ namespace AgendaCirurgicaBeta.Domain.Entities
             AssertionConcern.AssertArgumentNotEmptyNotNull(BAIRRO, "BAIRRO");
             AssertionConcern.AssertArgumentNotEmptyNotNull(CIDADE, "CIDADE");
 
-            base.UF = UF;
-            base.CEP = CEP;
-            base.LOGRADOURO = LOGRADOURO;
-            base.COMPLEMENTO = COMPLEMENTO;
-            base.BAIRRO = BAIRRO;
-            base.CIDADE = CIDADE;
+            this.UF = UF;
+            this.CEP = CEP;
+            this.LOGRADOURO = LOGRADOURO;
+            this.COMPLEMENTO = COMPLEMENTO;
+            this.BAIRRO = BAIRRO;
+            this.CIDADE = CIDADE;
         }
 
-        public int ID { get; private set; }
+        private void InicializaVariaveis()
+        {
+            //this.GUIAS = new HashSet<GUIA>();
+        }
 
-        //public MEDICO MEDICO { get; private set; }
+        public int ID_USUARIO { get; private set; }
+        public EnumUF UF { get; private set; }
+        public string CEP { get; private set; }
+        public string LOGRADOURO { get; private set; }
+        public string COMPLEMENTO { get; private set; }
+        public string BAIRRO { get; private set; }
+        public string CIDADE { get; private set; }
+
+
+        public USUARIO USUARIO { get; private set; }
     }
 }

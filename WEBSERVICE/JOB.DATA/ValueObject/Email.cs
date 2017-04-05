@@ -4,10 +4,18 @@ using System.Text.RegularExpressions;
 
 namespace JOB.DATA.ValueObject
 {
-    public sealed class Email
+    public class Email
     {
         public const int EnderecoMaxLength = 254;
         public string EMail { get; private set; }
+
+        /// <summary>
+        /// usado pelo entity framework
+        /// </summary>
+        protected Email()
+        {
+
+        }
 
         public Email(string endereco)
         {

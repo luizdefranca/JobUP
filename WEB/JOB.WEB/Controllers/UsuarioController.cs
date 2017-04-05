@@ -13,13 +13,14 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using System.Linq;
 
 namespace JOB.WEB.Controllers
 {
     public class UsuarioController : Controller
     {
         private const string _apiUrl = "http://jobapi.azurewebsites.net/api/usuario/";
-        //private const string _apiUrl2 = "http://localhost:54087/api/usuario/";
+        private const string _apiUrl2 = "http://localhost:54087/api/usuario/";
 
         // GET: Usuario
         public async Task<ActionResult> Index()
@@ -94,7 +95,7 @@ namespace JOB.WEB.Controllers
             {
                 var newobj = new USUARIO(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(_apiUrl);
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(_apiUrl2);
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
 

@@ -11,22 +11,22 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
-    public class UsuarioController : ApiController
+    public class FormacaoController : ApiController
     {
         private Contexto ctx = new Contexto();
 
         // GET: api/Usuario
-        public HttpResponseMessage Get()
+        public HttpResponseMessage Get(int idUsuario, int idEspecialidade)
         {
-            var result = ctx.Usuario.ToList();
+            var result = ctx.Formacao.Where(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade).ToList();
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
         // GET: api/Usuario/5
-        public HttpResponseMessage Get(int id)
+        public HttpResponseMessage Get(int idUsuario, int idEspecialidade, int idFormacao)
         {
-            var result = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var result = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
@@ -42,20 +42,20 @@ namespace JOB.API.Controllers
                 ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
             };
 
-            var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
+            var obj = JsonConvert.DeserializeObject<FORMACAO>(values, settings);
 
             Validate(obj);
             if (!ModelState.IsValid)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            ctx.Usuario.Add(obj);
+            ctx.Formacao.Add(obj);
             ctx.SaveChanges();
 
             return Request.CreateResponse(HttpStatusCode.Created);
         }
 
         // PUT: api/Usuario/5
-        public async Task<HttpResponseMessage> Put(int id, HttpRequestMessage request)
+        public async Task<HttpResponseMessage> Put(int idUsuario, int idEspecialidade, int idFormacao, HttpRequestMessage request)
         {
             var values = request.Content.ReadAsStringAsync().Result;
 
@@ -64,10 +64,10 @@ namespace JOB.API.Controllers
                 ContractResolver = new PrivateSetterContractResolver()
             };
 
-            var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
-            var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
+            var item = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);
+            var obj = JsonConvert.DeserializeObject<FORMACAO>(values, settings);
 
-            item.AtualizaDados(obj.NOME, obj.CPF, obj.RG, obj.DT_NASCIMENTO);
+            item.AtualizaDados(obj.INSTITUICAO, obj.NOME_CURSO, obj.ANO_FORMACAO);
             ctx.Entry(item).State = EntityState.Modified;
 
             Validate(item);
@@ -80,11 +80,11 @@ namespace JOB.API.Controllers
         }
 
         // DELETE: api/Usuario/5
-        public async Task Delete(int id)
+        public async Task Delete(int idUsuario, int idEspecialidade, int idFormacao)
         {
-            var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var item = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);
 
-            ctx.Usuario.Remove(item);
+            ctx.Formacao.Remove(item);
             await ctx.SaveChangesAsync();
         }
     }

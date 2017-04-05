@@ -11,22 +11,22 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
-    public class UsuarioController : ApiController
+    public class EnderecoController : ApiController
     {
         private Contexto ctx = new Contexto();
 
-        // GET: api/Usuario
-        public HttpResponseMessage Get()
-        {
-            var result = ctx.Usuario.ToList();
+        //// GET: api/Usuario
+        //public HttpResponseMessage Get()
+        //{
+        //    var result = ctx.Endereco.ToList();
 
-            return Request.CreateResponse(HttpStatusCode.OK, result);
-        }
+        //    return Request.CreateResponse(HttpStatusCode.OK, result);
+        //}
 
         // GET: api/Usuario/5
         public HttpResponseMessage Get(int id)
         {
-            var result = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var result = ctx.Endereco.FirstOrDefault(w => w.ID_USUARIO == id);
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
@@ -42,13 +42,13 @@ namespace JOB.API.Controllers
                 ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
             };
 
-            var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
+            var obj = JsonConvert.DeserializeObject<ENDERECO>(values, settings);
 
             Validate(obj);
             if (!ModelState.IsValid)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            ctx.Usuario.Add(obj);
+            ctx.Endereco.Add(obj);
             ctx.SaveChanges();
 
             return Request.CreateResponse(HttpStatusCode.Created);
@@ -64,10 +64,10 @@ namespace JOB.API.Controllers
                 ContractResolver = new PrivateSetterContractResolver()
             };
 
-            var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
-            var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
+            var item = ctx.Endereco.FirstOrDefault(w => w.ID_USUARIO == id);
+            var obj = JsonConvert.DeserializeObject<ENDERECO>(values, settings);
 
-            item.AtualizaDados(obj.NOME, obj.CPF, obj.RG, obj.DT_NASCIMENTO);
+            item.AtualizaValores(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
             ctx.Entry(item).State = EntityState.Modified;
 
             Validate(item);
@@ -82,9 +82,9 @@ namespace JOB.API.Controllers
         // DELETE: api/Usuario/5
         public async Task Delete(int id)
         {
-            var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var item = ctx.Endereco.FirstOrDefault(w => w.ID_USUARIO == id);
 
-            ctx.Usuario.Remove(item);
+            ctx.Endereco.Remove(item);
             await ctx.SaveChangesAsync();
         }
     }

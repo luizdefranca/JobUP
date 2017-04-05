@@ -1,10 +1,12 @@
-﻿using JOB.DATA.ValueObject;
+﻿using AgendaCirurgicaBeta.Domain.Core;
+using JOB.DATA.ValueObject;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 
 namespace JOB.DATA.Domain
 {
-    public class USUARIO
+    public class USUARIO : EntityBase
     {
         /// <summary>
         /// ENTITY
@@ -40,11 +42,18 @@ namespace JOB.DATA.Domain
             this.DT_NASCIMENTO = DT_NASCIMENTO;
 
             this.DT_ALTERACAO = DateTime.Now;
+            this.APROVADO = false;
+        }
+
+        public void Aprovar()
+        {
+            this.APROVADO = true;
+            this.DT_APROVACAO = DateTime.Now;
         }
 
         private void InicializaVariaveis()
         {
-            //this.GUIAS = new HashSet<GUIA>();
+            this.PERFIS_PROFISSIONAIS = new HashSet<PERFIL_PROFISSIONAL>();
         }
 
         public int ID_USUARIO { get; private set; }
@@ -66,5 +75,11 @@ namespace JOB.DATA.Domain
         public DateTime DT_ORDENACAO { get; private set; }
 
         public bool APROVADO { get; private set; }
+
+        public ENDERECO ENDERECO { get; private set; }
+
+        public CONTATO CONTATO { get; private set; }
+
+        public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; private set; }
     }
 }

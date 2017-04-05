@@ -11,22 +11,22 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
-    public class UsuarioController : ApiController
+    public class PerfilProfissionalController : ApiController
     {
         private Contexto ctx = new Contexto();
 
         // GET: api/Usuario
-        public HttpResponseMessage Get()
+        public HttpResponseMessage Get(int idUsuario)
         {
-            var result = ctx.Usuario.ToList();
+            var result = ctx.PerfilProfissional.Where(w => w.ID_USUARIO == idUsuario).ToList();
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
         // GET: api/Usuario/5
-        public HttpResponseMessage Get(int id)
+        public HttpResponseMessage Get(int idUsuario, int idEspecialidade)
         {
-            var result = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var result = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
@@ -42,20 +42,20 @@ namespace JOB.API.Controllers
                 ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
             };
 
-            var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
+            var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
 
             Validate(obj);
             if (!ModelState.IsValid)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            ctx.Usuario.Add(obj);
+            ctx.PerfilProfissional.Add(obj);
             ctx.SaveChanges();
 
             return Request.CreateResponse(HttpStatusCode.Created);
         }
 
         // PUT: api/Usuario/5
-        public async Task<HttpResponseMessage> Put(int id, HttpRequestMessage request)
+        public async Task<HttpResponseMessage> Put(int idUsuario, int idEspecialidade, HttpRequestMessage request)
         {
             var values = request.Content.ReadAsStringAsync().Result;
 
@@ -64,10 +64,10 @@ namespace JOB.API.Controllers
                 ContractResolver = new PrivateSetterContractResolver()
             };
 
-            var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
-            var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
+            var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
+            var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
 
-            item.AtualizaDados(obj.NOME, obj.CPF, obj.RG, obj.DT_NASCIMENTO);
+            item.AtualizaValores(obj.RESUMO_CURRICULO);
             ctx.Entry(item).State = EntityState.Modified;
 
             Validate(item);
@@ -80,11 +80,11 @@ namespace JOB.API.Controllers
         }
 
         // DELETE: api/Usuario/5
-        public async Task Delete(int id)
+        public async Task Delete(int idUsuario, int idEspecialidade)
         {
-            var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
 
-            ctx.Usuario.Remove(item);
+            ctx.PerfilProfissional.Remove(item);
             await ctx.SaveChangesAsync();
         }
     }
