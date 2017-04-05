@@ -6,13 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.com.workup.jobup.LoginActivity"
-    android:padding="@dimen/standard_margin">
+    android:padding="@dimen/standard_margin"
+    style="@style/AppTheme">
 
     <android.support.v7.widget.AppCompatImageView
-        android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/big_image_size"
+        android:layout_height="@dimen/big_image_size"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/standard_margin"/>
+        android:layout_marginBottom="@dimen/standard_margin"
+        android:src="@drawable/logo_jobup"/>
     <EditText
         android:id="@+id/edt_txt_login"
         android:layout_width="match_parent"

@@ -1,12 +1,25 @@
 <resources>
     <string name="app_name">JobUp</string>
 
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="rescue_password">Forgot your password?</string>
     <string name="login">Login</string>
     <string name="login_facebook">Login with Facebook</string>
+    <string name="name">Name</string>
+    <string name="phone">Mobile Phone</string>
+    <string name="birthday">Date of Birth</string>
+    <string name="date_format">##/##/####</string>
+    <string name="cep">CEP</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="zip_code_format">##.####-###</string>
+    <string name="cpf">CPF</string>
+    <string name="rg">RG</string>
+    <string name="address1">Address Line 1</string>
+    <string name="address2">Adress Line 2</string>
+    <string name="ok">OK</string>
+    <string name="professional">Do you want to be a professional?</string>
+    <string name="look_for">I look for ...</string>
+    <string name="search_message">Type at least 3 letters to start the search</string>
 </resources>
