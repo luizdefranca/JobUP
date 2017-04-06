@@ -7,12 +7,12 @@ using JOB.WEB.Validation;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace JOB.WEB.Controllers
 {
+    [Authorize]
     public class UsuarioController : Controller
     {
         private Contexto ctx = new Contexto();
