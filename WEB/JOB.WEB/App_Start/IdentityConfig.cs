@@ -18,7 +18,8 @@ namespace AgendaCirurgicaBeta
     {
         public async Task SendAsync(IdentityMessage message)
         {
-            var client = new SendGridClient("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");
+            var apiKey = Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
+            var client = new SendGridClient(apiKey);
 
             var msg = new SendGridMessage();
 
