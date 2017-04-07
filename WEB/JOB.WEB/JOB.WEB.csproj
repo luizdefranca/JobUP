@@ -1005,15 +1005,14 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\WEBSERVICE\JOB.DATA\JOB.DATA.csproj">
+    <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">
       <Project>{1793dd30-c3b2-4795-aa65-7566eb29be8c}</Project>
       <Name>JOB.DATA</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
