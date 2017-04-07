@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOB.WEB.Tests", "JOB.WEB.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOB.DATA", "..\WEBSERVICE\JOB.DATA\JOB.DATA.csproj", "{1793DD30-C3B2-4795-AA65-7566EB29BE8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOB.HELPERS", "..\WEBSERVICE\JOB.HELPERS\JOB.HELPERS.csproj", "{AC41ADDA-32AF-40E5-83F4-91D4AC103BE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1793DD30-C3B2-4795-AA65-7566EB29BE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1793DD30-C3B2-4795-AA65-7566EB29BE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1793DD30-C3B2-4795-AA65-7566EB29BE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC41ADDA-32AF-40E5-83F4-91D4AC103BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC41ADDA-32AF-40E5-83F4-91D4AC103BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC41ADDA-32AF-40E5-83F4-91D4AC103BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC41ADDA-32AF-40E5-83F4-91D4AC103BE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
