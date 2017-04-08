@@ -15,7 +15,12 @@ namespace JOB.WEB.Controllers
     [Authorize]
     public class UsuarioController : Controller
     {
-        private Contexto ctx;
+        private Contexto ctx = new Contexto();
+
+        public UsuarioController()
+        {
+
+        }
 
         public UsuarioController(Contexto ctx)
         {

@@ -53,9 +53,9 @@ namespace AgendaCirurgicaBeta
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "494454247610974",
+               appSecret: "ce8e4af1cf4be09d8b0aab15d6dc3529");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
