@@ -1,15 +1,14 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.DATA.ValueObject;
 using JOB.WEB.Controllers;
 using JOB.WEB.Models;
 using NUnit.Framework;
 using System;
+using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using System.Linq;
-using System.Data.Entity;
-using JOB.DATA.ValueObject;
 
 namespace JOB.WEB.Tests.Controllers
 {
@@ -35,14 +34,19 @@ namespace JOB.WEB.Tests.Controllers
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             //se comunica com o controller
-            var controller = new UsuarioController();
+            var ctx = new Contexto();
+            ctx.Database.BeginTransaction(); //inicia uma transação para controlar os dados manipulados no banco de dados
+
+            var controller = new UsuarioController(ctx);
             ViewResult result = await controller.Create(model) as ViewResult;
 
             //recupera o novo usuario inserido no banco
-            var domainNew = await ctx.Usuario.FirstAsync(w => w.CPF == new CPF("50869388720"));
+            var domainNew = await ctx.Usuario.FirstAsync(w => w.CPF.NR == "50869388720");
+
+            ctx.Database.CurrentTransaction.Rollback(); //retorna qualquer mudança feita no banco de dados
 
             //teste finalmente se existe usuario inserido no banco e é o mesmo gerado no inicio do método
-            Assert.Equals(model.CPF, domainNew.CPF);
+            Assert.AreEqual(model.CPF, domainNew.CPF.NR);
         }
     }
 }

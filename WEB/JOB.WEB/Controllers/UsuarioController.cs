@@ -15,7 +15,12 @@ namespace JOB.WEB.Controllers
     [Authorize]
     public class UsuarioController : Controller
     {
-        private Contexto ctx = new Contexto();
+        private Contexto ctx;
+
+        public UsuarioController(Contexto ctx)
+        {
+            this.ctx = ctx;
+        }
 
         // GET: Usuario
         public async Task<ActionResult> Index()
