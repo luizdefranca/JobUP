@@ -135,5 +135,15 @@ namespace JOB.WEB.Controllers
                 return View(obj);
             }
         }
+
+        // GET : Usuario/Delete/S
+        [HttpPost]
+        public async Task<ActionResult> DashBoard(int id)
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+            var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
+
+            return View(model);
+        }
     }
 }
