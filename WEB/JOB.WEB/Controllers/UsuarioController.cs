@@ -19,7 +19,6 @@ namespace JOB.WEB.Controllers
 
         public UsuarioController()
         {
-
         }
 
         public UsuarioController(Contexto ctx)
@@ -137,13 +136,23 @@ namespace JOB.WEB.Controllers
         }
 
         // GET : Usuario/Delete/S
-        [HttpPost]
         public async Task<ActionResult> DashBoard(int id)
         {
             var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             return View(model);
+        }
+
+        public async Task<ActionResult> Aprovar(int id)
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+
+            domain.Aprovar();
+            ctx.Entry(domain).State = EntityState.Modified;
+            await ctx.SaveChangesAsync();
+
+            return RedirectToAction("Index");
         }
     }
 }
