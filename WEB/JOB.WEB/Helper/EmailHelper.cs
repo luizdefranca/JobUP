@@ -1,5 +1,4 @@
-﻿using NLog;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -9,8 +8,9 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using NLog;
 
-namespace AgendaCirurgicaBeta.Helper
+namespace JOB.WEB.Helper
 {
     public class Email
     {

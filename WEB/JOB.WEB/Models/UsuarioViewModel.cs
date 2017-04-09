@@ -46,5 +46,26 @@ namespace JOB.WEB.Models
         [ScaffoldColumn(false)]
         [Display(Name = "Aprovado")]
         public bool APROVADO { get; set; }
+
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Fixo")]
+        public string FIXO { get; set; }
+
+        [Required]
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Celular")]
+        public string CELULAR { get; set; }
+
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = "Email")]
+        public string EMAIL { get; set; }
+
+        public EnumUF UF { get; set; }
+        public string CEP { get; set; }
+        public string LOGRADOURO { get; set; }
+        public string COMPLEMENTO { get; set; }
+        public string BAIRRO { get; set; }
+        public string CIDADE { get; set; }
     }
 }
