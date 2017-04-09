@@ -47,12 +47,12 @@ namespace JOB.WEB.Models
         [Display(Name = "Aprovado")]
         public bool APROVADO { get; set; }
 
-        [DataType(DataType.PhoneNumber)]
+        //[DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone Fixo")]
         public string FIXO { get; set; }
 
         [Required]
-        [DataType(DataType.PhoneNumber)]
+        //[DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone Celular")]
         public string CELULAR { get; set; }
 

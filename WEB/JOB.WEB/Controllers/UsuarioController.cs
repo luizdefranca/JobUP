@@ -61,6 +61,10 @@ namespace JOB.WEB.Controllers
             {
                 var newobj = new USUARIO(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
+                newobj.CONTATO.AtualizarValor(new Telefone(obj.FIXO), new Telefone(obj.CELULAR), new Email(obj.EMAIL));
+
+                newobj.ENDERECO.AtualizaValores(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
+
                 ctx.Usuario.Add(newobj);
                 await ctx.SaveChangesAsync();
 
@@ -94,6 +98,17 @@ namespace JOB.WEB.Controllers
                 var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
 
                 domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                if (domain.CONTATO == null)
+                    domain.AdicionarContato(obj.FIXO == null ? null : new Telefone(obj.FIXO), new Telefone(obj.CELULAR), new Email(obj.EMAIL));
+                else
+                    domain.CONTATO.AtualizarValor(obj.FIXO == null ? null : new Telefone(obj.FIXO), new Telefone(obj.CELULAR), new Email(obj.EMAIL));
+
+                if (domain.CONTATO == null)
+                    domain.AdicionarEndereco(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
+                else
+                    domain.ENDERECO.AtualizaValores(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
+
                 ctx.Entry(domain).State = EntityState.Modified;
                 await ctx.SaveChangesAsync();
 

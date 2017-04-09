@@ -3,6 +3,7 @@ using JOB.DATA.ValueObject;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using JOB.DATA.Enum;
 
 namespace JOB.DATA.Domain
 {
@@ -43,6 +44,16 @@ namespace JOB.DATA.Domain
 
             this.DT_ALTERACAO = DateTime.Now;
             this.APROVADO = false;
+        }
+
+        public void AdicionarContato(Telefone FIXO, Telefone CELULAR, Email EMAIL)
+        {
+            CONTATO = new CONTATO(ID_USUARIO, FIXO, CELULAR, EMAIL);
+        }
+
+        public void AdicionarEndereco(EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
+        {
+            ENDERECO = new ENDERECO(ID_USUARIO, UF, CEP, LOGRADOURO, COMPLEMENTO, BAIRRO, CIDADE);
         }
 
         public void Aprovar()

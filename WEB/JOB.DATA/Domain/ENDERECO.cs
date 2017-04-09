@@ -34,6 +34,17 @@ namespace JOB.DATA.Domain
             this.CIDADE = CIDADE;
         }
 
+        public void AtualizarValor(int ID_USUARIO, EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
+        {
+            this.ID_USUARIO = ID_USUARIO;
+            this.UF = UF;
+            this.CEP = CEP;
+            this.LOGRADOURO = LOGRADOURO;
+            this.COMPLEMENTO = COMPLEMENTO;
+            this.BAIRRO = BAIRRO;
+            this.CIDADE = CIDADE;
+        }
+
         public void AtualizaValores(EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
         {
             AssertionConcern.AssertArgumentNotEmptyNotNull(CEP, "CEP");
