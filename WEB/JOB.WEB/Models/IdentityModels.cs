@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -21,7 +22,7 @@ namespace JOB.WEB.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("AZURE", throwIfV1Schema: false)
+            : base(Environment.GetEnvironmentVariable("CONNECTION_STRING"), throwIfV1Schema: false)
         {
             Database.SetInitializer(new ApplicationDbInitializer());
         }

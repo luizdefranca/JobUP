@@ -1,4 +1,5 @@
-﻿using JOB.DATA.Config;
+﻿using System;
+using JOB.DATA.Config;
 using JOB.DATA.Domain;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -8,7 +9,7 @@ namespace JOB.DATA
     public class Contexto : DbContext
     {
         public Contexto()
-           : base("AZURE")
+           : base(Environment.GetEnvironmentVariable("CONNECTION_STRING"))
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
