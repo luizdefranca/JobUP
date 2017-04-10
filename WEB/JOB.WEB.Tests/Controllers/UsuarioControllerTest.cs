@@ -30,7 +30,7 @@ namespace JOB.WEB.Tests.Controllers
         public async Task Integration_ValidarInsertUsuario()
         {
             //gera uma nova classe para testes
-            var domain = new USUARIO("USUARIO TESTE", new CPF("50869388720"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO("USUARIO TESTE 1", new CPF("50869388720"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             //se comunica com o controller
@@ -48,5 +48,46 @@ namespace JOB.WEB.Tests.Controllers
             //teste finalmente se existe usuario inserido no banco e é o mesmo gerado no inicio do método
             Assert.AreEqual(model.CPF, domainNew.CPF.NR);
         }
+
+        [Test]
+        public async Task Integration_InsertUsuarioDadoFaltando()
+        {            
+            var domain = new USUARIO("USUARIO TESTE 2", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-30));
+            var model = Mapper.Map<UsuarioViewModel>(domain); 
+            
+            ctx.Database.BeginTransaction(); 
+
+            var controller = new UsuarioController(ctx);
+            ViewResult result = await controller.Create(model) as ViewResult;
+                       
+            ctx.Database.CurrentTransaction.Rollback();
+        }
+
+        public async Task Integration_InsertUsuarioTodosDadoFaltando()
+        {
+            var domain = new USUARIO("", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
+            var model = Mapper.Map<UsuarioViewModel>(domain);
+
+            ctx.Database.BeginTransaction();
+
+            var controller = new UsuarioController(ctx);
+            ViewResult result = await controller.Create(model) as ViewResult;
+
+            ctx.Database.CurrentTransaction.Rollback();
+        }
+
+        [Test]
+        public async Task Integration_DeleteUsuario()
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == 5);
+            var model = Mapper.Map<UsuarioViewModel>(domain);
+           
+            ctx.Database.BeginTransaction();
+
+            var controller = new UsuarioController(ctx);
+            ViewResult result = await controller.Delete(Convert.ToInt32(model)) as ViewResult;
+
+            ctx.Database.CurrentTransaction.Rollback();
+        }       
     }
 }
