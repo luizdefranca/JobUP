@@ -49,23 +49,39 @@ namespace JOB.WEB.Models
 
         //[DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone Fixo")]
-        public string FIXO { get; set; }
+        public string ContatoFIXO { get; set; }
 
         [Required]
         //[DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone Celular")]
-        public string CELULAR { get; set; }
+        public string ContatoCELULAR { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
-        public string EMAIL { get; set; }
+        public string ContatoEMAIL { get; set; }
 
-        public EnumUF UF { get; set; }
-        public string CEP { get; set; }
-        public string LOGRADOURO { get; set; }
-        public string COMPLEMENTO { get; set; }
-        public string BAIRRO { get; set; }
-        public string CIDADE { get; set; }
+        [Required]
+        [Display(Name = "UF")]
+        public EnumUF EnderecoUF { get; set; }
+
+        [Required]
+        [Display(Name = "CEP")]
+        public string EnderecoCEP { get; set; }
+
+        [Required]
+        [Display(Name = "Logradouro")]
+        public string EnderecoLOGRADOURO { get; set; }
+
+        [Display(Name = "Complemento")]
+        public string EnderecoCOMPLEMENTO { get; set; }
+
+        [Required]
+        [Display(Name = "Bairro")]
+        public string EnderecoBAIRRO { get; set; }
+
+        [Required]
+        [Display(Name = "Cidade")]
+        public string EnderecoCIDADE { get; set; }
     }
 }

@@ -17,14 +17,14 @@ namespace JOB.DATA.Domain
         public CONTATO(int ID_USUARIO, Telefone FIXO, Telefone CELULAR, Email EMAIL)
         {
             this.ID_USUARIO = ID_USUARIO;
-            this.FIXO = FIXO;
+            if (FIXO != null) this.FIXO = FIXO;
             this.CELULAR = CELULAR;
             this.EMAIL = EMAIL;
         }
 
         public void AtualizarValor(Telefone FIXO, Telefone CELULAR, Email EMAIL)
         {
-            this.FIXO = FIXO;
+            if (FIXO != null) this.FIXO = FIXO;
             this.CELULAR = CELULAR;
             this.EMAIL = EMAIL;
         }

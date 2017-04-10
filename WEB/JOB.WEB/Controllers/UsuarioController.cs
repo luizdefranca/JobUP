@@ -29,7 +29,11 @@ namespace JOB.WEB.Controllers
         // GET: Usuario
         public async Task<ActionResult> Index()
         {
-            var domain = await ctx.Usuario.ToListAsync();
+            var domain = await ctx.Usuario
+                .Include(i => i.CONTATO)
+                .Include(i => i.ENDERECO)
+                .ToListAsync();
+
             var model = Mapper.Map<List<UsuarioViewModel>>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             return View(model);
@@ -38,7 +42,10 @@ namespace JOB.WEB.Controllers
         // GET: Usuario/Details/5
         public async Task<ActionResult> Details(int id)
         {
-            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+            var domain = await ctx.Usuario
+                .Include(i => i.CONTATO)
+                .Include(i => i.ENDERECO).FirstAsync(w => w.ID_USUARIO == id);
+
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             return View(model);
@@ -61,9 +68,9 @@ namespace JOB.WEB.Controllers
             {
                 var newobj = new USUARIO(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-                newobj.CONTATO.AtualizarValor(new Telefone(obj.FIXO), new Telefone(obj.CELULAR), new Email(obj.EMAIL));
+                newobj.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(obj.ContatoEMAIL));
 
-                newobj.ENDERECO.AtualizaValores(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
+                newobj.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
                 ctx.Usuario.Add(newobj);
                 await ctx.SaveChangesAsync();
@@ -80,7 +87,11 @@ namespace JOB.WEB.Controllers
         // GET: Usuario/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
-            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+            var domain = await ctx.Usuario
+                .Include(i => i.CONTATO)
+                .Include(i => i.ENDERECO)
+                .FirstAsync(w => w.ID_USUARIO == id);
+
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             return View(model);
@@ -95,21 +106,27 @@ namespace JOB.WEB.Controllers
 
             try
             {
-                var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+                var domain = await ctx.Usuario
+                    .Include(i => i.CONTATO)
+                    .Include(i => i.ENDERECO)
+                    .FirstAsync(w => w.ID_USUARIO == id);
 
                 domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
                 if (domain.CONTATO == null)
-                    domain.AdicionarContato(obj.FIXO == null ? null : new Telefone(obj.FIXO), new Telefone(obj.CELULAR), new Email(obj.EMAIL));
+                    domain.AdicionarContato(obj.ContatoFIXO == null ? null : new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(obj.ContatoEMAIL));
                 else
-                    domain.CONTATO.AtualizarValor(obj.FIXO == null ? null : new Telefone(obj.FIXO), new Telefone(obj.CELULAR), new Email(obj.EMAIL));
+                    domain.CONTATO.AtualizarValor(obj.ContatoFIXO == null ? null : new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(obj.ContatoEMAIL));
 
-                if (domain.CONTATO == null)
-                    domain.AdicionarEndereco(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
+                if (domain.ENDERECO == null)
+                    domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
                 else
-                    domain.ENDERECO.AtualizaValores(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
+                    domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
                 ctx.Entry(domain).State = EntityState.Modified;
+                ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+                ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
+
                 await ctx.SaveChangesAsync();
 
                 return RedirectToAction("Index");

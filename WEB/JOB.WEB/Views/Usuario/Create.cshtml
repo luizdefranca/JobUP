@@ -62,20 +62,20 @@
                 <div class="panel-body">
                     <div class="form-horizontal">
                         <div class="form-group">
-                            @Html.LabelFor(model => model.CELULAR, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.ContatoCELULAR, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-2">
-                                @Html.EditorFor(model => model.CELULAR, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.CELULAR, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.ContatoCELULAR, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContatoCELULAR, "", new { @class = "text-danger" })
                             </div>
-                            @Html.LabelFor(model => model.FIXO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.ContatoFIXO, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-2">
-                                @Html.EditorFor(model => model.FIXO, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.FIXO, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.ContatoFIXO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContatoFIXO, "", new { @class = "text-danger" })
                             </div>
-                            @Html.LabelFor(model => model.EMAIL, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.ContatoEMAIL, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-2">
-                                @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.ContatoEMAIL, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContatoEMAIL, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </div>
@@ -88,39 +88,39 @@
                 <div class="panel-body">
                     <div class="form-horizontal">
                         <div class="form-group">
-                            @Html.LabelFor(model => model.UF, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.EnderecoUF, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-2">
-                                @Html.EnumDropDownListFor(model => model.RgUF, "", new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.UF, "", new { @class = "text-danger" })
+                                @Html.EnumDropDownListFor(model => model.EnderecoUF, "", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.EnderecoUF, "", new { @class = "text-danger" })
                             </div>
-                            @Html.LabelFor(model => model.CIDADE, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.EnderecoCIDADE, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-6">
-                                @Html.EditorFor(model => model.CIDADE, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.CIDADE, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.EnderecoCIDADE, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.EnderecoCIDADE, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            @Html.LabelFor(model => model.CEP, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.EnderecoCEP, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-2">
-                                @Html.EditorFor(model => model.CEP, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.CEP, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.EnderecoCEP, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.EnderecoCEP, "", new { @class = "text-danger" })
                             </div>
-                            @Html.LabelFor(model => model.LOGRADOURO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.EnderecoLOGRADOURO, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-6">
-                                @Html.EditorFor(model => model.LOGRADOURO, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.LOGRADOURO, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.EnderecoLOGRADOURO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.EnderecoLOGRADOURO, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            @Html.LabelFor(model => model.BAIRRO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.EnderecoBAIRRO, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-2">
-                                @Html.EditorFor(model => model.BAIRRO, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.BAIRRO, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.EnderecoBAIRRO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.EnderecoBAIRRO, "", new { @class = "text-danger" })
                             </div>
-                            @Html.LabelFor(model => model.COMPLEMENTO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.EnderecoCOMPLEMENTO, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-6">
-                                @Html.EditorFor(model => model.COMPLEMENTO, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.COMPLEMENTO, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.EnderecoCOMPLEMENTO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.EnderecoCOMPLEMENTO, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </div>
