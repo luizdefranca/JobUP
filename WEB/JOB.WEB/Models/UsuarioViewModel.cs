@@ -47,6 +47,10 @@ namespace JOB.WEB.Models
         [Display(Name = "Aprovado")]
         public bool APROVADO { get; set; }
 
+        [ScaffoldColumn(false)]
+        [Display(Name = "Ativo")]
+        public bool ATIVO { get; set; }
+
         //[DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone Fixo")]
         public string ContatoFIXO { get; set; }

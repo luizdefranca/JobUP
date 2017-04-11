@@ -402,7 +402,9 @@ namespace JOB.WEB.Controllers
             //só precisa desativar nosso usuário. o usuário do identity não tem esse recurso
             using (Contexto ctx = new Contexto())
             {
-                var usuario = ctx.Usuario.First(w => w.ID_USUARIO == Guid.Parse(User.Identity.GetUserId()));
+                Guid id = Guid.Parse(User.Identity.GetUserId());
+
+                var usuario = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
                 usuario.Desativar();
                 ctx.Entry(usuario).State = EntityState.Modified;

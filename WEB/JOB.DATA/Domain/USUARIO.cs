@@ -66,6 +66,12 @@ namespace JOB.DATA.Domain
             this.DT_APROVACAO = DateTime.Now;
         }
 
+        public void Ativar()
+        {
+            this.ATIVO = true;
+            this.DT_ATIVACAO = DateTime.Now;
+        }
+
         public void Desativar()
         {
             this.ATIVO = false;

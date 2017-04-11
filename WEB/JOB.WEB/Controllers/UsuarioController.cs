@@ -134,20 +134,22 @@ namespace JOB.WEB.Controllers
             }
         }
 
-        // GET : Usuario/Delete/S
-        public async Task<ActionResult> DashBoard(Guid id)
-        {
-            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
-            var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
-
-            return View(model);
-        }
-
         public async Task<ActionResult> Aprovar(Guid id)
         {
             var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
 
             domain.Aprovar();
+            ctx.Entry(domain).State = EntityState.Modified;
+            await ctx.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
+        public async Task<ActionResult> Ativar(Guid id)
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+
+            domain.Ativar();
             ctx.Entry(domain).State = EntityState.Modified;
             await ctx.SaveChangesAsync();
 
