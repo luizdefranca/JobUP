@@ -74,13 +74,13 @@
     <Compile Include="Enum\EnumEstadoCivil.cs" />
     <Compile Include="Enum\EnumSexo.cs" />
     <Compile Include="Enum\EnumUF.cs" />
-    <Compile Include="Migrations\201704050311089_1_0.cs" />
-    <Compile Include="Migrations\201704050311089_1_0.Designer.cs">
-      <DependentUpon>201704050311089_1_0.cs</DependentUpon>
+    <Compile Include="Migrations\201704110256369_inicial.cs" />
+    <Compile Include="Migrations\201704110256369_inicial.Designer.cs">
+      <DependentUpon>201704110256369_inicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704100125493_3_000.cs" />
-    <Compile Include="Migrations\201704100125493_3_000.Designer.cs">
-      <DependentUpon>201704100125493_3_000.cs</DependentUpon>
+    <Compile Include="Migrations\201704111632181_idsemmudar.cs" />
+    <Compile Include="Migrations\201704111632181_idsemmudar.Designer.cs">
+      <DependentUpon>201704111632181_idsemmudar.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,11 +101,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704050311089_1_0.resx">
-      <DependentUpon>201704050311089_1_0.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704110256369_inicial.resx">
+      <DependentUpon>201704110256369_inicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704100125493_3_000.resx">
-      <DependentUpon>201704100125493_3_000.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704111632181_idsemmudar.resx">
+      <DependentUpon>201704111632181_idsemmudar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

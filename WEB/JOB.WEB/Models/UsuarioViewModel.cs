@@ -7,7 +7,7 @@ namespace JOB.WEB.Models
     public class UsuarioViewModel
     {
         [Key]
-        public int ID_USUARIO { get; set; }
+        public Guid ID_USUARIO { get; set; }
 
         [Required]
         [Display(Name = "Nome")]
@@ -56,7 +56,7 @@ namespace JOB.WEB.Models
         [Display(Name = "Telefone Celular")]
         public string ContatoCELULAR { get; set; }
 
-        [Required]
+        //[Required]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string ContatoEMAIL { get; set; }

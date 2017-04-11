@@ -12,7 +12,7 @@ namespace JOB.DATA.Config
             HasKey(c => c.ID_USUARIO);
 
             Property(c => c.ID_USUARIO)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
             Property(p => p.NOME)
                 .HasMaxLength(100)
