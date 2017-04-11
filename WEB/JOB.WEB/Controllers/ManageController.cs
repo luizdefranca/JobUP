@@ -1,10 +1,14 @@
-﻿using System.Linq;
+﻿using System;
+using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using AgendaCirurgicaBeta;
+using JOB.DATA;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 
@@ -318,6 +322,20 @@ namespace JOB.WEB.Controllers
             }
             var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
+        }
+        public ActionResult Desativar()
+        {
+            using (Contexto ctx = new Contexto())
+            {
+                var usuario = ctx.Usuario.First(w => w.ID_USUARIO == 1);
+
+                usuario.Desativar();
+                ctx.Entry(usuario).State = EntityState.Modified;
+                ctx.SaveChanges();
+            }
+
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
         }
 
         protected override void Dispose(bool disposing)
