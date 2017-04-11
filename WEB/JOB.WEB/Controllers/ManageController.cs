@@ -325,6 +325,7 @@ namespace JOB.WEB.Controllers
         }
         public ActionResult Desativar()
         {
+            //só precisa desativar nosso usuário. o usuário do identity não tem esse recurso
             using (Contexto ctx = new Contexto())
             {
                 var usuario = ctx.Usuario.First(w => w.ID_USUARIO == 1);
