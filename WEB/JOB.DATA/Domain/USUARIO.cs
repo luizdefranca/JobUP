@@ -62,6 +62,12 @@ namespace JOB.DATA.Domain
             this.DT_APROVACAO = DateTime.Now;
         }
 
+        public void Desativar()
+        {
+            this.APROVADO = false;
+            this.DT_APROVACAO = DateTime.Now;
+        }
+
         private void InicializaVariaveis()
         {
             this.PERFIS_PROFISSIONAIS = new HashSet<PERFIL_PROFISSIONAL>();
