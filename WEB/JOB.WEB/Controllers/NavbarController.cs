@@ -1,16 +1,16 @@
-﻿using JOB.WEB.Domain;
+﻿using JOB.WEB.Helper;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace JOB.WEB
+namespace JOB.WEB.Controllers
 {
     public class NavbarController : Controller
     {
         // GET: Navbar
         public ActionResult Index()
         {
-            var data = new Data();
-            return PartialView("_Navbar", data.navbarItems().ToList());
+            var data = new DadosMenu();
+            return PartialView("_Navbar", data.NavbarItems().ToList());
         }
     }
 }

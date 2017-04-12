@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace AgendaCirurgicaBeta.Models
+namespace JOB.WEB.Models
 {
     public class ApplicationDbInitializer : CreateDatabaseIfNotExists<ApplicationDbContext>
     {

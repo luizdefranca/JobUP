@@ -1,6 +1,6 @@
 ﻿namespace JOB.WEB.Models
 {
-    public class Navbar
+    public class MenuViewModel
     {
         public int Id { get; set; }
         public string nameOption { get; set; }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace AgendaCirurgicaBeta.Models
+namespace JOB.WEB.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

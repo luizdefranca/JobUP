@@ -14,7 +14,7 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
-        public AVALIACAO(int ID_USUARIO, int ID_ESPECIALIDADE, int ID_CLIENTE, Int16 NOTA, string COMENTARIO)
+        public AVALIACAO(Guid ID_USUARIO, int ID_ESPECIALIDADE, Guid ID_CLIENTE, Int16 NOTA, string COMENTARIO)
         {
             this.InicializaVariaveis();
 
@@ -38,9 +38,9 @@ namespace JOB.DATA.Domain
             //this.GUIAS = new HashSet<GUIA>();
         }
 
-        public int ID_USUARIO { get; private set; }
+        public Guid ID_USUARIO { get; private set; }
         public int ID_ESPECIALIDADE { get; private set; }
-        public int ID_CLIENTE { get; private set; }
+        public Guid ID_CLIENTE { get; private set; }
         public DateTime DT_ULT_AVALIACAO { get; private set; }
         public Int16 NOTA { get; private set; }
         public string COMENTARIO { get; private set; }

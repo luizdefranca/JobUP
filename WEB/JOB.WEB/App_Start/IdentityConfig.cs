@@ -1,6 +1,4 @@
-﻿using AgendaCirurgicaBeta.Helper;
-using AgendaCirurgicaBeta.Models;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
@@ -11,6 +9,7 @@ using System.Threading.Tasks;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using System.Collections.Generic;
+using JOB.WEB.Models;
 
 namespace AgendaCirurgicaBeta
 {

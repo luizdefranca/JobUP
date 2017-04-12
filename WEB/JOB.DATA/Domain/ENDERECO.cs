@@ -1,4 +1,5 @@
-﻿using AgendaCirurgicaBeta.Domain.Core;
+﻿using System;
+using AgendaCirurgicaBeta.Domain.Core;
 using JOB.DATA.Enum;
 using JOB.HELPERS.Validation;
 using Newtonsoft.Json;
@@ -16,7 +17,7 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
-        public ENDERECO(int ID_USUARIO, EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
+        public ENDERECO(Guid ID_USUARIO, EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
         {
             AssertionConcern.AssertArgumentNotEmptyNotNull(CEP, "CEP");
             AssertionConcern.AssertArgumentNotEmptyNotNull(LOGRADOURO, "LOGRADOURO");
@@ -25,6 +26,17 @@ namespace JOB.DATA.Domain
 
             this.InicializaVariaveis();
 
+            this.ID_USUARIO = ID_USUARIO;
+            this.UF = UF;
+            this.CEP = CEP;
+            this.LOGRADOURO = LOGRADOURO;
+            this.COMPLEMENTO = COMPLEMENTO;
+            this.BAIRRO = BAIRRO;
+            this.CIDADE = CIDADE;
+        }
+
+        public void AtualizarValor(Guid ID_USUARIO, EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
+        {
             this.ID_USUARIO = ID_USUARIO;
             this.UF = UF;
             this.CEP = CEP;
@@ -54,7 +66,7 @@ namespace JOB.DATA.Domain
             //this.GUIAS = new HashSet<GUIA>();
         }
 
-        public int ID_USUARIO { get; private set; }
+        public Guid ID_USUARIO { get; private set; }
         public EnumUF UF { get; private set; }
         public string CEP { get; private set; }
         public string LOGRADOURO { get; private set; }

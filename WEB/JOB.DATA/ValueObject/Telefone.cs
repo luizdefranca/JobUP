@@ -15,20 +15,11 @@ namespace JOB.DATA.ValueObject
 
         }
 
-        //public Telefone(string ddd, string nr_telefone)
-        //{
-        //    AssertionConcern.AssertArgumentNotEmptyNotNull(ddd, "DDD");
-        //    AssertionConcern.AssertArgumentNotEmptyNotNull(nr_telefone, "Número Telefone");
-
-        //    AssertionConcern.AssertArgumentLength(nr_telefone, 8, 9, "Tamanho do Número Telefone inválido");
-
-        //    this.DDD = ddd;
-        //    this.NrTelefone = nr_telefone;
-        //}
-
         public Telefone(string nr_telefone)
         {
-            AssertionConcern.AssertArgumentNotEmptyNotNull(nr_telefone, "Telefone");
+            if (string.IsNullOrEmpty(nr_telefone)) return;
+
+            //AssertionConcern.AssertArgumentNotEmptyNotNull(nr_telefone, "Telefone Obrigatório");
             //(xx) xxxxx-xxxx - sendo 8 ou 9 digitos
             AssertionConcern.AssertArgumentMatches(@"^\([1-9]{2}\) [2-9][0-9]{7,8}$", nr_telefone, "Formato do Número Telefone inválido");
 

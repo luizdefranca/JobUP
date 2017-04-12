@@ -13,9 +13,6 @@
 </div>
 <div class="row">
     <div class="col-lg-12">
-        <p>
-            @Html.ActionLink("Create New", "Create")
-        </p>
         <table class="table">
             <tr>
                 <th>
@@ -35,6 +32,9 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.APROVADO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ATIVO)
                 </th>
                 <th></th>
             </tr>
@@ -61,9 +61,14 @@
                         @Html.DisplayFor(modelItem => item.APROVADO)
                     </td>
                     <td>
+                        @Html.DisplayFor(modelItem => item.ATIVO)
+                    </td>
+                    <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.ID_USUARIO }) |
                         @Html.ActionLink("Details", "Details", new { id = item.ID_USUARIO }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ID_USUARIO })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID_USUARIO }) |
+                        @Html.ActionLink("Aprovar", "Aprovar", new { id = item.ID_USUARIO }) |
+                        @Html.ActionLink("Ativar", "Ativar", new { id = item.ID_USUARIO })
                     </td>
                 </tr>
             }

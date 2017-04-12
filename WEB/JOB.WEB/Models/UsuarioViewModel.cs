@@ -7,7 +7,7 @@ namespace JOB.WEB.Models
     public class UsuarioViewModel
     {
         [Key]
-        public int ID_USUARIO { get; set; }
+        public Guid ID_USUARIO { get; set; }
 
         [Required]
         [Display(Name = "Nome")]
@@ -46,5 +46,46 @@ namespace JOB.WEB.Models
         [ScaffoldColumn(false)]
         [Display(Name = "Aprovado")]
         public bool APROVADO { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Display(Name = "Ativo")]
+        public bool ATIVO { get; set; }
+
+        //[DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Fixo")]
+        public string ContatoFIXO { get; set; }
+
+        [Required]
+        //[DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Celular")]
+        public string ContatoCELULAR { get; set; }
+
+        //[Required]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = "Email")]
+        public string ContatoEMAIL { get; set; }
+
+        [Required]
+        [Display(Name = "UF")]
+        public EnumUF EnderecoUF { get; set; }
+
+        [Required]
+        [Display(Name = "CEP")]
+        public string EnderecoCEP { get; set; }
+
+        [Required]
+        [Display(Name = "Logradouro")]
+        public string EnderecoLOGRADOURO { get; set; }
+
+        [Display(Name = "Complemento")]
+        public string EnderecoCOMPLEMENTO { get; set; }
+
+        [Required]
+        [Display(Name = "Bairro")]
+        public string EnderecoBAIRRO { get; set; }
+
+        [Required]
+        [Display(Name = "Cidade")]
+        public string EnderecoCIDADE { get; set; }
     }
 }

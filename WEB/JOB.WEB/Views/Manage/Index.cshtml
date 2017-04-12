@@ -1,4 +1,4 @@
-﻿@model AgendaCirurgicaBeta.Models.IndexViewModel
+﻿@model JOB.WEB.Models.IndexViewModel
 @{
     ViewBag.Title = "Manage";
 }
@@ -84,4 +84,6 @@
                 }*@
         </dd>
     </dl>
+    @Html.ActionLink("Atualizar Informações", "Create") | 
+    @Html.ActionLink("Desativar Perfil", "Desativar")
 </div>
