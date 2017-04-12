@@ -3,7 +3,7 @@ namespace JOB.DATA.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class _1_0 : DbMigration
+    public partial class inicial : DbMigration
     {
         public override void Up()
         {
@@ -11,9 +11,9 @@ namespace JOB.DATA.Migrations
                 "jobup.AVALIACAO",
                 c => new
                     {
-                        ID_USUARIO = c.Int(nullable: false),
+                        ID_USUARIO = c.Guid(nullable: false),
                         ID_ESPECIALIDADE = c.Int(nullable: false),
-                        ID_CLIENTE = c.Int(nullable: false),
+                        ID_CLIENTE = c.Guid(nullable: false),
                         DT_ULT_AVALIACAO = c.DateTime(nullable: false),
                         NOTA = c.Short(nullable: false),
                         COMENTARIO = c.String(maxLength: 254, unicode: false),
@@ -26,7 +26,7 @@ namespace JOB.DATA.Migrations
                 "jobup.PERFIL_PROFISSIONAL",
                 c => new
                     {
-                        ID_USUARIO = c.Int(nullable: false),
+                        ID_USUARIO = c.Guid(nullable: false),
                         ID_ESPECIALIDADE = c.Int(nullable: false),
                         DT_APROVACAO = c.DateTime(),
                         APROVADO = c.Boolean(nullable: false),
@@ -52,7 +52,7 @@ namespace JOB.DATA.Migrations
                 "jobup.FORMACAO",
                 c => new
                     {
-                        ID_USUARIO = c.Int(nullable: false),
+                        ID_USUARIO = c.Guid(nullable: false),
                         ID_ESPECIALIDADE = c.Int(nullable: false),
                         ID_FORMACAO = c.Int(nullable: false),
                         INSTITUICAO = c.String(nullable: false, maxLength: 254, unicode: false),
@@ -69,7 +69,7 @@ namespace JOB.DATA.Migrations
                 "jobup.USUARIO",
                 c => new
                     {
-                        ID_USUARIO = c.Int(nullable: false, identity: true),
+                        ID_USUARIO = c.Guid(nullable: false, identity: true),
                         NOME = c.String(nullable: false, maxLength: 100, unicode: false),
                         CPF = c.String(nullable: false, maxLength: 11, unicode: false),
                         RG_UF = c.Int(nullable: false),
@@ -78,8 +78,10 @@ namespace JOB.DATA.Migrations
                         DT_INCLUSAO = c.DateTime(nullable: false),
                         DT_ALTERACAO = c.DateTime(),
                         DT_APROVACAO = c.DateTime(),
+                        DT_ATIVACAO = c.DateTime(),
                         DT_ORDENACAO = c.DateTime(nullable: false),
                         APROVADO = c.Boolean(nullable: false),
+                        ATIVO = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ID_USUARIO)
                 .Index(t => t.CPF, unique: true, name: "IX_Usuario_CPF");
@@ -88,9 +90,9 @@ namespace JOB.DATA.Migrations
                 "jobup.CONTATO",
                 c => new
                     {
-                        ID_USUARIO = c.Int(nullable: false),
-                        FIXO = c.String(nullable: false, maxLength: 14, unicode: false),
-                        CELULAR = c.String(nullable: false, maxLength: 14, unicode: false),
+                        ID_USUARIO = c.Guid(nullable: false),
+                        FIXO = c.String(maxLength: 14, unicode: false),
+                        CELULAR = c.String(maxLength: 14, unicode: false),
                         EMAIL = c.String(nullable: false, maxLength: 254, unicode: false),
                     })
                 .PrimaryKey(t => t.ID_USUARIO)
@@ -101,7 +103,7 @@ namespace JOB.DATA.Migrations
                 "jobup.ENDERECO",
                 c => new
                     {
-                        ID_USUARIO = c.Int(nullable: false),
+                        ID_USUARIO = c.Guid(nullable: false),
                         UF = c.Int(nullable: false),
                         CEP = c.String(nullable: false, maxLength: 8, unicode: false),
                         LOGRADOURO = c.String(nullable: false, maxLength: 254, unicode: false),

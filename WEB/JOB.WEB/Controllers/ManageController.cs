@@ -1,12 +1,19 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using AgendaCirurgicaBeta;
+﻿using AgendaCirurgicaBeta;
+using JOB.DATA;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using System;
+using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Mvc;
+using AutoMapper;
+using JOB.DATA.Domain;
+using JOB.DATA.ValueObject;
+using JOB.WEB.Validation;
 
 namespace JOB.WEB.Controllers
 {
@@ -18,6 +25,11 @@ namespace JOB.WEB.Controllers
 
         public ManageController()
         {
+        }
+
+        public ManageController(Contexto ctx)
+        {
+            this.ctx = ctx;
         }
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
@@ -318,6 +330,89 @@ namespace JOB.WEB.Controllers
             }
             var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
+        }
+
+        private Contexto ctx = new Contexto();
+
+        // GET: Usuario/Create
+        public async Task<ActionResult> Create()
+        {
+            Guid id = Guid.Parse(User.Identity.GetUserId());
+
+            var domain = await ctx.Usuario
+                .Include(i => i.CONTATO)
+                .Include(i => i.ENDERECO)
+                .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
+
+            var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
+
+            return View(model);
+        }
+
+        // POST: Usuario/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(UsuarioViewModel obj)
+        {
+            if (!ModelState.IsValid) return View(obj);
+
+            try
+            {
+                Guid id = Guid.Parse(User.Identity.GetUserId());
+
+                var domain = await ctx.Usuario
+                    .Include(i => i.CONTATO)
+                    .Include(i => i.ENDERECO)
+                    .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
+
+                if (domain == null)
+                {
+                    var newobj = new USUARIO(Guid.Parse(User.Identity.GetUserId()), obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                    newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.Name));
+                    newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                    ctx.Usuario.Add(newobj);
+                }
+                else
+                {
+                    domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                    domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
+                    domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                    ctx.Entry(domain).State = EntityState.Modified;
+                    ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+                    ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
+                }
+
+                await ctx.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.TratarMensagem());
+                return View(obj);
+            }
+        }
+
+        public ActionResult Desativar()
+        {
+            //só precisa desativar nosso usuário. o usuário do identity não tem esse recurso
+            using (Contexto ctx = new Contexto())
+            {
+                Guid id = Guid.Parse(User.Identity.GetUserId());
+
+                var usuario = ctx.Usuario.First(w => w.ID_USUARIO == id);
+
+                usuario.Desativar();
+                ctx.Entry(usuario).State = EntityState.Modified;
+                ctx.SaveChanges();
+            }
+
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
         }
 
         protected override void Dispose(bool disposing)

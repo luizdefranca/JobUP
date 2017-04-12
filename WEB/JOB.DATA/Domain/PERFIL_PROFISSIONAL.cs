@@ -17,7 +17,7 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
-        public PERFIL_PROFISSIONAL(int ID_USUARIO, int ID_ESPECIALIDADE, string RESUMO_CURRICULO)
+        public PERFIL_PROFISSIONAL(Guid ID_USUARIO, int ID_ESPECIALIDADE, string RESUMO_CURRICULO)
         {
             AssertionConcern.AssertArgumentNotEmptyNotNull(RESUMO_CURRICULO, "RESUMO_CURRICULO");
 
@@ -47,7 +47,7 @@ namespace JOB.DATA.Domain
             this.FORMACOES = new HashSet<FORMACAO>();
         }
 
-        public int ID_USUARIO { get; private set; }
+        public Guid ID_USUARIO { get; private set; }
         public int ID_ESPECIALIDADE { get; private set; }
         public DateTime? DT_APROVACAO { get; private set; }
         public bool APROVADO { get; private set; }

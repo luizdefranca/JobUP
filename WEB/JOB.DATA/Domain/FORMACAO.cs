@@ -15,7 +15,7 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
-        public FORMACAO(int ID_USUARIO, int ID_ESPECIALIDADE, string INSTITUICAO, string NOME_CURSO, Int16 ANO_FORMACAO)
+        public FORMACAO(Guid ID_USUARIO, int ID_ESPECIALIDADE, string INSTITUICAO, string NOME_CURSO, Int16 ANO_FORMACAO)
         {
             AssertionConcern.AssertArgumentNotEmptyNotNull(INSTITUICAO, "INSTITUICAO");
             AssertionConcern.AssertArgumentNotEmptyNotNull(NOME_CURSO, "NOME_CURSO");
@@ -52,7 +52,7 @@ namespace JOB.DATA.Domain
             //this.GUIAS = new HashSet<GUIA>();
         }
 
-        public int ID_USUARIO { get; private set; }
+        public Guid ID_USUARIO { get; private set; }
         public int ID_ESPECIALIDADE { get; private set; }
         public int ID_FORMACAO { get; private set; }
         public string INSTITUICAO { get; private set; }

@@ -7,7 +7,7 @@ namespace JOB.WEB.Models
     public class UsuarioViewModel
     {
         [Key]
-        public int ID_USUARIO { get; set; }
+        public Guid ID_USUARIO { get; set; }
 
         [Required]
         [Display(Name = "Nome")]
@@ -47,6 +47,10 @@ namespace JOB.WEB.Models
         [Display(Name = "Aprovado")]
         public bool APROVADO { get; set; }
 
+        [ScaffoldColumn(false)]
+        [Display(Name = "Ativo")]
+        public bool ATIVO { get; set; }
+
         //[DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone Fixo")]
         public string ContatoFIXO { get; set; }
@@ -56,7 +60,7 @@ namespace JOB.WEB.Models
         [Display(Name = "Telefone Celular")]
         public string ContatoCELULAR { get; set; }
 
-        [Required]
+        //[Required]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string ContatoEMAIL { get; set; }
