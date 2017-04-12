@@ -30,7 +30,7 @@ namespace JOB.WEB.Tests.Controllers
         public async Task Integration_ValidarInsertUsuario()
         {
             //gera uma nova classe para testes
-            var domain = new USUARIO("USUARIO TESTE 1", new CPF("50869388720"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO("USUARIO TESTE", new CPF("50869388720"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             //se comunica com o controller
@@ -52,7 +52,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioDadoFaltando()
         {            
-            var domain = new USUARIO("USUARIO TESTE 2", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO("USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-30));
             var model = Mapper.Map<UsuarioViewModel>(domain); 
             
             ctx.Database.BeginTransaction(); 
@@ -63,9 +63,24 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.CurrentTransaction.Rollback();
         }
 
-        public async Task Integration_InsertUsuarioTodosDadoFaltando()
+        [Test]
+        public async Task Integration_InsertUsuarioTodosDadosFaltando()
         {
             var domain = new USUARIO("", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
+            var model = Mapper.Map<UsuarioViewModel>(domain);
+
+            ctx.Database.BeginTransaction();
+
+            var controller = new UsuarioController(ctx);
+            ViewResult result = await controller.Create(model) as ViewResult;
+
+            ctx.Database.CurrentTransaction.Rollback();
+        }
+
+        [Test]
+        public async Task Integration_InsertUsuarioDadosErrados()
+        {
+            var domain = new USUARIO("USU4RI0 T3ST3", new CPF("19865260abc"), new RG(DATA.Enum.EnumUF.PE, "abc1589"), DateTime.Now.AddYears(-50));
             var model = Mapper.Map<UsuarioViewModel>(domain);
 
             ctx.Database.BeginTransaction();
