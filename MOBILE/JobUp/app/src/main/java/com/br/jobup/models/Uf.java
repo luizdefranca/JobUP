@@ -1,12 +1,10 @@
 package com.br.jobup.models.interfaces;
 
-import java.util.jar.Attributes;
-
 /**
  * Created by luizramos on 09/04/17.
  */
 
-public interface Uf {
+public class Uf {
 
     public static final String AC = "Acre";
     public static final String Al = "Alagoas";
@@ -36,4 +34,35 @@ public interface Uf {
     public static final String SP = "São Paulo";
     public static final String TO = "Tocantins";
     public static final String EX = "Países Estrangeiros";
+
+    public static final String[] UF = {
+                Uf.AC,
+                Uf.Al,
+                Uf.AP,
+                Uf.AM,
+                Uf.BA,
+                Uf.CE,
+                Uf.DF,
+                Uf.ES,
+                Uf.GO,
+                Uf.MA,
+                Uf.MT,
+                Uf.MS,
+                Uf.MG,
+                Uf.PR,
+                Uf.PB,
+                Uf.PA,
+                Uf.PE,
+                Uf.PI,
+                Uf.RJ,
+                Uf.RN,
+                Uf.RS,
+                Uf.RO,
+                Uf.RR,
+                Uf.SC,
+                Uf.SE,
+                Uf.SP,
+                Uf.TO,
+                Uf.EX
+    };
 }
