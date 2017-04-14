@@ -1,24 +1,30 @@
-package com.br.jobup;
+package com.br.jobup.views;
 
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.br.jobup.R;
+import com.br.jobup.dao.IUsuarioDao;
+import com.br.jobup.dao.UsuarioDao;
 import com.br.jobup.databinding.ActivityCadastroBinding;
 import com.br.jobup.models.Usuario;
 
-import java.util.UUID;
+
+import java.util.List;
 
 import io.realm.Realm;
 
 
 public class CadastroActivity extends AppCompatActivity {
+    public static final String TAG = CadastroActivity.class.getName();
 
-    ActivityCadastroBinding mActivityCadastroBinding;
-    Realm realm;
+    private ActivityCadastroBinding mActivityCadastroBinding;
+    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,22 +36,18 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                realm = Realm.getDefaultInstance();
+                String nome = mActivityCadastroBinding.edtNome.getText().toString();
+                IUsuarioDao usuarioDao = new UsuarioDao();
 
-                realm.executeTransactionAsync(new Realm.Transaction() {
-                    @Override
-                    public void execute(Realm realm) {
+                Usuario usuario = new Usuario();
+                usuario.setNome(nome);
+                usuarioDao.addUsuario(usuario);
 
-                        Usuario usuario = new Usuario(1);
-                        usuario.setNome( mActivityCadastroBinding.edtNome.getText().toString());
-                    }
-                });
+                List<Usuario> usuarios = usuarioDao.getAllUsuarios();
+                Log.i(TAG, usuarios.get(0).toString());
 
             }
         });
-//        realm = Realm.getDefaultInstance();
-//
-//        RealmResults<Usuario> usuarios = realm.where(Usuario.class).findAll();
     }
 
     @Override

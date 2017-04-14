@@ -1,4 +1,11 @@
-package com.br.jobup.models.interfaces;
+package com.br.jobup.models;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
+
+import io.realm.RealmList;
+import io.realm.RealmObject;
 
 /**
  * Created by luizramos on 09/04/17.
@@ -35,7 +42,7 @@ public class Uf {
     public static final String TO = "Tocantins";
     public static final String EX = "Países Estrangeiros";
 
-    public static final String[] UF = {
+    public List<String> UF = Arrays.asList(
                 Uf.AC,
                 Uf.Al,
                 Uf.AP,
@@ -64,5 +71,19 @@ public class Uf {
                 Uf.SP,
                 Uf.TO,
                 Uf.EX
-    };
+    );
+
+    public Uf(){
+
+    }
+
+    public List<String> getUf(){
+        return this.UF;
+    }
+
+    public void setUF(List<String> UF){
+        this.UF = UF;
+    }
+
+
 }

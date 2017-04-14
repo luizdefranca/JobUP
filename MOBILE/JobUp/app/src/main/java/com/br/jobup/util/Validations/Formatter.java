@@ -1,4 +1,4 @@
-package com.okason.prontoshop.util;
+package com.br.jobup.util.Validations;
 
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;

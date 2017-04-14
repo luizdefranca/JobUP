@@ -1,10 +1,12 @@
-package com.br.jobup;
+package com.br.jobup.views;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import com.br.jobup.R;
 
 import java.util.UUID;
 

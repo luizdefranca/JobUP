@@ -14,21 +14,22 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name="com.br.jobup.configuration.StartApplication"
         android:allowBackup="true"
         android:icon="@drawable/applogojobup"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.br.jobup.MainActivity"
+            android:name="com.br.jobup.views.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.br.jobup.LoginActivity"
+            android:name="com.br.jobup.views.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.br.jobup.ApresentacaoActivity"
+            android:name="com.br.jobup.views.ApresentacaoActivity"
             android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,16 +38,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.br.jobup.CadastroActivity"
+            android:name="com.br.jobup.views.CadastroActivity"
             android:label="@string/title_activity_cadastro" />
         <activity
-            android:name="com.br.jobup.AgendamentoActivity"
+            android:name="com.br.jobup.views.AgendamentoActivity"
             android:label="@string/title_activity_agendamento" />
         <activity
-            android:name="com.br.jobup.MensagensActivity"
+            android:name="com.br.jobup.views.MensagensActivity"
             android:label="@string/title_activity_mensagem" />
         <activity
-            android:name="com.br.jobup.DetalheServicoActivity"
+            android:name="com.br.jobup.views.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
     </application>
 

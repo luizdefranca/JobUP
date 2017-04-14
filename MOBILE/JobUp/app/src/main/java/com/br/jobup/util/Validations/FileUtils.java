@@ -1,10 +1,7 @@
-package com.okason.prontoshop.util;
+package com.br.jobup.util.Validations;
 
 import android.os.Environment;
 
-import com.okason.prontoshop.core.listeners.OnDatabaseOperationCompleteListener;
-
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;

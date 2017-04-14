@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:1-46:12
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:1-47:12
 	package
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:3:5-27
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app
 	android:name
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:22-69
 application
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:10:5-44:19
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:10:5-45:19
 MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
@@ -44,74 +44,80 @@ MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/w
 MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:9-41
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:14:9-41
 	android:supportsRtl
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:15:9-35
 	android:allowBackup
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:9-35
 	android:icon
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:9-46
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:9-46
 	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:15:9-40
-activity#com.br.jobup.MainActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:16:9-19:59
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:16:9-40
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:11:9-55
+activity#com.br.jobup.views.MainActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:17:9-20:59
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:18:13-45
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:19:13-45
 	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:19:13-56
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:20:13-56
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:17:13-41
-activity#com.br.jobup.LoginActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:20:9-23:47
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:18:13-47
+activity#com.br.jobup.views.LoginActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:21:9-24:47
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:13-57
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:23:13-57
 	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:23:13-44
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:24:13-44
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:21:13-42
-activity#com.br.jobup.ApresentacaoActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:24:9-32:20
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:13-48
+activity#com.br.jobup.views.ApresentacaoActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:25:9-33:20
 	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:26:13-44
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:25:13-49
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:26:13-55
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:27:13-31:29
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:28:17-69
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:28:25-66
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:30:27-74
-activity#com.br.jobup.CadastroActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:33:9-35:63
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:31:27-74
+activity#com.br.jobup.views.CadastroActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:34:9-36:63
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:35:13-60
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:36:13-60
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:34:13-45
-activity#com.br.jobup.AgendamentoActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:36:9-38:66
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:35:13-51
+activity#com.br.jobup.views.AgendamentoActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:37:9-39:66
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:38:13-63
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:39:13-63
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:37:13-48
-activity#com.br.jobup.MensagensActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:39:9-41:72
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:38:13-54
+activity#com.br.jobup.views.MensagensActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:40:9-42:72
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:41:13-60
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:42:13-60
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:40:13-46
-activity#com.br.jobup.DetalheServicoActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:42:9-43:75
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:41:13-52
+activity#com.br.jobup.views.DetalheServicoActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:43:9-44:75
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:43:13-63
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:44:13-63
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:42:19-57
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:43:19-63
 uses-sdk
 INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [io.realm:realm-android-library:3.1.2] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/io.realm/realm-android-library/3.1.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.getkeepsafe.relinker:relinker:1.2.2] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.2/AndroidManifest.xml:7:5-43
 MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
@@ -129,6 +135,11 @@ MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/luizramo
 MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.databinding:library:1.1] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.databinding/library/1.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.databinding:adapters:1.1] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.databinding/adapters/1.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.1] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.databinding/library/1.1/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:24.0.0] /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:23:9-75
