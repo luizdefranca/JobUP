@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data.Entity;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -22,9 +24,26 @@ namespace JOB.WEB.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base(Environment.GetEnvironmentVariable("CONNECTION_STRING"), throwIfV1Schema: false)
+            : base(GetConnectionString())
         {
             Database.SetInitializer(new ApplicationDbInitializer());
+        }
+
+        private static string GetConnectionString()
+        {
+            if (Environment.GetEnvironmentVariable("CONNECTION_STRING") != null)
+            {
+                return Environment.GetEnvironmentVariable("CONNECTION_STRING");
+            }
+            else
+            {
+                var path = @"c:\settings_jobup.xml";
+
+                var xdoc = XDocument.Load(path);
+                var valor = xdoc.Elements().Elements().First(f => f.Name == "CONNECTION_STRING").Value;
+
+                return valor;
+            }
         }
 
         public static ApplicationDbContext Create()

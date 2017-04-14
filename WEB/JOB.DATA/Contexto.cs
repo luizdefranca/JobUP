@@ -1,19 +1,39 @@
-﻿using System;
-using JOB.DATA.Config;
+﻿using JOB.DATA.Config;
 using JOB.DATA.Domain;
+using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace JOB.DATA
 {
     public class Contexto : DbContext
     {
+        //"Server=DESKTOP-.\SQLEXPRESS;Database=mundoup;Trusted_Connection=true;Connection Timeout=30;"
         public Contexto()
-           : base(Environment.GetEnvironmentVariable("CONNECTION_STRING"))
+            : base(GetConnectionString())
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
             Configuration.AutoDetectChangesEnabled = false;
+        }
+
+        private static string GetConnectionString()
+        {
+            if (Environment.GetEnvironmentVariable("CONNECTION_STRING") != null)
+            {
+                return Environment.GetEnvironmentVariable("CONNECTION_STRING");
+            }
+            else
+            {
+                var path = @"c:\settings_jobup.xml";
+
+                var xdoc = XDocument.Load(path);
+                var valor = xdoc.Elements().Elements().First(f => f.Name == "CONNECTION_STRING").Value;
+
+                return valor;
+            }
         }
 
         public DbSet<USUARIO> Usuario { get; set; }

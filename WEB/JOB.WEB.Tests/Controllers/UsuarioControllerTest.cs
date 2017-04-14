@@ -49,60 +49,60 @@ namespace JOB.WEB.Tests.Controllers
             Assert.AreEqual(model.CPF, domainNew.CPF.NR);
         }
 
-        [Test]
-        public async Task Integration_InsertUsuarioDadoFaltando()
-        {            
-            var domain = new USUARIO("USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-30));
-            var model = Mapper.Map<UsuarioViewModel>(domain); 
-            
-            ctx.Database.BeginTransaction(); 
+        //[Test]
+        //public async Task Integration_InsertUsuarioDadoFaltando()
+        //{
+        //    var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-30));
+        //    var model = Mapper.Map<UsuarioViewModel>(domain);
 
-            var controller = new UsuarioController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
-                       
-            ctx.Database.CurrentTransaction.Rollback();
-        }
+        //    ctx.Database.BeginTransaction();
 
-        [Test]
-        public async Task Integration_InsertUsuarioTodosDadosFaltando()
-        {
-            var domain = new USUARIO("", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
-            var model = Mapper.Map<UsuarioViewModel>(domain);
+        //    var controller = new UsuarioController(ctx);
+        //    ViewResult result = await controller.Create(model) as ViewResult;
 
-            ctx.Database.BeginTransaction();
+        //    ctx.Database.CurrentTransaction.Rollback();
+        //}
 
-            var controller = new UsuarioController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+        //[Test]
+        //public async Task Integration_InsertUsuarioTodosDadosFaltando()
+        //{
+        //    var domain = new USUARIO(new Guid(), "", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
+        //    var model = Mapper.Map<UsuarioViewModel>(domain);
 
-            ctx.Database.CurrentTransaction.Rollback();
-        }
+        //    ctx.Database.BeginTransaction();
 
-        [Test]
-        public async Task Integration_InsertUsuarioDadosErrados()
-        {
-            var domain = new USUARIO("USU4RI0 T3ST3", new CPF("19865260abc"), new RG(DATA.Enum.EnumUF.PE, "abc1589"), DateTime.Now.AddYears(-50));
-            var model = Mapper.Map<UsuarioViewModel>(domain);
+        //    var controller = new UsuarioController(ctx);
+        //    ViewResult result = await controller.Create(model) as ViewResult;
 
-            ctx.Database.BeginTransaction();
+        //    ctx.Database.CurrentTransaction.Rollback();
+        //}
 
-            var controller = new UsuarioController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+        //[Test]
+        //public async Task Integration_InsertUsuarioDadosErrados()
+        //{
+        //    var domain = new USUARIO(new Guid(), "USU4RI0 T3ST3", new CPF("19865260abc"), new RG(DATA.Enum.EnumUF.PE, "abc1589"), DateTime.Now.AddYears(-50));
+        //    var model = Mapper.Map<UsuarioViewModel>(domain);
 
-            ctx.Database.CurrentTransaction.Rollback();
-        }
+        //    ctx.Database.BeginTransaction();
 
-        [Test]
-        public async Task Integration_DeleteUsuario()
-        {
-            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == 5);
-            var model = Mapper.Map<UsuarioViewModel>(domain);
-           
-            ctx.Database.BeginTransaction();
+        //    var controller = new UsuarioController(ctx);
+        //    ViewResult result = await controller.Create(model) as ViewResult;
 
-            var controller = new UsuarioController(ctx);
-            ViewResult result = await controller.Delete(Convert.ToInt32(model)) as ViewResult;
+        //    ctx.Database.CurrentTransaction.Rollback();
+        //}
 
-            ctx.Database.CurrentTransaction.Rollback();
-        }       
+        //[Test]
+        //public async Task Integration_DeleteUsuario()
+        //{
+        //    var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == 5);
+        //    var model = Mapper.Map<UsuarioViewModel>(domain);
+
+        //    ctx.Database.BeginTransaction();
+
+        //    var controller = new UsuarioController(ctx);
+        //    ViewResult result = await controller.Delete(Convert.ToInt32(model)) as ViewResult;
+
+        //    ctx.Database.CurrentTransaction.Rollback();
+        //}
     }
 }

@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using System;
+using JOB.WEB.Models;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
-using System;
-using JOB.WEB.Models;
 
-namespace AgendaCirurgicaBeta
+namespace JOB.WEB
 {
     public partial class Startup
     {
