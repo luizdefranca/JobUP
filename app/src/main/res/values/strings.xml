@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Jobup</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="agendamentos">Serviços Agendados</string>
+    <string name="action_salvar">Salvar</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_cad_usuario">Junte-se a Nós</string>
+    <string name="title_activity_agendamento">Serviços Agendados</string>
+    <string name="title_activity_cadastro">Perfil do Usuario</string>
+    <string name="title_activity_mensagem">Minhas Mensagens</string>
+    <string name="title_activity_confirmacao">Contratação do Serviço</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="erro_sincronizacao">Erro ao sincronizar com o servidor.</string>
+    <string name="acao_delete">Excluir</string>
+    <string name="hint_busca_usuario">Procurar por Usuario</string>
+    <string name="sobre_titulo">Aviso Importante ao Logar!</string>
+    <string name="sobre_mensagem">Na lista, deslize para baixo para atualizar</string>
+    <string name="sobre_botao_site">Info</string>
+    <plurals name="numero_selecionados">
+        <item quantity="one">1 selecionado</item>
+        <item quantity="other">%d selecionados</item>
+    </plurals>
+    <string name="mensagem_excluir">%d itens excluídos.</string>
+    <string name="desfazer">Desfazer</string>
+    <string name="acao_novo">Novo</string>
+    <string name="acao_pesquisar">Pesquisar</string>
+    <string name="acao_info">Configurações</string>
+    <string name="acao_compartilhar">Compartilhar</string>
+    <string name="texto_compartilhar">%1$s com %2$.1f Pontos</string>
+    <string name="acao_editar">Editar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
