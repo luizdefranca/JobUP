@@ -397,6 +397,23 @@ namespace JOB.WEB.Controllers
             }
         }
 
+        public ActionResult Ativar()
+        {
+            //só precisa desativar nosso usuário. o usuário do identity não tem esse recurso
+            using (Contexto ctx = new Contexto())
+            {
+                Guid id = Guid.Parse(User.Identity.GetUserId());
+
+                var usuario = ctx.Usuario.First(w => w.ID_USUARIO == id);
+
+                usuario.Ativar();
+                ctx.Entry(usuario).State = EntityState.Modified;
+                ctx.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult Desativar()
         {
             //só precisa desativar nosso usuário. o usuário do identity não tem esse recurso
