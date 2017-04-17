@@ -1,8 +1,8 @@
-﻿using System;
-using JOB.DATA;
+﻿using JOB.DATA;
 using JOB.DATA.Domain;
 using JsonNet.PrivateSettersContractResolvers;
 using Newtonsoft.Json;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
