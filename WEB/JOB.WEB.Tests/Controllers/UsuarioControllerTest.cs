@@ -31,6 +31,8 @@ namespace JOB.WEB.Tests.Controllers
         {
             //gera uma nova classe para testes
             var domain = new USUARIO(new Guid(), "USUARIO TESTE", new CPF("50869388720"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste1@gmail.com"));
+            domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             //se comunica com o controller
@@ -49,47 +51,54 @@ namespace JOB.WEB.Tests.Controllers
             Assert.AreEqual(model.CPF, domainNew.CPF.NR);
         }
 
-        //[Test]
-        //public async Task Integration_InsertUsuarioDadoFaltando()
-        //{
-        //    var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-30));
-        //    var model = Mapper.Map<UsuarioViewModel>(domain);
+        [Test]
+        public async Task Integration_InsertUsuarioDadoFaltando()
+        {
+            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-30));
+            domain.AdicionarContato(new Telefone("33793968"), new Telefone(""), new Email("umteste2@gmail.com"));
+            domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "", "", "", "Várzea", "Recife");
+            var model = Mapper.Map<UsuarioViewModel>(domain);
 
-        //    ctx.Database.BeginTransaction();
+            ctx.Database.BeginTransaction();
 
-        //    var controller = new UsuarioController(ctx);
-        //    ViewResult result = await controller.Create(model) as ViewResult;
+            var controller = new ManageController(ctx);
+            ViewResult result = await controller.Create(model) as ViewResult;
 
-        //    ctx.Database.CurrentTransaction.Rollback();
-        //}
+            ctx.Database.CurrentTransaction.Rollback();
+        }
 
-        //[Test]
-        //public async Task Integration_InsertUsuarioTodosDadosFaltando()
-        //{
-        //    var domain = new USUARIO(new Guid(), "", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
-        //    var model = Mapper.Map<UsuarioViewModel>(domain);
+        [Test]
+        public async Task Integration_InsertUsuarioTodosDadosFaltando()
+        {
+            var domain = new USUARIO(new Guid(), "", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
+            domain.AdicionarContato(new Telefone(""), new Telefone(""), new Email(""));
+            domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "", "", "", "", "");
+            var model = Mapper.Map<UsuarioViewModel>(domain);
 
-        //    ctx.Database.BeginTransaction();
+            ctx.Database.BeginTransaction();
 
-        //    var controller = new UsuarioController(ctx);
-        //    ViewResult result = await controller.Create(model) as ViewResult;
+            var controller = new ManageController(ctx);
+            ViewResult result = await controller.Create(model) as ViewResult;
 
-        //    ctx.Database.CurrentTransaction.Rollback();
-        //}
+            ctx.Database.CurrentTransaction.Rollback();
+        }
 
-        //[Test]
-        //public async Task Integration_InsertUsuarioDadosErrados()
-        //{
-        //    var domain = new USUARIO(new Guid(), "USU4RI0 T3ST3", new CPF("19865260abc"), new RG(DATA.Enum.EnumUF.PE, "abc1589"), DateTime.Now.AddYears(-50));
-        //    var model = Mapper.Map<UsuarioViewModel>(domain);
+        [Test]
+        public async Task Integration_InsertUsuarioDadosErrados()
+        {
+            var domain = new USUARIO(new Guid(), "USU4RI0 T3ST3", new CPF("19865260abc"), new RG(DATA.Enum.EnumUF.PE, "abc1589"), DateTime.Now.AddYears(-50));
+            domain.AdicionarContato(new Telefone("3379tyui"), new Telefone("994059sed"), new Email("umteste3@gmail.com"));
+            domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "5074zxsc", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
 
-        //    ctx.Database.BeginTransaction();
+            var model = Mapper.Map<UsuarioViewModel>(domain);
 
-        //    var controller = new UsuarioController(ctx);
-        //    ViewResult result = await controller.Create(model) as ViewResult;
+            ctx.Database.BeginTransaction();
 
-        //    ctx.Database.CurrentTransaction.Rollback();
-        //}
+            var controller = new ManageController(ctx);
+            ViewResult result = await controller.Create(model) as ViewResult;
+
+            ctx.Database.CurrentTransaction.Rollback();
+        }
 
         //[Test]
         //public async Task Integration_DeleteUsuario()
