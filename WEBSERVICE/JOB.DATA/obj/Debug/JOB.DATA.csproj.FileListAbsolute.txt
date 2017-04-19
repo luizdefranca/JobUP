@@ -1,3 +1,0 @@
-C:\Users\andre\Documents\GitHub\JobUP\WEBSERVICE\JOB.DATA\obj\Debug\JOB.DATA.csprojResolveAssemblyReference.cache
-C:\Users\andre\Documents\GitHub\JobUP\WEBSERVICE\JOB.DATA\obj\Debug\JOB.DATA.Migrations._1_0.resources
-C:\Users\andre\Documents\GitHub\JobUP\WEBSERVICE\JOB.DATA\obj\Debug\JOB.DATA.csproj.GenerateResource.Cache
