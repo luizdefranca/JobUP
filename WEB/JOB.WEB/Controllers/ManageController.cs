@@ -115,6 +115,7 @@ namespace JOB.WEB.Controllers
         // GET: /Manage/AddPhoneNumber
         public ActionResult AddPhoneNumber()
         {
+
             return View();
         }
 
@@ -127,7 +128,10 @@ namespace JOB.WEB.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
+
             }
+
+            
             // Generate the token and send it
             var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), model.Number);
             if (UserManager.SmsService != null)
