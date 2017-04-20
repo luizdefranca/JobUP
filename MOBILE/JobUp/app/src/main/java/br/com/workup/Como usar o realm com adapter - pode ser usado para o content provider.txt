@@ -1,0 +1,3 @@
+RealmResults<ServerData> results = realm.where(ServerData.class).findAllAsync();
+RealmBaseAdapter adapter = new RealmBaseAdapter(context, results, true);
+listView.setAdapter(adapter);
