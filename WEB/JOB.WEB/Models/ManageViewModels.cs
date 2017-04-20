@@ -28,14 +28,14 @@ namespace JOB.WEB.Models
     public class SetPasswordViewModel
     {
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "A {0} precisa ter no mímino {2} caracteres.", MinimumLength = 5)]
         [DataType(DataType.Password)]
-        [Display(Name = "New password")]
+        [Display(Name = "Nova senha")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        [Display(Name = "Confirmação da nova senha")]
+        [Compare("NewPassword", ErrorMessage = "A Nova senha e a confirmação de senha não são iguais.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -43,18 +43,18 @@ namespace JOB.WEB.Models
     {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
+        [Display(Name = "Senha atual")]
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "A {0} precisa ter no mímino {2} caracteres.", MinimumLength = 5)]
         [DataType(DataType.Password)]
-        [Display(Name = "New password")]
+        [Display(Name = "Nova senha")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        [Display(Name = "Confirmação da nova senha")]
+        [Compare("NewPassword", ErrorMessage = "A Nova senha e a confirmação de senha não são iguais.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -62,21 +62,25 @@ namespace JOB.WEB.Models
     {
         [Required]
         [Phone]
+<<<<<<< HEAD
         [Display(Name = "Phone Number")]
         [RegularExpression("^[(]{1}[1-9]{2}[)]{1}[0-9]{4,5}[-]{1}[0-9]{3,4}$",
         ErrorMessage = "Por favor, preencha o campo no formato: (99) 9999-9999 ou (99) 99999-9999")]
+=======
+        [Display(Name = "Número de telefone")]
+>>>>>>> origin/master
         public string Number { get; set; }
     }
 
     public class VerifyPhoneNumberViewModel
     {
         [Required]
-        [Display(Name = "Code")]
+        [Display(Name = "Código")]
         public string Code { get; set; }
 
         [Required]
         [Phone]
-        [Display(Name = "Phone Number")]
+        [Display(Name = "Número de telefone")]
         public string PhoneNumber { get; set; }
     }
 

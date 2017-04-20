@@ -1,6 +1,9 @@
-﻿using AgendaCirurgicaBeta;
+﻿using AutoMapper;
 using JOB.DATA;
+using JOB.DATA.Domain;
+using JOB.DATA.ValueObject;
 using JOB.WEB.Models;
+using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -10,10 +13,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using AutoMapper;
-using JOB.DATA.Domain;
-using JOB.DATA.ValueObject;
-using JOB.WEB.Validation;
 
 namespace JOB.WEB.Controllers
 {
@@ -67,12 +66,12 @@ namespace JOB.WEB.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
-                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
+                message == ManageMessageId.ChangePasswordSuccess ? "Sua senha foi alterada."
+                : message == ManageMessageId.SetPasswordSuccess ? "Sua senha foi definida."
+                : message == ManageMessageId.SetTwoFactorSuccess ? "Seu provedor de autenticação de dois fatores foi definido."
+                : message == ManageMessageId.Error ? "Ocorreu um erro."
+                : message == ManageMessageId.AddPhoneSuccess ? "O seu número de telefone foi adicionado."
+                : message == ManageMessageId.RemovePhoneSuccess ? "O seu número de telefone foi removido."
                 : "";
 
             var userId = User.Identity.GetUserId();
@@ -139,7 +138,7 @@ namespace JOB.WEB.Controllers
                 var message = new IdentityMessage
                 {
                     Destination = model.Number,
-                    Body = "Your security code is: " + code
+                    Body = "Seu código de segurança é: " + code
                 };
                 await UserManager.SmsService.SendAsync(message);
             }
@@ -206,7 +205,7 @@ namespace JOB.WEB.Controllers
                 return RedirectToAction("Index", new { Message = ManageMessageId.AddPhoneSuccess });
             }
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "Failed to verify phone");
+            ModelState.AddModelError("", "Falha ao verificar o telefone");
             return View(model);
         }
 
@@ -295,8 +294,8 @@ namespace JOB.WEB.Controllers
         public async Task<ActionResult> ManageLogins(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred."
+                message == ManageMessageId.RemoveLoginSuccess ? "A conta externa foi removida."
+                : message == ManageMessageId.Error ? "Ocorreu um erro."
                 : "";
             var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
             if (user == null)
