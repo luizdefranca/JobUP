@@ -8,7 +8,7 @@ using System.Web.Http;
 namespace JOB.WEB.ApiController
 {
     [AllowAnonymous]
-    public class AccountController : System.Web.Http.ApiController
+    public class LoginController : System.Web.Http.ApiController
     {
         public ApplicationSignInManager SignInManager => HttpContext.Current.GetOwinContext().Get<ApplicationSignInManager>();
         public ApplicationUserManager UserManager => HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>();
