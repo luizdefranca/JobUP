@@ -155,5 +155,16 @@ namespace JOB.WEB.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public async Task<ActionResult> Bloquear(Guid id)
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+
+            domain.Bloquear();
+            ctx.Entry(domain).State = EntityState.Modified;
+            await ctx.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
     }
 }

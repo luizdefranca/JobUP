@@ -72,6 +72,10 @@ namespace JOB.DATA.Domain
             this.DT_ATIVACAO = DateTime.Now;
         }
 
+        public void Bloquear()
+        {
+            this.BLOQUEADO = true;
+        }
         public void Desativar()
         {
             this.ATIVO = false;
@@ -106,6 +110,7 @@ namespace JOB.DATA.Domain
         public bool APROVADO { get; private set; }
 
         public bool ATIVO { get; private set; }
+        public bool BLOQUEADO { get; private set; }
 
         public ENDERECO ENDERECO { get; private set; }
 
@@ -113,4 +118,4 @@ namespace JOB.DATA.Domain
 
         public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; private set; }
     }
-}
+}       
