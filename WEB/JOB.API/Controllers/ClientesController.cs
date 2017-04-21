@@ -32,4 +32,5 @@ namespace JOB.API.Controllers
                 }
             }
         }
+    }
 }

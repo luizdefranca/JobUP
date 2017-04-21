@@ -1,5 +1,6 @@
 ﻿using JOB.DATA.Config;
 using JOB.DATA.Domain;
+using JOB.DATA.Domain.OFERTAS;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -43,6 +44,7 @@ namespace JOB.DATA
         public DbSet<AVALIACAO> Avaliacao { get; set; }
         public DbSet<ESPECIALIDADE> Especialidade { get; set; }
         public DbSet<FORMACAO> Formacao { get; set; }
+        public DbSet<OFERTA> Oferta { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
