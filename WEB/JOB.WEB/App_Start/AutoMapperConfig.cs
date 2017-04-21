@@ -11,6 +11,7 @@ namespace JOB.WEB.App_Start
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<USUARIO, UsuarioViewModel>();
+                cfg.CreateMap<PERFIL_PROFISSIONAL, ProfissionalViewModel>();
             });
         }
     }

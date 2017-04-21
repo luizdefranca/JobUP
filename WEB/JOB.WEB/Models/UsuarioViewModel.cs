@@ -58,8 +58,6 @@ namespace JOB.WEB.Models
         [Required]
         //[DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone Celular")]
-        [RegularExpression("^[(]{1}[1-9]{2}[)]{1}[0-9]{4,5}[-]{1}[0-9]{3,4}$",
-        ErrorMessage = "Por favor, preencha o campo no formato: (99)9999-9999 ou (99)99999-9999")]
         public string ContatoCELULAR { get; set; }
 
         //[Required]

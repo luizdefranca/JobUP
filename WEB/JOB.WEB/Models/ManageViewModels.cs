@@ -62,13 +62,9 @@ namespace JOB.WEB.Models
     {
         [Required]
         [Phone]
-<<<<<<< HEAD
-        [Display(Name = "Phone Number")]
+        [Display(Name = "Número de telefone")]
         [RegularExpression("^[(]{1}[1-9]{2}[)]{1}[0-9]{4,5}[-]{1}[0-9]{3,4}$",
         ErrorMessage = "Por favor, preencha o campo no formato: (99) 9999-9999 ou (99) 99999-9999")]
-=======
-        [Display(Name = "Número de telefone")]
->>>>>>> origin/master
         public string Number { get; set; }
     }
 

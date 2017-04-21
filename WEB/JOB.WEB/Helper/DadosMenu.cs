@@ -14,6 +14,7 @@ namespace JOB.WEB.Helper
 
             menu.Add(new MenuViewModel { Id = 10, nameOption = "Dashboard", controller = "Home", action = "Index", imageClass = "fa fa-dashboard fa-fw", status = true, isParent = false, parentId = 0 });
             menu.Add(new MenuViewModel { Id = 14, nameOption = "Usuários", controller = "Usuario", action = "Index", imageClass = "fa fa-user fa-fw", status = true, isParent = false, parentId = 0 });
+            menu.Add(new MenuViewModel { Id = 15, nameOption = "Profissionais", controller = "Profissional", action = "Index", imageClass = "glyphicon glyphicon-briefcase", status = true, isParent = false, parentId = 0 });
 
             //menu.Add(new MenuViewModel { Id = 2, nameOption = "Charts", imageClass = "fa fa-bar-chart-o fa-fw", status = true, isParent = true, parentId = 0 });
             //menu.Add(new MenuViewModel { Id = 3, nameOption = "Flot Charts", controller = "Home", action = "FlotCharts", status = true, isParent = false, parentId = 2 });
