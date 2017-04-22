@@ -1,50 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using AutoMapper;
 using JOB.DATA;
-using JOB.DATA.Domain;
 using JOB.WEB.Models;
-using System.Data.Entity;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace JOB.WEB.Controllers
 {
-    public class ClienteController : Controller
+    public class JobController : Controller
     {
-        Contexto ctx = new Contexto();
+        private Contexto ctx = new Contexto();
 
-        // GET: Cliente
-        public ActionResult Index()
+        public Guid ID
         {
-            var lstDomain = ctx.Usuario.Include(x => x.CONTATO).ToList();
-            //var lstDomain = ctx.Usuario.ToList();
+            get { return Guid.Parse(User.Identity.GetUserId()); }
+        }
 
-            var lstModel = Mapper.Map<List<ClienteViewModel>>(lstDomain);
+        // GET: Oferta
+        public ActionResult Cliente()
+        {
+            var lstDomain = ctx.Job.Where(f => f.ID_USUARIO_CLIENTE == ID).ToList();
 
-            //foreach (var usuarioModel in lstModel)
-            //{
-            //    //usuarioModel.TELEFONE = ctx.Contato.Last(f => f.ID_USUARIO == usuarioModel.ID_USUARIO).CELULAR.NrTelefone;
-            //}
+            var lstModel = Mapper.Map<List<JobViewModel>>(lstDomain);
 
             return View(lstModel);
         }
 
-        // GET: Cliente/Details/5
+        public ActionResult Freela()
+        {
+            var lstDomain = ctx.Job.Where(f => f.ID_USUARIO_PROFISSIONAL == ID).ToList();
+
+            var lstModel = Mapper.Map<List<JobViewModel>>(lstDomain);
+
+            return View(lstModel);
+        }
+
+        // GET: Oferta/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Cliente/Create
-        [HttpGet]
+        // GET: Oferta/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Cliente/Create
+        // POST: Oferta/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -60,13 +65,13 @@ namespace JOB.WEB.Controllers
             }
         }
 
-        // GET: Cliente/Edit/5
+        // GET: Oferta/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Cliente/Edit/5
+        // POST: Oferta/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -82,13 +87,13 @@ namespace JOB.WEB.Controllers
             }
         }
 
-        // GET: Cliente/Delete/5
+        // GET: Oferta/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Cliente/Delete/5
+        // POST: Oferta/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

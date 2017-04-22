@@ -130,7 +130,7 @@ namespace JOB.WEB.Controllers
 
             }
 
-            
+
             // Generate the token and send it
             var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), model.Number);
             if (UserManager.SmsService != null)
@@ -361,35 +361,7 @@ namespace JOB.WEB.Controllers
 
             try
             {
-                Guid id = Guid.Parse(User.Identity.GetUserId());
-
-                var domain = await ctx.Usuario
-                    .Include(i => i.CONTATO)
-                    .Include(i => i.ENDERECO)
-                    .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
-
-                if (domain == null)
-                {
-                    var newobj = new USUARIO(Guid.Parse(User.Identity.GetUserId()), obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
-
-                    newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.Name));
-                    newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
-
-                    ctx.Usuario.Add(newobj);
-                }
-                else
-                {
-                    domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
-
-                    domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
-                    domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
-
-                    ctx.Entry(domain).State = EntityState.Modified;
-                    ctx.Entry(domain.CONTATO).State = EntityState.Modified;
-                    ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
-                }
-
-                await ctx.SaveChangesAsync();
+                await ProcessarCadastro(obj);
 
                 return RedirectToAction("Index");
             }
@@ -398,6 +370,39 @@ namespace JOB.WEB.Controllers
                 ModelState.AddModelError("", ex.TratarMensagem());
                 return View(obj);
             }
+        }
+
+        public async Task ProcessarCadastro(UsuarioViewModel obj, Guid? idGuid = null)
+        {
+            Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
+
+            var domain = await ctx.Usuario
+                .Include(i => i.CONTATO)
+                .Include(i => i.ENDERECO)
+                .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
+
+            if (domain == null)
+            {
+                var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(obj.ContatoEMAIL));
+                newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                ctx.Usuario.Add(newobj);
+            }
+            else
+            {
+                domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
+                domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                ctx.Entry(domain).State = EntityState.Modified;
+                ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+                ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
+            }
+
+            await ctx.SaveChangesAsync();
         }
 
         public ActionResult Ativar()
