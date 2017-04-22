@@ -14,7 +14,7 @@ namespace JOB.DATA
         public Contexto()
             : base(GetConnectionString())
         {
-            Configuration.LazyLoadingEnabled = false;
+            Configuration.LazyLoadingEnabled = false; 
             Configuration.ProxyCreationEnabled = false;
             Configuration.AutoDetectChangesEnabled = false;
         }
@@ -43,6 +43,7 @@ namespace JOB.DATA
         public DbSet<AVALIACAO> Avaliacao { get; set; }
         public DbSet<ESPECIALIDADE> Especialidade { get; set; }
         public DbSet<FORMACAO> Formacao { get; set; }
+        public DbSet<Domain.JOB> Job{ get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -69,6 +70,7 @@ namespace JOB.DATA
             modelBuilder.Configurations.Add(new AvaliacaoConfig());
             modelBuilder.Configurations.Add(new EspecialidadeConfig());
             modelBuilder.Configurations.Add(new FormacaoConfig());
+            modelBuilder.Configurations.Add(new JobConfig());
         }
     }
 }

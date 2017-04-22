@@ -51,6 +51,10 @@ namespace JOB.WEB.Models
         [Display(Name = "Ativo")]
         public bool ATIVO { get; set; }
 
+        [ScaffoldColumn(false)]
+        [Display(Name = "Ativo")]
+        public bool BLOQUEADO { get; set; }
+
         //[DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefone Fixo")]
         public string ContatoFIXO { get; set; }

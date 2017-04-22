@@ -65,12 +65,12 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.ContatoCELULAR, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-2">
-                                @Html.EditorFor(model => model.ContatoCELULAR, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.ContatoCELULAR, new { htmlAttributes = new { @class = "form-control", id = "txtCelular" } })
                                 @Html.ValidationMessageFor(model => model.ContatoCELULAR, "", new { @class = "text-danger" })
                             </div>
                             @Html.LabelFor(model => model.ContatoFIXO, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-2">
-                                @Html.EditorFor(model => model.ContatoFIXO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.ContatoFIXO, new { htmlAttributes = new { @class = "form-control", id = "txtFixo" } })
                                 @Html.ValidationMessageFor(model => model.ContatoFIXO, "", new { @class = "text-danger" })
                             </div>
                             @*@Html.LabelFor(model => model.ContatoEMAIL, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -137,4 +137,14 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/maskedinput")
+<script src="~/Scripts/jquery.maskedinput-1.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#txtCelular").mask("(99) 999999999");
+            $("#txtFixo").mask("(99) 99999999");
+
+        });
+    </script>
 }

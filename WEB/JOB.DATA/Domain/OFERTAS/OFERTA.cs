@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JOB.DATA.Domain.OFERTAS
 {
-    class OFERTA
+    public class OFERTA
     {
         public int ID_OFERTA { get; set; }
         public int ID_USUARIO { get; set; }
