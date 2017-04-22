@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace JOB.WEB.Controllers
 {
@@ -38,9 +40,14 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Oferta/Details/5
-        public ActionResult Details(int id)
+        public ActionResult DetailsJobFreela(Guid id)
         {
-            return View();
+
+            var domain = ctx.Job.Where(f => f.ID_USUARIO_PROFISSIONAL == ID);
+            var model = Mapper.Map<JobViewModel>(domain);
+            
+            return View(model);
+            
         }
 
         // GET: Oferta/Create
@@ -107,6 +114,18 @@ namespace JOB.WEB.Controllers
             {
                 return View();
             }
+        }
+
+        public async Task<ActionResult> Aceitar(Guid id)
+        {
+
+            var domain = await ctx.Job.FirstAsync(f => f.ID_USUARIO_PROFISSIONAL == id);
+
+            domain.Aceitar();
+            ctx.Entry(domain).State = EntityState.Modified;
+            await ctx.SaveChangesAsync();
+
+            return RedirectToAction("Index");
         }
     }
 }

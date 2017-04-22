@@ -1040,6 +1040,7 @@
     <Content Include="Views\Profissional\Index.cshtml" />
     <Content Include="Views\Job\Cliente.cshtml" />
     <Content Include="Views\Job\Freela.cshtml" />
+    <Content Include="Views\Job\DetailsJobFreela.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

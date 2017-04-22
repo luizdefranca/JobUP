@@ -27,6 +27,11 @@ namespace JOB.DATA.Domain
             this.VALOR_SUGERIDO = VALOR_SUGERIDO;
         }
 
+        public void Aceitar()
+        {
+            this.JOB_ACEITO = true;
+        }
+
         private void InicializaVariaveis()
         {
             //this.GUIAS = new HashSet<GUIA>();
