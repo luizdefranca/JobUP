@@ -5,35 +5,35 @@
     build-mode="FULL"
     density="xxhdpi"
     format="10"
-    plugin-version="2.3.0"
-    timestamp="1492646241170"
+    plugin-version="2.3.1"
+    timestamp="1492836558976"
     token="-271149622531415815"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="7172" />
+        duration="7826" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1258" />
+        duration="1317" />
     <task
         name="verifier"
-        duration="204" />
+        duration="375" />
 
     <artifact
         location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
     <artifact
         location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
         location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
@@ -62,19 +62,19 @@
 
     <build
         build-mode="FULL"
-        timestamp="1492646241170"
+        timestamp="1492836558976"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_0.apk"

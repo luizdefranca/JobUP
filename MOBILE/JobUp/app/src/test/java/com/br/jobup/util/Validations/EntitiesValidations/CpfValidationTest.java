@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 public class CpfValidationTest {
     @Test
     public void isACpfValid() throws Exception {
-        String cpf = "867.554.707-24";
+        String cpf = "793.901.104-91";
         List<ValidationMessage> messages = new CPFValidator().invalidMessagesFor(cpf);
         for (ValidationMessage error : messages) {
             System.out.println(error.getMessage());

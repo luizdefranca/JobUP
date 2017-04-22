@@ -1,4 +1,4 @@
-#Wed Apr 19 20:58:30 BRT 2017
+#Sat Apr 22 01:49:57 BRT 2017
 base.0=/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0
 renamed.0=classes.dex
 file.0=/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex

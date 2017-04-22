@@ -49,9 +49,10 @@
             android:name="com.br.jobup.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
 
-        <service
-            android:name="com.android.tools.fd.runtime.InstantRunService"
-            android:exported="true" />
+        <provider
+            android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:authorities="com.br.jobup.com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>
