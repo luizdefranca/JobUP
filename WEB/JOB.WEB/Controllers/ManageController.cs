@@ -385,7 +385,7 @@ namespace JOB.WEB.Controllers
             {
                 var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-                newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(obj.ContatoEMAIL));
+                newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetUserName()));
                 newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
                 ctx.Usuario.Add(newobj);

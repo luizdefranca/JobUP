@@ -64,10 +64,10 @@ namespace JOB.WEB.Models
         [Display(Name = "Telefone Celular")]
         public string ContatoCELULAR { get; set; }
 
-        //[Required]
-        [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email")]
-        public string ContatoEMAIL { get; set; }
+        ////[Required]
+        //[DataType(DataType.EmailAddress)]
+        //[Display(Name = "Email")]
+        //public string ContatoEMAIL { get; set; }
 
         [Required]
         [Display(Name = "UF")]

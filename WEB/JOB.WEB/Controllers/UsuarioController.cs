@@ -51,59 +51,59 @@ namespace JOB.WEB.Controllers
             return View(model);
         }
 
-        // GET: Usuario/Edit/5
-        public async Task<ActionResult> Edit(Guid id)
-        {
-            var domain = await ctx.Usuario
-                .Include(i => i.CONTATO)
-                .Include(i => i.ENDERECO)
-                .FirstAsync(w => w.ID_USUARIO == id);
+        //// GET: Usuario/Edit/5
+        //public async Task<ActionResult> Edit(Guid id)
+        //{
+        //    var domain = await ctx.Usuario
+        //        .Include(i => i.CONTATO)
+        //        .Include(i => i.ENDERECO)
+        //        .FirstAsync(w => w.ID_USUARIO == id);
 
-            var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
+        //    var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
-            return View(model);
-        }
+        //    return View(model);
+        //}
 
-        // POST: Usuario/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(Guid id, UsuarioViewModel obj)
-        {
-            if (!ModelState.IsValid) return View(obj);
+        //// POST: Usuario/Edit/5
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> Edit(Guid id, UsuarioViewModel obj)
+        //{
+        //    if (!ModelState.IsValid) return View(obj);
 
-            try
-            {
-                var domain = await ctx.Usuario
-                    .Include(i => i.CONTATO)
-                    .Include(i => i.ENDERECO)
-                    .FirstAsync(w => w.ID_USUARIO == id);
+        //    try
+        //    {
+        //        var domain = await ctx.Usuario
+        //            .Include(i => i.CONTATO)
+        //            .Include(i => i.ENDERECO)
+        //            .FirstAsync(w => w.ID_USUARIO == id);
 
-                domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+        //        domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-                if (domain.CONTATO == null)
-                    domain.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(obj.ContatoEMAIL));
-                else
-                    domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
+        //        if (domain.CONTATO == null)
+        //            domain.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(obj.ContatoEMAIL));
+        //        else
+        //            domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
 
-                if (domain.ENDERECO == null)
-                    domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
-                else
-                    domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+        //        if (domain.ENDERECO == null)
+        //            domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+        //        else
+        //            domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
-                ctx.Entry(domain).State = EntityState.Modified;
-                ctx.Entry(domain.CONTATO).State = EntityState.Modified;
-                ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
+        //        ctx.Entry(domain).State = EntityState.Modified;
+        //        ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+        //        ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
 
-                await ctx.SaveChangesAsync();
+        //        await ctx.SaveChangesAsync();
 
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.TratarMensagem());
-                return View(obj);
-            }
-        }
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ModelState.AddModelError("", ex.TratarMensagem());
+        //        return View(obj);
+        //    }
+        //}
 
         // GET: Usuario/Delete/5
         public async Task<ActionResult> Delete(Guid id)

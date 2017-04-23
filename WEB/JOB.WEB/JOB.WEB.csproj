@@ -1014,7 +1014,6 @@
     <Content Include="Views\Manage\Create.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
-    <Content Include="Views\Usuario\Edit.cshtml" />
     <Content Include="Views\Usuario\Delete.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
