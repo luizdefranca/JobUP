@@ -6,6 +6,9 @@ using System.Web.Mvc;
 using AutoMapper;
 using JOB.DATA;
 using JOB.WEB.Models;
+using JOB.WEB.Validation;
+using Microsoft.AspNet.Identity;
+using JOB.DATA.Domain;
 
 namespace JOB.WEB.Controllers
 {
@@ -16,7 +19,8 @@ namespace JOB.WEB.Controllers
         // GET: Profissional
         public ActionResult Index()
         {
-            var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
+            //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
+            var lstDominio = ctx.PerfilProfissional.ToList();
 
             var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
 
@@ -40,22 +44,32 @@ namespace JOB.WEB.Controllers
         // GET: Profissional/Create
         public ActionResult Create()
         {
-            return View();
+            var cadprof = new CadastroProfissionalViewModel();
+            cadprof.ESPECIALIDADES = ctx.Especialidade.ToList();
+            return View(cadprof);
         }
 
         // POST: Profissional/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(CadastroProfissionalViewModel obj)
         {
+            if (!ModelState.IsValid) return View(obj);
+
             try
             {
-                // TODO: Add insert logic here
+                Guid id = Guid.Parse(User.Identity.GetUserId());
 
+                var newobj = new PERFIL_PROFISSIONAL(id, obj.ID_ESPECIALIDADE, obj.RESUMO_CURRICULO);
+
+                ctx.PerfilProfissional.Add(newobj);
+                ctx.SaveChanges();
                 return RedirectToAction("Index");
+
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ModelState.AddModelError("", ex.TratarMensagem());
+                return View(obj);
             }
         }
 

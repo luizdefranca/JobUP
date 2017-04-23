@@ -374,35 +374,44 @@ namespace JOB.WEB.Controllers
 
         public async Task ProcessarCadastro(UsuarioViewModel obj, Guid? idGuid = null)
         {
-            Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
-
-            var domain = await ctx.Usuario
-                .Include(i => i.CONTATO)
-                .Include(i => i.ENDERECO)
-                .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
-
-            if (domain == null)
+            try
             {
-                var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+                Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
 
-                newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetUserName()));
-                newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+                var domain = await ctx.Usuario
+                    .Include(i => i.CONTATO)
+                    .Include(i => i.ENDERECO)
+                    .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
 
-                ctx.Usuario.Add(newobj);
+                if (domain == null)
+                {
+                    var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                    newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetUserName()));
+                    newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                    ctx.Usuario.Add(newobj);
+                }
+                else
+                {
+                    domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                    domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
+                    domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                    ctx.Entry(domain).State = EntityState.Modified;
+                    ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+                    ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
+                }
+
+                await ctx.SaveChangesAsync();
             }
-            else
+            catch (Exception ex)
             {
-                domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
-
-                domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
-                domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
-
-                ctx.Entry(domain).State = EntityState.Modified;
-                ctx.Entry(domain.CONTATO).State = EntityState.Modified;
-                ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
-            }
-
-            await ctx.SaveChangesAsync();
+                ModelState.AddModelError("", ex.TratarMensagem());
+                
+            } 
+               
         }
 
         public ActionResult Ativar()

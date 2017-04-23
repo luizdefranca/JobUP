@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JOB.DATA.Domain;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace JOB.WEB.Models
@@ -17,4 +19,20 @@ namespace JOB.WEB.Models
         public string DESC_ESPECIALIDADE { get; set; }
         public string RESUMO_CURRICULO { get; set; }
     }
+
+    public class CadastroProfissionalViewModel
+    {
+        public CadastroProfissionalViewModel()
+        {
+            ESPECIALIDADES = new List<ESPECIALIDADE>();
+        }
+        public int ID_ESPECIALIDADE { get; set; }
+        [Display(Name = "Descrição")]
+        [DataType(DataType.MultilineText)]
+        public string RESUMO_CURRICULO { get; set; }
+        [Display(Name = "Especialidade")]
+        public List<ESPECIALIDADE> ESPECIALIDADES { get; set; }
+
+    }
+
 }
