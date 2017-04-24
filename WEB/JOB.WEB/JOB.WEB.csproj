@@ -1046,6 +1046,8 @@
     <Content Include="Views\Job\Freela.cshtml" />
     <Content Include="Views\Job\DetailsJobFreela.cshtml" />
     <Content Include="Views\Profissional\Create.cshtml" />
+    <Content Include="Views\Profissional\CriarJob.cshtml" />
+    <Content Include="Views\Profissional\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

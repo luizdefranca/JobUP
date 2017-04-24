@@ -42,9 +42,7 @@
                 @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Propor Job", "CriarJob", new {  id=item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE  })
             </td>
         </tr>
     }

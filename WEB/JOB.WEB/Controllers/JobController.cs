@@ -27,6 +27,12 @@ namespace JOB.WEB.Controllers
 
             var lstModel = Mapper.Map<List<JobViewModel>>(lstDomain);
 
+            foreach (var item in lstModel)
+            {
+                item.nome = ctx.Usuario.First(f => f.ID_USUARIO == item.ID_USUARIO_PROFISSIONAL).NOME;
+                item.especialidade = ctx.Especialidade.First(f=> f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).DESCRICAO;
+            }
+
             return View(lstModel);
         }
 
