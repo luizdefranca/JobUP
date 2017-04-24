@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using System;
 using System.Data.Entity;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace AgendaCirurgicaBeta.Models
+namespace JOB.WEB.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -21,9 +24,26 @@ namespace AgendaCirurgicaBeta.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("AZURE", throwIfV1Schema: false)
+            : base(GetConnectionString())
         {
             Database.SetInitializer(new ApplicationDbInitializer());
+        }
+
+        private static string GetConnectionString()
+        {
+            if (Environment.GetEnvironmentVariable("CONNECTION_STRING") != null)
+            {
+                return Environment.GetEnvironmentVariable("CONNECTION_STRING");
+            }
+            else
+            {
+                var path = @"c:\settings_jobup.xml";
+
+                var xdoc = XDocument.Load(path);
+                var valor = xdoc.Elements().Elements().First(f => f.Name == "CONNECTION_STRING").Value;
+
+                return valor;
+            }
         }
 
         public static ApplicationDbContext Create()

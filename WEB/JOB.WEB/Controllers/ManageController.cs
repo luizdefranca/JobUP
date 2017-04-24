@@ -1,13 +1,20 @@
-﻿using AgendaCirurgicaBeta.Models;
+﻿using AutoMapper;
+using JOB.DATA;
+using JOB.DATA.Domain;
+using JOB.DATA.ValueObject;
+using JOB.WEB.Models;
+using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace AgendaCirurgicaBeta.Controllers
+namespace JOB.WEB.Controllers
 {
     [Authorize]
     public class ManageController : Controller
@@ -17,6 +24,11 @@ namespace AgendaCirurgicaBeta.Controllers
 
         public ManageController()
         {
+        }
+
+        public ManageController(Contexto ctx)
+        {
+            this.ctx = ctx;
         }
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
@@ -54,12 +66,12 @@ namespace AgendaCirurgicaBeta.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
-                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
+                message == ManageMessageId.ChangePasswordSuccess ? "Sua senha foi alterada."
+                : message == ManageMessageId.SetPasswordSuccess ? "Sua senha foi definida."
+                : message == ManageMessageId.SetTwoFactorSuccess ? "Seu provedor de autenticação de dois fatores foi definido."
+                : message == ManageMessageId.Error ? "Ocorreu um erro."
+                : message == ManageMessageId.AddPhoneSuccess ? "O seu número de telefone foi adicionado."
+                : message == ManageMessageId.RemovePhoneSuccess ? "O seu número de telefone foi removido."
                 : "";
 
             var userId = User.Identity.GetUserId();
@@ -102,6 +114,7 @@ namespace AgendaCirurgicaBeta.Controllers
         // GET: /Manage/AddPhoneNumber
         public ActionResult AddPhoneNumber()
         {
+
             return View();
         }
 
@@ -114,7 +127,10 @@ namespace AgendaCirurgicaBeta.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
+
             }
+
+
             // Generate the token and send it
             var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), model.Number);
             if (UserManager.SmsService != null)
@@ -122,7 +138,7 @@ namespace AgendaCirurgicaBeta.Controllers
                 var message = new IdentityMessage
                 {
                     Destination = model.Number,
-                    Body = "Your security code is: " + code
+                    Body = "Seu código de segurança é: " + code
                 };
                 await UserManager.SmsService.SendAsync(message);
             }
@@ -189,7 +205,7 @@ namespace AgendaCirurgicaBeta.Controllers
                 return RedirectToAction("Index", new { Message = ManageMessageId.AddPhoneSuccess });
             }
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "Failed to verify phone");
+            ModelState.AddModelError("", "Falha ao verificar o telefone");
             return View(model);
         }
 
@@ -278,8 +294,8 @@ namespace AgendaCirurgicaBeta.Controllers
         public async Task<ActionResult> ManageLogins(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred."
+                message == ManageMessageId.RemoveLoginSuccess ? "A conta externa foi removida."
+                : message == ManageMessageId.Error ? "Ocorreu um erro."
                 : "";
             var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
             if (user == null)
@@ -317,6 +333,120 @@ namespace AgendaCirurgicaBeta.Controllers
             }
             var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
+        }
+
+        private Contexto ctx = new Contexto();
+
+        // GET: Usuario/Create
+        public async Task<ActionResult> Create()
+        {
+            Guid id = Guid.Parse(User.Identity.GetUserId());
+
+            var domain = await ctx.Usuario
+                .Include(i => i.CONTATO)
+                .Include(i => i.ENDERECO)
+                .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
+
+            var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
+
+            return View(model);
+        }
+
+        // POST: Usuario/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(UsuarioViewModel obj)
+        {
+            if (!ModelState.IsValid) return View(obj);
+
+            try
+            {
+                await ProcessarCadastro(obj);
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.TratarMensagem());
+                return View(obj);
+            }
+        }
+
+        public async Task ProcessarCadastro(UsuarioViewModel obj, Guid? idGuid = null)
+        {
+            try
+            {
+                Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
+
+                var domain = await ctx.Usuario
+                    .Include(i => i.CONTATO)
+                    .Include(i => i.ENDERECO)
+                    .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
+
+                if (domain == null)
+                {
+                    var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                    newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetUserName()));
+                    newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                    ctx.Usuario.Add(newobj);
+                }
+                else
+                {
+                    domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                    domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
+                    domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                    ctx.Entry(domain).State = EntityState.Modified;
+                    ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+                    ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
+                }
+
+                await ctx.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.TratarMensagem());
+                
+            } 
+               
+        }
+
+        public ActionResult Ativar()
+        {
+            //só precisa desativar nosso usuário. o usuário do identity não tem esse recurso
+            using (Contexto ctx = new Contexto())
+            {
+                Guid id = Guid.Parse(User.Identity.GetUserId());
+
+                var usuario = ctx.Usuario.First(w => w.ID_USUARIO == id);
+
+                usuario.Ativar();
+                ctx.Entry(usuario).State = EntityState.Modified;
+                ctx.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Desativar()
+        {
+            //só precisa desativar nosso usuário. o usuário do identity não tem esse recurso
+            using (Contexto ctx = new Contexto())
+            {
+                Guid id = Guid.Parse(User.Identity.GetUserId());
+
+                var usuario = ctx.Usuario.First(w => w.ID_USUARIO == id);
+
+                usuario.Desativar();
+                ctx.Entry(usuario).State = EntityState.Modified;
+                ctx.SaveChanges();
+            }
+
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
         }
 
         protected override void Dispose(bool disposing)

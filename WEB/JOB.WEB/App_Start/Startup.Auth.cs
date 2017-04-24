@@ -1,12 +1,13 @@
-﻿using AgendaCirurgicaBeta.Models;
+﻿using System;
+using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.Google;
 using Owin;
-using System;
 
-namespace AgendaCirurgicaBeta
+namespace JOB.WEB
 {
     public partial class Startup
     {
@@ -59,8 +60,9 @@ namespace AgendaCirurgicaBeta
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
-            //    ClientId = "",
-            //    ClientSecret = ""
+            //    ClientId = "535867055862-1rus4ggpdp70qaptgdsug206fpl8ksdm.apps.googleusercontent.com",
+            //    ClientSecret = "w8il1b5Y1WFNsAAfA30nz-cQ",
+            //    Provider = new GoogleOAuth2AuthenticationProvider()
             //});
         }
     }

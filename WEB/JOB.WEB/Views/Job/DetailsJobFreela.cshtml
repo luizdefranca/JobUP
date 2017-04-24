@@ -1,0 +1,82 @@
+﻿@model JOB.WEB.Models.JobViewModel
+
+@{
+    ViewBag.Title = "DetailsJobFreela";
+}
+
+<h2>DetailsJobFreela</h2>
+
+<div>
+    <h4>JobViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_USUARIO_CLIENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_USUARIO_CLIENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_USUARIO_PROFISSIONAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_USUARIO_PROFISSIONAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_ESPECIALIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_ESPECIALIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DT_JOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DT_JOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITULO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBSERVACOES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBSERVACOES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_SUGERIDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_SUGERIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JOB_ACEITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JOB_ACEITO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Aceitar", "Aceitar", new { id = Model.ID_JOB }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

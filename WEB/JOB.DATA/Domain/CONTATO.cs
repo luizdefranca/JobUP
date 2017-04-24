@@ -1,4 +1,5 @@
-﻿using AgendaCirurgicaBeta.Domain.Core;
+﻿using System;
+using AgendaCirurgicaBeta.Domain.Core;
 using JOB.DATA.ValueObject;
 using Newtonsoft.Json;
 
@@ -14,22 +15,22 @@ namespace JOB.DATA.Domain
         {
         }
 
-        public CONTATO(int ID_USUARIO, Telefone FIXO, Telefone CELULAR, Email EMAIL)
+        public CONTATO(Guid ID_USUARIO, Telefone FIXO, Telefone CELULAR, Email EMAIL)
         {
             this.ID_USUARIO = ID_USUARIO;
-            this.FIXO = FIXO;
+            if (FIXO != null) this.FIXO = FIXO;
             this.CELULAR = CELULAR;
             this.EMAIL = EMAIL;
         }
 
-        public void AtualizarValor(Telefone FIXO, Telefone CELULAR, Email EMAIL)
+        public void AtualizarValor(Telefone FIXO, Telefone CELULAR)
         {
-            this.FIXO = FIXO;
+            if (FIXO != null) this.FIXO = FIXO;
             this.CELULAR = CELULAR;
-            this.EMAIL = EMAIL;
+            //this.EMAIL = EMAIL;
         }
 
-        public int ID_USUARIO { get; private set; }
+        public Guid ID_USUARIO { get; private set; }
         public Telefone FIXO { get; private set; }
         public Telefone CELULAR { get; private set; }
         public Email EMAIL { get; private set; }

@@ -1,4 +1,5 @@
 ﻿using AgendaCirurgicaBeta.Domain.Core;
+using JOB.DATA.Enum;
 using JOB.DATA.ValueObject;
 using Newtonsoft.Json;
 using System;
@@ -17,10 +18,11 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
-        public USUARIO(string NOME, CPF CPF, RG RG, DateTime DT_NASCIMENTO)
+        public USUARIO(Guid ID_USUARIO, string NOME, CPF CPF, RG RG, DateTime DT_NASCIMENTO)
         {
             this.InicializaVariaveis();
 
+            this.ID_USUARIO = ID_USUARIO;
             this.NOME = NOME;
             this.CPF = CPF;
             this.CPF = CPF;
@@ -29,6 +31,9 @@ namespace JOB.DATA.Domain
 
             this.DT_INCLUSAO = DateTime.Now;
             this.DT_ORDENACAO = DateTime.Now;
+
+            this.ATIVO = true;
+            this.DT_ATIVACAO = DateTime.Now;
         }
 
         public void AtualizaDados(string NOME, CPF CPF, RG RG, DateTime DT_NASCIMENTO)
@@ -45,10 +50,36 @@ namespace JOB.DATA.Domain
             this.APROVADO = false;
         }
 
+        public void AdicionarContato(Telefone FIXO, Telefone CELULAR, Email EMAIL)
+        {
+            CONTATO = new CONTATO(ID_USUARIO, FIXO, CELULAR, EMAIL);
+        }
+
+        public void AdicionarEndereco(EnumUF UF, string CEP, string LOGRADOURO, string COMPLEMENTO, string BAIRRO, string CIDADE)
+        {
+            ENDERECO = new ENDERECO(ID_USUARIO, UF, CEP, LOGRADOURO, COMPLEMENTO, BAIRRO, CIDADE);
+        }
+
         public void Aprovar()
         {
             this.APROVADO = true;
             this.DT_APROVACAO = DateTime.Now;
+        }
+
+        public void Ativar()
+        {
+            this.ATIVO = true;
+            this.DT_ATIVACAO = DateTime.Now;
+        }
+
+        public void Bloquear()
+        {
+            this.BLOQUEADO = true;
+        }
+        public void Desativar()
+        {
+            this.ATIVO = false;
+            this.DT_ATIVACAO = DateTime.Now;
         }
 
         private void InicializaVariaveis()
@@ -56,7 +87,7 @@ namespace JOB.DATA.Domain
             this.PERFIS_PROFISSIONAIS = new HashSet<PERFIL_PROFISSIONAL>();
         }
 
-        public int ID_USUARIO { get; private set; }
+        public Guid ID_USUARIO { get; private set; }
 
         public string NOME { get; private set; }
 
@@ -72,9 +103,14 @@ namespace JOB.DATA.Domain
 
         public DateTime? DT_APROVACAO { get; private set; }
 
+        public DateTime? DT_ATIVACAO { get; private set; }
+
         public DateTime DT_ORDENACAO { get; private set; }
 
         public bool APROVADO { get; private set; }
+
+        public bool ATIVO { get; private set; }
+        public bool BLOQUEADO { get; private set; }
 
         public ENDERECO ENDERECO { get; private set; }
 
@@ -82,4 +118,4 @@ namespace JOB.DATA.Domain
 
         public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; private set; }
     }
-}
+}       

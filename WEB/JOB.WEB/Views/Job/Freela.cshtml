@@ -1,0 +1,75 @@
+﻿@model IEnumerable<JOB.WEB.Models.JobViewModel>
+
+@{
+    ViewBag.Title = "Freela";
+}
+
+<h2>Freela</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_USUARIO_CLIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_USUARIO_PROFISSIONAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_ESPECIALIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_JOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBSERVACOES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALOR_SUGERIDO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JOB_ACEITO)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_USUARIO_CLIENTE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_USUARIO_PROFISSIONAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_ESPECIALIDADE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DT_JOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TITULO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OBSERVACOES)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VALOR_SUGERIDO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JOB_ACEITO)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID_JOB }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID_JOB }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID_JOB })
+            </td>
+        </tr>
+    }
+</table>

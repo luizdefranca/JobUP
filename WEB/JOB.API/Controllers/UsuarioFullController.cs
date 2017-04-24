@@ -2,6 +2,7 @@
 using JOB.DATA.Domain;
 using JsonNet.PrivateSettersContractResolvers;
 using Newtonsoft.Json;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -24,7 +25,7 @@ namespace JOB.API.Controllers
         }
 
         // GET: api/Usuario/5
-        public HttpResponseMessage Get(int id)
+        public HttpResponseMessage Get(Guid id)
         {
             var result = ctx.Usuario.Include(i => i.ENDERECO).Include(i => i.CONTATO).FirstOrDefault(w => w.ID_USUARIO == id);
 
@@ -55,7 +56,7 @@ namespace JOB.API.Controllers
         }
 
         // PUT: api/Usuario/5
-        public async Task<HttpResponseMessage> Put(int id, HttpRequestMessage request)
+        public async Task<HttpResponseMessage> Put(Guid id, HttpRequestMessage request)
         {
             var values = request.Content.ReadAsStringAsync().Result;
 
@@ -80,7 +81,7 @@ namespace JOB.API.Controllers
         }
 
         // DELETE: api/Usuario/5
-        public async Task Delete(int id)
+        public async Task Delete(Guid id)
         {
             var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
 

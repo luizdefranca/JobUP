@@ -1,25 +1,25 @@
-﻿using AgendaCirurgicaBeta.Helper;
-using AgendaCirurgicaBeta.Models;
+﻿using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using System;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using SendGrid;
 using SendGrid.Helpers.Mail;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using System.Xml.Linq;
 
-namespace AgendaCirurgicaBeta
+namespace JOB.WEB
 {
     public class EmailService : IIdentityMessageService
     {
         public async Task SendAsync(IdentityMessage message)
         {
-            var apiKey = Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
-            var client = new SendGridClient(apiKey);
+            var client = new SendGridClient(GetApiKey());
 
             var msg = new SendGridMessage();
 
@@ -30,6 +30,23 @@ namespace AgendaCirurgicaBeta
             msg.AddContent(MimeType.Html, message.Body);
 
             await client.SendEmailAsync(msg);
+        }
+
+        private static string GetApiKey()
+        {
+            if (Environment.GetEnvironmentVariable("SENDGRID_APIKEY") != null)
+            {
+                return Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
+            }
+            else
+            {
+                var path = @"c:\settings_jobup.xml";
+
+                var xdoc = XDocument.Load(path);
+                var valor = xdoc.Elements().Elements().First(f => f.Name == "SENDGRID_APIKEY").Value;
+
+                return valor;
+            }
         }
     }
 
@@ -63,8 +80,8 @@ namespace AgendaCirurgicaBeta
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
-                RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
+                RequiredLength = 5,
+                RequireNonLetterOrDigit = false,
                 RequireDigit = true,
                 RequireLowercase = true,
                 RequireUppercase = true,
@@ -79,12 +96,12 @@ namespace AgendaCirurgicaBeta
             // You can write your own provider and plug it in here.
             manager.RegisterTwoFactorProvider("Phone Code", new PhoneNumberTokenProvider<ApplicationUser>
             {
-                MessageFormat = "Your security code is {0}"
+                MessageFormat = "Seu Código de Segurança é {0}"
             });
             manager.RegisterTwoFactorProvider("Email Code", new EmailTokenProvider<ApplicationUser>
             {
-                Subject = "Security Code",
-                BodyFormat = "Your security code is {0}"
+                Subject = "Código de Segurança",
+                BodyFormat = "Seu Código de Segurança é {0}"
             });
 
             manager.EmailService = new EmailService();

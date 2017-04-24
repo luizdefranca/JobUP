@@ -14,11 +14,12 @@ namespace JOB.DATA.Config
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
             Property(p => p.FIXO.NrTelefone)
+                .IsOptional()
                 .HasColumnName("FIXO")
                 .HasMaxLength(14);
 
             Property(p => p.CELULAR.NrTelefone)
-                .IsRequired()
+                .IsOptional()
                 .HasColumnName("CELULAR")
                 .HasMaxLength(14);
 

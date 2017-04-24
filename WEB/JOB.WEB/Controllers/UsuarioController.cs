@@ -19,7 +19,6 @@ namespace JOB.WEB.Controllers
 
         public UsuarioController()
         {
-
         }
 
         public UsuarioController(Contexto ctx)
@@ -30,85 +29,84 @@ namespace JOB.WEB.Controllers
         // GET: Usuario
         public async Task<ActionResult> Index()
         {
-            var domain = await ctx.Usuario.ToListAsync();
+            var domain = await ctx.Usuario
+                .Include(i => i.CONTATO)
+                .Include(i => i.ENDERECO)
+                .ToListAsync();
+
             var model = Mapper.Map<List<UsuarioViewModel>>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             return View(model);
         }
 
         // GET: Usuario/Details/5
-        public async Task<ActionResult> Details(int id)
+        public async Task<ActionResult> Details(Guid id)
         {
-            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+            var domain = await ctx.Usuario
+                .Include(i => i.CONTATO)
+                .Include(i => i.ENDERECO).FirstAsync(w => w.ID_USUARIO == id);
+
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             return View(model);
         }
 
-        // GET: Usuario/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+        //// GET: Usuario/Edit/5
+        //public async Task<ActionResult> Edit(Guid id)
+        //{
+        //    var domain = await ctx.Usuario
+        //        .Include(i => i.CONTATO)
+        //        .Include(i => i.ENDERECO)
+        //        .FirstAsync(w => w.ID_USUARIO == id);
 
-        // POST: Usuario/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(UsuarioViewModel obj)
-        {
-            if (!ModelState.IsValid) return View(obj);
+        //    var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
-            try
-            {
-                var newobj = new USUARIO(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+        //    return View(model);
+        //}
 
-                ctx.Usuario.Add(newobj);
-                await ctx.SaveChangesAsync();
+        //// POST: Usuario/Edit/5
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> Edit(Guid id, UsuarioViewModel obj)
+        //{
+        //    if (!ModelState.IsValid) return View(obj);
 
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.TratarMensagem());
-                return View(obj);
-            }
-        }
+        //    try
+        //    {
+        //        var domain = await ctx.Usuario
+        //            .Include(i => i.CONTATO)
+        //            .Include(i => i.ENDERECO)
+        //            .FirstAsync(w => w.ID_USUARIO == id);
 
-        // GET: Usuario/Edit/5
-        public async Task<ActionResult> Edit(int id)
-        {
-            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
-            var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
+        //        domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-            return View(model);
-        }
+        //        if (domain.CONTATO == null)
+        //            domain.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(obj.ContatoEMAIL));
+        //        else
+        //            domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
 
-        // POST: Usuario/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, UsuarioViewModel obj)
-        {
-            if (!ModelState.IsValid) return View(obj);
+        //        if (domain.ENDERECO == null)
+        //            domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+        //        else
+        //            domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
-            try
-            {
-                var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+        //        ctx.Entry(domain).State = EntityState.Modified;
+        //        ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+        //        ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
 
-                domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
-                ctx.Entry(domain).State = EntityState.Modified;
-                await ctx.SaveChangesAsync();
+        //        await ctx.SaveChangesAsync();
 
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.TratarMensagem());
-                return View(obj);
-            }
-        }
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ModelState.AddModelError("", ex.TratarMensagem());
+        //        return View(obj);
+        //    }
+        //}
 
         // GET: Usuario/Delete/5
-        public async Task<ActionResult> Delete(int id)
+        public async Task<ActionResult> Delete(Guid id)
         {
             var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
@@ -118,7 +116,7 @@ namespace JOB.WEB.Controllers
 
         // POST: Usuario/Delete/5
         [HttpPost]
-        public async Task<ActionResult> Delete(int id, UsuarioViewModel obj)
+        public async Task<ActionResult> Delete(Guid id, UsuarioViewModel obj)
         {
             try
             {
@@ -134,6 +132,39 @@ namespace JOB.WEB.Controllers
                 ModelState.AddModelError("", ex.TratarMensagem());
                 return View(obj);
             }
+        }
+
+        public async Task<ActionResult> Aprovar(Guid id)
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+
+            domain.Aprovar();
+            ctx.Entry(domain).State = EntityState.Modified;
+            await ctx.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
+        public async Task<ActionResult> Ativar(Guid id)
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+
+            domain.Ativar();
+            ctx.Entry(domain).State = EntityState.Modified;
+            await ctx.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
+        public async Task<ActionResult> Bloquear(Guid id)
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+
+            domain.Bloquear();
+            ctx.Entry(domain).State = EntityState.Modified;
+            await ctx.SaveChangesAsync();
+
+            return RedirectToAction("Index");
         }
     }
 }

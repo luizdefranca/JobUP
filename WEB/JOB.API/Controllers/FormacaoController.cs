@@ -2,6 +2,7 @@
 using JOB.DATA.Domain;
 using JsonNet.PrivateSettersContractResolvers;
 using Newtonsoft.Json;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -16,7 +17,7 @@ namespace JOB.API.Controllers
         private Contexto ctx = new Contexto();
 
         // GET: api/Usuario
-        public HttpResponseMessage Get(int idUsuario, int idEspecialidade)
+        public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade)
         {
             var result = ctx.Formacao.Where(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade).ToList();
 
@@ -24,7 +25,7 @@ namespace JOB.API.Controllers
         }
 
         // GET: api/Usuario/5
-        public HttpResponseMessage Get(int idUsuario, int idEspecialidade, int idFormacao)
+        public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade, int idFormacao)
         {
             var result = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);
 
@@ -55,7 +56,7 @@ namespace JOB.API.Controllers
         }
 
         // PUT: api/Usuario/5
-        public async Task<HttpResponseMessage> Put(int idUsuario, int idEspecialidade, int idFormacao, HttpRequestMessage request)
+        public async Task<HttpResponseMessage> Put(Guid idUsuario, int idEspecialidade, int idFormacao, HttpRequestMessage request)
         {
             var values = request.Content.ReadAsStringAsync().Result;
 
@@ -80,7 +81,7 @@ namespace JOB.API.Controllers
         }
 
         // DELETE: api/Usuario/5
-        public async Task Delete(int idUsuario, int idEspecialidade, int idFormacao)
+        public async Task Delete(Guid idUsuario, int idEspecialidade, int idFormacao)
         {
             var item = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);
 

@@ -46,14 +46,13 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicoSeed.cs" />
+    <Compile Include="Config\JobConfig.cs" />
     <Compile Include="Config\FormacaoConfig.cs" />
     <Compile Include="Config\ContatoConfig.cs" />
     <Compile Include="Config\EnderecoConfig.cs" />
@@ -67,18 +66,31 @@
     <Compile Include="Domain\EntityBase.cs" />
     <Compile Include="Domain\ESPECIALIDADE.cs" />
     <Compile Include="Domain\FORMACAO.cs" />
-    <Compile Include="Domain\JOB\JOB.cs" />
-    <Compile Include="Domain\OFERTAS\JOB_OFERTA.cs" />
-    <Compile Include="Domain\OFERTAS\OFERTA.cs" />
-    <Compile Include="Domain\OFERTAS\PROPOSTA.cs" />
+    <Compile Include="Domain\JOB.cs" />
     <Compile Include="Domain\PERFIL_PROFISSIONAL.cs" />
     <Compile Include="Domain\USUARIO.cs" />
     <Compile Include="Enum\EnumEstadoCivil.cs" />
     <Compile Include="Enum\EnumSexo.cs" />
     <Compile Include="Enum\EnumUF.cs" />
-    <Compile Include="Migrations\201704050311089_1_0.cs" />
-    <Compile Include="Migrations\201704050311089_1_0.Designer.cs">
-      <DependentUpon>201704050311089_1_0.cs</DependentUpon>
+    <Compile Include="Migrations\201704110256369_inicial.cs" />
+    <Compile Include="Migrations\201704110256369_inicial.Designer.cs">
+      <DependentUpon>201704110256369_inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111632181_idsemmudar.cs" />
+    <Compile Include="Migrations\201704111632181_idsemmudar.Designer.cs">
+      <DependentUpon>201704111632181_idsemmudar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704112235030_news.cs" />
+    <Compile Include="Migrations\201704112235030_news.Designer.cs">
+      <DependentUpon>201704112235030_news.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704210425517_bloqueado.cs" />
+    <Compile Include="Migrations\201704210425517_bloqueado.Designer.cs">
+      <DependentUpon>201704210425517_bloqueado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704212341501_job.cs" />
+    <Compile Include="Migrations\201704212341501_job.Designer.cs">
+      <DependentUpon>201704212341501_job.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,8 +111,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704050311089_1_0.resx">
-      <DependentUpon>201704050311089_1_0.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704110256369_inicial.resx">
+      <DependentUpon>201704110256369_inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111632181_idsemmudar.resx">
+      <DependentUpon>201704111632181_idsemmudar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704112235030_news.resx">
+      <DependentUpon>201704112235030_news.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704210425517_bloqueado.resx">
+      <DependentUpon>201704210425517_bloqueado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704212341501_job.resx">
+      <DependentUpon>201704212341501_job.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

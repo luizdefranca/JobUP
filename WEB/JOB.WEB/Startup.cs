@@ -1,8 +1,10 @@
-﻿using Microsoft.Owin;
+﻿using JOB.WEB;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(AgendaCirurgicaBeta.Startup))]
-namespace AgendaCirurgicaBeta
+[assembly: OwinStartup(typeof(Startup))]
+
+namespace JOB.WEB
 {
     public partial class Startup
     {

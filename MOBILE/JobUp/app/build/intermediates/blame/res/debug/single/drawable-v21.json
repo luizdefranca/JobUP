@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_slideshow.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable-v21/ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "/Users/luizramos/AndroidStudioProjects/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_manage.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable-v21/ic_menu_manage.xml"
+    },
+    {
+        "merged": "/Users/luizramos/AndroidStudioProjects/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_share.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable-v21/ic_menu_share.xml"
+    },
+    {
+        "merged": "/Users/luizramos/AndroidStudioProjects/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_send.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable-v21/ic_menu_send.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_gallery.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable-v21/ic_menu_gallery.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_camera.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable-v21/ic_menu_camera.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/AndroidStudioProjects/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/luizramos/.android/build-cache/2cfd25d1a9d20c5d99818b602cbc0a44e587a49c/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]

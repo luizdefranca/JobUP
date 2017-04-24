@@ -1,12 +1,39 @@
-﻿using System.Web.Mvc;
+﻿using AutoMapper;
+using JOB.DATA;
+using JOB.WEB.Models;
+using Microsoft.AspNet.Identity;
+using System;
+using System.Data.Entity;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
-namespace JOB.WEB
+namespace JOB.WEB.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private Contexto ctx = new Contexto();
+
+        public async Task<ActionResult> Index()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                Guid id = Guid.Parse(User.Identity.GetUserId());
+
+                var domain = await ctx.Usuario.FirstOrDefaultAsync(w => w.ID_USUARIO == id);
+
+                if (domain == null) //se ta nulo, é pq o usuario ainda nao cadastrou o perfil completo
+                {
+                    return RedirectToAction("Create", "Manage");
+                }
+
+                var model = Mapper.Map<UsuarioViewModel>(domain);
+
+                return View(model);
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public ActionResult FlotCharts()

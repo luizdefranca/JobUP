@@ -1,4 +1,4 @@
-﻿using AgendaCirurgicaBeta.Models;
+﻿using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace AgendaCirurgicaBeta.Controllers
+namespace JOB.WEB.Controllers
 {
     [Authorize]
     public class AccountController : Controller
@@ -76,11 +76,11 @@ namespace AgendaCirurgicaBeta.Controllers
             {
                 if (!await UserManager.IsEmailConfirmedAsync(user.Id))
                 {
-                    string callbackUrl = await SendEmailConfirmationTokenAsync(user.Id, "Confirm your account-Resend");
+                    string callbackUrl = await SendEmailConfirmationTokenAsync(user.Id, "Reenviar sua confirmação de senha");
 
                     // Uncomment to debug locally
                     // ViewBag.Link = callbackUrl;
-                    ViewBag.errorMessage = "You must have a confirmed email to log on. The confirmation token has been resent to your email account.";
+                    ViewBag.errorMessage = "Você precisar confirmar seu email para logar. O token foi reenviado para sua conta de email.";
 
                     return View("Error");
                 }
@@ -102,7 +102,7 @@ namespace AgendaCirurgicaBeta.Controllers
 
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ModelState.AddModelError("", "Tentativa de login falhou.");
                     return View(model);
             }
         }
@@ -147,7 +147,7 @@ namespace AgendaCirurgicaBeta.Controllers
 
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid code.");
+                    ModelState.AddModelError("", "Código inválido.");
                     return View(model);
             }
         }
@@ -175,9 +175,9 @@ namespace AgendaCirurgicaBeta.Controllers
                 {
                     //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
-                    string callbackUrl = await SendEmailConfirmationTokenAsync(user.Id, "Confirm your account");
+                    string callbackUrl = await SendEmailConfirmationTokenAsync(user.Id, "Confirme sua conta");
 
-                    ViewBag.Message = "Check your email and confirm your account, you must be confirmed before you can log in.";
+                    ViewBag.Message = "Cheque seu email e confirme sua conta, você precisa confirmar antes de efetuar um login.";
 
                     return View("Info");
                     //return RedirectToAction("Index", "Home");
@@ -208,7 +208,7 @@ namespace AgendaCirurgicaBeta.Controllers
             // Send an email with this link
             string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
             var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = userID, code = code }, protocol: Request.Url.Scheme);
-            await UserManager.SendEmailAsync(userID, subject, "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+            await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
 
             return callbackUrl;
         }
@@ -241,7 +241,7 @@ namespace AgendaCirurgicaBeta.Controllers
                 // Send an email with this link
                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                await UserManager.SendEmailAsync(user.Id, "Redefinição de senha", "Por favor, redefina sua senha clicando <a href=\"" + callbackUrl + "\">aqui</a>");
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
@@ -343,6 +343,12 @@ namespace AgendaCirurgicaBeta.Controllers
                 return View("Error");
             }
             return RedirectToAction("VerifyCode", new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
+        }
+
+        [AllowAnonymous]
+        public ActionResult ExternalLoginCallbackRedirect(string returnUrl)
+        {
+            return RedirectPermanent("/Account/ExternalLoginCallback");
         }
 
         //
