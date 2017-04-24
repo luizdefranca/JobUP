@@ -10,11 +10,16 @@ namespace JOB.WEB.Helper
         {
             var menu = new List<MenuViewModel>();
 
-            menu.Add(new MenuViewModel { Id = 10, nameOption = "Dashboard", controller = "Home", action = "Index", imageClass = "fa fa-dashboard fa-fw", status = true, isParent = false, parentId = 0 });
-            menu.Add(new MenuViewModel { Id = 14, nameOption = "Usuários", controller = "Usuario", action = "Index", imageClass = "fa fa-user fa-fw", status = true, isParent = false, parentId = 0 });
-            menu.Add(new MenuViewModel { Id = 15, nameOption = "Profissionais", controller = "Profissional", action = "Index", imageClass = "glyphicon glyphicon-briefcase", status = true, isParent = false, parentId = 0 });
-            menu.Add(new MenuViewModel { Id = 16, nameOption = "Jobs (Cliente)", controller = "Job", action = "Cliente", imageClass = "fa fa-users", status = true, isParent = false, parentId = 0 });
-            menu.Add(new MenuViewModel { Id = 17, nameOption = "Jobs (Freela)", controller = "Job", action = "Freela", imageClass = "fa fa-users", status = true, isParent = false, parentId = 0 });
+            menu.Add(new MenuViewModel { Id = 10, nameOption = "Administrador", controller = "", action = "", imageClass = "glyphicon glyphicon-user", status = true, isParent = true, parentId = 0 });
+            menu.Add(new MenuViewModel { Id = 11, nameOption = "Dashboard", controller = "Home", action = "Index", imageClass = "", status = true, isParent = false, parentId = 10 });
+            menu.Add(new MenuViewModel { Id = 12, nameOption = "Usuários", controller = "Usuario", action = "Index", imageClass = "", status = true, isParent = false, parentId = 10 });
+
+            menu.Add(new MenuViewModel { Id = 20, nameOption = "Cliente", controller = "", action = "", imageClass = "fa fa-users", status = true, isParent = true, parentId = 0 });
+            menu.Add(new MenuViewModel { Id = 21, nameOption = "Profissionais", controller = "Profissional", action = "Index", imageClass = "", status = true, isParent = false, parentId = 20 });
+            menu.Add(new MenuViewModel { Id = 22, nameOption = "Jobs", controller = "Job", action = "Cliente", imageClass = "", status = true, isParent = false, parentId = 20 });
+
+            menu.Add(new MenuViewModel { Id = 30, nameOption = "Freela", controller = "", action = "", imageClass = "glyphicon glyphicon-briefcase", status = true, isParent = true, parentId = 0 });
+            menu.Add(new MenuViewModel { Id = 31, nameOption = "Jobs", controller = "Job", action = "Freela", imageClass = "", status = true, isParent = false, parentId = 30 });
 
             return menu.ToList();
         }
