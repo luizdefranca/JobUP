@@ -37,6 +37,7 @@ namespace JOB.WEB.Models
         [DataType(DataType.Currency)]
         public double? VALOR_SUGERIDO { get; set; }
 
+        [Display(Name = "Aceito?")]
         public bool JOB_ACEITO { get; set; }
     }
 }

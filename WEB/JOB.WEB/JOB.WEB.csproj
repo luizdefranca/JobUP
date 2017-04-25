@@ -1015,7 +1015,7 @@
     <Content Include="Views\Home\Blank.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Usuario\Details.cshtml" />
+    <Content Include="Views\Usuario\DtAprovar.cshtml" />
     <Content Include="Views\Manage\Create.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
@@ -1046,8 +1046,12 @@
     <Content Include="Views\Job\Freela.cshtml" />
     <Content Include="Views\Job\DetailsJobFreela.cshtml" />
     <Content Include="Views\Profissional\Create.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Profissional\CriarJob.cshtml" />
     <Content Include="Views\Profissional\Edit.cshtml" />
+=======
+    <Content Include="Views\Profissional\Details.cshtml" />
+>>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

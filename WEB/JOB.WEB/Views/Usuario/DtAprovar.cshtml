@@ -86,21 +86,11 @@
                 <dd>
                     @Html.DisplayFor(model => model.EnderecoCIDADE)
                 </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.APROVADO)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.APROVADO)
-                </dd>
-
-                
             </dl>
         </div>
         <p>
-            @Html.ActionLink("Aprovar", "Aprovar", new { id = Model.ID_USUARIO }) |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Aprovar", "Aprovar", new { id = Model.ID_USUARIO }, new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-success" })
         </p>
     </div>
 </div>
