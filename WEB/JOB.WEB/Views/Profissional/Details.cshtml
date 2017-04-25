@@ -1,0 +1,45 @@
+﻿@model JOB.WEB.Models.ProfissionalViewModel
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Detalhes</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NOME)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NOME)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DT_NASCTO)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DT_NASCTO)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DESC_ESPECIALIDADE)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.RESUMO_CURRICULO)
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
@@ -36,9 +38,17 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Profissional/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(Guid id)
         {
-            return View();
+            var Dominio = await ctx.PerfilProfissional.FirstAsync(f => f.ID_USUARIO == id);
+
+            var model = Mapper.Map<ProfissionalViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
+
+            model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
+            model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
+            model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+
+            return View(model);
         }
 
         // GET: Profissional/Create
