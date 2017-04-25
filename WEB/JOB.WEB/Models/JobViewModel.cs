@@ -29,6 +29,7 @@ namespace JOB.WEB.Models
         [Display(Name = "Valor Sugerido")]
         public double? VALOR_SUGERIDO { get; set; }
 
+        [Display(Name = "Aceito?")]
         public bool JOB_ACEITO { get; set; }
     }
 }
