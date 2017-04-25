@@ -1015,7 +1015,7 @@
     <Content Include="Views\Home\Blank.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Usuario\Details.cshtml" />
+    <Content Include="Views\Usuario\Aprovar.cshtml" />
     <Content Include="Views\Manage\Create.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
