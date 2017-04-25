@@ -4,14 +4,16 @@
     ViewBag.Title = "Cliente";
 }
 
-<h2>Cliente</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        @*<th>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Meus Jobs</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-condensed table-responsive table-hover">
+            <tr>
+                @*<th>
             @Html.DisplayNameFor(model => model.ID_USUARIO_CLIENTE)
         </th>
         <th>
@@ -41,13 +43,14 @@
         <th>
             @Html.DisplayNameFor(model => model.JOB_ACEITO)
         </th>
-        <th></th>
-    </tr>
+                <th></th>
+            </tr>
 
-    @foreach (var item in Model)
+
+            @foreach (var item in Model)
     {
-        <tr>
-            @*<td>
+            <tr>
+                @*<td>
                 @Html.DisplayFor(modelItem => item.ID_USUARIO_CLIENTE)
             </td>
             <td>
@@ -56,33 +59,28 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ID_ESPECIALIDADE)
             </td>*@
-
-            <td>
-                @Html.DisplayFor(modelItem => item.nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.especialidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DT_JOB)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TITULO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OBSERVACOES)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VALOR_SUGERIDO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JOB_ACEITO)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID_JOB }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID_JOB }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID_JOB })
-            </td>
-        </tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DT_JOB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TITULO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OBSERVACOES)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VALOR_SUGERIDO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JOB_ACEITO)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID_JOB }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID_JOB }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID_JOB })
+                </td>
+            </tr>
     }
-</table>
+        </table>
+    </div>
+</div>

@@ -79,14 +79,14 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Oferta/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Editar(int id)
         {
             return View();
         }
 
         // POST: Oferta/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Editar(int id, FormCollection collection)
         {
             try
             {
@@ -101,14 +101,14 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Oferta/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Deletar(int id)
         {
             return View();
         }
 
         // POST: Oferta/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Deletar(int id, FormCollection collection)
         {
             try
             {
