@@ -54,6 +54,8 @@
                 @Html.AntiForgeryToken()
 
                 <div class="form-actions no-color">
+                    @Html.ActionLink("Deletar", "Deletar", new { id = Model.ID_USUARIO }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-success" })
                 </div>
             }
         </div>
