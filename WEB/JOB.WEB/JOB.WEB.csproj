@@ -1046,12 +1046,9 @@
     <Content Include="Views\Job\Freela.cshtml" />
     <Content Include="Views\Job\DetailsJobFreela.cshtml" />
     <Content Include="Views\Profissional\Create.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Profissional\CriarJob.cshtml" />
     <Content Include="Views\Profissional\Edit.cshtml" />
-=======
     <Content Include="Views\Profissional\Details.cshtml" />
->>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">
