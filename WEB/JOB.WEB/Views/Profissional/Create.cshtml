@@ -6,11 +6,10 @@
 
 <h2>Create</h2>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>CadastroProfissionalViewModel</h4>
         <hr />
@@ -18,9 +17,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ESPECIALIDADES, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-              
-                @Html.DropDownListFor(m => m.ID_ESPECIALIDADE, 
-               new SelectList(Model.ESPECIALIDADES, "ID_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control" } ) 
+
+                @Html.DropDownListFor(m => m.ID_ESPECIALIDADE,
+               new SelectList(Model.ESPECIALIDADES, "ID_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control" } )
                 @Html.ValidationMessageFor(model => model.ESPECIALIDADES, "", new { @class = "text-danger" })
             </div>
         </div>
