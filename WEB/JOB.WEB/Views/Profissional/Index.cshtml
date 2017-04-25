@@ -4,48 +4,52 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Freelas Cadastrados</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-condensed table-responsive table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NOME)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DT_NASCTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
+                </th>
+                <th></th>
+            </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table table-condensed table-responsive table-hover">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NOME)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DT_NASCTO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NOME)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DT_NASCTO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-    }
-</table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NOME)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DT_NASCTO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
