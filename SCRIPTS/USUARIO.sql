@@ -1,0 +1,40 @@
+USE [mundoup]
+GO
+
+/****** Object:  Table [jobup].[USUARIO]    Script Date: 25/04/2017 19:40:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [jobup].[USUARIO](
+	[ID_USUARIO] [uniqueidentifier] NOT NULL,
+	[NOME] [varchar](100) NOT NULL,
+	[CPF] [varchar](11) NOT NULL,
+	[RG_UF] [int] NOT NULL,
+	[RG_NR] [varchar](8) NOT NULL,
+	[DT_NASCIMENTO] [datetime] NOT NULL,
+	[DT_INCLUSAO] [datetime] NOT NULL,
+	[DT_ALTERACAO] [datetime] NULL,
+	[DT_APROVACAO] [datetime] NULL,
+	[DT_ATIVACAO] [datetime] NULL,
+	[DT_ORDENACAO] [datetime] NOT NULL,
+	[APROVADO] [bit] NOT NULL,
+	[ATIVO] [bit] NOT NULL,
+	[BLOQUEADO] [bit] NOT NULL,
+ CONSTRAINT [PK_jobup.USUARIO] PRIMARY KEY CLUSTERED 
+(
+	[ID_USUARIO] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
+
+ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT (newid()) FOR [ID_USUARIO]
+GO
+
+ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT ((0)) FOR [BLOQUEADO]
+GO
+
+
