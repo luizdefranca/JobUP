@@ -76,6 +76,12 @@ namespace JOB.DATA.Domain
         {
             this.BLOQUEADO = true;
         }
+
+        public void Desbloquear()
+        {
+            this.BLOQUEADO = false;
+        }
+
         public void Desativar()
         {
             this.ATIVO = false;
@@ -118,4 +124,4 @@ namespace JOB.DATA.Domain
 
         public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; private set; }
     }
-}       
+}

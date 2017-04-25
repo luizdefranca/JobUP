@@ -52,7 +52,7 @@ namespace JOB.WEB.Models
         public bool ATIVO { get; set; }
 
         [ScaffoldColumn(false)]
-        [Display(Name = "Ativo")]
+        [Display(Name = "Bloqueado")]
         public bool BLOQUEADO { get; set; }
 
         //[DataType(DataType.PhoneNumber)]

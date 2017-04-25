@@ -70,15 +70,17 @@
                         @Html.DisplayFor(modelItem => item.BLOQUEADO)
                     </td>
                     <td>
-                        @*@Html.ActionLink("Edit", "Edit", new { id = item.ID_USUARIO })*@ 
-                        
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ID_USUARIO }) 
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.ID_USUARIO })*@
+
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID_USUARIO })
                         @if (!item.APROVADO)
                         {@Html.ActionLink("Aprovar", "Aprovar", new { id = item.ID_USUARIO })}
                         @if (!item.ATIVO)
                         { @Html.ActionLink("Ativar", "Ativar", new { id = item.ID_USUARIO }) }
-                        @Html.ActionLink("Bloquear", "Bloquear", new { id = item.ID_USUARIO })
-                        
+                        @if (!item.BLOQUEADO)
+                        {@Html.ActionLink("Bloquear", "Bloquear", new { id = item.ID_USUARIO })}
+                        else
+                        {@Html.ActionLink("Desbloquear", "Desbloquear", new { id = item.ID_USUARIO })}
                     </td>
                 </tr>
             }
