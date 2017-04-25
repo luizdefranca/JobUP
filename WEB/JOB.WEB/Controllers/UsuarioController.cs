@@ -50,7 +50,7 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Usuario/Delete/5
-        public async Task<ActionResult> Delete(Guid id)
+        public async Task<ActionResult> Deletar(Guid id)
         {
             var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
@@ -60,7 +60,7 @@ namespace JOB.WEB.Controllers
 
         // POST: Usuario/Delete/5
         [HttpPost]
-        public async Task<ActionResult> Delete(Guid id, UsuarioViewModel obj)
+        public async Task<ActionResult> Deletar(Guid id, UsuarioViewModel obj)
         {
             try
             {
