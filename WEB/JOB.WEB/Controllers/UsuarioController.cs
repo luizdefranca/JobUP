@@ -38,7 +38,7 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Usuario/Details/5
-        public async Task<ActionResult> Aprovar(Guid id)
+        public async Task<ActionResult> DtAprovar(Guid id)
         {
             var domain = await ctx.Usuario
                 .Include(i => i.CONTATO)
@@ -105,6 +105,17 @@ namespace JOB.WEB.Controllers
             var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
 
             domain.Desbloquear();
+            ctx.Entry(domain).State = EntityState.Modified;
+            await ctx.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
+        public async Task<ActionResult> Aprovar(Guid id)
+        {
+            var domain = await ctx.Usuario.FirstAsync(w => w.ID_USUARIO == id);
+
+            domain.Aprovar();
             ctx.Entry(domain).State = EntityState.Modified;
             await ctx.SaveChangesAsync();
 

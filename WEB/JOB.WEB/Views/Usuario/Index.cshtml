@@ -73,7 +73,7 @@
 
                         @Html.ActionLink("Delete", "Delete", new { id = item.ID_USUARIO })
                         @if (!item.APROVADO)
-                        {@Html.ActionLink("Aprovar", "Aprovar", new { id = item.ID_USUARIO })}
+                        {@Html.ActionLink("Aprovar", "DtAprovar", new { id = item.ID_USUARIO })}
                         @if (!item.ATIVO)
                         { @Html.ActionLink("Ativar", "Ativar", new { id = item.ID_USUARIO }) }
                         @if (!item.BLOQUEADO)
