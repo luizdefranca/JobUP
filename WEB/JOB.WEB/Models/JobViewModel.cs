@@ -39,5 +39,8 @@ namespace JOB.WEB.Models
 
         [Display(Name = "Aceito?")]
         public bool JOB_ACEITO { get; set; }
+
+        [Display(Name = "Descrição")]
+        public string DESCRICAO { get; set; }
     }
 }

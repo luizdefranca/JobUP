@@ -52,26 +52,25 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Oferta/Details/5
-        public ActionResult DetailsJobFreela(Guid id)
+        public async Task<ActionResult> DetailsJobFreela(Int64 id)
         {
+            var domain = await ctx.Job.FirstAsync(w => w.ID_JOB == id);                      
 
-            var domain = ctx.Job.Where(f => f.ID_USUARIO_PROFISSIONAL == ID);
-            var model = Mapper.Map<JobViewModel>(domain);
-            
+            var model = Mapper.Map<JobViewModel>(domain);            
+
             return View(model);
-            
         }
 
-        public async Task<ActionResult> Aceitar(Guid id)
+        public async Task<ActionResult> Aceitar(Int64 id)
         {
 
-            var domain = await ctx.Job.FirstAsync(f => f.ID_USUARIO_PROFISSIONAL == id);
+            var domain = await ctx.Job.FirstAsync(f => f.ID_JOB == id);
 
             domain.Aceitar();
             ctx.Entry(domain).State = EntityState.Modified;
             await ctx.SaveChangesAsync();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Freela");
         }
     }
 }

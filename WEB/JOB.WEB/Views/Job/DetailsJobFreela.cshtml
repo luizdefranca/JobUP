@@ -1,10 +1,10 @@
 ﻿@model JOB.WEB.Models.JobViewModel
 
 @{
-    ViewBag.Title = "DetailsJobFreela";
+    ViewBag.Title = "Detalhes da Oferta";
 }
 
-<h2>DetailsJobFreela</h2>
+@*<h2>DetailsJobFreela</h2>*@
 
 <div>
     <h4>JobViewModel</h4>
@@ -68,6 +68,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Aceitar", "Aceitar", new { id = Model.ID_JOB }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Aceitar", "Aceitar", new { id = Model.ID_JOB }, new { @class = "btn btn-primary" }) 
+    @Html.ActionLink("Voltar", "Freela", null, new { @class = "btn btn-success" })
 </p>
