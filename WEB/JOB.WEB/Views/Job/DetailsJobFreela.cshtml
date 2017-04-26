@@ -43,6 +43,9 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Aceitar", "Aceitar", new { id = Model.ID_JOB }, new { @class = "btn btn-primary" })
+    @if (!Model.JOB_ACEITO)
+    {
+        @Html.ActionLink("Aceitar", "Aceitar", new { id = Model.ID_JOB }, new { @class = "btn btn-primary" })
+    }
     @Html.ActionLink("Voltar", "Freela", null, new { @class = "btn btn-default" })
 </p>
