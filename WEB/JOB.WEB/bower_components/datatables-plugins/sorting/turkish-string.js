@@ -17,7 +17,14 @@
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"turkish-pre": function ( a ) {
-		var special_letters = { "İ": "ib", "I": "ia", "Ş": "sa", "Ğ": "ga", "Ü": "ua", "Ö": "oa", "Ç": "ca", "i": "ia", "ı": "ia", "ş": "sa", "ğ": "ga", "ü": "ua", "ö": "oa", "ç": "ca" };
+		var special_letters = {
+            "C": "Ca", "c": "ca", "Ç": "Cb", "ç": "cb",
+            "G": "Ga", "g": "ga", "Ğ": "Gb", "ğ": "gb",
+            "I": "Ia", "ı": "ia", "İ": "Ib", "i": "ib",
+            "O": "Oa", "o": "oa", "Ö": "Ob", "ö": "ob",
+            "S": "Sa", "s": "sa", "Ş": "Sb", "ş": "sb",
+            "U": "Ua", "u": "ua", "Ü": "Ub", "ü": "ub"
+            };
         for (var val in special_letters)
            a = a.split(val).join(special_letters[val]).toLowerCase();
         return a;
