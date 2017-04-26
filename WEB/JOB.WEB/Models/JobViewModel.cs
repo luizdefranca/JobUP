@@ -13,8 +13,10 @@ namespace JOB.WEB.Models
 
         public Guid ID_USUARIO_PROFISSIONAL { get; set; }
 
+        [Display(Name = "Nome")]
         public string nome { get; set; }
 
+        [Display(Name = "Especialidade")]
         public string especialidade { get; set; }
 
         
