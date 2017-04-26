@@ -6,14 +6,11 @@
 
 <h2>Index</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NOME)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DT_NASCTO)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
         </th>
@@ -27,19 +24,13 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.NOME)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DT_NASCTO)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
             </td>
             <td>
-                @Html.ActionLink("Propor Job", "CriarJob", new {  id=item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE  })
+                @*@Html.ActionLink("Propor Job", "CriarJob", new { id = item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE })*@
             </td>
         </tr>
     }

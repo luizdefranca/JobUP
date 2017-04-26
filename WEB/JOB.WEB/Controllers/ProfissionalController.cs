@@ -1,22 +1,23 @@
-﻿using System;
+﻿using AutoMapper;
+using JOB.DATA;
+using JOB.DATA.Domain;
+using JOB.WEB.Models;
+using JOB.WEB.Validation;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using AutoMapper;
-using JOB.DATA;
-using JOB.WEB.Models;
-using JOB.WEB.Validation;
-using Microsoft.AspNet.Identity;
-using JOB.DATA.Domain;
 
 namespace JOB.WEB.Controllers
 {
     public class ProfissionalController : Controller
     {
-        Contexto ctx = new Contexto();
+        private Contexto ctx = new Contexto();
+
+        private Guid idUsuario => Guid.Parse(User.Identity.GetUserId());
 
         // GET: Profissional
         public ActionResult Index()
@@ -32,6 +33,23 @@ namespace JOB.WEB.Controllers
                 model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
                 model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE)
                     .DESCRICAO;
+            }
+
+            return View(lstModel);
+        }
+
+        public ActionResult IndexPessoal()
+        {
+            //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
+            var lstDominio = ctx.PerfilProfissional.Where(w => w.ID_USUARIO == idUsuario).ToList();
+
+            var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
+
+            foreach (var model in lstModel)
+            {
+                //model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
+                //model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
+                model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
             }
 
             return View(lstModel);
@@ -67,14 +85,13 @@ namespace JOB.WEB.Controllers
 
             try
             {
-                Guid id = Guid.Parse(User.Identity.GetUserId());
+                //Guid id = Guid.Parse(User.Identity.GetUserId());
 
-                var newobj = new PERFIL_PROFISSIONAL(id, obj.ID_ESPECIALIDADE, obj.RESUMO_CURRICULO);
+                var newobj = new PERFIL_PROFISSIONAL(idUsuario, obj.ID_ESPECIALIDADE, obj.RESUMO_CURRICULO);
 
                 ctx.PerfilProfissional.Add(newobj);
                 ctx.SaveChanges();
-                return RedirectToAction("Index");
-
+                return RedirectToAction("IndexPessoal");
             }
             catch (Exception ex)
             {
@@ -83,55 +100,11 @@ namespace JOB.WEB.Controllers
             }
         }
 
-        // GET: Profissional/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Profissional/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Profissional/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Profissional/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
         public ActionResult CriarJob(Guid id, int ID_ESPECIALIDADE)
         {
             var model = new JobViewModel();
             model.ID_USUARIO_PROFISSIONAL = id;
-            model.ID_ESPECIALIDADE = ID_ESPECIALIDADE; 
+            model.ID_ESPECIALIDADE = ID_ESPECIALIDADE;
 
             return View(model);
         }
@@ -146,12 +119,11 @@ namespace JOB.WEB.Controllers
                 Guid idCliente = Guid.Parse(User.Identity.GetUserId());
                 //Guid IdProfissional = Guid.Parse(Request.QueryString["id"]);
 
-                var newobj = new JOB.DATA.Domain.JOB(idCliente, obj.ID_USUARIO_PROFISSIONAL, obj.ID_ESPECIALIDADE, obj.DT_JOB, obj.TITULO, obj.OBSERVACOES, obj.VALOR_SUGERIDO );
+                var newobj = new JOB.DATA.Domain.JOB(idCliente, obj.ID_USUARIO_PROFISSIONAL, obj.ID_ESPECIALIDADE, obj.DT_JOB, obj.TITULO, obj.OBSERVACOES, obj.VALOR_SUGERIDO);
 
                 ctx.Job.Add(newobj);
                 ctx.SaveChanges();
                 return RedirectToAction("Index");
-
             }
             catch (Exception ex)
             {
