@@ -44,7 +44,7 @@
             </thead>
             <tbody>
                 @foreach (var item in Model)
-            {
+                {
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.NOME)
@@ -72,17 +72,20 @@
                         </td>
                         <td>
                             @if (!item.APROVADO)
-                            {@Html.ActionLink("Aprovar", "DtAprovar", new { id = item.ID_USUARIO })
-                            }
+                            {
+                                @Html.ActionLink(" ", "DtAprovar", new { id = item.ID_USUARIO }, new { @class = "fa fa-check-square-o", @title = "Aprovar" })
+                            }&nbsp;
                             @if (!item.ATIVO)
                             {
-                                @Html.ActionLink("Ativar", "Ativar", new { id = item.ID_USUARIO })
-                            }
+                                @Html.ActionLink(" ", "Ativar", new { id = item.ID_USUARIO }, new { @class = "fa fa-user-plus", @title = "Ativar" })
+                            }&nbsp;
                             @if (!item.BLOQUEADO)
-                            {@Html.ActionLink("Bloquear", "Bloquear", new { id = item.ID_USUARIO })
+                            {
+                                @Html.ActionLink(" ", "Bloquear", new { id = item.ID_USUARIO }, new { @class = "fa fa-lock", @title = "Bloquear" })
                             }
                             else
-                            {@Html.ActionLink("Desbloquear", "Desbloquear", new { id = item.ID_USUARIO })
+                            {
+                                @Html.ActionLink(" ", "Desbloquear", new { id = item.ID_USUARIO }, new { @class = "fa fa-unlock", @title = "Desbloquear" })
                             }
                         </td>
                     </tr>
