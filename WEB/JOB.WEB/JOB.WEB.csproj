@@ -1049,6 +1049,7 @@
     <Content Include="Views\Profissional\Edit.cshtml" />
     <Content Include="Views\Profissional\Details.cshtml" />
     <Content Include="Views\Profissional\IndexPessoal.cshtml" />
+    <Content Include="Views\Job\DetailsJobCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

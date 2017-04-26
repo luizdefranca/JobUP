@@ -72,5 +72,14 @@ namespace JOB.WEB.Controllers
 
             return RedirectToAction("Freela");
         }
+
+        public async Task<ActionResult> DetailsJobCliente(Int64 id)
+        {
+            var domain = await ctx.Job.FirstAsync(w => w.ID_JOB == id);
+
+            var model = Mapper.Map<JobViewModel>(domain);
+
+            return View(model);
+        }
     }
 }
