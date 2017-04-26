@@ -71,7 +71,7 @@
                     <td>
                         @*@Html.ActionLink("Edit", "Edit", new { id = item.ID_USUARIO })*@
 
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ID_USUARIO })
+                        @Html.ActionLink("Deletar", "Delete", new { id = item.ID_USUARIO })
                         @if (!item.APROVADO)
                         {@Html.ActionLink("Aprovar", "DtAprovar", new { id = item.ID_USUARIO })}
                         @if (!item.ATIVO)
