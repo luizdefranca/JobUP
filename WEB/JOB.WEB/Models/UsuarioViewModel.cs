@@ -52,7 +52,7 @@ namespace JOB.WEB.Models
         public bool ATIVO { get; set; }
 
         [ScaffoldColumn(false)]
-        [Display(Name = "Ativo")]
+        [Display(Name = "Bloqueado")]
         public bool BLOQUEADO { get; set; }
 
         //[DataType(DataType.PhoneNumber)]
@@ -64,10 +64,10 @@ namespace JOB.WEB.Models
         [Display(Name = "Telefone Celular")]
         public string ContatoCELULAR { get; set; }
 
-        //[Required]
-        [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email")]
-        public string ContatoEMAIL { get; set; }
+        ////[Required]
+        //[DataType(DataType.EmailAddress)]
+        //[Display(Name = "Email")]
+        //public string ContatoEMAIL { get; set; }
 
         [Required]
         [Display(Name = "UF")]

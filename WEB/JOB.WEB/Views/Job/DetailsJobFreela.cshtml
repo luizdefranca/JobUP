@@ -1,38 +1,13 @@
 ﻿@model JOB.WEB.Models.JobViewModel
 
 @{
-    ViewBag.Title = "DetailsJobFreela";
+    ViewBag.Title = "Detalhes da Oferta";
 }
 
-<h2>DetailsJobFreela</h2>
-
 <div>
-    <h4>JobViewModel</h4>
+    <h4>Detalhes da Oferta</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_USUARIO_CLIENTE)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ID_USUARIO_CLIENTE)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_USUARIO_PROFISSIONAL)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ID_USUARIO_PROFISSIONAL)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_ESPECIALIDADE)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ID_ESPECIALIDADE)
-        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.DT_JOB)
@@ -65,18 +40,12 @@
         <dd>
             @Html.DisplayFor(model => model.VALOR_SUGERIDO)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.JOB_ACEITO)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.JOB_ACEITO)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Aceitar", "Aceitar", new { id = Model.ID_JOB }) |
-    @Html.ActionLink("Back to List", "Index")
+    @if (!Model.JOB_ACEITO)
+    {
+        @Html.ActionLink("Aceitar", "Aceitar", new { id = Model.ID_JOB }, new { @class = "btn btn-primary" })
+    }
+    @Html.ActionLink("Voltar", "Freela", null, new { @class = "btn btn-default" })
 </p>

@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -92,6 +96,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AprovarController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
@@ -123,6 +128,10 @@
     <ProjectReference Include="..\JOB.HELPERS\JOB.HELPERS.csproj">
       <Project>{ac41adda-32af-40e5-83f4-91d4ac103be7}</Project>
       <Name>JOB.HELPERS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JOB.WEB\JOB.WEB.csproj">
+      <Project>{CEE973D5-3804-40BF-89DC-F3E48DA3FFFC}</Project>
+      <Name>JOB.WEB</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

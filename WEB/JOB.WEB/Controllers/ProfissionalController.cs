@@ -1,22 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using AutoMapper;
+﻿using AutoMapper;
 using JOB.DATA;
+using JOB.DATA.Domain;
 using JOB.WEB.Models;
+using JOB.WEB.Validation;
+using Microsoft.AspNet.Identity;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace JOB.WEB.Controllers
 {
     public class ProfissionalController : Controller
     {
-        Contexto ctx = new Contexto();
+        private Contexto ctx = new Contexto();
+
+        private Guid idUsuario => Guid.Parse(User.Identity.GetUserId());
 
         // GET: Profissional
         public ActionResult Index()
         {
-            var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
+            //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
+            var lstDominio = ctx.PerfilProfissional.ToList();
 
             var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
 
@@ -31,75 +38,97 @@ namespace JOB.WEB.Controllers
             return View(lstModel);
         }
 
-        // GET: Profissional/Details/5
-        public ActionResult Details(int id)
+        public ActionResult IndexPessoal()
         {
-            return View();
+            //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
+            var lstDominio = ctx.PerfilProfissional.Where(w => w.ID_USUARIO == idUsuario).ToList();
+
+            var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
+
+            foreach (var model in lstModel)
+            {
+                //model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
+                //model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
+                model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+            }
+
+            return View(lstModel);
+        }
+
+        // GET: Profissional/Details/5
+        public async Task<ActionResult> Details(Guid id)
+        {
+            var Dominio = await ctx.PerfilProfissional.FirstAsync(f => f.ID_USUARIO == id);
+
+            var model = Mapper.Map<ProfissionalViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
+
+            model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
+            model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
+            model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+
+            return View(model);
         }
 
         // GET: Profissional/Create
         public ActionResult Create()
         {
-            return View();
+            var cadprof = new CadastroProfissionalViewModel();
+            cadprof.ESPECIALIDADES = ctx.Especialidade.ToList();
+            return View(cadprof);
         }
 
         // POST: Profissional/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(CadastroProfissionalViewModel obj)
         {
+            if (!ModelState.IsValid) return View(obj);
+
             try
             {
-                // TODO: Add insert logic here
+                //Guid id = Guid.Parse(User.Identity.GetUserId());
 
-                return RedirectToAction("Index");
+                var newobj = new PERFIL_PROFISSIONAL(idUsuario, obj.ID_ESPECIALIDADE, obj.RESUMO_CURRICULO);
+
+                ctx.PerfilProfissional.Add(newobj);
+                ctx.SaveChanges();
+                return RedirectToAction("IndexPessoal");
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ModelState.AddModelError("", ex.TratarMensagem());
+                return View(obj);
             }
         }
 
-        // GET: Profissional/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult CriarJob(Guid id, int ID_ESPECIALIDADE)
         {
-            return View();
+            var model = new JobViewModel();
+            model.ID_USUARIO_PROFISSIONAL = id;
+            model.ID_ESPECIALIDADE = ID_ESPECIALIDADE;
+
+            return View(model);
         }
 
-        // POST: Profissional/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult CriarJob(Guid id, JobViewModel obj)
         {
+            if (!ModelState.IsValid) return View(obj);
+
             try
             {
-                // TODO: Add update logic here
+                Guid idCliente = Guid.Parse(User.Identity.GetUserId());
+                //Guid IdProfissional = Guid.Parse(Request.QueryString["id"]);
 
+                var newobj = new JOB.DATA.Domain.JOB(idCliente, obj.ID_USUARIO_PROFISSIONAL, obj.ID_ESPECIALIDADE, obj.DT_JOB, obj.TITULO, obj.OBSERVACOES, obj.VALOR_SUGERIDO);
+
+                ctx.Job.Add(newobj);
+                ctx.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
-            }
-        }
-
-        // GET: Profissional/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Profissional/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
+                ModelState.AddModelError("", ex.TratarMensagem());
+                return View(obj);
             }
         }
     }

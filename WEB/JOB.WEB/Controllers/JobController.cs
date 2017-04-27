@@ -27,6 +27,12 @@ namespace JOB.WEB.Controllers
 
             var lstModel = Mapper.Map<List<JobViewModel>>(lstDomain);
 
+            foreach (var item in lstModel)
+            {
+                item.nome = ctx.Usuario.First(f => f.ID_USUARIO == item.ID_USUARIO_PROFISSIONAL).NOME;
+                item.especialidade = ctx.Especialidade.First(f=> f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).DESCRICAO;
+            }
+
             return View(lstModel);
         }
 
@@ -36,96 +42,44 @@ namespace JOB.WEB.Controllers
 
             var lstModel = Mapper.Map<List<JobViewModel>>(lstDomain);
 
+            foreach (var item in lstModel)
+            {
+                item.nome = ctx.Usuario.First(f => f.ID_USUARIO == item.ID_USUARIO_PROFISSIONAL).NOME;
+                item.especialidade = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).DESCRICAO;
+            }
+
             return View(lstModel);
         }
 
         // GET: Oferta/Details/5
-        public ActionResult DetailsJobFreela(Guid id)
+        public async Task<ActionResult> DetailsJobFreela(Int64 id)
         {
+            var domain = await ctx.Job.FirstAsync(w => w.ID_JOB == id);                      
 
-            var domain = ctx.Job.Where(f => f.ID_USUARIO_PROFISSIONAL == ID);
-            var model = Mapper.Map<JobViewModel>(domain);
-            
+            var model = Mapper.Map<JobViewModel>(domain);            
+
             return View(model);
-            
         }
 
-        // GET: Oferta/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Oferta/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Oferta/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Oferta/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Oferta/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Oferta/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        public async Task<ActionResult> Aceitar(Guid id)
+        public async Task<ActionResult> Aceitar(Int64 id)
         {
 
-            var domain = await ctx.Job.FirstAsync(f => f.ID_USUARIO_PROFISSIONAL == id);
+            var domain = await ctx.Job.FirstAsync(f => f.ID_JOB == id);
 
             domain.Aceitar();
             ctx.Entry(domain).State = EntityState.Modified;
             await ctx.SaveChangesAsync();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Freela");
+        }
+
+        public async Task<ActionResult> DetailsJobCliente(Int64 id)
+        {
+            var domain = await ctx.Job.FirstAsync(w => w.ID_JOB == id);
+
+            var model = Mapper.Map<JobViewModel>(domain);
+
+            return View(model);
         }
     }
 }

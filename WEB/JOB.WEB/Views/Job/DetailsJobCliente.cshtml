@@ -1,0 +1,46 @@
+﻿@model JOB.WEB.Models.JobViewModel
+
+@{
+    ViewBag.Title = "Detalhes da Oferta";
+}
+
+<div>
+    <h4>Detalhes da Oferta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DT_JOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DT_JOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TITULO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITULO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBSERVACOES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBSERVACOES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_SUGERIDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_SUGERIDO)
+        </dd>
+    </dl>
+</div>
+<p>    
+    @Html.ActionLink("Voltar", "Cliente", null, new { @class = "btn btn-default" })
+</p>

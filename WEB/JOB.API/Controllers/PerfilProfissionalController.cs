@@ -3,18 +3,38 @@ using JOB.DATA.Domain;
 using JsonNet.PrivateSettersContractResolvers;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using AutoMapper;
+using JOB.WEB.Models;
 
 namespace JOB.API.Controllers
 {
     public class PerfilProfissionalController : ApiController
     {
         private Contexto ctx = new Contexto();
+
+        public HttpResponseMessage Get()
+        {
+            var lstDominio = ctx.PerfilProfissional.ToList();
+
+            var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
+
+            foreach (var model in lstModel)
+            {
+                model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
+                model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
+                model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE)
+                    .DESCRICAO;
+            }
+
+            return Request.CreateResponse(HttpStatusCode.OK, lstModel);
+        }
 
         // GET: api/Usuario
         public HttpResponseMessage Get(Guid idUsuario)

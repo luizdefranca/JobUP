@@ -1,0 +1,96 @@
+﻿@model JOB.WEB.Models.UsuarioViewModel
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Usuários</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.NOME)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NOME)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CPF)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CPF)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.RgNR)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RgNR)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DT_NASCIMENTO)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DT_NASCIMENTO)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EnderecoCEP)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EnderecoCEP)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EnderecoLOGRADOURO)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EnderecoLOGRADOURO)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EnderecoCOMPLEMENTO)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EnderecoCOMPLEMENTO)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EnderecoBAIRRO)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EnderecoBAIRRO)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EnderecoCIDADE)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EnderecoCIDADE)
+                </dd>
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Aprovar", "Aprovar", new { id = Model.ID_USUARIO }, new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-success" })
+        </p>
+    </div>
+</div>

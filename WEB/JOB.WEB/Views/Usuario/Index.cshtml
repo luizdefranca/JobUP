@@ -2,86 +2,100 @@
 
 @{
     ViewBag.Title = "Usuários";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">Usuários</h1>
     </div>
-    <!-- /.col-lg-12 -->
 </div>
 <div class="row">
     <div class="col-lg-12">
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.NOME)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CPF)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RgUF)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RgNR)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DT_NASCIMENTO)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.APROVADO)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ATIVO)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BLOQUEADO)
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model)
-            {
+        <table id="tblDados" class="table table-condensed table-responsive table-hover">
+            <thead>
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.NOME)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CPF)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.RgUF)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.RgNR)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DT_NASCIMENTO)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.APROVADO)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ATIVO)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.BLOQUEADO)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ID_USUARIO }) 
-                        
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ID_USUARIO }) 
-                        @if (!item.APROVADO)
-                        {@Html.ActionLink("Aprovar", "Details", new { id = item.ID_USUARIO })}
-                        @if (!item.ATIVO)
-                        { @Html.ActionLink("Ativar", "Ativar", new { id = item.ID_USUARIO }) }
-                        @Html.ActionLink("Bloquear", "Bloquear", new { id = item.ID_USUARIO })
-                        
-                    </td>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NOME)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CPF)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RgUF)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RgNR)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DT_NASCIMENTO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.APROVADO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ATIVO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BLOQUEADO)
+                    </th>
+                    <th></th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NOME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CPF)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RgUF)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RgNR)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DT_NASCIMENTO)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.APROVADO)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ATIVO)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BLOQUEADO)
+                        </td>
+                        <td>
+                            @if (!item.APROVADO)
+                            {
+                                @Html.ActionLink(" ", "DtAprovar", new { id = item.ID_USUARIO }, new { @class = "fa fa-check-square-o", @title = "Aprovar" })
+                            }&nbsp;
+                            @if (!item.ATIVO)
+                            {
+                                @Html.ActionLink(" ", "Ativar", new { id = item.ID_USUARIO }, new { @class = "fa fa-user-plus", @title = "Ativar" })
+                            }&nbsp;
+                            @if (!item.BLOQUEADO)
+                            {
+                                @Html.ActionLink(" ", "Bloquear", new { id = item.ID_USUARIO }, new { @class = "fa fa-lock", @title = "Bloquear" })
+                            }
+                            else
+                            {
+                                @Html.ActionLink(" ", "Desbloquear", new { id = item.ID_USUARIO }, new { @class = "fa fa-unlock", @title = "Desbloquear" })
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
         </table>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#tblDados').DataTable();
+    });
+</script>
