@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -40,14 +41,13 @@
             android:name="com.br.jobup.CadastroActivity"
             android:label="@string/title_activity_cadastro" />
         <activity
-            android:name="com.br.jobup.AgendamentoActivity"
-            android:label="@string/title_activity_agendamento" />
-        <activity
             android:name="com.br.jobup.MensagensActivity"
             android:label="@string/title_activity_mensagem" />
         <activity
             android:name="com.br.jobup.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
+        <activity android:name="com.br.jobup.ListUsuarioActivity" />
+        <activity android:name="com.br.jobup.ListaNovaDeUsuariosActivity" />
     </application>
 
 </manifest>

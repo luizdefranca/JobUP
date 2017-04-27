@@ -241,45 +241,45 @@ public class Usuario {
     public static Usuario getUsuarioFromCursor(Cursor cursor) {
 
 
-        String id = cursor.getString(cursor.getColumnIndex(Constantes._ID));
-        String nome = cursor.getString(cursor.getColumnIndex(Constantes.NOME));
+        String id = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ID));
+        String nome = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_NOME));
 
-        Date dtNascimento = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.DT_NASCIMENTO)));
-        Date dtInclusao = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.DT_INCLUSAO)));
-        Date dtAprovacao = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.DT_APROVACAO)));
-        Date dtOrdenacao = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.DT_ORDENACAO)));
-        Date dtAlteracao = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.DT_ALTERACAO)));
-        boolean aprovado = Formatter.parseIntToBoolean( cursor.getInt(cursor.getColumnIndex(Constantes.APROVADO)));
-        boolean ativo = Formatter.parseIntToBoolean( cursor.getInt(cursor.getColumnIndex(Constantes.ATIVO)));
+        Date dtNascimento = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.USUARIO_DT_NASCIMENTO)));
+        Date dtInclusao = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.USUARIO_DT_INCLUSAO)));
+        Date dtAprovacao = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.USUARIO_DT_APROVACAO)));
+        Date dtOrdenacao = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.USUARIO_DT_ORDENACAO)));
+        Date dtAlteracao = new Date(cursor.getLong(cursor.getColumnIndex(Constantes.USUARIO_DT_ALTERACAO)));
+        boolean aprovado = Formatter.parseIntToBoolean( cursor.getInt(cursor.getColumnIndex(Constantes.USUARIO_APROVADO)));
+        boolean ativo = Formatter.parseIntToBoolean( cursor.getInt(cursor.getColumnIndex(Constantes.USUARIO_ATIVO)));
 
-        //constroi um objeto CPF
+        //constroi um objeto USUARIO_CPF
         //public Cpf(String cpf)
-        Cpf cpf =  new Cpf(cursor.getString(cursor.getColumnIndex(Constantes.CPF)));
+        Cpf cpf =  new Cpf(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_CPF)));
 
 
         //Constroi um objeto RG
         //public Rg(int uf, String nr)
-        int uf = cursor.getInt(cursor.getColumnIndex(Constantes.RG_UF));
-        String nr = cursor.getString(cursor.getColumnIndex(Constantes.RG_NR));
+        int uf = cursor.getInt(cursor.getColumnIndex(Constantes.USUARIO_RG_UF));
+        String nr = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_RG_NR));
         Rg rg = new Rg(uf, nr);
 
         //Constroi um objeto endereco
         //public Endereco(String idUsuario, String uf, String cep, String logradouro, String complemento, String bairro, String cidade)
-        int enderecoUf = cursor.getInt(cursor.getColumnIndex(Constantes.ENDERECO_UF));
-        String cep = cursor.getString(cursor.getColumnIndex(Constantes.ENDERECO_CEP));
-        String logradouro = cursor.getString(cursor.getColumnIndex(Constantes.ENDERECO_CEP));
-        String complemento = cursor.getString(cursor.getColumnIndex(Constantes.ENDERECO_COMPLEMENTO));
-        String bairro = cursor.getString(cursor.getColumnIndex(Constantes.ENDERECO_BAIRRO));
-        String cidade = cursor.getString(cursor.getColumnIndex(Constantes.ENDERECO_CIDADE));
+        int enderecoUf = cursor.getInt(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_UF));
+        String cep = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_CEP));
+        String logradouro = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_CEP));
+        String complemento = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_COMPLEMENTO));
+        String bairro = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_BAIRRO));
+        String cidade = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_CIDADE));
 
         Endereco endereco = new Endereco(id, enderecoUf,cep, logradouro, complemento, bairro, cidade);
 
         //Constroi um objeto contato
         //public Contato(String idUsuario, Telefone fixo, Telefone celular, Email email)
         //Constroi um objeto telefone_fixo
-        Telefone fixo = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.FIXO)));
-        Telefone celular = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.CELULAR)));
-        Email email = new Email(cursor.getString(cursor.getColumnIndex(Constantes.EMAIL)));
+        Telefone fixo = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_FIXO)));
+        Telefone celular = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_CELULAR)));
+        Email email = new Email(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_EMAIL)));
         Contato contato = new Contato(id, fixo, celular, email);
 
         //Constroi um objeto usuario

@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent AgendamentoActivity = new Intent(MainActivity.this, AgendamentoActivity.class);
+            Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
             return true;
         }
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
             Intent CadastroActivity = new Intent(MainActivity.this, CadastroActivity.class);
             startActivity(CadastroActivity);
         } else if (id == R.id.nav_gallery) {
-            Intent AgendamentoActivity = new Intent(MainActivity.this, AgendamentoActivity.class);
+            Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
         } else if (id == R.id.nav_slideshow) {
 

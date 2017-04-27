@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="bottom"
@@ -14,780 +15,1016 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="@color/colorAccent">
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageCadastroView"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:paddingLeft="10dp"
                 android:src="@drawable/ic_usuario" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingRight="15dp"
                 android:layout_gravity="center"
-                android:background="@color/colorPrimary">
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:paddingRight="15dp">
 
                 <TextView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="left"
                     android:text="CPF"
-                    android:layout_gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="#ffffff"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:hint="Nome do Usuario"
-                android:background="#ffffff"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:layout_marginBottom="3dp"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/cpfCadastroView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="3dp"
+                    android:background="#ffffff"
+                    android:hint="CPF do Usuario"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Senha"
                     android:layout_gravity="left"
+                    android:text="Senha"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="#ffffff"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_gravity="left"
-                android:textStyle="bold"
-                android:background="#ffffff"
-                android:textColor="#000000"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_height="wrap_content"
-                android:hint="CPF"
-                android:layout_marginBottom="3dp"/>
+                <EditText
+                    android:id="@+id/senhaCadastroView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="3dp"
+                    android:background="#ffffff"
+                    android:hint="Senha"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:background="#faf7f7">
+            android:paddingTop="@dimen/activity_vertical_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Nome:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/nomeCadastroView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="Nome Completo"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="R.G:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/rgNrCadastroView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="123456789"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="UF"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/rgUfCadastroView"
+                style="@android:style/Widget.Material.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="8"
+                android:background="#dcdcfa"
+                android:entries="@array/estados"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:spinnerMode="dialog"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Nasc:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/dtNascimentoCadastroView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="01/01/2000"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Endereço"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="C.E.P:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cepCadastroView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="#dcdcfa"
+                android:hint="00000-000"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Lograd:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/logradouroCadastroView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="#dcdcfa"
+                android:hint="Av Caxangá"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Nº:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nrEnderecoCadastroView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="#dcdcfa"
+                android:hint="12345"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Compl:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/complementoEnderecoCadastroView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="#dcdcfa"
+                android:hint="Bloco 99, Apto 000"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Bairro:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/bairroCadastroView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="#dcdcfa"
+                android:hint="Imbiribeira"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Cidade:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cidadeCadastroView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="#dcdcfa"
+                android:hint="Recife"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="U.F:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/ufCadastroView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="#dcdcfa"
+                android:entries="@array/estados"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textColor="#000000"
+
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#faf7f7"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:text="Contato"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
-                android:text="C.E.P:"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:text="Fixo:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/fixoCadastroView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
+                android:hint="(81) 3453-1523"
                 android:paddingBottom="8dp"
                 android:paddingLeft="4dp"
+                android:paddingTop="8dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="00000-000"
-                android:paddingTop="8dp"/>
+                android:textStyle="bold" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
-                android:text="Lograd:"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:text="Celular"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/celularCadastroView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
+                android:hint="(81) 99921-1423"
                 android:paddingBottom="8dp"
                 android:paddingLeft="4dp"
+                android:paddingTop="8dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Av Caxangá"
-                android:paddingTop="8dp"/>
+                android:textStyle="bold" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
-                android:text="Nº:"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:text="Email"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/emailCadastroView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
+                android:hint="fulano@gmail.com"
                 android:paddingBottom="8dp"
                 android:paddingLeft="4dp"
+                android:paddingTop="8dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="12345"
-                android:paddingTop="8dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
-            <TextView
-                android:text="Compl:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:textColor="#000000"
-                android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Bloco 99, Apto 000"
-                android:paddingTop="8dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
-            <TextView
-                android:text="Bairro:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:textColor="#000000"
-                android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Imbiribeira"
-                android:paddingTop="8dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
-            <TextView
-                android:text="Cidade:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:textColor="#000000"
-                android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Recife"
-                android:paddingTop="8dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
-            <TextView
-                android:text="U.F:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:textColor="#000000"
-                android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Pernambuco"
-                android:paddingTop="8dp"/>
+                android:textStyle="bold" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Formação"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="C.E.P:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="00000-000"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Lograd:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="Av Caxangá"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Nº:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="12345"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Compl:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="Bloco 99, Apto 000"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Bairro:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="Imbiribeira"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Cidade:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
+                android:hint="Recife"
                 android:paddingBottom="8dp"
                 android:paddingLeft="4dp"
+                android:paddingTop="8dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Recife"
-                android:paddingTop="8dp"/>
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
-                android:text="U.F:"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:text="U.F:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
+                android:hint="Pernambuco"
                 android:paddingBottom="8dp"
                 android:paddingLeft="4dp"
+                android:paddingTop="8dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Pernambuco"
-                android:paddingTop="8dp"/>
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
-                android:text="Especialidade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:text="Especialidade"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="C.E.P:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="00000-000"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Lograd:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="Av Caxangá"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Nº:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="12345"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Compl:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="Bloco 99, Apto 000"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Bairro:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:hint="Imbiribeira"
-                android:paddingTop="8dp"/>
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:text="Cidade:"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
+                android:hint="Recife"
                 android:paddingBottom="8dp"
                 android:paddingLeft="4dp"
+                android:paddingTop="8dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Recife"
-                android:paddingTop="8dp"/>
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#faf7f7"
             android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="#faf7f7">
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
             <TextView
-                android:text="U.F:"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.6"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:text="U.F:"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="8"
-                android:textColor="#000000"
                 android:background="#dcdcfa"
-                android:textStyle="bold"
+                android:hint="Pernambuco"
                 android:paddingBottom="8dp"
                 android:paddingLeft="4dp"
+                android:paddingTop="8dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:hint="Pernambuco"
-                android:paddingTop="8dp"/>
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -1,6 +1,7 @@
 package com.br.jobup.dao;
 
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Environment;
@@ -22,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Constantes {
 
     public static final String LOG_TAG = DatabaseHelper.class.getSimpleName();
 
-    private static final String NOME_BANCO = "dbUsuario";
+    private static final String NOME_BANCO = "jobup";
     private static final int VERSAO_BANCO = 1;
     private static DatabaseHelper mDatabaseInstance = null;
     private Context mContext;
@@ -49,7 +50,83 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Constantes {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(CREATE_USUARIO);
+
+        try {
+            sqLiteDatabase.execSQL(CREATE_USUARIO);
+            sqLiteDatabase.execSQL(CREATE_ESPECIALIDADE);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Log.e("Erro no banto", "onCreate: " + e.toString());
+        }
+
+//        sqLiteDatabase.execSQL(
+//                "BEGIN; \n"+
+//                "CREATE TABLE USUARIO ( \n" +
+//                        " ID_USUARIO Text NOT NULL PRIMARY KEY, \n" +
+//                        "NOME Text NOT NULL,\n" +
+//                        "CPF Text NOT NULL, \n" +
+//                        "RG_UF Integer NOT NULL, \n" +
+//                        " RG_NR Text NOT NULL, \n" +
+//                        " DT_NASCIMENTO INTEGER NOT NULL, \n" +
+//                        " DT_INCLUSAO DATETIME NOT NULL, \n" +
+//                        " DT_ALTERACAO DateTime, \n" +
+//                        " DT_APROVACAO DateTime, \n" +
+//                        " DT_ORDENACAO DateTime, \n" +
+//                        " APROVADO INTEGER DEFAULT FALSE, \n" +
+//                        " ATIVO INTEGER NOT NULL DEFAULT TRUE, \n" +
+//                        " ENDERECO_UF Text NOT NULL, \n" +
+//                        " ENDERECO_CEP Text NOT NULL, \n" +
+//                        " ENDERECO_LOGRADOURO Text NOT NULL, \n" +
+//                        " ENDERECO_COMPLEMENTO Text, \n" +
+//                        " ENDERECO_BAIRRO Text NOT NULL, \n" +
+//                        " ENDERECO_CIDADE Text NOT NULL, \n" +
+//                        " FIXO Text, CELULAR Text NOT NULL, \n" +
+//                        " EMAIL Text, \n" +
+//                        " CONSTRAINT unique__ID UNIQUE ( \"ID_USUARIO\" ), \n" +
+//                        " CONSTRAINT unique_CPF UNIQUE ( \"CPF\" ) );\n" +
+//                        "\n" +
+//                        "\n" +
+//                        "CREATE TABLE \"ESPECIALIDADE\"(\n" +
+//                        "\"ID_ESPECIALIDADE\" Integer NOT NULL PRIMARY KEY,\n" +
+//                        "\"DESCRICAO\" Text NOT NULL,\n" +
+//                        "\" EXIGIR_COMPROVACAO\" Boolean DEFAULT 'FALSE',\n" +
+//                        "CONSTRAINT \"unique_ID_ESPECIALIDADE\" UNIQUE ( \"ID_ESPECIALIDADE\" ) );\n" +
+//                        "\n" +
+//                        "\n" +
+//                        "CREATE TABLE \"AVALIACAO\" ( \n" +
+//                        "ID_USUARIO` TEXT NOT NULL, \n" +
+//                        "`ID_ESPECIALIDADE` INTEGER NOT NULL,\n" +
+//                        " `ID_CLIENTE` TEXT NOT NULL, \n" +
+//                        " `DT_ULT_AVALIACAO` DATETIME, \n" +
+//                        " `NOTA` INTEGER DEFAULT 0, \n" +
+//                        " `COMENTARIO` TEXT NOT NULL, \n" +
+//                        " PRIMARY KEY(`ID_USUARIO`,`ID_ESPECIALIDADE`,`ID_CLIENTE`) \n" +
+//                        " FOREIGN KEY(`ID_USUARIO`, `ID_ESPECIALIDADE`) REFERENCES PERFIL_PROFISSIONAL(`ID_USUARIO`, `ID_ESPECIALIDADE`) );\n" +
+//                        "\n" +
+//                        "CREATE TABLE `PERFIL_PROFISSIONAL` ( \n" +
+//                        "`ID_USUARIO` TEXT NOT NULL UNIQUE, \n" +
+//                        "`ID_ESPECIALIDADE` INTEGER NOT NULL, \n" +
+//                        "`DT_APROVACAO` INTEGER NOT NULL, \n" +
+//                        "`APROVADO` BOOLEAN DEFAULT 0, \n" +
+//                        "`RESUMO_CURRICULO` TEXT, \n" +
+//                        "PRIMARY KEY(`ID_USUARIO`,`ID_ESPECIALIDADE`), \n" +
+//                        "FOREIGN KEY(`ID_USUARIO`) REFERENCES USUARIO('ID_USUARIO'),\n" +
+//                        "FOREIGN KEY(`ID_ESPECIALIDADE`) REFERENCES ESPECIALIDADE(`ID_ESPECIALIDADE`)) ;\n" +
+//                        "\n" +
+//                        "\n" +
+//                        "CREATE TABLE `FORMACAO` (\n" +
+//                        " `ID_USUARIO` TEXT NOT NULL UNIQUE, \n" +
+//                        " `ID_ESPECIALIDADE` INTEGER NOT NULL, \n" +
+//                        " `ID_FORMACAO` INTEGER NOT NULL, \n" +
+//                        " `INSTITUICAO` TEXT NOT NULL, \n" +
+//                        " `NOME_CURSO` TEXT NOT NULL, \n" +
+//                        " `ANO_FORMACAO` NUMERIC NOT NULL, \n" +
+//                        " `DATA_APROVACAO` DATE, \n" +
+//                        " `APROVADO` INTEGER, \n" +
+//                        " PRIMARY KEY(`ID_USUARIO`,`ID_ESPECIALIDADE`,`ID_FORMACAO`)\n" +
+//                        " FOREIGN KEY(`ID_USUARIO`, `ID_ESPECIALIDADE`) REFERENCES PERFIL_PROFISSIONAL(`ID_USUARIO`, `ID_ESPECIALIDADE`) );\n" +
+//                        "COMMIT;"
+//        );
     }
 
     @Override
@@ -153,24 +230,24 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Constantes {
     public static final String CREATE_USUARIO =
             "CREATE TABLE " + TABELA_USUARIO + " (\n" +
                     "\t\"ID_USUARIO\" Text NOT NULL,\n" +
-                    "\t\"NOME\" Text NOT NULL,\n" +
-                    "\t\"RG_UF\" Integer NOT NULL,\n" +
-                    "\t\"RG_NR\" Text NOT NULL,\n" +
-                    "\t\"DT_NASCIMENTO\" DateTime NOT NULL,\n" +
-                    "\t\"DT_INCLUSAO\" DateTime NOT NULL,\n" +
-                    "\t\"DT_ALTERACAO\" DateTime,\n" +
-                    "\t\"DT_APROVACAO\" DateTime,\n" +
-                    "\t\"DT_ORDENACAO\" DateTime NOT NULL,\n" +
-                    "\t\"APROVADO\" Boolean NOT NULL DEFAULT FALSE,\n" +
-                    "\t\"CPF\" Text NOT NULL,\n" +
+                    "\t\"USUARIO_NOME\" Text NOT NULL,\n" +
+                    "\t\"USUARIO_RG_UF\" Integer NOT NULL,\n" +
+                    "\t\"USUARIO_RG_NR\" Text NOT NULL,\n" +
+                    "\t\"USUARIO_DT_NASCIMENTO\" DateTime NOT NULL,\n" +
+                    "\t\"USUARIO_DT_INCLUSAO\" DateTime NOT NULL,\n" +
+                    "\t\"USUARIO_DT_ALTERACAO\" DateTime,\n" +
+                    "\t\"USUARIO_DT_APROVACAO\" DateTime,\n" +
+                    "\t\"USUARIO_DT_ORDENACAO\" DateTime NOT NULL,\n" +
+                    "\t\"USUARIO_APROVADO\" Boolean NOT NULL DEFAULT FALSE,\n" +
+                    "\t\"USUARIO_CPF\" Text NOT NULL,\n" +
                     "CONSTRAINT \"unique_ID_USUARIO\" UNIQUE ( \"ID_USUARIO\" ) );";
 
     public static final String CREATE_PERFIL_PROFISSIONAL =
             "CREATE TABLE " +TABELA_PERFIL_PROFISSIONAL + " (\n" +
                     "\t\"ID_USUARIO\" Text NOT NULL,\n" +
                     "\t\"ID_ESPECIALIDADE\" Integer NOT NULL,\n" +
-                    "\t\"DT_APROVACAO\" DateTime,\n" +
-                    "\t\"APROVADO\" Boolean NOT NULL DEFAULT FALSE,\n" +
+                    "\t\"USUARIO_DT_APROVACAO\" DateTime,\n" +
+                    "\t\"USUARIO_APROVADO\" Boolean NOT NULL DEFAULT FALSE,\n" +
                     "\t\"RESUMO_CURRICULO\" Text NOT NULL );";
 
     public static final String CREATE_FORMACAO =
@@ -181,8 +258,8 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Constantes {
                     "\t\"INSTITUICAO\" Text NOT NULL,\n" +
                     "\t\"NOME_CURSO\" Text NOT NULL,\n" +
                     "\t\"ANO_FORMACAO\" Integer NOT NULL,\n" +
-                    "\t\"APROVADO\" Boolean NOT NULL DEFAULT FALSE,\n" +
-                    "\t\"DT_APROVACAO\" DateTime );";
+                    "\t\"USUARIO_APROVADO\" Boolean NOT NULL DEFAULT FALSE,\n" +
+                    "\t\"USUARIO_DT_APROVACAO\" DateTime );";
 
 
     public static final String CREATE_ESPECIALIDADE =
@@ -209,9 +286,9 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Constantes {
     public static final String CREATE_CONTATO =
             "CREATE TABLE "+TABELA_CONTATO+" (\n" +
                     "\t\"ID_USUARIO\" Text NOT NULL,\n" +
-                    "\t\"FIXO\" Text,\n" +
-                    "\t\"CELULAR\" Text NOT NULL,\n" +
-                    "\t\"EMAIL\" Text NOT NULL,\n" +
+                    "\t\"USUARIO_FIXO\" Text,\n" +
+                    "\t\"USUARIO_CELULAR\" Text NOT NULL,\n" +
+                    "\t\"USUARIO_EMAIL\" Text NOT NULL,\n" +
                     "\t\"USUARIO_ID_USUARIO\" Text );";
 
 

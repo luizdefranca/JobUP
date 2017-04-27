@@ -29,9 +29,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile 'junit:junit:4.12'
+    compile files('src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar')
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support:design:24.0.0'
     compile 'joda-time:joda-time:2.9.9'
-    compile files('src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.microsoft.azure:azure-mobile-services-android-sdk:2.0.3'
+    compile 'com.google.code.gson:gson:2.2.2'
+    compile 'com.google.guava:guava:18.0'
+    testCompile 'junit:junit:4.12'
 }

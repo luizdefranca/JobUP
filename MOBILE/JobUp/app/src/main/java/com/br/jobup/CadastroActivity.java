@@ -1,9 +1,19 @@
 package com.br.jobup;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Spinner;
+
+import com.br.jobup.dao.usuario.IUsuarioDao;
+import com.br.jobup.dao.usuario.UsuarioDao;
+import com.br.jobup.helpers.CadastroUsuarioHelper;
+import com.br.jobup.models.Usuario;
+import com.br.jobup.validations.Util;
+
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -11,6 +21,8 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+        Spinner spinner = (Spinner) findViewById(R.id.rgUfCadastroView);
+
     }
 
     @Override
@@ -29,7 +41,19 @@ public class CadastroActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_salvar) {
-            return true;
+
+            CadastroUsuarioHelper usuarioHelper = new CadastroUsuarioHelper(this);
+             IUsuarioDao dao = new UsuarioDao(this);
+             Usuario usuario = usuarioHelper.getUsuario();
+            usuario.setIdUsuario(Util.getUUID());
+
+
+            dao.addUsuario(usuario, null);
+            dao.close();
+            Intent detalheServico = new Intent(CadastroActivity.this, ListaNovaDeUsuariosActivity.class);
+            startActivity(detalheServico);
+//            usuario.salvaUsuario(usuario);
+            //return true;
         }
 
         return super.onOptionsItemSelected(item);
