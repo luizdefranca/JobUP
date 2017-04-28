@@ -13,7 +13,7 @@ public class PerfilProfisional {
 
     private Date dataAprovacao;
     private boolean aprovado;
-    private String resumoCurrriculo;
+    private String resumoCurriculo;
     private Especialidade especialidade;
     private List<Avaliacoes> avaliacoes;
     private List<Formacao> formacoes;
@@ -37,12 +37,12 @@ public class PerfilProfisional {
         this.aprovado = aprovado;
     }
 
-    public String getResumoCurrriculo() {
-        return resumoCurrriculo;
+    public String getResumoCurriculo() {
+        return resumoCurriculo;
     }
 
-    public void setResumoCurrriculo(String resumoCurrriculo) {
-        this.resumoCurrriculo = resumoCurrriculo;
+    public void setResumoCurriculo(String resumoCurriculo) {
+        this.resumoCurriculo = resumoCurriculo;
     }
 
     public Especialidade getEspecialidade() {

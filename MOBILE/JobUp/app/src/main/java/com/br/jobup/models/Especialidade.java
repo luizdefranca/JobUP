@@ -10,7 +10,6 @@ import java.util.List;
 public class Especialidade {
     private String descricao;
     private boolean exigirComprovacao;
-    private List<PerfilProfisional> perfisProfisional;
 
     public Especialidade() {
     }
@@ -31,11 +30,8 @@ public class Especialidade {
         this.exigirComprovacao = exigirComprovacao;
     }
 
-    public List<PerfilProfisional> getPerfisProfisional() {
-        return perfisProfisional;
-    }
-
-    public void setPerfisProfisional(List<PerfilProfisional> perfisProfisional) {
-        this.perfisProfisional = perfisProfisional;
+    public Especialidade(String descricao, boolean exigirComprovacao) {
+        this.descricao = descricao;
+        this.exigirComprovacao = exigirComprovacao;
     }
 }

@@ -9,10 +9,16 @@ import java.util.Date;
 
 public class Avaliacoes  {
     private Date dataUltimaAvaliacao;
-    private byte nota;
+    private int nota;
     private String comentario;
 
     public Avaliacoes() {
+    }
+
+    public Avaliacoes(Date dataUltimaAvaliacao, int nota, String comentario) {
+        this.dataUltimaAvaliacao = dataUltimaAvaliacao;
+        this.nota = nota;
+        this.comentario = comentario;
     }
 
     public Date getDataUltimaAvaliacao() {
@@ -23,11 +29,11 @@ public class Avaliacoes  {
         this.dataUltimaAvaliacao = dataUltimaAvaliacao;
     }
 
-    public byte getNota() {
+    public int getNota() {
         return nota;
     }
 
-    public void setNota(byte nota) {
+    public void setNota(int nota) {
         this.nota = nota;
     }
 

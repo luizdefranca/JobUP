@@ -29,6 +29,8 @@ public class Usuario {
     private Date dataAprovacao;
     private Date dataOrdenacao;
     private boolean aprovado;
+    private Endereco endereco;
+    private Contato contato;
     private boolean ativo;
 
     public boolean isAtivo() {
@@ -38,9 +40,6 @@ public class Usuario {
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
     }
-
-    private Endereco endereco;
-    private Contato contato;
 
     //Esta propriedade nao sera persistida
     private List<PerfilProfisional> perfisProfissionais;
