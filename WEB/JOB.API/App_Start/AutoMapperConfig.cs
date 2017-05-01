@@ -12,7 +12,7 @@ namespace JOB.API.App_Start
             {
                 cfg.CreateMap<USUARIO, UsuarioViewModel>();
                 cfg.CreateMap<PERFIL_PROFISSIONAL, ProfissionalViewModel>();
-                cfg.CreateMap<DATA.Domain.JOB, JobViewModel>();
+                //cfg.CreateMap<DATA.Domain.JOB, JobViewModel>();
             });
         }
     }

@@ -42,8 +42,11 @@ namespace JOB.DATA
         public DbSet<PERFIL_PROFISSIONAL> PerfilProfissional { get; set; }
         public DbSet<AVALIACAO> Avaliacao { get; set; }
         public DbSet<ESPECIALIDADE> Especialidade { get; set; }
+        public DbSet<SUB_ESPECIALIDADE> SubEspecialidade { get; set; }
         public DbSet<FORMACAO> Formacao { get; set; }
-        public DbSet<Domain.JOB> Job{ get; set; }
+        public DbSet<SERVICO> Servico { get; set; }
+        public DbSet<OFERTA_SERVICO> Oferta { get; set; }
+        public DbSet<PROPOSTA_SERVICO> Proposta { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -68,9 +71,13 @@ namespace JOB.DATA
             modelBuilder.Configurations.Add(new ContatoConfig());
             modelBuilder.Configurations.Add(new PerfilProfissionalConfig());
             modelBuilder.Configurations.Add(new AvaliacaoConfig());
-            modelBuilder.Configurations.Add(new EspecialidadeConfig());
             modelBuilder.Configurations.Add(new FormacaoConfig());
-            modelBuilder.Configurations.Add(new JobConfig());
+
+            modelBuilder.Configurations.Add(new EspecialidadeConfig());
+            modelBuilder.Configurations.Add(new SubEspecialidadeConfig());
+            modelBuilder.Configurations.Add(new ServicoConfig());
+            modelBuilder.Configurations.Add(new OfertaConfig());
+            modelBuilder.Configurations.Add(new PropostaConfig());
         }
     }
 }

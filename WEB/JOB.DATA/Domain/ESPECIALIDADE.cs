@@ -36,13 +36,15 @@ namespace JOB.DATA.Domain
 
         private void InicializaVariaveis()
         {
-            //this.GUIAS = new HashSet<GUIA>();
+            this.SUB_ESPECIALIDADES = new HashSet<SUB_ESPECIALIDADE>();
+            this.PERFIS_PROFISSIONAIS = new HashSet<PERFIL_PROFISSIONAL>();
         }
 
         public int ID_ESPECIALIDADE { get; private set; }
         public string DESCRICAO { get; private set; }
         public bool EXIGIR_COMPROVACAO { get; private set; }
 
-        public ICollection<PERFIL_PROFISSIONAL> PERFIL_PROFISSIONAL { get; private set; }
+        public ICollection<SUB_ESPECIALIDADE> SUB_ESPECIALIDADES { get; private set; }
+        public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; private set; }
     }
 }

@@ -109,27 +109,27 @@ namespace JOB.WEB.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        public ActionResult CriarJob(Guid id, JobViewModel obj)
-        {
-            if (!ModelState.IsValid) return View(obj);
+        //[HttpPost]
+        //public ActionResult CriarJob(Guid id, JobViewModel obj)
+        //{
+        //    if (!ModelState.IsValid) return View(obj);
 
-            try
-            {
-                Guid idCliente = Guid.Parse(User.Identity.GetUserId());
-                //Guid IdProfissional = Guid.Parse(Request.QueryString["id"]);
+        //    try
+        //    {
+        //        Guid idCliente = Guid.Parse(User.Identity.GetUserId());
+        //        //Guid IdProfissional = Guid.Parse(Request.QueryString["id"]);
 
-                var newobj = new JOB.DATA.Domain.JOB(idCliente, obj.ID_USUARIO_PROFISSIONAL, obj.ID_ESPECIALIDADE, obj.DT_JOB, obj.TITULO, obj.OBSERVACOES, obj.VALOR_SUGERIDO);
+        //        var newobj = new JOB.DATA.Domain.JOB(idCliente, obj.ID_USUARIO_PROFISSIONAL, obj.ID_ESPECIALIDADE, obj.DT_JOB, obj.TITULO, obj.OBSERVACOES, obj.VALOR_SUGERIDO);
 
-                ctx.Job.Add(newobj);
-                ctx.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", ex.TratarMensagem());
-                return View(obj);
-            }
-        }
+        //        ctx.Job.Add(newobj);
+        //        ctx.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ModelState.AddModelError("", ex.TratarMensagem());
+        //        return View(obj);
+        //    }
+        //}
     }
 }

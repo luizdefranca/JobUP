@@ -40,6 +40,14 @@ namespace JOB.DATA.Config
                 .WithRequired(n => n.USUARIO)
                 .HasForeignKey(n => n.ID_USUARIO)
                 .WillCascadeOnDelete(true);
+
+            HasMany(n => n.OFERTAS_SERVICO)
+                .WithRequired(n => n.USUARIO)
+                .HasForeignKey(n => n.ID_USUARIO);
+
+            HasMany(n => n.PROPOSTAS_SERVICO)
+                .WithRequired(n => n.USUARIO)
+                .HasForeignKey(n => n.ID_USUARIO);
         }
     }
 }

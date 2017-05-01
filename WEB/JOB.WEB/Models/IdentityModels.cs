@@ -57,7 +57,7 @@ namespace JOB.WEB.Models
 
             //tipo padrão para string é varchar
             modelBuilder.Properties<string>()
-                .Configure(p => p.HasColumnType("varchar"));
+                .Configure(p => p.IsUnicode(false));
         }
     }
 }

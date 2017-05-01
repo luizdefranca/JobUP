@@ -16,7 +16,7 @@ namespace JOB.DATA.Config
                 .IsRequired();
 
             Property(p => p.RESUMO_CURRICULO)
-                //.HasMaxLength(1000)
+                .HasMaxLength(1000)
                 .IsRequired();
 
             HasMany(n => n.AVALIACOES)
@@ -28,6 +28,11 @@ namespace JOB.DATA.Config
                .WithRequired(n => n.PERFIL_PROFISSIONAL)
                .HasForeignKey(n => new { n.ID_USUARIO, n.ID_ESPECIALIDADE })
                .WillCascadeOnDelete(true);
+
+            HasMany(n => n.SERVICOS)
+                .WithRequired(n => n.PERFIL_PROFISSIONAL)
+                .HasForeignKey(n => new { n.ID_USUARIO, n.ID_ESPECIALIDADE })
+                .WillCascadeOnDelete(true);
         }
     }
 }
