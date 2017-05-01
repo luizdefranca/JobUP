@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1493249471461"
+    timestamp="1493594396966"
     token="-271149622531415815"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -25,13 +25,10 @@
 
     <build
         build-mode="FULL"
-        timestamp="1493248771907"
+        timestamp="1493593349864"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
@@ -52,10 +49,10 @@
             location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
@@ -63,10 +60,13 @@
         <artifact
             location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493249168116"
+        timestamp="1493594341379"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
@@ -77,7 +77,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493249471461"
+        timestamp="1493594396966"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

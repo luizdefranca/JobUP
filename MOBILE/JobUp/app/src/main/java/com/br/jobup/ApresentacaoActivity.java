@@ -9,12 +9,15 @@ import android.view.View;
 import com.br.jobup.dao.DatabaseHelper;
 
 public class ApresentacaoActivity extends AppCompatActivity {
+    public static final String TAG = ApresentacaoActivity.class.getSimpleName();
     private static int splashInterval = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apresentacao);
+
+
     }
     public void LoginActivity(View view) {
         DatabaseHelper.newInstance(this);
@@ -32,6 +35,12 @@ public class ApresentacaoActivity extends AppCompatActivity {
         }, splashInterval);
 
 
+        //List<Usuario> usuarios = new UsuarioService().getAllUsuarios();
 
+
+
+
+
+//        Log.i(TAG, "usuario: " + usuarios.get(0).getNome());
     }
 }

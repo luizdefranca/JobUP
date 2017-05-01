@@ -25,6 +25,19 @@ public class Parsers {
 
     }
 
+    public static Date parseStringToDataAPI(String data){
+        DateFormat dataFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S");
+
+        //usa-se o método setLenient como false para que faça a conversao restrita
+        dataFormat.setLenient(false);
+        try {
+            Date dateFormatada = dataFormat.parse(data);
+            return dateFormatada;
+        } catch (ParseException e) {
+            return null;
+        }
+    }
+
     public static String parseDataToStringNormal(Date data){
 
         DateFormat dataFormat = DateFormat.getDateInstance();

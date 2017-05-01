@@ -3,8 +3,11 @@ package com.br.jobup.models;
 import android.database.Cursor;
 
 import com.br.jobup.util.Constantes;
+import com.br.jobup.util.Parsers;
 import com.br.jobup.validations.Formatter;
+import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -13,24 +16,36 @@ import java.util.List;
  * Created by luizramos on 09/04/17.
  */
 
-public class Usuario {
+public class Usuario implements Serializable{
 
     public static final String TAG = Usuario.class.getName();
 
 
-
+    @SerializedName("ID_USUARIO")
     private String idUsuario;
+    @SerializedName("NOME")
     private String nome;
+    @SerializedName("CPF")
     private Cpf cpf;
+    @SerializedName("RG")
     private Rg rg;
+    @SerializedName("DT_NASCIMENTO")
     private Date dataNascimento;
+    @SerializedName("DT_INCLUSAO")
     private Date dataInclusao;
+    @SerializedName("DT_ALTERACAO")
     private Date dataAlteracao;
+    @SerializedName("DT_APROVACAO")
     private Date dataAprovacao;
+    @SerializedName("DT_ORDENACAO")
     private Date dataOrdenacao;
+    @SerializedName("APROVADO")
     private boolean aprovado;
+    @SerializedName("ENDERECO")
     private Endereco endereco;
+    @SerializedName("CONTATO")
     private Contato contato;
+    @SerializedName("ATIVO")
     private boolean ativo;
 
     public boolean isAtivo() {
@@ -156,6 +171,10 @@ public class Usuario {
     public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = Parsers.parseStringToDataAPI(dataNascimento);
+    }
+
 
     public Date getDataInclusao() {
         return dataInclusao;
@@ -163,6 +182,9 @@ public class Usuario {
 
     public void setDataInclusao(Date dataInclusao) {
         this.dataInclusao = dataInclusao;
+    }
+    public void setDataInclusao(String dataInclusao) {
+        this.dataInclusao = Parsers.parseStringToDataAPI(dataInclusao);
     }
 
     public Date getDataAlteracao() {
@@ -172,6 +194,9 @@ public class Usuario {
     public void setDataAlteracao(Date dataAlteracao) {
         this.dataAlteracao = dataAlteracao;
     }
+    public void setDataAlteracao(String dataAlteracao) {
+        this.dataAlteracao = Parsers.parseStringToDataAPI(dataAlteracao);
+    }
 
     public Date getDataAprovacao() {
         return dataAprovacao;
@@ -180,6 +205,9 @@ public class Usuario {
     public void setDataAprovacao(Date dataAprovacao) {
         this.dataAprovacao = dataAprovacao;
     }
+    public void setDataAprovacao(String dataAprovacao) {
+        this.dataAprovacao = Parsers.parseStringToDataAPI(dataAprovacao);
+    }
 
     public Date getDataOrdenacao() {
         return dataOrdenacao;
@@ -187,6 +215,9 @@ public class Usuario {
 
     public void setDataOrdenacao(Date dataOrdenacao) {
         this.dataOrdenacao = dataOrdenacao;
+    }
+    public void setDataOrdenacao(String dataOrdenacao) {
+        this.dataOrdenacao = Parsers.parseStringToDataAPI(dataOrdenacao);
     }
 
     public boolean isAprovado() {
@@ -274,7 +305,7 @@ public class Usuario {
         Endereco endereco = new Endereco(id, enderecoUf,cep, logradouro, complemento, bairro, cidade);
 
         //Constroi um objeto contato
-        //public Contato(String idUsuario, Telefone fixo, Telefone celular, Email email)
+        //public IContato(String idUsuario, Telefone fixo, Telefone celular, Email email)
         //Constroi um objeto telefone_fixo
         Telefone fixo = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_FIXO)));
         Telefone celular = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_CELULAR)));
@@ -284,7 +315,7 @@ public class Usuario {
         //Constroi um objeto usuario
         //  public Usuario(String nome, Cpf cpf, Rg rg, Date dataNascimento, Date dataInclusao,
         //  Date dataAlteracao, Date dataAprovacao, Date dataOrdenacao, boolean aprovado,
-        //  Endereco endereco, Contato contato,
+        //  Endereco endereco, IContato contato,
         //  List<PerfilProfisional> perfisProfissionais)
 
         List<PerfilProfisional> perfilProfisionals = null;

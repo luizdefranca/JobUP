@@ -1,10 +1,14 @@
 package com.br.jobup.models;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /**
  * Created by luizramos on 09/04/17.
  */
 
-public class Endereco {
+public class Endereco implements Serializable {
 
     public static final String TAG = Endereco.class.getName();
     public static final int MAX_LENGTH = 256;
@@ -21,11 +25,17 @@ public class Endereco {
 
     private String idUsuario;
 
+    @SerializedName("UF")
     private int Uf;
+    @SerializedName("CEP")
     private String Cep;
+    @SerializedName("LOGRADOURO")
     private String logradouro;
+    @SerializedName("COMPLEMENTO")
     private String Complemento;
+    @SerializedName("BAIRRO")
     private String Bairro;
+    @SerializedName("CIDADE")
     private String Cidade;
 
     public Endereco() {

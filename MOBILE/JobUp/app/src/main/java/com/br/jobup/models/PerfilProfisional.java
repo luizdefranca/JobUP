@@ -1,6 +1,10 @@
 package com.br.jobup.models;
 
 
+import com.br.jobup.util.Parsers;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -9,7 +13,7 @@ import java.util.List;
  * Created by luizramos on 09/04/17.
  */
 
-public class PerfilProfisional {
+public class PerfilProfisional implements Serializable {
 
     private Date dataAprovacao;
     private boolean aprovado;
@@ -27,6 +31,9 @@ public class PerfilProfisional {
 
     public void setDataAprovacao(Date dataAprovacao) {
         this.dataAprovacao = dataAprovacao;
+    }
+    public void setDataAprovacao(String dataAprovacao) {
+        this.dataAprovacao = Parsers.parseStringToDataAPI(dataAprovacao);
     }
 
     public boolean isAprovado() {

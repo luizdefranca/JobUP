@@ -3,66 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/1e4b9670eae6128a30dceb1c2836eaccc8d75482/output/jars/classes.jar"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.2.0/a09926806199499a20b2f5168779499abfa33342/converter-gson-2.2.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="25.0.0"
-        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4e31088eae50b4b3673b213650b90b2a6d97d134/classes.dex" />
+        revision="25.0.2"
+        sha1="a09926806199499a20b2f5168779499abfa33342">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.2.0_43c47d18855698bf7ee7a543e6cd27cea351e3f0/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/256a9b1966ef54c6633045d821510c3f81faf169/output/jars/classes.jar"
+        jar="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
-        revision="25.0.0"
-        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c93fadfbca6776ecf0e9f34b71e8eda4b921bcf3/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_03a426ed812aa082ee039902f733dbefc03aa533.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/android/databinding/baseLibrary/2.3.1/baseLibrary-2.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2626e02aa9592edd5386d87408e05727303d9ded">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/baseLibrary-2.3.1_45ff8b5297dae1cdea196560e4beefe7fd169b37.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/8b655163aab15bcab4ad5fbc229619b0123f914e/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3e54f6bf774e509e36db235648a1d9d8adb009e8/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/luizramos/.android/build-cache/3cca413e1a0f238cff7c891289e756a7e7c0b33e/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_1ecec2da1d17a351caf6ca747863368677cda75e.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/2609f5b00d2f43cef5abaa7ef4579bf01bccf0ed/output/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_852ae79250ec41480155120b557fadf232237307/classes.dex" />
+        revision="25.0.2"
+        sha1="732595768a04f3ce1ce04bfd248d050db74bbf44">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6f81b793568cd634b0bd1c0d8aba51bfaac9b20c/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -72,24 +27,6 @@
         revision="25.0.0"
         sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_d952a86a8a13894e56fc641f55e4649076652cda.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/ca030427a03a0305d9123b0e4e317ce6209ee55b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0eeec063910445285a007a3e6a2a3d2462545c41/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/62938e1874c5345c0a99bde0882a90ef4cda5fa1/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_50feb279cc80049daaf307c9e3722898f8ada8ba/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -111,30 +48,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/2609f5b00d2f43cef5abaa7ef4579bf01bccf0ed/output/jars/classes.jar"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_920fab4f00094e479cfd2f38d0f46fb70ca68834/classes.dex" />
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.11.0_31aee83eb6496270548cd3ae14fa2f728c2338c7/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/74ef46dc55723f8b099b59d4614dcc875570958a/output/jars/classes.jar"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.7.2/20f6463eb19ac61960c5d91a094c2f4f0727dc2e/okhttp-2.7.2.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4e464c4dfcf0f09b4cdf6ceaf6a795721b7e7683/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/luizramos/.android/build-cache/44e9e8cf44cb93575029001bb0350d90fb17f4cc/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f3b04a9e04e25b4db4f0ecd33725eff246e27714/classes.dex" />
+        sha1="20f6463eb19ac61960c5d91a094c2f4f0727dc2e">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-2.7.2_ead2c1d139deb5faf9da12c209e0d9f826aee002/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -147,30 +75,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="938e69b9f542ca1f2acf21582036f25a4398702f">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/2/caelum-stella-core-2.1.2_2695079214a85731d601043f50430362ed856251/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="938e69b9f542ca1f2acf21582036f25a4398702f">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/caelum-stella-core-2.1.2_2695079214a85731d601043f50430362ed856251.jar" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_66025e368bd0ba9d8c9e43909b84df6f3116db9a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.microsoft.azure/azure-mobile-services-android-sdk/2.0.3/5de03bab93697321e5654831bb98df11ad4c19ac/azure-mobile-services-android-sdk-2.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5de03bab93697321e5654831bb98df11ad4c19ac">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/azure-mobile-services-android-sdk-2.0.3_7db1378a2eb3b445f5feb0dacce771ce59e48370/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -187,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="1038a91d9ffb07bdda0868acd337120a815d7264">
+        sha1="ce25a5da2142296ec80937b6ea56149fc598d7f4">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6f81b793568cd634b0bd1c0d8aba51bfaac9b20c/classes.dex" />
     </item>
     <item
@@ -198,6 +117,141 @@
         revision="25.0.0"
         sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_ba514c23e5540ce79e46a626dfdfdc3c844232d0.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="938e69b9f542ca1f2acf21582036f25a4398702f">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/2/caelum-stella-core-2.1.2_2695079214a85731d601043f50430362ed856251/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.7.2/20f6463eb19ac61960c5d91a094c2f4f0727dc2e/okhttp-2.7.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="20f6463eb19ac61960c5d91a094c2f4f0727dc2e">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-2.7.2_ead2c1d139deb5faf9da12c209e0d9f826aee002/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_03a426ed812aa082ee039902f733dbefc03aa533.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/android/databinding/baseLibrary/2.3.1/baseLibrary-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2626e02aa9592edd5386d87408e05727303d9ded">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/baseLibrary-2.3.1_45ff8b5297dae1cdea196560e4beefe7fd169b37.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.6.0_9ba6c1615fcb7c1c4bee84014c82cebb2fb9fcf4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_937ad54ff5b4e18b0efb96246502bf954ded1791/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/luizramos/.android/build-cache/3cca413e1a0f238cff7c891289e756a7e7c0b33e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_1ecec2da1d17a351caf6ca747863368677cda75e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_66025e368bd0ba9d8c9e43909b84df6f3116db9a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="938e69b9f542ca1f2acf21582036f25a4398702f">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/2/caelum-stella-core-2.1.2_2695079214a85731d601043f50430362ed856251/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.2.0/41e67dba73c3347e4503761642c39d0e06ca1f2/retrofit-2.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="041e67dba73c3347e4503761642c39d0e06ca1f2">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.2.0_bd5defb1a00bce1b805ba558b14f4719b678bc93/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.9.9/f7b520c458572890807d143670c9b24f4de90897/joda-time-2.9.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f7b520c458572890807d143670c9b24f4de90897">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/joda-time-2.9.9_a625fdcaac95e5c6384e08d5a2753bc9afa8e04d/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="938e69b9f542ca1f2acf21582036f25a4398702f">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/caelum-stella-core-2.1.2_2695079214a85731d601043f50430362ed856251.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.2.0/41e67dba73c3347e4503761642c39d0e06ca1f2/retrofit-2.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="041e67dba73c3347e4503761642c39d0e06ca1f2">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.2.0_bd5defb1a00bce1b805ba558b14f4719b678bc93/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_937ad54ff5b4e18b0efb96246502bf954ded1791/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.2.0/a09926806199499a20b2f5168779499abfa33342/converter-gson-2.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a09926806199499a20b2f5168779499abfa33342">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.2.0_43c47d18855698bf7ee7a543e6cd27cea351e3f0/classes.dex" />
     </item>
 
 </items>

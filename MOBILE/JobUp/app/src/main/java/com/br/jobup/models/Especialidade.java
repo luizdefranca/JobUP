@@ -1,13 +1,14 @@
 package com.br.jobup.models;
 
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by luizramos on 09/04/17.
  */
 
-public class Especialidade {
+public class Especialidade implements Serializable {
     private String descricao;
     private boolean exigirComprovacao;
 

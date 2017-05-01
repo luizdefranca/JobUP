@@ -1,14 +1,19 @@
 package com.br.jobup.models;
 
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /**
  * Created by luizramos on 09/04/17.
  */
 
-public class Rg {
+public class Rg implements Serializable{
 
-
+    @SerializedName("UF")
     public int uf;
+    @SerializedName("NR")
     public String nr;
 
     public Rg() {

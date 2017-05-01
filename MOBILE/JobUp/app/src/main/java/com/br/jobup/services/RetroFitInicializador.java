@@ -1,6 +1,9 @@
 package com.br.jobup.services;
 
-import okhttp3.OkHttpClient;
+import com.br.jobup.services.usuarioServices.interfaces.IUsuarioService;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -12,24 +15,49 @@ public class RetroFitInicializador {
 
     String API_BASE_URL = "http://jobapi.azurewebsites.net/api/";
 
-    private final Retrofit retrofit;
-    public RetroFitInicializador(){
+    private final  Retrofit retrofit;
 
-        retrofit = builder
-                        .client(httpClient.build())
+    public  RetroFitInicializador() {
+        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory
+                        .create(gson))
                         .build();
     }
 
-    OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
-    Retrofit.Builder builder =
-            new Retrofit.Builder()
-                    .baseUrl(API_BASE_URL)
-                    .addConverterFactory(
-                            GsonConverterFactory.create()
-                    );
+
+    //    public RetroFitInicializador(){
+//
+//        retrofit = builder
+//                        .client(httpClient.build())
+//                        .build();
+//    }
+//
+//    OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+//
+//    Retrofit.Builder builder =
+//            new Retrofit.Builder()
+//                    .baseUrl(API_BASE_URL)
+//                    .addConverterFactory(
+//                            GsonConverterFactory.create()
+//                    );
+
+    //RetroFitInicializador client =  retrofit.create(RetroFitInicializador.class);
+
+
 
 // para usar conforme uma classe model
 
 //    IUsuarioService usuarioService = retrofit.create(IUsuarioService.class);
+
+    public IUsuarioService createUsuarioService(){
+        return retrofit.create(IUsuarioService.class);
+    }
+
+
+    public IUsuarioRetrofit apiRetrofit(){
+        return retrofit.create(IUsuarioRetrofit.class);
+    }
 }

@@ -1,12 +1,17 @@
 package com.br.jobup.models;
 
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /**
  * Created by luizramos on 09/04/17.
  */
 
-public class Cpf  {
+public class Cpf  implements Serializable {
 
+    @SerializedName("NR")
     private String nr;
     public static final int MAX_LENGTH = 11;
 

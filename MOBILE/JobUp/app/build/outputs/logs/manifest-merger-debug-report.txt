@@ -35,8 +35,8 @@ MERGED from [com.android.support:design:24.0.0] /Users/luizramos/.android/build-
 MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/luizramos/.android/build-cache/62938e1874c5345c0a99bde0882a90ef4cda5fa1/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/luizramos/.android/build-cache/256a9b1966ef54c6633045d821510c3f81faf169/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/luizramos/.android/build-cache/44e9e8cf44cb93575029001bb0350d90fb17f4cc/output/AndroidManifest.xml:23:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/.android/build-cache/2609f5b00d2f43cef5abaa7ef4579bf01bccf0ed/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:14:9-41
 	android:supportsRtl
@@ -112,10 +112,8 @@ MERGED from [com.android.support:recyclerview-v7:24.0.0] /Users/luizramos/.andro
 MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/luizramos/.android/build-cache/62938e1874c5345c0a99bde0882a90ef4cda5fa1/output/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/luizramos/.android/build-cache/256a9b1966ef54c6633045d821510c3f81faf169/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/luizramos/.android/build-cache/44e9e8cf44cb93575029001bb0350d90fb17f4cc/output/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.databinding:adapters:1.3.1] /Users/luizramos/.android/build-cache/8b655163aab15bcab4ad5fbc229619b0123f914e/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.databinding:library:1.3.1] /Users/luizramos/.android/build-cache/ca030427a03a0305d9123b0e4e317ce6209ee55b/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v4:24.0.0] /Users/luizramos/.android/build-cache/2609f5b00d2f43cef5abaa7ef4579bf01bccf0ed/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:24.0.0] /Users/luizramos/.android/build-cache/62938e1874c5345c0a99bde0882a90ef4cda5fa1/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion

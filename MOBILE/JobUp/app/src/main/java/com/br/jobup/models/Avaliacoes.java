@@ -1,5 +1,6 @@
 package com.br.jobup.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
@@ -7,7 +8,7 @@ import java.util.Date;
  * Created by luizramos on 09/04/17.
  */
 
-public class Avaliacoes  {
+public class Avaliacoes  implements Serializable {
     private Date dataUltimaAvaliacao;
     private int nota;
     private String comentario;

@@ -1,11 +1,17 @@
 package com.br.jobup.models;
 
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
+import static com.br.jobup.R.id.email;
+
 /**
  * Created by luizramos on 09/04/17.
  */
 
-public class Contato {
+public class Contato implements Serializable {
 
     public static final String TAG = Contato.class.getName();
 
@@ -15,10 +21,13 @@ public class Contato {
         this.celular = celular;
         this.email = email;
     }
-
+    @SerializedName("ID_USUARIO")
     private String idUsuario;
+    @SerializedName("FIXO")
     private Telefone fixo;
+    @SerializedName("CELULAR")
     private Telefone celular;
+    @SerializedName("EMAIL")
     private Email email;
 
     public Contato() {

@@ -1,5 +1,8 @@
 package com.br.jobup.models;
 
+import com.br.jobup.util.Parsers;
+
+import java.io.Serializable;
 import java.util.Date;
 
 
@@ -7,7 +10,7 @@ import java.util.Date;
  * Created by luizramos on 09/04/17.
  */
 
-public class Formacao  {
+public class Formacao  implements Serializable {
     private String instituicao;
     private String nomeCurso;
     private int anoFormacao;
@@ -47,6 +50,9 @@ public class Formacao  {
 
     public void setDataAprovacao(Date dataAprovacao) {
         this.dataAprovacao = dataAprovacao;
+    }
+    public void setDataAprovacao(String dataAprovacao) {
+        this.dataAprovacao = Parsers.parseStringToDataAPI(dataAprovacao);
     }
 
     public boolean isAprovado() {
