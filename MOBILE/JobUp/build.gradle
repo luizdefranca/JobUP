@@ -25,3 +25,13 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task checkstyle(type: Checkstyle){
+    configFile file("${project.rootDir}/config/quality/checkstyle/checkstyle.xml")
+    configProperties.checkstyleSuppresionsPath =
+            file("${project.rootDir}/config/quality/checkstyle/suppressions.xml").absolutePath
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+    classpath = files()
+}

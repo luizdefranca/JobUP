@@ -35,7 +35,7 @@ public class ApresentacaoActivity extends AppCompatActivity {
         }, splashInterval);
 
 
-        //List<Usuario> usuarios = new UsuarioService().getAllUsuarios();
+        //List<Usuario> usuarios = new UsuarioService().getAll();
 
 
 

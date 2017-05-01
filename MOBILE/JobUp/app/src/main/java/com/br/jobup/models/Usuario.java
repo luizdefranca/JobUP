@@ -16,6 +16,8 @@ import java.util.List;
  * Created by luizramos on 09/04/17.
  */
 
+//@edu.umd.cs.findbugs.annotations.SuppressFBWarnings({"UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "SA_FIELD_SELF_ASSIGNMENT"})
+//@edu.umd.cs.findbugs.annotations.SuppressFBWarnings({"EI_EXPOSE_REP", "EI_EXPOSE_REP2", "EI_EXPOSE_REP", "EI_EXPOSE_REP2"})
 public class Usuario implements Serializable{
 
     public static final String TAG = Usuario.class.getName();

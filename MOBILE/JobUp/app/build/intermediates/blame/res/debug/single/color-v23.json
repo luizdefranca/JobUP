@@ -32,14 +32,6 @@
         "source": "/Users/luizramos/.android/build-cache/62938e1874c5345c0a99bde0882a90ef4cda5fa1/output/res/color-v23/abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
-        "source": "/Users/luizramos/.android/build-cache/e89d9580ab83b66af25780c027c36b2d81884ed2/output/res/color-v23/design_tint_password_toggle.xml"
-    },
-    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
         "source": "/Users/luizramos/.android/build-cache/62938e1874c5345c0a99bde0882a90ef4cda5fa1/output/res/color-v23/abc_tint_btn_checkable.xml"
     }

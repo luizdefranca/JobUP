@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,14 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.br.jobup.loaders.LoaderCall;
-import com.br.jobup.models.Usuario;
-import com.br.jobup.services.GetAllTask;
+import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
 
-import java.util.List;
-
-import static android.R.attr.data;
-import static com.br.jobup.R.id.fab;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -116,7 +108,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(DetalheServicoActivity);
 
         } else if (id == R.id.nav_send) {
-            mLoaderManager.initLoader(0, null, new LoaderCall(this));
+            mLoaderManager.initLoader(0, null, new LoaderUsuarioFullGetAll(this));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

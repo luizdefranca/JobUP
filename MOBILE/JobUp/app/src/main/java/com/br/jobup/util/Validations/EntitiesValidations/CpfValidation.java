@@ -9,6 +9,7 @@ import java.io.*;
 import static java.util.regex.Pattern.compile;
 
 
+//@edu.umd.cs.findbugs.annotations.SuppressFBWarnings({"ES_COMPARING_STRINGS_WITH_EQ", "DM_BOXED_PRIMITIVE_FOR_PARSING"})
 public class CpfValidation {
 
     static public boolean isACpfValid(String cpf){

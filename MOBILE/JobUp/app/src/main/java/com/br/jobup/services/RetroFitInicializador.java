@@ -1,6 +1,13 @@
 package com.br.jobup.services;
 
-import com.br.jobup.services.usuarioServices.interfaces.IUsuarioServiceAPI;
+import com.br.jobup.services.interfaces.IAprovarAPI;
+import com.br.jobup.services.interfaces.IAvaliacaoAPI;
+import com.br.jobup.services.interfaces.IClienteAPI;
+import com.br.jobup.services.interfaces.IContatoAPI;
+import com.br.jobup.services.interfaces.IDesativarAPI;
+import com.br.jobup.services.interfaces.IEnderecoAPI;
+import com.br.jobup.services.interfaces.IUsuarioAPI;
+import com.br.jobup.services.interfaces.IUsuarioFullAPI;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -50,10 +57,40 @@ public class RetroFitInicializador {
 
 // para usar conforme uma classe model
 
-//    IUsuarioServiceAPI usuarioService = retrofit.create(IUsuarioServiceAPI.class);
+//    IUsuarioAPI usuarioService = retrofit.create(IUsuarioAPI.class);
 
-    public IUsuarioServiceAPI createUsuarioService(){
-        return retrofit.create(IUsuarioServiceAPI.class);
+    public IUsuarioAPI createUsuarioAPI(){
+        return retrofit.create(IUsuarioAPI.class);
+    }
+
+    public IAprovarAPI createAprovarAPI(){
+        return retrofit.create(IAprovarAPI.class);
+    }
+    public IAvaliacaoAPI createAvaliacaoAPI(){
+        return retrofit.create(IAvaliacaoAPI.class);
+    }
+
+    public IClienteAPI createClienteAPI(){
+        return retrofit.create(IClienteAPI.class);
+    }
+
+    public IContatoAPI createContatoAPI(){
+        return retrofit.create(IContatoAPI.class);
+    }
+
+
+    public IDesativarAPI createDesativarAPI(){
+        return retrofit.create(IDesativarAPI.class);
+    }
+
+
+    public IEnderecoAPI createEnderecoAPI(){
+        return retrofit.create(IEnderecoAPI.class);
+    }
+
+
+    public IUsuarioFullAPI createUsuarioFullAPI(){
+        return retrofit.create(IUsuarioFullAPI.class);
     }
 
 

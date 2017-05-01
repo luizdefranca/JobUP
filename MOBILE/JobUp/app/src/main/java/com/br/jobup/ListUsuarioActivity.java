@@ -23,7 +23,7 @@ public class ListUsuarioActivity extends AppCompatActivity {
 //
 //    private void carregaListaUsuarios(){
 //        IUsuarioDao dao = new UsuarioDao(this);
-//        List<Usuario> usuarios = dao.getAllUsuarios();
+//        List<Usuario> usuarios = dao.getAll();
 //        dao.close();
 //        UsuarioAdapter adapter = new UsuarioAdapter(this, usuarios);
 //        mListUsuarios.setAdapter(adapter);
