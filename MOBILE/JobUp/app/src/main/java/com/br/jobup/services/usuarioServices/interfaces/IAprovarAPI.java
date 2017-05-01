@@ -19,7 +19,7 @@ import retrofit2.http.Query;
  * Created by luizramos on 30/04/17.
  */
 
-public interface IAprovar {
+public interface IAprovarAPI {
     public static final String PATH = "aprovar/";
     @GET(PATH)
     Call<Usuario> get(

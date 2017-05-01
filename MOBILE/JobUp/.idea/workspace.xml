@@ -11,7 +11,22 @@
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="051efebe-44ce-4d6e-9a44-1d699834fb59" name="Default" comment="" />
+    <list default="true" id="051efebe-44ce-4d6e-9a44-1d699834fb59" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAprovar.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAprovarAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAvaliacao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAvaliacaoAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/ICliente.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IClienteAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IContato.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IContatoAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IDesativar.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IDesativarAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEndereco.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEnderecoAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEspecialidade.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEspecialidadeAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IFormacao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IFormacaoAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioFullService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioFullServiceAPI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioServiceAPI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/helpers/CadastroUsuarioHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/helpers/CadastroUsuarioHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Usuario.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Usuario.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/ParserUsuario.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/ParserUsuario.java" />
+    </list>
     <ignored path="JobUp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,107 +58,7 @@
     <favorites_list name="JobUp" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IUsuarioService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="37" column="6" selection-start-line="34" selection-start-column="3" selection-end-line="37" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ICliente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/ICliente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="29" column="10" selection-start-line="25" selection-start-column="8" selection-end-line="29" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IUsuarioFullService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioFullService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="56" column="6" selection-start-line="29" selection-start-column="4" selection-end-line="56" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IEndereco.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEndereco.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#IEndereco#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IEspecialidade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEspecialidade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#IEspecialidade#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IFormacao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IFormacao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#IFormacao#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDesativar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IDesativar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1839,15 +1754,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioFullService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAprovar.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAvaliacao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/ICliente.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/Contato.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IContato.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IDesativa.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/ICliente.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IContato.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IDesativar.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEndereco.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEspecialidade.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IFormacao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAvaliacao.java" />
       </list>
     </option>
   </component>
@@ -2557,7 +2472,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.49353796" order="7" side_tool="false" content_ui="tabs" />
@@ -2574,7 +2489,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.50646204" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24878837" sideWeight="0.49156117" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24878837" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3003,8 +2918,8 @@
         <state relative-caret-position="195">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="e#1536#1537#0" expanded="true" />
-            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3059,48 +2974,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IContato.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#IContato#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAprovar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAvaliacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="30" column="51" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioServiceAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="37" column="6" selection-start-line="34" selection-start-column="3" selection-end-line="37" selection-end-column="6" />
@@ -3110,65 +2984,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IDesativar.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IFormacaoAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#IFormacaoAPI#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAprovarAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IAvaliacaoAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IClienteAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IContatoAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#IContatoAPI#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioFullServiceAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IDesativarAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/ICliente.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEnderecoAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="29" column="10" selection-start-line="25" selection-start-column="8" selection-end-line="29" selection-end-column="10" />
+        <state relative-caret-position="315">
+          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#IEnderecoAPI#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IUsuarioFullService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEspecialidadeAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="56" column="6" selection-start-line="29" selection-start-column="4" selection-end-line="56" selection-end-column="6" />
+        <state relative-caret-position="780">
+          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#IEspecialidadeAPI#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEndereco.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+        <state relative-caret-position="414">
+          <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#IEndereco#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IEspecialidade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#IEspecialidade#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioServices/interfaces/IFormacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#IFormacao#0" expanded="true" />
           </folding>
         </state>
       </provider>

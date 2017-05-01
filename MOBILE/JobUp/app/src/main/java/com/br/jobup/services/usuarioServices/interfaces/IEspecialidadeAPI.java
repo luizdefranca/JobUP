@@ -24,7 +24,7 @@ import retrofit2.http.Query;
  * Created by luizramos on 01/05/17.
  */
 
-public interface IEspecialidade {
+public interface IEspecialidadeAPI {
     public static final String PATH = "especialide/";
 
 
@@ -34,7 +34,7 @@ public interface IEspecialidade {
 
     @GET(PATH)
     Call<Especialidade> get(
-            @Query("ID_ESPECIALIDADE") int idEspecialidade
+            @Query("id") int idEspecialidade
     );
 
     @POST(PATH)
@@ -44,13 +44,13 @@ public interface IEspecialidade {
 
     @PUT(PATH+"{id}")
     Call<Especialidade> put(
-            @Path("ID_ESPECIALIDADE") int idEspecialidade,
+            @Path("id") int idEspecialidade,
             @Body Especialidade especialide
     );
 
     @DELETE(PATH+"{id}")
     Call<Especialidade> delete(
-            @Path("ID_ESPECIALIDADE") int idEspecialidade
+            @Path("id") int idEspecialidade
 
     );
 }

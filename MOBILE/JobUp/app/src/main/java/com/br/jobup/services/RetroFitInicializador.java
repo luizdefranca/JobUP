@@ -1,6 +1,6 @@
 package com.br.jobup.services;
 
-import com.br.jobup.services.usuarioServices.interfaces.IUsuarioService;
+import com.br.jobup.services.usuarioServices.interfaces.IUsuarioServiceAPI;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -50,10 +50,10 @@ public class RetroFitInicializador {
 
 // para usar conforme uma classe model
 
-//    IUsuarioService usuarioService = retrofit.create(IUsuarioService.class);
+//    IUsuarioServiceAPI usuarioService = retrofit.create(IUsuarioServiceAPI.class);
 
-    public IUsuarioService createUsuarioService(){
-        return retrofit.create(IUsuarioService.class);
+    public IUsuarioServiceAPI createUsuarioService(){
+        return retrofit.create(IUsuarioServiceAPI.class);
     }
 
 

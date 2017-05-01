@@ -2,7 +2,7 @@ package com.br.jobup.services.usuarioServices;
 
 import com.br.jobup.models.Usuario;
 import com.br.jobup.services.RetroFitInicializador;
-import com.br.jobup.services.usuarioServices.interfaces.IUsuarioService;
+import com.br.jobup.services.usuarioServices.interfaces.IUsuarioServiceAPI;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import retrofit2.Call;
 
 public class ParserUsuario {
     public static final String CONTROLE = "usuariofull";
-    Class  T = IUsuarioService.class;
+    Class  T = IUsuarioServiceAPI.class;
 
     static public Usuario getAll(){
         Call<List<Usuario>> usuarioCall = new RetroFitInicializador().createUsuarioService().getAllUsuarios();

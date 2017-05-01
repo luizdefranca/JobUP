@@ -19,13 +19,13 @@ import retrofit2.http.Path;
  * Created by luizramos on 01/05/17.
  */
 
-public interface ICliente {
+public interface IClienteAPI {
         public static final String PATH = "usuario/";
 
 
         @GET(PATH+"{id}")
         Call<List<Usuario>> getAllUsuarios(
-                @Path("ID_USUARIO") String idCliente
+                @Path("id") String idCliente
 
         );
 

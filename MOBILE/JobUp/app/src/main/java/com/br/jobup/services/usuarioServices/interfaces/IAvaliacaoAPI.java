@@ -27,21 +27,21 @@ import static android.R.attr.id;
  * Created by luizramos on 30/04/17.
  */
 
-public interface IAvaliacao {
+public interface IAvaliacaoAPI {
     public static final String PATH = "avaliacao/";
 
 
     @GET(PATH)
     Call<List<Avaliacoes>> getAll(
-            @Query("ID_USUARIO") String idUsuario,
-            @Query("ID_ESPECIALIDADE") int idEspecialidade
+            @Query("idUsuario") String idUsuario,
+            @Query("idEspecialidade") int idEspecialidade
     );
 
     @GET(PATH)
     Call<List<Avaliacoes>> get(
-            @Query("ID_USUARIO") String idUsuario,
-            @Query("ID_ESPECIALIDADE") int idEspecialidade,
-            @Query("ID_CLIENTE") int idCliente
+            @Query("idUsuario") String idUsuario,
+            @Query("idEspecialidade") int idEspecialidade,
+            @Query("idCliente") int idCliente
     );
 
     @POST(PATH)
@@ -51,16 +51,17 @@ public interface IAvaliacao {
 
     @PUT(PATH+"{id}")
     Call<Avaliacoes> put(
-            @Query("ID_USUARIO") String idUsuario,
-            @Query("ID_ESPECIALIDADE") int idEspecialidade,
-            @Query("ID_CLIENTE") String idCliente
+            @Query("idUsuario") String idUsuario,
+            @Query("idEspecialidade") int idEspecialidade,
+            @Query("idCliente") String idCliente,
+            @Body Avaliacoes avaliacao
     );
 
     @DELETE(PATH+"{id}")
     Call<Avaliacoes> delete(
-            @Query("ID_USUARIO") String idUsuario,
-            @Query("ID_ESPECIALIDADE") int idEspecialidade,
-            @Query("ID_CLIENTE") String idCliente
+            @Query("idUsuario") String idUsuario,
+            @Query("idEspecialidade") int idEspecialidade,
+            @Query("idCliente") String idCliente
 
     );
 }

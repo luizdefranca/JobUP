@@ -24,21 +24,21 @@ import retrofit2.http.Query;
  * Created by luizramos on 01/05/17.
  */
 
-public interface IFormacao {
+public interface IFormacaoAPI {
     public static final String PATH = "formacao/";
 
 
     @GET(PATH)
     Call<List<Formacao>> getAll(
-            @Query("ID_USUARIO") String idUsuario,
-            @Query("ID_ESPECIALIDADE") int idEspecialidade
+            @Query("idUsuario") String idUsuario,
+            @Query("idEspecialidade") int idEspecialidade
     );
 
     @GET(PATH)
     Call<Formacao> get(
-            @Query("ID_USUARIO") String idUsuario,
-            @Query("ID_ESPECIALIDADE") int idEspecialide,
-            @Query("ID_FORMACAO") int idFormacao
+            @Query("idUsuario") String idUsuario,
+            @Query("idEspecialidade") int idEspecialide,
+            @Query("idFormacao") int idFormacao
     );
 
     @POST(PATH)
@@ -48,14 +48,16 @@ public interface IFormacao {
 
     @PUT(PATH)
     Call<Formacao> put(
-            @Query("ID_USUARIO") String idUsuario,
-            @Query("ID_ESPECIALIDADE") int idEspecialide,
-            @Query("ID_FORMACAO") int idFormacao
+            @Query("idUsuario") String idUsuario,
+            @Query("idEspecialidade") int idEspecialide,
+            @Query("idFormacao") int idFormacao
     );
 
-    @DELETE(PATH + "{id}")
+    @DELETE(PATH)
     Call<Formacao> delete(
-            @Path("id") String id
+            @Query("idUsuario") String idUsuario,
+            @Query("idEspecialidade") int idEspecialide,
+            @Query("idFormacao") int idFormacao
 
     );
 }

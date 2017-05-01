@@ -20,13 +20,11 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-import static com.br.jobup.services.usuarioServices.interfaces.IUsuarioService.PATH;
-
 /**
  * Created by luizramos on 30/04/17.
  */
 
-public interface IUsuarioFullService {
+public interface IUsuarioFullServiceAPI {
     public static final String PATH = "usuariofull/";
 
 

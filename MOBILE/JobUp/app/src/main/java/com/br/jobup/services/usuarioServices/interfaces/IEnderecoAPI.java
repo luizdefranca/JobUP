@@ -25,7 +25,7 @@ import retrofit2.http.Query;
  * Created by luizramos on 01/05/17.
  */
 
-public interface IEndereco {
+public interface IEnderecoAPI {
     public static final String PATH = "endereco/";
 
 
@@ -33,7 +33,7 @@ public interface IEndereco {
 
     @GET(PATH)
     Call<Endereco> get(
-            @Query("ID_USUARIO") String idUsuario
+            @Query("id") String idUsuario
     );
 
     @POST(PATH)
@@ -43,13 +43,13 @@ public interface IEndereco {
 
     @PUT(PATH+"{id}")
     Call<Endereco> put(
-            @Path("ID_USUARIO") String idUsuario,
+            @Path("id") String idUsuario,
             @Body Endereco endereco
     );
 
     @DELETE(PATH+"{id}")
     Call<Endereco> delete(
-            @Path("ID_USUARIO") String idUsuario
+            @Path("id") String idUsuario
 
     );
 }

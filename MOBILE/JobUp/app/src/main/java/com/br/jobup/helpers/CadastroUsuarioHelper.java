@@ -99,7 +99,7 @@ public class CadastroUsuarioHelper {
                 campoCidade.getText().toString()
         ));
 
-        // public IContato(String idUsuario, Telefone fixo, Telefone celular, Email email)
+        // public IContatoAPI(String idUsuario, Telefone fixo, Telefone celular, Email email)
         usuario.setContato(new Contato(
                 usuario.getIdUsuario(),
                 new Telefone(campoFixo.getText().toString()),

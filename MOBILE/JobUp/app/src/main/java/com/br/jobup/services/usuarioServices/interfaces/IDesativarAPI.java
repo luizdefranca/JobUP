@@ -20,12 +20,12 @@ import retrofit2.http.Query;
  * Created by luizramos on 01/05/17.
  */
 
-public interface IDesativar {
+public interface IDesativarAPI {
     public static final String PATH = "desativar/";
 
     @GET(PATH + "{id}")
     Call<List<Usuario>> get(
-            @Path("ID_USUARIO") String idCliente
+            @Path("id") String idUsuario
 
     );
 

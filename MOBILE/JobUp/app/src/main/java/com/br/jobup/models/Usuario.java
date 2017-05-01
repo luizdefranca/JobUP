@@ -305,7 +305,7 @@ public class Usuario implements Serializable{
         Endereco endereco = new Endereco(id, enderecoUf,cep, logradouro, complemento, bairro, cidade);
 
         //Constroi um objeto contato
-        //public IContato(String idUsuario, Telefone fixo, Telefone celular, Email email)
+        //public IContatoAPI(String idUsuario, Telefone fixo, Telefone celular, Email email)
         //Constroi um objeto telefone_fixo
         Telefone fixo = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_FIXO)));
         Telefone celular = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_CELULAR)));
@@ -315,7 +315,7 @@ public class Usuario implements Serializable{
         //Constroi um objeto usuario
         //  public Usuario(String nome, Cpf cpf, Rg rg, Date dataNascimento, Date dataInclusao,
         //  Date dataAlteracao, Date dataAprovacao, Date dataOrdenacao, boolean aprovado,
-        //  Endereco endereco, IContato contato,
+        //  Endereco endereco, IContatoAPI contato,
         //  List<PerfilProfisional> perfisProfissionais)
 
         List<PerfilProfisional> perfilProfisionals = null;

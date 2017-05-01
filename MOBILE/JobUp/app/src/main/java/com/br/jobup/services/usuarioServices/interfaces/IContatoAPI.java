@@ -24,7 +24,7 @@ import retrofit2.http.Query;
  * Created by luizramos on 01/05/17.
  */
 
-public interface IContato {
+public interface IContatoAPI {
     public static final String PATH = "contato/";
 
 
@@ -34,7 +34,7 @@ public interface IContato {
 
     @GET(PATH)
     Call<Contato> get(
-            @Query("ID_USUARIO") String idUsuario
+            @Query("id") String idUsuario
     );
 
     @POST(PATH)
@@ -44,14 +44,14 @@ public interface IContato {
 
     @PUT(PATH+"{id}")
     Call<Contato> put(
-            @Path("ID_USUARIO") String idUsuario,
+            @Path("id") String idUsuario,
             @Body Contato contato
 
     );
 
     @DELETE(PATH+"{id}")
     Call<Contato> delete(
-            @Path("ID_USUARIO") String id
+            @Path("id") String idUsuario
 
     );
 }

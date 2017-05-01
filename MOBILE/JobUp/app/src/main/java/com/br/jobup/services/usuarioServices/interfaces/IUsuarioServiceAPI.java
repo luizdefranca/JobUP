@@ -24,7 +24,7 @@ import retrofit2.http.Query;
  * Created by luizramos on 27/04/17.
  */
 
-public interface IUsuarioService {
+public interface IUsuarioServiceAPI {
     public static final String PATH = "usuario/";
 
 
