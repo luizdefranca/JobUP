@@ -29,7 +29,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_ValidarInsertUsuario()
         {
-            Guid id = new Guid();
+            Guid id = Guid.NewGuid();
 
             //gera uma nova classe para testes
             var domain = new USUARIO(id, "USUARIO TESTE", new CPF("50869388720"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
@@ -64,7 +64,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioNomeFaltando()
         {
-            var domain = new USUARIO(new Guid(), "", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone(""), new Email("umteste2@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -80,7 +80,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioCPFFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF(""), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF(""), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste3@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -96,7 +96,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioRGFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste4@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -112,7 +112,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioTelefoneFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone(""), new Telefone("994059945"), new Email("umteste5@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -128,7 +128,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioCelularFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone(""), new Email("umteste6@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -144,7 +144,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioEmailFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email(""));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -160,7 +160,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioCEPFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste7@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -176,7 +176,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioRuaFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste8@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "", "", "Várzea", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -192,7 +192,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioBairroFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste2@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Bairro", "Recife");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -208,7 +208,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioCidadeFaltando()
         {
-            var domain = new USUARIO(new Guid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
+            var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste2@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "50741970", "Rua Azeredo Coutinho", "", "Várzea", "");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -224,7 +224,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioTodosDadosFaltando()
         {
-            var domain = new USUARIO(new Guid(), "", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
+            var domain = new USUARIO(Guid.NewGuid(), "", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
             domain.AdicionarContato(new Telefone(""), new Telefone(""), new Email(""));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "", "", "", "", "");
             var model = Mapper.Map<UsuarioViewModel>(domain);
@@ -240,7 +240,7 @@ namespace JOB.WEB.Tests.Controllers
         [Test]
         public async Task Integration_InsertUsuarioDadosErrados()
         {
-            var domain = new USUARIO(new Guid(), "USU4RI0 T3ST3", new CPF("19865260abc"), new RG(DATA.Enum.EnumUF.PE, "abc1589"), DateTime.Now.AddYears(-50));
+            var domain = new USUARIO(Guid.NewGuid(), "USU4RI0 T3ST3", new CPF("19865260abc"), new RG(DATA.Enum.EnumUF.PE, "abc1589"), DateTime.Now.AddYears(-50));
             domain.AdicionarContato(new Telefone("3379tyui"), new Telefone("994059sed"), new Email("umteste3@gmail.com"));
             domain.AdicionarEndereco(DATA.Enum.EnumUF.PE, "5074zxsc", "Rua Azeredo Coutinho", "", "Várzea", "Recife");
 

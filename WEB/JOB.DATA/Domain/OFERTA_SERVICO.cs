@@ -33,7 +33,7 @@ namespace JOB.DATA.Domain
         public Guid ID_SERVICO { get; private set; }
         public Guid ID_USUARIO { get; private set; }
         public DateTime DT_OFERTA { get; private set; }
-        public bool ACEITA { get; private set; }
+        public bool? ACEITA { get; private set; }
 
         public SERVICO SERVICO { get; private set; }
         public USUARIO USUARIO { get; private set; }

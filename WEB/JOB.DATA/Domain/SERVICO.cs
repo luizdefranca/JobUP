@@ -13,11 +13,11 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
-        public SERVICO(Guid ID_USUARIO, int ID_ESPECIALIDADE, int? ID_SUB_ESPECIALIDADE, bool PUBLICO, string DS_TITULO, string DS_OBSERVACOES, double? VL_SUGERIDO)
+        public SERVICO(Guid ID_USUARIO, int ID_ESPECIALIDADE, int? ID_SUB_ESPECIALIDADE, bool PUBLICO, string DS_TITULO, string DS_OBSERVACOES, double? VL_SUGERIDO, EnumTempoServico TEMPO_SERVICO)
         {
             this.InicializaVariaveis();
 
-            this.ID_SERVICO = new Guid();
+            this.ID_SERVICO = Guid.NewGuid();
             this.DT_CADASTRO = DateTime.Now;
 
             this.ID_USUARIO = ID_USUARIO;
@@ -27,6 +27,15 @@ namespace JOB.DATA.Domain
             this.DS_TITULO = DS_TITULO;
             this.DS_OBSERVACOES = DS_OBSERVACOES;
             this.VL_SUGERIDO = VL_SUGERIDO;
+            this.TEMPO_SERVICO = TEMPO_SERVICO;
+        }
+
+        public void AtualizaDados(string DS_TITULO, string DS_OBSERVACOES, double? VL_SUGERIDO, EnumTempoServico TEMPO_SERVICO)
+        {
+            this.DS_TITULO = DS_TITULO;
+            this.DS_OBSERVACOES = DS_OBSERVACOES;
+            this.VL_SUGERIDO = VL_SUGERIDO;
+            this.TEMPO_SERVICO = TEMPO_SERVICO;
         }
 
         private void InicializaVariaveis()

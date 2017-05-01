@@ -20,19 +20,19 @@ namespace JOB.WEB.Controllers
         {
             var domain = ctx.Servico.ToList();
 
-            var lstModel = Mapper.Map<List<ServicoViewModel>>(domain);
+            var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
 
             foreach (var model in lstModel)
             {
                 model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
-                model.ESPECIALIDADES = ctx.Especialidade.ToList();
+                //model.ESPECIALIDADES = ctx.Especialidade.ToList();
                 model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE)
                     .DESCRICAO;
 
                 if (model.ID_SUB_ESPECIALIDADE != null)
                 {
                     model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade
-                        .FirstOrDefault(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE)
+                        .First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE)
                         .DESCRICAO;
                 }
             }
@@ -49,14 +49,14 @@ namespace JOB.WEB.Controllers
         // GET: Servico/Create
         public ActionResult Create()
         {
-            var model = new ServicoViewModel();
+            var model = new ServicoViewModel_full();
             model.ESPECIALIDADES = ctx.Especialidade.ToList();
             return View(model);
         }
 
         // POST: Servico/Create
         [HttpPost]
-        public ActionResult Create(ServicoViewModel obj)
+        public ActionResult Create(ServicoViewModel_full obj)
         {
             if (!ModelState.IsValid) return View(obj);
 
@@ -64,7 +64,7 @@ namespace JOB.WEB.Controllers
             {
                 Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
 
-                var newobj = new SERVICO(idUsuario, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, obj.PUBLICO, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO);
+                var newobj = new SERVICO(idUsuario, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, obj.PUBLICO, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
 
                 ctx.Servico.Add(newobj);
                 ctx.SaveChanges();

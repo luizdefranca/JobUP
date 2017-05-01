@@ -215,6 +215,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\EmailHelper.cs" />
+    <Compile Include="Helper\EnumHelper.cs" />
     <Compile Include="JsonNet.PrivateSettersContractResolvers\PrivateSettersContractResolvers.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
@@ -222,6 +223,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MenuViewModel.cs" />
     <Compile Include="Models\JobViewModel.cs" />
+    <Compile Include="Models\PropostaViewModel.cs" />
+    <Compile Include="Models\OfertaViewModel.cs" />
     <Compile Include="Models\ProfissionalViewModel.cs" />
     <Compile Include="Models\ServicoViewModel.cs" />
     <Compile Include="Models\UsuarioViewModel.cs" />
