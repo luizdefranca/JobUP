@@ -123,5 +123,7 @@ namespace JOB.DATA.Domain
         public CONTATO CONTATO { get; private set; }
 
         public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; private set; }
+        public ICollection<OFERTA_SERVICO> OFERTAS_SERVICO { get; private set; }
+        public ICollection<PROPOSTA_SERVICO> PROPOSTAS_SERVICO { get; private set; }
     }
 }

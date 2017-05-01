@@ -104,9 +104,11 @@
     <Compile Include="Controllers\DesativarController.cs" />
     <Compile Include="Controllers\EnderecoController.cs" />
     <Compile Include="Controllers\AvaliacaoController.cs" />
+    <Compile Include="Controllers\SubEspecialidadeController.cs" />
     <Compile Include="Controllers\FormacaoController.cs" />
     <Compile Include="Controllers\PerfilProfissionalController.cs" />
     <Compile Include="Controllers\EspecialidadeController.cs" />
+    <Compile Include="Controllers\ServicoPublicoController.cs" />
     <Compile Include="Controllers\UsuarioFullController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">

@@ -15,7 +15,11 @@ namespace JOB.DATA.Config
             Property(p => p.EXIGIR_COMPROVACAO)
                 .IsRequired();
 
-            HasMany(n => n.PERFIL_PROFISSIONAL)
+            HasMany(n => n.PERFIS_PROFISSIONAIS)
+                .WithRequired(n => n.ESPECIALIDADE)
+                .HasForeignKey(n => n.ID_ESPECIALIDADE);
+
+            HasMany(n => n.SUB_ESPECIALIDADES)
                 .WithRequired(n => n.ESPECIALIDADE)
                 .HasForeignKey(n => n.ID_ESPECIALIDADE);
         }

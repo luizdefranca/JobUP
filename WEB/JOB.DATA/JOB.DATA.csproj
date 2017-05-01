@@ -52,7 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicoSeed.cs" />
-    <Compile Include="Config\JobConfig.cs" />
+    <Compile Include="Config\SubEspecialidadeConfig.cs" />
+    <Compile Include="Config\PropostaConfig.cs" />
+    <Compile Include="Config\OfertaConfig.cs" />
+    <Compile Include="Config\ServicoConfig.cs" />
     <Compile Include="Config\FormacaoConfig.cs" />
     <Compile Include="Config\ContatoConfig.cs" />
     <Compile Include="Config\EnderecoConfig.cs" />
@@ -64,13 +67,18 @@
     <Compile Include="Domain\CONTATO.cs" />
     <Compile Include="Domain\ENDERECO.cs" />
     <Compile Include="Domain\EntityBase.cs" />
+    <Compile Include="Domain\SUB_ESPECIALIDADE.cs" />
     <Compile Include="Domain\ESPECIALIDADE.cs" />
     <Compile Include="Domain\FORMACAO.cs" />
-    <Compile Include="Domain\JOB.cs" />
+    <Compile Include="Domain\OFERTA_SERVICO.cs" />
     <Compile Include="Domain\PERFIL_PROFISSIONAL.cs" />
+    <Compile Include="Domain\PROPOSTA_SERVICO.cs" />
+    <Compile Include="Domain\SERVICO.cs" />
     <Compile Include="Domain\USUARIO.cs" />
+    <Compile Include="Enum\EnumDuracaoServico.cs" />
     <Compile Include="Enum\EnumEstadoCivil.cs" />
     <Compile Include="Enum\EnumSexo.cs" />
+    <Compile Include="Enum\EnumTempoServico.cs" />
     <Compile Include="Enum\EnumUF.cs" />
     <Compile Include="Migrations\201704110256369_inicial.cs" />
     <Compile Include="Migrations\201704110256369_inicial.Designer.cs">
@@ -91,6 +99,38 @@
     <Compile Include="Migrations\201704212341501_job.cs" />
     <Compile Include="Migrations\201704212341501_job.Designer.cs">
       <DependentUpon>201704212341501_job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704301628270_servico.cs" />
+    <Compile Include="Migrations\201704301628270_servico.Designer.cs">
+      <DependentUpon>201704301628270_servico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705010010562_servico_plus.cs" />
+    <Compile Include="Migrations\201705010010562_servico_plus.Designer.cs">
+      <DependentUpon>201705010010562_servico_plus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705010324000_servico_plus_dois.cs" />
+    <Compile Include="Migrations\201705010324000_servico_plus_dois.Designer.cs">
+      <DependentUpon>201705010324000_servico_plus_dois.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705010333586_servico_plus_dois1.cs" />
+    <Compile Include="Migrations\201705010333586_servico_plus_dois1.Designer.cs">
+      <DependentUpon>201705010333586_servico_plus_dois1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705010354414_servico_plus_dois_1.cs" />
+    <Compile Include="Migrations\201705010354414_servico_plus_dois_1.Designer.cs">
+      <DependentUpon>201705010354414_servico_plus_dois_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705011206140_servico_plus_dois_2.cs" />
+    <Compile Include="Migrations\201705011206140_servico_plus_dois_2.Designer.cs">
+      <DependentUpon>201705011206140_servico_plus_dois_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705011216162_servico_plus_dois_3.cs" />
+    <Compile Include="Migrations\201705011216162_servico_plus_dois_3.Designer.cs">
+      <DependentUpon>201705011216162_servico_plus_dois_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705011442171_servico_plus_dois_4.cs" />
+    <Compile Include="Migrations\201705011442171_servico_plus_dois_4.Designer.cs">
+      <DependentUpon>201705011442171_servico_plus_dois_4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,6 +165,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704212341501_job.resx">
       <DependentUpon>201704212341501_job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704301628270_servico.resx">
+      <DependentUpon>201704301628270_servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705010010562_servico_plus.resx">
+      <DependentUpon>201705010010562_servico_plus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705010324000_servico_plus_dois.resx">
+      <DependentUpon>201705010324000_servico_plus_dois.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705010333586_servico_plus_dois1.resx">
+      <DependentUpon>201705010333586_servico_plus_dois1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705010354414_servico_plus_dois_1.resx">
+      <DependentUpon>201705010354414_servico_plus_dois_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705011206140_servico_plus_dois_2.resx">
+      <DependentUpon>201705011206140_servico_plus_dois_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705011216162_servico_plus_dois_3.resx">
+      <DependentUpon>201705011216162_servico_plus_dois_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705011442171_servico_plus_dois_4.resx">
+      <DependentUpon>201705011442171_servico_plus_dois_4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -58,5 +58,6 @@ namespace JOB.DATA.Domain
 
         public ICollection<AVALIACAO> AVALIACOES { get; private set; }
         public ICollection<FORMACAO> FORMACOES { get; private set; }
+        public ICollection<SERVICO> SERVICOS { get; private set; }
     }
 }

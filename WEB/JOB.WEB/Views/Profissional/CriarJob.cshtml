@@ -6,17 +6,16 @@
 
 <h2>Criar Job</h2>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.ID_USUARIO_PROFISSIONAL)
 
     <div class="form-horizontal">
-        
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-       
+
         <div class="form-group">
             @Html.LabelFor(model => model.DT_JOB, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -48,8 +47,6 @@
                 @Html.ValidationMessageFor(model => model.VALOR_SUGERIDO, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
