@@ -2,15 +2,15 @@
 
 @{
     ViewBag.Title = "Usuários";
+    ViewBag.SubTitle = "Lista";
 }
 
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Usuários</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-12">
+@section Menu {
+    @Scripts.Render("~/Scripts/Administrador/Usuarios/menu")
+}
+
+<div class="box">
+    <div class="box-body">
         <table id="tblDados" class="table table-condensed table-responsive table-hover">
             <thead>
                 <tr>
@@ -29,13 +29,13 @@
                     <th>
                         @Html.DisplayNameFor(model => model.DT_NASCIMENTO)
                     </th>
-                    <th>
+                    <th class="text-center">
                         @Html.DisplayNameFor(model => model.APROVADO)
                     </th>
-                    <th>
+                    <th class="text-center">
                         @Html.DisplayNameFor(model => model.ATIVO)
                     </th>
-                    <th>
+                    <th class="text-center">
                         @Html.DisplayNameFor(model => model.BLOQUEADO)
                     </th>
                     <th></th>
@@ -60,31 +60,31 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.DT_NASCIMENTO)
                         </td>
-                        <td>
+                        <td class="text-center">
                             @Html.DisplayFor(modelItem => item.APROVADO)
                         </td>
-                        <td>
+                        <td class="text-center">
                             @Html.DisplayFor(modelItem => item.ATIVO)
                         </td>
-                        <td>
+                        <td class="text-center">
                             @Html.DisplayFor(modelItem => item.BLOQUEADO)
                         </td>
-                        <td>
+                        <td class="text-center">
                             @if (!item.APROVADO)
                             {
-                                @Html.ActionLink(" ", "DtAprovar", new { id = item.ID_USUARIO }, new { @class = "fa fa-check-square-o", @title = "Aprovar" })
-                            }&nbsp;
-                            @if (!item.ATIVO)
+                                @Html.ActionLink(" ", "DtAprovar", new { id = item.ID_USUARIO }, new { @class = "btn btn-success btn-xs fa fa-check", @title = "Aprovar" })
+                            }
+                            @*@if (!item.ATIVO)
                             {
-                                @Html.ActionLink(" ", "Ativar", new { id = item.ID_USUARIO }, new { @class = "fa fa-user-plus", @title = "Ativar" })
-                            }&nbsp;
+                                @Html.ActionLink(" ", "Ativar", new { id = item.ID_USUARIO }, new { @class = "btn btn-success btn-xs fa fa-user-plus", @title = "Ativar" })
+                            }*@
                             @if (!item.BLOQUEADO)
                             {
-                                @Html.ActionLink(" ", "Bloquear", new { id = item.ID_USUARIO }, new { @class = "fa fa-lock", @title = "Bloquear" })
+                                @Html.ActionLink(" ", "Bloquear", new { id = item.ID_USUARIO }, new { @class = "btn btn-danger btn-xs fa fa-lock", @title = "Bloquear" })
                             }
                             else
                             {
-                                @Html.ActionLink(" ", "Desbloquear", new { id = item.ID_USUARIO }, new { @class = "fa fa-unlock", @title = "Desbloquear" })
+                                @Html.ActionLink(" ", "Desbloquear", new { id = item.ID_USUARIO }, new { @class = "btn btn-default btn-xs fa fa-unlock", @title = "Desbloquear" })
                             }
                         </td>
                     </tr>

@@ -15,6 +15,7 @@ namespace JOB.DATA.Domain
         {
             this.InicializaVariaveis();
 
+            this.DT_OFERTA = DateTime.Now;
             this.ID_SERVICO = ID_SERVICO;
             this.ID_USUARIO = ID_USUARIO;
         }

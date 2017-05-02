@@ -1,0 +1,92 @@
+﻿@model JOB.WEB.Models.ServicoViewModel_full
+
+@{
+    ViewBag.Title = "Serviço";
+    ViewBag.SubTitle = "Novo";
+}
+
+@section Menu {
+    @Scripts.Render("~/Scripts/Global/Profissionais/menu")
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.ID_SERVICO)
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Crie aqui uma nova oferta de serviço para este profissional</h3>
+            @*<div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>*@
+        </div>
+        <div class="box-body">
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ESPECIALIDADES, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        @Html.DropDownListFor(m => m.ID_ESPECIALIDADE,
+                            new SelectList(Model.ESPECIALIDADES, "ID_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ESPECIALIDADES, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SUB_ESPECIALIDADES, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        @Html.DropDownListFor(m => m.ID_SUB_ESPECIALIDADE,
+                            new SelectList(Model.SUB_ESPECIALIDADES, "ID_SUB_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.SUB_ESPECIALIDADES, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TEMPO_SERVICO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        @Html.EnumDropDownListFor(model => model.TEMPO_SERVICO, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.SUB_ESPECIALIDADES, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DS_TITULO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DS_TITULO, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DS_TITULO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DS_OBSERVACOES, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DS_OBSERVACOES, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DS_OBSERVACOES, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.VL_SUGERIDO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.VL_SUGERIDO, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.VL_SUGERIDO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <input type="submit" value="Salvar" class="btn btn-success" />
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+}

@@ -13,13 +13,13 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
-        public SERVICO(Guid ID_USUARIO, int ID_ESPECIALIDADE, int? ID_SUB_ESPECIALIDADE, bool PUBLICO, string DS_TITULO, string DS_OBSERVACOES, double? VL_SUGERIDO, EnumTempoServico TEMPO_SERVICO)
+        public SERVICO(Guid ID_SERVICO, Guid ID_USUARIO, int ID_ESPECIALIDADE, int? ID_SUB_ESPECIALIDADE, bool PUBLICO, string DS_TITULO, string DS_OBSERVACOES, double? VL_SUGERIDO, EnumTempoServico TEMPO_SERVICO)
         {
             this.InicializaVariaveis();
 
-            this.ID_SERVICO = Guid.NewGuid();
             this.DT_CADASTRO = DateTime.Now;
 
+            this.ID_SERVICO = ID_SERVICO;
             this.ID_USUARIO = ID_USUARIO;
             this.ID_ESPECIALIDADE = ID_ESPECIALIDADE;
             this.ID_SUB_ESPECIALIDADE = ID_SUB_ESPECIALIDADE;

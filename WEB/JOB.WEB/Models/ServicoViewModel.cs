@@ -31,10 +31,6 @@ namespace JOB.WEB.Models
         public DateTime DT_CADASTRO { get; set; }
 
         [Required]
-        [Display(Name = "Público")]
-        public bool PUBLICO { get; set; }
-
-        [Required]
         [Display(Name = "Título")]
         public string DS_TITULO { get; set; }
 
@@ -90,17 +86,15 @@ namespace JOB.WEB.Models
         public DateTime DT_CADASTRO { get; set; }
 
         [Required]
-        [Display(Name = "Público")]
-        public bool PUBLICO { get; set; }
-
-        [Required]
         [Display(Name = "Título")]
         public string DS_TITULO { get; set; }
 
         [Required]
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Observações")]
         public string DS_OBSERVACOES { get; set; }
 
+        [DataType(DataType.Currency)]
         [Display(Name = "Valor Sugerido")]
         public double? VL_SUGERIDO { get; set; }
 

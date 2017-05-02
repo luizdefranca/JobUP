@@ -205,7 +205,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
     <Compile Include="Controllers\ProfissionalController.cs" />
-    <Compile Include="Controllers\ServicoController.cs" />
+    <Compile Include="Controllers\ServicoPrivadoController.cs" />
+    <Compile Include="Controllers\ServicoPublicoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="CustomFilters\ClearModelErrorsAttribute.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
@@ -544,6 +545,9 @@
     <Content Include="google9f37a4c294fa7690.html" />
     <Content Include="icone_jobup.png" />
     <Content Include="JobUpicon.ico" />
+    <Content Include="Scripts\Account\Login.js" />
+    <Content Include="Scripts\Account\Register.js" />
+    <Content Include="Scripts\Administrador\usuarios-menu.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -607,6 +611,8 @@
     <Content Include="Scripts\globalize\plural.js" />
     <Content Include="Scripts\globalize\relative-time.js" />
     <Content Include="Scripts\globalize\unit.js" />
+    <Content Include="Scripts\Global\servicos-menu.js" />
+    <Content Include="Scripts\Global\profissionais-menu.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -668,8 +674,10 @@
     <Content Include="Views\Profissional\IndexPessoal.cshtml" />
     <Content Include="Views\Job\DetailsJobCliente.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Servico\Index.cshtml" />
-    <Content Include="Views\Servico\Create.cshtml" />
+    <Content Include="Views\ServicoPublico\Index.cshtml" />
+    <Content Include="Views\ServicoPublico\Create.cshtml" />
+    <Content Include="Views\ServicoPrivado\Create.cshtml" />
+    <Content Include="Views\ServicoPublico\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">
