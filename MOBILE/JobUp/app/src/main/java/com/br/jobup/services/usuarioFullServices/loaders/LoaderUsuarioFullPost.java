@@ -27,13 +27,15 @@ import java.util.List;
 public class LoaderUsuarioFullPost implements LoaderManager.LoaderCallbacks<Usuario>{
     public static final String TAG = "LCFR/ " + LoaderUsuarioFullPost.class.getSimpleName();
     private final Context context;
+    private final Usuario usuario;
 
     public LoaderUsuarioFullPost(Context context, Usuario usuario){
         this.context = context;
+        this.usuario = usuario;
     }
     @Override
     public Loader<Usuario> onCreateLoader(int id, Bundle args) {
-        return new TaskUsuarioFullPost(context);
+        return new TaskUsuarioFullPost(context, usuario);
     }
 
     @Override

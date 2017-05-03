@@ -14,6 +14,7 @@ import android.support.v4.content.Loader;
 import android.util.Log;
 
 import com.br.jobup.models.Usuario;
+import com.br.jobup.services.usuarioFullServices.tasks.TaskUsuarioFullGet;
 import com.br.jobup.services.usuarioFullServices.tasks.TaskUsuarioFullGetAll;
 
 import java.util.List;
@@ -31,7 +32,7 @@ public class LoaderUsuarioFullGet implements LoaderManager.LoaderCallbacks<Usuar
     }
     @Override
     public Loader<Usuario> onCreateLoader(int id, Bundle args) {
-        return new TaskUsuarioFullGetAll(context);
+        return new TaskUsuarioFullGet(context);
     }
 
     @Override

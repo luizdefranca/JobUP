@@ -61,7 +61,7 @@ public class ParserUsuarioFull {
 
     }
 
-    public Usuario post(Usuario usuario) {
+    public void post(Usuario usuario) {
         try {
             new RetroFitInicializador()
                     .createUsuarioAPI()
@@ -73,6 +73,6 @@ public class ParserUsuarioFull {
             Log.e(TAG, "getAll: Erro Baixando usuarios" , e );
         }
 
-        return usuario;
+
     }
 }

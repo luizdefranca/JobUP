@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
+import com.br.jobup.models.Usuario;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
 
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.List;
 
 
 
-    public class TaskUsuarioFullGetAll<Usuario> extends AsyncTaskLoader<List<Usuario>> {
+    public class TaskUsuarioFullGetAll extends AsyncTaskLoader<List<Usuario>> {
         public final String TAG = TaskUsuarioFullGetAll.class.getSimpleName();
         List<Usuario> mUsuarios;
 

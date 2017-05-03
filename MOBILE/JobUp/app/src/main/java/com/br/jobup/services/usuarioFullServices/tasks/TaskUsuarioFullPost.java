@@ -24,8 +24,9 @@ public class TaskUsuarioFullPost extends AsyncTaskLoader<Usuario> {
     Usuario mUsuario;
 
 
-    public TaskUsuarioFullPost(Context context) {
+    public TaskUsuarioFullPost(Context context, Usuario usuario) {
         super(context);
+        this.mUsuario = usuario;
     }
 
     @Override
@@ -46,7 +47,7 @@ public class TaskUsuarioFullPost extends AsyncTaskLoader<Usuario> {
 
         ParserUsuarioFull parser = new ParserUsuarioFull();
 
-        mUsuario = parser.post(Usuario usuario);
+        parser.post(mUsuario);
         return mUsuario;
     }
 }
