@@ -19,9 +19,7 @@ namespace JOB.WEB
             bundles.IgnoreList.Clear();
 
             RegisterAdministrador(bundles);
-            RegisterHospital(bundles);
-            RegisterMedico(bundles);
-            RegisterPaciente(bundles);
+            RegisterGlobal(bundles);
 
             RegisterLayout(bundles);
             RegisterShared(bundles);
@@ -30,76 +28,19 @@ namespace JOB.WEB
             BundleTable.EnableOptimizations = true;
         }
 
-        private static void RegisterPaciente(BundleCollection bundles)
-        {
-            bundles.Add(new ScriptBundle("~/Scripts/Paciente/dashboard/menu").Include(
-                "~/Scripts/Paciente/dashboard-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Paciente/cirurgia/menu").Include(
-                "~/Scripts/Paciente/cirurgia-menu.js"));
-        }
-
-        private static void RegisterMedico(BundleCollection bundles)
-        {
-            bundles.Add(new ScriptBundle("~/Scripts/Medico/dashboard/menu").Include(
-                "~/Scripts/Medico/dashboard-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Medico/agendamento/menu").Include(
-                "~/Scripts/Medico/agendamento-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Medico/convenio/menu").Include(
-               "~/Scripts/Medico/convenio-menu.js"));
-        }
-
-        private static void RegisterHospital(BundleCollection bundles)
-        {
-            bundles.Add(new ScriptBundle("~/Scripts/Hospital/dashboard/menu").Include(
-                "~/Scripts/Hospital/dashboard-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Hospital/agendamento/menu").Include(
-                "~/Scripts/Hospital/agendamento-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Hospital/medico/menu").Include(
-                "~/Scripts/Hospital/medico-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Hospital/bloco/menu").Include(
-                "~/Scripts/Hospital/bloco-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Hospital/convenio/menu").Include(
-                "~/Scripts/Hospital/convenio-menu.js"));
-        }
-
         private static void RegisterAdministrador(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/dashboard/menu").Include(
-                "~/Scripts/Administrador/dashboard-menu.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/Administrador/usuarios/menu").Include(
+                "~/Scripts/Administrador/usuarios-menu.js"));
+        }
 
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/cid/menu").Include(
-                "~/Scripts/Administrador/cid-menu.js"));
+        private static void RegisterGlobal(BundleCollection bundles)
+        {
+            bundles.Add(new ScriptBundle("~/Scripts/Global/Profissionais/menu").Include(
+                "~/Scripts/Global/profissionais-menu.js"));
 
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/convenio/menu").Include(
-                "~/Scripts/Administrador/convenio-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/agendamento/menu").Include(
-                "~/Scripts/Administrador/agendamento-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/hospital/menu").Include(
-                "~/Scripts/Administrador/hospital-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/medico/menu").Include(
-                "~/Scripts/Administrador/medico-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/opme/menu").Include(
-                "~/Scripts/Administrador/opme-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/paciente/menu").Include(
-                "~/Scripts/Administrador/paciente-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/procedimento/menu").Include(
-                "~/Scripts/Administrador/procedimento-menu.js"));
-
-            bundles.Add(new ScriptBundle("~/Scripts/Administrador/unidade/menu").Include(
-                "~/Scripts/Administrador/unidade-menu.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/Global/Servicos/menu").Include(
+                "~/Scripts/Global/servicos-menu.js"));
         }
 
         private static void RegisterAccount(BundleCollection bundles)

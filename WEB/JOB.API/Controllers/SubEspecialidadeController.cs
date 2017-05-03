@@ -1,12 +1,7 @@
 ﻿using JOB.DATA;
-using JOB.DATA.Domain;
-using JsonNet.PrivateSettersContractResolvers;
-using Newtonsoft.Json;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace JOB.API.Controllers
@@ -19,6 +14,13 @@ namespace JOB.API.Controllers
         public HttpResponseMessage Get(int idEspecialidade)
         {
             var result = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade).ToList();
+
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        public HttpResponseMessage Get(int idEspecialidade, int id)
+        {
+            var result = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade & w.ID_SUB_ESPECIALIDADE == id).ToList();
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }

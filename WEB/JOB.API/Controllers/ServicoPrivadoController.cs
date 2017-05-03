@@ -1,7 +1,9 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using JOB.DATA;
 using JOB.WEB.Models;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -10,13 +12,14 @@ using JOB.WEB.Helper;
 
 namespace JOB.API.Controllers
 {
-    public class ServicoPublicoController : ApiController
+    public class ServicoPrivadoController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
-        public HttpResponseMessage Get()
+        public HttpResponseMessage Get(Guid idUsuarioProfissional)
         {
-            var lstDominio = ctx.Servico.Where(w => w.PUBLICO).ToList();
+            //recupera apenas os serviços privados que tenha uma oferta para um usuário profissional especifico
+            var lstDominio = ctx.Servico.Include(i => i.OFERTAS).Where(w => w.PUBLICO == false & w.OFERTAS.Any(a => a.ID_USUARIO == idUsuarioProfissional)).ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(lstDominio);
 

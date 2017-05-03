@@ -36,7 +36,7 @@ namespace JOB.DATA.Domain
         public Guid ID_SERVICO { get; private set; }
         public Guid ID_USUARIO { get; private set; }
         public DateTime DT_PROPOSTA { get; private set; }
-        public EnumDuracaoServico DURACAO_SERVICO { get; set; }
+        public EnumDuracaoServico DURACAO_SERVICO { get; private set; }
         public double VL_PROPOSTA { get; private set; }
         public string JUSTIFICATIVA { get; private set; }
         public bool ACEITA { get; private set; }

@@ -2,15 +2,16 @@
 
 @{
     ViewBag.Title = "Profissionais";
+    ViewBag.SubTitle = "Lista";
 }
 
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Profissionais Cadastrados</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-12">
+@section Menu {
+    @Scripts.Render("~/Scripts/Global/Profissionais/menu")
+}
+
+<div class="box">
+
+    <div class="box-body">
         <table id="tblDados" class="table table-condensed table-responsive table-hover">
             <thead>
                 <tr>
@@ -45,8 +46,8 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
                         </td>
-                        <td>
-                            @Html.ActionLink(" ", "CriarJob", new { id = item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE }, new { @class = "fa fa-list-alt", @title = "Propor Job" })
+                        <td class="text-center">
+                            @Html.ActionLink(" ", "Create", "ServicoPrivado", new { id = item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-xs fa fa-handshake-o", @title = "Ofertar Serviço para este profissional" })
                         </td>
                     </tr>
                 }
