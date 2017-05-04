@@ -9,8 +9,12 @@ import java.util.List;
  */
 
 public class Especialidade implements Serializable {
+
     private String descricao;
+
     private boolean exigirComprovacao;
+
+    private List<SubEspecialidade> subEspecialidades;
 
     public Especialidade() {
     }

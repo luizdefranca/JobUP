@@ -18,7 +18,7 @@ public class PerfilProfisional implements Serializable {
     private Date dataAprovacao;
     private boolean aprovado;
     private String resumoCurriculo;
-    private Especialidade especialidade;
+    private List<Especialidade> especialidade;
     private List<Avaliacoes> avaliacoes;
     private List<Formacao> formacoes;
 
@@ -52,11 +52,11 @@ public class PerfilProfisional implements Serializable {
         this.resumoCurriculo = resumoCurriculo;
     }
 
-    public Especialidade getEspecialidade() {
+    public List<Especialidade> getEspecialidade() {
         return especialidade;
     }
 
-    public void setEspecialidade(Especialidade especialidade) {
+    public void setEspecialidade(List<Especialidade> especialidade) {
         this.especialidade = especialidade;
     }
 
