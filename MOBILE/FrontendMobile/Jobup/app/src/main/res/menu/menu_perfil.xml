@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".telas.telas.PerfilActivity">
+    <item
+        android:id="@+id/action_salvar"
+        android:orderInCategory="100"
+        android:title="Salvar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_editar"
+        android:orderInCategory="100"
+        android:title="Editar"
+        app:showAsAction="never" />
+</menu>
