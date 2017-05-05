@@ -37,6 +37,8 @@ public class LoaderUsuarioFullGetAll implements LoaderManager.LoaderCallbacks<Li
 
     @Override
     public void onLoadFinished(Loader<List<Usuario>> loader, List<Usuario> usuarios) {
+
+
         for (Usuario usuario :
                 usuarios) {
             Log.e(TAG, "onLoadFinished: " + usuario.toString() );

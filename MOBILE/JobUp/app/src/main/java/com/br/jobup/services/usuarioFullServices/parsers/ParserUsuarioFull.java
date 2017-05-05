@@ -8,6 +8,8 @@ import com.br.jobup.services.RetroFitInicializador;
 import java.io.IOException;
 import java.util.List;
 
+import retrofit2.Call;
+
 /*
  * Created by Luiz Carlos Ramos on 01/05/17 10:29 at $today.hour24:29:13.
  *
@@ -61,18 +63,18 @@ public class ParserUsuarioFull {
 
     }
 
-    public void post(Usuario usuario) {
-        try {
-            new RetroFitInicializador()
-                    .createUsuarioAPI()
-                    .post(usuario)
-                    .execute();
+    public Call<Usuario> post(Usuario usuario) {
+        final Call<Usuario> callPost = new RetroFitInicializador()
+                .createUsuarioAPI()
+                .post(usuario);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e(TAG, "getAll: Erro Baixando usuarios" , e );
-        }
+        return callPost;
+    }
 
-
+    public Call<Usuario>  delete(Usuario usuario){
+        final Call<Usuario> callDelete = new RetroFitInicializador()
+                .createUsuarioAPI()
+                .post(usuario);
+        return callDelete;
     }
 }

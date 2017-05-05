@@ -11,6 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -31,12 +32,17 @@ import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
 import com.br.jobup.models.Usuario;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
+import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class MainActivity extends AppCompatActivity
@@ -301,21 +307,14 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
-            Intent MensagensActivity = new Intent(MainActivity.this, MensagensActivity.class);
-            startActivity(MensagensActivity);
-
-        } else if (id == R.id.nav_share) {
-            Intent DetalheServicoActivity = new Intent(MainActivity.this, DetalheServicoActivity.class);
-            startActivity(DetalheServicoActivity);
-            IUsuarioDao dao = new UsuarioDao(this);
-
-
+//            Intent MensagensActivity = new Intent(MainActivity.this, MensagensActivity.class);
+//            startActivity(MensagensActivity);
             Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create();
             Usuario uu = gson.fromJson("{\n" +
-                    "        \"ID_USUARIO\": \"bb146703-6303-4023-b83a-1159715b9bb2\",\n" +
-                    "        \"NOME\": \"Luiz\",\n" +
+                    "        \"ID_USUARIO\": \"ab146703-6303-4023-b83a-1159715b9bb2\",\n" +
+                    "        \"NOME\": \"Frederico Rico\",\n" +
                     "        \"CPF\": {\n" +
-                    "            \"NR\": \"79390110491\"\n" +
+                    "            \"NR\": \"74390110491\"\n" +
                     "        },\n" +
                     "        \"RG\": {\n" +
                     "            \"UF\": 16,\n" +
@@ -331,7 +330,7 @@ public class MainActivity extends AppCompatActivity
                     "        \"ATIVO\": true,\n" +
                     "        \"BLOQUEADO\": false,\n" +
                     "        \"ENDERECO\": {\n" +
-                    "            \"ID_USUARIO\": \"bb146703-6303-4023-b83a-1159715b9bb2\",\n" +
+                    "            \"ID_USUARIO\": \"ab146703-6303-4023-b83a-1159715b9bb2\",\n" +
                     "            \"UF\": 16,\n" +
                     "            \"CEP\": \"51180260\",\n" +
                     "            \"LOGRADOURO\": \"av Luxemburgo\",\n" +
@@ -346,8 +345,31 @@ public class MainActivity extends AppCompatActivity
                     "    }", Usuario.class);
 
 
+            Log.e(TAG, "onNavigationItemSelected: "+ "mensagem enviada" );
+        } else if (id == R.id.nav_share) {
+//            Intent DetalheServicoActivity = new Intent(MainActivity.this, DetalheServicoActivity.class);
+//            startActivity(DetalheServicoActivity);
+            IUsuarioDao dao = new UsuarioDao(this);
+
+
+            Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create();
+            Usuario uu = gson.fromJson("{\"ID_USUARIO\":\"ab146703-6303-4023-b83a-1159715b9bb2\",\"NOME\":\"Realizado com Sucesso Por Luiz\",\"CPF\":{\"NR\":\"74390110491\"},\"RG\":{\"UF\":16,\"NR\":\"7343904\"},\"DT_NASCIMENTO\":\"2017-04-13T00:00:00\",\"DT_INCLUSAO\":\"2017-04-12T22:58:23\",\"DT_ALTERACAO\":\"2017-04-23T06:36:15\",\"DT_APROVACAO\":\"2017-04-24T23:55:06\",\"DT_ATIVACAO\":null,\"DT_ORDENACAO\":\"2017-04-12T22:58:23\",\"APROVADO\":false,\"ATIVO\":true,\"BLOQUEADO\":false,\"ENDERECO\":{\"ID_USUARIO\":\"ab146703-6303-4023-b83a-1159715b9bb2\",\"UF\":16,\"CEP\":\"51180260\",\"LOGRADOURO\":\"av Luxemburgo\",\"COMPLEMENTO\":null,\"BAIRRO\":\"Imbiribeira\",\"CIDADE\":\"Recife\"},\"CONTATO\":null,\"PERFIS_PROFISSIONAIS\":[],\"OFERTAS_SERVICO\":null,\"PROPOSTAS_SERVICO\":null}", Usuario.class);
             //   dao.addUsuario(uu, MainActivity.this);
 
+            final Call<Usuario> usuarioCall = new ParserUsuarioFull().post(uu);
+            usuarioCall.enqueue(new Callback<Usuario>() {
+                @Override
+                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                    Log.e(TAG, "onResponse: "+ response.message() ); ;
+                }
+
+                @Override
+                public void onFailure(Call<Usuario> call, Throwable t) {
+                    Log.e(TAG, "onFailure: ", t );
+
+                }
+            });
+            Log.e(TAG, "onNavigationItemSelected: "+ "mensagem enviada" );
 
         } else if (id == R.id.nav_send) {
             mLoaderManager.initLoader(0, null, new LoaderUsuarioFullGetAll(this));

@@ -17,10 +17,10 @@ import java.io.Serializable;
 
 public class SubEspecialidade implements Serializable {
 
-    @SerializedName("")
+
     private int idSubEspecialidade;
-    @SerializedName("")
+
     private int idEspecialidade;
-    @SerializedName("")
+
     private String Especialidade;
 }
