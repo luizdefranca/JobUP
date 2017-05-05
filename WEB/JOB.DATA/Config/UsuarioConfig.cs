@@ -28,13 +28,41 @@ namespace JOB.DATA.Config
                 .HasMaxLength(8)
                 .IsRequired();
 
-            HasOptional(n => n.ENDERECO)
-                .WithRequired(n => n.USUARIO)
-                .WillCascadeOnDelete(true);
+            //HasOptional(n => n.ENDERECO)
+            //    .WithRequired(n => n.USUARIO)
+            //    .WillCascadeOnDelete(true);
 
-            HasOptional(n => n.CONTATO)
-                .WithRequired(n => n.USUARIO)
-                .WillCascadeOnDelete(true);
+            //HasOptional(n => n.CONTATO)
+            //    .WithRequired(n => n.USUARIO)
+            //    .WillCascadeOnDelete(true);
+
+            Property(p => p.LOGRADOURO)
+                .IsRequired();
+
+            Property(p => p.CEP)
+                .IsRequired()
+                .HasMaxLength(8);
+
+            Property(p => p.BAIRRO)
+                .IsRequired();
+
+            Property(p => p.CIDADE)
+                .IsRequired();
+
+            Property(p => p.FIXO.NrTelefone)
+                .IsOptional()
+                .HasColumnName("FIXO")
+                .HasMaxLength(14);
+
+            Property(p => p.CELULAR.NrTelefone)
+                .IsOptional()
+                .HasColumnName("CELULAR")
+                .HasMaxLength(14);
+
+            Property(p => p.EMAIL.EMail)
+                .HasColumnName("EMAIL")
+                .IsRequired();
+
 
             HasMany(n => n.PERFIS_PROFISSIONAIS)
                 .WithRequired(n => n.USUARIO)

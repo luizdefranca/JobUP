@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using JOB.WEB.Extensions;
 
 namespace JOB.WEB.Controllers
 {
@@ -343,8 +344,8 @@ namespace JOB.WEB.Controllers
             Guid id = Guid.Parse(User.Identity.GetUserId());
 
             var domain = await ctx.Usuario
-                .Include(i => i.CONTATO)
-                .Include(i => i.ENDERECO)
+                //.Include(i => i.CONTATO)
+                //.Include(i => i.ENDERECO)
                 .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
 
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
@@ -355,13 +356,13 @@ namespace JOB.WEB.Controllers
         // POST: Usuario/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(UsuarioViewModel obj)
+        public ActionResult Create(UsuarioViewModel obj)
         {
             if (!ModelState.IsValid) return View(obj);
 
             try
             {
-                await ProcessarCadastro(obj);
+                ProcessarCadastro(obj);
 
                 return RedirectToAction("Index");
             }
@@ -372,22 +373,22 @@ namespace JOB.WEB.Controllers
             }
         }
 
-        public async Task ProcessarCadastro(UsuarioViewModel obj, Guid? idGuid = null)
+        public void ProcessarCadastro(UsuarioViewModel obj, Guid? idGuid = null)
         {
             try
             {
                 Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
 
-                var domain = await ctx.Usuario
-                    .Include(i => i.CONTATO)
-                    .Include(i => i.ENDERECO)
-                    .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
+                var domain = ctx.Usuario
+                    //.Include(i => i.CONTATO)
+                    //.Include(i => i.ENDERECO)
+                    .FirstOrDefault(w => w.ID_USUARIO == id);
 
                 if (domain == null)
                 {
                     var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-                    newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetUserName()));
+                    newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetEmailAdress()));
                     newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
                     ctx.Usuario.Add(newobj);
@@ -396,15 +397,15 @@ namespace JOB.WEB.Controllers
                 {
                     domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-                    domain.CONTATO.AtualizarValor(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
-                    domain.ENDERECO.AtualizaValores(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+                    domain.AtualizarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
+                    domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
                     ctx.Entry(domain).State = EntityState.Modified;
-                    ctx.Entry(domain.CONTATO).State = EntityState.Modified;
-                    ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
+                    //ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+                    //ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
                 }
 
-                await ctx.SaveChangesAsync();
+                ctx.SaveChangesAsync();
             }
             catch (Exception ex)
             {

@@ -28,8 +28,8 @@ namespace JOB.WEB.Controllers
         public async Task<ActionResult> Index()
         {
             var domain = await ctx.Usuario
-                .Include(i => i.CONTATO)
-                .Include(i => i.ENDERECO)
+                //.Include(i => i.CONTATO)
+                //.Include(i => i.ENDERECO)
                 .ToListAsync();
 
             var model = Mapper.Map<List<UsuarioViewModel>>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
@@ -41,8 +41,9 @@ namespace JOB.WEB.Controllers
         public async Task<ActionResult> DtAprovar(Guid id)
         {
             var domain = await ctx.Usuario
-                .Include(i => i.CONTATO)
-                .Include(i => i.ENDERECO).FirstAsync(w => w.ID_USUARIO == id);
+                //.Include(i => i.CONTATO)
+                //.Include(i => i.ENDERECO)
+                .FirstAsync(w => w.ID_USUARIO == id);
 
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 

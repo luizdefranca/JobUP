@@ -44,7 +44,7 @@ namespace JOB.WEB.Tests.Controllers
                 ctx.Database.BeginTransaction(); //inicia uma transação para controlar os dados manipulados no banco de dados
 
                 var controller = new ManageController(ctx);
-                await controller.ProcessarCadastro(model, id);
+                controller.ProcessarCadastro(model, id);
 
                 //recupera o novo usuario inserido no banco
                 var domainNew = await ctx.Usuario.FirstAsync(w => w.CPF.NR == "50869388720");
@@ -72,7 +72,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -88,7 +88,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -104,7 +104,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -120,7 +120,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -136,7 +136,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -152,7 +152,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -168,7 +168,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -184,7 +184,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -200,7 +200,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -216,7 +216,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -232,7 +232,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
@@ -249,7 +249,7 @@ namespace JOB.WEB.Tests.Controllers
             ctx.Database.BeginTransaction();
 
             var controller = new ManageController(ctx);
-            ViewResult result = await controller.Create(model) as ViewResult;
+            ViewResult result = controller.Create(model) as ViewResult;
 
             ctx.Database.CurrentTransaction.Rollback();
         }
