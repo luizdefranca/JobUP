@@ -1,7 +1,7 @@
 USE [mundoup]
 GO
 
-/****** Object:  Table [jobup].[OFERTA_SERVICO]    Script Date: 01/05/2017 12:02:22 ******/
+/****** Object:  Table [jobup].[OFERTA_SERVICO]    Script Date: 05/05/2017 20:16:54 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,7 +12,7 @@ CREATE TABLE [jobup].[OFERTA_SERVICO](
 	[ID_SERVICO] [uniqueidentifier] NOT NULL,
 	[ID_USUARIO] [uniqueidentifier] NOT NULL,
 	[DT_OFERTA] [datetime] NOT NULL,
-	[ACEITA] [bit] NOT NULL,
+	[ACEITA] [bit] NULL,
  CONSTRAINT [PK_jobup.OFERTA_SERVICO] PRIMARY KEY CLUSTERED 
 (
 	[ID_SERVICO] ASC,
@@ -36,5 +36,4 @@ GO
 
 ALTER TABLE [jobup].[OFERTA_SERVICO] CHECK CONSTRAINT [FK_jobup.OFERTA_SERVICO_jobup.USUARIO_ID_USUARIO]
 GO
-
 

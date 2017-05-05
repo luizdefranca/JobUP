@@ -1,7 +1,7 @@
 USE [mundoup]
 GO
 
-/****** Object:  Table [jobup].[USUARIO]    Script Date: 25/04/2017 19:40:40 ******/
+/****** Object:  Table [jobup].[USUARIO]    Script Date: 05/05/2017 20:18:35 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -23,6 +23,15 @@ CREATE TABLE [jobup].[USUARIO](
 	[APROVADO] [bit] NOT NULL,
 	[ATIVO] [bit] NOT NULL,
 	[BLOQUEADO] [bit] NOT NULL,
+	[UF] [int] NOT NULL,
+	[CEP] [varchar](8) NOT NULL,
+	[LOGRADOURO] [varchar](254) NOT NULL,
+	[COMPLEMENTO] [varchar](254) NULL,
+	[BAIRRO] [varchar](254) NOT NULL,
+	[CIDADE] [varchar](254) NOT NULL,
+	[FIXO] [varchar](14) NULL,
+	[CELULAR] [varchar](14) NULL,
+	[EMAIL] [varchar](254) NOT NULL,
  CONSTRAINT [PK_jobup.USUARIO] PRIMARY KEY CLUSTERED 
 (
 	[ID_USUARIO] ASC
@@ -37,4 +46,21 @@ GO
 ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT ((0)) FOR [BLOQUEADO]
 GO
 
+ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT ((0)) FOR [UF]
+GO
+
+ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT ('') FOR [CEP]
+GO
+
+ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT ('') FOR [LOGRADOURO]
+GO
+
+ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT ('') FOR [BAIRRO]
+GO
+
+ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT ('') FOR [CIDADE]
+GO
+
+ALTER TABLE [jobup].[USUARIO] ADD  DEFAULT ('') FOR [EMAIL]
+GO
 

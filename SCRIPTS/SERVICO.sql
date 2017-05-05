@@ -1,7 +1,7 @@
 USE [mundoup]
 GO
 
-/****** Object:  Table [jobup].[SERVICO]    Script Date: 01/05/2017 12:01:59 ******/
+/****** Object:  Table [jobup].[SERVICO]    Script Date: 05/05/2017 20:17:56 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -37,5 +37,4 @@ GO
 
 ALTER TABLE [jobup].[SERVICO] CHECK CONSTRAINT [FK_jobup.SERVICO_jobup.PERFIL_PROFISSIONAL_ID_USUARIO_ID_ESPECIALIDADE]
 GO
-
 

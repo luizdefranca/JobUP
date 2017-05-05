@@ -1,7 +1,7 @@
 USE [mundoup]
 GO
 
-/****** Object:  Table [jobup].[ESPECIALIDADE]    Script Date: 25/04/2017 19:44:09 ******/
+/****** Object:  Table [jobup].[ESPECIALIDADE]    Script Date: 05/05/2017 20:16:15 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -19,5 +19,4 @@ CREATE TABLE [jobup].[ESPECIALIDADE](
 )
 
 GO
-
 
