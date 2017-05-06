@@ -27,14 +27,19 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
+import com.br.jobup.models.Login;
 import com.br.jobup.models.Usuario;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
+import com.br.jobup.services.usuarioFullServices.parsers.ParserLogin;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import org.xml.sax.Parser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,6 +48,8 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static com.br.jobup.R.id.email;
 
 
 public class MainActivity extends AppCompatActivity
@@ -305,6 +312,31 @@ public class MainActivity extends AppCompatActivity
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
         } else if (id == R.id.nav_slideshow) {
+            final Login login = new Login("luizramospe@gmail.com", "Lc1234");
+            ParserLogin parse = new ParserLogin(login);
+             Call<com.squareup.okhttp.Response> loginCall = parse.get();
+            loginCall.enqueue(new Callback<com.squareup.okhttp.Response>() {
+                @Override
+                public void onResponse(Call<com.squareup.okhttp.Response> call, Response<com.squareup.okhttp.Response> response) {
+                    if(response.body().code() == 200 && response.message().equals("Success")){
+                        Log.e(TAG, "onResponse: " + "Login efetuado com sucesso" );
+                    }else if(response.message()
+                            .equals("You must have a confirmed email to log on. The confirmation"
+                                    + " token has been resent to your email account.") 
+                            && response.code() == 400){
+                        Log.e(TAG, "onResponse: " + "You must have a confirmed email to log on. The confirmation token has been resent to your email account." );
+                    }else if (response.code() == 400 && response.message().equals("LockedOut"))
+                        Log.e(TAG, "onResponse: usuario bloqueado");
+                    Toast.makeText(MainActivity.this, response.message(), Toast.LENGTH_LONG).show();
+                }
+
+                @Override
+                public void onFailure(Call<Login> call, Throwable t) {
+                    Log.e(TAG, "onFailure: " + t.getMessage() );
+                    Toast.makeText(MainActivity.this, "onFailure: " + t.getMessage() , Toast.LENGTH_LONG).show();
+                }
+            });
+
 
         } else if (id == R.id.nav_manage) {
 //            Intent MensagensActivity = new Intent(MainActivity.this, MensagensActivity.class);
@@ -313,10 +345,10 @@ public class MainActivity extends AppCompatActivity
             Usuario uu = gson.fromJson("{\n" +
                     "        \"ID_USUARIO\": \"ab146703-6303-4023-b83a-1159715b9bb2\",\n" +
                     "        \"NOME\": \"Frederico Rico\",\n" +
-                    "        \"CPF\": {\n" +
+                    "        \"Cpf\": {\n" +
                     "            \"NR\": \"74390110491\"\n" +
                     "        },\n" +
-                    "        \"RG\": {\n" +
+                    "        \"Rg\": {\n" +
                     "            \"UF\": 16,\n" +
                     "            \"NR\": \"7343904\"\n" +
                     "        },\n" +
@@ -353,7 +385,7 @@ public class MainActivity extends AppCompatActivity
 
 
             Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create();
-            Usuario uu = gson.fromJson("{\"ID_USUARIO\":\"ab146703-6303-4023-b83a-1159715b9bb2\",\"NOME\":\"Realizado com Sucesso Por Luiz\",\"CPF\":{\"NR\":\"74390110491\"},\"RG\":{\"UF\":16,\"NR\":\"7343904\"},\"DT_NASCIMENTO\":\"2017-04-13T00:00:00\",\"DT_INCLUSAO\":\"2017-04-12T22:58:23\",\"DT_ALTERACAO\":\"2017-04-23T06:36:15\",\"DT_APROVACAO\":\"2017-04-24T23:55:06\",\"DT_ATIVACAO\":null,\"DT_ORDENACAO\":\"2017-04-12T22:58:23\",\"APROVADO\":false,\"ATIVO\":true,\"BLOQUEADO\":false,\"ENDERECO\":{\"ID_USUARIO\":\"ab146703-6303-4023-b83a-1159715b9bb2\",\"UF\":16,\"CEP\":\"51180260\",\"LOGRADOURO\":\"av Luxemburgo\",\"COMPLEMENTO\":null,\"BAIRRO\":\"Imbiribeira\",\"CIDADE\":\"Recife\"},\"CONTATO\":null,\"PERFIS_PROFISSIONAIS\":[],\"OFERTAS_SERVICO\":null,\"PROPOSTAS_SERVICO\":null}", Usuario.class);
+            Usuario uu = gson.fromJson("{\"ID_USUARIO\":\"ab146703-6303-4023-b83a-1159715b9bb2\",\"NOME\":\"Realizado com Sucesso Por Luiz\",\"Cpf\":{\"NR\":\"74390110491\"},\"Rg\":{\"UF\":16,\"NR\":\"7343904\"},\"DT_NASCIMENTO\":\"2017-04-13T00:00:00\",\"DT_INCLUSAO\":\"2017-04-12T22:58:23\",\"DT_ALTERACAO\":\"2017-04-23T06:36:15\",\"DT_APROVACAO\":\"2017-04-24T23:55:06\",\"DT_ATIVACAO\":null,\"DT_ORDENACAO\":\"2017-04-12T22:58:23\",\"APROVADO\":false,\"ATIVO\":true,\"BLOQUEADO\":false,\"ENDERECO\":{\"ID_USUARIO\":\"ab146703-6303-4023-b83a-1159715b9bb2\",\"UF\":16,\"CEP\":\"51180260\",\"LOGRADOURO\":\"av Luxemburgo\",\"COMPLEMENTO\":null,\"BAIRRO\":\"Imbiribeira\",\"CIDADE\":\"Recife\"},\"CONTATO\":null,\"PERFIS_PROFISSIONAIS\":[],\"OFERTAS_SERVICO\":null,\"PROPOSTAS_SERVICO\":null}", Usuario.class);
             //   dao.addUsuario(uu, MainActivity.this);
 
             final Call<Usuario> usuarioCall = new ParserUsuarioFull().post(uu);

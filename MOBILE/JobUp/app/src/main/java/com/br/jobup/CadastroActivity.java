@@ -57,7 +57,7 @@ public class CadastroActivity extends AppCompatActivity {
             usuario.setIdUsuario(Util.getUUID());
 
 
-            dao.addUsuario(usuario, null);
+            dao.addUsuario(usuario);
             dao.close();
             Intent detalheServico = new Intent(CadastroActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(detalheServico);

@@ -23,11 +23,11 @@ public class Contato implements Serializable {
     }
     @SerializedName("ID_USUARIO")
     private String idUsuario;
-    @SerializedName("FIXO")
+    @SerializedName("Fixo")
     private Telefone fixo;
-    @SerializedName("CELULAR")
+    @SerializedName("Celular")
     private Telefone celular;
-    @SerializedName("EMAIL")
+    @SerializedName("Email")
     private Email email;
 
     public Contato() {

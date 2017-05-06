@@ -31,10 +31,10 @@ namespace JOB.WEB.ApiController
                     return Request.CreateResponse(HttpStatusCode.OK, "Success");
 
                 case SignInStatus.LockedOut:
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("LockedOut"));
+                    return Request.CreateResponse(HttpStatusCode.Forbidden, new HttpError("LockedOut"));
 
                 case SignInStatus.RequiresVerification:
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("RequiresVerification"));
+                    return Request.CreateResponse(HttpStatusCode.PreconditionFailed, new HttpError("RequiresVerification"));
 
                 case SignInStatus.Failure:
                 default:

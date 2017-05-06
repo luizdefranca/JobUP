@@ -16,11 +16,11 @@ public interface IUsuarioDao {
     public List<Usuario> getAllUsuarios();
     public Usuario getUsuarioByID(String id);
 
-    public void deleteUsuario(String id, UsuarioDatabaseListener listener);
+    public void deleteUsuario(String id);
 
-    void addUsuario(Usuario usuario, UsuarioDatabaseListener listener);
+    void addUsuario(Usuario usuario);
 
-    public void updateUsuario(Usuario usuario, UsuarioDatabaseListener listener);
+    public void updateUsuario(Usuario usuario);
 
     public void close();
 }

@@ -15,7 +15,7 @@ public class Email implements Serializable {
 
 
     public static final int EnderecoMaxLength = 254;
-    @SerializedName("EMAIL")
+    @SerializedName("Email")
     public String email;
 
     public Email() {

@@ -89,22 +89,18 @@ public class UsuarioDao implements IUsuarioDao {
     }
 
     @Override
-    public void deleteUsuario(String id, UsuarioDatabaseListener listener) {
+    public void deleteUsuario(String id) {
         // Ensure database exists.
         if (database != null) {
             int result = database.delete(Constantes.TABELA_USUARIO, Constantes.USUARIO_ID + " = " + id, null);
 
-            if (result > 0) {
-                listener.onSQLOperationSucceded("Customer Deleted");
-            } else {
-                listener.onSQLOperationFailed("Unable to Delete Customer");
-            }
+
 
         }
     }
 
     @Override
-    public void addUsuario(Usuario usuario, UsuarioDatabaseListener listener) {
+    public void addUsuario(Usuario usuario) {
         if (database != null){
             //prepare the transaction information that will be saved to the database
             ContentValues values = new ContentValues();
@@ -163,7 +159,7 @@ public class UsuarioDao implements IUsuarioDao {
     }
 
     @Override
-    public void updateUsuario(Usuario usuario, UsuarioDatabaseListener listener) {
+    public void updateUsuario(Usuario usuario) {
         if (database != null){
             //prepare the transaction information that will be saved to the database
             ContentValues values = new ContentValues();
@@ -189,11 +185,7 @@ public class UsuarioDao implements IUsuarioDao {
             //Now update the this row with the information supplied
             int result =  database.update(Constantes.TABELA_USUARIO, values,
                     Constantes.USUARIO_ID + " = " + usuario.getIdUsuario(), null);
-            if (result == 1){
-                listener.onSQLOperationSucceded("Customer Updated");
-            }else{
-                listener.onSQLOperationFailed("Customer Update Failed");
-            }
+
         }
 
     }

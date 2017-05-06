@@ -27,9 +27,9 @@ public class Usuario implements Serializable{
     private String idUsuario;
     @SerializedName("NOME")
     private String nome;
-    @SerializedName("CPF")
+    @SerializedName("Cpf")
     private Cpf cpf;
-    @SerializedName("RG")
+    @SerializedName("Rg")
     private Rg rg;
     @SerializedName("DT_NASCIMENTO")
     private Date dataNascimento;
@@ -289,7 +289,7 @@ public class Usuario implements Serializable{
         Cpf cpf =  new Cpf(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_CPF)));
 
 
-        //Constroi um objeto RG
+        //Constroi um objeto Rg
         //public Rg(int uf, String nr)
         int uf = cursor.getInt(cursor.getColumnIndex(Constantes.USUARIO_RG_UF));
         String nr = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_RG_NR));
