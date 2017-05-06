@@ -48,6 +48,7 @@ namespace JOB.WEB.Controllers
             var model = new ServicoViewModel_full();
 
             var idEspecialidade = int.Parse(Request.QueryString["ID_ESPECIALIDADE"]);
+            model.ID_ESPECIALIDADE = idEspecialidade;
             model.SUB_ESPECIALIDADES = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade).ToList();
             return View(model);
         }
@@ -69,7 +70,7 @@ namespace JOB.WEB.Controllers
                 ctx.Oferta.Add(objOferta);
 
                 ctx.SaveChanges();
-                return RedirectToAction("Index", "Profissional");
+                return RedirectToAction("Index", "Profissional", new { idEspecialidade = obj.ID_ESPECIALIDADE });
             }
             catch (Exception ex)
             {

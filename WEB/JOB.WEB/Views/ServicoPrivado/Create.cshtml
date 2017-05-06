@@ -29,7 +29,7 @@
             <div class="form-horizontal">
 
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                
+
                 <div class="form-group">
                     @Html.LabelFor(model => model.SUB_ESPECIALIDADES, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -76,7 +76,7 @@
         </div>
         <div class="box-footer">
             <input type="submit" value="Salvar" class="btn btn-success" />
-            @Html.ActionLink("Voltar", "Index", "Profissional",null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Voltar", "Index", "Profissional", new { idEspecialidade = Request.QueryString["ID_ESPECIALIDADE"] }, new { @class = "btn btn-default" })
         </div>
     </div>
 }

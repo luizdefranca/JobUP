@@ -12,6 +12,8 @@ namespace JOB.WEB.Models
         public string PhoneNumber { get; set; }
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
+
+        public int QTD_PERFIS { get; set; }
     }
 
     public class ManageLoginsViewModel

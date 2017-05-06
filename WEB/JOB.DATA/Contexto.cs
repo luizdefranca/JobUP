@@ -14,9 +14,9 @@ namespace JOB.DATA
         public Contexto()
             : base(GetConnectionString())
         {
-            Configuration.LazyLoadingEnabled = false; 
-            Configuration.ProxyCreationEnabled = false;
-            Configuration.AutoDetectChangesEnabled = false;
+            Configuration.LazyLoadingEnabled = true;
+            Configuration.ProxyCreationEnabled = true;
+            Configuration.AutoDetectChangesEnabled = true;
         }
 
         private static string GetConnectionString()

@@ -2,6 +2,7 @@
 using JOB.DATA;
 using JOB.WEB.Models;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -14,7 +15,7 @@ namespace JOB.WEB.Controllers
         // GET: Especialidade
         public ActionResult Index()
         {
-            var lstDominio = ctx.Especialidade.ToList();
+            var lstDominio = ctx.Especialidade.Include(i => i.PERFIS_PROFISSIONAIS).ToList();
 
             var lstModel = Mapper.Map<List<EspecialidadeViewModel>>(lstDominio);
 
