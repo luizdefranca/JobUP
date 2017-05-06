@@ -15,6 +15,8 @@ namespace JOB.WEB.App_Start
                 cfg.CreateMap<SERVICO, ServicoViewModel_api>();
                 cfg.CreateMap<SERVICO, ServicoViewModel_full>();
                 cfg.CreateMap<OFERTA_SERVICO, OfertaViewModel>();
+                cfg.CreateMap<ESPECIALIDADE, EspecialidadeViewModel>();
+                //cfg.CreateMap<SUB_ESPECIALIDADE, SubEspecialidadeViewModel>();
             });
         }
     }

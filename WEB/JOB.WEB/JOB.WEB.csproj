@@ -201,6 +201,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EspecialidadeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="JsonNet.PrivateSettersContractResolvers\PrivateSettersContractResolvers.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
+    <Compile Include="Models\EspecialidadeViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MenuViewModel.cs" />
@@ -516,6 +518,9 @@
     <Content Include="Global.asax" />
     <Content Include="google9f37a4c294fa7690.html" />
     <Content Include="icone_jobup.png" />
+    <Content Include="img\pets.svg" />
+    <Content Include="img\servicos_domesticos.svg" />
+    <Content Include="img\servicos_pessoais.svg" />
     <Content Include="JobUpicon.ico" />
     <Content Include="Scripts\Account\Login.js" />
     <Content Include="Scripts\Account\Register.js" />
@@ -652,6 +657,7 @@
     <Content Include="Views\ServicoPublico\Details.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Shared\_LoginStart.cshtml" />
+    <Content Include="Views\Especialidade\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">
