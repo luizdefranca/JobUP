@@ -4,6 +4,9 @@
     ViewBag.Title = "Home Page";
 }
 
+@Styles.Render("~/Bundle/AdminLTE/plugins/icheck/css")
+@Scripts.Render("~/Bundle/AdminLTE/plugins/icheck/js")
+
 <div class="row">
     @if (User.Identity.IsAuthenticated)
     {

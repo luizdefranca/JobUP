@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    @Scripts.Render("~/Bundle/AdminLTE/plugins/jquery/js")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Bundle/AdminLTE/plugins/font-awesome/css")
+    @Styles.Render("~/Bundle/AdminLTE/plugins/icheck/css")
+    @Scripts.Render("~/Bundle/AdminLTE/plugins/icheck/js")
+    <link href="~/Content/btn-social.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="login-page">
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

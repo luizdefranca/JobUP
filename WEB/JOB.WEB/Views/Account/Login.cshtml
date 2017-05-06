@@ -1,91 +1,66 @@
-﻿@using JOB.WEB.Models
-@model JOB.WEB.Models.LoginViewModel
-@{
-    Layout = null;
-    ViewBag.Title = "Log in";
+﻿@{
+    Layout = "~/Views/Shared/_LoginStart.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Job UP</title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-    @Styles.Render("~/Bundle/AdminLTE/bootstrap/css")
-    @Styles.Render("~/Bundle/AdminLTE/plugins/font-awesome/css")
-    @Styles.Render("~/Bundle/AdminLTE/plugins/ionicons/css")
-    @Styles.Render("~/Bundle/AdminLTE/dist/css")
-</head>
-<body class="hold-transition login-page">
-    <div class="login-box">
-        <div class="login-logo">
-            <a href="@Url.Action("Index", "Home")">Vem >Vem vindo a <b>Job UP!</b></a>
-        </div>
-        <div class="login-box-body">
-            <p class="login-box-msg">Logar-se para iniciar sua sessão</p>
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group has-feedback">
-                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "User Name" })
-                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
-                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", type = "password", placeholder = "Password" })
-                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-                <div class="row">
-                    <div class="col-xs-8">
-                        <div class="checkbox icheck">
-                            @Html.CheckBoxFor(m => m.RememberMe)
+@using JOB.WEB.Models
+@model JOB.WEB.Models.LoginViewModel
+<div class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="text-center">Bem vindo!</h2>
+                <h4 class="text-center">Por favor, digite o seu usuário e senha.</h4>
+            </div>
+            <div class="modal-body">
+                <section id="loginForm">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "center-block", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control input-lg", @placeholder = "Username" })
+                            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control  input-lg", @placeholder = "Senha" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.CheckBoxFor(m => m.RememberMe, new { @class = "icheckbox_square" })
                             @Html.LabelFor(m => m.RememberMe)
                         </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Logar</button>
-                    </div>
-                </div>
-            }
-            <div class="social-auth-links text-center">
-                <p>- OU -</p>
-                <a href="#" class="btn btn-block btn-social btn-facebook btn-flat">
-                    <i class="fa fa-facebook"></i> Logar usando
-                    Facebook
-                </a>
-                <a href="#" class="btn btn-block btn-social btn-google btn-flat">
-                    <i class="fa fa-google-plus"></i> Logar usando
-                    Google+
-                </a>
+                        <div class="form-group">
+                            <div>
+                                <input type="submit" value="Log in" class="btn btn-primary btn-lg btn-block" />
+                            </div>
+                        </div>
+                        <div>
+                            <span>
+                                <p class="pull-right">@Html.ActionLink("Registrar uma nova conta!", "Register")</p>
+                            </span>
+                            <span>
+                                <p>@Html.ActionLink("Esqueceu sua senha?", "ForgotPassword")</p>
+                            </span>
+                        </div>
+                    }
+                </section>
             </div>
-            <a href="@Url.Action("ForgotPassword", "Account")" class="text-center">Esqueci minha senha</a><br>
-            <a href="@Url.Action("Register", "Account")" class="text-center">Registrar com um novo usuário</a>
+            <div class="text-center" style="padding: 10px;">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </div>
         </div>
     </div>
+</div>
 
-    @Scripts.Render("~/Bundle/AdminLTE/plugins/jquery/js")
-    @Scripts.Render("~/Bundle/AdminLTE/bootstrap/js")
-    @Scripts.Render("~/Bundle/AdminLTE/plugins/jquery-validate/js")
-    @Scripts.Render("~/Scripts/Account/Login")
+<script>
+    $(document).ready(function () {
+        ConfigurarTemaIcheck();
+    });
 
-    @Scripts.Render("~/Bundle/AdminLTE/plugins/icheck/js")
-    @Styles.Render("~/Bundle/AdminLTE/plugins/icheck/css")
-
-    <script>
-        $(document).ready(function () {
-            ConfigurarTemaIcheck();
+    function ConfigurarTemaIcheck() {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue'
         });
-
-        function ConfigurarTemaIcheck() {
-            $('input').iCheck({
-                checkboxClass: 'icheckbox_minimal',
-                radioClass: 'iradio_minimal'
-            });
-        }
-    </script>
-</body>
-</html>
+    }
+</script>

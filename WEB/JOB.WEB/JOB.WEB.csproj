@@ -422,37 +422,6 @@
     <Content Include="AdminLTE\plugins\fullcalendar\js\fullcalendar.js" />
     <Content Include="AdminLTE\plugins\fullcalendar\js\fullcalendar.min.js" />
     <Content Include="AdminLTE\plugins\icheck\css\all.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\aero%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\aero.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\aero.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\blue%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\blue.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\blue.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\green%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\green.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\green.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\grey%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\grey.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\grey.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\minimal%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\minimal.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\minimal.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\orange%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\orange.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\orange.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\pink%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\pink.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\pink.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\purple%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\purple.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\purple.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\red%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\red.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\red.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\yellow%402x.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\yellow.css" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\yellow.png" />
-    <Content Include="AdminLTE\plugins\icheck\css\minimal\_all.css" />
     <Content Include="AdminLTE\plugins\icheck\css\square\aero%402x.png" />
     <Content Include="AdminLTE\plugins\icheck\css\square\aero.css" />
     <Content Include="AdminLTE\plugins\icheck\css\square\aero.png" />
@@ -539,6 +508,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\btn-social.css" />
+    <Content Include="Content\dashboard.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -678,6 +650,8 @@
     <Content Include="Views\ServicoPublico\Create.cshtml" />
     <Content Include="Views\ServicoPrivado\Create.cshtml" />
     <Content Include="Views\ServicoPublico\Details.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Shared\_LoginStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

@@ -56,13 +56,22 @@ namespace JOB.WEB
         {
             bundles.Add(new ScriptBundle("~/Scripts/Shared/_Layout").Include(
                 "~/Scripts/Shared/_Layout.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/bootstrap.css",
+                "~/Content/dashboard.css",
+                "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+                "~/Scripts/modernizr-*"));
         }
 
         private static void RegisterLayout(BundleCollection bundles)
         {
             // bootstrap
             bundles.Add(new ScriptBundle("~/Bundle/AdminLTE/bootstrap/js").Include(
-                "~/AdminLTE/bootstrap/js/bootstrap.min.js"));
+                "~/AdminLTE/bootstrap/js/bootstrap.min.js",
+                "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Bundle/AdminLTE/bootstrap/css").Include(
                 "~/AdminLTE/bootstrap/css/bootstrap.min.css", new CssRewriteUrlTransform()));
