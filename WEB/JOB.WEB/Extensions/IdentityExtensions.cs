@@ -1,10 +1,10 @@
-﻿using System;
+﻿using JOB.DATA;
+using JOB.WEB.Models;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Security.Principal;
-using JOB.DATA;
-using JOB.WEB.Models;
-using Microsoft.AspNet.Identity;
 
 namespace JOB.WEB.Extensions
 {
@@ -20,8 +20,8 @@ namespace JOB.WEB.Extensions
             using (var ctx = new Contexto())
             {
                 var id = identity.GetId();
-                var user = ctx.Usuario.Include(i => i.OFERTAS_SERVICO).First(f => f.ID_USUARIO == id);
-                return user.OFERTAS_SERVICO.Count(w => w.ACEITA != false);
+                var user = ctx.Usuario.Include(i => i.OFERTAS_SERVICO).FirstOrDefault(f => f.ID_USUARIO == id);
+                return user != null ? user.OFERTAS_SERVICO.Count(w => w.ACEITA != false) : 0;
             }
         }
 

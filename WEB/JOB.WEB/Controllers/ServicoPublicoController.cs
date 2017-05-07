@@ -22,7 +22,8 @@ namespace JOB.WEB.Controllers
         {
             Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
 
-            var perfis = ctx.Usuario.Include(i => i.PERFIS_PROFISSIONAIS.Select(s => s.ESPECIALIDADE)).First(f => f.ID_USUARIO == idUsuario).PERFIS_PROFISSIONAIS.Where(w => w.APROVADO);
+            //var perfis = ctx.Usuario.Include(i => i.PERFIS_PROFISSIONAIS.Select(s => s.ESPECIALIDADE)).First(f => f.ID_USUARIO == idUsuario).PERFIS_PROFISSIONAIS.Where(w => w.APROVADO);
+            var perfis = ctx.Usuario.Include(i => i.PERFIS_PROFISSIONAIS.Select(s => s.ESPECIALIDADE)).First(f => f.ID_USUARIO == idUsuario).PERFIS_PROFISSIONAIS;
             var lstEspecUsuario = perfis.Select(s => s.ESPECIALIDADE.ID_ESPECIALIDADE).ToList();
 
             var domain = ctx.Servico.Where(w => w.PUBLICO & lstEspecUsuario.Contains(w.ID_ESPECIALIDADE)).ToList();

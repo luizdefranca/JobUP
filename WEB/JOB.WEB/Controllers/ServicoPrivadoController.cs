@@ -93,7 +93,7 @@ namespace JOB.WEB.Controllers
 
         public ActionResult Aceitar(Guid id)
         {
-            var domain = ctx.Proposta.First(f => f.ID_SERVICO == id);
+            var domain = ctx.Proposta.FirstOrDefault(f => f.ID_SERVICO == id);
 
             var model = Mapper.Map<PropostaViewModel>(domain);
 
