@@ -318,7 +318,7 @@ public class MainActivity extends AppCompatActivity
             loginCall.enqueue(new Callback<com.squareup.okhttp.Response>() {
                 @Override
                 public void onResponse(Call<com.squareup.okhttp.Response> call, Response<com.squareup.okhttp.Response> response) {
-                    if(response.body().code() == 200 && response.message().equals("Success")){
+                    if(response.body().code() == 200 && response.body().message().equals("Success")){
                         Log.e(TAG, "onResponse: " + "Login efetuado com sucesso" );
                     }else if(response.message()
                             .equals("You must have a confirmed email to log on. The confirmation"
@@ -331,7 +331,7 @@ public class MainActivity extends AppCompatActivity
                 }
 
                 @Override
-                public void onFailure(Call<Login> call, Throwable t) {
+                public void onFailure(Call<com.squareup.okhttp.Response> call, Throwable t) {
                     Log.e(TAG, "onFailure: " + t.getMessage() );
                     Toast.makeText(MainActivity.this, "onFailure: " + t.getMessage() , Toast.LENGTH_LONG).show();
                 }
