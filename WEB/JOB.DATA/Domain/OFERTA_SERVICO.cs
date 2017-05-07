@@ -31,6 +31,11 @@ namespace JOB.DATA.Domain
             this.ACEITA = true;
         }
 
+        public void RejeitarOferta()
+        {
+            this.ACEITA = false;
+        }
+
         public Guid ID_SERVICO { get; private set; }
         public Guid ID_USUARIO { get; private set; }
         public DateTime DT_OFERTA { get; private set; }

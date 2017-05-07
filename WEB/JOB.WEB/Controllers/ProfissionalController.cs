@@ -20,10 +20,10 @@ namespace JOB.WEB.Controllers
         private Guid idUsuario => Guid.Parse(User.Identity.GetUserId());
 
         // GET: Profissional
-        public ActionResult Index()
+        public ActionResult Index(int idEspecialidade)
         {
             //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
-            var lstDominio = ctx.PerfilProfissional.ToList();
+            var lstDominio = ctx.PerfilProfissional.Where(f => f.ID_ESPECIALIDADE == idEspecialidade).ToList();
 
             var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
 

@@ -2,6 +2,7 @@
 using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.DATA.ValueObject;
+using JOB.WEB.Extensions;
 using JOB.WEB.Models;
 using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
@@ -13,7 +14,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using JOB.WEB.Extensions;
 
 namespace JOB.WEB.Controllers
 {
@@ -76,13 +76,16 @@ namespace JOB.WEB.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
+            var id = Guid.Parse(userId);
+
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+                QTD_PERFIS = ctx.PerfilProfissional.Count(w => w.ID_USUARIO == id)
             };
             return View(model);
         }
@@ -115,7 +118,6 @@ namespace JOB.WEB.Controllers
         // GET: /Manage/AddPhoneNumber
         public ActionResult AddPhoneNumber()
         {
-
             return View();
         }
 
@@ -128,9 +130,7 @@ namespace JOB.WEB.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
-
             }
-
 
             // Generate the token and send it
             var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), model.Number);
@@ -410,9 +410,7 @@ namespace JOB.WEB.Controllers
             catch (Exception ex)
             {
                 ModelState.AddModelError("", ex.TratarMensagem());
-                
-            } 
-               
+            }
         }
 
         public ActionResult Ativar()

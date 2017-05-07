@@ -19,9 +19,10 @@ namespace JOB.API.Controllers
     {
         private Contexto ctx = new Contexto();
 
-        public HttpResponseMessage Get()
+        public HttpResponseMessage Get(int idEspecialidade)
         {
-            var lstDominio = ctx.PerfilProfissional.ToList();
+            //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
+            var lstDominio = ctx.PerfilProfissional.Where(f => f.ID_ESPECIALIDADE == idEspecialidade).ToList();
 
             var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
 

@@ -1,75 +1,75 @@
 ﻿@model IEnumerable<JOB.WEB.Models.ServicoViewModel_api>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Ofertas de Serviços";
+    ViewBag.SubTitle = "Lista";
 }
 
-<h2>Index</h2>
+@section Menu {
+    @Scripts.Render("~/Scripts/Global/Servicos/menu")
+}
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NOME)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DESC_SUB_ESPECIALIDADE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DT_CADASTRO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PUBLICO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_TITULO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_OBSERVACOES)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VL_SUGERIDO)
-        </th>
-        <th></th>
-    </tr>
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Veja as ofertas disponíveis para seu perfil profissional</h3>
+    </div>
+    <div class="box-body">
 
-    @foreach (var item in Model)
-    {
+    <table id="tblDados" class="table table-condensed table-responsive table-hover">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NOME)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DESC_SUB_ESPECIALIDADE)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DT_CADASTRO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PUBLICO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DS_TITULO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DS_OBSERVACOES)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VL_SUGERIDO)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DESC_SUB_ESPECIALIDADE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DT_CADASTRO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DS_TITULO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VL_SUGERIDO)
+            </th>
+            <th></th>
         </tr>
-    }
-</table>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DESC_SUB_ESPECIALIDADE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DT_CADASTRO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DS_TITULO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VL_SUGERIDO)
+                </td>
+                <td class="text-center">
+                    @Html.ActionLink(" ", "Details", "ServicoPrivado", new { id = item.ID_SERVICO }, new { @class = "btn btn-primary btn-xs fa fa-search", @title = "Ofertar Serviço para este profissional" })
+                </td>
+            </tr>
+        }
+    </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#tblDados').DataTable();
+    });
+</script>

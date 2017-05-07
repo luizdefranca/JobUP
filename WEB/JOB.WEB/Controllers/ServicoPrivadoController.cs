@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.WEB.Extensions;
 using JOB.WEB.Models;
 using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -16,9 +18,12 @@ namespace JOB.WEB.Controllers
         private Contexto ctx = new Contexto();
 
         // GET: Servico
-        public ActionResult Index(Guid idUsuario)
+        public ActionResult Index()
         {
-            var domain = ctx.Servico.Where(w => w.PUBLICO == false & w.ID_USUARIO == idUsuario).ToList();
+            var id = User.Identity.GetId();
+
+            //busca as ofertas que nao foram negadas (ou seja, novas ou aceitas)
+            var domain = ctx.Oferta.Where(w => w.ID_USUARIO == id & w.ACEITA != false).Select(s => s.SERVICO).ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
 
@@ -37,9 +42,16 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Servico/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(Guid id)
         {
-            return View();
+            var Dominio = ctx.Servico.Include(i => i.PROPOSTAS).First(f => f.ID_SERVICO == id);
+
+            var model = Mapper.Map<ServicoViewModel_full>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
+
+            model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+            model.POSSUI_PROPOSTA = Dominio.PROPOSTAS.Any();
+
+            return View(model);
         }
 
         // GET: Servico/Create
@@ -48,6 +60,7 @@ namespace JOB.WEB.Controllers
             var model = new ServicoViewModel_full();
 
             var idEspecialidade = int.Parse(Request.QueryString["ID_ESPECIALIDADE"]);
+            model.ID_ESPECIALIDADE = idEspecialidade;
             model.SUB_ESPECIALIDADES = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade).ToList();
             return View(model);
         }
@@ -69,7 +82,7 @@ namespace JOB.WEB.Controllers
                 ctx.Oferta.Add(objOferta);
 
                 ctx.SaveChanges();
-                return RedirectToAction("Index", "Profissional");
+                return RedirectToAction("Index", "Profissional", new { idEspecialidade = obj.ID_ESPECIALIDADE });
             }
             catch (Exception ex)
             {
@@ -78,48 +91,40 @@ namespace JOB.WEB.Controllers
             }
         }
 
-        // GET: Servico/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Aceitar(Guid id)
         {
-            return View();
+            var domain = ctx.Proposta.First(f => f.ID_SERVICO == id);
+
+            var model = Mapper.Map<PropostaViewModel>(domain);
+
+            return View(model);
         }
 
-        // POST: Servico/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Aceitar(PropostaViewModel obj, Guid id)
         {
-            try
-            {
-                // TODO: Add update logic here
+            var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            domain.AceitarOferta();
+            ctx.Entry(domain).State = EntityState.Modified;
+
+            var proposta = new PROPOSTA_SERVICO(id, User.Identity.GetId(), obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
+            ctx.Proposta.Add(proposta);
+
+            ctx.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
-        // GET: Servico/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Rejeitar(Guid id)
         {
-            return View();
-        }
+            var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
 
-        // POST: Servico/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
+            domain.RejeitarOferta();
+            ctx.Entry(domain).State = EntityState.Modified;
+            ctx.SaveChanges();
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
     }
 }
