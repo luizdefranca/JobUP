@@ -658,6 +658,9 @@
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Shared\_LoginStart.cshtml" />
     <Content Include="Views\Especialidade\Index.cshtml" />
+    <Content Include="Views\ServicoPrivado\Index.cshtml" />
+    <Content Include="Views\ServicoPrivado\Details.cshtml" />
+    <Content Include="Views\ServicoPrivado\Aceitar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

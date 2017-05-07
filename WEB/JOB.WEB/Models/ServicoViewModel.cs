@@ -101,5 +101,7 @@ namespace JOB.WEB.Models
         [Required]
         [Display(Name = "Expectativa de Prazo")]
         public EnumTempoServico TEMPO_SERVICO { get; set; }
+
+        public bool POSSUI_PROPOSTA { get; set; }
     }
 }

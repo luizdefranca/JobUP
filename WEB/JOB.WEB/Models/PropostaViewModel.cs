@@ -15,12 +15,16 @@ namespace JOB.WEB.Models
         [Display(Name = "Data Proposta")]
         public DateTime DT_PROPOSTA { get; set; }
 
-        [Display(Name = "Dureção do Serviço")]
+        [Display(Name = "Duração do Serviço")]
         public EnumDuracaoServico DURACAO_SERVICO { get; set; }
+
+        [Display(Name = "Valor da Duração do Serviço")]
+        public int VALOR_DURACAO_SERVICO { get; set; }
 
         [Display(Name = "Valor Proposta")]
         public double VL_PROPOSTA { get; set; }
 
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Justificativa")]
         public string JUSTIFICATIVA { get; set; }
 

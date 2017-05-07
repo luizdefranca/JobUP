@@ -140,6 +140,10 @@
     <Compile Include="Migrations\201705061916479_imagem.Designer.cs">
       <DependentUpon>201705061916479_imagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705071416144_valorduracao.cs" />
+    <Compile Include="Migrations\201705071416144_valorduracao.Designer.cs">
+      <DependentUpon>201705071416144_valorduracao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Config\UsuarioConfig.cs" />
@@ -206,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705061916479_imagem.resx">
       <DependentUpon>201705061916479_imagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705071416144_valorduracao.resx">
+      <DependentUpon>201705071416144_valorduracao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

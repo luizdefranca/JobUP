@@ -111,6 +111,8 @@ namespace JOB.DATA.Domain
         private void InicializaVariaveis()
         {
             this.PERFIS_PROFISSIONAIS = new HashSet<PERFIL_PROFISSIONAL>();
+            this.OFERTAS_SERVICO = new HashSet<OFERTA_SERVICO>();
+            this.PROPOSTAS_SERVICO = new HashSet<PROPOSTA_SERVICO>();
         }
 
         public Guid ID_USUARIO { get; private set; }
@@ -126,8 +128,6 @@ namespace JOB.DATA.Domain
         public bool APROVADO { get; private set; }
         public bool ATIVO { get; private set; }
         public bool BLOQUEADO { get; private set; }
-        //public ENDERECO ENDERECO { get; private set; }
-        //public CONTATO CONTATO { get; private set; }
 
         public EnumUF UF { get; private set; }
         public string CEP { get; private set; }
