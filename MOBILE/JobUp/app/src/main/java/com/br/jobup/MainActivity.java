@@ -49,7 +49,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.br.jobup.R.id.email;
 
 
 public class MainActivity extends AppCompatActivity

@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-import static com.br.jobup.R.id.email;
 
 /**
  * Created by luizramos on 09/04/17.

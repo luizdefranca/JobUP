@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId "com.br.jobup"
-        minSdkVersion 14
-        targetSdkVersion 24
+        minSdkVersion 15
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -30,8 +30,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile files('src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar')
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.android.support:design:24.0.0'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:design:25.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.microsoft.azure:azure-mobile-services-android-sdk:2.0.3'
     compile 'com.google.code.gson:gson:2.2.2'
@@ -41,4 +41,6 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit-adapters:2.2.0'
     compile 'com.squareup.okhttp:okhttp:2.7.2'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.github.hynra:GSON-SharedPreferences:1.1'
+    compile 'codelight.studios:android-smart-login:1.2'
 }

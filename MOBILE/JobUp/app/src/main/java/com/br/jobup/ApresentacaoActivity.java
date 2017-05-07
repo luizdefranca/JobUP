@@ -1,32 +1,40 @@
+
 package com.br.jobup;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
-import com.br.jobup.dao.DatabaseHelper;
+/*
+ * Created by Luiz Carlos Ramos on 03/05/17 08:45
+ *
+ * Copyright (c) 2017. All rights reserved.
+ * Last modified 23/08/16 07:01
+ */
 
 public class ApresentacaoActivity extends AppCompatActivity {
-    public static final String TAG = ApresentacaoActivity.class.getSimpleName();
+
+    //Set waktu lama splashscreen
     private static int splashInterval = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_apresentacao);
 
-
-    }
-    public void LoginActivity(View view) {
-        DatabaseHelper.newInstance(this);
         new Handler().postDelayed(new Runnable() {
 
             @Override
             public void run() {
-                Intent LoginActivity = new Intent(ApresentacaoActivity.this, LoginActivity.class);
-                startActivity(LoginActivity);
+                Intent i = new Intent(ApresentacaoActivity.this, Login.class);
+                startActivity(i);
                 this.finish();
             }
 
@@ -34,13 +42,6 @@ public class ApresentacaoActivity extends AppCompatActivity {
             }
         }, splashInterval);
 
+    };
 
-        //List<Usuario> usuarios = new UsuarioService().getAll();
-
-
-
-
-
-//        Log.i(TAG, "usuario: " + usuarios.get(0).getNome());
-    }
 }

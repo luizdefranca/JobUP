@@ -15,15 +15,15 @@ import java.io.Serializable;
 
 public class Login implements Serializable {
 
-    private String email;
+    private String userName;
     private String password;
 
-    public String getEmail() {
-        return email;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -36,7 +36,7 @@ public class Login implements Serializable {
 
     public Login(String email, String password) {
 
-        this.email = email;
+        this.userName = email;
         this.password = password;
     }
 }

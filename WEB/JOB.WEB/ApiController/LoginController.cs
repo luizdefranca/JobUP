@@ -28,11 +28,12 @@ namespace JOB.WEB.ApiController
                 }
             }
 
+            //códigos 200 - > login efetuado; 403 -> usuario bloqueado; 412 -> requer verificacao de email; 400 -> falha no login
             var result = await SignInManager.PasswordSignInAsync(Email, Password, false, shouldLockout: true);
             switch (result)
             {
                 case SignInStatus.Success:
-                    return Request.CreateResponse(HttpStatusCode.OK, "Success");
+                    return Request.CreateResponse(HttpStatusCode.OK, user.Id);
 
                 case SignInStatus.LockedOut:
                     return Request.CreateResponse(HttpStatusCode.Forbidden, new HttpError("LockedOut"));
@@ -45,7 +46,6 @@ namespace JOB.WEB.ApiController
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Failure"));
             }
         }
-
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
         {
             var user = await UserManager.FindByNameAsync(Login);
@@ -74,5 +74,7 @@ namespace JOB.WEB.ApiController
 
             return Request.CreateResponse(HttpStatusCode.OK, newUser.Id);
         }
+
+
     }
 }
