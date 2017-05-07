@@ -206,6 +206,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
     <Compile Include="Controllers\ProfissionalController.cs" />
+    <Compile Include="Controllers\PropostaController.cs" />
     <Compile Include="Controllers\ServicoPrivadoController.cs" />
     <Compile Include="Controllers\ServicoPublicoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -661,6 +662,7 @@
     <Content Include="Views\ServicoPrivado\Index.cshtml" />
     <Content Include="Views\ServicoPrivado\Details.cshtml" />
     <Content Include="Views\ServicoPrivado\Aceitar.cshtml" />
+    <Content Include="Views\Proposta\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">
