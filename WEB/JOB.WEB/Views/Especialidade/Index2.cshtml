@@ -1,0 +1,39 @@
+﻿@model IEnumerable<JOB.WEB.Models.EspecialidadeViewModel>
+
+@{
+    ViewBag.Title = "Especialidade";
+    ViewBag.SubTitle = "Lista";
+}
+
+@section Menu {
+    @Scripts.Render("~/Scripts/Global/ServicoPublico/menu")
+}
+
+<div class="box">
+    <div class="box-body">
+        <div class="box-header with-border">
+            <h3 class="box-title">Escolha primeiro a especialidade do profissional que deseja</h3>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <a style="cursor: pointer" href="/ServicoPublico/Create/?ID_ESPECIALIDADE=@item.ID_ESPECIALIDADE">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box" style="background-color: whitesmoke;">
+                            <span class="info-box-icon"><img src="~/img/@item.IMAGEM" width="48" height="48" style="margin-top: -10px;" /></span>
+                            <div class="info-box-content">
+                                <span>@Html.DisplayFor(modelItem => item.DESCRICAO)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#tblDados').DataTable();
+    });
+</script>

@@ -27,6 +27,30 @@ namespace JOB.WEB.Controllers
             return View(lstModel);
         }
 
+        // GET: Especialidade
+        public ActionResult Index2()
+        {
+            var lstDominio = ctx.Especialidade.Include(i => i.PERFIS_PROFISSIONAIS).ToList();
+
+            var lstModel = Mapper.Map<List<EspecialidadeViewModel>>(lstDominio);
+
+            return View(lstModel);
+        }
+
+        // GET: Especialidade
+        public ActionResult Index3()
+        {
+            var lstDominio = ctx.Especialidade.Include(i => i.PERFIS_PROFISSIONAIS).ToList();
+
+            var lstModel = Mapper.Map<List<EspecialidadeViewModel>>(lstDominio);
+
+            foreach (var item in lstModel)
+            {
+                item.QTD_PROFISSIONAIS = lstDominio.First(f => f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).PERFIS_PROFISSIONAIS.Count();
+            }
+
+            return View(lstModel);
+        }
         // GET: Especialidade/Details/5
         public ActionResult Details(int id)
         {

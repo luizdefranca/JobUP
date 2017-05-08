@@ -1,5 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using JOB.DATA;
+using JOB.DATA.Domain;
+using JOB.WEB.Extensions;
+using JOB.WEB.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,82 +14,44 @@ namespace JOB.WEB.Controllers
 {
     public class PropostaController : Controller
     {
+        Contexto ctx = new Contexto();
         // GET: Proposta
         public ActionResult Index()
         {
-            return View();
+            var lstDominio = ctx.Especialidade.Include(i => i.PERFIS_PROFISSIONAIS).ToList();
+
+            var lstModel = Mapper.Map<List<EspecialidadeViewModel>>(lstDominio);
+
+            foreach (var item in lstModel)
+            {
+                item.QTD_PROFISSIONAIS = lstDominio.First(f => f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).PERFIS_PROFISSIONAIS.Count();
+            }
+
+            return View(lstModel);
         }
 
-        // GET: Proposta/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Proposta/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new PropostaViewModel();
+            
+            return View(model);
         }
 
         // POST: Proposta/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(PropostaViewModel obj, Guid id)
         {
-            try
-            {
-                // TODO: Add insert logic here
+            var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            domain.AceitarOferta();
+            ctx.Entry(domain).State = EntityState.Modified;
 
-        // GET: Proposta/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+            var prop = new PROPOSTA_SERVICO(id, User.Identity.GetId(), obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
+            ctx.Proposta.Add(prop);
 
-        // POST: Proposta/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
+            ctx.SaveChanges();
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Proposta/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Proposta/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            return RedirectToAction("Index");
+        }        
     }
 }
