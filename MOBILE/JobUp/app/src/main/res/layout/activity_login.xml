@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.br.jobup.LoginActivity">
 
-    <!-- UsuarioLogin progress -->
+    <!-- UsuarioSignIn progress -->
     <ProgressBar
         android:id="@+id/login_progress"
         style="?android:attr/progressBarStyleLarge"
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Senha"
-                    android:imeActionId="@+id/usuarioLogin"
+                    android:imeActionId="@+id/usuarioSignIn"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"

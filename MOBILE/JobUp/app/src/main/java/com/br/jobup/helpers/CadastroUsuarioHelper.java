@@ -1,16 +1,13 @@
 package com.br.jobup.helpers;
 
 import android.content.res.Resources;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.br.jobup.CadastroActivity;
 import com.br.jobup.R;
-import com.br.jobup.models.Contato;
 import com.br.jobup.models.Cpf;
 import com.br.jobup.models.Email;
-import com.br.jobup.models.Endereco;
 import com.br.jobup.models.Rg;
 import com.br.jobup.models.Telefone;
 import com.br.jobup.models.Usuario;
@@ -63,15 +60,15 @@ public class CadastroUsuarioHelper {
         campoRgNr.setText(usuario.getRg().getNr());
         campoRgUf.setTag(usuario.getRg().getUf(),Resources.getSystem().getStringArray(R.array.estados));
         campoDtNascimento.setText(Parsers.parseDataToStringNormal(usuario.getDataNascimento()));
-        campoCep.setText(usuario.getEndereco().getCep());
-        campoUf.setTag(usuario.getEndereco().getUf(),Resources.getSystem().getStringArray(R.array.estados));
-        campoLogradouro.setText(usuario.getEndereco().getLogradouro());
-        campoComplemento.setText(usuario.getEndereco().getComplemento());
-        campoBairro.setText(usuario.getEndereco().getBairro());
-        campoCidade.setText(usuario.getEndereco().getCidade());
-        campoFixo.setText(usuario.getContato().getFixo().getNr());
-        campoCelular.setText(usuario.getContato().getCelular().getNr());
-        campoEmail.setText(usuario.getContato().getEmail().getEmail());
+        campoCep.setText(usuario.getCep());
+        campoUf.setTag(usuario.getUf(),Resources.getSystem().getStringArray(R.array.estados));
+        campoLogradouro.setText(usuario.getLogradouro());
+        campoComplemento.setText(usuario.getComplemento());
+        campoBairro.setText(usuario.getBairro());
+        campoCidade.setText(usuario.getCidade());
+        campoFixo.setText(usuario.getFixo().getNr());
+        campoCelular.setText(usuario.getCelular().getNr());
+        campoEmail.setText(usuario.getEmail().getEmail());
     }
 
     public Usuario getUsuario(){
@@ -81,32 +78,6 @@ public class CadastroUsuarioHelper {
         usuario.setRg(new Rg(campoRgUf.getSelectedItemPosition(), campoRgNr.getText().toString()));
         usuario.setDataNascimento(Parsers
                 .parseStringToDataNormal(campoDtNascimento.getText().toString()));
-
-        // public Endereco(String idUsuario,
-        // int uf,
-        // String cep,
-        // String logradouro,
-        // String complemento,
-        // String bairro,
-        // String cidade)
-        usuario.setEndereco(new Endereco(
-                usuario.getIdUsuario(),
-                campoUf.getSelectedItemPosition(),
-                campoCep.getText().toString(),
-                campoLogradouro.getText().toString(),
-                campoComplemento.getText().toString(),
-                campoBairro.getText().toString(),
-                campoCidade.getText().toString()
-        ));
-
-        // public IContatoAPI(String idUsuario, Telefone fixo, Telefone celular, Email email)
-        usuario.setContato(new Contato(
-                usuario.getIdUsuario(),
-                new Telefone(campoFixo.getText().toString()),
-                new Telefone(campoCelular.getText().toString()),
-                new Email(campoEmail.getText().toString())
-        ));
-
         return usuario;
     }
 }

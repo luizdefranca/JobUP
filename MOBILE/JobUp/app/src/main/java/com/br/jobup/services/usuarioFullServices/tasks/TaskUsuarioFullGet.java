@@ -45,7 +45,7 @@ public class TaskUsuarioFullGet extends AsyncTaskLoader<Usuario> {
 
         ParserUsuarioFull parser = new ParserUsuarioFull();
 
-        mUsuario = parser.get();
+   //     mUsuario = parser.get();
         return mUsuario;
     }
 }

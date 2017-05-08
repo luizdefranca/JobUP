@@ -31,10 +31,10 @@ import android.widget.Toast;
 
 import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
-import com.br.jobup.models.UsuarioLogin;
+import com.br.jobup.models.UsuarioSignIn;
 import com.br.jobup.models.Usuario;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
-import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioLogin;
+import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity
 //                if (ParseUser.getCurrentUser().getUsername() != null) {
 //                    startActivity(new Intent(Home.this, AccountScreen.class));
 //                } else {
-//                    startActivity(new Intent(Home.this, UsuarioLogin.class));
+//                    startActivity(new Intent(Home.this, UsuarioSignIn.class));
 //                }
             }
         });
@@ -309,14 +309,14 @@ public class MainActivity extends AppCompatActivity
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
         } else if (id == R.id.nav_slideshow) {
-            final UsuarioLogin usuarioLogin = new UsuarioLogin("luizramospe@gmail.com", "Lc1234");
-            ParserUsuarioLogin parse = new ParserUsuarioLogin(usuarioLogin);
+            final UsuarioSignIn usuarioSignIn = new UsuarioSignIn("luizramospe@gmail.com", "Lc1234");
+            ParserUsuarioSignIn parse = new ParserUsuarioSignIn(usuarioSignIn);
              Call<String> loginCall = parse.get();
             loginCall.enqueue(new Callback<String>() {
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
                     if(response.code() == 200 && response.message().equals("Success")){
-                        Log.e(TAG, "onResponse: " + "UsuarioLogin efetuado com sucesso" );
+                        Log.e(TAG, "onResponse: " + "UsuarioSignIn efetuado com sucesso" );
                     }else if(response.message()
                             .equals("You must have a confirmed email to log on. The confirmation"
                                     + " token has been resent to your email account.") 

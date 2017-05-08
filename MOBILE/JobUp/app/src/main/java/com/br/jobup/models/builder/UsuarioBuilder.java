@@ -1,23 +1,19 @@
 package com.br.jobup.models.builder;
 
-import com.br.jobup.models.Avaliacoes;
-import com.br.jobup.models.Contato;
 import com.br.jobup.models.Cpf;
 import com.br.jobup.models.Email;
-import com.br.jobup.models.Endereco;
-import com.br.jobup.models.Formacao;
 import com.br.jobup.models.PerfilProfisional;
 import com.br.jobup.models.Rg;
 import com.br.jobup.models.Telefone;
 import com.br.jobup.models.Usuario;
 import com.br.jobup.util.Parsers;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static android.R.attr.data;
-import static android.R.attr.id;
 import static com.br.jobup.util.Parsers.parseStringToDataNormal;
 
 /**
@@ -38,8 +34,16 @@ public class UsuarioBuilder {
     private Date dataAprovacao;
     private Date dataOrdenacao;
     private boolean aprovado;
-    private Endereco endereco;
-    private Contato contato;
+    public int uf;
+    public String cep;
+    public String logradouro;
+    public String complemento;
+    public String bairro;
+    public String cidade;
+    public Telefone fixo;
+    public Telefone celular;
+    public Email email;
+
     private boolean ativo;
     private List<PerfilProfisional> perfisProfissionais;
 
@@ -96,25 +100,51 @@ public class UsuarioBuilder {
         return this;
     }
 
-    /*
-    private int Uf;
-    private String Cep;
-    private String logradouro;
-    private String Complemento;
-    private String Bairro;
-    private String Cidade;
-     */
-
-    public UsuarioBuilder Endereco(String idUsuario, int uf, String cep, String logradouro, String complemento,
-                                   String bairro, String cidade){
-        this.endereco = new Endereco(idUsuario, uf, cep, logradouro, complemento,bairro, cidade );;
+    public UsuarioBuilder Uf(int uf){
+        this.uf = uf;
         return this;
     }
 
-    public UsuarioBuilder Contato(String idUsuario, String fixo, String celular, String email){
-        this.contato = new Contato(idUsuario, new Telefone(fixo), new Telefone(celular), new Email(email) );
+    public UsuarioBuilder Cep(String cep){
+        this.cep = cep;
         return this;
     }
+
+    public UsuarioBuilder Logradouro(String logradouro){
+        this.logradouro = logradouro;
+        return this;
+    }
+
+    public UsuarioBuilder Complemento(String complemento){
+        this.complemento = complemento;
+        return this;
+    }
+
+    public UsuarioBuilder Bairro(String bairro){
+        this.bairro = bairro;
+        return this;
+    }
+
+    public UsuarioBuilder Cidade(String cidade){
+        this.cidade = cidade;
+        return this;
+    }
+
+    public UsuarioBuilder Fixo(Telefone fixo){
+        this.fixo = fixo;
+        return this;
+    }
+
+    public UsuarioBuilder Celular(Telefone celular){
+        this.celular = celular;
+        return this;
+    }
+
+    public UsuarioBuilder Email(Email email){
+        this.email = email;
+        return this;
+    }
+
 
     public UsuarioBuilder Ativo(boolean ativo){
         this.ativo = ativo;

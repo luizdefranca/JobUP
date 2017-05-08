@@ -136,16 +136,15 @@ public class UsuarioDao implements IUsuarioDao {
 //            values.put(Constantes.USUARIO_DT_ALTERACAO, usuario.getDataAlteracao().getTime());
 //            values.put(Constantes.USUARIO_DT_APROVACAO, usuario.getDataAprovacao().getTime());
 //            values.put(Constantes.USUARIO_DT_ORDENACAO, usuario.getDataOrdenacao().getTime());
-            values.put(Constantes.USUARIO_ENDERECO_UF, usuario.getEndereco().getUf());
-            values.put(Constantes.USUARIO_ENDERECO_CEP, usuario.getEndereco().getCep());
-            values.put(Constantes.USUARIO_ENDERECO_LOGRADOURO, usuario.getEndereco().getLogradouro());
-            values.put(Constantes.USUARIO_ENDERECO_COMPLEMENTO, usuario.getEndereco().getComplemento());
-            values.put(Constantes.USUARIO_ENDERECO_BAIRRO, usuario.getEndereco().getBairro());
-            values.put(Constantes.USUARIO_ENDERECO_CIDADE, usuario.getEndereco().getCidade());
-            values.put(Constantes.USUARIO_FIXO, usuario.getContato().getFixo().getNr());
-            values.put(Constantes.USUARIO_CELULAR, usuario.getContato().getCelular().getNr());
-            values.put(Constantes.USUARIO_EMAIL, usuario.getContato().getEmail().email);
-
+            values.put(Constantes.USUARIO_ENDERECO_UF, usuario.getUf());
+            values.put(Constantes.USUARIO_ENDERECO_CEP, usuario.getCep());
+            values.put(Constantes.USUARIO_ENDERECO_LOGRADOURO, usuario.getLogradouro());
+            values.put(Constantes.USUARIO_ENDERECO_COMPLEMENTO, usuario.getComplemento());
+            values.put(Constantes.USUARIO_ENDERECO_BAIRRO, usuario.getBairro());
+            values.put(Constantes.USUARIO_ENDERECO_CIDADE, usuario.getCidade());
+            values.put(Constantes.USUARIO_FIXO, usuario.getFixo().getNr());
+            values.put(Constantes.USUARIO_CELULAR, usuario.getCelular().getNr());
+            values.put(Constantes.USUARIO_EMAIL, usuario.getEmail().getEmail());
             try {
                 long t = database.insert(Constantes.TABELA_USUARIO, null, values);
                 // listener.onSQLOperationSucceded("Customer Added");
@@ -173,15 +172,15 @@ public class UsuarioDao implements IUsuarioDao {
 //            values.put(Constantes.USUARIO_DT_ALTERACAO, usuario.getDataAlteracao().getTime());
 //            values.put(Constantes.USUARIO_DT_APROVACAO, usuario.getDataAprovacao().getTime());
 //            values.put(Constantes.USUARIO_DT_ORDENACAO, usuario.getDataOrdenacao().getTime());
-            values.put(Constantes.USUARIO_ENDERECO_UF, usuario.getEndereco().getUf());
-            values.put(Constantes.USUARIO_ENDERECO_CEP, usuario.getEndereco().getCep());
-            values.put(Constantes.USUARIO_ENDERECO_LOGRADOURO, usuario.getEndereco().getLogradouro());
-            values.put(Constantes.USUARIO_ENDERECO_COMPLEMENTO, usuario.getEndereco().getComplemento());
-            values.put(Constantes.USUARIO_ENDERECO_BAIRRO, usuario.getEndereco().getBairro());
-            values.put(Constantes.USUARIO_ENDERECO_CIDADE, usuario.getEndereco().getCidade());
-            values.put(Constantes.USUARIO_FIXO, usuario.getContato().getFixo().getNr());
-            values.put(Constantes.USUARIO_CELULAR, usuario.getContato().getCelular().getNr());
-            values.put(Constantes.USUARIO_EMAIL, usuario.getContato().getEmail().email);
+            values.put(Constantes.USUARIO_ENDERECO_UF, usuario.getUf());
+            values.put(Constantes.USUARIO_ENDERECO_CEP, usuario.getCep());
+            values.put(Constantes.USUARIO_ENDERECO_LOGRADOURO, usuario.getLogradouro());
+            values.put(Constantes.USUARIO_ENDERECO_COMPLEMENTO, usuario.getComplemento());
+            values.put(Constantes.USUARIO_ENDERECO_BAIRRO, usuario.getBairro());
+            values.put(Constantes.USUARIO_ENDERECO_CIDADE, usuario.getCidade());
+            values.put(Constantes.USUARIO_FIXO, usuario.getFixo().getNr());
+            values.put(Constantes.USUARIO_CELULAR, usuario.getCelular().getNr());
+            values.put(Constantes.USUARIO_EMAIL, usuario.getEmail().email);
             //Now update the this row with the information supplied
             int result =  database.update(Constantes.TABELA_USUARIO, values,
                     Constantes.USUARIO_ID + " = " + usuario.getIdUsuario(), null);

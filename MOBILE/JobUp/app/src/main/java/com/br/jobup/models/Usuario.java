@@ -5,6 +5,7 @@ import android.database.Cursor;
 import com.br.jobup.util.Constantes;
 import com.br.jobup.util.Parsers;
 import com.br.jobup.validations.Formatter;
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
@@ -24,31 +25,242 @@ public class Usuario implements Serializable{
 
 
     @SerializedName("ID_USUARIO")
-    private String idUsuario;
+    @Expose
+    public String idUsuario;
     @SerializedName("NOME")
-    private String nome;
+    @Expose
+    public String nome;
     @SerializedName("Cpf")
-    private Cpf cpf;
+    @Expose
+    public Cpf cpf;
     @SerializedName("Rg")
-    private Rg rg;
+    @Expose
+    public Rg rg;
     @SerializedName("DT_NASCIMENTO")
-    private Date dataNascimento;
+    @Expose
+    public Date dtNascimento;
     @SerializedName("DT_INCLUSAO")
-    private Date dataInclusao;
+    @Expose
+    public Date dtInclusao;
     @SerializedName("DT_ALTERACAO")
-    private Date dataAlteracao;
+    @Expose
+    public Date dtAlteracao;
     @SerializedName("DT_APROVACAO")
-    private Date dataAprovacao;
+    @Expose
+    public Date dtAtivacao;
+    @SerializedName("DT_ATIVACAO")
+    @Expose
+    public Date dtOrdenacao;
     @SerializedName("DT_ORDENACAO")
-    private Date dataOrdenacao;
+    @Expose
+    public Date dtAprovacao;
     @SerializedName("APROVADO")
-    private boolean aprovado;
-    @SerializedName("ENDERECO")
-    private Endereco endereco;
-    @SerializedName("CONTATO")
-    private Contato contato;
+    @Expose
+    public Boolean aprovado;
     @SerializedName("ATIVO")
-    private boolean ativo;
+    @Expose
+    public Boolean ativo;
+    @SerializedName("BLOQUEADO")
+    @Expose
+    public Boolean bloqueado;
+    @SerializedName("UF")
+    @Expose
+    public int uf;
+    @SerializedName("CEP")
+    @Expose
+    public String cep;
+    @SerializedName("LOGRADOURO")
+    @Expose
+    public String logradouro;
+    @SerializedName("COMPLEMENTO")
+    @Expose
+    public String complemento;
+    @SerializedName("BAIRRO")
+    @Expose
+    public String bairro;
+    @SerializedName("CIDADE")
+    @Expose
+    public String cidade;
+    @SerializedName("Fixo")
+    @Expose
+    public Telefone fixo;
+    @SerializedName("Celular")
+    @Expose
+    public Telefone celular;
+    @SerializedName("Email")
+    @Expose
+    public Email email;
+
+    public Date getDtNascimento() {
+        return dtNascimento;
+    }
+
+    public void setDtNascimento(Date dtNascimento) {
+        this.dtNascimento = dtNascimento;
+    }
+
+    public Date getDtInclusao() {
+        return dtInclusao;
+    }
+
+    public void setDtInclusao(Date dtInclusao) {
+        this.dtInclusao = dtInclusao;
+    }
+
+    public Date getDtAlteracao() {
+        return dtAlteracao;
+    }
+
+    public void setDtAlteracao(Date dtAlteracao) {
+        this.dtAlteracao = dtAlteracao;
+    }
+
+    public Date getDtAtivacao() {
+        return dtAtivacao;
+    }
+
+    public void setDtAtivacao(Date dtAtivacao) {
+        this.dtAtivacao = dtAtivacao;
+    }
+
+    public Date getDtOrdenacao() {
+        return dtOrdenacao;
+    }
+
+    public void setDtOrdenacao(Date dtOrdenacao) {
+        this.dtOrdenacao = dtOrdenacao;
+    }
+
+    public Date getDtAprovacao() {
+        return dtAprovacao;
+    }
+
+    public void setDtAprovacao(Date dtAprovacao) {
+        this.dtAprovacao = dtAprovacao;
+    }
+
+    public Boolean getAprovado() {
+        return aprovado;
+    }
+
+    public void setAprovado(Boolean aprovado) {
+        this.aprovado = aprovado;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
+
+    public Boolean getBloqueado() {
+        return bloqueado;
+    }
+
+    public void setBloqueado(Boolean bloqueado) {
+        this.bloqueado = bloqueado;
+    }
+
+    public int getUf() {
+        return uf;
+    }
+
+    public void setUf(int uf) {
+        this.uf = uf;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public Telefone getFixo() {
+        return fixo;
+    }
+
+    public void setFixo(Telefone fixo) {
+        this.fixo = fixo;
+    }
+
+    public Telefone getCelular() {
+        return celular;
+    }
+
+    public void setCelular(Telefone celular) {
+        this.celular = celular;
+    }
+
+    public Email getEmail() {
+        return email;
+    }
+
+    public void setEmail(Email email) {
+        this.email = email;
+    }
+
+    public List<Object> getOfertaServico() {
+        return ofertaServico;
+    }
+
+    public void setOfertaServico(List<Object> ofertaServico) {
+        this.ofertaServico = ofertaServico;
+    }
+
+    public List<Object> getPropostaServico() {
+        return propostaServico;
+    }
+
+    public void setPropostaServico(List<Object> propostaServico) {
+        this.propostaServico = propostaServico;
+    }
+
+    @SerializedName("PERFIS_PROFISSIONAIS")
+    @Expose
+
+    public List<PerfilProfisional> perfisProfissionais;
+    @SerializedName("OFERTAS_SERVICO")
+    @Expose
+    public List<Object> ofertaServico;
+    @SerializedName("PROPOSTAS_SERVICO")
+    @Expose
+    public List<Object> propostaServico;
 
     public boolean isAtivo() {
         return ativo;
@@ -58,8 +270,7 @@ public class Usuario implements Serializable{
         this.ativo = ativo;
     }
 
-    //Esta propriedade nao sera persistida
-    private List<PerfilProfisional> perfisProfissionais;
+
 
     //Sera usada uma string json como uma lista de perfis para persistir
     //no banco de dados
@@ -70,20 +281,31 @@ public class Usuario implements Serializable{
         this.idUsuario = idUsuario;
     }
 
-    public Usuario(String id, String nome, Rg rg, Date dtNascimento, Date dtInclusao, Date dtAlteracao, Date dtAprovacao, Date dtOrdenacao, boolean aprovado, boolean ativo, Endereco endereco, Contato contato, List<PerfilProfisional> perfilProfisionals) {
+    public Usuario(String id, String nome, Rg rg, Cpf cpf,Date dtNascimento, Date dtInclusao, Date dtAlteracao,
+                   Date dtAprovacao, Date dtOrdenacao, boolean aprovado, boolean ativo,
+                   String logradouro, String complemento, String bairro, String cidade, int uf,
+                   String cep, Telefone fixo, Telefone celular, Email email,
+                   List<PerfilProfisional> perfilProfisionais) {
             this.idUsuario = id;
             this.nome = nome;
             this.cpf = cpf;
             this.rg = rg;
-            this.dataNascimento = dataNascimento;
-            this.dataInclusao = dataInclusao;
-            this.dataAlteracao = dataAlteracao;
-            this.dataAprovacao = dataAprovacao;
-            this.dataOrdenacao = dataOrdenacao;
+            this.dtNascimento = dtNascimento;
+            this.dtInclusao = dtInclusao;
+            this.dtAlteracao = dtAlteracao;
+            this.dtAprovacao = dtAprovacao;
+            this.dtOrdenacao = dtOrdenacao;
             this.aprovado = aprovado;
-            this.endereco = endereco;
-            this.contato = contato;
-            this.perfisProfissionais = perfisProfissionais;
+            this.logradouro = logradouro;
+            this.complemento = complemento;
+            this.bairro = bairro;
+            this.cidade = cidade;
+            this.uf = uf;
+            this.cep = cep;
+            this.fixo = fixo;
+            this.celular = celular;
+            this.email = email;
+            this.perfisProfissionais = perfilProfisionais;
 
     }
 
@@ -103,33 +325,36 @@ public class Usuario implements Serializable{
         this.perfisProfissionais = perfisProfissionais;
     }
 
-    public Usuario(
-
-                       String nome,
-                       Cpf cpf,
-                       Rg rg,
-                       Date dataNascimento,
-                       Date dataInclusao,
-                       Date dataAlteracao,
-                       Date dataAprovacao,
-                       Date dataOrdenacao,
-                       boolean aprovado,
-                       Endereco endereco,
-                       Contato contato,
-                       List<PerfilProfisional> perfisProfissionais) {
-
+    public Usuario(String nome, Cpf cpf, Rg rg, Date dtNascimento, Date dtInclusao, Date dtAlteracao,
+                   Date dtAtivacao, Date dtOrdenacao, Date dtAprovacao, Boolean aprovado,
+                   Boolean ativo, Boolean bloqueado, int uf, String cep, String logradouro,
+                   String complemento, String bairro, String cidade, Telefone fixo,
+                   Telefone celular, Email email, List<PerfilProfisional> perfisProfissionais,
+                   List<Object> ofertaServico, List<Object> propostaServico) {
         this.nome = nome;
         this.cpf = cpf;
         this.rg = rg;
-        this.dataNascimento = dataNascimento;
-        this.dataInclusao = dataInclusao;
-        this.dataAlteracao = dataAlteracao;
-        this.dataAprovacao = dataAprovacao;
-        this.dataOrdenacao = dataOrdenacao;
+        this.dtNascimento = dtNascimento;
+        this.dtInclusao = dtInclusao;
+        this.dtAlteracao = dtAlteracao;
+        this.dtAtivacao = dtAtivacao;
+        this.dtOrdenacao = dtOrdenacao;
+        this.dtAprovacao = dtAprovacao;
         this.aprovado = aprovado;
-        this.endereco = endereco;
-        this.contato = contato;
+        this.ativo = ativo;
+        this.bloqueado = bloqueado;
+        this.uf = uf;
+        this.cep = cep;
+        this.logradouro = logradouro;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.fixo = fixo;
+        this.celular = celular;
+        this.email = email;
         this.perfisProfissionais = perfisProfissionais;
+        this.ofertaServico = ofertaServico;
+        this.propostaServico = propostaServico;
     }
 
     public Usuario(){};
@@ -167,59 +392,59 @@ public class Usuario implements Serializable{
     }
 
     public Date getDataNascimento() {
-        return dataNascimento;
+        return dtNascimento;
     }
 
     public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
+        this.dtNascimento = dataNascimento;
     }
     public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = Parsers.parseStringToDataAPI(dataNascimento);
+        this.dtNascimento = Parsers.parseStringToDataAPI(dataNascimento);
     }
 
 
     public Date getDataInclusao() {
-        return dataInclusao;
+        return dtInclusao;
     }
 
     public void setDataInclusao(Date dataInclusao) {
-        this.dataInclusao = dataInclusao;
+        this.dtInclusao = dataInclusao;
     }
     public void setDataInclusao(String dataInclusao) {
-        this.dataInclusao = Parsers.parseStringToDataAPI(dataInclusao);
+        this.dtInclusao = Parsers.parseStringToDataAPI(dataInclusao);
     }
 
     public Date getDataAlteracao() {
-        return dataAlteracao;
+        return dtAlteracao;
     }
 
     public void setDataAlteracao(Date dataAlteracao) {
-        this.dataAlteracao = dataAlteracao;
+        this.dtAlteracao = dataAlteracao;
     }
     public void setDataAlteracao(String dataAlteracao) {
-        this.dataAlteracao = Parsers.parseStringToDataAPI(dataAlteracao);
+        this.dtAlteracao = Parsers.parseStringToDataAPI(dataAlteracao);
     }
 
     public Date getDataAprovacao() {
-        return dataAprovacao;
+        return dtAprovacao;
     }
 
     public void setDataAprovacao(Date dataAprovacao) {
-        this.dataAprovacao = dataAprovacao;
+        this.dtAprovacao = dataAprovacao;
     }
     public void setDataAprovacao(String dataAprovacao) {
-        this.dataAprovacao = Parsers.parseStringToDataAPI(dataAprovacao);
+        this.dtAprovacao = Parsers.parseStringToDataAPI(dataAprovacao);
     }
 
     public Date getDataOrdenacao() {
-        return dataOrdenacao;
+        return dtOrdenacao;
     }
 
     public void setDataOrdenacao(Date dataOrdenacao) {
-        this.dataOrdenacao = dataOrdenacao;
+        this.dtOrdenacao = dataOrdenacao;
     }
     public void setDataOrdenacao(String dataOrdenacao) {
-        this.dataOrdenacao = Parsers.parseStringToDataAPI(dataOrdenacao);
+        this.dtOrdenacao = Parsers.parseStringToDataAPI(dataOrdenacao);
     }
 
     public boolean isAprovado() {
@@ -230,21 +455,9 @@ public class Usuario implements Serializable{
         this.aprovado = aprovado;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
 
-    public Contato getContato() {
-        return contato;
-    }
 
-    public void setContato(Contato contato) {
-        this.contato = contato;
-    }
 
 //    public List<PerfilProfisional> getPerfisProfissionais() {
 //        Gson gson = new Gson();
@@ -295,24 +508,15 @@ public class Usuario implements Serializable{
         String nr = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_RG_NR));
         Rg rg = new Rg(uf, nr);
 
-        //Constroi um objeto endereco
-        //public Endereco(String idUsuario, String uf, String cep, String logradouro, String complemento, String bairro, String cidade)
-        int enderecoUf = cursor.getInt(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_UF));
+        int  Uf = cursor.getInt(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_UF));
         String cep = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_CEP));
         String logradouro = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_CEP));
         String complemento = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_COMPLEMENTO));
         String bairro = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_BAIRRO));
         String cidade = cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_ENDERECO_CIDADE));
-
-        Endereco endereco = new Endereco(id, enderecoUf,cep, logradouro, complemento, bairro, cidade);
-
-        //Constroi um objeto contato
-        //public IContatoAPI(String idUsuario, Telefone fixo, Telefone celular, Email email)
-        //Constroi um objeto telefone_fixo
         Telefone fixo = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_FIXO)));
         Telefone celular = new Telefone(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_CELULAR)));
         Email email = new Email(cursor.getString(cursor.getColumnIndex(Constantes.USUARIO_EMAIL)));
-        Contato contato = new Contato(id, fixo, celular, email);
 
         //Constroi um objeto usuario
         //  public Usuario(String nome, Cpf cpf, Rg rg, Date dataNascimento, Date dataInclusao,
@@ -322,8 +526,9 @@ public class Usuario implements Serializable{
 
         List<PerfilProfisional> perfilProfisionals = null;
 
-        Usuario usuario  = new Usuario(id, nome, rg, dtNascimento, dtInclusao, dtAlteracao,
-                dtAprovacao, dtOrdenacao, aprovado, ativo, endereco, contato, perfilProfisionals);
+        Usuario usuario  = new Usuario(id, nome, rg, cpf, dtNascimento, dtInclusao, dtAlteracao,
+                dtAprovacao, dtOrdenacao, aprovado, ativo, logradouro, complemento, bairro, cidade,
+                uf, cep, fixo, celular, email, perfilProfisionals);
         return usuario;
     }
 

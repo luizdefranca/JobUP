@@ -44,13 +44,13 @@ public class ParserUsuarioFull {
 
     }
 
-    public Usuario get(){
+    public Usuario get(String id){
 
         Usuario usuario = null;
         try {
             usuario = new RetroFitInicializador()
                     .createUsuarioAPI()
-                    .get("id")
+                    .get(id)
                     .execute()
                     .body();
 

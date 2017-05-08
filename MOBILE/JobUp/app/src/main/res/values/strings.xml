@@ -13,7 +13,7 @@
     <string name="title_activity_mensagem">Minhas Mensagens</string>
     <string name="title_activity_confirmacao">Contratação do Serviço</string>
 
-    <!-- Strings related to usuarioLogin -->
+    <!-- Strings related to usuarioSignIn -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>

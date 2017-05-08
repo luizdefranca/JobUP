@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/sign_up.xml",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/sign_up.xml"
-    },
-    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
         "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/layout/design_menu_item_action_area.xml"
     },
@@ -16,12 +12,12 @@
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/content_main.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/activity_detalhe_servico.xml",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_detalhe_servico.xml"
-    },
-    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/activity_mensagens.xml",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_mensagens.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/activity_detalhe_servico.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_detalhe_servico.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
@@ -34,10 +30,6 @@
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/layout/design_navigation_item_separator.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/activity_ativacao.xml",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_ativacao.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
@@ -94,6 +86,10 @@
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/activity_sign_in.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_sign_in.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
@@ -170,6 +166,10 @@
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
         "source": "/Users/luizramos/.android/build-cache/62938e1874c5345c0a99bde0882a90ef4cda5fa1/output/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/activity_sign_up.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_sign_up.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
