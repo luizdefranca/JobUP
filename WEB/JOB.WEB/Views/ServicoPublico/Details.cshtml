@@ -1,31 +1,15 @@
 ﻿@model JOB.WEB.Models.ServicoViewModel_full
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes da Oferta";
 }
 
-<h2>Details</h2>
 
 <div>
-    <h4>ServicoViewModel_full</h4>
+    
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_USUARIO)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ID_USUARIO)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_ESPECIALIDADE)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ID_ESPECIALIDADE)
-        </dd>
-
+    <dl class="dl-horizontal">  
+       
         <dt>
             @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
         </dt>
@@ -33,15 +17,6 @@
         <dd>
             @Html.DisplayFor(model => model.DESC_ESPECIALIDADE)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_SUB_ESPECIALIDADE)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ID_SUB_ESPECIALIDADE)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.DESC_SUB_ESPECIALIDADE)
         </dt>
@@ -84,6 +59,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_SERVICO }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Gerar Proposta", "../Proposta/Create", new { id = Model.ID_SERVICO }, new { id = Model.ID_SERVICO, @class = "btn btn-primary" })
+    @Html.ActionLink("Voltar", "Index", null,  new { @class = "btn btn-default" })
 </p>

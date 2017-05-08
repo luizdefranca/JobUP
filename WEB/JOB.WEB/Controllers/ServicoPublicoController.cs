@@ -15,14 +15,14 @@ namespace JOB.WEB.Controllers
 {
     public class ServicoPublicoController : Controller
     {
-        private Contexto ctx = new Contexto();
+        private Contexto ctx = new Contexto();       
 
-        // GET: Servico
         public ActionResult Index()
         {
             Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
 
-            var perfis = ctx.Usuario.Include(i => i.PERFIS_PROFISSIONAIS.Select(s => s.ESPECIALIDADE)).First(f => f.ID_USUARIO == idUsuario).PERFIS_PROFISSIONAIS.Where(w => w.APROVADO);
+            //var perfis = ctx.Usuario.Include(i => i.PERFIS_PROFISSIONAIS.Select(s => s.ESPECIALIDADE)).First(f => f.ID_USUARIO == idUsuario).PERFIS_PROFISSIONAIS.Where(w => w.APROVADO);
+            var perfis = ctx.Usuario.Include(i => i.PERFIS_PROFISSIONAIS.Select(s => s.ESPECIALIDADE)).First(f => f.ID_USUARIO == idUsuario).PERFIS_PROFISSIONAIS;
             var lstEspecUsuario = perfis.Select(s => s.ESPECIALIDADE.ID_ESPECIALIDADE).ToList();
 
             var domain = ctx.Servico.Where(w => w.PUBLICO & lstEspecUsuario.Contains(w.ID_ESPECIALIDADE)).ToList();
@@ -60,10 +60,13 @@ namespace JOB.WEB.Controllers
         public ActionResult Create()
         {
             var model = new ServicoViewModel_full();
-            model.ESPECIALIDADES = ctx.Especialidade.ToList();
+
+            var idEspecialidade = int.Parse(Request.QueryString["ID_ESPECIALIDADE"]);
+            model.ID_ESPECIALIDADE = idEspecialidade;
+            model.SUB_ESPECIALIDADES = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade).ToList();
             return View(model);
         }
-
+    
         // POST: Servico/Create
         [HttpPost]
         public ActionResult Create(ServicoViewModel_full obj)
@@ -77,7 +80,7 @@ namespace JOB.WEB.Controllers
 
                 ctx.Servico.Add(newobj);
                 ctx.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("../Especialidade/Index2");
             }
             catch (Exception ex)
             {
