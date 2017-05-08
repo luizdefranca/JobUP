@@ -35,24 +35,14 @@ MERGED from [com.android.support:design:25.0.0] /Users/luizramos/.android/build-
 MERGED from [com.android.support:transition:25.0.0] /Users/luizramos/.android/build-cache/8d2dbd76ed96d846f84d3320751f75b5da042727/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:9:5-20
 MERGED from [com.github.hynra:GSON-SharedPreferences:1.1] /Users/luizramos/.android/build-cache/e46f0b40f3a176ef4b6f12830ee43544f2b65d1d/output/AndroidManifest.xml:11:5-15:19
-MERGED from [codelight.studios:android-smart-login:1.2] /Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/AndroidManifest.xml:17:5-24:19
-MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:28:5-48:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/88448ae9b445b0a9421d8889de4dbca4b61bb0fb/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:cardview-v7:25.0.0] /Users/luizramos/.android/build-cache/88e81d12288b736d32cd8c0c688a1706e76b62ea/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:customtabs:25.0.0] /Users/luizramos/.android/build-cache/c3ce41fd503a08f615c048cfe8a3347b6b099882/output/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:19:5-25:19
-MERGED from [com.google.firebase:firebase-auth:10.2.0] /Users/luizramos/.android/build-cache/349abd07082a004141823286a8b55ee29e98640d/output/AndroidManifest.xml:19:5-20:19
-MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/luizramos/.android/build-cache/a7ed2bfd8b6721132cbfe838dad333ba4d0cd0d3/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:19:5-21:19
 MERGED from [com.android.support:support-v4:25.3.1] /Users/luizramos/.android/build-cache/bcdb2d04776e43a55473a447ee596d8f0cf01f7b/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/luizramos/.android/build-cache/e572c3427dbbad3b82090b548ac16ae21e949ba0/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/luizramos/.android/build-cache/fa4b6098b0132dbc3bf7197d5b1538a55b2a2379/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/luizramos/.android/build-cache/09da18f372e1791c46a79a48d60840f313afc6b8/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/luizramos/.android/build-cache/310c9bcc9ce478e447498ce79e5b772850cb82f6/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/88448ae9b445b0a9421d8889de4dbca4b61bb0fb/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.android/build-cache/e7ca83e80b049bb2e8e89ae982cc2b80018cf017/output/AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:14:9-41
@@ -86,12 +76,12 @@ ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:27:13-44
 	android:name
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:26:13-54
-activity#com.br.jobup.Login
+activity#com.br.jobup.AtivacaoActivity
 ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:28:9-30:56
 	android:theme
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:30:13-44
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:29:13-34
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:29:13-45
 activity#com.br.jobup.CadastroActivity
 ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml:31:9-33:63
 	android:label
@@ -151,25 +141,14 @@ MERGED from [com.android.support:recyclerview-v7:25.0.0] /Users/luizramos/.andro
 MERGED from [com.android.support:transition:25.0.0] /Users/luizramos/.android/build-cache/8d2dbd76ed96d846f84d3320751f75b5da042727/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.hynra:GSON-SharedPreferences:1.1] /Users/luizramos/.android/build-cache/e46f0b40f3a176ef4b6f12830ee43544f2b65d1d/output/AndroidManifest.xml:7:5-9:41
-MERGED from [codelight.studios:android-smart-login:1.2] /Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/AndroidManifest.xml:8:5-10:41
-MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:24:5-26:41
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/88448ae9b445b0a9421d8889de4dbca4b61bb0fb/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:25.0.0] /Users/luizramos/.android/build-cache/88e81d12288b736d32cd8c0c688a1706e76b62ea/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:customtabs:25.0.0] /Users/luizramos/.android/build-cache/c3ce41fd503a08f615c048cfe8a3347b6b099882/output/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-auth-base:10.2.0] /Users/luizramos/.android/build-cache/6f45a673918853a727699098924f0b34fc022cb6/output/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-auth:10.2.0] /Users/luizramos/.android/build-cache/349abd07082a004141823286a8b55ee29e98640d/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/luizramos/.android/build-cache/a7ed2bfd8b6721132cbfe838dad333ba4d0cd0d3/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:17:5-43
 MERGED from [com.android.support:support-v4:25.3.1] /Users/luizramos/.android/build-cache/bcdb2d04776e43a55473a447ee596d8f0cf01f7b/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/luizramos/.android/build-cache/e572c3427dbbad3b82090b548ac16ae21e949ba0/output/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/luizramos/.android/build-cache/fa4b6098b0132dbc3bf7197d5b1538a55b2a2379/output/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/luizramos/.android/build-cache/09da18f372e1791c46a79a48d60840f313afc6b8/output/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/luizramos/.android/build-cache/310c9bcc9ce478e447498ce79e5b772850cb82f6/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/88448ae9b445b0a9421d8889de4dbca4b61bb0fb/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.android/build-cache/e7ca83e80b049bb2e8e89ae982cc2b80018cf017/output/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.0.0] /Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/AndroidManifest.xml:23:9-59
@@ -179,85 +158,17 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.androi
 	android:minSdkVersion
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-activity#com.facebook.FacebookActivity
-ADDED from [codelight.studios:android-smart-login:1.2] /Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/AndroidManifest.xml:18:9-23:45
-MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:29:9-32:66
-	android:label
-		ADDED from [codelight.studios:android-smart-login:1.2] /Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/AndroidManifest.xml:21:13-45
-	android:configChanges
-		ADDED from [codelight.studios:android-smart-login:1.2] /Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/AndroidManifest.xml:20:13-96
-	android:theme
-		ADDED from [codelight.studios:android-smart-login:1.2] /Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/AndroidManifest.xml:22:13-72
-		REJECTED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:32:13-63
-	tools:replace
-		ADDED from [codelight.studios:android-smart-login:1.2] /Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/AndroidManifest.xml:23:13-42
-	android:name
-		ADDED from [codelight.studios:android-smart-login:1.2] /Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/AndroidManifest.xml:19:13-57
-activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:33:9-71
-	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:33:19-68
-provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:44:9-47:40
-	android:authorities
-		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:46:13-72
-	android:exported
-		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:47:13-37
-	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] /Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/AndroidManifest.xml:45:13-70
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/88448ae9b445b0a9421d8889de4dbca4b61bb0fb/output/AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-v4:25.3.1] /Users/luizramos/.android/build-cache/bcdb2d04776e43a55473a447ee596d8f0cf01f7b/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/luizramos/.android/build-cache/e572c3427dbbad3b82090b548ac16ae21e949ba0/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/luizramos/.android/build-cache/fa4b6098b0132dbc3bf7197d5b1538a55b2a2379/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/luizramos/.android/build-cache/09da18f372e1791c46a79a48d60840f313afc6b8/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/luizramos/.android/build-cache/310c9bcc9ce478e447498ce79e5b772850cb82f6/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/88448ae9b445b0a9421d8889de4dbca4b61bb0fb/output/AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.android/build-cache/e7ca83e80b049bb2e8e89ae982cc2b80018cf017/output/AndroidManifest.xml:25:5-27:34
 	android:value
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:27:9-31
 	android:name
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:26:9-47
-activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:9-189
-	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:129-162
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:163-187
-	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:69-128
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:19-68
-service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:24:9-184
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:24:64-87
-	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:24:88-182
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:24:18-63
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:19:9-172
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:19:146-170
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:19:86-145
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:19:19-85
-provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:9-194
-	android:authorities
-		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:19-78
-	android:exported
-		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:144-168
-	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:169-192
-	android:name
-		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:79-143
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:20:9-121
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:20:66-119
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:20:20-65

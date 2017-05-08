@@ -33,7 +33,7 @@ public class ApresentacaoActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-                Intent i = new Intent(ApresentacaoActivity.this, Login.class);
+                Intent i = new Intent(ApresentacaoActivity.this, AtivacaoActivity.class);
                 startActivity(i);
                 this.finish();
             }
