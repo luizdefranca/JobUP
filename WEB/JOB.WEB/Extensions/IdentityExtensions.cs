@@ -19,9 +19,16 @@ namespace JOB.WEB.Extensions
         {
             using (var ctx = new Contexto())
             {
-                var id = identity.GetId();
-                var user = ctx.Usuario.Include(i => i.OFERTAS_SERVICO).FirstOrDefault(f => f.ID_USUARIO == id);
-                return user != null ? user.OFERTAS_SERVICO.Count(w => w.ACEITA != false) : 0;
+                if (identity.GetUserId() != null)
+                {
+                    var id = identity.GetId();
+                    var user = ctx.Usuario.Include(i => i.OFERTAS_SERVICO).FirstOrDefault(f => f.ID_USUARIO == id);
+                    return user != null ? user.OFERTAS_SERVICO.Count(w => w.ACEITA != false) : 0;
+                }
+                else
+                {
+                    return 0;
+                }
             }
         }
 
