@@ -12,12 +12,12 @@ import android.view.View;
 
 import br.com.jobup.R;
 
-public class PerfilActivity extends AppCompatActivity {
+public class DetalheCatalogoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perfil);
+        setContentView(R.layout.activity_detalhe_catalogo);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -34,7 +34,7 @@ public class PerfilActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_perfil, menu);
+        getMenuInflater().inflate(R.menu.menu_detalhe_catalogo, menu);
         return true;
     }
 
@@ -46,17 +46,19 @@ public class PerfilActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_salvar) {
-            Intent MainActivity = new Intent(PerfilActivity.this, MainActivity.class);
+        if (id == R.id.action_contratar) {
+            Intent MainActivity = new Intent(DetalheCatalogoActivity.this, MainActivity.class);
             startActivity(MainActivity);
             finish();
             return true;
-
-        } else if (id == R.id.action_editar) {
-                return true;
-            }
-
+        }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void ContratacaoServicoActivity(View view) {
+        Intent ContratacaoServicoActivity = new Intent(DetalheCatalogoActivity.this, ContratacaoServicoActivity.class);
+        startActivity(ContratacaoServicoActivity);
+        finish();
     }
 }

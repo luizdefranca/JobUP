@@ -88,6 +88,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(PerfilActivity);
 
         } else if (id == R.id.nav_gallery) {
+            Intent CatalogoActivity = new Intent(MainActivity.this, CatalogoActivity.class);
+            startActivity(CatalogoActivity);
 
         } else if (id == R.id.nav_slideshow) {
 

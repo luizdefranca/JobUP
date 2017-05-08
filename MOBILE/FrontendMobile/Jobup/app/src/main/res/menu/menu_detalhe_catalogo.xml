@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.jobup.telas.DetalheCatalogoActivity">
+    <item
+        android:id="@+id/action_contratar"
+        android:orderInCategory="100"
+        android:title="@string/titulo_tela_contratar"
+        app:showAsAction="never" />
+</menu>

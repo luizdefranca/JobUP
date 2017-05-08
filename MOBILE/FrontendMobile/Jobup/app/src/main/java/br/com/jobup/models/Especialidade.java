@@ -1,0 +1,37 @@
+package br.com.jobup.models;
+
+
+import java.io.Serializable;
+
+/**
+ * Created by luizramos on 09/04/17.
+ */
+
+public class Especialidade implements Serializable {
+    private String descricao;
+    private boolean exigirComprovacao;
+
+    public Especialidade() {
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public boolean isExigirComprovacao() {
+        return exigirComprovacao;
+    }
+
+    public void setExigirComprovacao(boolean exigirComprovacao) {
+        this.exigirComprovacao = exigirComprovacao;
+    }
+
+    public Especialidade(String descricao, boolean exigirComprovacao) {
+        this.descricao = descricao;
+        this.exigirComprovacao = exigirComprovacao;
+    }
+}

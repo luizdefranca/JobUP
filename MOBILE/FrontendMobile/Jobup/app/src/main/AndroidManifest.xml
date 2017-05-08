@@ -30,7 +30,15 @@
         <activity
             android:name=".telas.PerfilActivity"
             android:label="@string/title_activity_perfil"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".telas.CatalogoActivity"
+            android:label="@string/titulo_tela_catalogo" />
+        <activity
+            android:name=".telas.DetalheCatalogoActivity"
+            android:label="@string/title_activity_detalhe_catalogo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".telas.ContratacaoServicoActivity"></activity>
     </application>
 
 </manifest>
