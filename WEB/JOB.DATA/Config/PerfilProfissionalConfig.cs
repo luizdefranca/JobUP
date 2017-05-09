@@ -28,11 +28,6 @@ namespace JOB.DATA.Config
                .WithRequired(n => n.PERFIL_PROFISSIONAL)
                .HasForeignKey(n => new { n.ID_USUARIO, n.ID_ESPECIALIDADE })
                .WillCascadeOnDelete(true);
-
-            HasMany(n => n.SERVICOS)
-                .WithRequired(n => n.PERFIL_PROFISSIONAL)
-                .HasForeignKey(n => new { n.ID_USUARIO, n.ID_ESPECIALIDADE })
-                .WillCascadeOnDelete(true);
         }
     }
 }
