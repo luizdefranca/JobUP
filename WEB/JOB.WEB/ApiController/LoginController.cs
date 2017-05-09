@@ -1,6 +1,4 @@
 ﻿using JOB.WEB.Models;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System.Net;
 using System.Net.Http;
@@ -23,7 +21,9 @@ namespace JOB.WEB.ApiController
             {
                 if (!await UserManager.IsEmailConfirmedAsync(user.Id))
                 {
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("You must have a confirmed email to log on. The confirmation token has been resent to your email account."));
+                    await SendEmailConfirmationTokenAsync(user.Id, "Reenviar sua confirmação de senha");
+
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Você precisar confirmar seu email para logar. O token foi reenviado para sua conta de email."));
                 }
             }
 
@@ -48,31 +48,51 @@ namespace JOB.WEB.ApiController
 
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
         {
-            var user = await UserManager.FindByNameAsync(Login);
-            if (user != null)
+            //var user = await UserManager.FindByNameAsync(Login);
+            //if (user != null)
+            //{
+            //    return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Login já existente"));
+            //}
+
+            //var user2 = await UserManager.FindByEmailAsync(Email);
+            //if (user2 != null)
+            //{
+            //    return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Email já existente"));
+            //}
+
+            //var db = new ApplicationDbContext();
+
+            //var userStore = new UserStore<ApplicationUser>(db);
+            //var userManager = new UserManager<ApplicationUser>(userStore);
+
+            //var newUser = new ApplicationUser()
+            //{
+            //    UserName = Login,
+            //    Email = Email
+            //};
+            //userManager.Create(newUser, Password);
+
+            var user = new ApplicationUser { UserName = Login, Email = Email };
+            var result = await UserManager.CreateAsync(user, Password);
+            if (result.Succeeded)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Login já existente"));
+                await SendEmailConfirmationTokenAsync(user.Id, "Confirme sua conta");
+
+                return Request.CreateResponse(HttpStatusCode.OK, user.Id);
             }
+            return Request.CreateResponse(HttpStatusCode.BadRequest, result);
+        }
 
-            var user2 = await UserManager.FindByEmailAsync(Email);
-            if (user2 != null)
-            {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Email já existente"));
-            }
+        private async Task<string> SendEmailConfirmationTokenAsync(string userID, string subject)
+        {
+            // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+            // Send an email with this link
+            string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
+            //var callbackUrl = Url.Route("ConfirmEmail", "Account", new { userId = userID, code = code });
+            var callbackUrl = this.Url.Link("Default", new { Controller = "Account", Action = "ConfirmEmail", userId = userID, code = code });
+            await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
 
-            var db = new ApplicationDbContext();
-
-            var userStore = new UserStore<ApplicationUser>(db);
-            var userManager = new UserManager<ApplicationUser>(userStore);
-
-            var newUser = new ApplicationUser()
-            {
-                UserName = Login,
-                Email = Email
-            };
-            userManager.Create(newUser, Password);
-
-            return Request.CreateResponse(HttpStatusCode.OK, newUser.Id);
+            return callbackUrl;
         }
     }
 }

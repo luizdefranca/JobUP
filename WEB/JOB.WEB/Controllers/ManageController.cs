@@ -376,8 +376,6 @@ namespace JOB.WEB.Controllers
             Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
 
             var domain = ctx.Usuario
-                //.Include(i => i.CONTATO)
-                //.Include(i => i.ENDERECO)
                 .FirstOrDefault(w => w.ID_USUARIO == id);
 
             if (domain == null)
@@ -397,8 +395,6 @@ namespace JOB.WEB.Controllers
                 domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
                 ctx.Entry(domain).State = EntityState.Modified;
-                //ctx.Entry(domain.CONTATO).State = EntityState.Modified;
-                //ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
             }
 
             ctx.SaveChanges();
