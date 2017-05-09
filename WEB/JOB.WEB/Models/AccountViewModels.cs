@@ -50,7 +50,7 @@ namespace JOB.WEB.Models
     public class LoginViewModel
     {
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "O {0} precisa ter pelo menos {2} caracteres.", MinimumLength = 6)]
         [DataType(DataType.Text)]
         [RegularExpression(@"^[a-zA-Z0-9@_]*$", ErrorMessage = @"O campo User Name deve apenas conter os seguintes caracreres: a-zA-Z0-9@_.")]
         [Display(Name = "User Name")]
@@ -68,7 +68,7 @@ namespace JOB.WEB.Models
     public class RegisterViewModel
     {
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "O {0} precisa ter pelo menos {2} caracteres.", MinimumLength = 6)]
         [DataType(DataType.Text)]
         [RegularExpression(@"^[a-zA-Z0-9@_]*$", ErrorMessage = @"O campo User Name deve apenas conter os seguintes caracreres: a-zA-Z0-9@_.")]
         [Display(Name = "User Name")]
