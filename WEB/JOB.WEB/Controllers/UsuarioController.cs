@@ -26,7 +26,7 @@ namespace JOB.WEB.Controllers
         // GET: Usuario
         public ActionResult Index()
         {
-                .ToListAsync();
+            var domain = ctx.Usuario.ToList();
 
             var model = Mapper.Map<List<UsuarioViewModel>>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
@@ -34,46 +34,55 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Usuario/Details/5
-        public async Task<ActionResult> DtAprovar(Guid id)
+        public ActionResult DtAprovar(Guid id)
         {
-            var domain = await ctx.Usuario
-                //.Include(i => i.CONTATO)
-                //.Include(i => i.ENDERECO)
-                .FirstAsync(w => w.ID_USUARIO == id);
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             return View(model);
         }
 
+        public ActionResult Ativar(Guid id)
         {
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
             domain.Ativar();
             ctx.Entry(domain).State = EntityState.Modified;
+            ctx.SaveChanges();
 
             return RedirectToAction("Index");
         }
 
+        public ActionResult Bloquear(Guid id)
         {
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
             domain.Bloquear();
             ctx.Entry(domain).State = EntityState.Modified;
+            ctx.SaveChanges();
 
             return RedirectToAction("Index");
         }
 
+        public ActionResult Desbloquear(Guid id)
         {
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
             domain.Desbloquear();
             ctx.Entry(domain).State = EntityState.Modified;
+            ctx.SaveChanges();
 
             return RedirectToAction("Index");
         }
 
+        public ActionResult Aprovar(Guid id)
         {
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
             domain.Aprovar();
             ctx.Entry(domain).State = EntityState.Modified;
+            ctx.SaveChanges();
 
             return RedirectToAction("Index");
         }
