@@ -28,14 +28,6 @@ namespace JOB.DATA.Config
                 .HasMaxLength(8)
                 .IsRequired();
 
-            //HasOptional(n => n.ENDERECO)
-            //    .WithRequired(n => n.USUARIO)
-            //    .WillCascadeOnDelete(true);
-
-            //HasOptional(n => n.CONTATO)
-            //    .WithRequired(n => n.USUARIO)
-            //    .WillCascadeOnDelete(true);
-
             Property(p => p.LOGRADOURO)
                 .IsRequired();
 
