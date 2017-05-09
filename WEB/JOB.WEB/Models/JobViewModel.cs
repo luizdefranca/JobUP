@@ -19,11 +19,10 @@ namespace JOB.WEB.Models
         [Display(Name = "Especialidade")]
         public string especialidade { get; set; }
 
-        
         public int ID_ESPECIALIDADE { get; set; }
 
         [Required]
-        [Display(Name ="Data do Job")]
+        [Display(Name = "Data do Job")]
         [DataType(DataType.Date)]
         public DateTime DT_JOB { get; set; }
 

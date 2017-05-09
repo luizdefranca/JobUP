@@ -51,6 +51,7 @@ namespace JOB.WEB.Controllers
 
             return View(lstModel);
         }
+
         // GET: Especialidade/Details/5
         public ActionResult Details(int id)
         {

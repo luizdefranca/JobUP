@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
@@ -9,13 +10,12 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
-using JOB.WEB.Helper;
 
 namespace JOB.WEB.Controllers
 {
     public class ServicoPublicoController : Controller
     {
-        private Contexto ctx = new Contexto();       
+        private Contexto ctx = new Contexto();
 
         public ActionResult Index()
         {
@@ -66,7 +66,7 @@ namespace JOB.WEB.Controllers
             model.SUB_ESPECIALIDADES = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade).ToList();
             return View(model);
         }
-    
+
         // POST: Servico/Create
         [HttpPost]
         public ActionResult Create(ServicoViewModel_full obj)

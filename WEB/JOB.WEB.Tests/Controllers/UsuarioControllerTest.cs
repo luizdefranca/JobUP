@@ -6,8 +6,7 @@ using JOB.WEB.Controllers;
 using JOB.WEB.Models;
 using NUnit.Framework;
 using System;
-using System.Data.Entity;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace JOB.WEB.Tests.Controllers
@@ -27,7 +26,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_ValidarInsertUsuario()
+        public void Integration_ValidarInsertUsuario()
         {
             Guid id = Guid.NewGuid();
 
@@ -47,7 +46,7 @@ namespace JOB.WEB.Tests.Controllers
                 controller.ProcessarCadastro(model, id);
 
                 //recupera o novo usuario inserido no banco
-                var domainNew = await ctx.Usuario.FirstAsync(w => w.CPF.NR == "50869388720");
+                var domainNew = ctx.Usuario.First(w => w.CPF.NR == "50869388720");
 
                 ctx.Database.CurrentTransaction.Rollback(); //retorna qualquer mudança feita no banco de dados
 
@@ -62,7 +61,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioNomeFaltando()
+        public void Integration_InsertUsuarioNomeFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone(""), new Email("umteste2@gmail.com"));
@@ -78,7 +77,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioCPFFaltando()
+        public void Integration_InsertUsuarioCPFFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF(""), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste3@gmail.com"));
@@ -94,7 +93,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioRGFaltando()
+        public void Integration_InsertUsuarioRGFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste4@gmail.com"));
@@ -110,7 +109,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioTelefoneFaltando()
+        public void Integration_InsertUsuarioTelefoneFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone(""), new Telefone("994059945"), new Email("umteste5@gmail.com"));
@@ -126,7 +125,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioCelularFaltando()
+        public void Integration_InsertUsuarioCelularFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone(""), new Email("umteste6@gmail.com"));
@@ -142,7 +141,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioEmailFaltando()
+        public void Integration_InsertUsuarioEmailFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email(""));
@@ -158,7 +157,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioCEPFaltando()
+        public void Integration_InsertUsuarioCEPFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste7@gmail.com"));
@@ -174,7 +173,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioRuaFaltando()
+        public void Integration_InsertUsuarioRuaFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste8@gmail.com"));
@@ -190,7 +189,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioBairroFaltando()
+        public void Integration_InsertUsuarioBairroFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste2@gmail.com"));
@@ -206,7 +205,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioCidadeFaltando()
+        public void Integration_InsertUsuarioCidadeFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USUARIO DE TESTE", new CPF("19854269476"), new RG(DATA.Enum.EnumUF.PE, "1234567"), DateTime.Now.AddYears(-30));
             domain.AdicionarContato(new Telefone("33793968"), new Telefone("994059945"), new Email("umteste2@gmail.com"));
@@ -222,7 +221,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioTodosDadosFaltando()
+        public void Integration_InsertUsuarioTodosDadosFaltando()
         {
             var domain = new USUARIO(Guid.NewGuid(), "", new CPF(""), new RG(DATA.Enum.EnumUF.PE, ""), DateTime.Now.AddYears(-0));
             domain.AdicionarContato(new Telefone(""), new Telefone(""), new Email(""));
@@ -238,7 +237,7 @@ namespace JOB.WEB.Tests.Controllers
         }
 
         [Test]
-        public async Task Integration_InsertUsuarioDadosErrados()
+        public void Integration_InsertUsuarioDadosErrados()
         {
             var domain = new USUARIO(Guid.NewGuid(), "USU4RI0 T3ST3", new CPF("19865260abc"), new RG(DATA.Enum.EnumUF.PE, "abc1589"), DateTime.Now.AddYears(-50));
             domain.AdicionarContato(new Telefone("3379tyui"), new Telefone("994059sed"), new Email("umteste3@gmail.com"));

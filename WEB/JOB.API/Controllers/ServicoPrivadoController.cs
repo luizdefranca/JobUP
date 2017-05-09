@@ -1,14 +1,14 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using JOB.DATA;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using JOB.WEB.Helper;
 
 namespace JOB.API.Controllers
 {

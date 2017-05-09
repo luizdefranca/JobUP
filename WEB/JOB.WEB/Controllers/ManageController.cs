@@ -339,14 +339,12 @@ namespace JOB.WEB.Controllers
         private Contexto ctx = new Contexto();
 
         // GET: Usuario/Create
-        public async Task<ActionResult> Create()
+        public ActionResult Create()
         {
             Guid id = Guid.Parse(User.Identity.GetUserId());
 
-            var domain = await ctx.Usuario
-                //.Include(i => i.CONTATO)
-                //.Include(i => i.ENDERECO)
-                .FirstOrDefaultAsync(w => w.ID_USUARIO == id);
+            var domain = ctx.Usuario
+                .FirstOrDefault(w => w.ID_USUARIO == id);
 
             var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
@@ -375,42 +373,35 @@ namespace JOB.WEB.Controllers
 
         public void ProcessarCadastro(UsuarioViewModel obj, Guid? idGuid = null)
         {
-            try
+            Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
+
+            var domain = ctx.Usuario
+                //.Include(i => i.CONTATO)
+                //.Include(i => i.ENDERECO)
+                .FirstOrDefault(w => w.ID_USUARIO == id);
+
+            if (domain == null)
             {
-                Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
+                var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-                var domain = ctx.Usuario
-                    //.Include(i => i.CONTATO)
-                    //.Include(i => i.ENDERECO)
-                    .FirstOrDefault(w => w.ID_USUARIO == id);
+                newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetEmailAdress()));
+                newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
-                if (domain == null)
-                {
-                    var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
-
-                    newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetEmailAdress()));
-                    newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
-
-                    ctx.Usuario.Add(newobj);
-                }
-                else
-                {
-                    domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
-
-                    domain.AtualizarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
-                    domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
-
-                    ctx.Entry(domain).State = EntityState.Modified;
-                    //ctx.Entry(domain.CONTATO).State = EntityState.Modified;
-                    //ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
-                }
-
-                ctx.SaveChangesAsync();
+                ctx.Usuario.Add(newobj);
             }
-            catch (Exception ex)
+            else
             {
-                ModelState.AddModelError("", ex.TratarMensagem());
+                domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                domain.AtualizarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
+                domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+
+                ctx.Entry(domain).State = EntityState.Modified;
+                //ctx.Entry(domain.CONTATO).State = EntityState.Modified;
+                //ctx.Entry(domain.ENDERECO).State = EntityState.Modified;
             }
+
+            ctx.SaveChanges();
         }
 
         public ActionResult Ativar()

@@ -7,7 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
+
 using System.Web.Http;
 
 namespace JOB.API.Controllers
@@ -56,7 +56,7 @@ namespace JOB.API.Controllers
         }
 
         // PUT: api/Usuario/5
-        public async Task<HttpResponseMessage> Put(Guid idUsuario, int idEspecialidade, int idFormacao, HttpRequestMessage request)
+        public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, int idFormacao, HttpRequestMessage request)
         {
             var values = request.Content.ReadAsStringAsync().Result;
 
@@ -75,18 +75,18 @@ namespace JOB.API.Controllers
             if (!ModelState.IsValid)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            await ctx.SaveChangesAsync();
+            ctx.SaveChanges();
 
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
         // DELETE: api/Usuario/5
-        public async Task Delete(Guid idUsuario, int idEspecialidade, int idFormacao)
+        public void Delete(Guid idUsuario, int idEspecialidade, int idFormacao)
         {
             var item = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);
 
             ctx.Formacao.Remove(item);
-            await ctx.SaveChangesAsync();
+            ctx.SaveChanges();
         }
     }
 }
