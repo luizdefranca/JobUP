@@ -7,6 +7,7 @@ import com.br.jobup.services.interfaces.IDesativarAPI;
 import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
 import com.br.jobup.services.interfaces.IUsuarioFullAPI;
+import com.br.jobup.services.interfaces.IUsuarioSignUpAPI;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -89,4 +90,6 @@ public class RetroFitInicializador {
     public IUsuarioSignInAPI loginAPI(){
         return retrofit.create(IUsuarioSignInAPI.class);
     }
+
+    public IUsuarioSignUpAPI signUpAPI(){ return retrofit.create(IUsuarioSignUpAPI.class);}
 }

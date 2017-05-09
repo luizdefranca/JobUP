@@ -854,6 +854,7 @@ int id line1 0x7f0d00ce
 int id line3 0x7f0d00d0
 int id listMode 0x7f0d0016
 int id list_item 0x7f0d004d
+int id login 0x7f0d008e
 int id loginButt 0x7f0d00a3
 int id login_form 0x7f0d0091
 int id login_progress 0x7f0d0090
@@ -963,7 +964,6 @@ int id txt_usuario_adapter 0x7f0d008d
 int id ufCadastroView 0x7f0d0086
 int id up 0x7f0d000b
 int id useLogo 0x7f0d001e
-int id userName 0x7f0d008e
 int id usernameTxt 0x7f0d00a1
 int id usernameTxt2 0x7f0d00a8
 int id usuarioSignIn 0x7f0d0094

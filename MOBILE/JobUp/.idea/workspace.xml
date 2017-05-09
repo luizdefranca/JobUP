@@ -12,17 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="051efebe-44ce-4d6e-9a44-1d699834fb59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/TempServico.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Contato.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Endereco.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IContatoAPI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IEnderecoAPI.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/AtivacaoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/SingInActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/UsuarioLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/UsuarioSignIn.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IUsuarioLoginAPI.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IUsuarioSignInAPI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioSignIn.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ativacao.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/sign_up.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/UsuarioSignUp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IUsuarioSignUpAPI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioSignUp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
@@ -34,7 +26,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
@@ -43,22 +35,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/ApresentacaoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/ApresentacaoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/dao/usuario/UsuarioDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/dao/usuario/UsuarioDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/helpers/CadastroUsuarioHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/helpers/CadastroUsuarioHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Servico.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Servico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Usuario.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Usuario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/builder/UsuarioBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/builder/UsuarioBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioFull.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioFull.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/tasks/TaskUsuarioFullGet.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/tasks/TaskUsuarioFullGet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_lista_nova_de_usuarios.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_lista_nova_de_usuarios.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mensagens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mensagens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
@@ -876,42 +862,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="SignUpActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="108" column="97" selection-start-line="108" selection-start-column="68" selection-end-line="108" selection-end-column="97" />
+              <folding>
+                <element signature="e#1902#1919#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_sign_up.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml">
-          <provider selected="true" editor-type-id="android-designer2">
+          <provider editor-type-id="android-designer2">
             <state />
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding>
-                <element signature="e#1696#2700#0" expanded="true" />
-                <element signature="e#2306#2323#0" expanded="true" />
-                <element signature="e#2699#2700#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-405">
+              <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -919,73 +890,12 @@
       <file leaf-file-name="SingInActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/SingInActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="-7">
+              <caret line="70" column="43" selection-start-line="66" selection-start-column="7" selection-end-line="70" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Servico.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Servico.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TempServico.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/TempServico.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <element signature="e#674#675#0" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Uf.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Uf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="5" selection-start-line="9" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_sign_in.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
           </provider>
         </entry>
       </file>
@@ -995,9 +905,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -2718,9 +2628,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/PerfilProfisional.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/loaders/LoaderUsuarioFullGetAll.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/SubEspecialidade.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/tasks/TaskUsuarioFullPost.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/loaders/LoaderUsuarioFullPost.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Especialidade.java" />
@@ -2759,16 +2666,19 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/tasks/TaskUsuarioFullGet.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/AtivacaoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/builder/UsuarioBuilder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Usuario.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/dao/usuario/UsuarioDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/helpers/CadastroUsuarioHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/sign_up_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/SingInActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Servico.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/TempServico.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Servico.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IUsuarioSignUpAPI.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/UsuarioSignUp.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioSignUp.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java" />
       </list>
     </option>
   </component>
@@ -3033,36 +2943,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="usuarioFullServices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parsers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JobUp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobup" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="interfaces" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -3176,11 +3056,11 @@
       <recent name="layout" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.br.jobup.services.interfaces" />
       <recent name="com.br.jobup.models" />
       <recent name="com.br.jobup.services" />
       <recent name="com.br.jobup.services.usuarioServices" />
       <recent name="com.br.jobup.models.builder" />
-      <recent name="com.br.jobup.helpers" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3662,7 +3542,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25282714" sideWeight="0.52974504" order="3" side_tool="true" content_ui="tabs" />
@@ -3671,7 +3551,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24878837" sideWeight="0.48441926" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39943343" sideWeight="0.4951535" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39943343" sideWeight="0.4951535" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72940224" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719547" sideWeight="0.49353796" order="7" side_tool="false" content_ui="tabs" />
@@ -3806,32 +3686,21 @@
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java</url>
+          <line>100</line>
+          <properties method="onResponse" />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="23" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/model_new/Servico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/model_new/Fixo.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/model_new/Celular.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/model_new/Email.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/model_new/Telefone.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3889,8 +3758,8 @@
         <state relative-caret-position="3989">
           <caret line="928" column="20" selection-start-line="928" selection-start-column="20" selection-end-line="928" selection-end-column="20" />
           <folding>
-            <marker date="1494261559000" expanded="true" signature="49:163642" ph="..." />
-            <marker date="1494261559000" expanded="true" signature="163610:163629" ph="..." />
+            <marker date="1494288053000" expanded="true" signature="49:162184" ph="..." />
+            <marker date="1494288053000" expanded="true" signature="162152:162171" ph="..." />
           </folding>
         </state>
       </provider>
@@ -3977,22 +3846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IUsuarioSignInAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioSignIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="37" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/UsuarioSignIn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -4063,14 +3916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -4265,49 +4110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <element signature="e#1696#2700#0" expanded="true" />
-            <element signature="e#2306#2323#0" expanded="true" />
-            <element signature="e#2699#2700#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/SingInActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Servico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Uf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -4328,6 +4130,156 @@
           <folding>
             <element signature="e#674#675#0" expanded="true" />
             <element signature="e#708#709#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Servico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1545#1546#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1755#1756#0" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#1855#1856#0" expanded="true" />
+            <element signature="e#1895#1896#0" expanded="true" />
+            <element signature="e#1927#1928#0" expanded="true" />
+            <element signature="e#1970#1971#0" expanded="true" />
+            <element signature="e#2008#2009#0" expanded="true" />
+            <element signature="e#2169#2170#0" expanded="true" />
+            <element signature="e#2209#2210#0" expanded="true" />
+            <element signature="e#2379#2380#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#2639#2640#0" expanded="true" />
+            <element signature="e#2810#2811#0" expanded="true" />
+            <element signature="e#2843#2844#0" expanded="true" />
+            <element signature="e#2893#2894#0" expanded="true" />
+            <element signature="e#2937#2938#0" expanded="true" />
+            <element signature="e#2972#2973#0" expanded="true" />
+            <element signature="e#3003#3004#0" expanded="true" />
+            <element signature="e#3051#3052#0" expanded="true" />
+            <element signature="e#3091#3092#0" expanded="true" />
+            <element signature="e#3131#3132#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3225#3226#0" expanded="true" />
+            <element signature="e#3275#3276#0" expanded="true" />
+            <element signature="e#3317#3318#0" expanded="true" />
+            <element signature="e#3350#3351#0" expanded="true" />
+            <element signature="e#3407#3408#0" expanded="true" />
+            <element signature="e#3451#3452#0" expanded="true" />
+            <element signature="e#3490#3491#0" expanded="true" />
+            <element signature="e#3524#3525#0" expanded="true" />
+            <element signature="e#3579#3580#0" expanded="true" />
+            <element signature="e#3625#3626#0" expanded="true" />
+            <element signature="e#3667#3668#0" expanded="true" />
+            <element signature="e#3705#3706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="93" column="90" selection-start-line="93" selection-start-column="90" selection-end-line="93" selection-end-column="90" />
+          <folding>
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioSignIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="36" column="5" selection-start-line="20" selection-start-column="2" selection-end-line="36" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/UsuarioSignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IUsuarioSignUpAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IUsuarioSignInAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioSignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/SingInActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="70" column="43" selection-start-line="66" selection-start-column="7" selection-end-line="70" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.2.0/2ee0decdbfcfd5d76aa5e43377c077e9301df72d/retrofit-2.2.0-sources.jar!/retrofit2/ExecutorCallAdapterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="e#2126#2558#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/SignUpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="108" column="97" selection-start-line="108" selection-start-column="68" selection-end-line="108" selection-end-column="97" />
+          <folding>
+            <element signature="e#1902#1919#0" expanded="true" />
           </folding>
         </state>
       </provider>
