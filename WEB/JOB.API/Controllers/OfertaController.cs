@@ -22,7 +22,7 @@ namespace JOB.API.Controllers
 
             foreach (var model in lstModel)
             {
-                model.DS_TITULO = ctx.Servico.First(f => f.ID_SERVICO== model.ID_SERVICO).DS_TITULO;
+                model.DS_TITULO = ctx.Servico.First(f => f.ID_SERVICO == model.ID_SERVICO).DS_TITULO;
                 model.DS_OBSERVACOES = ctx.Servico.First(f => f.ID_SERVICO == model.ID_SERVICO).DS_OBSERVACOES;
             }
 

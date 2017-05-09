@@ -7,14 +7,14 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace JOB.WEB.Controllers
 {
     public class PropostaController : Controller
     {
-        Contexto ctx = new Contexto();
+        private Contexto ctx = new Contexto();
+
         // GET: Proposta
         public ActionResult Index()
         {
@@ -33,7 +33,7 @@ namespace JOB.WEB.Controllers
         public ActionResult Create()
         {
             var model = new PropostaViewModel();
-            
+
             return View(model);
         }
 
@@ -52,6 +52,6 @@ namespace JOB.WEB.Controllers
             ctx.SaveChanges();
 
             return RedirectToAction("Index");
-        }        
+        }
     }
 }

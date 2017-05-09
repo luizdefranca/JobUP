@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Net.Mime;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 using NLog;
 
 namespace JOB.WEB.Helper
@@ -43,11 +43,11 @@ namespace JOB.WEB.Helper
         ///     Envia um email via SMTP para uma coleção de remetentes usando o recurso de Parallel (thread)
         /// </summary>
         /// <param name="mailMessages"></param>
-        public async Task SendEmailAsync(List<Mail> mailMessages)
+        public void SendEmailAsync(List<Mail> mailMessages)
         {
             foreach (var mail in mailMessages)
             {
-                await SendEmailAsync(mail);
+                 SendEmailAsync(mail);
             }
         }
 
@@ -56,7 +56,7 @@ namespace JOB.WEB.Helper
         /// </summary>
         /// <param name="mailMessage"></param>
         /// <returns></returns>
-        public async Task SendEmailAsync(Mail mailMessage)
+        public void SendEmailAsync(Mail mailMessage)
         {
             var smtp = new SmtpClient(ServidorSMTP, PortaSMTP)
             {
@@ -98,7 +98,7 @@ namespace JOB.WEB.Helper
 
                 try
                 {
-                    await smtp.SendMailAsync(mail);
+                     smtp.SendMailAsync(mail);
                 }
                 catch (SmtpException ex)
                 {

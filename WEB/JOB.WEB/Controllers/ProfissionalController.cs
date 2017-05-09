@@ -6,9 +6,8 @@ using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
+
 using System.Web.Mvc;
 
 namespace JOB.WEB.Controllers
@@ -56,9 +55,9 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Profissional/Details/5
-        public async Task<ActionResult> Details(Guid id)
+        public ActionResult Details(Guid id)
         {
-            var Dominio = await ctx.PerfilProfissional.FirstAsync(f => f.ID_USUARIO == id);
+            var Dominio = ctx.PerfilProfissional.First(f => f.ID_USUARIO == id);
 
             var model = Mapper.Map<ProfissionalViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
 

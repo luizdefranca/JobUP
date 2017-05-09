@@ -1,13 +1,12 @@
-﻿using System.Linq;
+﻿using JOB.WEB.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using JOB.WEB.Models;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace JOB.WEB.ApiController
 {
@@ -46,6 +45,7 @@ namespace JOB.WEB.ApiController
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Failure"));
             }
         }
+
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
         {
             var user = await UserManager.FindByNameAsync(Login);
@@ -74,7 +74,5 @@ namespace JOB.WEB.ApiController
 
             return Request.CreateResponse(HttpStatusCode.OK, newUser.Id);
         }
-
-
     }
 }
