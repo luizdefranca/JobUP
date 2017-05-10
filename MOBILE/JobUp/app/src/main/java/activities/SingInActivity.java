@@ -95,6 +95,7 @@ public class SingInActivity extends AppCompatActivity  {
                     @Override
                     public void onResponse(Call<String> call, Response<String> response) {
 
+
                         if (response.isSuccessful()) {
                             final String idUsuario = response.body().toString();
                             Toast.makeText(SingInActivity.this, "usário com id=" + idUsuario +
@@ -127,7 +128,7 @@ public class SingInActivity extends AppCompatActivity  {
                         progDialog.dismiss();
                     }
                 });
-//
+
             }
         });
 

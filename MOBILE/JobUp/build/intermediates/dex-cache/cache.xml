@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.6.0/81887458b69ddc32722df7e4c35235fd74e6a8ba/logging-interceptor-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="81887458b69ddc32722df7e4c35235fd74e6a8ba">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.6.0_a3368d74dc2cbe6d48aa7f72a19ca7532ab49136/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/luizramos/.android/build-cache/09da18f372e1791c46a79a48d60840f313afc6b8/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -36,6 +45,15 @@
         revision="25.0.0"
         sha1="150252b33b00274cc868578ade018fda0d43a3eb">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_44adacfb45847d6f99410768f10ae5e3019ddc65/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.github.ihsanbal/LoggingInterceptor/2.0.0/f7f7c5872e6a39a3aab8d9f334a30d06b6fa9cbf/LoggingInterceptor-2.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f7f7c5872e6a39a3aab8d9f334a30d06b6fa9cbf">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/LoggingInterceptor-2.0.0_2d563163086502f85d7e7ba6d65ae196849374e5/classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -101,6 +101,8 @@ public class SignUpActivity extends AppCompatActivity {
                     parser.get().enqueue(new Callback<String>() {
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
+
+
                             if (response.isSuccessful()) {
                                 String idUsuario = response.body().toString();
                                 Toast.makeText(SignUpActivity.this, "usário com id=" + idUsuario +
@@ -109,7 +111,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 startActivity(new Intent(SignUpActivity.this, SingInActivity.class));
                             } else if (response.code() == 400) {
                                 Toast.makeText(SignUpActivity.this, "Falha no servidor", Toast.LENGTH_SHORT).show();
-                                Log.e("LCFR", "onResponse: falha no servidor" );
+                                Log.e("LCFR", "onResponse: falha no servidor:  "+ response.errorBody().toString() );
                             } else if (response.code() == 403) {
                                 Toast.makeText(SignUpActivity.this, "Usuário Bloqueado", Toast.LENGTH_SHORT).show();
                                 Log.e("LCFR", "onResponse: usuario bloqueado" );

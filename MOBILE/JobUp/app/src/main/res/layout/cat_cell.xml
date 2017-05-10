@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/chCatImage"
         android:id="@+id/chCatTitleTxt"
-        android:layout_alignEnd="@+id/chCatImage"
+        android:layout_alignRight="@+id/chCatImage"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="3dp"
@@ -38,6 +38,6 @@
         android:textColor="#fff"
         android:fontFamily="sans-serif-condensed"
         android:textStyle="normal|bold"
-        android:layout_alignStart="@+id/chCatImage"/>
+        android:layout_alignParentRight="@+id/chCatImage"/>
 
 </RelativeLayout>

@@ -317,7 +317,7 @@ public class MainActivity extends AppCompatActivity
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
         } else if (id == R.id.nav_slideshow) {
-            final UsuarioSignIn usuarioSignIn = new UsuarioSignIn("luizramospe@gmail.com", "Lc1234");
+            final UsuarioSignIn usuarioSignIn = new UsuarioSignIn("luizramospe", "Teste12345");
             ParserUsuarioSignIn parse = new ParserUsuarioSignIn(usuarioSignIn);
              Call<String> loginCall = parse.get();
             loginCall.enqueue(new Callback<String>() {
@@ -337,7 +337,7 @@ public class MainActivity extends AppCompatActivity
 
                 @Override
                 public void onFailure(Call<String> call, Throwable t) {
-                    Log.e(TAG, "onFailure: " + t.getMessage() );
+                    Log.e(TAG, "onFailure: " + t.getMessage(), t );
                     Toast.makeText(MainActivity.this, "onFailure: " + t.getMessage() , Toast.LENGTH_LONG).show();
                 }
             });

@@ -18,7 +18,7 @@ import retrofit2.http.Query;
  */
 
 public interface IUsuarioSignInAPI {
-    public static final String PATH = "login/";
+    public static final String PATH = "login";
 
 
     @GET(PATH)
