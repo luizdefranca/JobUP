@@ -7,7 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
+
 using System.Web.Http;
 
 namespace JOB.API.Controllers
@@ -60,7 +60,7 @@ namespace JOB.API.Controllers
         }
 
         // PUT: api/Usuario/5
-        public async Task<HttpResponseMessage> Put(Guid id, HttpRequestMessage request)
+        public HttpResponseMessage Put(Guid id, HttpRequestMessage request)
         {
             var values = request.Content.ReadAsStringAsync().Result;
 
@@ -79,18 +79,18 @@ namespace JOB.API.Controllers
             if (!ModelState.IsValid)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            await ctx.SaveChangesAsync();
+            ctx.SaveChanges();
 
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
         // DELETE: api/Usuario/5
-        public async Task Delete(Guid id)
+        public void Delete(Guid id)
         {
             var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
 
             ctx.Usuario.Remove(item);
-            await ctx.SaveChangesAsync();
+            ctx.SaveChanges();
         }
     }
 }

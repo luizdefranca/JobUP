@@ -55,8 +55,6 @@ namespace JOB.DATA.Domain
         public double? VL_SUGERIDO { get; private set; }
         public EnumTempoServico TEMPO_SERVICO { get; private set; }
 
-        public PERFIL_PROFISSIONAL PERFIL_PROFISSIONAL { get; private set; }
-
         public ICollection<OFERTA_SERVICO> OFERTAS { get; private set; }
         public ICollection<PROPOSTA_SERVICO> PROPOSTAS { get; private set; }
     }
