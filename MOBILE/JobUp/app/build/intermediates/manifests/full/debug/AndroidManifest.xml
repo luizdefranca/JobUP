@@ -25,27 +25,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.br.jobup.MainActivity"
+            android:name="activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.br.jobup.LoginActivity"
+            android:name="activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme" />
         <activity
             android:name="trash.ApresentacaoActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.br.jobup.SingInActivity"
+            android:name="activities.SingInActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.br.jobup.CadastroActivity"
+            android:name="activities.CadastroActivity"
             android:label="@string/title_activity_cadastro" />
         <activity
-            android:name="com.br.jobup.SignUpActivity"
+            android:name="activities.SignUpActivity"
             android:label="Cadastro" />
         <activity
-            android:name="com.br.jobup.ApresentacaoActivity"
+            android:name="activities.ApresentacaoActivity"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="portrait"
@@ -58,13 +58,13 @@
             />
         </activity>
         <activity
-            android:name="com.br.jobup.MensagensActivity"
+            android:name="activities.MensagensActivity"
             android:label="@string/title_activity_mensagem" />
         <activity
-            android:name="com.br.jobup.DetalheServicoActivity"
+            android:name="activities.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
-        <activity android:name="com.br.jobup.ListUsuarioActivity" />
-        <activity android:name="com.br.jobup.ListaNovaDeUsuariosActivity" />
+        <activity android:name="activities.ListUsuarioActivity" />
+        <activity android:name="activities.ListaNovaDeUsuariosActivity" />
     </application>
 
 </manifest>

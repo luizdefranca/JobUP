@@ -15,27 +15,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name="activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme" />
         <activity
             android:name="trash.ApresentacaoActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".SingInActivity"
+            android:name="activities.SingInActivity"
             android:theme="@style/AppTheme"></activity>
         <activity
-            android:name=".CadastroActivity"
+            android:name="activities.CadastroActivity"
             android:label="@string/title_activity_cadastro" />
         <activity
-            android:name=".SignUpActivity"
+            android:name="activities.SignUpActivity"
             android:label="Cadastro" />
         <activity
-            android:name=".ApresentacaoActivity"
+            android:name="activities.ApresentacaoActivity"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="portrait"
@@ -48,13 +48,13 @@
             />
         </activity>
         <activity
-            android:name=".MensagensActivity"
+            android:name="activities.MensagensActivity"
             android:label="@string/title_activity_mensagem" />
         <activity
-            android:name=".DetalheServicoActivity"
+            android:name="activities.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
-        <activity android:name=".ListUsuarioActivity" />
-        <activity android:name=".ListaNovaDeUsuariosActivity" />
+        <activity android:name="activities.ListUsuarioActivity" />
+        <activity android:name="activities.ListaNovaDeUsuariosActivity" />
     </application>
 
 </manifest>

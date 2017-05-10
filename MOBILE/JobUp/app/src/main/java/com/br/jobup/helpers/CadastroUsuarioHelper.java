@@ -4,12 +4,10 @@ import android.content.res.Resources;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.br.jobup.CadastroActivity;
+import activities.CadastroActivity;
 import com.br.jobup.R;
 import com.br.jobup.models.Cpf;
-import com.br.jobup.models.Email;
 import com.br.jobup.models.Rg;
-import com.br.jobup.models.Telefone;
 import com.br.jobup.models.Usuario;
 import com.br.jobup.util.Parsers;
 

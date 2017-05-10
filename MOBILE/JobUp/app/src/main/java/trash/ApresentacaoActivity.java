@@ -9,6 +9,8 @@ import android.view.View;
 import com.br.jobup.R;
 import com.br.jobup.dao.DatabaseHelper;
 
+import activities.SingInActivity;
+
 /*
  * Created by Luiz Carlos Ramos on 07/05/17 15:12
  *
@@ -33,7 +35,7 @@ public class ApresentacaoActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-                Intent LoginActivity = new Intent(ApresentacaoActivity.this, com.br.jobup.LoginActivity.class);
+                Intent LoginActivity = new Intent(ApresentacaoActivity.this, SingInActivity.class);
                 startActivity(LoginActivity);
                 this.finish();
             }
@@ -41,14 +43,5 @@ public class ApresentacaoActivity extends AppCompatActivity {
             private void finish() {
             }
         }, splashInterval);
-
-
-        //List<Usuario> usuarios = new UsuarioService().getAll();
-
-
-
-
-
-//        Log.i(TAG, "usuario: " + usuarios.get(0).getNome());
     }
 }
