@@ -10,11 +10,11 @@ namespace JOB.WEB
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{resource}.ashx/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "Google API Sign-in",
-                url: "signin-google",
-                defaults: new { controller = "Account", action = "ExternalLoginCallbackRedirect" }
-            );
+            //routes.MapRoute(
+            //    name: "Google API Sign-in",
+            //    url: "signin-google",
+            //    defaults: new { controller = "Account", action = "ExternalLoginCallbackRedirect" }
+            //);
 
             routes.MapRoute(
                 name: "Default",

@@ -1,5 +1,8 @@
-﻿using JOB.WEB.Models;
+﻿using JOB.DATA;
+using JOB.WEB.Models;
 using Microsoft.AspNet.Identity.Owin;
+using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -11,6 +14,8 @@ namespace JOB.WEB.ApiController
     [AllowAnonymous]
     public class LoginController : System.Web.Http.ApiController
     {
+        private Contexto ctx = new Contexto();
+
         public ApplicationSignInManager SignInManager => HttpContext.Current.GetOwinContext().Get<ApplicationSignInManager>();
         public ApplicationUserManager UserManager => HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
@@ -32,7 +37,9 @@ namespace JOB.WEB.ApiController
             switch (result)
             {
                 case SignInStatus.Success:
-                    return Request.CreateResponse(HttpStatusCode.OK, user.Id);
+                    var id = Guid.Parse(user.Id);
+                    var usuario = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+                    return Request.CreateResponse(HttpStatusCode.OK, usuario);
 
                 case SignInStatus.LockedOut:
                     return Request.CreateResponse(HttpStatusCode.Forbidden, new HttpError("LockedOut"));
@@ -47,7 +54,7 @@ namespace JOB.WEB.ApiController
         }
 
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
-        {           
+        {
             var user = new ApplicationUser { UserName = Login, Email = Email };
             var result = await UserManager.CreateAsync(user, Password);
             if (result.Succeeded)
