@@ -2,6 +2,7 @@
 using JOB.DATA.Domain;
 using JsonNet.PrivateSettersContractResolvers;
 using Newtonsoft.Json;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -30,6 +31,13 @@ namespace JOB.API.Controllers
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
+
+        //public HttpResponseMessage GetPorUsuario(Guid id)
+        //{
+        //    var result = ctx.PerfilProfissional.Where(w => w.ID_USUARIO == id);
+
+        //    return Request.CreateResponse(HttpStatusCode.OK, result);
+        //}
 
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
