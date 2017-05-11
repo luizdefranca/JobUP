@@ -39,7 +39,7 @@ namespace JOB.API.Controllers
         // GET: api/Usuario
         public HttpResponseMessage Get(Guid idUsuario)
         {
-            var result = ctx.PerfilProfissional.Where(w => w.ID_USUARIO == idUsuario).ToList();
+            var result = ctx.PerfilProfissional.Include(i => i.ESPECIALIDADE).Where(w => w.ID_USUARIO == idUsuario).ToList();
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
