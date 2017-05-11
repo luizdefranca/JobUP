@@ -43,12 +43,7 @@ namespace JOB.WEB.Controllers
             var lstDominio = ctx.Especialidade.Include(i => i.PERFIS_PROFISSIONAIS).ToList();
 
             var lstModel = Mapper.Map<List<EspecialidadeViewModel>>(lstDominio);
-
-            foreach (var item in lstModel)
-            {
-                item.QTD_PROFISSIONAIS = lstDominio.First(f => f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).PERFIS_PROFISSIONAIS.Count();
-            }
-
+                        
             return View(lstModel);
         }
 
