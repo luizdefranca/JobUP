@@ -1,15 +1,10 @@
 package com.br.jobup.services;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
-import android.util.AttributeSet;
-import android.view.View;
 
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 
 /*
  * Created by Luiz Carlos Ramos on 30/04/17 16:01 at $today.hour24:1:6.

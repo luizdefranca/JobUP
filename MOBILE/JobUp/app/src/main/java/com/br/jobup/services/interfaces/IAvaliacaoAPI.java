@@ -7,8 +7,8 @@ package com.br.jobup.services.interfaces;
  * Last modified 30/04/17 22:53
  */
 
-import com.br.jobup.models.Avaliacoes;
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Avaliacoes;
+import com.br.jobup.models.usuario.Usuario;
 
 import java.util.List;
 

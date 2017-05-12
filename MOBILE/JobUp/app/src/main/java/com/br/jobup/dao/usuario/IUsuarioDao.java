@@ -1,7 +1,6 @@
 package com.br.jobup.dao.usuario;
 
-import com.br.jobup.dao.UsuarioDatabaseListener;
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 
 import java.util.List;
 

@@ -21,14 +21,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.br.jobup.R;
-import com.br.jobup.models.Usuario;
-import com.br.jobup.models.UsuarioSignIn;
+import com.br.jobup.models.usuario.Usuario;
+import com.br.jobup.models.login.UsuarioSignIn;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 
 import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
 import com.github.hynra.gsonsharedpreferences.ParsingException;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -38,8 +37,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static android.R.attr.id;
 
 /*
  * Created by Luiz Carlos Ramos on 09/05/17 19:02

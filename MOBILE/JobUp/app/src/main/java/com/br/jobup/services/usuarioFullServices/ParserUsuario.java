@@ -1,6 +1,6 @@
 package com.br.jobup.services.usuarioFullServices;
 
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.RetroFitInicializador;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
 

@@ -32,21 +32,21 @@ import android.widget.Toast;
 import com.br.jobup.R;
 import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
-import com.br.jobup.models.UsuarioSignIn;
-import com.br.jobup.models.Usuario;
-import com.br.jobup.models.UsuarioSignUp;
+import com.br.jobup.models.login.UsuarioSignIn;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
-import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignUp;
+import com.br.jobup.util.Validations.TextHelper;
 import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
 import com.github.hynra.gsonsharedpreferences.ParsingException;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -177,20 +177,20 @@ public class MainActivity extends AppCompatActivity
     void initCatGridView() {
 
         // ARRAY COM AS ESPECIALIDADE
-        final String[] categoriesArray = new String[] {
-                "Baba",
-                "Cozinheira",
-                "Diarista",
-                "Encanador",
-                "Motorista",
-                "Pintor",
-                "Passeador de caes"
 
 
-                // You can add more Categories here....
-        };
+        final Map<Integer, String> categoriaMap = new HashMap<>();
+        categoriaMap.put(6, "Adestrador de cães");
+        categoriaMap.put(7, "Babá");
+        categoriaMap.put(8, "Cozinheira");
+        categoriaMap.put(9, "Diarista");
+        categoriaMap.put(10, "Limpeza de piscina");
+        categoriaMap.put(11, "Motorista");
+        categoriaMap.put(12, "Passadeira");
+        categoriaMap.put(13, "Passeador de cães");
 
-        final List<String> catArray = new ArrayList<String>(Arrays.asList(categoriesArray));
+
+        final List<String> catArray = new ArrayList<>(categoriaMap.values());
 
 
         // CUSTOM GRID ADAPTER
@@ -213,14 +213,18 @@ public class MainActivity extends AppCompatActivity
                 // Get category image
                 ImageView catImg = (ImageView)cell.findViewById(R.id.chCatImage);
 
-                String catName = catArray.get(position);
+                // Remove os sinais de acentos e pega o nome da categoria
+                String categoria = catArray.get(position);
+                String catName = TextHelper.RemoverAcentos(categoria) ;
                 String resName = "";
 
                 if (catName.contains(" ")) {
                     String[] separated = catName.toLowerCase().split(" ");
-                    separated[0].toString();
-                    separated[1].toString();
-                    resName = separated[0] + "_" + separated[1];
+                    resName = separated[0];
+                    for(int i = 1; i < separated.length; i++){
+                      resName += "_" + separated[i];
+                    }
+
                 } else {
                     resName = catName.toLowerCase();
                 }
@@ -230,7 +234,7 @@ public class MainActivity extends AppCompatActivity
 
                 // Get category's name
                 TextView catTitleTxt = (TextView)cell.findViewById(R.id.chCatTitleTxt);
-                catTitleTxt.setText(catName);
+                catTitleTxt.setText(categoria);
 
 
                 return cell;
@@ -258,12 +262,14 @@ public class MainActivity extends AppCompatActivity
         aGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 String cat = catArray.get(position);
+                List <Integer>   catkeys = new ArrayList<Integer>(categoriaMap.keySet());
+                int idEspecialidade = catkeys.get(position);
 
-//                Intent i = new Intent(Home.this, BrowseAds.class);
-//                Bundle extras = new Bundle();
-//                extras.putString("categoryStr", cat);
-//                i.putExtras(extras);
-//                startActivity(i);
+                Intent i = new Intent(MainActivity.this, CatalogoEspecialidadeActivity.class);
+                Bundle extras = new Bundle();
+                extras.putInt("idEspecialidade", idEspecialidade);
+                i.putExtras(extras);
+                startActivity(i);
             }});
 
     }

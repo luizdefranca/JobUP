@@ -7,8 +7,8 @@ package com.br.jobup.services.usuarioFullServices.parsers;
  * Last modified 05/05/17 16:53
  */
 
-import com.br.jobup.models.Usuario;
-import com.br.jobup.models.UsuarioSignIn;
+import com.br.jobup.models.usuario.Usuario;
+import com.br.jobup.models.login.UsuarioSignIn;
 import com.br.jobup.services.RetroFitInicializador;
 
 import retrofit2.Call;

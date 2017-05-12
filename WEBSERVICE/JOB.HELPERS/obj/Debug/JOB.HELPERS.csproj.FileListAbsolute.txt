@@ -1,0 +1,5 @@
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.HELPERS\bin\Debug\JOB.HELPERS.dll
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.HELPERS\bin\Debug\JOB.HELPERS.pdb
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.HELPERS\obj\Debug\JOB.HELPERS.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.HELPERS\obj\Debug\JOB.HELPERS.dll
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.HELPERS\obj\Debug\JOB.HELPERS.pdb

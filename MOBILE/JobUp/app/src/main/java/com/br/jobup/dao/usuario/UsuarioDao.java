@@ -8,8 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.br.jobup.dao.DatabaseHelper;
-import com.br.jobup.dao.UsuarioDatabaseListener;
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.util.Constantes;
 
 import java.util.ArrayList;

@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 
 import org.junit.Test;
 

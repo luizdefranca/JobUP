@@ -1,6 +1,6 @@
 package com.br.jobup.services.interfaces;
 
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 
 import java.util.List;
 

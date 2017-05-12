@@ -1,9 +1,9 @@
 package com.br.jobup.models.builder;
 
-import com.br.jobup.models.Avaliacoes;
-import com.br.jobup.models.Especialidade;
-import com.br.jobup.models.Formacao;
-import com.br.jobup.models.PerfilProfisional;
+import com.br.jobup.models.usuario.Avaliacoes;
+import com.br.jobup.models.usuario.Especialidade;
+import com.br.jobup.models.usuario.Formacao;
+import com.br.jobup.models.usuario.PerfilProfisional;
 import com.br.jobup.util.Parsers;
 
 import java.util.ArrayList;
