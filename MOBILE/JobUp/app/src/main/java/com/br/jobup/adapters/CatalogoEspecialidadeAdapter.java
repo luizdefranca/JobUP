@@ -41,29 +41,23 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter {
 
         EspecialidadeCatalogo especialidade = especialidadesList.get(position);
 
-        //viewholder
-        ViewHolder holder;
 
-        if ( convertView == null) {
-            convertView = LayoutInflater.from(this.context).inflate(R.layout.activity_catalogo_especialidade,
-                    parent, false);
-            holder = new ViewHolder();
-            holder.txtNome = (TextView) convertView.findViewById(R.id.item_especialidade_txtNome);
-            holder.txtBairro = (TextView) convertView.findViewById(R.id.item_especialidade_txtBairro);
-            holder.rtbEstrelas = (RatingBar) convertView.findViewById(R.id.item_especialidade_rtbEstrelas);
-            holder.txtDescEspecialidade = (TextView) convertView.findViewById(R.id.item_especialidade_txtDescricao);
-            holder.txtResumoCurriculo = (TextView) convertView.findViewById(R.id.item_especialidade_txtCurriculo);
-            convertView.setTag(holder);
-        } else{
-            holder = (ViewHolder) convertView.getTag();
-        }
-        holder.txtNome.setText(especialidade.getNome());
-//        holder.txtBairro.setText(especialidade.getBairro());
-        holder.txtResumoCurriculo.setText((especialidade.getResumoCurriculo()));
-//        holder.rtbEstrelas.setRating(especialidade.getRating());
-        holder.txtDescEspecialidade.setText(especialidade.getDescEspecialidade());
-        return convertView;
+        View view = LayoutInflater.from(this.context).inflate(R.layout.item_especialidade_catalogo, null);
+        TextView txtNome = (TextView) view.findViewById(R.id.item_especialidade_txtNome);
+        TextView txtBairro = (TextView) view.findViewById(R.id.item_especialidade_txtBairro);
+        RatingBar rtbEstrelas = (RatingBar) view.findViewById(R.id.item_especialidade_rtbEstrelas);
+        TextView txtDescEspecialidade = (TextView) view.findViewById(R.id.item_especialidade_txtDescricao);
+        TextView txtResumoCurriculo = (TextView) view.findViewById(R.id.item_especialidade_txtCurriculo);
+
+
+        txtNome.setText(especialidade.getNome());
+//        txtBairro.setText(especialidade.getBairro());
+        txtResumoCurriculo.setText((especialidade.getResumoCurriculo()));
+//        rtbEstrelas.setRating(especialidade.getRating());
+        txtDescEspecialidade.setText(especialidade.getDescEspecialidade());
+        return view;
     }
+
     @Override
     public int getCount() {
         return especialidadesList.size();
@@ -80,12 +74,11 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter {
     }
 
 
-
-    public class ViewHolder{
+    public class ViewHolder {
         //views
-       TextView txtNome;
-       TextView txtBairro;
-       RatingBar rtbEstrelas;
+        TextView txtNome;
+        TextView txtBairro;
+        RatingBar rtbEstrelas;
         TextView txtDescEspecialidade;
         TextView txtResumoCurriculo;
 

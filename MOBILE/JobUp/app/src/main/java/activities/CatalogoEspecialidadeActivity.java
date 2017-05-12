@@ -1,19 +1,12 @@
 package activities;
 
-import android.app.LoaderManager;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.br.jobup.R;
 import com.br.jobup.adapters.CatalogoEspecialidadeAdapter;
-import com.br.jobup.adapters.UsuarioAdapter;
-import com.br.jobup.dao.usuario.IUsuarioDao;
-import com.br.jobup.dao.usuario.UsuarioDao;
 import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
-import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.parsers.ParserEspecialidadeCatalogo;
 
 import java.util.List;
@@ -34,12 +27,15 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
     private ListView mListCatalogoEspecialidade;
     int idCategoria = 0;
+    CatalogoEspecialidadeAdapter catalogoAdapter;
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_catalogo_especialidade);
         mListCatalogoEspecialidade = (ListView) findViewById(R.id.catalogo_especialidade_lstView);
 
-        idCategoria = getIntent().getIntExtra("idCategoria", idCategoria);
+        idCategoria = getIntent().getIntExtra("idEspecialidade", idCategoria);
 
 
     }
@@ -53,12 +49,11 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
     private void carregaCatalogoEspecialidade() {
 
         final ParserEspecialidadeCatalogo parser = new ParserEspecialidadeCatalogo(idCategoria);
-        parser.getAll(idCategoria).enqueue(new Callback<List<EspecialidadeCatalogo>>() {
+        parser.getAll().enqueue(new Callback<List<EspecialidadeCatalogo>>() {
             @Override
             public void onResponse(Call<List<EspecialidadeCatalogo>> call, Response<List<EspecialidadeCatalogo>> response) {
-                final List<EspecialidadeCatalogo> especialidadeList = response.body();
-                final CatalogoEspecialidadeAdapter catalogoAdapter =
-                        new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
+                List<EspecialidadeCatalogo> especialidadeList = response.body();
+                catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
                 mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
             }
 
