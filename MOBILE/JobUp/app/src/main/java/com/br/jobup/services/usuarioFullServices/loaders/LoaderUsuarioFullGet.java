@@ -11,13 +11,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
-import android.util.Log;
 
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.usuarioFullServices.tasks.TaskUsuarioFullGet;
-import com.br.jobup.services.usuarioFullServices.tasks.TaskUsuarioFullGetAll;
-
-import java.util.List;
 
 /**
  * Created by luizramos on 01/05/17.

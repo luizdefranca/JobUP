@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.br.jobup.R;
-import com.br.jobup.models.UsuarioSignUp;
+import com.br.jobup.models.login.UsuarioSignUp;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignUp;
 
 import retrofit2.Call;

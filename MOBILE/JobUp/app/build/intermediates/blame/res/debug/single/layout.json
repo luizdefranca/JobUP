@@ -48,6 +48,10 @@
         "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/layout/messenger_button_send_blue_large.xml"
     },
     {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/activity_catalogo_especialidade.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_catalogo_especialidade.xml"
+    },
+    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/com_facebook_activity_layout.xml",
         "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/layout/com_facebook_activity_layout.xml"
     },
@@ -58,6 +62,10 @@
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/cat_cell.xml",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/cat_cell.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/item_especialidade_catalogo.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/item_especialidade_catalogo.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/layout/com_facebook_device_auth_dialog_fragment.xml",

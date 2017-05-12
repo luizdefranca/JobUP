@@ -7,7 +7,7 @@ package com.br.jobup.services.interfaces;
  * Last modified 01/05/17 00:40
  */
 
-import com.br.jobup.models.Especialidade;
+import com.br.jobup.models.usuario.Especialidade;
 
 import java.util.List;
 

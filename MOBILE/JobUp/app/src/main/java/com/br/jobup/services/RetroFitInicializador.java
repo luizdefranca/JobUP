@@ -5,6 +5,7 @@ import com.br.jobup.services.interfaces.IAprovarAPI;
 import com.br.jobup.services.interfaces.IAvaliacaoAPI;
 import com.br.jobup.services.interfaces.IClienteAPI;
 import com.br.jobup.services.interfaces.IDesativarAPI;
+import com.br.jobup.services.interfaces.IEspecialidadeCatalogoAPI;
 import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
 import com.br.jobup.services.interfaces.IUsuarioFullAPI;
@@ -127,4 +128,7 @@ public class RetroFitInicializador {
     }
 
     public IUsuarioSignUpAPI signUpAPI(){ return retrofit.create(IUsuarioSignUpAPI.class);}
+
+    public IEspecialidadeCatalogoAPI getEspecialidadesAPI(){
+        return  retrofit.create(IEspecialidadeCatalogoAPI.class);}
 }

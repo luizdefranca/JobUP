@@ -64,6 +64,7 @@
             android:name="activities.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
         <activity android:name="activities.ListUsuarioActivity" />
+        <activity android:name="activities.CatalogoEspecialidadeActivity" />
         <activity android:name="activities.ListaNovaDeUsuariosActivity" />
     </application>
 

@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.RetroFitInicializador;
 
 import java.util.ArrayList;

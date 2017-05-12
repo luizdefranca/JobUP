@@ -10,7 +10,7 @@ import com.br.jobup.R;
 import com.br.jobup.adapters.UsuarioAdapter;
 import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 
 import java.util.List;
 

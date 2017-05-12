@@ -2,7 +2,7 @@ package com.br.jobup.services.usuarioFullServices.parsers;
 
 import android.util.Log;
 
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.RetroFitInicializador;
 
 import java.io.IOException;
@@ -39,7 +39,6 @@ public class ParserUsuarioFull {
             e.printStackTrace();
             Log.e(TAG, "getAll: Erro Baixando usuarios" , e );
         }
-
         return usuarios;
 
     }

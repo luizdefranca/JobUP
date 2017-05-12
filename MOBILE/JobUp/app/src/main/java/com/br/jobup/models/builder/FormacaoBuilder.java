@@ -1,6 +1,6 @@
 package com.br.jobup.models.builder;
 
-import com.br.jobup.models.Formacao;
+import com.br.jobup.models.usuario.Formacao;
 import com.br.jobup.util.Parsers;
 
 import java.util.Date;

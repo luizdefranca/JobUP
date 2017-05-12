@@ -7,8 +7,7 @@ package com.br.jobup.services.interfaces;
  * Last modified 05/05/17 16:44
  */
 
-import com.br.jobup.models.Usuario;
-import com.squareup.okhttp.Response;
+import com.br.jobup.models.usuario.Usuario;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

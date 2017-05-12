@@ -6,9 +6,9 @@ import android.widget.Spinner;
 
 import activities.CadastroActivity;
 import com.br.jobup.R;
-import com.br.jobup.models.Cpf;
-import com.br.jobup.models.Rg;
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Cpf;
+import com.br.jobup.models.usuario.Rg;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.util.Parsers;
 
 /**

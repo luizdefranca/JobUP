@@ -11,7 +11,7 @@ import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
 
 /**
@@ -45,7 +45,7 @@ public class TaskUsuarioFullGet extends AsyncTaskLoader<Usuario> {
 
         ParserUsuarioFull parser = new ParserUsuarioFull();
 
-   //     mUsuario = parser.get();
+//        mUsuario = parser.get();
         return mUsuario;
     }
 }

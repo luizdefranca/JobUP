@@ -1,10 +1,8 @@
 package com.br.jobup.http;
 
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Usuario;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
-
-import java.net.MalformedURLException;
 
 /**
  * Created by luizramos on 23/04/17.

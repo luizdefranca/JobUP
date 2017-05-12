@@ -1,14 +1,12 @@
 package com.br.jobup.models.builder;
 
-import com.br.jobup.models.Cpf;
-import com.br.jobup.models.Email;
-import com.br.jobup.models.PerfilProfisional;
-import com.br.jobup.models.Rg;
-import com.br.jobup.models.Telefone;
-import com.br.jobup.models.Usuario;
+import com.br.jobup.models.usuario.Cpf;
+import com.br.jobup.models.usuario.Email;
+import com.br.jobup.models.usuario.PerfilProfisional;
+import com.br.jobup.models.usuario.Rg;
+import com.br.jobup.models.usuario.Telefone;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.util.Parsers;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.Date;

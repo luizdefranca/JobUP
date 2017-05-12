@@ -1,0 +1,14 @@
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\JOB.DATA.dll.config
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\JOB.DATA.dll
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\JOB.DATA.pdb
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\JOB.HELPERS.dll
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\JOB.HELPERS.pdb
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\bin\Debug\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\obj\Debug\JOB.DATA.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\obj\Debug\JOB.DATA.Migrations._1_0.resources
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\obj\Debug\JOB.DATA.csproj.GenerateResource.Cache
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\obj\Debug\JOB.DATA.dll
+\\Mac\Home\Documents\workspace_unibratec\JobUP\WEBSERVICE\JOB.DATA\obj\Debug\JOB.DATA.pdb
