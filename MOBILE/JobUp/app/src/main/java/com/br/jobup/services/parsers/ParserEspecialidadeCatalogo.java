@@ -31,12 +31,12 @@ public class ParserEspecialidadeCatalogo {
     public ParserEspecialidadeCatalogo(int idEspecialidade){
         this.idEspecialidade = idEspecialidade;
     }
-    public Call<List<EspecialidadeCatalogo>> getAll(int idEspecialidade){
+    public Call<List<EspecialidadeCatalogo>> getAll(){
         Call<List<EspecialidadeCatalogo>> especialidadesCall = null;
 
             especialidadesCall =  new RetroFitInicializador()
                     .getEspecialidadesAPI()
-                    .getAll(idEspecialidade);
+                    .getAll(this.idEspecialidade);
 
 
         return especialidadesCall;
