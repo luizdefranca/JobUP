@@ -25,6 +25,10 @@ import com.br.jobup.models.Usuario;
 import com.br.jobup.models.UsuarioSignIn;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 
+import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
+import com.github.hynra.gsonsharedpreferences.ParsingException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -54,6 +58,20 @@ public class SingInActivity extends AppCompatActivity  {
     Usuario usuario;
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(SingInActivity.this, "UsuarioCorrente");
+        Usuario usuarioCorrente = null;
+        try {
+            usuarioCorrente = (Usuario)  gsonSharedPrefs.getObject(new Usuario());
+            Log.i("test", usuarioCorrente.getNome());
+            Toast.makeText(SingInActivity.this, "usuario corrente "+ usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
+        } catch (ParsingException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +91,7 @@ public class SingInActivity extends AppCompatActivity  {
         progDialog = new ProgressDialog(this);
         progDialog.setTitle(R.string.app_name);
         progDialog.setMessage("Logging in...");
+
         progDialog.setIndeterminate(false);
 
         usernameTxt = (EditText) findViewById(R.id.usernameTxt);
@@ -89,45 +108,43 @@ public class SingInActivity extends AppCompatActivity  {
                 String userName = usernameTxt.getText().toString();
                 String password = passwordTxt.getText().toString();
 
+//TODO: VERIFICAR SE JA EXISTE UM USUARIO CORRENTE SALVO NA PREFERENCIA DO APARELHO CASO ESTEJA É PRA LOGAR AUTOMATICAMENTE
+
                 final UsuarioSignIn login = new UsuarioSignIn(userName, password);
                 final ParserUsuarioSignIn parser = new ParserUsuarioSignIn(login);
-                parser.get().enqueue(new Callback<String>() {
+                parser.get().enqueue(new Callback<Usuario>() {
                     @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
-
-                        if (response.isSuccessful()) {
-                            final String idUsuario = response.body().toString();
-                            Toast.makeText(SingInActivity.this, "usário com id=" + idUsuario +
-                                    " logado com sucesso", Toast.LENGTH_LONG).show();
-
-                            //Chama a MainActivity passando o id do Usuario Atual
+                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                        Usuario usuarioCorrente = response.body();
+                        if(response.isSuccessful()){
+                            Toast.makeText(SingInActivity.this, "usuario: "+ response.body().getNome()
+                                    + " logado com sucesso!", Toast.LENGTH_SHORT).show();
+                            GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(SingInActivity.this, "UsuarioCorrente");
+                            gsonSharedPrefs.saveObject(usuarioCorrente);
+                            progDialog.dismiss();
                             final Intent intent = new Intent(SingInActivity.this, MainActivity.class);
-                            intent.putExtra("idUsuarioCorrente", idUsuario);
+                            intent.putExtra("usuarioCorrent", usuario);
                             startActivity(intent);
-                            //Codigo de retorno 400 -> falha no servidor
-                        } else if (response.code() == 400) {
-                            Toast.makeText(SingInActivity.this, "Falha no servidor", Toast.LENGTH_LONG).show();
-                            Log.e("LCFR", "onResponse: falha no servidor" );
-                            //Codigo de retorno 403 -> usuario bloqueado
-                        } else if (response.code() == 403) {
-                            Toast.makeText(SingInActivity.this, "Usuário bloqueado", Toast.LENGTH_LONG).show();
-                            Log.e("LCFR", "onResponse: usuario bloqueado" );
-                            //Codigo de retorno 412 -> usuario nao validou o email
-                        } else if(response.code() == 412){
-                            Log.e("LCFR", "onResponse: usuario precisa validar o email" );
-                            Toast.makeText(SingInActivity.this, "Usuário precisa validar o email", Toast.LENGTH_LONG).show();
                         }
 
-                        progDialog.dismiss();
+                        //Desabilita o ProgressDialog
+                        if(progDialog.isShowing()){
+                            progDialog.dismiss();
+                        }
                     }
 
                     @Override
-                    public void onFailure(Call<String> call, Throwable t) {
-                        Log.e("LCFR", "onResponse: falha na chamada", t );
-                        progDialog.dismiss();
+                    public void onFailure(Call<Usuario> call, Throwable t) {
+                        if(progDialog.isShowing()){
+                            progDialog.dismiss();
+                        }
+                        Toast.makeText(SingInActivity.this, "Usuário ou senha inválidos.", Toast.LENGTH_SHORT).show();
+
+                        //TODO: LIMPAR O TEXTVIEW COM O NOME DO USUARIO E A SENHA
+
                     }
                 });
-//
+
             }
         });
 

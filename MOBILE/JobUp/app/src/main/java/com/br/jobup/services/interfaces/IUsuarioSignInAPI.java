@@ -7,6 +7,7 @@ package com.br.jobup.services.interfaces;
  * Last modified 05/05/17 16:44
  */
 
+import com.br.jobup.models.Usuario;
 import com.squareup.okhttp.Response;
 
 import retrofit2.Call;
@@ -18,11 +19,11 @@ import retrofit2.http.Query;
  */
 
 public interface IUsuarioSignInAPI {
-    public static final String PATH = "login/";
+    public static final String PATH = "login";
 
 
     @GET(PATH)
-    Call<String> get(
+    Call<Usuario> get(
             @Query("Email") String email,
             @Query("Password") String password
     );

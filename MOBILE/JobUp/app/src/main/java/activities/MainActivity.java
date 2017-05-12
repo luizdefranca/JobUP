@@ -34,9 +34,13 @@ import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
 import com.br.jobup.models.UsuarioSignIn;
 import com.br.jobup.models.Usuario;
+import com.br.jobup.models.UsuarioSignUp;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
+import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignUp;
+import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
+import com.github.hynra.gsonsharedpreferences.ParsingException;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -69,6 +73,16 @@ public class MainActivity extends AppCompatActivity
     protected void onStart() {
         super.onStart();
         keywTxt.setText("");
+
+        GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(this, "UsuarioCorrente");
+        Usuario usuarioCorrente = null;
+        try {
+             usuarioCorrente = (Usuario) gsonSharedPrefs.getObject(new Usuario());
+            Log.i("test", usuarioCorrente.getNome());
+            Toast.makeText(this, "usuario corrente "+ usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
+        } catch (ParsingException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -154,6 +168,8 @@ public class MainActivity extends AppCompatActivity
 
         // Init the Categories GridView
         initCatGridView();
+
+        //Fim do método onCreate
     }
 
 
@@ -162,15 +178,14 @@ public class MainActivity extends AppCompatActivity
 
         // ARRAY COM AS ESPECIALIDADE
         final String[] categoriesArray = new String[] {
-                "Pintor",
-                "Eletricista",
-                "Encanador",
-                "Chaveiro",
+                "Baba",
+                "Cozinheira",
                 "Diarista",
-                "Carpinteiro",
-                "Marceneiro",
-                "Babá",
-                "Cuidador de Cães"
+                "Encanador",
+                "Motorista",
+                "Pintor",
+                "Passeador de caes"
+
 
                 // You can add more Categories here....
         };
@@ -301,6 +316,7 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -317,12 +333,12 @@ public class MainActivity extends AppCompatActivity
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
         } else if (id == R.id.nav_slideshow) {
-            final UsuarioSignIn usuarioSignIn = new UsuarioSignIn("luizramospe@gmail.com", "Lc1234");
+            final UsuarioSignIn usuarioSignIn = new UsuarioSignIn("luizramospe", "Teste12345");
             ParserUsuarioSignIn parse = new ParserUsuarioSignIn(usuarioSignIn);
-             Call<String> loginCall = parse.get();
-            loginCall.enqueue(new Callback<String>() {
+             Call<Usuario> loginCall = parse.get();
+            loginCall.enqueue(new Callback<Usuario>() {
                 @Override
-                public void onResponse(Call<String> call, Response<String> response) {
+                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                     if(response.code() == 200 && response.message().equals("Success")){
                         Log.e(TAG, "onResponse: " + "UsuarioSignIn efetuado com sucesso" );
                     }else if(response.message()
@@ -336,8 +352,8 @@ public class MainActivity extends AppCompatActivity
                 }
 
                 @Override
-                public void onFailure(Call<String> call, Throwable t) {
-                    Log.e(TAG, "onFailure: " + t.getMessage() );
+                public void onFailure(Call<Usuario> call, Throwable t) {
+                    Log.e(TAG, "onFailure: " + t.getMessage(), t );
                     Toast.makeText(MainActivity.this, "onFailure: " + t.getMessage() , Toast.LENGTH_LONG).show();
                 }
             });

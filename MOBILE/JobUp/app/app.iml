@@ -111,6 +111,7 @@
     <orderEntry type="library" exported="" name="okhttp-2.7.2" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="caelum-stella-core-2.1.2" level="project" />
+    <orderEntry type="library" exported="" name="LoggingInterceptor-2.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="jsr305-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-utils-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-fragment-25.3.1" level="project" />
@@ -133,6 +134,7 @@
     <orderEntry type="library" exported="" name="support-media-compat-25.3.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
     <orderEntry type="library" exported="" name="GSON-SharedPreferences-1.1" level="project" />
+    <orderEntry type="library" exported="" name="logging-interceptor-3.6.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-25.3.1" level="project" />

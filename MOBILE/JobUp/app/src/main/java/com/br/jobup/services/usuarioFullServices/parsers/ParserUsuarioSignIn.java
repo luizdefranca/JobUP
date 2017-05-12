@@ -7,6 +7,7 @@ package com.br.jobup.services.usuarioFullServices.parsers;
  * Last modified 05/05/17 16:53
  */
 
+import com.br.jobup.models.Usuario;
 import com.br.jobup.models.UsuarioSignIn;
 import com.br.jobup.services.RetroFitInicializador;
 
@@ -24,8 +25,8 @@ public class ParserUsuarioSignIn {
     public ParserUsuarioSignIn(UsuarioSignIn usuarioSignIn){
         this.usuarioSignIn = usuarioSignIn;
     }
-    public Call<String> get(){
-         Call<String> loginResponse = null;
+    public Call<Usuario> get(){
+         Call<Usuario> loginResponse = null;
             loginResponse = new RetroFitInicializador()
                     .loginAPI()
                     .get(usuarioSignIn.getUserName(), usuarioSignIn.getPassword());
