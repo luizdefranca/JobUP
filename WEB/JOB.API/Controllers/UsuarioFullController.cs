@@ -19,9 +19,7 @@ namespace JOB.API.Controllers
         // GET: api/Usuario
         public HttpResponseMessage Get()
         {
-            var result = ctx.Usuario
-                //.Include(i => i.ENDERECO).Include(i => i.CONTATO)
-                .ToList();
+            var result = ctx.Usuario.ToList();
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
@@ -29,9 +27,7 @@ namespace JOB.API.Controllers
         // GET: api/Usuario/5
         public HttpResponseMessage Get(Guid id)
         {
-            var result = ctx.Usuario
-                //.Include(i => i.ENDERECO).Include(i => i.CONTATO)
-                .FirstOrDefault(w => w.ID_USUARIO == id);
+            var result = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
