@@ -8,12 +8,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.br.jobup.R;
+import com.br.jobup.adapters.CatalogoEspecialidadeAdapter;
 import com.br.jobup.adapters.UsuarioAdapter;
 import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
+import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
 import com.br.jobup.models.usuario.Usuario;
+import com.br.jobup.services.parsers.ParserEspecialidadeCatalogo;
 
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /*
  * Created by Luiz Carlos Ramos on 12/05/17 02:34
@@ -26,15 +33,14 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
 
     private ListView mListCatalogoEspecialidade;
-    private LoaderManager loaderManager;
-
+    int idCategoria = 0;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         mListCatalogoEspecialidade = (ListView) findViewById(R.id.catalogo_especialidade_lstView);
-        int idCategoria = 0;
-        getIntent().getIntExtra("idCategoria", idCategoria);
-        loaderManager = getLoaderManager();
+
+        idCategoria = getIntent().getIntExtra("idCategoria", idCategoria);
+
 
     }
 
@@ -46,11 +52,21 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
     private void carregaCatalogoEspecialidade() {
 
+        final ParserEspecialidadeCatalogo parser = new ParserEspecialidadeCatalogo(idCategoria);
+        parser.getAll(idCategoria).enqueue(new Callback<List<EspecialidadeCatalogo>>() {
+            @Override
+            public void onResponse(Call<List<EspecialidadeCatalogo>> call, Response<List<EspecialidadeCatalogo>> response) {
+                final List<EspecialidadeCatalogo> especialidadeList = response.body();
+                final CatalogoEspecialidadeAdapter catalogoAdapter =
+                        new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
+                mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
+            }
 
-        IUsuarioDao dao = new UsuarioDao(this);
-        List<Usuario> usuarios = dao.getAllUsuarios();
-        dao.close();
-        UsuarioAdapter adapter = new UsuarioAdapter(this, usuarios);
-        mListCatalogoEspecialidade.setAdapter(adapter);
+            @Override
+            public void onFailure(Call<List<EspecialidadeCatalogo>> call, Throwable t) {
+
+            }
+        });
+
     }
 }

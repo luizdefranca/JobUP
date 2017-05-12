@@ -21,10 +21,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.br.jobup.R;
-import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.models.login.UsuarioSignIn;
+import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
-
 import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
 import com.github.hynra.gsonsharedpreferences.ParsingException;
 
@@ -32,7 +31,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
-
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -45,7 +43,7 @@ import retrofit2.Response;
  * Last modified 09/05/17 18:46
  */
 
-public class SingInActivity extends AppCompatActivity  {
+public class SingInActivity extends AppCompatActivity {
 
     /* Views */
     ProgressDialog progDialog;
@@ -61,9 +59,11 @@ public class SingInActivity extends AppCompatActivity  {
         GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(SingInActivity.this, "UsuarioCorrente");
         Usuario usuarioCorrente = null;
         try {
-            usuarioCorrente = (Usuario)  gsonSharedPrefs.getObject(new Usuario());
-            Log.i("test", usuarioCorrente.getNome());
-            Toast.makeText(SingInActivity.this, "usuario corrente "+ usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
+            usuarioCorrente = (Usuario) gsonSharedPrefs.getObject(new Usuario());
+            if (usuarioCorrente != null) {
+                Log.i("test", usuarioCorrente.getNome());
+                Toast.makeText(SingInActivity.this, "usuario corrente " + usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
+            }
         } catch (ParsingException e) {
             e.printStackTrace();
         }
@@ -113,8 +113,8 @@ public class SingInActivity extends AppCompatActivity  {
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                         Usuario usuarioCorrente = response.body();
-                        if(response.isSuccessful()){
-                            Toast.makeText(SingInActivity.this, "usuario: "+ response.body().getNome()
+                        if (response.isSuccessful()) {
+                            Toast.makeText(SingInActivity.this, "usuario: " + response.body().getNome()
                                     + " logado com sucesso!", Toast.LENGTH_SHORT).show();
                             GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(SingInActivity.this, "UsuarioCorrente");
                             gsonSharedPrefs.saveObject(usuarioCorrente);
@@ -125,14 +125,14 @@ public class SingInActivity extends AppCompatActivity  {
                         }
 
                         //Desabilita o ProgressDialog
-                        if(progDialog.isShowing()){
+                        if (progDialog.isShowing()) {
                             progDialog.dismiss();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<Usuario> call, Throwable t) {
-                        if(progDialog.isShowing()){
+                        if (progDialog.isShowing()) {
                             progDialog.dismiss();
                         }
                         Toast.makeText(SingInActivity.this, "Usuário ou senha inválidos.", Toast.LENGTH_SHORT).show();
@@ -151,7 +151,7 @@ public class SingInActivity extends AppCompatActivity  {
         signupButt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    startActivity(new Intent(SingInActivity.this, SignUpActivity.class));
+                startActivity(new Intent(SingInActivity.this, SignUpActivity.class));
             }
         });
 
@@ -217,7 +217,6 @@ public class SingInActivity extends AppCompatActivity  {
         } catch (PackageManager.NameNotFoundException e) {
         } catch (NoSuchAlgorithmException e) {
         }
-
 
 
     }// end onCreate()

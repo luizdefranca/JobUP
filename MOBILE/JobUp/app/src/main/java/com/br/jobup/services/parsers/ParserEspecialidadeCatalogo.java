@@ -31,19 +31,14 @@ public class ParserEspecialidadeCatalogo {
     public ParserEspecialidadeCatalogo(int idEspecialidade){
         this.idEspecialidade = idEspecialidade;
     }
-    public List<EspecialidadeCatalogo> getAll(int idEspecialidade){
-        List<EspecialidadeCatalogo> especialidades = null;
-        try {
-            especialidades = (List<EspecialidadeCatalogo>) new RetroFitInicializador()
-                    .getEspecialidadesAPI()
-                    .getAll(idEspecialidade)
-                    .execute()
-                    .body();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e(TAG, "getAll: Erro Baixando usuarios" , e );
-        }
+    public Call<List<EspecialidadeCatalogo>> getAll(int idEspecialidade){
+        Call<List<EspecialidadeCatalogo>> especialidadesCall = null;
 
-        return especialidades;
+            especialidadesCall =  new RetroFitInicializador()
+                    .getEspecialidadesAPI()
+                    .getAll(idEspecialidade);
+
+
+        return especialidadesCall;
     }
 }

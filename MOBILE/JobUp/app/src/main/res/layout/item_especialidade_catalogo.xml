@@ -115,6 +115,19 @@
                     android:id="@+id/item_especialidade_txtDescricao"
                     android:textStyle="bold"/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Curriculo"
+                    android:id="@+id/item_especialidade_txtCurriculo"
+                    android:textStyle="bold"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
