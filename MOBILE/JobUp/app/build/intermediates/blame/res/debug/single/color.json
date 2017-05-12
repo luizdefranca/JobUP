@@ -12,12 +12,12 @@
         "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/color/com_facebook_button_text_color.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color/abc_tint_default.xml"
-    },
-    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color/abc_tint_default.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
