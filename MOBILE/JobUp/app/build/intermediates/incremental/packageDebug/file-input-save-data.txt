@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 10 23:23:07 BRT 2017
+#Thu May 11 19:15:30 BRT 2017
 210.set=ANDROID_RESOURCE
 282.file=/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ic_clear_material.xml
 14.set=ANDROID_RESOURCE

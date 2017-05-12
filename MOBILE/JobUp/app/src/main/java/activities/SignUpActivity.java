@@ -109,6 +109,11 @@ public class SignUpActivity extends AppCompatActivity {
                                         " cadastrado", Toast.LENGTH_SHORT).show();
                                 Log.e("LCFR", "onResponse: " + idUsuario );
                                 startActivity(new Intent(SignUpActivity.this, SingInActivity.class));
+                //TODO: FAZER UM ALERTDISPLAY COM A MENSAGEM
+                                //TITULO - Parabéns!
+                                //CORPO - Vc acaba de fazer o primeiro cadastro. Vc precisa agora
+                                //confirmar o seu email.
+
                             } else if (response.code() == 400) {
                                 Toast.makeText(SignUpActivity.this, "Falha no servidor", Toast.LENGTH_SHORT).show();
                                 Log.e("LCFR", "onResponse: falha no servidor:  "+ response.errorBody().toString() );
