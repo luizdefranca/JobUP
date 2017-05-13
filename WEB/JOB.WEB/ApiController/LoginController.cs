@@ -34,7 +34,10 @@ namespace JOB.WEB.ApiController
                 }
             }
 
-            //códigos 200 - > login efetuado; 403 -> usuario bloqueado; 412 -> requer verificacao de email; 400 -> falha no login
+            //200 - > login efetuado; 
+            //403 -> usuario bloqueado; 
+            //412 -> requer verificacao de email; 
+            //400 -> falha no login
             var result = await SignInManager.PasswordSignInAsync(Email, Password, false, shouldLockout: true);
             switch (result)
             {
