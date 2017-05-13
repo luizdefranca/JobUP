@@ -1,4 +1,5 @@
 ﻿using JOB.DATA;
+using JOB.WEB.Controllers;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity.Owin;
 using System;
@@ -26,6 +27,7 @@ namespace JOB.WEB.ApiController
             {
                 if (!await UserManager.IsEmailConfirmedAsync(user.Id))
                 {
+                    var account = new AccountController();
                     await SendEmailConfirmationTokenAsync(user.Id, "Reenviar sua confirmação de senha");
 
                     return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Você precisar confirmar seu email para logar. O token foi reenviado para sua conta de email."));
@@ -59,6 +61,7 @@ namespace JOB.WEB.ApiController
             var result = await UserManager.CreateAsync(user, Password);
             if (result.Succeeded)
             {
+                var account = new AccountController();
                 await SendEmailConfirmationTokenAsync(user.Id, "Confirme sua conta");
 
                 return Request.CreateResponse(HttpStatusCode.OK, user.Id);
@@ -68,14 +71,21 @@ namespace JOB.WEB.ApiController
 
         private async Task<string> SendEmailConfirmationTokenAsync(string userID, string subject)
         {
-            // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-            // Send an email with this link
-            string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
-            //var callbackUrl = Url.Route("ConfirmEmail", "Account", new { userId = userID, code = code });
-            var callbackUrl = this.Url.Link("Default", new { Controller = "Account", Action = "ConfirmEmail", userId = userID, code = code });
-            await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
+            try
+            {
+                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                // Send an email with this link
+                string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
+                //var callbackUrl = Url.Route("ConfirmEmail", "Account", new { userId = userID, code = code });
+                var callbackUrl = this.Url.Link("ActionConfirmEmail", new { userId = userID, code = code });
+                await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
 
-            return callbackUrl;
+                return callbackUrl;
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

@@ -192,6 +192,7 @@ namespace JOB.WEB.Controllers
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
+        [Route("Account/ConfirmEmail", Name = "ActionConfirmEmail")]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
         {
             if (userId == null || code == null)
@@ -202,15 +203,22 @@ namespace JOB.WEB.Controllers
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 
-        private async Task<string> SendEmailConfirmationTokenAsync(string userID, string subject)
+        public async Task<string> SendEmailConfirmationTokenAsync(string userID, string subject)
         {
-            // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-            // Send an email with this link
-            string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
-            var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = userID, code = code }, protocol: Request.Url.Scheme);
-            await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
+            try
+            {
+                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                // Send an email with this link
+                string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
+                var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = userID, code = code }, protocol: Request.Url.Scheme);
+                await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
 
-            return callbackUrl;
+                return callbackUrl;
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
         }
 
         //
