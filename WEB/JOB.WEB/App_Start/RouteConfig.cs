@@ -17,11 +17,6 @@ namespace JOB.WEB
             //);
 
             routes.MapRoute(
-                name: "ActionConfirmEmail",
-                url: "{Account}/{ConfirmEmail}"
-            );
-
-            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

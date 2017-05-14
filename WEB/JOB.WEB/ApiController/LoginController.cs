@@ -23,16 +23,6 @@ namespace JOB.WEB.ApiController
         public async Task<HttpResponseMessage> Get(string Email, string Password)
         {
             var user = await UserManager.FindByNameAsync(Email);
-            if (user != null)
-            {
-                if (!await UserManager.IsEmailConfirmedAsync(user.Id))
-                {
-                    var account = new AccountController();
-                    await SendEmailConfirmationTokenAsync(user.Id, "Reenviar sua confirmação de senha");
-
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError("Você precisar confirmar seu email para logar. O token foi reenviado para sua conta de email."));
-                }
-            }
 
             //200 - > login efetuado; 
             //403 -> usuario bloqueado; 
@@ -60,35 +50,13 @@ namespace JOB.WEB.ApiController
 
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
         {
-            var user = new ApplicationUser { UserName = Login, Email = Email };
+            var user = new ApplicationUser { UserName = Login, Email = Email, EmailConfirmed = true };
             var result = await UserManager.CreateAsync(user, Password);
             if (result.Succeeded)
             {
-                var account = new AccountController();
-                await SendEmailConfirmationTokenAsync(user.Id, "Confirme sua conta");
-
                 return Request.CreateResponse(HttpStatusCode.OK, user.Id);
             }
             return Request.CreateResponse(HttpStatusCode.BadRequest, result);
-        }
-
-        private async Task<string> SendEmailConfirmationTokenAsync(string userID, string subject)
-        {
-            try
-            {
-                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                // Send an email with this link
-                string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
-                //var callbackUrl = Url.Route("ConfirmEmail", "Account", new { userId = userID, code = code });
-                var callbackUrl = this.Url.Link("ActionConfirmEmail", new { userId = userID, code = code });
-                await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
-
-                return callbackUrl;
-            }
-            catch (System.Exception ex)
-            {
-                throw ex;
-            }
-        }
+        }        
     }
 }
