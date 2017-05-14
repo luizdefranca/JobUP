@@ -3,6 +3,7 @@ using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.WEB.Extensions;
 using JOB.WEB.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,6 +15,8 @@ namespace JOB.WEB.Controllers
     public class PropostaController : Controller
     {
         private Contexto ctx = new Contexto();
+
+        private Guid idServico => Guid.Parse(User.Identity.GetUserId());
 
         // GET: Proposta
         public ActionResult Index()
@@ -52,6 +55,20 @@ namespace JOB.WEB.Controllers
             ctx.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+
+        public ActionResult ListarProposta(Guid idServico )
+        {
+            var lstDominio = ctx.Servico.Where(f => f.ID_USUARIO == idServico).ToList();
+
+            var lstModel = Mapper.Map<List<ServicoViewModel_api>>(lstDominio);
+
+            foreach (var model in lstModel)
+            {
+                model.NOME = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO);
+            }
         }
     }
 }
