@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicoSeed.cs" />
     <Compile Include="Config\SubEspecialidadeConfig.cs" />
     <Compile Include="Config\PropostaConfig.cs" />
     <Compile Include="Config\OfertaConfig.cs" />
