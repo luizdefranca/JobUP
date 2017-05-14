@@ -70,22 +70,6 @@ namespace JOB.WEB.Controllers
                 return View(model);
             }
 
-            // Require the user to have a confirmed email before they can log on.
-            var user = await UserManager.FindByNameAsync(model.UserName);
-            if (user != null)
-            {
-                if (!await UserManager.IsEmailConfirmedAsync(user.Id))
-                {
-                    string callbackUrl = await SendEmailConfirmationTokenAsync(user.Id, "Reenviar sua confirmação de senha");
-
-                    // Uncomment to debug locally
-                    // ViewBag.Link = callbackUrl;
-                    ViewBag.errorMessage = "Você precisar confirmar seu email para logar. O token foi reenviado para sua conta de email.";
-
-                    return View("Error");
-                }
-            }
-
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: true);
@@ -169,18 +153,11 @@ namespace JOB.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, EmailConfirmed = true };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-
-                    string callbackUrl = await SendEmailConfirmationTokenAsync(user.Id, "Confirme sua conta");
-
-                    ViewBag.Message = "Cheque seu email e confirme sua conta, você precisa confirmar antes de efetuar um login.";
-
-                    return View("Info");
-                    //return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
@@ -192,7 +169,6 @@ namespace JOB.WEB.Controllers
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
-        [Route("Account/ConfirmEmail", Name = "ActionConfirmEmail")]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
         {
             if (userId == null || code == null)
@@ -203,23 +179,23 @@ namespace JOB.WEB.Controllers
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 
-        public async Task<string> SendEmailConfirmationTokenAsync(string userID, string subject)
-        {
-            try
-            {
-                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                // Send an email with this link
-                string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
-                var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = userID, code = code }, protocol: Request.Url.Scheme);
-                await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
+        //public async Task<string> SendEmailConfirmationTokenAsync(string userID, string subject)
+        //{
+        //    try
+        //    {
+        //        // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+        //        // Send an email with this link
+        //        string code = await UserManager.GenerateEmailConfirmationTokenAsync(userID);
+        //        var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = userID, code = code }, protocol: Request.Url.Scheme);
+        //        await UserManager.SendEmailAsync(userID, subject, "Por favor confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
 
-                return callbackUrl;
-            }
-            catch (System.Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //        return callbackUrl;
+        //    }
+        //    catch (System.Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
         //
         // GET: /Account/ForgotPassword

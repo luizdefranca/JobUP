@@ -577,7 +577,7 @@
     <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.eot" />
     <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.ttf" />
     <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.woff" />
-    <None Include="Properties\PublishProfiles\jobupweb - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\jobup - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\cldr.js" />
     <Content Include="Scripts\cldr\event.js" />
