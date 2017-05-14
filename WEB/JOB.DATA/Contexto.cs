@@ -37,8 +37,6 @@ namespace JOB.DATA
         }
 
         public DbSet<USUARIO> Usuario { get; set; }
-        //public DbSet<ENDERECO> Endereco { get; set; }
-        //public DbSet<CONTATO> Contato { get; set; }
         public DbSet<PERFIL_PROFISSIONAL> PerfilProfissional { get; set; }
         public DbSet<AVALIACAO> Avaliacao { get; set; }
         public DbSet<ESPECIALIDADE> Especialidade { get; set; }
@@ -67,8 +65,6 @@ namespace JOB.DATA
 
             //Configuring/Mapping Properties and Types with the Fluent API: https://msdn.microsoft.com/en-us/data/jj591617.aspx
             modelBuilder.Configurations.Add(new UsuarioConfig());
-            //modelBuilder.Configurations.Add(new EnderecoConfig());
-            //modelBuilder.Configurations.Add(new ContatoConfig());
             modelBuilder.Configurations.Add(new PerfilProfissionalConfig());
             modelBuilder.Configurations.Add(new AvaliacaoConfig());
             modelBuilder.Configurations.Add(new FormacaoConfig());
