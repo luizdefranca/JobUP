@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.WEB.Extensions;
 using JOB.WEB.Models;
 using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
@@ -15,6 +16,7 @@ namespace JOB.WEB.Controllers
     public class ProfissionalController : Controller
     {
         private Contexto ctx = new Contexto();
+        private Guid id => User.Identity.GetId();
 
         private Guid idUsuario => Guid.Parse(User.Identity.GetUserId());
 
@@ -71,6 +73,13 @@ namespace JOB.WEB.Controllers
         // GET: Profissional/Create
         public ActionResult Create()
         {
+            var domain = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+
+            if (domain == null) //se ta nulo, é pq o usuario ainda nao cadastrou o perfil completo
+            {
+                return RedirectToAction("Create", "Manage");
+            }
+
             var cadprof = new CadastroProfissionalViewModel();
             cadprof.ESPECIALIDADES = ctx.Especialidade.ToList();
             return View(cadprof);

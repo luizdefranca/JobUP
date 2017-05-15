@@ -16,12 +16,11 @@ namespace JOB.WEB.Controllers
     public class ServicoPrivadoController : Controller
     {
         private Contexto ctx = new Contexto();
+        private Guid id => User.Identity.GetId();
 
         // GET: Servico
         public ActionResult Index()
         {
-            var id = User.Identity.GetId();
-
             //busca as ofertas que nao foram negadas (ou seja, novas ou aceitas)
             var domain = ctx.Oferta.Where(w => w.ID_USUARIO == id & w.ACEITA != false).Select(s => s.SERVICO).ToList();
 
@@ -57,6 +56,13 @@ namespace JOB.WEB.Controllers
         // GET: Servico/Create
         public ActionResult Create()
         {
+            var domain = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+
+            if (domain == null) //se ta nulo, é pq o usuario ainda nao cadastrou o perfil completo
+            {
+                return RedirectToAction("Create", "Manage");
+            }
+
             var model = new ServicoViewModel_full();
 
             var idEspecialidade = int.Parse(Request.QueryString["ID_ESPECIALIDADE"]);
