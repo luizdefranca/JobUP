@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.WEB.Extensions;
 using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -16,6 +16,7 @@ namespace JOB.WEB.Controllers
     public class ServicoPublicoController : Controller
     {
         private Contexto ctx = new Contexto();
+        private Guid id => User.Identity.GetId();
 
         public ActionResult Index(int ID_ESPECIALIDADE)
         {
@@ -59,6 +60,13 @@ namespace JOB.WEB.Controllers
         // GET: Servico/Create
         public ActionResult Create()
         {
+            var domain = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+
+            if (domain == null) //se ta nulo, é pq o usuario ainda nao cadastrou o perfil completo
+            {
+                return RedirectToAction("Create", "Manage");
+            }
+
             var model = new ServicoViewModel_full();
 
             var idEspecialidade = int.Parse(Request.QueryString["ID_ESPECIALIDADE"]);
@@ -87,50 +95,6 @@ namespace JOB.WEB.Controllers
                 ModelState.AddModelError("", ex.TratarMensagem());
                 return View(obj);
             }
-        }
-
-        // GET: Servico/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Servico/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Servico/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Servico/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        }        
     }
 }

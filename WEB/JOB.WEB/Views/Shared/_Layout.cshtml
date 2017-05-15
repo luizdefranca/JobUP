@@ -70,40 +70,40 @@
                     </li>
                     <li id="left-sidebar-menu-profissionais"><a href="@Url.Action("Index", "Especialidade")"><i class="fa fa-group"></i><span>Profissionais</span></a></li>
                     @*<li id="left-sidebar-menu-servicos"><a href="@Url.Action("Index", "ServicoPublico")"><i class="fa fa-briefcase"></i><span>Ofertas de Serviços</span></a></li>*@
-                      <li id="left-sidebar-menu-servicos">@*<a href="@Url.Action("Index2", "Especialidade")"><i class="fa fa-briefcase"></i><span>Criar Oferta Publica</span></a>*@</li>
+                    <li id="left-sidebar-menu-servicos">@*<a href="@Url.Action("Index2", "Especialidade")"><i class="fa fa-briefcase"></i><span>Criar Oferta Publica</span></a>*@</li>
                     <li id="left-sidebar-menu-servicos"><a href="@Url.Action("Index3", "Especialidade")"><i class="fa fa-briefcase"></i><span>Ofertas de Serviços</span></a></li>
-                    </ul>
-                </section>
-            </aside>
-            <div id="DivContentWrapper" class="content-wrapper">
-                <section class="content-header">
-                    <h1>
-                        @ViewBag.Title
-                        <small>@ViewBag.SubTitle</small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i>@ViewBag.SubTitle</a></li>
-                        <li class="active">@ViewBag.Title</li>
-                    </ol>
-                </section>
-                <section class="content">
-                    @RenderBody()
-                </section>
-            </div>
-            <footer class="main-footer">
-                <div class="pull-right hidden-xs">
-                    <b>Version</b> 1.0
-                </div>
-                <strong>Copyrights | Mundo UP &copy; 2017.</strong> Todos os direitos reservados.
-            </footer>
+                </ul>
+            </section>
+        </aside>
+        <div id="DivContentWrapper" class="content-wrapper">
+            <section class="content-header">
+                <h1>
+                    @ViewBag.Title
+                    <small>@ViewBag.SubTitle</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i>@ViewBag.SubTitle</a></li>
+                    <li class="active">@ViewBag.Title</li>
+                </ol>
+            </section>
+            <section class="content">
+                @RenderBody()
+            </section>
         </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0
+            </div>
+            <strong>Copyrights | Mundo UP &copy; 2017.</strong> Todos os direitos reservados.
+        </footer>
+    </div>
 
-        @RenderSection("menu", required: false)
-        @Scripts.Render("~/Bundle/AdminLTE/plugins/slimscroll/js")
-        @Scripts.Render("~/Bundle/AdminLTE/plugins/fastclick/js")
-        @Scripts.Render("~/Scripts/Shared/_Layout")
-        @Scripts.Render("~/Bundle/AdminLTE/dist/js")
-        @RenderSection("scripts", required: false)
-        @RenderSection("styles", required: false)
-    </body>
-    </html>
+    @RenderSection("menu", required: false)
+    @Scripts.Render("~/Bundle/AdminLTE/plugins/slimscroll/js")
+    @Scripts.Render("~/Bundle/AdminLTE/plugins/fastclick/js")
+    @Scripts.Render("~/Scripts/Shared/_Layout")
+    @Scripts.Render("~/Bundle/AdminLTE/dist/js")
+    @RenderSection("scripts", required: false)
+    @RenderSection("styles", required: false)
+</body>
+</html>
