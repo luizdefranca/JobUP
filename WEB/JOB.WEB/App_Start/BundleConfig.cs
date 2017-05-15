@@ -87,11 +87,6 @@ namespace JOB.WEB
                 "~/AdminLTE/dist/css/skins/_all-skins.min.css"));
 
             // documentation
-            bundles.Add(new ScriptBundle("~/Bundle/AdminLTE/documentation/js").Include(
-                "~/AdminLTE/documentation/js/docs.js"));
-
-            bundles.Add(new StyleBundle("~/Bundle/AdminLTE/documentation/css").Include(
-                "~/AdminLTE/documentation/css/style.css"));
 
             // plugins | bootstrap-slider
             bundles.Add(new ScriptBundle("~/Bundle/AdminLTE/plugins/bootstrap-slider/js").Include(
@@ -125,18 +120,21 @@ namespace JOB.WEB
             // plugins | datatables
             bundles.Add(new ScriptBundle("~/Bundle/AdminLTE/plugins/datatables/js").Include(
                                         "~/AdminLTE/plugins/datatables/js/jquery.dataTables.js",
-                                        "~/AdminLTE/plugins/datatables/js/dataTables.bootstrap.js"));
+                                        "~/AdminLTE/plugins/datatables/js/dataTables.bootstrap.js",
+                                        "~/AdminLTE/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js",
+                                        "~/AdminLTE/plugins/datatables/js/render/ellipsis.js"));
 
             bundles.Add(new StyleBundle("~/Bundle/AdminLTE/plugins/datatables/css").Include(
-                                        "~/AdminLTE/plugins/datatables/css/dataTables.bootstrap.css"));
+                                        "~/AdminLTE/plugins/datatables/css/dataTables.bootstrap.css",
+                                        "~/AdminLTE/plugins/datatables/extensions/Responsive/css/responsive.bootstrap.min.css"));
 
             // plugins | datepicker
             bundles.Add(new ScriptBundle("~/Bundle/AdminLTE/plugins/datepicker/js").Include(
-                                         "~/AdminLTE/plugins/datepicker/js/bootstrap-datepicker.js",
-                                         "~/AdminLTE/plugins/datepicker/js/locales/bootstrap-datepicker*"));
+                                         "~/AdminLTE/plugins/datepicker/js/bootstrap-datepicker.min.js",
+                                         "~/AdminLTE/plugins/datepicker/js/locales/bootstrap-datepicker.pt-BR.min.js"));
 
             bundles.Add(new StyleBundle("~/Bundle/AdminLTE/plugins/datepicker/css").Include(
-                                        "~/AdminLTE/plugins/datepicker/css/datepicker3.css"));
+                                        "~/AdminLTE/plugins/datepicker/css/bootstrap-datepicker3.min.css"));
 
             // plugins | daterangepicker
             var bundleDateRunger = new ScriptBundle("~/Bundle/AdminLTE/plugins/daterangepicker/js") { Orderer = new AsIsBundleOrderer() };
@@ -166,13 +164,11 @@ namespace JOB.WEB
 
             // plugins | fullcalendar
             bundles.Add(new ScriptBundle("~/Bundle/AdminLTE/plugins/fullcalendar/js").Include(
-                                         "~/AdminLTE/plugins/fullcalendar/js/fullcalendar.min.js"));
+                                         "~/AdminLTE/plugins/fullcalendar/js/fullcalendar.min.js",
+                                         "~/AdminLTE/plugins/fullcalendar/js/locale/pt-br.js"));
 
             bundles.Add(new StyleBundle("~/Bundle/AdminLTE/plugins/fullcalendar/css").Include(
-                                        "~/AdminLTE/plugins/fullcalendar/css/fullcalendar.min.css"));
-
-            bundles.Add(new StyleBundle("~/Bundle/AdminLTE/plugins/fullcalendar/css/print").Include(
-                                        "~/AdminLTE/plugins/fullcalendar/css/print/fullcalendar.print.css"));
+                                        "~/AdminLTE/plugins/fullcalendar/css/fullcalendar.min.css", new CssRewriteUrlTransform()));
 
             // plugins | icheck
             bundles.Add(new ScriptBundle("~/Bundle/AdminLTE/plugins/icheck/js").Include(
@@ -273,6 +269,8 @@ namespace JOB.WEB
             // plugins | morris
             bundles.Add(new ScriptBundle("~/Bundle/AdminLTE/plugins/morris/js").Include(
                                          "~/AdminLTE/plugins/morris/js/morris.min.js"));
+            bundles.Add(new ScriptBundle("~/Bundle/plugins/moment/js").Include(
+                                         "~/Scripts/moment.min.js"));
         }
     }
 }
