@@ -80,6 +80,8 @@ namespace JOB.WEB.Controllers
                 return RedirectToAction("Create", "Manage");
             }
 
+            if (!domain.APROVADO) return RedirectToAction("Index", "Home");
+
             var cadprof = new CadastroProfissionalViewModel();
             cadprof.ESPECIALIDADES = ctx.Especialidade.ToList();
             return View(cadprof);

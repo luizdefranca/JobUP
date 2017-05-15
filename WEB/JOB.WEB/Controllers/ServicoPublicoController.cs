@@ -67,6 +67,8 @@ namespace JOB.WEB.Controllers
                 return RedirectToAction("Create", "Manage");
             }
 
+            if (!domain.APROVADO) return RedirectToAction("Index", "Home");
+
             var model = new ServicoViewModel_full();
 
             var idEspecialidade = int.Parse(Request.QueryString["ID_ESPECIALIDADE"]);
