@@ -665,7 +665,6 @@
     <Content Include="Views\ServicoPrivado\Details.cshtml" />
     <Content Include="Views\ServicoPrivado\Aceitar.cshtml" />
     <Content Include="Views\Proposta\Create.cshtml" />
-    <Content Include="Views\Especialidade\Index2.cshtml" />
     <Content Include="Views\Especialidade\Index3.cshtml" />
     <Content Include="Views\Proposta\ListarProposta.cshtml" />
   </ItemGroup>

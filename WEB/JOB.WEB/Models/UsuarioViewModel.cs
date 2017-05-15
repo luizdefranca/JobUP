@@ -4,6 +4,54 @@ using System.ComponentModel.DataAnnotations;
 
 namespace JOB.WEB.Models
 {
+    public class UsuarioViewModel_VW
+    {
+        [Key]
+        public Guid ID_USUARIO { get; set; }
+
+        [Required]
+        [Display(Name = "Nome")]
+        public string NOME { get; set; }
+
+        [Required]
+        [Display(Name = "CPF")]
+        public string CPF { get; set; }
+
+        [Required]
+        [Display(Name = "RG (UF)")]
+        public EnumUF RgUF { get; set; }
+
+        [Required]
+        [Display(Name = "RG (NR)")]
+        public string RgNR { get; set; }
+
+        [Required]
+        [Display(Name = "Dt. Nascimento")]
+        [DataType(DataType.Date)]
+        public DateTime DT_NASCIMENTO { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Display(Name = "Aprovado")]
+        public bool APROVADO { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Display(Name = "Ativo")]
+        public bool ATIVO { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Display(Name = "Bloqueado")]
+        public bool BLOQUEADO { get; set; }
+
+        //[DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Fixo")]
+        public string ContatoFIXO { get; set; }
+
+        [Required]
+        //[DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Celular")]
+        public string ContatoCELULAR { get; set; }
+    }
+
     public class UsuarioViewModel
     {
         [Key]

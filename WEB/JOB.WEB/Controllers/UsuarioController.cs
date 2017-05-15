@@ -28,7 +28,7 @@ namespace JOB.WEB.Controllers
         {
             var domain = ctx.Usuario.ToList();
 
-            var model = Mapper.Map<List<UsuarioViewModel>>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
+            var model = Mapper.Map<List<UsuarioViewModel_VW>>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             return View(model);
         }
