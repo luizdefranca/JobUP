@@ -14,7 +14,6 @@ namespace JOB.WEB.Models
 
         [Display(Name = "Dt. Nascimento")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DT_NASCTO { get; set; }
 
         public int ID_ESPECIALIDADE { get; set; }
