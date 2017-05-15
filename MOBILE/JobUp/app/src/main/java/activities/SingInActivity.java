@@ -109,7 +109,11 @@ public class SingInActivity extends AppCompatActivity {
 
                 final UsuarioSignIn login = new UsuarioSignIn(userName, password);
                 final ParserUsuarioSignIn parser = new ParserUsuarioSignIn(login);
-                parser.get().enqueue(new Callback<Usuario>() {
+
+                //TODO: retirar a linha a seguir ela faz o login sem checar
+                startActivity(new Intent(SingInActivity.this, MainActivity.class));
+
+              /*  parser.get().enqueue(new Callback<Usuario>() {
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                         Usuario usuarioCorrente = response.body();
@@ -141,7 +145,7 @@ public class SingInActivity extends AppCompatActivity {
 
                     }
                 });
-
+*/
             }
         });
 

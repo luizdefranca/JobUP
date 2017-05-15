@@ -54,4 +54,11 @@
         <item>TO</item>
         <item>EX</item>
     </string-array>
+    <string-array name="especialidade_opcoes">
+        <item>Visualizar perfil</item>
+        <item>Adicionar a favoritos</item>
+        <item>Contratar servicos</item>
+        <item>Fechar</item>
+
+    </string-array>
 </resources>
