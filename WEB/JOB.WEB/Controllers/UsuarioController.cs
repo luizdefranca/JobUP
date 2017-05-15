@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JOB.DATA;
+using JOB.WEB.Extensions;
 using JOB.WEB.Models;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace JOB.WEB.Controllers
     public class UsuarioController : Controller
     {
         private Contexto ctx = new Contexto();
+        private Guid id => User.Identity.GetId();
 
         public UsuarioController()
         {
@@ -28,7 +30,7 @@ namespace JOB.WEB.Controllers
         {
             var domain = ctx.Usuario.ToList();
 
-            var model = Mapper.Map<List<UsuarioViewModel_VW>>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
+            var model = Mapper.Map<List<UsuarioViewModel_VW>>(domain);
 
             return View(model);
         }
@@ -38,7 +40,7 @@ namespace JOB.WEB.Controllers
         {
             var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
-            var model = Mapper.Map<UsuarioViewModel>(domain); //converte a classe original para o viewmodel (que é reconhecida pela view)
+            var model = Mapper.Map<UsuarioViewModel>(domain);
 
             return View(model);
         }
@@ -85,6 +87,26 @@ namespace JOB.WEB.Controllers
             ctx.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult IndexServico()
+        {
+            var domain = ctx.Oferta.Where(w => w.ID_USUARIO == id).Select(s => s.SERVICO).ToList();
+
+            var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
+
+            foreach (var model in lstModel)
+            {
+                model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
+                model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+
+                if (model.ID_SUB_ESPECIALIDADE != null)
+                {
+                    model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade.First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE).DESCRICAO;
+                }
+            }
+
+            return View(lstModel);
         }
     }
 }
