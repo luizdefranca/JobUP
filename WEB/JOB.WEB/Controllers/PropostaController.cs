@@ -57,18 +57,17 @@ namespace JOB.WEB.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
+        //[HttpPost]
+        //public ActionResult ListarProposta(Guid idServico)
+        //{
+        //    var lstDominio = ctx.Servico.Where(f => f.ID_USUARIO == idServico).ToList();
 
-        public ActionResult ListarProposta(Guid idServico )
-        {
-            var lstDominio = ctx.Servico.Where(f => f.ID_USUARIO == idServico).ToList();
+        //    var lstModel = Mapper.Map<List<ServicoViewModel_api>>(lstDominio);
 
-            var lstModel = Mapper.Map<List<ServicoViewModel_api>>(lstDominio);
-
-            foreach (var model in lstModel)
-            {
-                model.NOME = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO);
-            }
-        }
+        //    foreach (var model in lstModel)
+        //    {
+        //        model.NOME = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO);
+        //    }
+        //}
     }
 }
