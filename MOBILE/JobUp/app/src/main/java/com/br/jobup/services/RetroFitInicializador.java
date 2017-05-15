@@ -29,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroFitInicializador {
 
-    String API_BASE_URL = "http://jobapi.azurewebsites.net/api/";
+    String API_BASE_URL = "http://jobupapi.azurewebsites.net/api/";
 
     private final Retrofit retrofit;
 

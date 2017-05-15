@@ -180,14 +180,14 @@ public class MainActivity extends AppCompatActivity
 
 
         final Map<Integer, String> categoriaMap = new HashMap<>();
-        categoriaMap.put(6, "Adestrador de cães");
-        categoriaMap.put(7, "Babá");
-        categoriaMap.put(8, "Cozinheira");
-        categoriaMap.put(9, "Diarista");
-        categoriaMap.put(10, "Limpeza de piscina");
-        categoriaMap.put(11, "Motorista");
-        categoriaMap.put(12, "Passadeira");
-        categoriaMap.put(13, "Passeador de cães");
+        categoriaMap.put(2, "Adestrador de cães");
+        categoriaMap.put(3, "Babá");
+        categoriaMap.put(4, "Cozinheira");
+        categoriaMap.put(5, "Diarista");
+        categoriaMap.put(6, "Limpeza de piscina");
+        categoriaMap.put(7, "Motorista");
+        categoriaMap.put(8, "Passadeira");
+        categoriaMap.put(9, "Passeador de cães");
 
 
         final List<String> catArray = new ArrayList<>(categoriaMap.values());

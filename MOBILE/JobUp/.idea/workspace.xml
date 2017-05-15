@@ -11,7 +11,40 @@
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="051efebe-44ce-4d6e-9a44-1d699834fb59" name="Default" comment="" />
+    <list default="true" id="051efebe-44ce-4d6e-9a44-1d699834fb59" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/activities/PerfilActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_perfil.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_perfil.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/yBqMtHbvXtM44VEiluGMmdjdeos=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/yBqMtHbvXtM44VEiluGMmdjdeos=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/activities/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/activities/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WEB/JOB.API/Controllers/PerfilProfissionalController.cs" afterPath="$PROJECT_DIR$/../../WEB/JOB.API/Controllers/PerfilProfissionalController.cs" />
+    </list>
     <ignored path="JobUp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -826,82 +859,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2962">
-              <caret line="269" column="46" selection-start-line="269" selection-start-column="31" selection-end-line="269" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CatalogoEspecialidadeActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CatalogoEspecialidadeAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/adapters/CatalogoEspecialidadeAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_catalogo_especialidade.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_catalogo_especialidade.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_detalhe_servico.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detalhe_servico.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="item_especialidade_catalogo.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_especialidade_catalogo.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1905">
-              <caret line="127" column="68" selection-start-line="127" selection-start-column="68" selection-end-line="127" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingInActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="-1170">
+              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4165#6617#0" expanded="true" />
+                <element signature="e#4621#6457#0" expanded="true" />
+                <element signature="e#6456#6457#0" expanded="true" />
+                <element signature="e#6616#6617#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerfilActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/PerfilActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#958#1226#0" expanded="true" />
+                <element signature="e#1225#1226#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2640,11 +2622,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioLogin.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IUsuarioLoginAPI.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/AtivacaoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/builder/UsuarioBuilder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/Usuario.java" />
@@ -2678,19 +2655,24 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/usuario/Telefone.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/login/UsuarioSignUp.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/especialidade/EspecialidadeCatalogo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/tasks/TaskCatalogoEspecialidade.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/interfaces/IEspecialidadeCatalogoAPI.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/tasks/TaskUsuarioFullGet.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/loaders/LoaderCatalogoEspecialidade.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/parsers/ParserUsuarioFull.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_especialidade_catalogo.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/activities/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/parsers/ParserEspecialidadeCatalogo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/adapters/CatalogoEspecialidadeAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_catalogo_especialidade.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_perfil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_perfil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/activities/PerfilActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java" />
       </list>
     </option>
   </component>
@@ -2778,21 +2760,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="JobUp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JobUp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -3179,6 +3170,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Default">
@@ -3223,18 +3223,16 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
-    <property name="SearchEverywhereHistoryKey" value="main&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/MainActivity.java&#10;mai&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/MainActivity.java&#10;Si&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SingInActivity.java&#10;re&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;SingI&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SingInActivity.java&#10;SignU&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SignUpActivity.java&#10;Retro&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;signup&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SignUpActivity.java&#10;sing&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SingInActivity.java&#10;Main&#9;PSI&#9;JAVA://activities.MainActivity&#10;signU&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SignUpActivity.java&#10;retro&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;sin&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SingInActivity.java&#10;retr&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;sign&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SignUpActivity.java&#10;singin&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/SingInActivity.java&#10;ati&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/AtivacaoActivity.java&#10;at&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/AtivacaoActivity.java&#10;const&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/util/Constantes.java&#10;app_&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/app_bar_main.xml&#10;act&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_main_old.xml&#10;ilo&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/interfaces/ILoginAPI.java&#10;UsuarioData&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/dao/UsuarioDatabaseListener.java&#10;cons&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/util/Constantes.java" />
+    <property name="SearchEverywhereHistoryKey" value="sin&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SingInActivity.java&#10;ma&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/MainActivity.java&#10;ret&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;main&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/MainActivity.java&#10;mai&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/MainActivity.java&#10;Si&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SingInActivity.java&#10;re&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;SingI&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SingInActivity.java&#10;SignU&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SignUpActivity.java&#10;Retro&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;signup&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SignUpActivity.java&#10;sing&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SingInActivity.java&#10;Main&#9;PSI&#9;JAVA://activities.MainActivity&#10;signU&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SignUpActivity.java&#10;retro&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;retr&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java&#10;sign&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/activities/SignUpActivity.java&#10;singin&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/SingInActivity.java&#10;ati&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/AtivacaoActivity.java&#10;at&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/AtivacaoActivity.java&#10;const&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/util/Constantes.java&#10;app_&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/app_bar_main.xml&#10;act&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/layout/activity_main_old.xml&#10;ilo&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/services/interfaces/ILoginAPI.java&#10;UsuarioData&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/dao/UsuarioDatabaseListener.java&#10;cons&#9;FILE&#9;file:///Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/java/com/br/jobup/util/Constantes.java" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.parentActivityClass">
-      <recent name="" />
-    </key>
-    <key name="android.template.packageName">
-      <recent name="com.br.jobup" />
-      <recent name="br.com.workup" />
-      <recent name="layout" />
-      <recent name="br.com.workup.jobup" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.br.jobup.services.interfaces" />
+      <recent name="com.br.jobup.models" />
+      <recent name="com.br.jobup.services" />
+      <recent name="com.br.jobup.services.usuarioServices" />
+      <recent name="com.br.jobup.models.builder" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
@@ -3242,15 +3240,21 @@
       <recent name="$PROJECT_DIR$/app/src/main/java/trash" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/br/jobup" />
     </key>
+    <key name="android.template.packageName">
+      <recent name="com.br.jobup" />
+      <recent name="br.com.workup" />
+      <recent name="layout" />
+      <recent name="br.com.workup.jobup" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.br.jobup" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/activities" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/br/jobup" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/model_new" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v21" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="activities" />
@@ -3258,12 +3262,8 @@
       <recent name="com.br.jobup" />
       <recent name="layout" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.br.jobup.services.interfaces" />
-      <recent name="com.br.jobup.models" />
-      <recent name="com.br.jobup.services" />
-      <recent name="com.br.jobup.services.usuarioServices" />
-      <recent name="com.br.jobup.models.builder" />
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3744,21 +3744,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719547" sideWeight="0.49353796" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719547" sideWeight="0.49353796" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25282714" sideWeight="0.52974504" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39943343" sideWeight="0.5048465" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5141643" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5127479" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38933763" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29036826" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3512748" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3512748" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.49433428" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.50646204" order="7" side_tool="true" content_ui="tabs" />
@@ -3884,40 +3884,46 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java</url>
-          <line>110</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/adapters/CatalogoEspecialidadeAdapter.java</url>
           <line>57</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java</url>
-          <line>35</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java</url>
-          <line>55</line>
+          <line>173</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java</url>
+          <line>118</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/activities/SignUpActivity.java</url>
           <line>102</line>
           <properties method="onResponse" />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java</url>
+          <line>49</line>
+          <properties method="onItemClick" />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="44" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -3929,66 +3935,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/widget/GridView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="1059" column="0" selection-start-line="1059" selection-start-column="0" selection-end-line="1059" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="118" column="61" selection-start-line="113" selection-start-column="15" selection-end-line="118" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_list_usuario_adapter.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_lista_nova_de_usuarios.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/ListaNovaDeUsuariosActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="57" column="72" selection-start-line="57" selection-start-column="72" selection-end-line="57" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/models/usuario/Avaliacoes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
@@ -4113,14 +4059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/adapters/UsuarioAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="49" column="5" selection-start-line="34" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/usuarioFullServices/loaders/LoaderUsuarioFullGet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -4149,7 +4087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="24" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4157,7 +4094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4194,20 +4130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding>
-            <element signature="e#4030#4031#0" expanded="false" />
-            <element signature="e#4093#4094#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4232,47 +4154,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/widget/AdapterView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/widget/AbsListView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="3834" column="0" selection-start-line="3834" selection-start-column="0" selection-end-line="3834" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2962">
-          <caret line="269" column="46" selection-start-line="269" selection-start-column="31" selection-end-line="269" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/app/Instrumentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="1106" column="0" selection-start-line="1106" selection-start-column="0" selection-end-line="1106" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#newActivity#1;class#Instrumentation#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4280,7 +4165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
           <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4288,27 +4172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#loop#0;class#Looper#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/app/ActivityThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="5222" column="0" selection-start-line="5222" selection-start-column="0" selection-end-line="5222" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6019" column="0" selection-start-line="6019" selection-start-column="0" selection-end-line="6019" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#isImmersive#0;class#Activity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4320,62 +4183,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/parsers/ParserEspecialidadeCatalogo.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detalhe_servico.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="docComment;class#ParserEspecialidadeCatalogo#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detalhe_servico.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/adapters/CatalogoEspecialidadeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="690">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_catalogo_especialidade.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/RetroFitInicializador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/services/parsers/ParserEspecialidadeCatalogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/SingInActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="113" column="82" selection-start-line="113" selection-start-column="82" selection-end-line="113" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_especialidade_catalogo.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1905">
           <caret line="127" column="68" selection-start-line="127" selection-start-column="68" selection-end-line="127" selection-end-column="68" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/adapters/CatalogoEspecialidadeAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/br/jobup/adapters/UsuarioAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="600">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="5933" column="0" selection-start-line="5933" selection-start-column="0" selection-end-line="5933" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="2359" column="0" selection-start-line="2359" selection-start-column="0" selection-end-line="2359" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/app/Instrumentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="1105" column="0" selection-start-line="1105" selection-start-column="0" selection-end-line="1105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/widget/AdapterView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/activity_perfil.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_perfil.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_perfil.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1410">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/CatalogoEspecialidadeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="-1170">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4165#6617#0" expanded="true" />
+            <element signature="e#4621#6457#0" expanded="true" />
+            <element signature="e#6456#6457#0" expanded="true" />
+            <element signature="e#6616#6617#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_catalogo_especialidade.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/activities/PerfilActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="375">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#958#1226#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
