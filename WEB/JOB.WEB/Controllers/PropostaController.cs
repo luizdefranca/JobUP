@@ -45,17 +45,19 @@ namespace JOB.WEB.Controllers
         [HttpPost]
         public ActionResult Create(PropostaViewModel obj, Guid id)
         {
-            var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
+            Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
+
+            var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);            
 
             domain.AceitarOferta();
             ctx.Entry(domain).State = EntityState.Modified;
 
-            var prop = new PROPOSTA_SERVICO(id, User.Identity.GetId(), obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
+            var prop = new PROPOSTA_SERVICO(id, idUsuario, obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
             ctx.Proposta.Add(prop);
 
             ctx.SaveChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("../Home/Index");
         }
 
         public ActionResult ListarProposta()
