@@ -17,6 +17,7 @@ namespace JOB.WEB.Controllers
         private Contexto ctx = new Contexto();
 
         private Guid idServico => Guid.Parse(User.Identity.GetUserId());
+        private Guid id => User.Identity.GetId();
 
         // GET: Proposta
         public ActionResult Index()
@@ -57,17 +58,56 @@ namespace JOB.WEB.Controllers
             return RedirectToAction("Index");
         }
 
-        //[HttpPost]
-        //public ActionResult ListarProposta(Guid idServico)
-        //{
-        //    var lstDominio = ctx.Servico.Where(f => f.ID_USUARIO == idServico).ToList();
+        public ActionResult ListarProposta()
+        {
+                        
+            var lstDominio = ctx.Proposta.Where(f => f.ID_USUARIO == id).ToList();
 
-        //    var lstModel = Mapper.Map<List<ServicoViewModel_api>>(lstDominio);
+            var lstModel = Mapper.Map<List<PropostaViewModel>>(lstDominio);
 
-        //    foreach (var model in lstModel)
-        //    {
-        //        model.NOME = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO);
-        //    }
-        //}
+            foreach (var model in lstModel)
+            {
+                model.DT_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DT_PROPOSTA;
+                model.DURACAO_SERVICO = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DURACAO_SERVICO;
+                model.VL_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).VL_PROPOSTA;
+            }
+
+            return View(lstModel);
+        }
+
+        public ActionResult ListarPropostaCliente()
+        {
+
+            var lstDominio = ctx.Proposta.Where(f => f.ID_SERVICO == idServico).ToList();
+
+            var lstModel = Mapper.Map<List<PropostaViewModel>>(lstDominio);
+
+            foreach (var model in lstModel)
+            {
+                model.DT_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DT_PROPOSTA;
+                model.DURACAO_SERVICO = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DURACAO_SERVICO;
+                model.VL_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).VL_PROPOSTA;
+                model.JUSTIFICATIVA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).JUSTIFICATIVA;
+            }
+
+            return View(lstModel);
+        }
+
+        public ActionResult Details(Guid id)
+        {
+            var Dominio = ctx.Proposta.Include(i => i.SERVICO).First(f => f.ID_SERVICO == id);
+
+            var model = Mapper.Map<PropostaViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
+
+            //model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+            //model.POSSUI_PROPOSTA = Dominio.PROPOSTAS.Any();
+
+            model.DS_TITULO = ctx.Servico.First(f => f.ID_SERVICO == model.ID_SERVICO).DS_TITULO;
+            model.VL_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).VL_PROPOSTA;
+            model.DT_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DT_PROPOSTA;
+            model.JUSTIFICATIVA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).JUSTIFICATIVA;
+
+            return View(model);
+        }
     }
 }

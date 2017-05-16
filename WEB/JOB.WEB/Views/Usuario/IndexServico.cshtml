@@ -53,6 +53,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.VL_SUGERIDO)
         </td>
+        <td>
+            @Html.ActionLink("ListarPropostaCliente", "Proposta", new { id = item.ID_SERVICO }, new { @class = "btn btn-primary btn-xs fa fa-search"}) 
+        </td>
     </tr>
 }
 
