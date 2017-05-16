@@ -26,7 +26,12 @@ namespace JOB.WEB.Controllers
                     return RedirectToAction("Create", "Manage");
                 }
 
-                var model = Mapper.Map<UsuarioViewModel>(domain);
+                var model = new HomeViewModel();
+
+                model.APROVADO = domain.APROVADO;
+                model.ATIVO = domain.ATIVO;
+                model.QTD_PROFISSIONAIS = ctx.PerfilProfissional.Count();
+                model.QTD_SERVICOS = ctx.Servico.Count(w => w.PUBLICO);
 
                 return View(model);
             }

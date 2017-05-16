@@ -1,4 +1,4 @@
-﻿@model JOB.WEB.Models.UsuarioViewModel
+﻿@model JOB.WEB.Models.HomeViewModel
 
 @{
     ViewBag.Title = "Home Page";
@@ -28,37 +28,37 @@
 </div>
 <div class="row">
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box">
+        <a class="info-box" href="/especialidade">
             <span class="info-box-icon bg-aqua"><i class="fa fa-group"></i></span>
             <div class="info-box-content">
                 <span>Consulte nossos profissionais</span>
-                <span class="info-box-number">760</span>
+                <span class="info-box-number">@Model.QTD_PROFISSIONAIS</span>
             </div>
-        </div>
+        </a>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box">
+        <a class="info-box" href="/profissional/create">
             <span class="info-box-icon bg-red"><i class="fa fa-user-plus"></i></span>
             <div class="info-box-content">
                 <span>Faça parte da nossa comunidade. Ofereça seus serviços</span>
             </div>
-        </div>
+        </a>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box">
+        <a class="info-box" href="/especialidade/index3">
             <span class="info-box-icon bg-green"><i class="fa fa-briefcase"></i></span>
             <div class="info-box-content">
                 <span>Veja ofertas de serviços disponíveis</span>
-                <span class="info-box-number">760</span>
+                <span class="info-box-number">@Model.QTD_SERVICOS</span>
             </div>
-        </div>
+        </a>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box">
+        <a class="info-box" href="/servicopublico/create">
             <span class="info-box-icon bg-yellow"><i class="fa fa-plus"></i></span>
             <div class="info-box-content">
                 <span>Crie uma oferta de serviço</span>
             </div>
-        </div>
+        </a>
     </div>
 </div>

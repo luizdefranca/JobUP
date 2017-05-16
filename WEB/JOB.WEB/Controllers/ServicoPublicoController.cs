@@ -71,7 +71,9 @@ namespace JOB.WEB.Controllers
 
             var model = new ServicoViewModel_full();
 
-            var idEspecialidade = int.Parse(Request.QueryString["ID_ESPECIALIDADE"]);
+            model.ESPECIALIDADES = ctx.Especialidade.ToList();
+
+            var idEspecialidade = model.ESPECIALIDADES.First().ID_ESPECIALIDADE;
             model.ID_ESPECIALIDADE = idEspecialidade;
             model.SUB_ESPECIALIDADES = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade).ToList();
             return View(model);
@@ -90,13 +92,13 @@ namespace JOB.WEB.Controllers
 
                 ctx.Servico.Add(newobj);
                 ctx.SaveChanges();
-                return RedirectToAction("../Especialidade/Index2");
+                return RedirectToAction("../Home/Index");
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError("", ex.TratarMensagem());
                 return View(obj);
             }
-        }        
+        }
     }
 }

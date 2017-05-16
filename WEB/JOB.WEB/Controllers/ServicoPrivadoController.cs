@@ -75,7 +75,7 @@ namespace JOB.WEB.Controllers
 
         // POST: Servico/Create
         [HttpPost]
-        public ActionResult Create(ServicoViewModel_full obj, Guid id)
+        public ActionResult Create(ServicoViewModel_full obj, Guid idProfissional)
         {
             if (!ModelState.IsValid) return View(obj);
 
@@ -86,7 +86,7 @@ namespace JOB.WEB.Controllers
                 var objServico = new SERVICO(obj.ID_SERVICO, idUsuario, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, false, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
                 ctx.Servico.Add(objServico);
 
-                var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, id);
+                var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, idProfissional);
                 ctx.Oferta.Add(objOferta);
 
                 ctx.SaveChanges();
