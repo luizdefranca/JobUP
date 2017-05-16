@@ -20,11 +20,21 @@
         <div class="box-body">
             <div class="form-horizontal">
                 <div class="form-group">
+                    @Html.LabelFor(model => model.ESPECIALIDADES, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        @Html.DropDownListFor(m => m.ID_ESPECIALIDADE,
+                            new SelectList(Model.ESPECIALIDADES, "ID_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control", @id = "ID_ESPECIALIDADE" })
+                        @Html.ValidationMessageFor(model => model.ESPECIALIDADES, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
                     @Html.LabelFor(model => model.SUB_ESPECIALIDADES, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
 
                         @Html.DropDownListFor(m => m.ID_SUB_ESPECIALIDADE,
-                            new SelectList(Model.SUB_ESPECIALIDADES, "ID_SUB_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control" })
+                            new SelectList(Model.SUB_ESPECIALIDADES, "ID_SUB_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control", @id = "ID_SUB_ESPECIALIDADE" })
                         @Html.ValidationMessageFor(model => model.SUB_ESPECIALIDADES, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -72,4 +82,15 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+
+        $('#ID_ESPECIALIDADE').change(function () {
+            var options = $("#ID_SUB_ESPECIALIDADE");
+            $.each(result, function () {
+                options.append($("<option />").val(this.ID_SUB_ESPECIALIDADE).text(this.DESCRICAO));
+            });
+        });
+        
+    </script>
 }
