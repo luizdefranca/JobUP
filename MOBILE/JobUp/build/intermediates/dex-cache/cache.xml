@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f0e1b9dd4e77eedf5e42c4a5bbb79a610c4f475">
+        <dex dex="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5af10e085f46749e7f530579813bb6a38f54d0e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.6.0/81887458b69ddc32722df7e4c35235fd74e6a8ba/logging-interceptor-3.6.0.jar"
         jumboMode="true"
         optimize="true"
@@ -48,6 +57,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="938e69b9f542ca1f2acf21582036f25a4398702f">
+        <dex dex="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/2/caelum-stella-core-2.1.2_c6afa02423459e0f31cdc90428a49053a635b0f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.github.ihsanbal/LoggingInterceptor/2.0.0/f7f7c5872e6a39a3aab8d9f334a30d06b6fa9cbf/LoggingInterceptor-2.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -72,6 +90,15 @@
         revision="25.0.0"
         sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c014e70dc21f316412e72c442610ae707c8c75fb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2c7b1bf6d9a79df5eee4e3e0bb9121ee9bcfd5cb/classes.dex" />
     </item>
     <item
         is-multidex="true"
