@@ -1,22 +1,16 @@
 ﻿@model IEnumerable<JOB.WEB.Models.PropostaViewModel>
 
 @{
-    ViewBag.Title = "ListarPrroposta";
+    ViewBag.Title = "ListarProposta";
 }
 
-<h2>ListarPrroposta</h2>
+<h2>ListarProposta</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_TITULO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_OBSERVACOES)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.DT_PROPOSTA)
         </th>
@@ -32,7 +26,12 @@
         <th>
             @Html.DisplayNameFor(model => model.ACEITA)
         </th>
-        
+        <th>
+            @Html.DisplayNameFor(model => model.DS_TITULO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DS_OBSERVACOES)
+        </th>
         <th></th>
     </tr>
 
