@@ -91,7 +91,7 @@ namespace JOB.WEB.Controllers
 
         public ActionResult IndexServico()
         {
-            var domain = ctx.Oferta.Where(w => w.ID_USUARIO == id).Select(s => s.SERVICO).ToList();
+            var domain = ctx.Servico.Where(w => w.ID_USUARIO == id).ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
 
