@@ -15,9 +15,7 @@ namespace JOB.WEB.Controllers
     public class PropostaController : Controller
     {
         private Contexto ctx = new Contexto();
-
-        private Guid idServico => Guid.Parse(User.Identity.GetUserId());
-        private Guid id => User.Identity.GetId();
+        private Guid idUsuarioLogado => User.Identity.GetId();
 
         // GET: Proposta
         public ActionResult Index()
@@ -45,14 +43,17 @@ namespace JOB.WEB.Controllers
         [HttpPost]
         public ActionResult Create(PropostaViewModel obj, Guid id)
         {
-            Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
+            var servico = ctx.Servico.Find(id);
 
-            var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);            
+            if (servico.PUBLICO == false)
+            {
+                var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
 
-            domain.AceitarOferta();
-            ctx.Entry(domain).State = EntityState.Modified;
+                domain.AceitarOferta();
+                ctx.Entry(domain).State = EntityState.Modified;
+            }
 
-            var prop = new PROPOSTA_SERVICO(id, idUsuario, obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
+            var prop = new PROPOSTA_SERVICO(id, idUsuarioLogado, obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
             ctx.Proposta.Add(prop);
 
             ctx.SaveChanges();
@@ -62,8 +63,7 @@ namespace JOB.WEB.Controllers
 
         public ActionResult ListarProposta()
         {
-                        
-            var lstDominio = ctx.Proposta.Where(f => f.ID_USUARIO == id).ToList();
+            var lstDominio = ctx.Proposta.Where(f => f.ID_USUARIO == idUsuarioLogado).ToList();
 
             var lstModel = Mapper.Map<List<PropostaViewModel>>(lstDominio);
 
@@ -77,20 +77,19 @@ namespace JOB.WEB.Controllers
             return View(lstModel);
         }
 
-        public ActionResult ListarPropostaCliente()
+        public ActionResult ListarPropostaCliente(Guid id)
         {
-
-            var lstDominio = ctx.Proposta.Where(f => f.ID_SERVICO == idServico).ToList();
+            var lstDominio = ctx.Proposta.Where(f => f.ID_SERVICO == id).ToList();
 
             var lstModel = Mapper.Map<List<PropostaViewModel>>(lstDominio);
 
-            foreach (var model in lstModel)
-            {
-                model.DT_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DT_PROPOSTA;
-                model.DURACAO_SERVICO = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DURACAO_SERVICO;
-                model.VL_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).VL_PROPOSTA;
-                model.JUSTIFICATIVA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).JUSTIFICATIVA;
-            }
+            //foreach (var model in lstModel)
+            //{
+            //    model.DT_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DT_PROPOSTA;
+            //    model.DURACAO_SERVICO = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DURACAO_SERVICO;
+            //    model.VL_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).VL_PROPOSTA;
+            //    model.JUSTIFICATIVA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).JUSTIFICATIVA;
+            //}
 
             return View(lstModel);
         }
@@ -99,7 +98,7 @@ namespace JOB.WEB.Controllers
         {
             var Dominio = ctx.Proposta.Include(i => i.SERVICO).First(f => f.ID_SERVICO == id);
 
-            var model = Mapper.Map<PropostaViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
+            var model = Mapper.Map<PropostaViewModel>(Dominio);
 
             //model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
             //model.POSSUI_PROPOSTA = Dominio.PROPOSTAS.Any();

@@ -87,12 +87,12 @@ namespace JOB.WEB.Controllers
 
             try
             {
-                Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
-                var newobj = new SERVICO(obj.ID_SERVICO, idUsuario, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, true, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
+                //Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
+                var newobj = new SERVICO(obj.ID_SERVICO, id, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, true, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
                 ctx.Servico.Add(newobj);
 
-                var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, id);
-                ctx.Oferta.Add(objOferta);
+                //var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, id);
+                //ctx.Oferta.Add(objOferta);
 
                 ctx.SaveChanges();
                 return RedirectToAction("../Home/Index");

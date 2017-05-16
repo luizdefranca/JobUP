@@ -11,6 +11,11 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID_SERVICO"></param>
+        /// <param name="ID_USUARIO">ID DO PROFISSIONAL (EXCLUSIVO SERVIÇO PRIVADO)</param>
         public OFERTA_SERVICO(Guid ID_SERVICO, Guid ID_USUARIO)
         {
             this.InicializaVariaveis();

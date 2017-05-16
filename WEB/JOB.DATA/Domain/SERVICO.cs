@@ -13,6 +13,18 @@ namespace JOB.DATA.Domain
             this.InicializaVariaveis();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID_SERVICO"></param>
+        /// <param name="ID_USUARIO">ID DO CLIENTE</param>
+        /// <param name="ID_ESPECIALIDADE"></param>
+        /// <param name="ID_SUB_ESPECIALIDADE"></param>
+        /// <param name="PUBLICO"></param>
+        /// <param name="DS_TITULO"></param>
+        /// <param name="DS_OBSERVACOES"></param>
+        /// <param name="VL_SUGERIDO"></param>
+        /// <param name="TEMPO_SERVICO"></param>
         public SERVICO(Guid ID_SERVICO, Guid ID_USUARIO, int ID_ESPECIALIDADE, int? ID_SUB_ESPECIALIDADE, bool PUBLICO, string DS_TITULO, string DS_OBSERVACOES, double? VL_SUGERIDO, EnumTempoServico TEMPO_SERVICO)
         {
             this.InicializaVariaveis();
