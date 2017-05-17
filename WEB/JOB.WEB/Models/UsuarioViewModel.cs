@@ -28,6 +28,7 @@ namespace JOB.WEB.Models
         [Required]
         [Display(Name = "Dt. Nascimento")]
         [DataType(DataType.Date)]
+        [Range(typeof(DateTime), "01/01/1753", "31/12/9999")]
         public DateTime DT_NASCIMENTO { get; set; }
 
         [ScaffoldColumn(false)]
@@ -76,6 +77,7 @@ namespace JOB.WEB.Models
         [Required]
         [Display(Name = "Dt. Nascimento")]
         [DataType(DataType.Date)]
+        [Range(typeof(DateTime), "01/01/1753", "31/12/9999")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DT_NASCIMENTO { get; set; }
 
