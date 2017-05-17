@@ -81,16 +81,26 @@
 }
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Bundle/AdminLTE/plugins/jquery-validate/js")
 
     <script>
 
-        $('#ID_ESPECIALIDADE').change(function () {
-            var options = $("#ID_SUB_ESPECIALIDADE");
-            $.each(result, function () {
-                options.append($("<option />").val(this.ID_SUB_ESPECIALIDADE).text(this.DESCRICAO));
-            });
+        $('.form-group').on('change', '#ID_ESPECIALIDADE', function (value) {
+
+            CarregarSubEspecialidade($("#ID_ESPECIALIDADE").val());
         });
-        
+
+        function CarregarSubEspecialidade(idEspecialidade) {
+
+            $('#ID_SUB_ESPECIALIDADE').empty();
+
+            $('#ID_SUB_ESPECIALIDADE').append($('<option></option>').val(0).html(""));
+
+            $.getJSON("http://jobupapi.azurewebsites.net/api/SubEspecialidade?idEspecialidade=" + idEspecialidade, function (data) {
+                $.each(data, function (index, item) {
+                    $('#ID_SUB_ESPECIALIDADE').append($('<option></option>').val(item.ID_SUB_ESPECIALIDADE).html(item.DESCRICAO));
+                });
+            });
+        }
     </script>
 }

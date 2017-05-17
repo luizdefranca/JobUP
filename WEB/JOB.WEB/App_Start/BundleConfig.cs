@@ -18,7 +18,7 @@ namespace JOB.WEB
         {
             bundles.IgnoreList.Clear();
 
-            RegisterAdministrador(bundles);
+            RegisterMenu(bundles);
             RegisterGlobal(bundles);
 
             RegisterLayout(bundles);
@@ -28,7 +28,7 @@ namespace JOB.WEB
             BundleTable.EnableOptimizations = true;
         }
 
-        private static void RegisterAdministrador(BundleCollection bundles)
+        private static void RegisterMenu(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/Scripts/Administrador/usuarios/menu").Include(
                 "~/Scripts/Administrador/usuarios-menu.js"));
@@ -64,6 +64,9 @@ namespace JOB.WEB
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                 "~/Scripts/modernizr-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/maskedinput").Include(
+                "~/Scripts/jquery.maskedinput.min.js"));
         }
 
         private static void RegisterLayout(BundleCollection bundles)
