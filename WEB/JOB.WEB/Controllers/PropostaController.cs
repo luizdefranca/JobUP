@@ -3,7 +3,6 @@ using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.WEB.Extensions;
 using JOB.WEB.Models;
-using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -61,25 +60,11 @@ namespace JOB.WEB.Controllers
             return RedirectToAction("../Home/Index");
         }
 
-        public ActionResult ListarProposta()
-        {
-            var lstDominio = ctx.Proposta.Where(f => f.ID_USUARIO == idUsuarioLogado).ToList();
-
-            var lstModel = Mapper.Map<List<PropostaViewModel>>(lstDominio);
-
-            foreach (var model in lstModel)
-            {
-                model.DT_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DT_PROPOSTA;
-                model.DURACAO_SERVICO = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DURACAO_SERVICO;
-                model.VL_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).VL_PROPOSTA;
-            }
-
-            return View(lstModel);
-        }
-
-        public ActionResult ListarPropostaCliente(Guid id)
+        public ActionResult ListarProposta(Guid id)
         {
             var lstDominio = ctx.Proposta.Where(f => f.ID_SERVICO == id).ToList();
+
+            ViewBag.TITULO_SERVICO = ctx.Servico.Find(id).DS_TITULO;
 
             var lstModel = Mapper.Map<List<PropostaViewModel>>(lstDominio);
 
@@ -94,21 +79,16 @@ namespace JOB.WEB.Controllers
             return View(lstModel);
         }
 
-        public ActionResult Details(Guid id)
+        public ActionResult Aceitar(Guid idServico, Guid idUsuario)
         {
-            var Dominio = ctx.Proposta.Include(i => i.SERVICO).First(f => f.ID_SERVICO == id);
+            var proposta = ctx.Proposta.Find(idServico, idUsuario);
 
-            var model = Mapper.Map<PropostaViewModel>(Dominio);
+            proposta.AceitarProposta();
+            ctx.Entry(proposta).State = EntityState.Modified;
 
-            //model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
-            //model.POSSUI_PROPOSTA = Dominio.PROPOSTAS.Any();
+            ctx.SaveChanges();
 
-            model.DS_TITULO = ctx.Servico.First(f => f.ID_SERVICO == model.ID_SERVICO).DS_TITULO;
-            model.VL_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).VL_PROPOSTA;
-            model.DT_PROPOSTA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).DT_PROPOSTA;
-            model.JUSTIFICATIVA = ctx.Proposta.First(f => f.ID_SERVICO == model.ID_SERVICO).JUSTIFICATIVA;
-
-            return View(model);
+            return RedirectToAction("ListarProposta", new { id = idServico });
         }
     }
 }

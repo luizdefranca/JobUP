@@ -13,24 +13,24 @@
     <div class="box-body">
         <table id="tblDados" class="table table-bordered table-responsive table-hover">
             <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.NOME)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DT_NASCTO)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
-                </th>
-                <th></th>
-            </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NOME)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DT_NASCTO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
+                    </th>
+                    <th></th>
+                </tr>
             </thead>
             <tbody>
-            @foreach (var item in Model)
+                @foreach (var item in Model)
             {
                 <tr>
                     <td>
@@ -46,7 +46,7 @@
                         @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
                     </td>
                     <td class="text-center">
-                        @Html.ActionLink(" ", "Create", "ServicoPrivado", new { idProfissional = item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-handshake-o", @title = "Ofertar Serviço para este profissional" })
+                        @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO }, new { @class = "btn btn-success btn-sm fa fa-eye", @title = "Ofertar Serviço para este profissional" })
                     </td>
                 </tr>
             }
@@ -57,9 +57,3 @@
         @Html.ActionLink("Voltar", "Index", "Especialidade", null, new { @class = "btn btn-default" })
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('#tblDados').DataTable();
-    });
-</script>

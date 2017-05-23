@@ -1,7 +1,10 @@
-﻿using JOB.WEB.Models;
+﻿using JOB.DATA;
+using JOB.WEB.Extensions;
+using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -14,6 +17,8 @@ namespace JOB.WEB.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+
+        private Contexto ctx = new Contexto();
 
         public AccountController()
         {
@@ -68,6 +73,26 @@ namespace JOB.WEB.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
+            }
+
+            var user = await UserManager.FindByNameAsync(model.UserName);
+            var id = Guid.Parse( user.Id);
+
+            var usuario = ctx.Usuario.Find(id);
+
+            if (usuario != null)
+            {
+                if (usuario.BLOQUEADO)
+                {
+                    ModelState.AddModelError("", "Usuário bloqueado");
+                    return View(model);
+                }
+
+                if (!usuario.ATIVO)
+                {
+                    ModelState.AddModelError("", "Seu usuário não está mais ativo. Favor, clicar aqui para reativar");
+                    return View(model);
+                }
             }
 
             // This doesn't count login failures towards account lockout

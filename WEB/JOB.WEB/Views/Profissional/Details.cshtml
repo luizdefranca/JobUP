@@ -1,45 +1,157 @@
 ﻿@model JOB.WEB.Models.ProfissionalViewModel
 
 @{
-    ViewBag.Title = "Detalhes";
+    ViewBag.Title = Model.NOME;
+    ViewBag.SubTitle = Model.DESC_ESPECIALIDADE;
 }
 
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Detalhes</h1>
+    <div class="col-md-2">
+        <div class="box">
+            <div class="box-body">
+                <img src="~/AdminLTE/dist/img/avatar5.png" alt="..." class="img-responsive img-rounded" />
+            </div>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-lg-12">
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.NOME)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.NOME)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.DT_NASCTO)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.DT_NASCTO)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.DESC_ESPECIALIDADE)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.RESUMO_CURRICULO)
-            </dd>
-        </dl>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Detalhes</h3>
+                    </div>
+                    <div class="box-body">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.DT_NASCTO)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.DT_NASCTO)
+                            </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.RESUMO_CURRICULO)
+                            </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.DT_INCLUSAO)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.DT_INCLUSAO)
+                            </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.BAIRRO)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.BAIRRO)
+                            </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CIDADE)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.CIDADE)
+                            </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ESTADO)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.ESTADO)
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Avaliações</h3>
+                    </div>
+                    <div class="box-body">
+                        <table id="tblDados" class="table table-bordered table-responsive table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Nota
+                                    </th>
+                                    <th>
+                                        Comentário
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Outras Especializações</h3>
+                    </div>
+                    <div class="box-body">
+                        <table id="tblDados" class="table table-bordered table-responsive table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.OUTROS_PERFIS)
+                                {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
+                                    </td>
+                                    <td>
+                                    <td class="text-center">
+                                        @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO }, new { @class = "btn btn-success btn-sm fa fa-eye", @title = "Ofertar Serviço para este profissional" })
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Últimos Serviços</h3>
+                    </div>
+                    <div class="box-body">
+                        <table id="tblDados" class="table table-bordered table-responsive table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Quando
+                                    </th>
+                                    <th>
+                                        Observações
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<p>
-   @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
-</p>
+@Html.ActionLink(" Oferta Serviço", "Create", "ServicoPrivado", new { idProfissional = Model.ID_USUARIO, ID_ESPECIALIDADE = Model.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-handshake-o", @title = "Ofertar Serviço para este profissional" })
+@Html.ActionLink("Voltar", "Index", "Profissional", new { idEspecialidade = Model.ID_ESPECIALIDADE }, new { @class = "btn btn-default" })

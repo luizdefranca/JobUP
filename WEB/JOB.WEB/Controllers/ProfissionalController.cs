@@ -30,10 +30,11 @@ namespace JOB.WEB.Controllers
 
             foreach (var model in lstModel)
             {
-                model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
-                model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
-                model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE)
-                    .DESCRICAO;
+                var usuario = ctx.Usuario.Find(model.ID_USUARIO);
+
+                model.NOME = usuario.NOME;
+                model.DT_NASCTO = usuario.DT_NASCIMENTO;
+                model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
             }
 
             return View(lstModel);
@@ -63,9 +64,23 @@ namespace JOB.WEB.Controllers
 
             var model = Mapper.Map<ProfissionalViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
-            model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
-            model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
+            var usuario = ctx.Usuario.Find(model.ID_USUARIO);
+
+            model.NOME = usuario.NOME;
+            model.DT_NASCTO = usuario.DT_NASCIMENTO;
             model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+
+            model.DT_INCLUSAO = usuario.DT_INCLUSAO;
+            model.BAIRRO = usuario.BAIRRO;
+            model.CIDADE = usuario.CIDADE;
+            model.ESTADO = usuario.UF.ToString();
+
+            model.OUTROS_PERFIS = Mapper.Map<List<ProfissionalViewModel>>(usuario.PERFIS_PROFISSIONAIS);
+
+            foreach (var item in model.OUTROS_PERFIS)
+            {
+                item.DESC_ESPECIALIDADE= ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+            }
 
             return View(model);
         }

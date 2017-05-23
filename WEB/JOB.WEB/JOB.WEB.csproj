@@ -652,9 +652,8 @@
     <Content Include="Views\ServicoPrivado\Aceitar.cshtml" />
     <Content Include="Views\Proposta\Create.cshtml" />
     <Content Include="Views\Especialidade\Index3.cshtml" />
-    <Content Include="Views\Proposta\ListarProposta.cshtml" />
     <Content Include="Views\Usuario\IndexServico.cshtml" />
-    <Content Include="Views\Proposta\ListarPropostaCliente.cshtml" />
+    <Content Include="Views\Proposta\ListarProposta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

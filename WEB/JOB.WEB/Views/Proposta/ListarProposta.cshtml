@@ -1,68 +1,78 @@
 ﻿@model IEnumerable<JOB.WEB.Models.PropostaViewModel>
 
 @{
-    ViewBag.Title = "ListarProposta";
+    ViewBag.Title = ViewBag.TITULO_SERVICO;
+    ViewBag.SubTitle = "Propostas";
 }
 
-<h2>ListarProposta</h2>
+<div class="box">
+    <div class="box-body">
+        <table class="table table-responsive table-hover table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DT_PROPOSTA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VALOR_DURACAO_SERVICO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VL_PROPOSTA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JUSTIFICATIVA)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.ACEITA)
+                </th>
+                <th></th>
+            </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DT_PROPOSTA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VALOR_DURACAO_SERVICO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VL_PROPOSTA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.JUSTIFICATIVA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ACEITA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_TITULO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_OBSERVACOES)
-        </th>
-        <th></th>
-    </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DT_PROPOSTA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VALOR_DURACAO_SERVICO) (@Html.DisplayFor(modelItem => item.DURACAO_SERVICO))
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VL_PROPOSTA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JUSTIFICATIVA)
+                    </td>
+                    <td class="text-center">
+                        @Html.DisplayFor(modelItem => item.ACEITA)
+                    </td>
+                    <td class="text-center">
+                        @if (Model.Any(f => f.ACEITA))
+                        {
+                            @Html.ActionLink(" ", "Aceitar", new { idServico = item.ID_SERVICO, idUsuario = item.ID_USUARIO }, new { @class = "btn btn-sm btn-success glyphicon glyphicon-ok", @disabled = "disabled" })
+                        }
+                        else
+                        {
+                            @Html.ActionLink(" ", "Aceitar", new { idServico = item.ID_SERVICO, idUsuario = item.ID_USUARIO }, new { @class = "btn btn-sm btn-success glyphicon glyphicon-ok" })
+                        }                        
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="box-footer">
+        @Html.ActionLink("Voltar", "IndexServico", "Usuario", null, new { @class = "btn btn-default" })
+    </div>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DT_PROPOSTA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VALOR_DURACAO_SERVICO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VL_PROPOSTA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.JUSTIFICATIVA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ACEITA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DS_TITULO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DS_OBSERVACOES)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
-</table>
+<script>
+    $(document).ready(function () {
+        ConfigurarTemaIcheck();
+    });
+
+    function ConfigurarTemaIcheck() {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue'
+        });
+    }
+</script>

@@ -56,17 +56,11 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.VL_SUGERIDO)
                     </td>
-                    <td>
-                        @Html.ActionLink("Listar Propostas", "ListarPropostaCliente", "Proposta", new { id = item.ID_SERVICO }, new { @class = "btn btn-primary btn-sm fa fa-search" })
+                    <td class="text-center">
+                        @Html.ActionLink(" Listar Propostas", "ListarProposta", "Proposta", new { id = item.ID_SERVICO }, new { @class = "btn btn-primary btn-sm fa fa-search" })
                     </td>
                 </tr>
             }
         </table>
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('#tblDados').DataTable();
-    });
-</script>
