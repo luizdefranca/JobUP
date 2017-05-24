@@ -17,15 +17,13 @@ namespace JOB.WEB.Models
         [Key]
         public Guid ID_CLIENTE { get; set; }
 
-        [Required]
-        public string NOME { get; set; }
-
         [Display(Name = "Data da Avaliação")]
         public DateTime DT_ULT_AVALIACAO { get; set; }
 
         [Display(Name = "Nota")]
         public Int16 NOTA { get; set; }
 
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Comentário")]
         public string COMENTARIO { get; set; }
     }
