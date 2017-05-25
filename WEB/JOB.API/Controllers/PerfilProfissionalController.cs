@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.HELPERS.Validation;
 using JOB.WEB.Models;
 using JsonNet.PrivateSettersContractResolvers;
 using Newtonsoft.Json;
@@ -21,19 +22,25 @@ namespace JOB.API.Controllers
         public HttpResponseMessage Get(int idEspecialidade)
         {
             //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
-            var lstDominio = ctx.PerfilProfissional.Where(f => f.ID_ESPECIALIDADE == idEspecialidade).ToList();
-
-            var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
-
-            foreach (var model in lstModel)
+            try
             {
-                model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
-                model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
-                model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE)
-                    .DESCRICAO;
-            }
+                var lstDominio = ctx.PerfilProfissional.Where(f => f.ID_ESPECIALIDADE == idEspecialidade).ToList();
 
-            return Request.CreateResponse(HttpStatusCode.OK, lstModel);
+                var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
+
+                foreach (var model in lstModel)
+                {
+                    model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
+                    model.DT_NASCTO = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).DT_NASCIMENTO;
+                    model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+                }
+
+                return Request.CreateResponse(HttpStatusCode.OK, lstModel);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
+            }
         }
 
         // GET: api/Usuario
@@ -55,49 +62,63 @@ namespace JOB.API.Controllers
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {
-            var values = request.Content.ReadAsStringAsync().Result;
-
-            var settings = new JsonSerializerSettings
+            try
             {
-                ContractResolver = new PrivateSetterContractResolver(),
-                ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
-            };
+                var values = request.Content.ReadAsStringAsync().Result;
 
-            var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
+                var settings = new JsonSerializerSettings
+                {
+                    ContractResolver = new PrivateSetterContractResolver(),
+                    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
+                };
 
-            Validate(obj);
-            if (!ModelState.IsValid)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
 
-            ctx.PerfilProfissional.Add(obj);
-            ctx.SaveChanges();
+                Validate(obj);
+                if (!ModelState.IsValid)
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            return Request.CreateResponse(HttpStatusCode.Created);
+                ctx.PerfilProfissional.Add(obj);
+                ctx.SaveChanges();
+
+                return Request.CreateResponse(HttpStatusCode.Created);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
+            }
         }
 
         // PUT: api/Usuario/5
         public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, HttpRequestMessage request)
         {
-            var values = request.Content.ReadAsStringAsync().Result;
-
-            var settings = new JsonSerializerSettings
+            try
             {
-                ContractResolver = new PrivateSetterContractResolver()
-            };
+                var values = request.Content.ReadAsStringAsync().Result;
 
-            var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
-            var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
+                var settings = new JsonSerializerSettings
+                {
+                    ContractResolver = new PrivateSetterContractResolver()
+                };
 
-            item.AtualizaValores(obj.RESUMO_CURRICULO);
-            ctx.Entry(item).State = EntityState.Modified;
+                var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
+                var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
 
-            Validate(item);
-            if (!ModelState.IsValid)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                item.AtualizaValores(obj.RESUMO_CURRICULO);
+                ctx.Entry(item).State = EntityState.Modified;
 
-            ctx.SaveChanges();
+                Validate(item);
+                if (!ModelState.IsValid)
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            return Request.CreateResponse(HttpStatusCode.OK);
+                ctx.SaveChanges();
+
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
+            }
         }
 
         // DELETE: api/Usuario/5

@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.HELPERS.Validation;
 using JOB.WEB.Extensions;
 using JOB.WEB.Helper;
 using JOB.WEB.Models;
-using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;

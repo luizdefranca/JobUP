@@ -34,6 +34,11 @@ namespace JOB.WEB.ApiController
                 case SignInStatus.Success:
                     var id = Guid.Parse(user.Id);
                     var usuario = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+                    if (usuario == null)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, id);
+                    }
+
                     return Request.CreateResponse(HttpStatusCode.OK, usuario);
 
                 case SignInStatus.LockedOut:
@@ -57,6 +62,6 @@ namespace JOB.WEB.ApiController
                 return Request.CreateResponse(HttpStatusCode.OK, user.Id);
             }
             return Request.CreateResponse(HttpStatusCode.BadRequest, result);
-        }        
+        }
     }
 }

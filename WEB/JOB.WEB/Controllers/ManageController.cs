@@ -2,9 +2,9 @@
 using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.DATA.ValueObject;
+using JOB.HELPERS.Validation;
 using JOB.WEB.Extensions;
 using JOB.WEB.Models;
-using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;

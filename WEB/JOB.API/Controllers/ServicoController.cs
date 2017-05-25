@@ -1,5 +1,6 @@
 ﻿using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.HELPERS.Validation;
 using JsonNet.PrivateSettersContractResolvers;
 using Newtonsoft.Json;
 using System;
@@ -27,49 +28,63 @@ namespace JOB.API.Controllers
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {
-            var values = request.Content.ReadAsStringAsync().Result;
-
-            var settings = new JsonSerializerSettings
+            try
             {
-                ContractResolver = new PrivateSetterContractResolver(),
-                ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
-            };
+                var values = request.Content.ReadAsStringAsync().Result;
 
-            var obj = JsonConvert.DeserializeObject<SERVICO>(values, settings);
+                var settings = new JsonSerializerSettings
+                {
+                    ContractResolver = new PrivateSetterContractResolver(),
+                    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
+                };
 
-            Validate(obj);
-            if (!ModelState.IsValid)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                var obj = JsonConvert.DeserializeObject<SERVICO>(values, settings);
 
-            ctx.Servico.Add(obj);
-            ctx.SaveChanges();
+                Validate(obj);
+                if (!ModelState.IsValid)
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            return Request.CreateResponse(HttpStatusCode.Created);
+                ctx.Servico.Add(obj);
+                ctx.SaveChanges();
+
+                return Request.CreateResponse(HttpStatusCode.Created);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
+            }
         }
 
         // PUT: api/Usuario/5
         public HttpResponseMessage Put(Guid id, HttpRequestMessage request)
         {
-            var values = request.Content.ReadAsStringAsync().Result;
-
-            var settings = new JsonSerializerSettings
+            try
             {
-                ContractResolver = new PrivateSetterContractResolver()
-            };
+                var values = request.Content.ReadAsStringAsync().Result;
 
-            var item = ctx.Servico.FirstOrDefault(w => w.ID_SERVICO == id);
-            var obj = JsonConvert.DeserializeObject<SERVICO>(values, settings);
+                var settings = new JsonSerializerSettings
+                {
+                    ContractResolver = new PrivateSetterContractResolver()
+                };
 
-            item.AtualizaDados(obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
-            ctx.Entry(item).State = EntityState.Modified;
+                var item = ctx.Servico.FirstOrDefault(w => w.ID_SERVICO == id);
+                var obj = JsonConvert.DeserializeObject<SERVICO>(values, settings);
 
-            Validate(item);
-            if (!ModelState.IsValid)
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                item.AtualizaDados(obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
+                ctx.Entry(item).State = EntityState.Modified;
 
-            ctx.SaveChanges();
+                Validate(item);
+                if (!ModelState.IsValid)
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-            return Request.CreateResponse(HttpStatusCode.OK);
+                ctx.SaveChanges();
+
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
+            }
         }
 
         // DELETE: api/Usuario/5
