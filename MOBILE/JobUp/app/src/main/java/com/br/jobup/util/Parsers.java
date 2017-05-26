@@ -40,7 +40,7 @@ public class Parsers {
 
     public static String parseDataToStringNormal(Date data){
 
-        DateFormat dataFormat = DateFormat.getDateInstance();
+        DateFormat dataFormat = new SimpleDateFormat("dd/MM/yyyy");
 
         return dataFormat.format(data);
     }

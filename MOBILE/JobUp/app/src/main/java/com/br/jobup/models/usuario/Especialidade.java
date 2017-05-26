@@ -1,8 +1,10 @@
 package com.br.jobup.models.usuario;
 
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
-import java.util.List;
 
 /*
  * Created by Luiz Carlos Ramos on 12/05/17 02:52
@@ -17,12 +19,28 @@ import java.util.List;
 
 public class Especialidade implements Serializable {
 
+    @SerializedName("ID_ESPECIALIDADE")
+    @Expose
+    private int idEspecialidade;
 
+    @SerializedName("DESCRICAO")
+    @Expose
     private String descricao;
 
+    @SerializedName("EXIGIR_COMPROVACAO")
+    @Expose
     private boolean exigirComprovacao;
 
-    private List<SubEspecialidade> subEspecialidades;
+
+
+    public int getIdEspecialidade() {
+        return idEspecialidade;
+    }
+
+    public void setIdEspecialidade(int idEspecialidade) {
+        this.idEspecialidade = idEspecialidade;
+    }
+
 
     public Especialidade() {
     }

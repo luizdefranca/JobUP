@@ -2,10 +2,11 @@ package com.br.jobup.models.usuario;
 
 
 import com.br.jobup.util.Parsers;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 
 /*
@@ -21,12 +22,41 @@ import java.util.List;
 
 public class PerfilProfisional implements Serializable {
 
+    @SerializedName("ID_USUARIO")
+    @Expose
+    private String idUsuario;
+
+    @SerializedName("ID_ESPECIALIDADE")
+    @Expose
+    private int idEspecialidade;
+
+    @SerializedName("DT_APROVACAO")
+    @Expose
     private Date dataAprovacao;
+
+    @SerializedName("APROVADO")
+    @Expose
     private boolean aprovado;
+
+    @SerializedName("RESUMO_CURRICULO")
+    @Expose
     private String resumoCurriculo;
-    private List<Especialidade> especialidade;
-    private List<Avaliacoes> avaliacoes;
-    private List<Formacao> formacoes;
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public int getIdEspecialidade() {
+        return idEspecialidade;
+    }
+
+    public void setIdEspecialidade(int idEspecialidade) {
+        this.idEspecialidade = idEspecialidade;
+    }
 
     public PerfilProfisional() {
     }
@@ -58,27 +88,4 @@ public class PerfilProfisional implements Serializable {
         this.resumoCurriculo = resumoCurriculo;
     }
 
-    public List<Especialidade> getEspecialidade() {
-        return especialidade;
-    }
-
-    public void setEspecialidade(List<Especialidade> especialidade) {
-        this.especialidade = especialidade;
-    }
-
-    public List<Avaliacoes> getAvaliacoes() {
-        return avaliacoes;
-    }
-
-    public void setAvaliacoes(List<Avaliacoes> avaliacoes) {
-        this.avaliacoes = avaliacoes;
-    }
-
-    public List<Formacao> getFormacoes() {
-        return formacoes;
-    }
-
-    public void setFormacoes(List<Formacao> formacoes) {
-        this.formacoes = formacoes;
-    }
 }

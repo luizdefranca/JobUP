@@ -115,6 +115,8 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
 
                         switch (which){
+
+                            //Ver detalhe do Profissional
                             case 0:
                                 final Intent intentDetalheUsuario = new Intent(CatalogoEspecialidadeActivity.this, PerfilActivity.class);
 
@@ -128,6 +130,13 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                                 intentDetalheUsuario.putExtras(baseBundle);
                                 startActivity(intentDetalheUsuario);
                                 break;
+
+
+//                            // Pass adObj to the other Activity
+//                            ParseObject adObj = adsArray.get(position);
+//                            Intent i = new Intent(BrowseAds.this, ShowSingleAd.class);
+//                            i.putExtra("objectID", adObj.getObjectId());
+//                            startActivity(i);
                             case 1:
                                 //TODO: ADICIONAR A FAVORITOS
                                 break;
@@ -164,7 +173,11 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
         carregaCatalogoEspecialidade();
     }
 
+
+    //
     private void carregaCatalogoEspecialidade() {
+
+
 
         final ParserEspecialidadeCatalogo parser = new ParserEspecialidadeCatalogo(idCategoria);
         parser.getAll().enqueue(new Callback<List<EspecialidadeCatalogo>>() {

@@ -1,8 +1,21 @@
 package activities;
 
+
+
+
+/*
+ * Created by Luiz Carlos Ramos on 09/05/17 19:02
+ *
+ * Copyright (c) 2017. All rights reserved.
+ * Last modified 09/05/17 18:46
+ */
+
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.LoaderManager;
@@ -35,8 +48,8 @@ import com.br.jobup.dao.usuario.UsuarioDao;
 import com.br.jobup.models.login.UsuarioSignIn;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
-import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
+import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 import com.br.jobup.util.Validations.TextHelper;
 import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
 import com.github.hynra.gsonsharedpreferences.ParsingException;
@@ -52,14 +65,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
-
-/*
- * Created by Luiz Carlos Ramos on 09/05/17 19:02
- *
- * Copyright (c) 2017. All rights reserved.
- * Last modified 09/05/17 18:46
- */
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -78,8 +83,8 @@ public class MainActivity extends AppCompatActivity
         Usuario usuarioCorrente = null;
         try {
              usuarioCorrente = (Usuario) gsonSharedPrefs.getObject(new Usuario());
-            Log.i("test", usuarioCorrente.getNome());
-            Toast.makeText(this, "usuario corrente "+ usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
+//            Log.i("test", usuarioCorrente.getNome());
+  //          Toast.makeText(this, "usuario corrente "+ usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
         } catch (ParsingException e) {
             e.printStackTrace();
         }
@@ -89,12 +94,13 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //   setSupportActionBar(toolbar);
 
-
+//        asyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         mLoaderManager = getSupportLoaderManager();
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -434,7 +440,55 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+
+
+
+    }
+
+    public static boolean isNetworkAvailable(Context ct) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) ct.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null &&
+                activeNetworkInfo.isConnectedOrConnecting();
     }
 
 
+//    BindQuickStartAsyncTask.Simple<List<Usuario>> asyncTask = new BindQuickStartAsyncTask.Simple<List<Usuario>>(BindAsyncTaskType.READ_WRITE) {
+//
+//        List<Usuario> userList;
+//
+//        @Override
+//        public List<Usuario> onExecute(BindQuickStartDataSource dataSource) throws Throwable {
+//            userList = dataSource.getUsuarioDao().selectAll();
+//
+////            if (isNetworkAvailable(MainActivity.this) && userList.size() == 0) {
+////                userList = QuickStartApplication.service.listUsuarios().execute().body();
+////                dataSource.execute(new BindQuickStartDataSource.SimpleTransaction() {
+////
+////                    @Override
+////                    public boolean onExecute(BindQuickStartDaoFactory daoFactory) {
+////                        UsuarioDaoImpl dao = daoFactory.getUsuarioDao();
+////
+////                        for (Usuario item : userList) {
+////                            dao.insert(item);
+////                        }
+////                        return true;
+////                    }
+////                });
+////
+////                return dataSource.getUsuarioDao().selectAll();
+////            } else {
+////                return userList;
+////            }
+////
+//            return null;
+//        }
+//
+//        @Override
+//        public void onFinish(List<Usuario> result) {
+////                mAdapter.update(result);
+////                mAdapter.notifyDataSetChanged();
+//        }
+//    };
 }

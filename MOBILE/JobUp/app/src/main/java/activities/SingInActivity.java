@@ -55,6 +55,7 @@ public class SingInActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+
         super.onStart();
         GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(SingInActivity.this, "UsuarioCorrente");
         Usuario usuarioCorrente = null;
@@ -111,21 +112,56 @@ public class SingInActivity extends AppCompatActivity {
                 final ParserUsuarioSignIn parser = new ParserUsuarioSignIn(login);
 
                 //TODO: retirar a linha a seguir ela faz o login sem checar
-                startActivity(new Intent(SingInActivity.this, MainActivity.class));
+ //               startActivity(new Intent(SingInActivity.this, MainActivity.class));
 
-              /*  parser.get().enqueue(new Callback<Usuario>() {
+                parser.get().enqueue(new Callback<Usuario>() {
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                        Usuario usuarioCorrente = response.body();
+
                         if (response.isSuccessful()) {
-                            Toast.makeText(SingInActivity.this, "usuario: " + response.body().getNome()
-                                    + " logado com sucesso!", Toast.LENGTH_SHORT).show();
-                            GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(SingInActivity.this, "UsuarioCorrente");
-                            gsonSharedPrefs.saveObject(usuarioCorrente);
-                            progDialog.dismiss();
-                            final Intent intent = new Intent(SingInActivity.this, MainActivity.class);
-                            intent.putExtra("usuarioCorrent", usuario);
-                            startActivity(intent);
+
+                            if (response.body() != null) {
+                                Usuario usuarioCorrente = response.body();
+                                Toast.makeText(SingInActivity.this, "usuario: " + response.body().getNome()
+                                        + " logado com sucesso!", Toast.LENGTH_SHORT).show();
+                                GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(SingInActivity.this, "UsuarioCorrente");
+                                gsonSharedPrefs.saveObject(usuarioCorrente);
+                                progDialog.dismiss();
+                                final Intent intent = new Intent(SingInActivity.this, MainActivity.class);
+                                intent.putExtra("usuarioCorrent", usuario);
+                                startActivity(intent);
+                            } else if(response.body() == null){
+                                progDialog.dismiss();
+                                final AlertDialog alert =
+                                        new AlertDialog.Builder(SingInActivity.this)
+                                                .setTitle("Ufa! Falta pouco!")
+                                                .setMessage("Agora complete o seu cadastro para ser mais um usuário do JobUp.")
+                                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        usernameTxt.setText("");
+                                                        passwordTxt.setText("");
+                                                        usernameTxt.requestFocus();
+                                                    }
+                                                })
+                                                .create();
+                                alert.show();
+                            }
+                        } else if(response.code() == 400){
+                            final AlertDialog alert =
+                                    new AlertDialog.Builder(SingInActivity.this)
+                                            .setTitle("Ops!")
+                                            .setMessage("Senha ou usuário inválido!")
+                                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    usernameTxt.setText("");
+                                                    passwordTxt.setText("");
+                                                    usernameTxt.requestFocus();
+                                                }
+                                            })
+                                            .create();
+                            alert.show();
                         }
 
                         //Desabilita o ProgressDialog
@@ -145,7 +181,6 @@ public class SingInActivity extends AppCompatActivity {
 
                     }
                 });
-*/
             }
         });
 

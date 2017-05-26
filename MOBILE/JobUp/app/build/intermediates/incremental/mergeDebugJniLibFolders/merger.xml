@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/debug/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/debug/jniLibs"/></dataSet></merger>

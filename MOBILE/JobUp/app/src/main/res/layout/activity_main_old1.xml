@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.br.jobup.activities.MainActivity"
+    tools:context="activities.MainActivity"
     android:orientation="vertical"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
@@ -118,6 +118,7 @@
             android:id="@+id/catGridView"
             android:layout_marginTop="10dp"
             />
+
         <!-- END TAB BAR -->
 
     </RelativeLayout>

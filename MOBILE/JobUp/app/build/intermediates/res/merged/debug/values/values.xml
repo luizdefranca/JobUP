@@ -598,6 +598,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -738,6 +739,7 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_invalid_email">This login address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing login
@@ -745,12 +747,14 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="search_menu_title">Search</string>
+    <string name="section_format">Hello World from section: %1$d</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_agendamento">Serviços Agendados</string>
     <string name="title_activity_cadastro">Perfil do Usuario</string>
     <string name="title_activity_confirmacao">Contratação do Serviço</string>
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_mensagem">Minhas Mensagens</string>
+    <string name="title_activity_tab_detalhe_profissional">TabDetalheProfissionalActivity</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

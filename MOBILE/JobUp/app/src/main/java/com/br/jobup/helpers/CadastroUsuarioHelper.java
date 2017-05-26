@@ -7,9 +7,12 @@ import android.widget.Spinner;
 import activities.CadastroActivity;
 import com.br.jobup.R;
 import com.br.jobup.models.usuario.Cpf;
+import com.br.jobup.models.usuario.Email;
 import com.br.jobup.models.usuario.Rg;
+import com.br.jobup.models.usuario.Telefone;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.util.Parsers;
+import com.br.jobup.util.Validations.TextHelper;
 
 /**
  * Created by luizramos on 22/04/17.
@@ -30,11 +33,12 @@ public class CadastroUsuarioHelper {
     private final EditText campoCidade;
     private final EditText campoFixo;
     private final EditText campoCelular;
-    private final EditText campoEmail;
 
     private Usuario usuario;
+    private CadastroActivity activity;
 
     public CadastroUsuarioHelper(CadastroActivity activity){
+        this.activity = activity;
         campoNome = (EditText) activity.findViewById(R.id.nomeCadastroView);
         campoCpf = (EditText) activity.findViewById(R.id.cpfCadastroView);
         campoRgNr = (EditText) activity.findViewById(R.id.rgNrCadastroView);
@@ -48,7 +52,7 @@ public class CadastroUsuarioHelper {
         campoCidade = (EditText) activity.findViewById(R.id.cidadeCadastroView);
         campoFixo = (EditText) activity.findViewById(R.id.fixoCadastroView);
         campoCelular = (EditText) activity.findViewById(R.id.celularCadastroView);
-        campoEmail = (EditText) activity.findViewById(R.id.emailCadastroView);
+
         usuario = new Usuario();
     }
 
@@ -66,16 +70,26 @@ public class CadastroUsuarioHelper {
         campoCidade.setText(usuario.getCidade());
         campoFixo.setText(usuario.getFixo().getNr());
         campoCelular.setText(usuario.getCelular().getNr());
-        campoEmail.setText(usuario.getEmail().getEmail());
     }
 
     public Usuario getUsuario(){
         usuario.setNome(campoNome.getText().toString());
 
-        usuario.setCpf(new Cpf(campoCpf.getText().toString()));
-        usuario.setRg(new Rg(campoRgUf.getSelectedItemPosition(), campoRgNr.getText().toString()));
+        usuario.setCpf(new Cpf(TextHelper.GetNumeros(campoCpf.getText().toString())));
+        usuario.setRg(new Rg(campoRgUf.getSelectedItemPosition(), TextHelper.GetNumeros(campoRgNr.getText().toString())));
         usuario.setDataNascimento(Parsers
                 .parseStringToDataNormal(campoDtNascimento.getText().toString()));
+        usuario.cep = TextHelper.GetNumeros(campoCep.getText().toString());
+        usuario.logradouro = campoLogradouro.getText().toString();
+        usuario.complemento = campoComplemento.getText().toString();
+        usuario.bairro = campoBairro.getText().toString();
+        usuario.cidade = campoCidade.getText().toString();
+        usuario.uf = campoUf.getSelectedItemPosition();
+        usuario.fixo = new Telefone(campoFixo.getText().toString());
+        usuario.celular = new Telefone(campoCelular.getText().toString());
+        usuario.email = new Email(activity.getIntent().getStringExtra("email"));
+        usuario.idUsuario = activity.getIntent().getStringExtra("idUsuario");
+
         return usuario;
     }
 }

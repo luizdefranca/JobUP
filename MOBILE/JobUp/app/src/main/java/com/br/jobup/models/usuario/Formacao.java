@@ -1,6 +1,8 @@
 package com.br.jobup.models.usuario;
 
 import com.br.jobup.util.Parsers;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -18,11 +20,62 @@ import java.util.Date;
  */
 
 public class Formacao  implements Serializable {
+
+    @SerializedName("ID_USUARIO")
+    @Expose
+    private String idUsuario;
+
+    @SerializedName("ID_ESPECIALIDADE")
+    @Expose
+    private int idEspecialidade;
+
+    @SerializedName("ID_FORMACAO")
+    @Expose
+    private int idFormacao;
+
+    @SerializedName("INSTITUICAO")
+    @Expose
     private String instituicao;
+
+    @SerializedName("NOME_CURSO")
+    @Expose
     private String nomeCurso;
+
+    @SerializedName("ANO_FORMACAO")
+    @Expose
     private int anoFormacao;
+
+    @SerializedName("DT_APROVACAO")
+    @Expose
     private Date dataAprovacao;
+
+    @SerializedName("APROVADO")
+    @Expose
     private boolean aprovado;
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public int getIdEspecialidade() {
+        return idEspecialidade;
+    }
+
+    public void setIdEspecialidade(int idEspecialidade) {
+        this.idEspecialidade = idEspecialidade;
+    }
+
+    public int getIdFormacao() {
+        return idFormacao;
+    }
+
+    public void setIdFormacao(int idFormacao) {
+        this.idFormacao = idFormacao;
+    }
 
     public Formacao() {
     }

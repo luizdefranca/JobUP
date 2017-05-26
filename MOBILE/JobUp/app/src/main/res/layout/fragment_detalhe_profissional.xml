@@ -1,0 +1,24 @@
+<!--
+  ~ Created by Luiz Carlos Ramos on 25/05/17 21:59
+  ~
+  ~ Copyright (c) 2017. All rights reserved.
+  ~ Last modified 25/05/17 21:59
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.br.jobup.fragments.DetalheProfissionalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Detalhe"
+        android:textAlignment="center" />
+</FrameLayout>

@@ -141,4 +141,6 @@ public interface Constantes {
                     " PRIMARY KEY(" + USUARIO_ID + " ," + ID_ESPECIALIDADE + " ," + ID_FORMACAO +  ")\n" +
                     " FOREIGN KEY(" + USUARIO_ID + " ," + ID_ESPECIALIDADE + " ) REFERENCES " +
                     TABELA_PERFIL_PROFISSIONAL + "( " + USUARIO_ID + " ," +  ID_ESPECIALIDADE + " ) );";
+
+
 }

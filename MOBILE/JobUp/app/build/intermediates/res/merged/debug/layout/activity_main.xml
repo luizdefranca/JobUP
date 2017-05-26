@@ -9,8 +9,8 @@
     tools:openDrawer="start">
 
     <include
-        layout="@layout/activity_main_old1"
         android:layout_width="match_parent"
+        layout="@layout/activity_main_old1"
         android:layout_height="match_parent" />
 
     <android.support.design.widget.NavigationView

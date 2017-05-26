@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.br.jobup.R;
 import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
+import com.br.jobup.util.Parsers;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -43,18 +46,24 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter {
 
 
         View view = LayoutInflater.from(this.context).inflate(R.layout.item_especialidade_catalogo, null);
-        TextView txtNome = (TextView) view.findViewById(R.id.item_especialidade_txtNome);
-        TextView txtBairro = (TextView) view.findViewById(R.id.item_especialidade_txtBairro);
-        RatingBar rtbEstrelas = (RatingBar) view.findViewById(R.id.item_especialidade_rtbEstrelas);
-        TextView txtDescEspecialidade = (TextView) view.findViewById(R.id.item_especialidade_txtDescricao);
-        TextView txtResumoCurriculo = (TextView) view.findViewById(R.id.item_especialidade_txtCurriculo);
+        TextView txtNome                = (TextView) view.findViewById(R.id.item_especialidade_txtNome);
+//        TextView txtDtNascimento        = (TextView) view.findViewById(R.id.item_especialidade_txtDtNascimento);
+        TextView txtDescEspecialidade   = (TextView) view.findViewById(R.id.item_especialidade_txtDescricao);
+        TextView txtResumoCurriculo     = (TextView) view.findViewById(R.id.item_especialidade_txtCurriculo);
+//        TextView txtDtInclusao          = (TextView) view.findViewById(R.id.item_especialidade_txtUsuarioDesde) ;
+        TextView txtBairro              = (TextView) view.findViewById(R.id.item_especialidade_txtBairro);
+        TextView txtCidade              = (TextView) view.findViewById(R.id.item_especialidade_txtCidade) ;
+        TextView txtEstado              = (TextView) view.findViewById(R.id.item_especialidade_txtEstado) ;
 
 
         txtNome.setText(especialidade.getNome());
-//        txtBairro.setText(especialidade.getBairro());
-        txtResumoCurriculo.setText((especialidade.getResumoCurriculo()));
-//        rtbEstrelas.setRating(especialidade.getRating());
+//        txtDtNascimento.setText(Parsers.parseDataToStringNormal(especialidade.getDtNascimento()));
         txtDescEspecialidade.setText(especialidade.getDescEspecialidade());
+        txtResumoCurriculo.setText((especialidade.getResumoCurriculo()));
+//        txtDtInclusao.setText(Parsers.parseDataToStringNormal(especialidade.getDtInclusao()));
+        txtBairro.setText(especialidade.getBairro());
+        txtCidade.setText(especialidade.getCidade());
+        txtEstado.setText(especialidade.getEstado());
         return view;
     }
 
@@ -77,10 +86,12 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter {
     public class ViewHolder {
         //views
         TextView txtNome;
-        TextView txtBairro;
-        RatingBar rtbEstrelas;
+//        TextView txtDtNascimento;
         TextView txtDescEspecialidade;
         TextView txtResumoCurriculo;
-
+//        TextView txtDtInclusao;
+        TextView txtBairro;
+        TextView txtCidade;
+        TextView txtEstado;
     }
 }

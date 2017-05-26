@@ -49,6 +49,8 @@ public class TextHelper
         return Pattern.compile("[0-9]").matcher(texto).replaceAll("");
     }
 
+
+
     public static String AjustarTexto(String valor, int tamanho)
     {
         if (valor.length() > tamanho)

@@ -7,7 +7,7 @@ package com.br.jobup.services.interfaces;
  * Last modified 30/04/17 22:53
  */
 
-import com.br.jobup.models.usuario.Avaliacoes;
+import com.br.jobup.models.usuario.Avaliacao;
 import com.br.jobup.models.usuario.Usuario;
 
 import java.util.List;
@@ -29,33 +29,33 @@ public interface IAvaliacaoAPI {
 
 
     @GET(PATH)
-    Call<List<Avaliacoes>> getAll(
+    Call<List<Avaliacao>> getAll(
             @Query("idUsuario") String idUsuario,
             @Query("idEspecialidade") int idEspecialidade
     );
 
     @GET(PATH)
-    Call<List<Avaliacoes>> get(
+    Call<List<Avaliacao>> get(
             @Query("idUsuario") String idUsuario,
             @Query("idEspecialidade") int idEspecialidade,
             @Query("idCliente") int idCliente
     );
 
     @POST(PATH)
-    Call<Avaliacoes> post(
+    Call<Avaliacao> post(
             @Body Usuario avaliacao
     );
 
     @PUT(PATH+"{id}")
-    Call<Avaliacoes> put(
+    Call<Avaliacao> put(
             @Query("idUsuario") String idUsuario,
             @Query("idEspecialidade") int idEspecialidade,
             @Query("idCliente") String idCliente,
-            @Body Avaliacoes avaliacao
+            @Body Avaliacao avaliacao
     );
 
     @DELETE(PATH+"{id}")
-    Call<Avaliacoes> delete(
+    Call<Avaliacao> delete(
             @Query("idUsuario") String idUsuario,
             @Query("idEspecialidade") int idEspecialidade,
             @Query("idCliente") String idCliente

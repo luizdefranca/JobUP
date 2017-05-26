@@ -14,10 +14,10 @@ import java.util.List;
 
 
 /*
- * Created by Luiz Carlos Ramos on 12/05/17 02:52
+ * Created by Luiz Carlos Ramos on 22/05/17 05:41
  *
  * Copyright (c) 2017. All rights reserved.
- * Last modified 08/05/17 18:29
+ * Last modified 22/05/17 05:24
  */
 
 /**
@@ -26,74 +26,98 @@ import java.util.List;
 
 //@edu.umd.cs.findbugs.annotations.SuppressFBWarnings({"UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "UR_UNINIT_READ", "SA_FIELD_SELF_ASSIGNMENT", "SA_FIELD_SELF_ASSIGNMENT"})
 //@edu.umd.cs.findbugs.annotations.SuppressFBWarnings({"EI_EXPOSE_REP", "EI_EXPOSE_REP2", "EI_EXPOSE_REP", "EI_EXPOSE_REP2"})
+
 public class Usuario implements Serializable{
 
     public static final String TAG = Usuario.class.getName();
 
 
+
+
     @SerializedName("ID_USUARIO")
     @Expose
     public String idUsuario;
+
     @SerializedName("NOME")
     @Expose
     public String nome;
+
     @SerializedName("Cpf")
     @Expose
     public Cpf cpf;
+
     @SerializedName("Rg")
     @Expose
     public Rg rg;
+
     @SerializedName("DT_NASCIMENTO")
     @Expose
     public Date dtNascimento;
+
     @SerializedName("DT_INCLUSAO")
     @Expose
     public Date dtInclusao;
+
     @SerializedName("DT_ALTERACAO")
     @Expose
     public Date dtAlteracao;
+
     @SerializedName("DT_APROVACAO")
     @Expose
     public Date dtAtivacao;
+
     @SerializedName("DT_ATIVACAO")
     @Expose
     public Date dtOrdenacao;
+
     @SerializedName("DT_ORDENACAO")
     @Expose
     public Date dtAprovacao;
+
     @SerializedName("APROVADO")
     @Expose
     public Boolean aprovado;
+
     @SerializedName("ATIVO")
     @Expose
     public Boolean ativo;
+
     @SerializedName("BLOQUEADO")
     @Expose
     public Boolean bloqueado;
+
     @SerializedName("UF")
     @Expose
     public int uf;
+
     @SerializedName("CEP")
     @Expose
     public String cep;
+
     @SerializedName("LOGRADOURO")
     @Expose
     public String logradouro;
+
     @SerializedName("COMPLEMENTO")
     @Expose
     public String complemento;
+
     @SerializedName("BAIRRO")
     @Expose
     public String bairro;
+
     @SerializedName("CIDADE")
     @Expose
     public String cidade;
+
     @SerializedName("Fixo")
     @Expose
     public Telefone fixo;
+
     @SerializedName("Celular")
     @Expose
     public Telefone celular;
+
     @SerializedName("Email")
     @Expose
     public Email email;
@@ -242,32 +266,8 @@ public class Usuario implements Serializable{
         this.email = email;
     }
 
-    public List<Object> getOfertaServico() {
-        return ofertaServico;
-    }
 
-    public void setOfertaServico(List<Object> ofertaServico) {
-        this.ofertaServico = ofertaServico;
-    }
 
-    public List<Object> getPropostaServico() {
-        return propostaServico;
-    }
-
-    public void setPropostaServico(List<Object> propostaServico) {
-        this.propostaServico = propostaServico;
-    }
-
-    @SerializedName("PERFIS_PROFISSIONAIS")
-    @Expose
-
-    public List<PerfilProfisional> perfisProfissionais;
-    @SerializedName("OFERTAS_SERVICO")
-    @Expose
-    public List<Object> ofertaServico;
-    @SerializedName("PROPOSTAS_SERVICO")
-    @Expose
-    public List<Object> propostaServico;
 
     public boolean isAtivo() {
         return ativo;
@@ -291,8 +291,7 @@ public class Usuario implements Serializable{
     public Usuario(String id, String nome, Rg rg, Cpf cpf,Date dtNascimento, Date dtInclusao, Date dtAlteracao,
                    Date dtAprovacao, Date dtOrdenacao, boolean aprovado, boolean ativo,
                    String logradouro, String complemento, String bairro, String cidade, int uf,
-                   String cep, Telefone fixo, Telefone celular, Email email,
-                   List<PerfilProfisional> perfilProfisionais) {
+                   String cep, Telefone fixo, Telefone celular, Email email) {
             this.idUsuario = id;
             this.nome = nome;
             this.cpf = cpf;
@@ -312,7 +311,6 @@ public class Usuario implements Serializable{
             this.fixo = fixo;
             this.celular = celular;
             this.email = email;
-            this.perfisProfissionais = perfilProfisionais;
 
     }
 
@@ -324,13 +322,7 @@ public class Usuario implements Serializable{
 //        this.jsonPerfisLista = jsonPerfisLista;
 //    }
 
-    public List<PerfilProfisional> getPerfisProfissionais() {
-        return perfisProfissionais;
-    }
 
-    public void setPerfisProfissionais(List<PerfilProfisional> perfisProfissionais) {
-        this.perfisProfissionais = perfisProfissionais;
-    }
 
     public Usuario(String nome, Cpf cpf, Rg rg, Date dtNascimento, Date dtInclusao, Date dtAlteracao,
                    Date dtAtivacao, Date dtOrdenacao, Date dtAprovacao, Boolean aprovado,
@@ -359,9 +351,6 @@ public class Usuario implements Serializable{
         this.fixo = fixo;
         this.celular = celular;
         this.email = email;
-        this.perfisProfissionais = perfisProfissionais;
-        this.ofertaServico = ofertaServico;
-        this.propostaServico = propostaServico;
     }
 
     public Usuario(){};
@@ -535,7 +524,7 @@ public class Usuario implements Serializable{
 
         Usuario usuario  = new Usuario(id, nome, rg, cpf, dtNascimento, dtInclusao, dtAlteracao,
                 dtAprovacao, dtOrdenacao, aprovado, ativo, logradouro, complemento, bairro, cidade,
-                uf, cep, fixo, celular, email, perfilProfisionals);
+                uf, cep, fixo, celular, email);
         return usuario;
     }
 

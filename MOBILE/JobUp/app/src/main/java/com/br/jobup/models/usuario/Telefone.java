@@ -19,9 +19,8 @@ import java.io.Serializable;
 public class Telefone implements Serializable{
     public static final String TAG = Telefone.class.getSimpleName();
 
-    @SerializedName("NR")
+    @SerializedName("NrTelefone")
     private String nr;
-    public static final int MAX_LENGTH = 12;
 
     public Telefone() {
     }

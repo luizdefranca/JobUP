@@ -1,40 +1,32 @@
 package com.br.jobup.models.usuario;
 
-
-import com.google.gson.annotations.SerializedName;
-
-import java.io.Serializable;
-
-
 /*
- * Created by Luiz Carlos Ramos on 12/05/17 02:52
+ * Created by Luiz Carlos Ramos on 22/05/17 00:30
  *
  * Copyright (c) 2017. All rights reserved.
- * Last modified 07/05/17 17:42
+ * Last modified 22/05/17 00:30
  */
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by luizramos on 09/04/17.
+ * Created by luizramos on 22/05/17.
  */
 
-public class Email implements Serializable {
+public class Email {
 
+    @SerializedName("EMail")
+    @Expose
+    private String email;
 
-    public static final int EnderecoMaxLength = 254;
-    @SerializedName("Email")
-    public String email;
+    public Email(){
 
-    public Email() {
     }
 
-    public Email(String email) {
+    public Email(String email){
         this.email = email;
     }
-
-    public static int getEnderecoMaxLength() {
-        return EnderecoMaxLength;
-    }
-
     public String getEmail() {
         return email;
     }

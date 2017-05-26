@@ -25,7 +25,7 @@ import retrofit2.http.Query;
  */
 
 public interface IUsuarioFullAPI {
-    public static final String PATH = "usuariofull/";
+    public static final String PATH = "usuario/";
 
 
     @GET(PATH)

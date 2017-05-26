@@ -38,16 +38,33 @@ public class EspecialidadeCatalogo implements Serializable {
     @Expose
     public String resumoCurriculo;
 
+    @SerializedName("DT_INCLUSAO")
+    @Expose
+    public Date dtInclusao;
 
-    public EspecialidadeCatalogo(String idUsuario, String nome, Date dtNascimento,
-                                 int idEspecialidade, String descEspecialidade,
-                                 String resumoCurriculo) {
+    @SerializedName("BAIRRO")
+    @Expose
+    public String bairro;
+
+    @SerializedName("CIDADE")
+    @Expose
+    public String cidade;
+
+    @SerializedName("ESTADO")
+    @Expose
+    public String estado;
+
+
+    public EspecialidadeCatalogo(String idUsuario, String nome, Date dtNascimento, int idEspecialidade, String descEspecialidade, String resumoCurriculo, String bairro, String cidade, String estado) {
         this.idUsuario = idUsuario;
         this.nome = nome;
         this.dtNascimento = dtNascimento;
         this.idEspecialidade = idEspecialidade;
         this.descEspecialidade = descEspecialidade;
         this.resumoCurriculo = resumoCurriculo;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
     }
 
     public String getIdUsuario() {
@@ -96,5 +113,37 @@ public class EspecialidadeCatalogo implements Serializable {
 
     public void setResumoCurriculo(String resumoCurriculo) {
         this.resumoCurriculo = resumoCurriculo;
+    }
+
+    public Date getDtInclusao() {
+        return dtInclusao;
+    }
+
+    public void setDtInclusao(Date dtInclusao) {
+        this.dtInclusao = dtInclusao;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }

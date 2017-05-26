@@ -1,11 +1,11 @@
 package com.br.jobup.models.builder;
 
 import com.br.jobup.models.usuario.Cpf;
-import com.br.jobup.models.usuario.Email;
 import com.br.jobup.models.usuario.PerfilProfisional;
 import com.br.jobup.models.usuario.Rg;
 import com.br.jobup.models.usuario.Telefone;
 import com.br.jobup.models.usuario.Usuario;
+import com.br.jobup.models.usuario.Email;
 import com.br.jobup.util.Parsers;
 
 import java.util.ArrayList;
@@ -154,7 +154,7 @@ public class UsuarioBuilder {
     private boolean aprovado;
     private String resumoCurriculo;
     private Especialidade especialidade;
-    private List<Avaliacoes> avaliacoes;
+    private List<Avaliacao> avaliacoes;
     private List<Formacao> formacoes;
      */
     public UsuarioBuilder PerfilProfissional(PerfilProfisional perfilProfisional){

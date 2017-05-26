@@ -1,20 +1,23 @@
 package activities;
 
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.br.jobup.R;
-import com.br.jobup.dao.usuario.IUsuarioDao;
-import com.br.jobup.dao.usuario.UsuarioDao;
 import com.br.jobup.helpers.CadastroUsuarioHelper;
 import com.br.jobup.models.usuario.Usuario;
-import com.br.jobup.validations.Util;
+import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /*
  * Created by Luiz Carlos Ramos on 09/05/17 19:02
@@ -36,33 +39,55 @@ public class CadastroActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_cadastro, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_salvar) {
 
             CadastroUsuarioHelper usuarioHelper = new CadastroUsuarioHelper(this);
-             IUsuarioDao dao = new UsuarioDao(this);
              Usuario usuario = usuarioHelper.getUsuario();
-            usuario.setIdUsuario(Util.getUUID());
+            final Call<Usuario> usuarioCall = new ParserUsuarioFull().post(usuario);
+            usuarioCall.enqueue(new Callback<Usuario>() {
+                @Override
+                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                    Log.e(TAG, "onResponse: "+ response.message() );
+                    Toast.makeText(CadastroActivity.this, "Cadastro feito com sucesso!", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onFailure(Call<Usuario> call, Throwable t) {
+                    Log.e(TAG, "onFailure: ", t );
+
+                }
+            });
+
+            /*
+
+//Recupera a data atual
+Date dataAtual = Calendar.getInstance().getTime();
+
+//Inicializa o SimpleDateFormat passando o formato no construtor
+DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+//utilizaca o objeto dateFormat com o método format para formatar a data atual criada
+String hoje = dateFormat.format(dataAtual);
+
+//exibe na tela o resultado
+Log.i("FORMATA_DATA", "Hoje é : " + hoje );
 
 
-            dao.addUsuario(usuario);
-            dao.close();
-            Intent detalheServico = new Intent(CadastroActivity.this, ListaNovaDeUsuariosActivity.class);
-            startActivity(detalheServico);
-//            usuario.salvaUsuario(usuario);
-            //return true;
+
+
+             */
+
+            Log.e(TAG, "onNavigationItemSelected: "+ "mensagem enviada" );
+
+            startActivity(new Intent(CadastroActivity.this, SingInActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
@@ -75,3 +100,23 @@ public class CadastroActivity extends AppCompatActivity {
 
     }
 }
+/*
+
+
+
+
+final Call<Usuario> usuarioCall = new ParserUsuarioFull().post(usuario);
+            usuarioCall.enqueue(new Callback<Usuario>() {
+                @Override
+                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                    Log.e(TAG, "onResponse: "+ response.message() );
+                    Toast.makeText(CadastroActivity.this, "Cadastro feito com sucesso!", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onFailure(Call<Usuario> call, Throwable t) {
+                    Log.e(TAG, "onFailure: ", t );
+
+                }
+            });
+ */

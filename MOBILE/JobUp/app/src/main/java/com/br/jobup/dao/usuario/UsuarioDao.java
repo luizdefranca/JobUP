@@ -179,7 +179,7 @@ public class UsuarioDao implements IUsuarioDao {
             values.put(Constantes.USUARIO_ENDERECO_CIDADE, usuario.getCidade());
             values.put(Constantes.USUARIO_FIXO, usuario.getFixo().getNr());
             values.put(Constantes.USUARIO_CELULAR, usuario.getCelular().getNr());
-            values.put(Constantes.USUARIO_EMAIL, usuario.getEmail().email);
+            values.put(Constantes.USUARIO_EMAIL, usuario.getEmail().getEmail());
             //Now update the this row with the information supplied
             int result =  database.update(Constantes.TABELA_USUARIO, values,
                     Constantes.USUARIO_ID + " = " + usuario.getIdUsuario(), null);

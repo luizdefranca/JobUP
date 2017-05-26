@@ -1,6 +1,6 @@
 package com.br.jobup.models.builder;
 
-import com.br.jobup.models.usuario.Avaliacoes;
+import com.br.jobup.models.usuario.Avaliacao;
 import com.br.jobup.models.usuario.Especialidade;
 import com.br.jobup.models.usuario.Formacao;
 import com.br.jobup.models.usuario.PerfilProfisional;
@@ -22,11 +22,11 @@ public class PerfilProfisionalBuilder {
     private boolean aprovado;
     private String resumoCurriculo;
     private Especialidade especialidade;
-    private List<Avaliacoes> avaliacoes;
+    private List<Avaliacao> avaliacoes;
     private List<Formacao> formacoes;
 
     public PerfilProfisionalBuilder(){
-        List<Avaliacoes> avaliacoes = new ArrayList<>();
+        List<Avaliacao> avaliacoes = new ArrayList<>();
         List<Formacao> formacoes = new ArrayList<>();
     }
 
@@ -55,7 +55,7 @@ public class PerfilProfisionalBuilder {
      */
     public PerfilProfisionalBuilder Avaliacoes(String data, int nota, String comentario){
         Date dataFormatada = Parsers.parseStringToDataNormal(data);
-        this.avaliacoes.add(new Avaliacoes(dataFormatada, nota, comentario ));
+        this.avaliacoes.add(new Avaliacao(dataFormatada, nota, comentario ));
         return this;
     }
 

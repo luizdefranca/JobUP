@@ -149,7 +149,6 @@
 
             <Spinner
                 android:id="@+id/rgUfCadastroView"
-                style="@android:style/Widget.Material.Spinner.Underlined"
                 android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_weight="8"
@@ -407,7 +406,7 @@
 
                 android:textStyle="bold" />
         </LinearLayout>
-        <!--CONTATO-->
+        <!--TELEFONES-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -421,7 +420,7 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="Contato"
+                android:text="Telefone"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -489,110 +488,5 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textStyle="bold" />
         </LinearLayout>
-
-        <!--EMAIL-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#faf7f7"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:text="Email"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/emailCadastroView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:background="#dcdcfa"
-                android:hint="fulano@gmail.com"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:paddingTop="8dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-
-        <!--CIDADE-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#faf7f7"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:text="Cidade:"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:background="#dcdcfa"
-                android:hint="Recife"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:paddingTop="8dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <!--UF-ENDERECO-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#faf7f7"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.6"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:text="U.F:"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:background="#dcdcfa"
-                android:hint="Pernambuco"
-                android:paddingBottom="8dp"
-                android:paddingLeft="4dp"
-                android:paddingTop="8dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <!--BUTTON SALVAR-->
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:padding="8dp"
-            android:text="@string/action_salvar" />
     </LinearLayout>
 </ScrollView>

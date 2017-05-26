@@ -1,7 +1,4 @@
-#Tue May 16 09:51:57 BRT 2017
-base.0=/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5af10e085f46749e7f530579813bb6a38f54d0e2
-renamed.1=classes2.dex
+#Fri May 26 02:01:59 BRT 2017
+base.0=/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.1=/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2c7b1bf6d9a79df5eee4e3e0bb9121ee9bcfd5cb/classes.dex
-base.1=/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2c7b1bf6d9a79df5eee4e3e0bb9121ee9bcfd5cb
-file.0=/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5af10e085f46749e7f530579813bb6a38f54d0e2/classes.dex
+file.0=/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

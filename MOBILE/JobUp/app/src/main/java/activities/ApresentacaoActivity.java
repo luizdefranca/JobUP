@@ -31,6 +31,9 @@ public class ApresentacaoActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_apresentacao);
 
+
+
+
         new Handler().postDelayed(new Runnable() {
 
             @Override
