@@ -58,7 +58,7 @@ namespace JOB.WEB.Controllers
         }
 
         // GET: Profissional/Details/5
-        public ActionResult Details(Guid id)
+        public ActionResult Details(Guid id, int idEspecialidade)
         {
             var Dominio = ctx.PerfilProfissional.First(f => f.ID_USUARIO == id);
 
