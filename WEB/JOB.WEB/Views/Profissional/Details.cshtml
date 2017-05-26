@@ -121,6 +121,7 @@
                                     <td>
                                     <td class="text-center">
                                         @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO }, new { @class = "btn btn-success btn-sm fa fa-eye", @title = "Ofertar Serviço para este profissional" })
+                                        @Html.ActionLink(" ", "../Avaliacao/Create", new { idProfissional = item.ID_USUARIO, ID_ESPECIALIDADE = Model.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-star", @title = "Avalie o Profissional" } )
                                     </td>
                                 </tr>
                                 }

@@ -23,13 +23,13 @@ namespace JOB.WEB.Controllers
 
         // POST: Avaliacao/Create
         [HttpPost]
-        public ActionResult Create(AvaliacaoViewModel obj, Guid idProfissional, short vlNota)
+        public ActionResult Create(AvaliacaoViewModel obj, Guid idProfissional, int ID_ESPECIALIDADE, short vlNota)
         {
             try
             {
                 Guid idCliente = Guid.Parse(User.Identity.GetUserId());
 
-                var objAv = new AVALIACAO(idProfissional, obj.ID_ESPECIALIDADE, idCliente, vlNota, obj.COMENTARIO);
+                var objAv = new AVALIACAO(idProfissional, ID_ESPECIALIDADE, idCliente, vlNota, obj.COMENTARIO);
                 ctx.Avaliacao.Add(objAv);
 
                 ctx.SaveChanges();
