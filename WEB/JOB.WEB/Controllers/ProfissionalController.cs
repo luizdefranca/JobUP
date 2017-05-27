@@ -66,6 +66,7 @@ namespace JOB.WEB.Controllers
 
             var usuario = ctx.Usuario
                 .Include(i => i.PERFIS_PROFISSIONAIS)
+                .Include(i => i.PROPOSTAS_SERVICO.Select(s => s.SERVICO))
                 .First(F => F.ID_USUARIO == model.ID_USUARIO);
 
             model.NOME = usuario.NOME;
@@ -79,6 +80,10 @@ namespace JOB.WEB.Controllers
 
             model.OUTROS_PERFIS = Mapper.Map<List<ProfissionalViewModel>>(usuario.PERFIS_PROFISSIONAIS);
             model.AVALIACOES = Mapper.Map<List<AvaliacaoViewModel>>(ctx.Avaliacao.Where(w => w.ID_USUARIO == model.ID_USUARIO & w.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).ToList());
+
+            var MEUS_SERVICOS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA == true).Select(s => s.SERVICO);
+
+            if (MEUS_SERVICOS != null) model.SERVICOS.AddRange(Mapper.Map<List<ServicoViewModel_api>>(MEUS_SERVICOS));
 
             foreach (var item in model.OUTROS_PERFIS)
             {

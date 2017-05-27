@@ -88,11 +88,10 @@
                                         <td>
                                             @Html.DisplayFor(modelItem => item.COMENTARIO)
                                         </td>
-                                        <td>                                        
+                                        <td>
                                     </tr>
                                 }
                             </tbody>
-
                         </table>
                     </div>
                 </div>
@@ -123,19 +122,19 @@
                             <tbody>
                                 @foreach (var item in Model.OUTROS_PERFIS)
                                 {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
-                                    </td>
-                                    <td>
-                                    <td class="text-center">
-                                        @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO, idEspecialidade = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-eye", @title = "Visualizar detalhes deste perfil" })
-                                        @Html.ActionLink(" ", "../Avaliacao/Create", new { idProfissional = item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-star", @title = "Avalie o Profissional" } )
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
+                                        </td>
+                                        <td>
+                                        <td class="text-center">
+                                            @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO, idEspecialidade = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-eye", @title = "Visualizar detalhes deste perfil" })
+                                            @Html.ActionLink(" ", "../Avaliacao/Create", new { idProfissional = item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-star", @title = "Avalie o Profissional" })
+                                        </td>
+                                    </tr>
                                 }
                             </tbody>
                         </table>
@@ -157,7 +156,20 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody></tbody>
+                            <tbody>
+                                @foreach (var item in Model.SERVICOS)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DT_CADASTRO)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DS_TITULO)
+                                        </td>
+                                        <td>
+                                    </tr>
+                                }
+                            </tbody>
                         </table>
                     </div>
                 </div>

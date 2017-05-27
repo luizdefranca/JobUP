@@ -10,6 +10,8 @@ namespace JOB.WEB.Models
         public ProfissionalViewModel()
         {
             this.OUTROS_PERFIS = new List<ProfissionalViewModel>();
+            this.AVALIACOES = new List<AvaliacaoViewModel>();
+            this.SERVICOS = new List<ServicoViewModel_api>();
         }
 
         public Guid ID_USUARIO { get; set; }
@@ -44,6 +46,7 @@ namespace JOB.WEB.Models
 
         public List<ProfissionalViewModel> OUTROS_PERFIS { get; set; }
         public List<AvaliacaoViewModel> AVALIACOES { get; set; }
+        public List<ServicoViewModel_api> SERVICOS { get; set; }
     }
 
     public class CadastroProfissionalViewModel
