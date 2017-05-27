@@ -43,6 +43,7 @@ namespace JOB.WEB.Models
         public string ESTADO { get; set; }
 
         public List<ProfissionalViewModel> OUTROS_PERFIS { get; set; }
+        public List<AvaliacaoViewModel> AVALIACOES { get; set; }
     }
 
     public class CadastroProfissionalViewModel

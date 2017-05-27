@@ -64,7 +64,9 @@ namespace JOB.WEB.Controllers
 
             var model = Mapper.Map<ProfissionalViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
-            var usuario = ctx.Usuario.Include(i => i.PERFIS_PROFISSIONAIS).First(F => F.ID_USUARIO == model.ID_USUARIO);
+            var usuario = ctx.Usuario
+                .Include(i => i.PERFIS_PROFISSIONAIS)
+                .First(F => F.ID_USUARIO == model.ID_USUARIO);
 
             model.NOME = usuario.NOME;
             model.DT_NASCTO = usuario.DT_NASCIMENTO;
@@ -76,6 +78,7 @@ namespace JOB.WEB.Controllers
             model.ESTADO = usuario.UF.ToString();
 
             model.OUTROS_PERFIS = Mapper.Map<List<ProfissionalViewModel>>(usuario.PERFIS_PROFISSIONAIS);
+            model.AVALIACOES = Mapper.Map<List<AvaliacaoViewModel>>(ctx.Avaliacao.Where(w => w.ID_USUARIO == model.ID_USUARIO & w.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).ToList());
 
             foreach (var item in model.OUTROS_PERFIS)
             {

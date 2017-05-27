@@ -18,6 +18,7 @@ namespace JOB.WEB.App_Start
                 cfg.CreateMap<PROPOSTA_SERVICO, PropostaViewModel>();
                 cfg.CreateMap<OFERTA_SERVICO, OfertaViewModel>();
                 cfg.CreateMap<ESPECIALIDADE, EspecialidadeViewModel>();
+                cfg.CreateMap<AVALIACAO, AvaliacaoViewModel>();
                 //cfg.CreateMap<SUB_ESPECIALIDADE, SubEspecialidadeViewModel>();
             });
         }
