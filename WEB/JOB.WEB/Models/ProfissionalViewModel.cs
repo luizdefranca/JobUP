@@ -54,11 +54,11 @@ namespace JOB.WEB.Models
 
         public int ID_ESPECIALIDADE { get; set; }
 
-        [Display(Name = "Descrição")]
+        [Display(Name = "Descrição *")]
         [DataType(DataType.MultilineText)]
         public string RESUMO_CURRICULO { get; set; }
 
-        [Display(Name = "Especialidade")]
+        [Display(Name = "Especialidade *")]
         public List<ESPECIALIDADE> ESPECIALIDADES { get; set; }
     }
 }

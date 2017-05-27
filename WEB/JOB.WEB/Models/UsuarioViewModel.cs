@@ -59,23 +59,23 @@ namespace JOB.WEB.Models
         public Guid ID_USUARIO { get; set; }
 
         [Required]
-        [Display(Name = "Nome")]
+        [Display(Name = "Nome *")]
         public string NOME { get; set; }
 
         [Required]
-        [Display(Name = "CPF")]
+        [Display(Name = "CPF *")]
         public string CPF { get; set; }
 
         [Required]
-        [Display(Name = "RG (UF)")]
+        [Display(Name = "RG (UF) *")]
         public EnumUF RgUF { get; set; }
 
         [Required]
-        [Display(Name = "RG (NR)")]
+        [Display(Name = "RG (NR) *")]
         public string RgNR { get; set; }
 
         [Required]
-        [Display(Name = "Dt. Nascimento")]
+        [Display(Name = "Dt. Nascimento *")]
         [DataType(DataType.Date)]
         [Range(typeof(DateTime), "01/01/1753", "31/12/9999")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
@@ -111,7 +111,7 @@ namespace JOB.WEB.Models
 
         [Required]
         //[DataType(DataType.PhoneNumber)]
-        [Display(Name = "Telefone Celular")]
+        [Display(Name = "Telefone Celular *")]
         public string ContatoCELULAR { get; set; }
 
         ////[Required]
@@ -120,26 +120,26 @@ namespace JOB.WEB.Models
         //public string ContatoEMAIL { get; set; }
 
         [Required]
-        [Display(Name = "UF")]
+        [Display(Name = "UF *")]
         public EnumUF EnderecoUF { get; set; }
 
         [Required]
-        [Display(Name = "CEP")]
+        [Display(Name = "CEP *")]
         public string EnderecoCEP { get; set; }
 
         [Required]
-        [Display(Name = "Logradouro")]
+        [Display(Name = "Logradouro *")]
         public string EnderecoLOGRADOURO { get; set; }
 
         [Display(Name = "Complemento")]
         public string EnderecoCOMPLEMENTO { get; set; }
 
         [Required]
-        [Display(Name = "Bairro")]
+        [Display(Name = "Bairro *")]
         public string EnderecoBAIRRO { get; set; }
 
         [Required]
-        [Display(Name = "Cidade")]
+        [Display(Name = "Cidade *")]
         public string EnderecoCIDADE { get; set; }
     }
 }

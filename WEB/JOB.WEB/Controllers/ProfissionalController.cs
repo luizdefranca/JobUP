@@ -7,8 +7,8 @@ using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-
 using System.Web.Mvc;
 
 namespace JOB.WEB.Controllers
@@ -64,7 +64,7 @@ namespace JOB.WEB.Controllers
 
             var model = Mapper.Map<ProfissionalViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
-            var usuario = ctx.Usuario.Find(model.ID_USUARIO);
+            var usuario = ctx.Usuario.Include(i => i.PERFIS_PROFISSIONAIS).First(F => F.ID_USUARIO == model.ID_USUARIO);
 
             model.NOME = usuario.NOME;
             model.DT_NASCTO = usuario.DT_NASCIMENTO;
@@ -79,7 +79,7 @@ namespace JOB.WEB.Controllers
 
             foreach (var item in model.OUTROS_PERFIS)
             {
-                item.DESC_ESPECIALIDADE= ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+                item.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
             }
 
             return View(model);

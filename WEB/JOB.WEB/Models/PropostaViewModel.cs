@@ -34,7 +34,7 @@ namespace JOB.WEB.Models
         [Display(Name = "Título")]
         public string DS_TITULO { get; set; }
 
-        [Display(Name = "Observações")]
+        [Display(Name = "Observações *")]
         public string DS_OBSERVACOES { get; set; }
     }
 }
