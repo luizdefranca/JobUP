@@ -21,7 +21,11 @@ namespace JOB.WEB.Controllers
         public ActionResult Index(int idEspecialidade)
         {
             //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
-            var lstDominio = ctx.PerfilProfissional.Where(f => f.ID_ESPECIALIDADE == idEspecialidade).ToList();
+            var lstDominio = ctx.PerfilProfissional
+                .Include(i => i.USUARIO)
+                .Where(f => f.ID_ESPECIALIDADE == idEspecialidade)
+                .OrderByDescending(o => o.USUARIO.DT_ORDENACAO)
+                .ToList();
 
             var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
 

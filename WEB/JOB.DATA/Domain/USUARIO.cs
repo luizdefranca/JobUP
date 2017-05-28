@@ -32,6 +32,7 @@ namespace JOB.DATA.Domain
 
             this.DT_INCLUSAO = DateTime.Now;
             this.DT_ORDENACAO = DateTime.Now;
+            this.PERFIL_DESTAQUE = false;
 
             this.ATIVO = true;
             this.DT_ATIVACAO = DateTime.Now;
@@ -135,6 +136,7 @@ namespace JOB.DATA.Domain
         public bool APROVADO { get; private set; }
         public bool ATIVO { get; private set; }
         public bool BLOQUEADO { get; private set; }
+        public bool PERFIL_DESTAQUE { get; private set; }
 
         public EnumUF UF { get; private set; }
         public string CEP { get; private set; }
