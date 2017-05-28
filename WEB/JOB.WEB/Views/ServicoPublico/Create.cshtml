@@ -19,6 +19,9 @@
         </div>
         <div class="box-body">
             <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
                 <div class="form-group">
                     @Html.LabelFor(model => model.ESPECIALIDADES, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">

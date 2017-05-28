@@ -4,7 +4,6 @@ using JOB.DATA.Domain;
 using JOB.HELPERS.Validation;
 using JOB.WEB.Extensions;
 using JOB.WEB.Models;
-using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -16,9 +15,7 @@ namespace JOB.WEB.Controllers
     public class ProfissionalController : Controller
     {
         private Contexto ctx = new Contexto();
-        private Guid id => User.Identity.GetId();
-
-        private Guid idUsuario => Guid.Parse(User.Identity.GetUserId());
+        private Guid idUsuario => User.Identity.GetId();
 
         // GET: Profissional
         public ActionResult Index(int idEspecialidade)
@@ -78,7 +75,7 @@ namespace JOB.WEB.Controllers
             model.CIDADE = usuario.CIDADE;
             model.ESTADO = usuario.UF.ToString();
 
-            model.OUTROS_PERFIS = Mapper.Map<List<ProfissionalViewModel>>(usuario.PERFIS_PROFISSIONAIS);
+            model.OUTROS_PERFIS = Mapper.Map<List<ProfissionalViewModel>>(usuario.PERFIS_PROFISSIONAIS.Where(w => w.ID_ESPECIALIDADE != idEspecialidade));
             model.AVALIACOES = Mapper.Map<List<AvaliacaoViewModel>>(ctx.Avaliacao.Where(w => w.ID_USUARIO == model.ID_USUARIO & w.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).ToList());
 
             var MEUS_SERVICOS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA == true).Select(s => s.SERVICO);
@@ -96,7 +93,7 @@ namespace JOB.WEB.Controllers
         // GET: Profissional/Create
         public ActionResult Create()
         {
-            var domain = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+            var domain = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == idUsuario);
 
             if (domain == null) //se ta nulo, é pq o usuario ainda nao cadastrou o perfil completo
             {

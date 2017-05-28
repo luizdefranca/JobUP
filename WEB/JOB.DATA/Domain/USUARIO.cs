@@ -110,6 +110,8 @@ namespace JOB.DATA.Domain
 
         public void MovimentarMoeda(Int16 VALOR)
         {
+            if ((this.MOEDA + VALOR) < 0) throw new Exception("Você não possui moedas suficientes para realizar essa transação");
+
             this.MOEDA += VALOR;
         }
 

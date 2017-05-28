@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+using JOB.HELPERS.Validation;
 using JOB.WEB.Extensions;
 using JOB.WEB.Helper;
 using JOB.WEB.Models;
@@ -43,24 +44,32 @@ namespace JOB.WEB.Controllers
         [HttpPost]
         public ActionResult Create(PropostaViewModel obj, Guid id)
         {
-            var servico = ctx.Servico.Find(id);
-
-            if (servico.PUBLICO == false)
+            try
             {
-                var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
+                var servico = ctx.Servico.Find(id);
 
-                domain.AceitarOferta();
-                ctx.Entry(domain).State = EntityState.Modified;
+                if (servico.PUBLICO == false)
+                {
+                    var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
 
-                MoedaHelper.Movimentar(idUsuarioLogado, -100, "PROPOSTA EFETUADA");
+                    domain.AceitarOferta();
+                    ctx.Entry(domain).State = EntityState.Modified;
+
+                    MoedaHelper.Movimentar(idUsuarioLogado, -100, "PROPOSTA EFETUADA");
+                }
+
+                var prop = new PROPOSTA_SERVICO(id, idUsuarioLogado, obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
+                ctx.Proposta.Add(prop);
+
+                ctx.SaveChanges();
+
+                return RedirectToAction("../Home/Index");
             }
-
-            var prop = new PROPOSTA_SERVICO(id, idUsuarioLogado, obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
-            ctx.Proposta.Add(prop);
-
-            ctx.SaveChanges();
-
-            return RedirectToAction("../Home/Index");
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.TratarMensagem());
+                return View(obj);
+            }
         }
 
         public ActionResult ListarProposta(Guid id)
