@@ -10,7 +10,6 @@ package activities;
  * Last modified 09/05/17 18:46
  */
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -268,7 +267,7 @@ public class MainActivity extends AppCompatActivity
         aGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 String cat = catArray.get(position);
-                List <Integer>   catkeys = new ArrayList<Integer>(categoriaMap.keySet());
+                List <Integer>   catkeys = new ArrayList<>(categoriaMap.keySet());
                 int idEspecialidade = catkeys.get(position);
 
                 Intent i = new Intent(MainActivity.this, CatalogoEspecialidadeActivity.class);

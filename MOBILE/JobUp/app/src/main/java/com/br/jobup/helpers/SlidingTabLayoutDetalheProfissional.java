@@ -1,7 +1,7 @@
 package com.br.jobup.helpers;
 
-/**
- * Created by luizramos on 25/05/17.
+/*
+  Created by luizramos on 25/05/17.
  */
 
 
@@ -68,7 +68,7 @@ public class SlidingTabLayoutDetalheProfissional extends HorizontalScrollView {
     private boolean mDistributeEvenly;
 
     private ViewPager mViewPager;
-    private SparseArray<String> mContentDescriptions = new SparseArray<String>();
+    private SparseArray<String> mContentDescriptions = new SparseArray<>();
     private ViewPager.OnPageChangeListener mViewPagerPageChangeListener;
 
     private final SlidingTabStripDetalheProfissional mTabStrip;

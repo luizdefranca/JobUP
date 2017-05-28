@@ -6,6 +6,7 @@ import com.br.jobup.services.interfaces.IAvaliacaoAPI;
 import com.br.jobup.services.interfaces.IClienteAPI;
 import com.br.jobup.services.interfaces.IDesativarAPI;
 import com.br.jobup.services.interfaces.IEspecialidadeCatalogoAPI;
+import com.br.jobup.services.interfaces.IPerfilProfissional;
 import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
 import com.br.jobup.services.interfaces.IUsuarioFullAPI;
@@ -27,7 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by luizramos on 27/04/17.
  */
 
-public class RetroFitInicializador {
+public class RetroFitInicializador<T> {
 
     String API_BASE_URL = "http://jobupapi.azurewebsites.net/api/";
 
@@ -131,4 +132,19 @@ public class RetroFitInicializador {
 
     public IEspecialidadeCatalogoAPI getEspecialidadesAPI(){
         return  retrofit.create(IEspecialidadeCatalogoAPI.class);}
+
+    public IPerfilProfissional createPerfilProfissionalAPI(){
+        return retrofit.create(IPerfilProfissional.class);
+    }
+
+    public Object createAPI(String nomeClasse){
+        try {
+            return retrofit.create(Class.forName(nomeClasse));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
 }

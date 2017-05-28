@@ -3,6 +3,13 @@ package com.br.jobup.util;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * Created by Luiz Carlos Ramos on 26/05/17 05:03
+ *
+ * Copyright (c) 2017. All rights reserved.
+ * Last modified 16/05/17 03:49
+ */
+
 /**
  * Created by luizramos on 09/04/17.
  */

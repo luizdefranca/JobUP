@@ -1,12 +1,9 @@
 package com.br.jobup.util.Validations.EntitiesValidations;
 
-/**
- * Created by luizramos on 08/04/17.
+/*
+  Created by luizramos on 08/04/17.
  */
 import java.util.regex.*;
-import java.io.*;
-
-import static java.util.regex.Pattern.compile;
 
 
 //@edu.umd.cs.findbugs.annotations.SuppressFBWarnings({"ES_COMPARING_STRINGS_WITH_EQ", "DM_BOXED_PRIMITIVE_FOR_PARSING"})

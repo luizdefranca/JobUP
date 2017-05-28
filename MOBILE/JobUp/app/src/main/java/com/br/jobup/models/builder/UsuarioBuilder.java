@@ -1,7 +1,7 @@
 package com.br.jobup.models.builder;
 
 import com.br.jobup.models.usuario.Cpf;
-import com.br.jobup.models.usuario.PerfilProfisional;
+import com.br.jobup.models.usuario.PerfilProfissional;
 import com.br.jobup.models.usuario.Rg;
 import com.br.jobup.models.usuario.Telefone;
 import com.br.jobup.models.usuario.Usuario;
@@ -43,7 +43,7 @@ public class UsuarioBuilder {
     public Email email;
 
     private boolean ativo;
-    private List<PerfilProfisional> perfisProfissionais;
+    private List<PerfilProfissional> perfisProfissionais;
 
     public UsuarioBuilder(){
         this.perfisProfissionais = new ArrayList<>();
@@ -157,8 +157,8 @@ public class UsuarioBuilder {
     private List<Avaliacao> avaliacoes;
     private List<Formacao> formacoes;
      */
-    public UsuarioBuilder PerfilProfissional(PerfilProfisional perfilProfisional){
-       this.perfisProfissionais.add(perfilProfisional);
+    public UsuarioBuilder PerfilProfissional(PerfilProfissional perfilProfissional){
+       this.perfisProfissionais.add(perfilProfissional);
         return this;
     }
 

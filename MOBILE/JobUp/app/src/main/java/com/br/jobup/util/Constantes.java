@@ -1,7 +1,5 @@
 package com.br.jobup.util;
 
-import org.w3c.dom.Text;
-
 /**
  * Created by luizramos on 16/04/17.
  */

@@ -3,7 +3,7 @@ package com.br.jobup.models.builder;
 import com.br.jobup.models.usuario.Avaliacao;
 import com.br.jobup.models.usuario.Especialidade;
 import com.br.jobup.models.usuario.Formacao;
-import com.br.jobup.models.usuario.PerfilProfisional;
+import com.br.jobup.models.usuario.PerfilProfissional;
 import com.br.jobup.util.Parsers;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class PerfilProfisionalBuilder {
 
-    private PerfilProfisional perfilProfisional;
+    private PerfilProfissional perfilProfissional;
 
     private Date dataAprovacao;
     private boolean aprovado;
@@ -65,7 +65,7 @@ public class PerfilProfisionalBuilder {
         return this;
     }
 
-    public PerfilProfisional build(){
-        return perfilProfisional;
+    public PerfilProfissional build(){
+        return perfilProfissional;
     }
 }

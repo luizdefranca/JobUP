@@ -11,8 +11,6 @@ import com.br.jobup.models.usuario.Formacao;
 import com.br.jobup.models.usuario.SubEspecialidade;
 import com.br.jobup.models.usuario.Usuario;
 
-import org.w3c.dom.Comment;
-
 import java.util.List;
 
 import retrofit2.Call;

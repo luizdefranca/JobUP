@@ -11,7 +11,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="view.activities.SignUpActivity"
+    tools:context="activities.SignUpActivity"
     android:background="#D7CCC8">
 
 
@@ -32,7 +32,7 @@
                 android:id="@+id/textView2"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="30dp"

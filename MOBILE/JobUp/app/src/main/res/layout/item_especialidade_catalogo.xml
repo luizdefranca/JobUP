@@ -23,6 +23,7 @@
         android:background="#98aeff">
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:paddingLeft="10dp"
@@ -199,4 +200,5 @@
 
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

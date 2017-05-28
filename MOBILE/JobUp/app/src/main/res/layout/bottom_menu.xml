@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Luiz Carlos Ramos on 27/05/17 03:54
+  ~
+  ~ Copyright (c) 2017. All rights reserved.
+  ~ Last modified 27/05/17 03:54
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/tab_home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tab_home"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:paddingTop="35dp"
+        android:text="Home"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/tab_fav"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/tab_favorites"
+        android:paddingTop="35dp"
+        android:text="Favorites"
+        android:textAllCaps="false"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/tab_account"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/tab_account"
+        android:paddingTop="35dp"
+        android:text="Account"
+        android:textAllCaps="false"
+        android:textSize="10sp" />
+</LinearLayout>

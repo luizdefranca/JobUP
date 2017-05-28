@@ -1,9 +1,6 @@
 package com.br.jobup.util.Validations;
 
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by luizramos on 08/04/17.

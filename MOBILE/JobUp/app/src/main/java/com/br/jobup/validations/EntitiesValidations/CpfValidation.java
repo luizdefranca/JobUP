@@ -1,11 +1,9 @@
 package com.br.jobup.validations.EntitiesValidations;
 
-/**
- * Created by luizramos on 08/04/17.
+/*
+  Created by luizramos on 08/04/17.
  */
 import java.util.regex.*;
-
-import static java.util.regex.Pattern.compile;
 
 
 public class CpfValidation {

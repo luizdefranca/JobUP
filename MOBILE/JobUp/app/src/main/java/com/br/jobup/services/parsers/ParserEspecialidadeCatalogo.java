@@ -7,13 +7,9 @@ package com.br.jobup.services.parsers;
  * Last modified 12/05/17 03:08
  */
 
-import android.util.Log;
-
 import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
 import com.br.jobup.services.RetroFitInicializador;
-import com.br.jobup.services.usuarioFullServices.UsuarioService;
 
-import java.io.IOException;
 import java.util.List;
 
 import retrofit2.Call;

@@ -1,13 +1,17 @@
 package com.br.jobup.adapters;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 import com.br.jobup.fragments.AvaliacoesProfissionalFragment;
 import com.br.jobup.fragments.DetalheProfissionalFragment;
 import com.br.jobup.fragments.ServicosProfissionalFragment;
+
+import static com.br.jobup.fragments.ServicosProfissionalFragment.getInstance;
 
 /*
  * Created by Luiz Carlos Ramos on 25/05/17 20:30
@@ -22,14 +26,23 @@ import com.br.jobup.fragments.ServicosProfissionalFragment;
 
 public class TabDetalheProfissionalAdapter extends FragmentPagerAdapter {
 
+    public static final String TAG = TabDetalheProfissionalAdapter.class.getSimpleName();
     private Context context;
+    private Bundle bundle;
     private static final int NUM_TABS = 3;
-    private static final String[] TABS = {"Detalhes", "Avaliações", "Últimos Serviços" };
+    private static final String[] TABS = {"Detalhes", "Avaliações", "Últimos Serviços"};
 
     public TabDetalheProfissionalAdapter(Context context, FragmentManager fm) {
         super(fm);
         this.context = context;
     }
+
+    public TabDetalheProfissionalAdapter(Bundle bundle, FragmentManager fm) {
+        super(fm);
+        this.bundle = bundle;
+        Log.e(TAG, "TabDetalheProfissionalAdapter: " + bundle.toString() );
+    }
+
     public TabDetalheProfissionalAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -37,12 +50,12 @@ public class TabDetalheProfissionalAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        if(position == 0){
-            return DetalheProfissionalFragment.getInstance(null);
-        } else if(position == 1){
-            return AvaliacoesProfissionalFragment.getInstance(null);
+        if (position == 0) {
+            return DetalheProfissionalFragment.getInstance(bundle);
+        } else if (position == 1) {
+            return AvaliacoesProfissionalFragment.getInstance(bundle);
         } else {
-            return ServicosProfissionalFragment.getInstance(null);
+            return ServicosProfissionalFragment.getInstance(bundle);
         }
     }
 

@@ -1,7 +1,7 @@
 package com.br.jobup.helpers;
 
-/**
- * Created by luizramos on 25/05/17.
+/*
+  Created by luizramos on 25/05/17.
  */
 
 import android.content.Context;

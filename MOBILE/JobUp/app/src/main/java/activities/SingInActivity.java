@@ -253,8 +253,8 @@ public class SingInActivity extends AppCompatActivity {
                 md.update(signature.toByteArray());
                 Log.i("log-", "keyhash: " + Base64.encodeToString(md.digest(), Base64.DEFAULT));
             }
-        } catch (PackageManager.NameNotFoundException e) {
-        } catch (NoSuchAlgorithmException e) {
+        } catch (PackageManager.NameNotFoundException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
         }
 
 

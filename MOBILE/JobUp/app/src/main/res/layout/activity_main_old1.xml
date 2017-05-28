@@ -55,59 +55,14 @@
             android:paddingLeft="8dp"
             android:singleLine="true"
             android:textColor="#000"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:imeOptions="actionSearch"
             android:layout_height="34dp"
             android:fontFamily="sans-serif-condensed"/>
 
 
         <!-- TAB BAR -->
-        <LinearLayout
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tabBar"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true">
-
-            <Button
-                android:id="@+id/tab_home"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/tab_home"
-                android:backgroundTint="@android:color/holo_orange_dark"
-                android:paddingTop="35dp"
-                android:text="Home"
-                android:textAllCaps="false"
-                android:textColor="@android:color/holo_orange_dark"
-                android:textSize="10dp"/>
-
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:id="@+id/tab_fav"
-                android:textAllCaps="false"
-                android:background="@drawable/tab_favorites"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="60dp"
-                android:paddingTop="35dp"
-                android:text="Favorites"
-                android:textSize="10dp" />
-
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:id="@+id/tab_account"
-                android:textAllCaps="false"
-                android:background="@drawable/tab_account"
-                android:layout_marginLeft="60dp"
-                android:paddingTop="35dp"
-                android:text="Account"
-                android:textSize="10dp"
-                android:layout_gravity="center_horizontal" />
-        </LinearLayout>
+        <include layout="@layout/bottom_menu"/>
 
         <GridView
             android:layout_width="match_parent"

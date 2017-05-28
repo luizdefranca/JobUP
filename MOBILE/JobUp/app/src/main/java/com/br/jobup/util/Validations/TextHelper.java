@@ -1,12 +1,6 @@
 package com.br.jobup.util.Validations;
 
-import android.view.textservice.TextInfo;
-
 import java.util.regex.Pattern;
-
-import static android.R.attr.text;
-import static android.R.attr.value;
-import static android.R.id.input;
 
 /**
  * Created by luizramos on 08/04/17.

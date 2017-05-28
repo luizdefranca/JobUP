@@ -7,8 +7,8 @@ package com.br.jobup.models.especialidade;
  * Last modified 12/05/17 02:56
  */
 
-/**
- * Created by luizramos on 12/05/17.
+/*
+  Created by luizramos on 12/05/17.
  */
 
 import com.google.gson.annotations.Expose;

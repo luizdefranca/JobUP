@@ -328,7 +328,7 @@ public class Usuario implements Serializable{
                    Date dtAtivacao, Date dtOrdenacao, Date dtAprovacao, Boolean aprovado,
                    Boolean ativo, Boolean bloqueado, int uf, String cep, String logradouro,
                    String complemento, String bairro, String cidade, Telefone fixo,
-                   Telefone celular, Email email, List<PerfilProfisional> perfisProfissionais,
+                   Telefone celular, Email email, List<PerfilProfissional> perfisProfissionais,
                    List<Object> ofertaServico, List<Object> propostaServico) {
         this.nome = nome;
         this.cpf = cpf;
@@ -455,17 +455,17 @@ public class Usuario implements Serializable{
 
 
 
-//    public List<PerfilProfisional> getPerfisProfissionais() {
+//    public List<PerfilProfissional> getPerfisProfissionais() {
 //        Gson gson = new Gson();
 //        String serializedPerfisList = getJsonPerfisLista();
-//        List<PerfilProfisional> perfilProfisionalList = gson.
-//                <ArrayList<PerfilProfisional>>fromJson(serializedPerfisList,
-//                        new TypeToken<ArrayList<PerfilProfisional>>(){}.getType());
+//        List<PerfilProfissional> perfilProfisionalList = gson.
+//                <ArrayList<PerfilProfissional>>fromJson(serializedPerfisList,
+//                        new TypeToken<ArrayList<PerfilProfissional>>(){}.getType());
 //
 //        return perfilProfisionalList;
 //    }
 //
-//    public void setPerfisProfissionais(List<PerfilProfisional> perfisProfissionais) {
+//    public void setPerfisProfissionais(List<PerfilProfissional> perfisProfissionais) {
 //        Gson gson = new Gson();
 //        String perfilListJson = gson.toJson(perfisProfissionais);
 //        this.setJsonPerfisLista(perfilListJson);
@@ -518,9 +518,9 @@ public class Usuario implements Serializable{
         //  public Usuario(String nome, Cpf cpf, Rg rg, Date dataNascimento, Date dataInclusao,
         //  Date dataAlteracao, Date dataAprovacao, Date dataOrdenacao, boolean aprovado,
         //  Endereco endereco, IContatoAPI contato,
-        //  List<PerfilProfisional> perfisProfissionais)
+        //  List<PerfilProfissional> perfisProfissionais)
 
-        List<PerfilProfisional> perfilProfisionals = null;
+        List<PerfilProfissional> perfilProfissionals = null;
 
         Usuario usuario  = new Usuario(id, nome, rg, cpf, dtNascimento, dtInclusao, dtAlteracao,
                 dtAprovacao, dtOrdenacao, aprovado, ativo, logradouro, complemento, bairro, cidade,

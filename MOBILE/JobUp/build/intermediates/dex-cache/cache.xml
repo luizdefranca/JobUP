@@ -137,15 +137,6 @@
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_f6a786655f7fe37c76a5737c33fabe0a9ea42ed8.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_80f2425151ffcb8d562ddd7c42ffcbf22e91e33e.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="/Users/luizramos/.android/build-cache/bcdb2d04776e43a55473a447ee596d8f0cf01f7b/output/jars/classes.jar"
         jumboMode="true"
@@ -162,15 +153,6 @@
         revision="25.0.0"
         sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f6a786655f7fe37c76a5737c33fabe0a9ea42ed8/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/luizramos/.android/build-cache/8d2dbd76ed96d846f84d3320751f75b5da042727/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_fa8408c2c95d813cd6710c9b390e7a9b5c07f5b6.jar" />
     </item>
     <item
         is-multidex="true"
@@ -270,15 +252,6 @@
         revision="25.0.0"
         sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e5d1ab6e27511118110df3fd9254cd7a588bedca/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/luizramos/.android/build-cache/83d187a3105024e10c8091b233fdfac6383d04b0/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_e5d1ab6e27511118110df3fd9254cd7a588bedca.jar" />
     </item>
     <item
         is-multidex="true"

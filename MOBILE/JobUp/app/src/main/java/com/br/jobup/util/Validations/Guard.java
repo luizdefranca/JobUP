@@ -1,7 +1,5 @@
 package com.br.jobup.util.Validations;
 
-import static android.R.attr.value;
-
 /**
  * Created by luizramos on 08/04/17.
  */

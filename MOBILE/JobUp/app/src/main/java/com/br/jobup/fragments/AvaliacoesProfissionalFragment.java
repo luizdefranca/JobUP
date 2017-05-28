@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.br.jobup.R;
 
+import activities.CatalogoEspecialidadeActivity;
+
 /*
  * Created by Luiz Carlos Ramos on 25/05/17 22:04
  *
@@ -26,6 +28,8 @@ public class AvaliacoesProfissionalFragment extends Fragment {
 
     private View mView;
     private Bundle mBundle;
+    private String idProfissional;
+    private int idEspecialidade;
 
     public AvaliacoesProfissionalFragment() {
         // Required empty public constructor
@@ -47,6 +51,9 @@ public class AvaliacoesProfissionalFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBundle = getArguments().getBundle(ARGUMENTO_AVALIACOES_PROFISSIONAIS);
+        idProfissional = mBundle.getString(CatalogoEspecialidadeActivity.ID_PROFISSIONAL);
+        idEspecialidade = mBundle.getInt(CatalogoEspecialidadeActivity.ID_ESPECIALIDADE);
+        setRetainInstance(true);
     }
 
 

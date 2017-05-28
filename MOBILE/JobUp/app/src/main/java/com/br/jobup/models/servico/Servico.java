@@ -1,6 +1,5 @@
 package com.br.jobup.models.servico;
 
-import com.br.jobup.models.usuario.TempServico;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
