@@ -4,11 +4,9 @@ using JOB.HELPERS.Validation;
 using JsonNet.PrivateSettersContractResolvers;
 using Newtonsoft.Json;
 using System;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-
 using System.Web.Http;
 
 namespace JOB.API.Controllers
@@ -55,37 +53,37 @@ namespace JOB.API.Controllers
             }
         }
 
-        // PUT: api/Usuario/5
-        public HttpResponseMessage Put(Guid id, HttpRequestMessage request)
-        {
-            try
-            {
-                var values = request.Content.ReadAsStringAsync().Result;
+        //// PUT: api/Usuario/5
+        //public HttpResponseMessage Put(Guid id, HttpRequestMessage request)
+        //{
+        //    try
+        //    {
+        //        var values = request.Content.ReadAsStringAsync().Result;
 
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver()
-                };
+        //        var settings = new JsonSerializerSettings
+        //        {
+        //            ContractResolver = new PrivateSetterContractResolver()
+        //        };
 
-                var item = ctx.Servico.FirstOrDefault(w => w.ID_SERVICO == id);
-                var obj = JsonConvert.DeserializeObject<SERVICO>(values, settings);
+        //        var item = ctx.Servico.FirstOrDefault(w => w.ID_SERVICO == id);
+        //        var obj = JsonConvert.DeserializeObject<SERVICO>(values, settings);
 
-                item.AtualizaDados(obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
-                ctx.Entry(item).State = EntityState.Modified;
+        //        item.AtualizaDados(obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
+        //        ctx.Entry(item).State = EntityState.Modified;
 
-                Validate(item);
-                if (!ModelState.IsValid)
-                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+        //        Validate(item);
+        //        if (!ModelState.IsValid)
+        //            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
-                ctx.SaveChanges();
+        //        ctx.SaveChanges();
 
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
-            }
-        }
+        //        return Request.CreateResponse(HttpStatusCode.OK);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
+        //    }
+        //}
 
         // DELETE: api/Usuario/5
         public void Delete(Guid id)

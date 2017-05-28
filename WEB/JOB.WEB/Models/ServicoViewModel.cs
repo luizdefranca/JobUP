@@ -12,6 +12,7 @@ namespace JOB.WEB.Models
         public Guid ID_SERVICO { get; set; }
 
         public Guid ID_USUARIO { get; set; }
+        public Guid ID_PROFISSIONAL { get; set; }
 
         [Required]
         public string NOME { get; set; }

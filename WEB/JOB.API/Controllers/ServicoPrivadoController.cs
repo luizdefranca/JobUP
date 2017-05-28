@@ -1,7 +1,11 @@
 ﻿using AutoMapper;
 using JOB.DATA;
+using JOB.DATA.Domain;
+using JOB.HELPERS.Validation;
 using JOB.WEB.Helper;
 using JOB.WEB.Models;
+using JsonNet.PrivateSettersContractResolvers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -37,6 +41,41 @@ namespace JOB.API.Controllers
             }
 
             return Request.CreateResponse(HttpStatusCode.OK, lstModel);
+        }
+
+        [HttpPost]
+        public HttpResponseMessage Post(HttpRequestMessage request)
+        {
+            try
+            {
+                var values = request.Content.ReadAsStringAsync().Result;
+
+                var settings = new JsonSerializerSettings
+                {
+                    ContractResolver = new PrivateSetterContractResolver(),
+                    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
+                };
+
+                var obj = JsonConvert.DeserializeObject<ServicoViewModel_api>(values, settings);
+
+                Validate(obj);
+                if (!ModelState.IsValid)
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+
+                var domain = new SERVICO(obj.ID_SERVICO, obj.ID_USUARIO, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, false, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
+
+                ctx.Servico.Add(domain);
+                ctx.SaveChanges();
+
+                var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, obj.ID_PROFISSIONAL);
+                ctx.Oferta.Add(objOferta);
+
+                return Request.CreateResponse(HttpStatusCode.Created);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
+            }
         }
     }
 }
