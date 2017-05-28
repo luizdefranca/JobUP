@@ -383,7 +383,7 @@ namespace JOB.WEB.Controllers
                 var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
                 newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetEmailAdress()));
-                newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+                newobj.AdicionarEndereco(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
 
                 ctx.Usuario.Add(newobj);
             }
@@ -392,7 +392,7 @@ namespace JOB.WEB.Controllers
                 domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
                 domain.AtualizarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
-                domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
+                domain.AdicionarEndereco(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
 
                 ctx.Entry(domain).State = EntityState.Modified;
             }

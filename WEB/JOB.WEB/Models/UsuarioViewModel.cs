@@ -121,25 +121,25 @@ namespace JOB.WEB.Models
 
         [Required]
         [Display(Name = "UF *")]
-        public EnumUF EnderecoUF { get; set; }
+        public EnumUF UF { get; set; }
 
         [Required]
         [Display(Name = "CEP *")]
-        public string EnderecoCEP { get; set; }
+        public string CEP { get; set; }
 
         [Required]
         [Display(Name = "Logradouro *")]
-        public string EnderecoLOGRADOURO { get; set; }
+        public string LOGRADOURO { get; set; }
 
         [Display(Name = "Complemento")]
-        public string EnderecoCOMPLEMENTO { get; set; }
+        public string COMPLEMENTO { get; set; }
 
         [Required]
         [Display(Name = "Bairro *")]
-        public string EnderecoBAIRRO { get; set; }
+        public string BAIRRO { get; set; }
 
         [Required]
         [Display(Name = "Cidade *")]
-        public string EnderecoCIDADE { get; set; }
+        public string CIDADE { get; set; }
     }
 }
