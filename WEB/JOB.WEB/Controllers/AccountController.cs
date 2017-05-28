@@ -1,5 +1,5 @@
 ﻿using JOB.DATA;
-using JOB.WEB.Extensions;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -76,7 +76,7 @@ namespace JOB.WEB.Controllers
             }
 
             var user = await UserManager.FindByNameAsync(model.UserName);
-            var id = Guid.Parse( user.Id);
+            var id = Guid.Parse(user.Id);
 
             var usuario = ctx.Usuario.Find(id);
 
@@ -182,6 +182,8 @@ namespace JOB.WEB.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    MoedaHelper.Movimentar(Guid.Parse(user.Id), 1000, "CADASTRO NO SISTEMA");
+
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

@@ -2,6 +2,7 @@
 using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.WEB.Extensions;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,8 @@ namespace JOB.WEB.Controllers
 
                 domain.AceitarOferta();
                 ctx.Entry(domain).State = EntityState.Modified;
+
+                MoedaHelper.Movimentar(idUsuarioLogado, -100, "PROPOSTA EFETUADA");
             }
 
             var prop = new PROPOSTA_SERVICO(id, idUsuarioLogado, obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);

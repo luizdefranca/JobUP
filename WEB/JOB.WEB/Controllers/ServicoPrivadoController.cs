@@ -3,6 +3,7 @@ using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.HELPERS.Validation;
 using JOB.WEB.Extensions;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using System;
@@ -88,6 +89,8 @@ namespace JOB.WEB.Controllers
 
                 var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, idProfissional);
                 ctx.Oferta.Add(objOferta);
+
+                MoedaHelper.Movimentar(id, -100, "SERVIÇO PRIVADO OFERTADO");
 
                 ctx.SaveChanges();
                 return RedirectToAction("Index", "Profissional", new { idEspecialidade = obj.ID_ESPECIALIDADE });

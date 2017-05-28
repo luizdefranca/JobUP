@@ -19,6 +19,7 @@ namespace JOB.WEB.App_Start
                 cfg.CreateMap<OFERTA_SERVICO, OfertaViewModel>();
                 cfg.CreateMap<ESPECIALIDADE, EspecialidadeViewModel>();
                 cfg.CreateMap<AVALIACAO, AvaliacaoViewModel>();
+                cfg.CreateMap<HISTORICO_MOEDA, HistoricoMoedaVM>();
                 //cfg.CreateMap<SUB_ESPECIALIDADE, SubEspecialidadeViewModel>();
             });
         }

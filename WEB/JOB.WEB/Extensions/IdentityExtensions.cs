@@ -32,6 +32,23 @@ namespace JOB.WEB.Extensions
             }
         }
 
+        public static int GetTotalMoedas(this IIdentity identity)
+        {
+            using (var ctx = new Contexto())
+            {
+                if (identity.GetUserId() != null)
+                {
+                    var id = identity.GetId();
+                    var user = ctx.Usuario.Include(i => i.OFERTAS_SERVICO).FirstOrDefault(f => f.ID_USUARIO == id);
+                    return user != null ? user.MOEDA : 0;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
         public static string GetEmailAdress(this IIdentity identity)
         {
             var userId = identity.GetUserId();

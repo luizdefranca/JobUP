@@ -41,6 +41,12 @@
                                 <span class="label label-danger">@User.Identity.GetServicosPrivados()</span>
                             </a>
                         </li>
+                        <li class="dropdown notifications-menu">
+                            <a href="~/HistoricoMoeda/" title="Minhas Moedas">
+                                <i class="fa fa-money"></i>
+                                <span class="label label-success">@User.Identity.GetTotalMoedas()</span>
+                            </a>
+                        </li>
                         @Html.Partial("_LoginPartial")
                         @*<li>
                                 <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
@@ -52,14 +58,14 @@
         <aside class="main-sidebar">
             <section class="sidebar">
                 @*<div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="~/AdminLTE/dist/img/user.svg" class="img-circle" alt="User Image">
-                    </div>
-                    <div class="pull-left info">
-                        <p>@User.Identity.Name</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    </div>
-                </div>*@
+                        <div class="pull-left image">
+                            <img src="~/AdminLTE/dist/img/user.svg" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="pull-left info">
+                            <p>@User.Identity.Name</p>
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>*@
                 <ul class="sidebar-menu">
                     <li class="header">NAVEGAÇÃO PRINCIPAL</li>
                     <li id="left-sidebar-menu-administrador" class="treeview">

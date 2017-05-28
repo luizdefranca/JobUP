@@ -108,6 +108,11 @@ namespace JOB.DATA.Domain
             this.DT_ATIVACAO = DateTime.Now;
         }
 
+        public void MovimentarMoeda(Int16 VALOR)
+        {
+            this.MOEDA += VALOR;
+        }
+
         private void InicializaVariaveis()
         {
             this.PERFIS_PROFISSIONAIS = new HashSet<PERFIL_PROFISSIONAL>();
@@ -140,8 +145,11 @@ namespace JOB.DATA.Domain
         public Telefone CELULAR { get; private set; }
         public Email EMAIL { get; private set; }
 
+        public Int16 MOEDA { get; set; }
+
         public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; private set; }
         public ICollection<OFERTA_SERVICO> OFERTAS_SERVICO { get; private set; }
         public ICollection<PROPOSTA_SERVICO> PROPOSTAS_SERVICO { get; private set; }
+        public ICollection<HISTORICO_MOEDA> HISTORICOS_MOEDA { get; private set; }
     }
 }
