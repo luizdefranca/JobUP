@@ -50,7 +50,7 @@
                         {
                             if (item.ACEITA)
                             {
-                                @Html.ActionLink(" ", "Chat", new { idServico = item.ID_SERVICO, idUsuario = item.ID_USUARIO }, new { @class = "btn btn-sm btn-primary fa fa-comments" })
+                                @Html.ActionLink(" ", "Chat", new { idUsuario = item.ID_USUARIO }, new { @class = "btn btn-sm btn-primary fa fa-comments" })
                             }
                         }
                         else
