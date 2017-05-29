@@ -1,5 +1,6 @@
 ﻿using JOB.DATA;
 using JOB.WEB.Controllers;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity.Owin;
 using System;
@@ -59,6 +60,9 @@ namespace JOB.WEB.ApiController
             var result = await UserManager.CreateAsync(user, Password);
             if (result.Succeeded)
             {
+                Guid id = Guid.Parse(user.Id);
+                MoedaHelper.Movimentar(id, 1000, "CADASTRO NO SISTEMA");
+
                 return Request.CreateResponse(HttpStatusCode.OK, user.Id);
             }
             return Request.CreateResponse(HttpStatusCode.BadRequest, result);

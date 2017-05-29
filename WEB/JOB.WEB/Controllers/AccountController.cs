@@ -182,8 +182,6 @@ namespace JOB.WEB.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    MoedaHelper.Movimentar(Guid.Parse(user.Id), 1000, "CADASTRO NO SISTEMA");
-
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

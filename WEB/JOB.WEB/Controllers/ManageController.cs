@@ -4,6 +4,7 @@ using JOB.DATA.Domain;
 using JOB.DATA.ValueObject;
 using JOB.HELPERS.Validation;
 using JOB.WEB.Extensions;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -382,10 +383,14 @@ namespace JOB.WEB.Controllers
             {
                 var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
-                newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new Email(User.Identity.GetEmailAdress()));
+                newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new DATA.ValueObject.Email(User.Identity.GetEmailAdress()));
                 newobj.AdicionarEndereco(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
 
                 ctx.Usuario.Add(newobj);
+
+                ctx.SaveChanges();
+
+                MoedaHelper.Movimentar(id, 1000, "CADASTRO NO SISTEMA");
             }
             else
             {
@@ -395,9 +400,9 @@ namespace JOB.WEB.Controllers
                 domain.AdicionarEndereco(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
 
                 ctx.Entry(domain).State = EntityState.Modified;
-            }
 
-            ctx.SaveChanges();
+                ctx.SaveChanges();
+            }
         }
 
         public ActionResult Ativar()
