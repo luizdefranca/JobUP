@@ -111,6 +111,7 @@ namespace JOB.DATA.Domain
 
         public void AtivarDestaque()
         {
+            this.DT_ORDENACAO = DateTime.Now;
             this.PERFIL_DESTAQUE = true;
         }
 
@@ -126,6 +127,7 @@ namespace JOB.DATA.Domain
             this.PERFIS_PROFISSIONAIS = new HashSet<PERFIL_PROFISSIONAL>();
             this.OFERTAS_SERVICO = new HashSet<OFERTA_SERVICO>();
             this.PROPOSTAS_SERVICO = new HashSet<PROPOSTA_SERVICO>();
+            this.HISTORICOS_MOEDA = new HashSet<HISTORICO_MOEDA>();
         }
 
         public Guid ID_USUARIO { get; private set; }

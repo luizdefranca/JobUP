@@ -4,61 +4,60 @@
     ViewBag.Title = "Ativar Perfil de Destaque";
 }
 
+<div class="box">
+    <div class="box-body">
+        <dl class="dl-horizontal">
+            <p>
+                <font size="4,5" face="Times">Deseja ter um perfil destacado dos demais? ative aqui a função de destaque, para que seu perfil tenha mais visibilidade em relação aos demais.</font>
+                <br> *Ativar está ferramenta cosumirá 800 de moedas.
+            </p>
 
-<div>
-    <dl class="dl-horizontal">
-        <p>
-            <font size="4,5" face="Times">Deseja ter um perfil destacado dos demais? ative aqui a função de destaque, para que seu perfil tenha mais visibilidade em relação aos demais.</font>
-            <br> *Ativar está ferramenta cosumirá 800 de moedas.
-        </p>
-        
-        <p>
-            <font size="4" face="Times">Informações do seu Perfil</font></p>
-         <dt>
-            @Html.DisplayNameFor(model => model.NOME)
-        </dt>
+            <p>
+                <font size="4" face="Times">Informações do seu Perfil</font>
+            </p>
+            <dt>
+                @Html.DisplayNameFor(model => model.NOME)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.NOME)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.NOME)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CPF)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CPF)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CPF)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CPF)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RgNR)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.RgNR)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.RgNR)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.RgNR)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DT_NASCIMENTO)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.DT_NASCIMENTO)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DT_NASCIMENTO)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.DT_NASCIMENTO)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PERFIL_DESTAQUE)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.PERFIL_DESTAQUE)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PERFIL_DESTAQUE)
-        </dd>        
-    </dl>
+            <dd>
+                @Html.DisplayFor(model => model.PERFIL_DESTAQUE)
+            </dd>
+        </dl>
+    </div>
+    <div class="box-footer">
+        @Html.ActionLink("Ativar", "AtivarDestaque", new { id = Model.ID_USUARIO }, new { @class = "btn btn-success" })
+        @Html.ActionLink("Voltar", "../Home/Index", null, new { @class = "btn btn-default" })
+    </div>
 </div>
-<p>
-@if (Model.PERFIL_DESTAQUE == false)
-{
-    @Html.ActionLink("Ativar", "AtivarDestaque", new { id = Model.ID_USUARIO }, new { @class = "btn btn-success" })
-}
-    @Html.ActionLink("Voltar", "../Home/Index", null, new { @class = "btn btn-default" })
-</p>

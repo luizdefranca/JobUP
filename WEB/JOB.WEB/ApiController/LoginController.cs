@@ -61,7 +61,7 @@ namespace JOB.WEB.ApiController
             if (result.Succeeded)
             {
                 Guid id = Guid.Parse(user.Id);
-                MoedaHelper.Movimentar(id, 1000, "CADASTRO NO SISTEMA");
+                MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
 
                 return Request.CreateResponse(HttpStatusCode.OK, user.Id);
             }

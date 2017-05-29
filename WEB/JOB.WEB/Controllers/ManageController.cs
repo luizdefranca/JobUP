@@ -390,7 +390,7 @@ namespace JOB.WEB.Controllers
 
                 ctx.SaveChanges();
 
-                MoedaHelper.Movimentar(id, 1000, "CADASTRO NO SISTEMA");
+                MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
             }
             else
             {

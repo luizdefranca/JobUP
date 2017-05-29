@@ -97,7 +97,7 @@ namespace JOB.WEB.Controllers
                 //var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, id);
                 //ctx.Oferta.Add(objOferta);
 
-                MoedaHelper.Movimentar(id, -500, "SERVIÇO PÚBLICO OFERTADO");
+                MoedaHelper.Movimentar(ctx, id, -500, "SERVIÇO PÚBLICO OFERTADO");
 
                 ctx.SaveChanges();
                 return RedirectToAction("../Home/Index");

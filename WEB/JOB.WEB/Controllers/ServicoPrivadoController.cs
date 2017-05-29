@@ -90,7 +90,7 @@ namespace JOB.WEB.Controllers
                 var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, idProfissional);
                 ctx.Oferta.Add(objOferta);
 
-                MoedaHelper.Movimentar(id, -100, "SERVIÇO PRIVADO OFERTADO");
+                MoedaHelper.Movimentar(ctx, id, -100, "SERVIÇO PRIVADO OFERTADO");
 
                 ctx.SaveChanges();
                 return RedirectToAction("Index", "Profissional", new { idEspecialidade = obj.ID_ESPECIALIDADE });

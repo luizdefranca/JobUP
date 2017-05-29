@@ -97,7 +97,7 @@ namespace JOB.WEB.Controllers
 
             domain.AtivarDestaque();
             ctx.Entry(domain).State = EntityState.Modified;
-            MoedaHelper.Movimentar(id, -800, "PERFIL COM DESTAQUE ATIVADO");
+            MoedaHelper.Movimentar(ctx, id, -800, "PERFIL COM DESTAQUE ATIVADO");
             ctx.SaveChanges();
 
             return RedirectToAction("Index", "Home");
