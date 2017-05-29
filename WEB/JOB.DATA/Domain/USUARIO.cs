@@ -109,6 +109,11 @@ namespace JOB.DATA.Domain
             this.DT_ATIVACAO = DateTime.Now;
         }
 
+        public void AtivarDestaque()
+        {
+            this.PERFIL_DESTAQUE = true;
+        }
+
         public void MovimentarMoeda(Int16 VALOR)
         {
             if ((this.MOEDA + VALOR) < 0) throw new Exception("Você não possui moedas suficientes para realizar essa transação");

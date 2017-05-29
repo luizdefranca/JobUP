@@ -141,5 +141,8 @@ namespace JOB.WEB.Models
         [Required]
         [Display(Name = "Cidade *")]
         public string CIDADE { get; set; }
+
+        [Display(Name = "Destaque Ativado?")]
+        public bool PERFIL_DESTAQUE { get; set; }
     }
 }

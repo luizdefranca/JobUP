@@ -660,6 +660,7 @@
     <Content Include="Views\Proposta\ListarProposta.cshtml" />
     <Content Include="Views\Avaliacao\Create.cshtml" />
     <Content Include="Views\HistoricoMoeda\Index.cshtml" />
+    <Content Include="Views\Usuario\Destaque.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

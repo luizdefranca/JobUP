@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.WEB.Extensions;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -89,6 +91,18 @@ namespace JOB.WEB.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult AtivarDestaque(Guid id)
+        {
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
+
+            domain.AtivarDestaque();
+            ctx.Entry(domain).State = EntityState.Modified;
+            MoedaHelper.Movimentar(id, -800, "PERFIL COM DESTAQUE ATIVADO");
+            ctx.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult IndexServico()
         {
             var domain = ctx.Servico.Where(w => w.ID_USUARIO == id).ToList();
@@ -107,6 +121,17 @@ namespace JOB.WEB.Controllers
             }
 
             return View(lstModel);
+        }
+
+        public ActionResult Destaque()
+        {
+            Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
+
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == idUsuario);
+
+            var model = Mapper.Map<UsuarioViewModel>(domain);
+
+            return View(model);
         }
     }
 }
