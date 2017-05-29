@@ -36,7 +36,7 @@ namespace JOB.WEB.Controllers
                 model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
                 model.TEMPO_SERVICO_DESC = EnumHelper.GetName(model.TEMPO_SERVICO);
 
-                if (model.ID_SUB_ESPECIALIDADE != null)
+                if (model.ID_SUB_ESPECIALIDADE != null && model.ID_SUB_ESPECIALIDADE != 0)
                 {
                     model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade.First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE).DESCRICAO;
                 }

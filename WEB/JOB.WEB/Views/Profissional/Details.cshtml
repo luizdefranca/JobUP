@@ -129,7 +129,6 @@
                                         <td>
                                             @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
                                         </td>
-                                        <td>
                                         <td class="text-center">
                                             @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO, idEspecialidade = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-eye", @title = "Visualizar detalhes deste perfil" })
                                             @Html.ActionLink(" ", "../Avaliacao/Create", new { idProfissional = item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-star", @title = "Avalie o Profissional" })

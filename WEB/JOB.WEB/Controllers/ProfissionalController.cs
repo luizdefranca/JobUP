@@ -88,7 +88,7 @@ namespace JOB.WEB.Controllers
 
             foreach (var item in model.OUTROS_PERFIS)
             {
-                item.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+                item.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).DESCRICAO;
             }
 
             return View(model);
