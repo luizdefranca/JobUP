@@ -29,3 +29,8 @@ textarea {
 .input-lg, .btn-lg {
     max-width: 100%;
 }
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}

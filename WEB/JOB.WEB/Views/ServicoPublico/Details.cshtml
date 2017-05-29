@@ -60,7 +60,7 @@
     <div class="box-footer">
         @if (Model.POSSUI_PROPOSTA)
         {
-            @Html.ActionLink("Gerar Proposta", "../Proposta/Create", new { id = Model.ID_SERVICO }, new { id = Model.ID_SERVICO, @class = "btn btn-primary", @disabled = "disabled", @title = "Você já fez uma proposta para este serviço" })
+            @Html.ActionLink("Gerar Proposta", "../Proposta/Create", new { id = Model.ID_SERVICO }, new { id = Model.ID_SERVICO, @class = "btn btn-primary not-active", @disabled = "disabled", @title = "Você já fez uma proposta para este serviço" })
         }
         else
         {

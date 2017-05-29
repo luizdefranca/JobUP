@@ -68,7 +68,7 @@
                     <td class="text-center">
                         @if (item.ID_USUARIO == User.Identity.GetId())
                         {
-                            @Html.ActionLink(" ", "Details", new { id = item.ID_SERVICO }, new { @class = "btn btn-success btn-xs fa fa-search", @disabled = "disabled", title = "Este serviço foi criado por você" })
+                            @Html.ActionLink(" ", "Details", new { id = item.ID_SERVICO }, new { @class = "btn btn-success btn-xs fa fa-search not-active", @disabled = "disabled", title = "Este serviço foi criado por você" })
                         }
                         else
                         {

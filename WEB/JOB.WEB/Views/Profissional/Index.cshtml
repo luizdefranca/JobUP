@@ -49,7 +49,7 @@
                         <td class="text-center">
                             @if (item.ID_USUARIO == User.Identity.GetId())
                             {
-                                @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO, idEspecialidade = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-eye", @disabled = "disabled", @readonly = "readonly", @title = "Este é seu perfil" })
+                                @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO, idEspecialidade = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-eye not-active", @disabled = "disabled", @readonly = "readonly", @title = "Este é seu perfil" })
                             }
                             else
                             {
