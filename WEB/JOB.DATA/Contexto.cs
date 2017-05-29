@@ -46,6 +46,7 @@ namespace JOB.DATA
         public DbSet<OFERTA_SERVICO> Oferta { get; set; }
         public DbSet<PROPOSTA_SERVICO> Proposta { get; set; }
         public DbSet<HISTORICO_MOEDA> HistoricoMoeda { get; set; }
+        public DbSet<CHAT> Chat { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -76,6 +77,7 @@ namespace JOB.DATA
             modelBuilder.Configurations.Add(new OfertaConfig());
             modelBuilder.Configurations.Add(new PropostaConfig());
             modelBuilder.Configurations.Add(new  HistoricoMoedaConfig());
+            modelBuilder.Configurations.Add(new ChatConfig());
         }
     }
 }

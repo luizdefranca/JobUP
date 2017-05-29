@@ -102,5 +102,13 @@ namespace JOB.WEB.Controllers
 
             return RedirectToAction("ListarProposta", new { id = idServico });
         }
+
+        public ActionResult FinalizarNegociacao(Guid ID_SERVICO, Guid ID_USUARIO)
+        {
+            var domain = ctx.Servico.Find(ID_SERVICO);
+            var model = Mapper.Map<ServicoViewModel_full>(domain);
+
+            return View(model);
+        }
     }
 }

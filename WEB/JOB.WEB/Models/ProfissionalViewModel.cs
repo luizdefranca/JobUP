@@ -31,7 +31,7 @@ namespace JOB.WEB.Models
         [Display(Name = "Resumo Currículo")]
         public string RESUMO_CURRICULO { get; set; }
 
-        [Display(Name = "Úsuário desde")]
+        [Display(Name = "Usuário desde")]
         [DataType(DataType.Date)]
         public DateTime DT_INCLUSAO { get; set; }
 

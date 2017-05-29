@@ -50,7 +50,7 @@
                         {
                             if (item.ACEITA)
                             {
-                                @Html.ActionLink(" ", "Chat", new { idUsuario = item.ID_USUARIO }, new { @class = "btn btn-sm btn-primary fa fa-comments" })
+                                @Html.ActionLink(" ", "FinalizarNegociacao", new { ID_SERVICO = item.ID_SERVICO, ID_USUARIO = item.ID_USUARIO }, new { @class = "btn btn-sm btn-primary fa fa-handshake-o", @title = "Finalizar Negociação" })
                             }
                         }
                         else
