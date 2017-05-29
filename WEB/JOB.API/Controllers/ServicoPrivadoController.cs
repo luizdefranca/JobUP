@@ -70,7 +70,7 @@ namespace JOB.API.Controllers
                 var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, obj.ID_PROFISSIONAL);
                 ctx.Oferta.Add(objOferta);
 
-                MoedaHelper.Movimentar(obj.ID_USUARIO, -100, "SERVIÇO PRIVADO OFERTADO");
+                MoedaHelper.Movimentar(ctx, obj.ID_USUARIO, -100, "SERVIÇO PRIVADO OFERTADO");
 
                 return Request.CreateResponse(HttpStatusCode.Created);
             }

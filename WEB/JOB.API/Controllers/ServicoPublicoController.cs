@@ -65,7 +65,7 @@ namespace JOB.API.Controllers
                 ctx.Servico.Add(domain);
                 ctx.SaveChanges();
 
-                MoedaHelper.Movimentar(obj.ID_USUARIO, -100, "SERVIÇO PÚBLICO OFERTADO");
+                MoedaHelper.Movimentar(ctx, obj.ID_USUARIO, -100, "SERVIÇO PÚBLICO OFERTADO");
 
                 return Request.CreateResponse(HttpStatusCode.Created);
             }
