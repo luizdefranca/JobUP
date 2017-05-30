@@ -63,14 +63,14 @@ namespace JOB.API.Controllers
                     return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
 
                 var domain = new SERVICO(obj.ID_SERVICO, obj.ID_USUARIO, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, false, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
-
-                ctx.Servico.Add(domain);
-                ctx.SaveChanges();
+                ctx.Servico.Add(domain);                
 
                 var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, obj.ID_PROFISSIONAL);
                 ctx.Oferta.Add(objOferta);
 
                 MoedaHelper.Movimentar(ctx, obj.ID_USUARIO, -100, "SERVIÇO PRIVADO OFERTADO");
+
+                ctx.SaveChanges();
 
                 return Request.CreateResponse(HttpStatusCode.Created);
             }
