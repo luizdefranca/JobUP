@@ -53,7 +53,7 @@ namespace JOB.WEB.Controllers
             var model = Mapper.Map<ServicoViewModel_full>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
-            if (model.ID_SUB_ESPECIALIDADE.HasValue) model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade.First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE).DESCRICAO;
+            if (model.ID_SUB_ESPECIALIDADE.HasValue && model.ID_SUB_ESPECIALIDADE.Value != 0) model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade.First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE).DESCRICAO;
 
             model.POSSUI_PROPOSTA = ctx.Proposta.Any(a => a.ID_SERVICO == id & a.ID_USUARIO == this.id);
 
