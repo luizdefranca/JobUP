@@ -204,6 +204,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AvaliacaoController.cs" />
+    <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\EspecialidadeController.cs" />
     <Compile Include="Controllers\HistoricoMoedaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -665,6 +666,7 @@
     <Content Include="Views\HistoricoMoeda\Index.cshtml" />
     <Content Include="Views\Usuario\Destaque.cshtml" />
     <Content Include="Views\Proposta\FinalizarNegociacao.cshtml" />
+    <Content Include="Views\Chat\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">

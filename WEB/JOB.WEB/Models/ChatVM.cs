@@ -2,6 +2,13 @@
 
 namespace JOB.WEB.Models
 {
+    public class ListaChatVM
+    {
+        public Guid ID_SERVICO { get; set; }
+        public string DESC_SERVICO { get; set; }
+        public int QTD_NAO_LIDAS { get; set; }
+    }
+
     public class ChatVM
     {
         public Guid ID_SERVICO { get; set; }

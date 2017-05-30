@@ -52,8 +52,6 @@
                 <div class="input-group">
                     <input id="txtChat" type="text" name="message" placeholder="Escreva uma mensagem ..." class="form-control">
                     <span class="input-group-btn">
-                        @*<button type="button" class="btn btn-warning btn-flat">Enviar</button>*@
-                        @*@Html.ActionLink("Enviar", "InserirChat", "Proposta", new { mensagem = txtChat.text }, new { @id = "lnkEnviaChat", @class = "btn btn-warning btn-flat" })*@
                         <a id="lnkEnviaChat" class="btn btn-warning btn-flat">Enviar</a>
                     </span>
                 </div>
@@ -71,13 +69,11 @@
     </div>
 </div>
 
-@Html.ActionLink("Voltar", "ListarProposta", "Proposta", new { id = Request.QueryString["ID_SERVICO"] }, new { @class = "btn btn-default" })
-
 <script>
     $("#lnkEnviaChat").click(function () {
         
         if ($('#txtChat').val() === '') return;
 
-        document.getElementById('lnkEnviaChat').href = "../Proposta/InserirChat?ID_SERVICO=" + getParameterByName("ID_SERVICO") + "&ID_USUARIO=" + getParameterByName("ID_USUARIO") + "&mensagem=" + $('#txtChat').val();
+        document.getElementById('lnkEnviaChat').href = "../Proposta/InserirChat?ID_SERVICO=" + getParameterByName("ID_SERVICO") + "&mensagem=" + $('#txtChat').val();
     });
 </script>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<JOB.WEB.Models.ListaChatVM>
+
+@{
+    ViewBag.Title = "Minhas Mensagens";
+    ViewBag.SubTitle = "Lista";
+}
+<div class="box">
+    <div class="box-body">
+        <table class="table">
+            <tr>               
+                <th>
+                    @Html.DisplayNameFor(model => model.DESC_SERVICO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QTD_NAO_LIDAS)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DESC_SERVICO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QTD_NAO_LIDAS)
+                    </td>
+                    <td>
+                       @Html.ActionLink(" ", "FinalizarNegociacao", "Proposta", new { ID_SERVICO = item.ID_SERVICO }, new { @class = "btn btn-sm btn-primary fa fa-handshake-o", @title = "Finalizar Negociação" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

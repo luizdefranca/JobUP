@@ -103,7 +103,7 @@ namespace JOB.WEB.Controllers
             return RedirectToAction("ListarProposta", new { id = idServico });
         }
 
-        public ActionResult FinalizarNegociacao(Guid ID_SERVICO, Guid ID_USUARIO)
+        public ActionResult FinalizarNegociacao(Guid ID_SERVICO)
         {
             var lstDominio = ctx.Chat.Where(w => w.ID_SERVICO == ID_SERVICO).ToList();
             var model = new FinalizarNegociacaoVM();
@@ -115,10 +115,19 @@ namespace JOB.WEB.Controllers
                 item.NOME_USUARIO = ctx.Usuario.Find(item.ID_USUARIO).NOME;
             }
 
+            model.QTD_MENSAGENS_NAO_LIDAS = ctx.Chat.Count(c => c.ID_SERVICO == ID_SERVICO & !c.LIDA);
+
+            //foreach (var item in lstDominio.Where(w => w.ID_USUARIO != idUsuarioLogado).ToList())
+            //{
+            //    item.MarcarComoLida();
+            //    ctx.Entry(item).State = EntityState.Modified;
+            //}
+            //ctx.SaveChanges();
+
             return View(model);
         }
 
-        public ActionResult InserirChat(Guid ID_SERVICO, Guid ID_USUARIO, string mensagem)
+        public ActionResult InserirChat(Guid ID_SERVICO, string mensagem)
         {
             var chat = new CHAT(ID_SERVICO, idUsuarioLogado, mensagem);
             ctx.Chat.Add(chat);
@@ -134,7 +143,7 @@ namespace JOB.WEB.Controllers
                 item.NOME_USUARIO = ctx.Usuario.Find(item.ID_USUARIO).NOME;
             }
 
-            return RedirectToAction("FinalizarNegociacao", new { ID_SERVICO, ID_USUARIO });
+            return RedirectToAction("FinalizarNegociacao", new { ID_SERVICO });
         }
     }
 }

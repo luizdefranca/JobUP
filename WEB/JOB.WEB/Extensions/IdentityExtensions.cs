@@ -15,6 +15,22 @@ namespace JOB.WEB.Extensions
             return Guid.Parse(identity.GetUserId());
         }
 
+        public static int GetMensagensPendentes(this IIdentity identity)
+        {
+            using (var ctx = new Contexto())
+            {
+                if (identity.GetUserId() != null)
+                {
+                    var id = identity.GetId();
+                    return ctx.Chat.Count(c => c.ID_USUARIO == id & !c.LIDA);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
         public static int GetServicosPrivados(this IIdentity identity)
         {
             using (var ctx = new Contexto())

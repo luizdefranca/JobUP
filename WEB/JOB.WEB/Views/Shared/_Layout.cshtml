@@ -42,6 +42,12 @@
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <li class="dropdown notifications-menu">
+                            <a href="~/Chat/" title="Mensagens">
+                                <i class="fa fa-comments"></i>
+                                <span class="label label-warning">@User.Identity.GetMensagensPendentes()</span>
+                            </a>
+                        </li>
+                        <li class="dropdown notifications-menu">
                             <a href="~/ServicoPrivado/" title="Minhas Ofertas">
                                 <i class="fa fa-bell-o"></i>
                                 <span class="label label-danger">@User.Identity.GetServicosPrivados()</span>
