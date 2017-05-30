@@ -105,10 +105,36 @@ namespace JOB.WEB.Controllers
 
         public ActionResult FinalizarNegociacao(Guid ID_SERVICO, Guid ID_USUARIO)
         {
-            var domain = ctx.Servico.Find(ID_SERVICO);
-            var model = Mapper.Map<ServicoViewModel_full>(domain);
+            var lstDominio = ctx.Chat.Where(w => w.ID_SERVICO == ID_SERVICO).ToList();
+            var model = new FinalizarNegociacaoVM();
+
+            model.Chats = Mapper.Map<List<ChatVM>>(lstDominio);
+
+            foreach (var item in model.Chats)
+            {
+                item.NOME_USUARIO = ctx.Usuario.Find(item.ID_USUARIO).NOME;
+            }
 
             return View(model);
+        }
+
+        public ActionResult InserirChat(Guid ID_SERVICO, Guid ID_USUARIO, string mensagem)
+        {
+            var chat = new CHAT(ID_SERVICO, idUsuarioLogado, mensagem);
+            ctx.Chat.Add(chat);
+            ctx.SaveChanges();
+
+            var lstDominio = ctx.Chat.Where(w => w.ID_SERVICO == ID_SERVICO).ToList();
+            var model = new FinalizarNegociacaoVM();
+
+            model.Chats = Mapper.Map<List<ChatVM>>(lstDominio);
+
+            foreach (var item in model.Chats)
+            {
+                item.NOME_USUARIO = ctx.Usuario.Find(item.ID_USUARIO).NOME;
+            }
+
+            return RedirectToAction("FinalizarNegociacao", new { ID_SERVICO, ID_USUARIO });
         }
     }
 }

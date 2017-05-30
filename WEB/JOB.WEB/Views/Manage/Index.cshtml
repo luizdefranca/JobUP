@@ -1,4 +1,6 @@
 ﻿@model JOB.WEB.Models.IndexViewModel
+@using JOB.WEB.Extensions
+
 @{
     ViewBag.Title = "Gerenciamento";
     ViewBag.SubTitle = "Altere as configurações da sua conta";
@@ -17,7 +19,7 @@
         <div class="box box-primary">
             <div class="box-body box-profile">
                 <img class="profile-user-img img-responsive img-circle" src="~/AdminLTE/dist/img/avatar5.png" alt="User profile picture">
-                <h3 class="profile-username text-center">@User.Identity.Name</h3>
+                <h3 class="profile-username text-center">@User.Identity.GetNome()</h3>
                 <p class="text-muted text-center">@User.Identity.Name</p>
                 <ul class="list-group list-group-unbordered">
                     <li class="list-group-item">

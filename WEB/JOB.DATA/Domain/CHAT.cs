@@ -23,6 +23,7 @@ namespace JOB.DATA.Domain
 
             this.ID_SERVICO = ID_SERVICO;
             this.ID_USUARIO = ID_USUARIO;
+            this.DT_MENSAGEM = DateTime.Now;
             this.MENSAGEM = MENSAGEM;
         }
 

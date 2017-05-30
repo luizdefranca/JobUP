@@ -20,6 +20,7 @@ namespace JOB.WEB.App_Start
                 cfg.CreateMap<ESPECIALIDADE, EspecialidadeViewModel>();
                 cfg.CreateMap<AVALIACAO, AvaliacaoViewModel>();
                 cfg.CreateMap<HISTORICO_MOEDA, HistoricoMoedaVM>();
+                cfg.CreateMap<CHAT, ChatVM>();
                 //cfg.CreateMap<SUB_ESPECIALIDADE, SubEspecialidadeViewModel>();
             });
         }

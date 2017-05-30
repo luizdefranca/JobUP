@@ -7,7 +7,7 @@ namespace JOB.DATA.Config
     {
         public ChatConfig()
         {
-            HasKey(c => new { c.ID_SERVICO, c.ID_USUARIO });
+            HasKey(c => new { c.ID_SERVICO, c.DT_MENSAGEM });
 
             Property(p => p.MENSAGEM)
                .IsRequired();

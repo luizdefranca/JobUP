@@ -58,5 +58,15 @@ namespace JOB.WEB.Extensions
                 return user.Email;
             }
         }
+
+        public static string GetNome(this IIdentity identity)
+        {
+            var userId = identity.GetId();
+            using (var context = new Contexto())
+            {
+                var user = context.Usuario.FirstOrDefault(u => u.ID_USUARIO == userId);
+                return user.NOME;
+            }
+        }
     }
 }
