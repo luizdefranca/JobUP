@@ -62,10 +62,11 @@ namespace JOB.API.Controllers
 
                 var domain = new SERVICO(obj.ID_SERVICO, obj.ID_USUARIO, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, true, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
 
-                ctx.Servico.Add(domain);
-                ctx.SaveChanges();
+                ctx.Servico.Add(domain);                
 
                 MoedaHelper.Movimentar(ctx, obj.ID_USUARIO, -100, "SERVIÇO PÚBLICO OFERTADO");
+
+                ctx.SaveChanges();
 
                 return Request.CreateResponse(HttpStatusCode.Created);
             }
