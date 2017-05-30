@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JOB.DATA;
+using JOB.HELPERS.Validation;
 using JOB.WEB.Extensions;
 using JOB.WEB.Helper;
 using JOB.WEB.Models;
@@ -91,16 +92,35 @@ namespace JOB.WEB.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Destaque()
+        {
+            Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
+
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == idUsuario);
+
+            var model = Mapper.Map<UsuarioViewModel>(domain);
+
+            return View(model);
+        }
+
         public ActionResult AtivarDestaque(Guid id)
         {
             var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
-            domain.AtivarDestaque();
-            ctx.Entry(domain).State = EntityState.Modified;
-            MoedaHelper.Movimentar(ctx, id, -800, "PERFIL COM DESTAQUE ATIVADO");
-            ctx.SaveChanges();
+            try
+            {
+                domain.AtivarDestaque();
+                ctx.Entry(domain).State = EntityState.Modified;
+                MoedaHelper.Movimentar(ctx, id, -800, "PERFIL COM DESTAQUE ATIVADO");
+                ctx.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.TratarMensagem());
+                return View("Destaque", Mapper.Map<UsuarioViewModel>(domain));
+            }
         }
 
         public ActionResult IndexServico()
@@ -121,17 +141,6 @@ namespace JOB.WEB.Controllers
             }
 
             return View(lstModel);
-        }
-
-        public ActionResult Destaque()
-        {
-            Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
-
-            var domain = ctx.Usuario.First(w => w.ID_USUARIO == idUsuario);
-
-            var model = Mapper.Map<UsuarioViewModel>(domain);
-
-            return View(model);
         }
     }
 }
