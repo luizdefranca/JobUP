@@ -36,6 +36,8 @@ namespace JOB.WEB.Controllers
                 model.NOME = usuario.NOME;
                 model.DT_NASCTO = usuario.DT_NASCIMENTO;
                 model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+                model.PERFIL_DESTAQUE = usuario.PERFIL_DESTAQUE;
+                model.DT_ORDENACAO = usuario.DT_ORDENACAO;
             }
 
             return View(lstModel);

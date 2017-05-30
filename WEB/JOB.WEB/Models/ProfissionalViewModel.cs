@@ -44,6 +44,11 @@ namespace JOB.WEB.Models
         [Display(Name = "Estado")]
         public string ESTADO { get; set; }
 
+        [Display(Name = "Destaque")]
+        public bool PERFIL_DESTAQUE { get; set; }
+
+        public DateTime DT_ORDENACAO { get; set; }
+
         public List<ProfissionalViewModel> OUTROS_PERFIS { get; set; }
         public List<AvaliacaoViewModel> AVALIACOES { get; set; }
         public List<ServicoViewModel_api> SERVICOS { get; set; }
