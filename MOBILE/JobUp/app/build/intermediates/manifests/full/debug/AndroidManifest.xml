@@ -66,9 +66,13 @@
             android:name="activities.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
         <activity android:name="activities.ListUsuarioActivity" />
+<<<<<<< HEAD
         <activity
             android:name="activities.CatalogoEspecialidadeActivity"
             android:parentActivityName="activities.MainActivity" />
+=======
+        <activity android:name="activities.CatalogoEspecialidadeActivity" />
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
         <activity android:name="activities.ListaNovaDeUsuariosActivity" />
         <activity
             android:name="com.br.jobup.fragments.DetalheProfissionalViewPagerActivity"

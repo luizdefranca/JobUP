@@ -5,15 +5,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+<<<<<<< HEAD
 import android.util.Log;
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.br.jobup.R;
 import com.br.jobup.adapters.CatalogoEspecialidadeAdapter;
+<<<<<<< HEAD
 import com.br.jobup.fragments.DetalheProfissionalViewPagerActivity;
 import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
+=======
+import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
+import com.br.jobup.models.usuario.Usuario;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import com.br.jobup.services.parsers.ParserEspecialidadeCatalogo;
 
 import java.util.List;
@@ -28,16 +36,23 @@ import retrofit2.Response;
  * Copyright (c) 2017. All rights reserved.
  * Last modified 09/05/17 19:03
  */import static android.R.attr.key;
+<<<<<<< HEAD
 import static android.R.attr.logo;
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import static android.R.attr.value;
 
 public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
+<<<<<<< HEAD
     public static final String TAG = CatalogoEspecialidadeActivity.class.getSimpleName();
     public static final String ID_ESPECIALIDADE = "idEspecialidade";
     public static final String DETALHE_PROFISSIONAL = "detalheProfissional";
     public static final String ID_PROFISSIONAL = "idProfissional";
     public static final String ESPECIALIDADE_DETALHE = "especialidadeDetalhe";
+=======
+
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     private ListView mListCatalogoEspecialidade;
     int idCategoria = 0;
     CatalogoEspecialidadeAdapter catalogoAdapter;
@@ -46,6 +61,7 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo_especialidade);
+<<<<<<< HEAD
 
         //TODO: Ver como implementar o BackButton sem destruir a Activity
         // Set Back button
@@ -65,8 +81,15 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
             idCategoria = getIntent().getIntExtra(ID_ESPECIALIDADE, idCategoria);
         }
         Log.e(TAG, "onCreate depois: idCategoria -> "+ idCategoria );
-        mListCatalogoEspecialidade.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            public boolean onItemLongClick(AdapterView parent, View view, final int position, long id) {
+=======
+        mListCatalogoEspecialidade = (ListView) findViewById(R.id.catalogo_especialidade_lstView);
+
+        idCategoria = getIntent().getIntExtra("idEspecialidade", idCategoria);
+
+
+        mListCatalogoEspecialidade.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
                 final CharSequence[] itens = getResources().getStringArray(R.array.especialidade_opcoes);
                 AlertDialog.Builder builder = new AlertDialog.Builder(CatalogoEspecialidadeActivity.this);
@@ -75,11 +98,16 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        switch (which){
+                    }
 
-                            //Ver detalhe do Profissional
+
+//TODO: VER COMO RETIRAR ESTE METODO DAQUI
+                  /*  @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        switch (which){
                             case 0:
-                                final Intent intentDetalheUsuario = new Intent(CatalogoEspecialidadeActivity.this, DetalheProfissionalViewPagerActivity.class);
+                                final Intent intentDetalheUsuario = new Intent(CatalogoEspecialidadeActivity.this, PerfilActivity.class);
 
 //                              Pega a especilidade selecionada
                                 final EspecialidadeCatalogo especialidadeDetalhe = (EspecialidadeCatalogo) mListCatalogoEspecialidade.getItemAtPosition(position);
@@ -87,13 +115,10 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 //                              Pega o id do Profissional da especialidade selecionada
                                 String idProfissinal = especialidadeDetalhe.getIdUsuario();
                                 Bundle baseBundle = new Bundle();
-                                baseBundle.putString(ID_PROFISSIONAL, idProfissinal );
-                                baseBundle.putInt(ID_ESPECIALIDADE, idCategoria);
-                                baseBundle.putSerializable(ESPECIALIDADE_DETALHE, especialidadeDetalhe );
-                                intentDetalheUsuario.putExtra(DETALHE_PROFISSIONAL, baseBundle);
+                                baseBundle.putString("idProfissional", idProfissinal );
+                                intentDetalheUsuario.putExtras(baseBundle);
                                 startActivity(intentDetalheUsuario);
                                 break;
-
                             case 1:
                                 //TODO: ADICIONAR A FAVORITOS
                                 break;
@@ -109,6 +134,80 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                                 }
 
                                 break;
+
+
+                        }
+                    }*/
+                });
+                final AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+
+
+        });
+
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+        mListCatalogoEspecialidade.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            public boolean onItemLongClick(AdapterView parent, View view, final int position, long id) {
+
+                final CharSequence[] itens = getResources().getStringArray(R.array.especialidade_opcoes);
+                AlertDialog.Builder builder = new AlertDialog.Builder(CatalogoEspecialidadeActivity.this);
+                builder.setTitle("Escolha a opção");
+                builder.setItems(itens, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        switch (which){
+<<<<<<< HEAD
+
+                            //Ver detalhe do Profissional
+                            case 0:
+                                final Intent intentDetalheUsuario = new Intent(CatalogoEspecialidadeActivity.this, DetalheProfissionalViewPagerActivity.class);
+=======
+                            case 0:
+                                final Intent intentDetalheUsuario = new Intent(CatalogoEspecialidadeActivity.this, PerfilActivity.class);
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+
+//                              Pega a especilidade selecionada
+                                final EspecialidadeCatalogo especialidadeDetalhe = (EspecialidadeCatalogo) mListCatalogoEspecialidade.getItemAtPosition(position);
+
+//                              Pega o id do Profissional da especialidade selecionada
+                                String idProfissinal = especialidadeDetalhe.getIdUsuario();
+                                Bundle baseBundle = new Bundle();
+<<<<<<< HEAD
+                                baseBundle.putString(ID_PROFISSIONAL, idProfissinal );
+                                baseBundle.putInt(ID_ESPECIALIDADE, idCategoria);
+                                baseBundle.putSerializable(ESPECIALIDADE_DETALHE, especialidadeDetalhe );
+                                intentDetalheUsuario.putExtra(DETALHE_PROFISSIONAL, baseBundle);
+                                startActivity(intentDetalheUsuario);
+                                break;
+
+=======
+                                baseBundle.putString("idProfissional", idProfissinal );
+                                intentDetalheUsuario.putExtras(baseBundle);
+                                startActivity(intentDetalheUsuario);
+                                break;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+                            case 1:
+                                //TODO: ADICIONAR A FAVORITOS
+                                break;
+                            case 2:
+                                //TODO: CONTRATAR SERVICO
+                                break;
+                            case 3:
+                                //TODO: fechar o AlertDialog
+                                try {
+                                    this.finalize();
+                                } catch (Throwable throwable) {
+                                    throwable.printStackTrace();
+                                }
+
+                                break;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
                         }
                     }
                 });
@@ -120,6 +219,7 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
 
         });
+<<<<<<< HEAD
 
         Log.e("LCFR " + TAG, "onCreate: " );
     }
@@ -141,6 +241,17 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
     //Faz a chamada à API e carrega a ListView
     private void carregaCatalogoEspecialidade() {
         Log.e("LCFR " + TAG, "Entrada no método carregaCatalogoEspecialidade: " );
+=======
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        carregaCatalogoEspecialidade();
+    }
+
+    private void carregaCatalogoEspecialidade() {
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 
         final ParserEspecialidadeCatalogo parser = new ParserEspecialidadeCatalogo(idCategoria);
         parser.getAll().enqueue(new Callback<List<EspecialidadeCatalogo>>() {
@@ -149,7 +260,10 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                 List<EspecialidadeCatalogo> especialidadeList = response.body();
                 catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
                 mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
+<<<<<<< HEAD
                 Log.e("LCFR " + TAG, "Chamada do método onResponse: " );
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             }
 
             @Override
@@ -158,6 +272,7 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
 
     }
 
@@ -174,5 +289,7 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         idCategoria = savedInstanceState.getInt(ID_ESPECIALIDADE);
         Log.e(TAG, "onRestoreInstanceState: " + idCategoria );
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     }
 }

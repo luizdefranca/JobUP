@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
 using JOB.DATA;
 using JOB.DATA.Domain;
+<<<<<<< HEAD
+=======
+using JOB.HELPERS.Validation;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 using JOB.WEB.Extensions;
 using JOB.WEB.Helper;
 using JOB.WEB.Models;
-using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -36,7 +39,7 @@ namespace JOB.WEB.Controllers
                 model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
                 model.TEMPO_SERVICO_DESC = EnumHelper.GetName(model.TEMPO_SERVICO);
 
-                if (model.ID_SUB_ESPECIALIDADE != null)
+                if (model.ID_SUB_ESPECIALIDADE != null && model.ID_SUB_ESPECIALIDADE != 0)
                 {
                     model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade.First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE).DESCRICAO;
                 }
@@ -53,6 +56,9 @@ namespace JOB.WEB.Controllers
             var model = Mapper.Map<ServicoViewModel_full>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
             model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
+            if (model.ID_SUB_ESPECIALIDADE.HasValue && model.ID_SUB_ESPECIALIDADE.Value != 0) model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade.First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE).DESCRICAO;
+
+            model.POSSUI_PROPOSTA = ctx.Proposta.Any(a => a.ID_SERVICO == id & a.ID_USUARIO == this.id);
 
             return View(model);
         }
@@ -87,10 +93,15 @@ namespace JOB.WEB.Controllers
 
             try
             {
-                Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
-                var newobj = new SERVICO(obj.ID_SERVICO, idUsuario, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, true, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
-
+                //Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
+                var newobj = new SERVICO(obj.ID_SERVICO, id, obj.ID_ESPECIALIDADE, obj.ID_SUB_ESPECIALIDADE, true, obj.DS_TITULO, obj.DS_OBSERVACOES, obj.VL_SUGERIDO, obj.TEMPO_SERVICO);
                 ctx.Servico.Add(newobj);
+
+                //var objOferta = new OFERTA_SERVICO(obj.ID_SERVICO, id);
+                //ctx.Oferta.Add(objOferta);
+
+                MoedaHelper.Movimentar(ctx, id, -500, "SERVIÇO PÚBLICO OFERTADO");
+
                 ctx.SaveChanges();
                 return RedirectToAction("../Home/Index");
             }

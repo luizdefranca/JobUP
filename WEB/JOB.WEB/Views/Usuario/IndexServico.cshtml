@@ -1,7 +1,11 @@
 ﻿@model IEnumerable<JOB.WEB.Models.ServicoViewModel_api>
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Minhas Ofertas";
+=======
+    ViewBag.Title = "Meus Serviços Criados";
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     ViewBag.SubTitle = "Lista";
 }
 
@@ -32,7 +36,10 @@
                 </th>
                 <th></th>
             </tr>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             @foreach (var item in Model)
             {
                 <tr>
@@ -57,10 +64,17 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.VL_SUGERIDO)
                     </td>
+<<<<<<< HEAD
+=======
+                    <td class="text-center">
+                        @Html.ActionLink(" Listar Propostas", "ListarProposta", "Proposta", new { id = item.ID_SERVICO }, new { @class = "btn btn-primary btn-sm fa fa-search" })
+                    </td>
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
                 </tr>
             }
         </table>
     </div>
+<<<<<<< HEAD
 </div>
 
 <script>
@@ -68,3 +82,6 @@
         $('#tblDados').DataTable();
     });
 </script>
+=======
+</div>
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae

@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<JOB.WEB.Models.ServicoViewModel_api>
+@using JOB.WEB.Extensions;
 
 @{
     ViewBag.Title = "Ofertas de Serviços";
@@ -65,16 +66,17 @@
                         @Html.DisplayFor(modelItem => item.VL_SUGERIDO)
                     </td>
                     <td class="text-center">
-                        @Html.ActionLink(" ", "Details", new { id = item.ID_SERVICO }, new { @class = "btn btn-success btn-xs fa fa-search", title = "Clique aqui para ver os detalhes" })
+                        @if (item.ID_USUARIO == User.Identity.GetId())
+                        {
+                            @Html.ActionLink(" ", "Details", new { id = item.ID_SERVICO }, new { @class = "btn btn-success btn-xs fa fa-search not-active", @disabled = "disabled", title = "Este serviço foi criado por você" })
+                        }
+                        else
+                        {
+                            @Html.ActionLink(" ", "Details", new { id = item.ID_SERVICO }, new { @class = "btn btn-success btn-xs fa fa-search", title = "Clique aqui para ver os detalhes" })
+                        }
                     </td>
                 </tr>
             }
         </table>
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('#tblDados').DataTable();
-    });
-</script>

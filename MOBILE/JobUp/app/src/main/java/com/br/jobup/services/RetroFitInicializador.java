@@ -6,7 +6,10 @@ import com.br.jobup.services.interfaces.IAvaliacaoAPI;
 import com.br.jobup.services.interfaces.IClienteAPI;
 import com.br.jobup.services.interfaces.IDesativarAPI;
 import com.br.jobup.services.interfaces.IEspecialidadeCatalogoAPI;
+<<<<<<< HEAD
 import com.br.jobup.services.interfaces.IPerfilProfissional;
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
 import com.br.jobup.services.interfaces.IUsuarioFullAPI;
@@ -132,6 +135,7 @@ public class RetroFitInicializador<T> {
 
     public IEspecialidadeCatalogoAPI getEspecialidadesAPI(){
         return  retrofit.create(IEspecialidadeCatalogoAPI.class);}
+<<<<<<< HEAD
 
     public IPerfilProfissional createPerfilProfissionalAPI(){
         return retrofit.create(IPerfilProfissional.class);
@@ -147,4 +151,6 @@ public class RetroFitInicializador<T> {
     }
 
 
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 }

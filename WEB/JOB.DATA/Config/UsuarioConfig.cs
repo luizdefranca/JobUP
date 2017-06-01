@@ -68,6 +68,10 @@ namespace JOB.DATA.Config
             HasMany(n => n.PROPOSTAS_SERVICO)
                 .WithRequired(n => n.USUARIO)
                 .HasForeignKey(n => n.ID_USUARIO);
+
+            HasMany(n => n.HISTORICOS_MOEDA)
+               .WithRequired(n => n.USUARIO)
+               .HasForeignKey(n => n.ID_USUARIO);
         }
     }
 }

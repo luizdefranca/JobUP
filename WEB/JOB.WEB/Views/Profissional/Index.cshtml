@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<JOB.WEB.Models.ProfissionalViewModel>
+@using JOB.WEB.Extensions;
 
 @{
     ViewBag.Title = "Profissionais";
@@ -13,25 +14,29 @@
     <div class="box-body">
         <table id="tblDados" class="table table-bordered table-responsive table-hover">
             <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.NOME)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DT_NASCTO)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
-                </th>
-                <th></th>
-            </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NOME)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DT_NASCTO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RESUMO_CURRICULO)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PERFIL_DESTAQUE)
+                    </th>
+                    <th></th>
+                </tr>
             </thead>
             <tbody>
-            @foreach (var item in Model)
+                @foreach (var item in Model)
             {
+<<<<<<< HEAD
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.NOME)
@@ -50,6 +55,39 @@
                     </td>
                 </tr>
             }
+=======
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NOME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DT_NASCTO)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DESC_ESPECIALIDADE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RESUMO_CURRICULO)
+                        </td>
+                        <td>
+                            @if (item.PERFIL_DESTAQUE == true & DateTime.Now.AddDays(-7) <= item.DT_ORDENACAO)
+                            {
+                            @Html.DisplayFor(modelItem => item.PERFIL_DESTAQUE)
+                            }
+                        </td>
+                        <td class="text-center">
+                            @if (item.ID_USUARIO == User.Identity.GetId())
+                            {
+                                @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO, idEspecialidade = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-eye not-active", @disabled = "disabled", @readonly = "readonly", @title = "Este é seu perfil" })
+                            }
+                            else
+                            {
+                                @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO, idEspecialidade = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-eye", @title = "Ofertar Serviço para este profissional" })
+                            }
+                        </td>
+                    </tr>
+                }
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             </tbody>
         </table>
     </div>
@@ -57,9 +95,3 @@
         @Html.ActionLink("Voltar", "Index", "Especialidade", null, new { @class = "btn btn-default" })
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('#tblDados').DataTable();
-    });
-</script>

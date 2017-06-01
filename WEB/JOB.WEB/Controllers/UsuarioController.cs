@@ -1,7 +1,15 @@
 ﻿using AutoMapper;
 using JOB.DATA;
+<<<<<<< HEAD
 using JOB.WEB.Extensions;
 using JOB.WEB.Models;
+=======
+using JOB.HELPERS.Validation;
+using JOB.WEB.Extensions;
+using JOB.WEB.Helper;
+using JOB.WEB.Models;
+using Microsoft.AspNet.Identity;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -89,9 +97,46 @@ namespace JOB.WEB.Controllers
             return RedirectToAction("Index");
         }
 
+<<<<<<< HEAD
         public ActionResult IndexServico()
         {
             var domain = ctx.Oferta.Where(w => w.ID_USUARIO == id).Select(s => s.SERVICO).ToList();
+=======
+        public ActionResult Destaque()
+        {
+            Guid idUsuario = Guid.Parse(User.Identity.GetUserId());
+
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == idUsuario);
+
+            var model = Mapper.Map<UsuarioViewModel>(domain);
+
+            return View(model);
+        }
+
+        public ActionResult AtivarDestaque(Guid id)
+        {
+            var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
+
+            try
+            {
+                domain.AtivarDestaque();
+                ctx.Entry(domain).State = EntityState.Modified;
+                MoedaHelper.Movimentar(ctx, id, -800, "PERFIL COM DESTAQUE ATIVADO");
+                ctx.SaveChanges();
+
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.TratarMensagem());
+                return View("Destaque", Mapper.Map<UsuarioViewModel>(domain));
+            }
+        }
+
+        public ActionResult IndexServico()
+        {
+            var domain = ctx.Servico.Where(w => w.ID_USUARIO == id).ToList();
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
 
@@ -100,7 +145,11 @@ namespace JOB.WEB.Controllers
                 model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
                 model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
 
+<<<<<<< HEAD
                 if (model.ID_SUB_ESPECIALIDADE != null)
+=======
+                if (model.ID_SUB_ESPECIALIDADE != null && model.ID_SUB_ESPECIALIDADE != 0)
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
                 {
                     model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade.First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE).DESCRICAO;
                 }

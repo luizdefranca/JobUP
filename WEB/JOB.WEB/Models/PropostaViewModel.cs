@@ -18,7 +18,7 @@ namespace JOB.WEB.Models
         [Display(Name = "Duração do Serviço")]
         public EnumDuracaoServico DURACAO_SERVICO { get; set; }
 
-        [Display(Name = "Valor da Duração do Serviço")]
+        [Display(Name = "Duração do Serviço")]
         public int VALOR_DURACAO_SERVICO { get; set; }
 
         [Display(Name = "Valor Proposta")]
@@ -34,7 +34,7 @@ namespace JOB.WEB.Models
         [Display(Name = "Título")]
         public string DS_TITULO { get; set; }
 
-        [Display(Name = "Observações")]
+        [Display(Name = "Observações *")]
         public string DS_OBSERVACOES { get; set; }
     }
 }

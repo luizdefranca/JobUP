@@ -15,6 +15,22 @@ namespace JOB.WEB.Extensions
             return Guid.Parse(identity.GetUserId());
         }
 
+        public static int GetMensagensPendentes(this IIdentity identity)
+        {
+            using (var ctx = new Contexto())
+            {
+                if (identity.GetUserId() != null)
+                {
+                    var id = identity.GetId();
+                    return ctx.Chat.Count(c => c.ID_USUARIO == id & !c.LIDA);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
         public static int GetServicosPrivados(this IIdentity identity)
         {
             using (var ctx = new Contexto())
@@ -32,6 +48,23 @@ namespace JOB.WEB.Extensions
             }
         }
 
+        public static int GetTotalMoedas(this IIdentity identity)
+        {
+            using (var ctx = new Contexto())
+            {
+                if (identity.GetUserId() != null)
+                {
+                    var id = identity.GetId();
+                    var user = ctx.Usuario.Include(i => i.OFERTAS_SERVICO).FirstOrDefault(f => f.ID_USUARIO == id);
+                    return user != null ? user.MOEDA : 0;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
         public static string GetEmailAdress(this IIdentity identity)
         {
             var userId = identity.GetUserId();
@@ -39,6 +72,16 @@ namespace JOB.WEB.Extensions
             {
                 var user = context.Users.FirstOrDefault(u => u.Id == userId);
                 return user.Email;
+            }
+        }
+
+        public static string GetNome(this IIdentity identity)
+        {
+            var userId = identity.GetId();
+            using (var context = new Contexto())
+            {
+                var user = context.Usuario.FirstOrDefault(u => u.ID_USUARIO == userId);
+                return user.NOME;
             }
         }
     }

@@ -20,7 +20,7 @@
                 <a style="cursor: pointer" href="/profissional/?idEspecialidade=@item.ID_ESPECIALIDADE">
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="info-box" style="background-color: whitesmoke;">
-                            <span class="info-box-icon"><img src="~/img/@item.IMAGEM" width="48" height="48" style="margin-top: -10px;"/></span>
+                            <span class="info-box-icon"><img src="~/img/@item.IMAGEM" width="48" height="48" style="margin-top: -10px;" /></span>
                             <div class="info-box-content">
                                 <span>@Html.DisplayFor(modelItem => item.DESCRICAO)</span>
                                 <span class="info-box-number">@item.QTD_PROFISSIONAIS</span>
@@ -32,9 +32,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('#tblDados').DataTable();
-    });
-</script>

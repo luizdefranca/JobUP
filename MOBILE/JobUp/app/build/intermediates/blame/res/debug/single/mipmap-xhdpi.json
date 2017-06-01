@@ -4,10 +4,13 @@
         "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     }

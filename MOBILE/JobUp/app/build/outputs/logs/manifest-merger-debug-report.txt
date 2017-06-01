@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:1-70:12
 	package
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:3:5-27
@@ -36,6 +37,41 @@ ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/Job
 application
 ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:5-68:19
 MERGED from [com.android.support:design:24.0.0] /Users/luizramos/.android/build-cache/1e4b9670eae6128a30dceb1c2836eaccc8d75482/output/AndroidManifest.xml:22:5-20
+=======
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:1-62:12
+	package
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:3:5-27
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:6:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:7:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:5-72
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:22-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:22-64
+application
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:11:5-60:19
+MERGED from [com.android.support:design:25.0.0] /Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:transition:25.0.0] /Users/luizramos/.android/build-cache/8d2dbd76ed96d846f84d3320751f75b5da042727/output/AndroidManifest.xml:22:5-20
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:9:5-20
 MERGED from [com.github.hynra:GSON-SharedPreferences:1.1] /Users/luizramos/.android/build-cache/e46f0b40f3a176ef4b6f12830ee43544f2b65d1d/output/AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:29:5-20
@@ -50,6 +86,7 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.androi
 	android:screenOrientation
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:17:9-45
 	android:label
+<<<<<<< HEAD
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:15:9-41
 	android:supportsRtl
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:16:9-35
@@ -157,6 +194,108 @@ uses-sdk
 INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.0.0] /Users/luizramos/.android/build-cache/1e4b9670eae6128a30dceb1c2836eaccc8d75482/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:24.0.0] /Users/luizramos/.android/build-cache/74ef46dc55723f8b099b59d4614dcc875570958a/output/AndroidManifest.xml:20:5-43
+=======
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:14:9-41
+	android:supportsRtl
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:15:9-35
+	android:allowBackup
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:9-46
+	android:theme
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:16:9-40
+activity#activities.MainActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:17:9-20:59
+	android:label
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:19:13-45
+	android:theme
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:20:13-56
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:18:13-51
+activity#activities.LoginActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:21:9-24:47
+	android:label
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:23:13-57
+	android:theme
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:24:13-44
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:13-52
+activity#trash.ApresentacaoActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:25:9-27:47
+	android:theme
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:26:13-54
+activity#activities.SingInActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:28:9-30:56
+	android:theme
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:30:13-44
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:29:13-53
+activity#activities.CadastroActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:31:9-33:63
+	android:label
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:33:13-60
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:32:13-55
+activity#activities.SignUpActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:34:9-36:40
+	android:label
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:36:13-37
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:35:13-53
+activity#activities.ApresentacaoActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:37:9-49:20
+	android:screenOrientation
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:41:13-49
+	android:label
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:39:13-45
+	android:noHistory
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:40:13-37
+	android:theme
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:42:13-48
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:38:13-59
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:43:13-47:29
+action#android.intent.action.MAIN
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:44:17-69
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:44:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:46:17-77
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:46:27-74
+activity#activities.MensagensActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:50:9-52:63
+	android:label
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:52:13-60
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:51:13-56
+activity#activities.DetalheServicoActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:54:9-56:66
+	android:label
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:56:13-63
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:55:13-61
+activity#activities.ListUsuarioActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:57:9-67
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:57:19-64
+activity#activities.CatalogoEspecialidadeActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:58:9-77
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:58:19-74
+activity#activities.ListaNovaDeUsuariosActivity
+ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:59:9-75
+	android:name
+		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:59:19-72
+uses-sdk
+INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.0.0] /Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.0.0] /Users/luizramos/.android/build-cache/83d187a3105024e10c8091b233fdfac6383d04b0/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.0.0] /Users/luizramos/.android/build-cache/8d2dbd76ed96d846f84d3320751f75b5da042727/output/AndroidManifest.xml:20:5-44
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.hynra:GSON-SharedPreferences:1.1] /Users/luizramos/.android/build-cache/e46f0b40f3a176ef4b6f12830ee43544f2b65d1d/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:21:5-23:78
@@ -171,11 +310,19 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.androi
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
+<<<<<<< HEAD
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+=======
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:22:5-24:34

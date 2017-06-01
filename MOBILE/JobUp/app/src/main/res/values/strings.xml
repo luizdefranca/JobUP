@@ -61,9 +61,12 @@
         <item>Fechar</item>
 
     </string-array>
+<<<<<<< HEAD
     <string name="title_activity_tab_detalhe_profissional">TabDetalheProfissionalActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 </resources>

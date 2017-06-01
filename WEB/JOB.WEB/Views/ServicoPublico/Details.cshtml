@@ -1,9 +1,11 @@
 ﻿@model JOB.WEB.Models.ServicoViewModel_full
 
 @{
-    ViewBag.Title = "Detalhes da Oferta";
+    ViewBag.Title = "Oferta";
+    ViewBag.SubTitle = "Detalhes";
 }
 
+<<<<<<< HEAD
 
 <div>
     
@@ -62,3 +64,59 @@
     @Html.ActionLink("Gerar Proposta", "../Proposta/Create", new { id = Model.ID_SERVICO }, new { id = Model.ID_SERVICO, @class = "btn btn-primary" })
     @Html.ActionLink("Voltar", "Index", new { ID_ESPECIALIDADE = Model.ID_ESPECIALIDADE },  new { @class = "btn btn-default" })
 </p>
+=======
+<div class="box">
+    <div class="box-body">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DESC_ESPECIALIDADE)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DESC_ESPECIALIDADE)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DESC_SUB_ESPECIALIDADE)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DESC_SUB_ESPECIALIDADE)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DT_CADASTRO)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DT_CADASTRO)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DS_TITULO)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DS_TITULO)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DS_OBSERVACOES)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DS_OBSERVACOES)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.VL_SUGERIDO)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.VL_SUGERIDO)
+            </dd>
+        </dl>
+    </div>
+    <div class="box-footer">
+        @if (Model.POSSUI_PROPOSTA)
+        {
+            @Html.ActionLink("Gerar Proposta", "../Proposta/Create", new { id = Model.ID_SERVICO }, new { id = Model.ID_SERVICO, @class = "btn btn-primary not-active", @disabled = "disabled", @title = "Você já fez uma proposta para este serviço" })
+        }
+        else
+        {
+            @Html.ActionLink("Gerar Proposta", "../Proposta/Create", new { id = Model.ID_SERVICO }, new { id = Model.ID_SERVICO, @class = "btn btn-primary" })
+        }
+
+        @Html.ActionLink("Voltar", "Index", new { ID_ESPECIALIDADE = Model.ID_ESPECIALIDADE }, new { @class = "btn btn-default" })
+    </div>
+</div>
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae

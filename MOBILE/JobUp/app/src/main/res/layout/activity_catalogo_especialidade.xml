@@ -11,6 +11,7 @@
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+<<<<<<< HEAD
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,4 +37,11 @@
 
 
     </RelativeLayout>
+=======
+    <ListView
+        android:id="@+id/catalogo_especialidade_lstView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 </LinearLayout>

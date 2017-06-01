@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace JOB.WEB.Models
 {
     public class UsuarioViewModel_VW
+<<<<<<< HEAD
     {
         [Key]
         public Guid ID_USUARIO { get; set; }
@@ -53,6 +54,8 @@ namespace JOB.WEB.Models
     }
 
     public class UsuarioViewModel
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     {
         [Key]
         public Guid ID_USUARIO { get; set; }
@@ -76,6 +79,56 @@ namespace JOB.WEB.Models
         [Required]
         [Display(Name = "Dt. Nascimento")]
         [DataType(DataType.Date)]
+        [Range(typeof(DateTime), "01/01/1753", "31/12/9999")]
+        public DateTime DT_NASCIMENTO { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Display(Name = "Aprovado")]
+        public bool APROVADO { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Display(Name = "Ativo")]
+        public bool ATIVO { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Display(Name = "Bloqueado")]
+        public bool BLOQUEADO { get; set; }
+
+        //[DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Fixo")]
+        public string ContatoFIXO { get; set; }
+
+        [Required]
+        //[DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Celular")]
+        public string ContatoCELULAR { get; set; }
+    }
+
+    public class UsuarioViewModel
+    {
+        [Key]
+        public Guid ID_USUARIO { get; set; }
+
+        [Required]
+        [Display(Name = "Nome *")]
+        public string NOME { get; set; }
+
+        [Required]
+        [Display(Name = "CPF *")]
+        public string CPF { get; set; }
+
+        [Required]
+        [Display(Name = "RG (UF) *")]
+        public EnumUF RgUF { get; set; }
+
+        [Required]
+        [Display(Name = "RG (NR) *")]
+        public string RgNR { get; set; }
+
+        [Required]
+        [Display(Name = "Dt. Nascimento *")]
+        [DataType(DataType.Date)]
+        [Range(typeof(DateTime), "01/01/1753", "31/12/9999")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DT_NASCIMENTO { get; set; }
 
@@ -109,7 +162,7 @@ namespace JOB.WEB.Models
 
         [Required]
         //[DataType(DataType.PhoneNumber)]
-        [Display(Name = "Telefone Celular")]
+        [Display(Name = "Telefone Celular *")]
         public string ContatoCELULAR { get; set; }
 
         ////[Required]
@@ -118,26 +171,29 @@ namespace JOB.WEB.Models
         //public string ContatoEMAIL { get; set; }
 
         [Required]
-        [Display(Name = "UF")]
-        public EnumUF EnderecoUF { get; set; }
+        [Display(Name = "UF *")]
+        public EnumUF UF { get; set; }
 
         [Required]
-        [Display(Name = "CEP")]
-        public string EnderecoCEP { get; set; }
+        [Display(Name = "CEP *")]
+        public string CEP { get; set; }
 
         [Required]
-        [Display(Name = "Logradouro")]
-        public string EnderecoLOGRADOURO { get; set; }
+        [Display(Name = "Logradouro *")]
+        public string LOGRADOURO { get; set; }
 
         [Display(Name = "Complemento")]
-        public string EnderecoCOMPLEMENTO { get; set; }
+        public string COMPLEMENTO { get; set; }
 
         [Required]
-        [Display(Name = "Bairro")]
-        public string EnderecoBAIRRO { get; set; }
+        [Display(Name = "Bairro *")]
+        public string BAIRRO { get; set; }
 
         [Required]
-        [Display(Name = "Cidade")]
-        public string EnderecoCIDADE { get; set; }
+        [Display(Name = "Cidade *")]
+        public string CIDADE { get; set; }
+
+        [Display(Name = "Destaque Ativado?")]
+        public bool PERFIL_DESTAQUE { get; set; }
     }
 }

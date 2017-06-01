@@ -48,7 +48,10 @@ import com.br.jobup.models.login.UsuarioSignIn;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
+<<<<<<< HEAD
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import com.br.jobup.util.Validations.TextHelper;
 import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
 import com.github.hynra.gsonsharedpreferences.ParsingException;
@@ -193,8 +196,13 @@ public class MainActivity extends AppCompatActivity
         categoriaMap.put(7, "Motorista");
         categoriaMap.put(8, "Passadeira");
         categoriaMap.put(9, "Passeador de cães");
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
         final List<String> catArray = new ArrayList<>(categoriaMap.values());
 
 
@@ -267,7 +275,11 @@ public class MainActivity extends AppCompatActivity
         aGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 String cat = catArray.get(position);
+<<<<<<< HEAD
                 List <Integer>   catkeys = new ArrayList<>(categoriaMap.keySet());
+=======
+                List <Integer>   catkeys = new ArrayList<Integer>(categoriaMap.keySet());
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
                 int idEspecialidade = catkeys.get(position);
 
                 Intent i = new Intent(MainActivity.this, CatalogoEspecialidadeActivity.class);

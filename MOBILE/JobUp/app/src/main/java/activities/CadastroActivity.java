@@ -13,11 +13,15 @@ import android.widget.Toast;
 import com.br.jobup.R;
 import com.br.jobup.helpers.CadastroUsuarioHelper;
 import com.br.jobup.models.usuario.Usuario;
+<<<<<<< HEAD
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+=======
+import com.br.jobup.validations.Util;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 
 /*
  * Created by Luiz Carlos Ramos on 09/05/17 19:02

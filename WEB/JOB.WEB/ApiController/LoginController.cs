@@ -1,5 +1,9 @@
 ﻿using JOB.DATA;
 using JOB.WEB.Controllers;
+<<<<<<< HEAD
+=======
+using JOB.WEB.Helper;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity.Owin;
 using System;
@@ -34,6 +38,14 @@ namespace JOB.WEB.ApiController
                 case SignInStatus.Success:
                     var id = Guid.Parse(user.Id);
                     var usuario = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
+<<<<<<< HEAD
+=======
+                    if (usuario == null)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, id);
+                    }
+
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
                     return Request.CreateResponse(HttpStatusCode.OK, usuario);
 
                 case SignInStatus.LockedOut:
@@ -54,9 +66,19 @@ namespace JOB.WEB.ApiController
             var result = await UserManager.CreateAsync(user, Password);
             if (result.Succeeded)
             {
+<<<<<<< HEAD
                 return Request.CreateResponse(HttpStatusCode.OK, user.Id);
             }
             return Request.CreateResponse(HttpStatusCode.BadRequest, result);
         }        
+=======
+                Guid id = Guid.Parse(user.Id);
+                MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
+
+                return Request.CreateResponse(HttpStatusCode.OK, user.Id);
+            }
+            return Request.CreateResponse(HttpStatusCode.BadRequest, result);
+        }
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     }
 }

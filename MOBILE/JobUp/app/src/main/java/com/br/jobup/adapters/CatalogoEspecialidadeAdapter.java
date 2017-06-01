@@ -5,6 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+<<<<<<< HEAD
+=======
+import android.widget.RatingBar;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import android.widget.TextView;
 
 import com.br.jobup.R;
@@ -42,6 +46,7 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter {
 
 
         View view = LayoutInflater.from(this.context).inflate(R.layout.item_especialidade_catalogo, null);
+<<<<<<< HEAD
         TextView txtNome                = (TextView) view.findViewById(R.id.item_especialidade_txtNome);
 //        TextView txtDtNascimento        = (TextView) view.findViewById(R.id.item_especialidade_txtDtNascimento);
         TextView txtDescEspecialidade   = (TextView) view.findViewById(R.id.item_especialidade_txtDescricao);
@@ -60,6 +65,20 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter {
         txtBairro.setText(especialidade.getBairro());
         txtCidade.setText(especialidade.getCidade());
         txtEstado.setText(especialidade.getEstado());
+=======
+        TextView txtNome = (TextView) view.findViewById(R.id.item_especialidade_txtNome);
+        TextView txtBairro = (TextView) view.findViewById(R.id.item_especialidade_txtBairro);
+        RatingBar rtbEstrelas = (RatingBar) view.findViewById(R.id.item_especialidade_rtbEstrelas);
+        TextView txtDescEspecialidade = (TextView) view.findViewById(R.id.item_especialidade_txtDescricao);
+        TextView txtResumoCurriculo = (TextView) view.findViewById(R.id.item_especialidade_txtCurriculo);
+
+
+        txtNome.setText(especialidade.getNome());
+//        txtBairro.setText(especialidade.getBairro());
+        txtResumoCurriculo.setText((especialidade.getResumoCurriculo()));
+//        rtbEstrelas.setRating(especialidade.getRating());
+        txtDescEspecialidade.setText(especialidade.getDescEspecialidade());
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
         return view;
     }
 
@@ -82,6 +101,7 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter {
     public class ViewHolder {
         //views
         TextView txtNome;
+<<<<<<< HEAD
 //        TextView txtDtNascimento;
         TextView txtDescEspecialidade;
         TextView txtResumoCurriculo;
@@ -89,5 +109,12 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter {
         TextView txtBairro;
         TextView txtCidade;
         TextView txtEstado;
+=======
+        TextView txtBairro;
+        RatingBar rtbEstrelas;
+        TextView txtDescEspecialidade;
+        TextView txtResumoCurriculo;
+
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     }
 }

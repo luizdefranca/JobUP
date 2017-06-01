@@ -2,9 +2,10 @@
 using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.DATA.ValueObject;
+using JOB.HELPERS.Validation;
 using JOB.WEB.Extensions;
+using JOB.WEB.Helper;
 using JOB.WEB.Models;
-using JOB.WEB.Validation;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -374,6 +375,7 @@ namespace JOB.WEB.Controllers
         public void ProcessarCadastro(UsuarioViewModel obj, Guid? idGuid = null)
         {
             Guid id = idGuid ?? Guid.Parse(User.Identity.GetUserId());
+<<<<<<< HEAD
 
             var domain = ctx.Usuario
                 .FirstOrDefault(w => w.ID_USUARIO == id);
@@ -386,15 +388,41 @@ namespace JOB.WEB.Controllers
                 newobj.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
                 ctx.Usuario.Add(newobj);
+=======
+
+            var domain = ctx.Usuario
+                .FirstOrDefault(w => w.ID_USUARIO == id);
+
+            if (domain == null)
+            {
+                var newobj = new USUARIO(id, obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
+
+                newobj.AdicionarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR), new DATA.ValueObject.Email(User.Identity.GetEmailAdress()));
+                newobj.AdicionarEndereco(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
+
+                ctx.Usuario.Add(newobj);
+
+                ctx.SaveChanges();
+
+                MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             }
             else
             {
                 domain.AtualizaDados(obj.NOME, new CPF(obj.CPF), new RG(obj.RgUF, obj.RgNR), obj.DT_NASCIMENTO);
 
                 domain.AtualizarContato(new Telefone(obj.ContatoFIXO), new Telefone(obj.ContatoCELULAR));
+<<<<<<< HEAD
                 domain.AdicionarEndereco(obj.EnderecoUF, obj.EnderecoCEP, obj.EnderecoLOGRADOURO, obj.EnderecoCOMPLEMENTO, obj.EnderecoBAIRRO, obj.EnderecoCIDADE);
 
                 ctx.Entry(domain).State = EntityState.Modified;
+=======
+                domain.AdicionarEndereco(obj.UF, obj.CEP, obj.LOGRADOURO, obj.COMPLEMENTO, obj.BAIRRO, obj.CIDADE);
+
+                ctx.Entry(domain).State = EntityState.Modified;
+
+                ctx.SaveChanges();
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             }
 
             ctx.SaveChanges();

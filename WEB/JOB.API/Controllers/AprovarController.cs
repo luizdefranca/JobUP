@@ -1,4 +1,8 @@
 ﻿using JOB.DATA;
+<<<<<<< HEAD
+=======
+using JOB.HELPERS.Validation;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -24,9 +28,9 @@ namespace JOB.API.Controllers
 
                     return Request.CreateResponse(HttpStatusCode.OK, "Success");
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    return Request.CreateResponse(HttpStatusCode.BadRequest, new HttpError(e.Message));
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
                 }
             }
         }

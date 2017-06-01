@@ -14,10 +14,17 @@ import java.util.List;
 
 
 /*
+<<<<<<< HEAD:MOBILE/JobUp/app/src/main/java/com/br/jobup/models/usuario/Usuario.java
  * Created by Luiz Carlos Ramos on 22/05/17 05:41
  *
  * Copyright (c) 2017. All rights reserved.
  * Last modified 22/05/17 05:24
+=======
+ * Created by Luiz Carlos Ramos on 12/05/17 02:52
+ *
+ * Copyright (c) 2017. All rights reserved.
+ * Last modified 08/05/17 18:29
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae:MOBILE/JobUp/app/src/main/java/com/br/jobup/models/usuario/Usuario.java
  */
 
 /**

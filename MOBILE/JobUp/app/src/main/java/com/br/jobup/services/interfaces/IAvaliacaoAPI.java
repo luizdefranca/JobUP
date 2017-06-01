@@ -7,7 +7,11 @@ package com.br.jobup.services.interfaces;
  * Last modified 30/04/17 22:53
  */
 
+<<<<<<< HEAD
 import com.br.jobup.models.usuario.Avaliacao;
+=======
+import com.br.jobup.models.usuario.Avaliacoes;
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import com.br.jobup.models.usuario.Usuario;
 
 import java.util.List;

@@ -1,0 +1,79 @@
+﻿@model JOB.WEB.Models.FinalizarNegociacaoVM
+@using JOB.WEB.Extensions
+
+@{
+    ViewBag.Title = "Negociação";
+    ViewBag.SubTitle = "Prestação de serviço";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="box box-warning direct-chat direct-chat-warning">
+            <div class="box-header with-border">
+                <h3 class="box-title">Chat</h3>
+                <div class="box-tools pull-right">
+                    <span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="@Model.QTD_MENSAGENS_NAO_LIDAS Novas Mensagens">@Model.QTD_MENSAGENS_NAO_LIDAS</span>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="direct-chat-messages">
+                    @foreach (var item in Model.Chats)
+                    {
+                        if (item.ID_USUARIO == User.Identity.GetId())
+                        {
+                            <div class="direct-chat-msg">
+                                <div class="direct-chat-info clearfix">
+                                    <span class="direct-chat-name pull-left">@item.NOME_USUARIO</span>
+                                    <span class="direct-chat-timestamp pull-right">@item.DT_MENSAGEM</span>
+                                </div>
+                                <img class="direct-chat-img" src="~/AdminLTE/dist/img/avatar5.png" alt="message user image">
+                                <div class="direct-chat-text">
+                                    @item.MENSAGEM
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="direct-chat-msg right">
+                                <div class="direct-chat-info clearfix">
+                                    <span class="direct-chat-name pull-right">@item.NOME_USUARIO</span>
+                                    <span class="direct-chat-timestamp pull-left">@item.DT_MENSAGEM</span>
+                                </div>
+                                <img class="direct-chat-img" src="~/AdminLTE/dist/img/avatar5.png" alt="message user image">
+                                <div class="direct-chat-text">
+                                    @item.MENSAGEM
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="box-footer">
+                <div class="input-group">
+                    <input id="txtChat" type="text" name="message" placeholder="Escreva uma mensagem ..." class="form-control">
+                    <span class="input-group-btn">
+                        <a id="lnkEnviaChat" class="btn btn-warning btn-flat">Enviar</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Dados de Negociação</h3>
+            </div>
+            <div class="box-body">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#lnkEnviaChat").click(function () {
+        
+        if ($('#txtChat').val() === '') return;
+
+        document.getElementById('lnkEnviaChat').href = "../Proposta/InserirChat?ID_SERVICO=" + getParameterByName("ID_SERVICO") + "&mensagem=" + $('#txtChat').val();
+    });
+</script>

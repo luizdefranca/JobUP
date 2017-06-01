@@ -112,6 +112,7 @@ public class SingInActivity extends AppCompatActivity {
                 final ParserUsuarioSignIn parser = new ParserUsuarioSignIn(login);
 
                 //TODO: retirar a linha a seguir ela faz o login sem checar
+<<<<<<< HEAD
  //               startActivity(new Intent(SingInActivity.this, MainActivity.class));
 
                 parser.get().enqueue(new Callback<Usuario>() {
@@ -162,6 +163,23 @@ public class SingInActivity extends AppCompatActivity {
                                             })
                                             .create();
                             alert.show();
+=======
+                startActivity(new Intent(SingInActivity.this, MainActivity.class));
+
+              /*  parser.get().enqueue(new Callback<Usuario>() {
+                    @Override
+                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                        Usuario usuarioCorrente = response.body();
+                        if (response.isSuccessful()) {
+                            Toast.makeText(SingInActivity.this, "usuario: " + response.body().getNome()
+                                    + " logado com sucesso!", Toast.LENGTH_SHORT).show();
+                            GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(SingInActivity.this, "UsuarioCorrente");
+                            gsonSharedPrefs.saveObject(usuarioCorrente);
+                            progDialog.dismiss();
+                            final Intent intent = new Intent(SingInActivity.this, MainActivity.class);
+                            intent.putExtra("usuarioCorrent", usuario);
+                            startActivity(intent);
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
                         }
 
                         //Desabilita o ProgressDialog
@@ -181,6 +199,10 @@ public class SingInActivity extends AppCompatActivity {
 
                     }
                 });
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             }
         });
 

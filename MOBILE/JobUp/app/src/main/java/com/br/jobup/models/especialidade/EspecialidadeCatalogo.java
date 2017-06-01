@@ -7,8 +7,13 @@ package com.br.jobup.models.especialidade;
  * Last modified 12/05/17 02:56
  */
 
+<<<<<<< HEAD
 /*
   Created by luizramos on 12/05/17.
+=======
+/**
+ * Created by luizramos on 12/05/17.
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
  */
 
 import com.google.gson.annotations.Expose;
@@ -38,6 +43,7 @@ public class EspecialidadeCatalogo implements Serializable {
     @Expose
     public String resumoCurriculo;
 
+<<<<<<< HEAD
     @SerializedName("DT_INCLUSAO")
     @Expose
     public Date dtInclusao;
@@ -56,15 +62,24 @@ public class EspecialidadeCatalogo implements Serializable {
 
 
     public EspecialidadeCatalogo(String idUsuario, String nome, Date dtNascimento, int idEspecialidade, String descEspecialidade, String resumoCurriculo, String bairro, String cidade, String estado) {
+=======
+
+    public EspecialidadeCatalogo(String idUsuario, String nome, Date dtNascimento,
+                                 int idEspecialidade, String descEspecialidade,
+                                 String resumoCurriculo) {
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
         this.idUsuario = idUsuario;
         this.nome = nome;
         this.dtNascimento = dtNascimento;
         this.idEspecialidade = idEspecialidade;
         this.descEspecialidade = descEspecialidade;
         this.resumoCurriculo = resumoCurriculo;
+<<<<<<< HEAD
         this.bairro = bairro;
         this.cidade = cidade;
         this.estado = estado;
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     }
 
     public String getIdUsuario() {
@@ -114,6 +129,7 @@ public class EspecialidadeCatalogo implements Serializable {
     public void setResumoCurriculo(String resumoCurriculo) {
         this.resumoCurriculo = resumoCurriculo;
     }
+<<<<<<< HEAD
 
     public Date getDtInclusao() {
         return dtInclusao;
@@ -146,4 +162,6 @@ public class EspecialidadeCatalogo implements Serializable {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 }

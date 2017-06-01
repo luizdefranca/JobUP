@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<JOB.WEB.Models.PropostaViewModel>
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "ListarProposta";
 }
 
@@ -67,3 +68,83 @@
 }
 
 </table>
+=======
+    ViewBag.Title = ViewBag.TITULO_SERVICO;
+    ViewBag.SubTitle = "Propostas";
+}
+
+<div class="box">
+    <div class="box-body">
+        <table class="table table-responsive table-hover table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DT_PROPOSTA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VALOR_DURACAO_SERVICO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VL_PROPOSTA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JUSTIFICATIVA)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.ACEITA)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DT_PROPOSTA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VALOR_DURACAO_SERVICO) (@Html.DisplayFor(modelItem => item.DURACAO_SERVICO))
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VL_PROPOSTA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JUSTIFICATIVA)
+                    </td>
+                    <td class="text-center">
+                        @Html.DisplayFor(modelItem => item.ACEITA)
+                    </td>
+                    <td class="text-center">
+                        @if (Model.Any(f => f.ACEITA))
+                        {
+                            if (item.ACEITA)
+                            {
+                                @Html.ActionLink(" ", "FinalizarNegociacao", new { ID_SERVICO = item.ID_SERVICO }, new { @class = "btn btn-sm btn-primary fa fa-handshake-o", @title = "Finalizar Negociação" })
+                            }
+                        }
+                        else
+                        {
+                            @Html.ActionLink(" ", "Aceitar", new { idServico = item.ID_SERVICO, idUsuario = item.ID_USUARIO }, new { @class = "btn btn-sm btn-success glyphicon glyphicon-ok" })
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="box-footer">
+        @Html.ActionLink("Voltar", "IndexServico", "Usuario", null, new { @class = "btn btn-default" })
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        ConfigurarTemaIcheck();
+    });
+
+    function ConfigurarTemaIcheck() {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue'
+        });
+    }
+</script>
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae

@@ -404,6 +404,7 @@
         ]
     },
     {
+<<<<<<< HEAD
         "outputFile": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et-rEE/values-et-rEE.xml",
         "map": [
             {
@@ -808,6 +809,8 @@
         ]
     },
     {
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
         "outputFile": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et-rEE/values-et-rEE.xml",
         "map": [
             {

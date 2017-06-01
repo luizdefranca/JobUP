@@ -7,7 +7,10 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,7 +26,10 @@
         android:background="#98aeff">
 
     </LinearLayout>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     <LinearLayout
         android:layout_width="match_parent"
         android:paddingLeft="10dp"
@@ -51,6 +57,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/item_especialidade_txtNome"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -64,12 +71,33 @@
             </LinearLayout>
 
 
+=======
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:id="@+id/item_especialidade_txtNome"
+                    android:text="Nome do Usuario" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_especialidade_rtbEstrelas"
+                    android:isIndicator="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_vertical"
+                    style="?android:attr/ratingBarStyleSmall"/>
+            </LinearLayout>
+
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
+<<<<<<< HEAD
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -133,12 +161,32 @@
 
             </LinearLayout>
 
+=======
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Bairro:"
+                    android:id="@+id/item_especialidade_txtBairro" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="wrap_content"
+                    android:text=","/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Cidade:"
+                    android:id="@+id/item_especialidade_txtCidade" />
+            </LinearLayout>
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
+<<<<<<< HEAD
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -155,6 +203,13 @@
                     android:text="Recife"
                     android:id="@+id/item_especialidade_txtCidade" />
 
+=======
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Distancia"
+                    android:id="@+id/item_especialidade_txtDistancia"/>
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -162,6 +217,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+<<<<<<< HEAD
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -187,12 +243,25 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+=======
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Especialidade"
+                    android:id="@+id/item_especialidade_txtDescricao"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:text="Distancia:"
                     android:id="@+id/item_especialidade_txtDistancia"/>
             </LinearLayout>
@@ -201,4 +270,12 @@
         </LinearLayout>
     </LinearLayout>
 
+=======
+                    android:text="Curriculo"
+                    android:id="@+id/item_especialidade_txtCurriculo"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 </LinearLayout>

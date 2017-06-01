@@ -110,7 +110,6 @@
     <Compile Include="Controllers\PerfilProfissionalController.cs" />
     <Compile Include="Controllers\EspecialidadeController.cs" />
     <Compile Include="Controllers\ServicoPublicoController.cs" />
-    <Compile Include="Controllers\ServicoController.cs" />
     <Compile Include="Controllers\UsuarioFullController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">

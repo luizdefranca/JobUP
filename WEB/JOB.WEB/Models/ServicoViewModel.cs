@@ -12,8 +12,8 @@ namespace JOB.WEB.Models
         public Guid ID_SERVICO { get; set; }
 
         public Guid ID_USUARIO { get; set; }
+        public Guid ID_PROFISSIONAL { get; set; }
 
-        [Required]
         public string NOME { get; set; }
 
         public int ID_ESPECIALIDADE { get; set; }
@@ -70,7 +70,7 @@ namespace JOB.WEB.Models
         public string DESC_ESPECIALIDADE { get; set; }
 
         [Required]
-        [Display(Name = "Especialidade")]
+        [Display(Name = "Especialidade *")]
         public List<ESPECIALIDADE> ESPECIALIDADES { get; set; }
 
         public int? ID_SUB_ESPECIALIDADE { get; set; }
@@ -78,7 +78,7 @@ namespace JOB.WEB.Models
         [Display(Name = "SubEspecialidade")]
         public string DESC_SUB_ESPECIALIDADE { get; set; }
 
-        [Display(Name = "SubEspecialidade")]
+        [Display(Name = "SubEspecialidade *")]
         public List<SUB_ESPECIALIDADE> SUB_ESPECIALIDADES { get; set; }
 
         [Display(Name = "Data Cadastro")]
@@ -86,12 +86,12 @@ namespace JOB.WEB.Models
         public DateTime DT_CADASTRO { get; set; }
 
         [Required]
-        [Display(Name = "Título")]
+        [Display(Name = "Título *")]
         public string DS_TITULO { get; set; }
 
         [Required]
         [DataType(DataType.MultilineText)]
-        [Display(Name = "Observações")]
+        [Display(Name = "Observações *")]
         public string DS_OBSERVACOES { get; set; }
 
         [DataType(DataType.Currency)]
@@ -99,7 +99,7 @@ namespace JOB.WEB.Models
         public double? VL_SUGERIDO { get; set; }
 
         [Required]
-        [Display(Name = "Expectativa de Prazo")]
+        [Display(Name = "Expectativa de Prazo *")]
         public EnumTempoServico TEMPO_SERVICO { get; set; }
 
         public bool POSSUI_PROPOSTA { get; set; }

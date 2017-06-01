@@ -11,6 +11,7 @@
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d346189b345c729098be0ca2d3de65bec50e8263/classes.dex" />
     </item>
     <item
+<<<<<<< HEAD
         is-multidex="false"
         jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.github.ihsanbal/LoggingInterceptor/2.0.0/f7f7c5872e6a39a3aab8d9f334a30d06b6fa9cbf/LoggingInterceptor-2.0.0.jar"
         jumboMode="false"
@@ -21,6 +22,18 @@
     </item>
     <item
         is-multidex="false"
+=======
+        is-multidex="true"
+        jar="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f0e1b9dd4e77eedf5e42c4a5bbb79a610c4f475">
+        <dex dex="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5af10e085f46749e7f530579813bb6a38f54d0e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
         jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.6.0/81887458b69ddc32722df7e4c35235fd74e6a8ba/logging-interceptor-3.6.0.jar"
         jumboMode="false"
         optimize="true"
@@ -56,9 +69,24 @@
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_44adacfb45847d6f99410768f10ae5e3019ddc65/classes.dex" />
     </item>
     <item
+<<<<<<< HEAD
         is-multidex="false"
         jar="/Users/luizramos/.android/build-cache/e46f0b40f3a176ef4b6f12830ee43544f2b65d1d/output/jars/classes.jar"
         jumboMode="false"
+=======
+        is-multidex="true"
+        jar="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/java/com/br/jobup/Lib/caelum-stella-core-2.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="938e69b9f542ca1f2acf21582036f25a4398702f">
+        <dex dex="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/2/caelum-stella-core-2.1.2_c6afa02423459e0f31cdc90428a49053a635b0f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/.gradle/caches/modules-2/files-2.1/com.github.ihsanbal/LoggingInterceptor/2.0.0/f7f7c5872e6a39a3aab8d9f334a30d06b6fa9cbf/LoggingInterceptor-2.0.0.jar"
+        jumboMode="true"
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
         optimize="true"
         revision="25.0.0"
         sha1="d344720b1900cc75d293f7c15efaa38999f71342">
@@ -117,6 +145,15 @@
         revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_867320d8f7578ec540dac7138faecbedc4679b26.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2c7b1bf6d9a79df5eee4e3e0bb9121ee9bcfd5cb/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -295,8 +332,13 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
+<<<<<<< HEAD
         sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
         <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/pre-dexed/debug/classes_41f026ffb8562ca05fc8e92fa89315da391dbad4.jar" />
+=======
+        sha1="39ed935c5e9fd121f98f43404768aa4b48842dda">
+        <dex dex="/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6f81b793568cd634b0bd1c0d8aba51bfaac9b20c/classes.dex" />
+>>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     </item>
 
 </items>
