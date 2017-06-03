@@ -81,7 +81,7 @@ namespace JOB.WEB.Extensions
             using (var context = new Contexto())
             {
                 var user = context.Usuario.FirstOrDefault(u => u.ID_USUARIO == userId);
-                return user.NOME;
+                return user != null ? user.NOME : "";
             }
         }
     }

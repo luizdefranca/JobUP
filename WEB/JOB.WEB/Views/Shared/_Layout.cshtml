@@ -80,18 +80,29 @@
                     </div>*@
                 <ul class="sidebar-menu">
                     <li class="header">NAVEGAÇÃO PRINCIPAL</li>
-                    <li id="left-sidebar-menu-administrador" class="treeview">
-                        <a href="#">
-                            <i class="fa fa-user"></i><span>Administrador</span><i class="fa fa-angle-left pull-right"></i>
+                    @if (User.Identity.GetId() == Guid.Parse("cc29687b-8d92-442e-a3bf-744da8d55fb7"))
+                    {
+                        <li id="left-sidebar-menu-administrador" class="treeview">
+                            <a href="#">
+                                <i class="fa fa-user"></i><span>Administrador</span><i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li id="left-sidebar-menu-administrador-usuarios"><a href="@Url.Action("Index", "Usuario")"><i class="fa fa-circle-o"></i> Usuários</a></li>
+                            </ul>
+                        </li>
+                    }
+
+                    <li id="left-sidebar-menu-profissionais">
+                        <a href="@Url.Action("Index", "Especialidade")">
+                            <i class="fa fa-group"></i>
+                            <span>Profissionais</span>
                         </a>
-                        <ul class="treeview-menu">
-                            <li id="left-sidebar-menu-administrador-usuarios"><a href="@Url.Action("Index", "Usuario")"><i class="fa fa-circle-o"></i> Usuários</a></li>
-                        </ul>
                     </li>
-                    <li id="left-sidebar-menu-profissionais"><a href="@Url.Action("Index", "Especialidade")"><i class="fa fa-group"></i><span>Profissionais</span></a></li>
                     <li id="left-sidebar-menu-servicos"><a href="@Url.Action("Index3", "Especialidade")"><i class="fa fa-briefcase"></i><span>Ofertas de Serviços</span></a></li>
                     <li id="left-sidebar-menu-servicos"><a href="@Url.Action("IndexServico", "Usuario")"><i class="fa fa-briefcase"></i><span>Meus Serviços Criados</span></a></li>
-                    <li id="left-sidebar-menu-servicos"><a href="@Url.Action("Destaque", "Usuario")"><i class="fa fa-briefcase"></i><span>Ativação de Perfil com Destaque</span></a></li>
+                    <li id="left-sidebar-menu-servicos">
+                        <a href="@Url.Action("Destaque", "Usuario")"><i class="fa fa-star"></i><span>Destacar Perfil</span></a>
+                    </li>
                 </ul>
             </section>
         </aside>

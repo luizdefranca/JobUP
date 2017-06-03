@@ -11,7 +11,7 @@
 
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Crie aqui uma nova oferta de serviço para este profissional</h3>
+            <h3 class="box-title">Crie aqui um perfil profissional</h3>
         </div>
         <div class="box-body">
             <div class="form-horizontal">
@@ -20,8 +20,7 @@
                     @Html.LabelFor(model => model.ESPECIALIDADES, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
 
-                        @Html.DropDownListFor(m => m.ID_ESPECIALIDADE,
-                    new SelectList(Model.ESPECIALIDADES, "ID_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control" })
+                        @Html.DropDownListFor(m => m.ID_ESPECIALIDADE, new SelectList(Model.ESPECIALIDADES, "ID_ESPECIALIDADE", "DESCRICAO"), new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.ESPECIALIDADES, "", new { @class = "text-danger" })
                     </div>
                 </div>

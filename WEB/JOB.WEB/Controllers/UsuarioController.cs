@@ -31,6 +31,8 @@ namespace JOB.WEB.Controllers
         // GET: Usuario
         public ActionResult Index()
         {
+            if (id != Guid.Parse("cc29687b-8d92-442e-a3bf-744da8d55fb7")) throw new Exception("Seu perfil não tem acesso a este recurso");
+
             var domain = ctx.Usuario.ToList();
 
             var model = Mapper.Map<List<UsuarioViewModel_VW>>(domain);
