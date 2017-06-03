@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="box-body">
-                <div class="direct-chat-messages">
+                <div id="divChat" class="direct-chat-messages" style="height:400px;">
                     @foreach (var item in Model.Chats)
                     {
                         if (item.ID_USUARIO == User.Identity.GetId())
@@ -58,22 +58,28 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="box">
-            <div class="box-header">
-                <h3 class="box-title">Dados de Negociação</h3>
+    @*<div class="col-md-6">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Dados de Negociação</h3>
+                </div>
+                <div class="box-body">
+                </div>
             </div>
-            <div class="box-body">
-            </div>
-        </div>
-    </div>
+        </div>*@
 </div>
 
 <script>
     $("#lnkEnviaChat").click(function () {
-        
         if ($('#txtChat').val() === '') return;
-
         document.getElementById('lnkEnviaChat').href = "../Proposta/InserirChat?ID_SERVICO=" + getParameterByName("ID_SERVICO") + "&mensagem=" + $('#txtChat').val();
     });
+
+    setInterval(function () {
+        //window.location.href = "../Proposta/FinalizarNegociacao?ID_SERVICO=" + getParameterByName("ID_SERVICO");
+        window.location.assign(document.URL);
+    }, 5000);
+
+    var objDiv = document.getElementById("divChat");
+    objDiv.scrollTop = objDiv.scrollHeight;
 </script>
