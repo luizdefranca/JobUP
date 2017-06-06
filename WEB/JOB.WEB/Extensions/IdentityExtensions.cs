@@ -12,7 +12,10 @@ namespace JOB.WEB.Extensions
     {
         public static Guid GetId(this IIdentity identity)
         {
-            return Guid.Parse(identity.GetUserId());
+            if (identity.GetUserId() != null)
+                return Guid.Parse(identity.GetUserId());
+            else
+                return new Guid();
         }
 
         public static int GetMensagensPendentes(this IIdentity identity)

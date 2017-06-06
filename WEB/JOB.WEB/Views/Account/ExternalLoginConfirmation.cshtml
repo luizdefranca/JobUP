@@ -1,7 +1,7 @@
 ﻿@model JOB.WEB.Models.ExternalLoginConfirmationViewModel
 @{
     ViewBag.Title = "Register";
-    ViewBag.SubTitle = string.Format("Associe sua conta do {0}.", ViewBag.LoginProvider);
+    ViewBag.SubTitle = ViewBag.LoginProvider != null ? string.Format("Associe sua conta do {0}.", ViewBag.LoginProvider) : "";
 }
 
 <div class="row">
