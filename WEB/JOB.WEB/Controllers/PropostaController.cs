@@ -91,6 +91,32 @@ namespace JOB.WEB.Controllers
             return View(lstModel);
         }
 
+        public ActionResult PostarFace(Guid id)
+        {
+            var servico = ctx.Servico.Find(id);
+
+            var postValues = new Dictionary<string, string>();
+
+            // list of available parameters available @ http://developers.facebook.com/docs/reference/api/post
+            postValues.Add("access_token", "EAAHBtBnJWl4BAKgmnOgCLDi6vrk7JpdxGPBH3T75GdXvPNeSUdq3QrtIvgQKWScn2m3V7boRIsvPFnE71YPBxHXWZAxdoBB62EVH5Nj2nvmlZB9EbB9pGB8NIK3DVDhCfCJB4jOUPOds3azPipMZBMeVAwytD8KGdetZAHzBETnQsZB3PqJIqRi2mZAOyZAx1IPiiPZBWpr6YwZDZD");
+            postValues.Add("message", servico.DS_TITULO);
+
+            string facebookWallMsgId = string.Empty;
+            string response;
+            MethodResult header = FacebookHelper.SubmitPost(string.Format("https://graph.facebook.com/{0}/feed", "1632466403449543"),
+                                                        FacebookHelper.BuildPostString(postValues),
+                                                        out response);
+
+            if (header.returnCode == MethodResult.ReturnCode.Success)
+            {
+                var deserialised = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(response);
+                facebookWallMsgId = deserialised["id"];
+                return RedirectToAction("IndexServico", "Usuario");
+            }
+
+            throw new Exception(header.returnCode.ToString());
+        }
+
         public ActionResult Aceitar(Guid idServico, Guid idUsuario)
         {
             var proposta = ctx.Proposta.Find(idServico, idUsuario);

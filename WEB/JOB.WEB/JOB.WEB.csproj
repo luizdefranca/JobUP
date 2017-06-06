@@ -224,6 +224,7 @@
     </Compile>
     <Compile Include="Helper\EmailHelper.cs" />
     <Compile Include="Helper\EnumHelper.cs" />
+    <Compile Include="Helper\FacebookHelper.cs" />
     <Compile Include="Helper\MoedaHelper.cs" />
     <Compile Include="JsonNet.PrivateSettersContractResolvers\PrivateSettersContractResolvers.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -231,6 +232,7 @@
     <Compile Include="Models\AvaliacaoViewModel.cs" />
     <Compile Include="Models\ChatVM.cs" />
     <Compile Include="Models\EspecialidadeViewModel.cs" />
+    <Compile Include="Models\FacebookVM.cs" />
     <Compile Include="Models\FinalizarNegociacaoVM.cs" />
     <Compile Include="Models\HistoricoMoedaVM.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
