@@ -57,7 +57,7 @@
                                                 else
                                                 {
                                                     @: &nbsp;
-                                            }
+                                                }
                                             </td>
                                         </tr>
                                     }
@@ -74,7 +74,18 @@
                                 <p>
                                     @foreach (AuthenticationDescription p in Model.OtherLogins)
                                     {
-                                        <button type="submit" class="btn btn-default" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">@p.AuthenticationType</button>
+                                        if (p.Caption == "Facebook")
+                                        {
+                                            <button type="submit" class="btn btn-social btn-facebook" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Logar usando sua conta do @p.Caption">
+                                                <i class="fa fa-facebook"></i> @p.Caption
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button type="submit" class="btn btn-default" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Logar usando sua conta do @p.Caption">
+                                                @p.Caption
+                                            </button>
+                                        }
                                     }
                                 </p>
                             </div>

@@ -69,7 +69,8 @@ namespace JOB.WEB
                     }
                 },
                 AuthenticationType = DefaultAuthenticationTypes.ExternalCookie,
-                SendAppSecretProof = true
+                SendAppSecretProof = true,
+                Caption = "Facebook"
             };
             option.Scope.Add("publish_actions");
             app.UseFacebookAuthentication(option);
