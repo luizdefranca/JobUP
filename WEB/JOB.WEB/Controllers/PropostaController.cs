@@ -103,7 +103,8 @@ namespace JOB.WEB.Controllers
 
             string facebookWallMsgId = string.Empty;
             string response;
-            MethodResult header = FacebookHelper.SubmitPost(string.Format("https://graph.facebook.com/{0}/feed", "1632466403449543"),
+
+            MethodResult header = FacebookHelper.SubmitPost(string.Format("https://graph.facebook.com/{0}/feed", ""),
                                                         FacebookHelper.BuildPostString(postValues),
                                                         out response);
 
