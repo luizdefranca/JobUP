@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Claims;
 using System.Web.Mvc;
 
 namespace JOB.WEB.Controllers
@@ -130,6 +131,10 @@ namespace JOB.WEB.Controllers
             var domain = ctx.Servico.Where(w => w.ID_USUARIO == id).ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
+
+            ClaimsIdentity claimIdenties = HttpContext.User.Identity as ClaimsIdentity;
+
+            ViewBag.POSSUI_FACE = claimIdenties.FindFirst("FacebookAccessToken") != null;
 
             foreach (var model in lstModel)
             {

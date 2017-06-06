@@ -100,6 +100,8 @@ namespace JOB.WEB.Controllers
 
             ClaimsIdentity claimIdenties = HttpContext.User.Identity as ClaimsIdentity;
 
+            if (claimIdenties.FindFirst("FacebookAccessToken") == null) return RedirectToAction("IndexServico", "Usuario");
+
             // list of available parameters available @ http://developers.facebook.com/docs/reference/api/post
             postValues.Add("access_token", claimIdenties.FindFirst("FacebookAccessToken").Value);
             postValues.Add("message", servico.DS_TITULO);
