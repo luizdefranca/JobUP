@@ -76,10 +76,11 @@ namespace JOB.WEB.Controllers
             model.DT_NASCTO = usuario.DT_NASCIMENTO;
             model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
 
-            model.DT_INCLUSAO = usuario.DT_INCLUSAO;
             model.BAIRRO = usuario.BAIRRO;
             model.CIDADE = usuario.CIDADE;
             model.ESTADO = usuario.UF.ToString();
+            model.DT_INCLUSAO = usuario.DT_INCLUSAO;
+            model.DT_ORDENACAO = usuario.DT_ORDENACAO;
 
             model.OUTROS_PERFIS = Mapper.Map<List<ProfissionalViewModel>>(usuario.PERFIS_PROFISSIONAIS.Where(w => w.ID_ESPECIALIDADE != idEspecialidade));
             model.AVALIACOES = Mapper.Map<List<AvaliacaoViewModel>>(ctx.Avaliacao.Where(w => w.ID_USUARIO == model.ID_USUARIO & w.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).ToList());
