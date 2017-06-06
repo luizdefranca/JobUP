@@ -334,7 +334,47 @@ namespace JOB.WEB.Controllers
                 return RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
             }
             var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
-            return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
+
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindAsync(loginInfo.Login);
+                if (user != null)
+                {
+                    await StoreFacebookAuthToken(user);
+                    await SignInAsync(user, isPersistent: false);
+                }
+                return RedirectToAction("ManageLogins");
+            }
+            else
+            {
+                return RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
+            }
+        }
+
+        private async Task StoreFacebookAuthToken(ApplicationUser user)
+        {
+            var claimsIdentity = await AuthenticationManager.GetExternalIdentityAsync(DefaultAuthenticationTypes.ExternalCookie);
+            if (claimsIdentity != null)
+            {
+                // Retrieve the existing claims for the user and add the FacebookAccessTokenClaim
+                var currentClaims = await UserManager.GetClaimsAsync(user.Id);
+                var facebookAccessToken = claimsIdentity.FindAll("FacebookAccessToken").First();
+                if (!currentClaims.Any(a => a.Type == "FacebookAccessToken"))
+                {
+                    await UserManager.AddClaimAsync(user.Id, facebookAccessToken);
+                }
+                var FacebookProviderKey = claimsIdentity.FindAll("FacebookProviderKey").First();
+                if (!currentClaims.Any(a => a.Type == "FacebookProviderKey"))
+                {
+                    await UserManager.AddClaimAsync(user.Id, FacebookProviderKey);
+                }
+            }
+        }
+
+        private async Task SignInAsync(ApplicationUser user, bool isPersistent)
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
+            AuthenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, await user.GenerateUserIdentityAsync(UserManager));
         }
 
         private Contexto ctx = new Contexto();

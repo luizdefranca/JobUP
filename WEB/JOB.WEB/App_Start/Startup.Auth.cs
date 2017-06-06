@@ -1,11 +1,12 @@
-﻿using System;
-using JOB.WEB.Models;
+﻿using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
+using Microsoft.Owin.Security.Facebook;
 using Owin;
+using System;
+using System.Threading.Tasks;
 
 namespace JOB.WEB
 {
@@ -54,9 +55,24 @@ namespace JOB.WEB
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            app.UseFacebookAuthentication(
-               appId: "494454247610974",
-               appSecret: "ce8e4af1cf4be09d8b0aab15d6dc3529");
+            var option = new FacebookAuthenticationOptions
+            {
+                AppId = "494454247610974",
+                AppSecret = "ce8e4af1cf4be09d8b0aab15d6dc3529",
+                Provider = new FacebookAuthenticationProvider()
+                {
+                    OnAuthenticated = (ctx) =>
+                    {
+                        ctx.Identity.AddClaim(new System.Security.Claims.Claim("FacebookAccessToken", ctx.AccessToken));
+                        ctx.Identity.AddClaim(new System.Security.Claims.Claim("FacebookProviderKey", ctx.Id));
+                        return Task.FromResult(0);
+                    }
+                },
+                AuthenticationType = DefaultAuthenticationTypes.ExternalCookie,
+                SendAppSecretProof = true
+            };
+            option.Scope.Add("publish_actions");
+            app.UseFacebookAuthentication(option);
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

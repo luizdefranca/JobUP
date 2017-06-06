@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Claims;
 using System.Web.Mvc;
 
 namespace JOB.WEB.Controllers
@@ -97,14 +98,16 @@ namespace JOB.WEB.Controllers
 
             var postValues = new Dictionary<string, string>();
 
+            ClaimsIdentity claimIdenties = HttpContext.User.Identity as ClaimsIdentity;
+
             // list of available parameters available @ http://developers.facebook.com/docs/reference/api/post
-            postValues.Add("access_token", "EAAHBtBnJWl4BAKgmnOgCLDi6vrk7JpdxGPBH3T75GdXvPNeSUdq3QrtIvgQKWScn2m3V7boRIsvPFnE71YPBxHXWZAxdoBB62EVH5Nj2nvmlZB9EbB9pGB8NIK3DVDhCfCJB4jOUPOds3azPipMZBMeVAwytD8KGdetZAHzBETnQsZB3PqJIqRi2mZAOyZAx1IPiiPZBWpr6YwZDZD");
+            postValues.Add("access_token", claimIdenties.FindFirst("FacebookAccessToken").Value);
             postValues.Add("message", servico.DS_TITULO);
 
             string facebookWallMsgId = string.Empty;
             string response;
 
-            MethodResult header = FacebookHelper.SubmitPost(string.Format("https://graph.facebook.com/{0}/feed", ""),
+            MethodResult header = FacebookHelper.SubmitPost(string.Format("https://graph.facebook.com/{0}/feed", claimIdenties.FindFirst("FacebookProviderKey").Value),
                                                         FacebookHelper.BuildPostString(postValues),
                                                         out response);
 
