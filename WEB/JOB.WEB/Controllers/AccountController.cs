@@ -75,22 +75,26 @@ namespace JOB.WEB.Controllers
             }
 
             var user = await UserManager.FindByNameAsync(model.UserName);
-            var id = Guid.Parse(user.Id);
 
-            var usuario = ctx.Usuario.Find(id);
-
-            if (usuario != null)
+            if (user != null)
             {
-                if (usuario.BLOQUEADO)
-                {
-                    ModelState.AddModelError("", "Usuário bloqueado");
-                    return View(model);
-                }
+                var id = Guid.Parse(user.Id);
 
-                if (!usuario.ATIVO)
+                var usuario = ctx.Usuario.Find(id);
+
+                if (usuario != null)
                 {
-                    ModelState.AddModelError("", "Seu usuário não está mais ativo. Favor, clicar aqui para reativar");
-                    return View(model);
+                    if (usuario.BLOQUEADO)
+                    {
+                        ModelState.AddModelError("", "Usuário bloqueado");
+                        return View(model);
+                    }
+
+                    if (!usuario.ATIVO)
+                    {
+                        ModelState.AddModelError("", "Seu usuário não está mais ativo. Favor, clicar aqui para reativar");
+                        return View(model);
+                    }
                 }
             }
 
