@@ -1,170 +1,39 @@
 [
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_edittext.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
-=======
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_spinner.xml"
-    },
-    {
-<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_edittext.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/color-v23/design_tint_password_toggle.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/color-v23/design_tint_password_toggle.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_switch_track.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_switch_thumb.xml"
     },
     {
-=======
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/color-v23/design_tint_password_toggle.xml"
-    },
-    {
-<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_spinner.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_seek_thumb.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_spinner.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_color_highlight_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_switch_track.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",

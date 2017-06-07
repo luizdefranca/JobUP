@@ -9,7 +9,7 @@ import android.view.View;
 import com.br.jobup.R;
 import com.br.jobup.dao.DatabaseHelper;
 
-import activities.SingInActivity;
+import com.br.jobup.activities.SingInActivity;
 
 /*
  * Created by Luiz Carlos Ramos on 07/05/17 15:12

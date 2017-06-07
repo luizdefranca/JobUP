@@ -6,10 +6,9 @@ import com.br.jobup.services.interfaces.IAvaliacaoAPI;
 import com.br.jobup.services.interfaces.IClienteAPI;
 import com.br.jobup.services.interfaces.IDesativarAPI;
 import com.br.jobup.services.interfaces.IEspecialidadeCatalogoAPI;
-<<<<<<< HEAD
+import com.br.jobup.services.interfaces.IOfertaAPI;
 import com.br.jobup.services.interfaces.IPerfilProfissional;
-=======
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+import com.br.jobup.services.interfaces.IServicoPrivadoAPI;
 import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
 import com.br.jobup.services.interfaces.IUsuarioFullAPI;
@@ -133,24 +132,36 @@ public class RetroFitInicializador<T> {
 
     public IUsuarioSignUpAPI signUpAPI(){ return retrofit.create(IUsuarioSignUpAPI.class);}
 
-    public IEspecialidadeCatalogoAPI getEspecialidadesAPI(){
+    public IEspecialidadeCatalogoAPI createEspecialidadesAPI(){
         return  retrofit.create(IEspecialidadeCatalogoAPI.class);}
-<<<<<<< HEAD
+
+    public IEspecialidadeCatalogoAPI createEspecialidadeCatalogoAPI(){
+        return retrofit.create(IEspecialidadeCatalogoAPI.class);
+    }
 
     public IPerfilProfissional createPerfilProfissionalAPI(){
         return retrofit.create(IPerfilProfissional.class);
     }
 
-    public Object createAPI(String nomeClasse){
+    /**
+     * Classe genérica para gerar um Servico da API
+     * @param nomeInterface
+     * @return
+     */
+    public Object createAPI(String nomeInterface){
         try {
-            return retrofit.create(Class.forName(nomeClasse));
+            return retrofit.create(Class.forName(nomeInterface));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             return null;
         }
     }
 
+    public IOfertaAPI createOfertaAPI(){
+        return retrofit.create(IOfertaAPI.class);
+    }
 
-=======
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+    public IServicoPrivadoAPI createServicoPrivadoAPI(){
+        return retrofit.create(IServicoPrivadoAPI.class);
+    }
 }

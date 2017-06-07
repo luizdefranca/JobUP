@@ -1,8 +1,8 @@
 package com.br.jobup.http;
 
 import com.br.jobup.models.usuario.Usuario;
-import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
-import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
+//import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+//import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 
 /**
  * Created by luizramos on 23/04/17.
@@ -12,8 +12,8 @@ import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 
 
 public class PushNotification {
-    private MobileServiceClient mClient;
-    private MobileServiceTable<Usuario> mUsuarioTable;
+//    private MobileServiceClient mClient;
+//    private MobileServiceTable<Usuario> mUsuarioTable;
 
 //    public void getConection(){
 //        try {

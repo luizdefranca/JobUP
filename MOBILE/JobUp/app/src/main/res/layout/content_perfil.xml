@@ -12,7 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="activities.PerfilActivity"
+    tools:context=".activities.PerfilActivity"
     tools:showIn="@layout/activity_perfil">
 
     <LinearLayout
@@ -338,13 +338,8 @@
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:paddingRight="@dimen/activity_horizontal_margin"
                     android:textStyle="bold"
-<<<<<<< HEAD
                     android:id="@+id/descricao"
                     android:text="Nome da descricao" />
-=======
-                    android:id="@+id/especialidade"
-                    android:text="Nome da especialidade" />
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

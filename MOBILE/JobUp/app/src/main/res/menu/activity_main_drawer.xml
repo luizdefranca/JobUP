@@ -4,20 +4,20 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_perfil"
-            android:title="Perfil" />
+            android:icon="@drawable/banknotes_32"
+            android:title="Comprar créditos" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_agendamentos"
-            android:title="Agendamentos" />
+            android:icon="@drawable/workers_32"
+            android:title="Seja um profissional" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_usuarios"
-            android:title="Usuarios" />
+            android:icon="@drawable/document_32"
+            android:title="Ofertas de Serviços" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_mensagens"
-            android:title="Minhas Mensagens" />
+            android:icon="@drawable/handshake_32"
+            android:title="Meus Serviços Criados" />
     </group>
 
     <item android:title="Favoritos">
@@ -25,11 +25,11 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_propostas"
-                android:title="Propostas" />
+                android:title="Ativar Destaque" />
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_ofertas"
-                android:title="Ofertas" />
+                android:icon="@drawable/ic_perfil"
+                android:title="Perfil" />
         </menu>
     </item>
 

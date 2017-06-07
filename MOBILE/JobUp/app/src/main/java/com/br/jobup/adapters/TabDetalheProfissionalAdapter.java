@@ -11,6 +11,7 @@ import com.br.jobup.fragments.AvaliacoesProfissionalFragment;
 import com.br.jobup.fragments.DetalheProfissionalFragment;
 import com.br.jobup.fragments.ServicosProfissionalFragment;
 
+import static android.os.Build.VERSION_CODES.N;
 import static com.br.jobup.fragments.ServicosProfissionalFragment.getInstance;
 
 /*
@@ -61,7 +62,7 @@ public class TabDetalheProfissionalAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return NUM_TABS;
+        return TABS.length;
     }
 
     @Override

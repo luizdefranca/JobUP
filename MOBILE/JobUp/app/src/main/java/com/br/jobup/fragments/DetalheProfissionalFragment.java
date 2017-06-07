@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.br.jobup.R;
 import com.br.jobup.adapters.OutrasEspecializacoesAdapter;
-import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
+import com.br.jobup.models.especialidade.ServicoOferta;
 import com.br.jobup.models.usuario.PerfilProfissional;
 import com.br.jobup.services.parsers.ParserPerfilProfissional;
 import com.br.jobup.util.Parsers;
@@ -20,7 +20,7 @@ import com.br.jobup.util.Parsers;
 import java.util.ArrayList;
 import java.util.List;
 
-import activities.CatalogoEspecialidadeActivity;
+import com.br.jobup.activities.CatalogoEspecialidadeActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,11 +39,12 @@ public class DetalheProfissionalFragment extends Fragment {
 
     public static final String BUNDLE_DETALHE_PROFISSIONAL = "ARG_DETALHE";
     private static final String TAG = DetalheProfissionalFragment.class.getSimpleName();
+    public static final String PERFIS = "perfis";
     private View mView;
     private Bundle mBundle;
     private String idProfissional;
     private int idEspecialidade;
-    private EspecialidadeCatalogo especialidadeDetalhe;
+    private ServicoOferta especialidadeDetalhe;
     private ListView listViewOutrasEspecializacoes;
     protected ArrayList<PerfilProfissional> perfis;
 
@@ -63,14 +64,17 @@ public class DetalheProfissionalFragment extends Fragment {
         return frag;
     }
 
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBundle = getArguments().getBundle(BUNDLE_DETALHE_PROFISSIONAL);
         idProfissional = mBundle.getString(CatalogoEspecialidadeActivity.ID_PROFISSIONAL);
         idEspecialidade = mBundle.getInt(CatalogoEspecialidadeActivity.ID_ESPECIALIDADE);
-        especialidadeDetalhe = (EspecialidadeCatalogo) mBundle.getSerializable(CatalogoEspecialidadeActivity.ESPECIALIDADE_DETALHE);
+        especialidadeDetalhe = (ServicoOferta) mBundle.getSerializable(CatalogoEspecialidadeActivity.ESPECIALIDADE_DETALHE);
         setRetainInstance(true);
+
 
     }
 
@@ -106,17 +110,18 @@ public class DetalheProfissionalFragment extends Fragment {
             @Override
             public void onResponse(Call<List<PerfilProfissional>> call, Response<List<PerfilProfissional>> response) {
 
-
-
-                //cria um adapter para o ListView
+                //verifica se nao existe estado salvo da active
                 if(savedInstanceState == null) {
+
                     //Pega a Lista de perfisprofissional do response
                     perfis = new ArrayList<PerfilProfissional>(response.body());
-
                 } else{
+
                     //Pega a lista da Instância salva
-                    perfis = savedInstanceState.getParcelableArrayList("perfis");
+                    perfis = savedInstanceState.getParcelableArrayList(PERFIS);
                 }
+
+                //criar um adapter para o ListView
                 OutrasEspecializacoesAdapter adapter = new OutrasEspecializacoesAdapter(getContext(), perfis);
                 //seta o adapter para o ListView
                 listViewOutrasEspecializacoes.setAdapter(adapter);
@@ -134,7 +139,7 @@ public class DetalheProfissionalFragment extends Fragment {
     @Override
     public void onSaveInstanceState(Bundle outState) {
 
-        outState.putParcelableArrayList("perfis", perfis);
+        outState.putParcelableArrayList(PERFIS, perfis);
         super.onSaveInstanceState(outState);
     }
 }

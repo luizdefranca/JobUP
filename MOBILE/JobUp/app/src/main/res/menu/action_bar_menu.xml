@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Luiz Carlos Ramos on 31/05/17 23:49
+  ~
+  ~ Copyright (c) 2017. All rights reserved.
+  ~ Last modified 31/05/17 23:49
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/chat_16"
+        android:title="chat"
+
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_message"
+        android:icon="@drawable/bell_16"
+        android:title="messagens"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_money"
+        android:icon="@drawable/banknotes_16"
+        android:title="job money"
+        app:showAsAction="always"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+
+</menu>

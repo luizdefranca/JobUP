@@ -1,17 +1,6 @@
 [
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable-v23/abc_control_background_material.xml"
-    },
-    {
-<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable-v23/abc_control_background_material.xml"
-    },
-    {
-=======
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable-v23/abc_control_background_material.xml"
     }
 ]

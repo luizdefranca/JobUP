@@ -1,0 +1,33 @@
+╔══════ Request ════════════════════════════════════════════════════════════════════════
+║ URL: http://jobupapi.azurewebsites.net/api/ServicoPrivado/
+║
+║ Method: @POST
+║
+║ Body:
+║ {
+║    "ID_PROFISSIONAL": "463ddc71-0171-4878-8eaa-e7029fbbf758",
+║    "ID_USUARIO": "1195470d-51b2-4a52-8ea5-5e3b994321cd",
+║    "DS_OBSERVACOES": "uma observacao",
+║    "DS_TITULO": "Um servico",
+║    "VL_SUGERIDO": 0,
+║    "ID_ESPECIALIDADE": 7,
+║    "TEMPO_SERVICO": 1
+║ }
+╚═══════════════════════════════════════════════════════════════════════════════════════
+
+
+
+ URL: http://jobupapi.azurewebsites.net/api/ServicoPrivado/
+
+ Method: @POST
+
+ Body:
+ {
+    "ID_PROFISSIONAL": "463ddc71-0171-4878-8eaa-e7029fbbf758",
+    "ID_USUARIO": "1195470d-51b2-4a52-8ea5-5e3b994321cd",
+    "DS_OBSERVACOES": "hjkhl hjkhl",
+    "DS_TITULO": "kjlkjl hjkhkh",
+    "VL_SUGERIDO": 10.03,
+    "ID_ESPECIALIDADE": 6,
+    "TEMPO_SERVICO": 2
+ }

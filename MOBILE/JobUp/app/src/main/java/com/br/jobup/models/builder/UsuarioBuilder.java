@@ -1,19 +1,11 @@
 package com.br.jobup.models.builder;
 
 import com.br.jobup.models.usuario.Cpf;
-<<<<<<< HEAD
 import com.br.jobup.models.usuario.PerfilProfissional;
 import com.br.jobup.models.usuario.Rg;
 import com.br.jobup.models.usuario.Telefone;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.models.usuario.Email;
-=======
-import com.br.jobup.models.usuario.Email;
-import com.br.jobup.models.usuario.PerfilProfisional;
-import com.br.jobup.models.usuario.Rg;
-import com.br.jobup.models.usuario.Telefone;
-import com.br.jobup.models.usuario.Usuario;
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import com.br.jobup.util.Parsers;
 
 import java.util.ArrayList;

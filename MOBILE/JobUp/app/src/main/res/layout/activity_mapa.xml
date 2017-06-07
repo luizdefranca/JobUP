@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Luiz Carlos Ramos on 6/6/17 5:00 PM
+  ~
+  ~ Copyright (c) 2017. All rights reserved.
+  ~ Last modified 6/6/17 5:00 PM
+  -->
+
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.br.jobup.activities.MapaActivity"
+    android:id="@+id/frameMapa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    />

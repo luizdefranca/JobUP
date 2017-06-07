@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_above="@+id/tabBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="16dp"
+            android:text="Oferta de Serviço"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título *" />
+
+        <EditText
+            android:id="@+id/contratacao_servico_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Observação *" />
+
+        <EditText
+            android:id="@+id/contratacao_servico_observacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor Sugerido"
+            />
+
+        <EditText
+            android:id="@+id/valor_sugerido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prazo *" />
+
+        <Spinner
+            android:id="@+id/spnPrazo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"/>
+        <Button
+            android:id="@+id/contratacao_servico_contratar"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contratar"/>
+    </LinearLayout>
+        <include
+            android:id="@+id/tabBar"
+            layout="@layout/bottom_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

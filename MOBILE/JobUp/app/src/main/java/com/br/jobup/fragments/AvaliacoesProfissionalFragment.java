@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.br.jobup.R;
 
-import activities.CatalogoEspecialidadeActivity;
+import com.br.jobup.activities.CatalogoEspecialidadeActivity;
 
 /*
  * Created by Luiz Carlos Ramos on 25/05/17 22:04

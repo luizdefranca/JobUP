@@ -1,208 +1,255 @@
 [
     {
-<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_forward.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_forward.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passadeira.jpg",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/passadeira.jpg"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_light.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_mono_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_media_route_mono_dark.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/navigation_empty_icon.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_light.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_vector_test.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/motorista.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/motorista.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg_low.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/baba.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/baba.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/handshake_48.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/handshake_48.png"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
         "source": "/Users/luizramos/.android/build-cache/1e4b9670eae6128a30dceb1c2836eaccc8d75482/output/res/drawable/design_snackbar_background.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_send_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_send_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_like_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_clear_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logofacebook.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/logofacebook.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/briefcase_9_16.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/briefcase_9_16.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passadeira.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/passadeira.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/briefcase_9_32.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/briefcase_9_32.png"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_icon_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_connecting.xml",
+        "source": "/Users/luizramos/.android/build-cache/5259d8ecfb1dc2a87545edcecc24e48b1e65b1c6/output/res/drawable/cast_ic_notification_connecting.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logojobup.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/logojobup.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_on_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_media_route_on_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_logo.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_login_logo.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logotwitter.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/logotwitter.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_expanded_controller_seekbar_track.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_expanded_controller_seekbar_track.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/pintor.jpg",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/pintor.jpg"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/adestrador_de_caes.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/adestrador_de_caes.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_tick_mark_material.xml"
-    },
-    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cozinheira.jpg",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/cozinheira.jpg"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/document_24.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/document_24.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_skip_prev.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_skip_prev.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_forward30.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_forward30.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/chat_32.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/chat_32.png"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_48dp.png",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/camera_48dp.png"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/side_nav_bar.xml",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/side_nav_bar.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/home_bkg.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/home_bkg.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/limpeza_de_piscina.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/limpeza_de_piscina.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_dialog_material_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_header_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_auth_dialog_header_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_spinner_textfield_background_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/adestrador_de_caes.jpg",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/adestrador_de_caes.jpg"
     },
     {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_play_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_play_light.xml"
+    },
+    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_radio_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_tick_mark_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_skip_next.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_skip_next.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_top_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/workers_32.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/workers_32.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/ic_collapse.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/ic_collapse.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_96dp.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/camera_96dp.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/workers_16.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/workers_16.png"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_text_cursor_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/side_nav_bar.xml",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/side_nav_bar.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_auth_dialog_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_edit_text_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/home_bkg.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/home_bkg.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/chat_16.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/chat_16.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/chat_48.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/chat_48.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/bell_16.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/bell_16.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_mono_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_media_route_mono_light.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_cast_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_cast_light.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
         "source": "/Users/luizramos/.android/build-cache/1e4b9670eae6128a30dceb1c2836eaccc8d75482/output/res/drawable/design_fab_background.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_dialog_material_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_pause.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_pause.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/banknotes_24.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/banknotes_24.png"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_tile_bg.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_selector.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/messenger_button_white_bg_selector.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_skip_next.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_skip_next.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/bell_32.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/bell_32.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_close_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_close_light.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_skip_ad_label_border.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_skip_ad_label_border.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/applogojobup.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/applogojobup.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_stop_live_stream.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_stop_live_stream.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/ic_expand.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/ic_expand.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
@@ -213,6 +260,10 @@
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_stop_large.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_stop_large.xml"
+    },
+    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logo_jobup.png",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/logo_jobup.png"
     },
@@ -221,76 +272,88 @@
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/handshake_16.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/handshake_16.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_play_large.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_play_large.xml"
+    },
+    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/handshake_32.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/handshake_32.png"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_96dp.png",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/camera_96dp.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_silver_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_login_silver_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_dialog_material_background_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_dialog_material_background_light.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg.xml"
     },
     {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_play.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_play.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_stop.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_stop.xml"
+    },
+    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_check_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/avatar.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/avatar.png"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_connecting_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_media_route_connecting_dark.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/briefcase_9_48.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/briefcase_9_48.png"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/facebook_butt.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/facebook_butt.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_audiotrack_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_audiotrack_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_colored_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_small_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/diarista.jpg",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/diarista.jpg"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_48dp.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/camera_48dp.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_indicator_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/motorista.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/motorista.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/navigation_empty_icon.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/diarista.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/diarista.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_expanded_controller_actionbar_bg_gradient_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_expanded_controller_actionbar_bg_gradient_light.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/motorista.jpg",
@@ -301,40 +364,20 @@
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_radio_material.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_small_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_play_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_play_dark.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_dark.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_24dp.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/camera_24dp.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/jobs.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/jobs.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_mini_controller_progress_drawable.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_mini_controller_progress_drawable.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_search_api_material.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/servicos.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/servicos.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/diarista.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/diarista.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_fab_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_mute.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_mute.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
@@ -345,1111 +388,267 @@
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/encanador.jpg"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/jobs.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/jobs.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_skip_previous.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_skip_previous.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_icon_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_mini_controller_gradient_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_mini_controller_gradient_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_icon.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_icon.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/jobs.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/jobs.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/button_effect.xml",
-        "source": "/Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/res/drawable/button_effect.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_default_mtrl_shape.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_icon_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_voice_search_api_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logojobup.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/logojobup.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_ab_back_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_clear_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/side_nav_bar.xml",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/side_nav_bar.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_default_mtrl_shape.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/pintor.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/pintor.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_ic_visibility.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_ic_visibility.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/pintor.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/pintor.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_borderless_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_snackbar_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_disabled.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logo_jobup.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/logo_jobup.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logofacebook.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/logofacebook.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_send_button_icon.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_send_button_icon.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_round.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/messenger_button_blue_bg_round.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_vector_test.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_track_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_login_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logotwitter.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/logotwitter.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/applogojobup.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/applogojobup.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passeador_de_caes.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/passeador_de_caes.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_ic_visibility.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_ic_visibility.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cozinheira.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/cozinheira.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_go_search_api_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_ic_visibility.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_ic_visibility.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/navigation_empty_icon.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logojobup.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/logojobup.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_small_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/jobs.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/jobs.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_search_api_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg_low.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_check_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_24dp.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/camera_24dp.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_go_search_api_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/encanador.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/encanador.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_clear_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_voice_search_api_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logotwitter.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/logotwitter.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_disabled.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_borderless_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_borderless_material.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_colored_material.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_go_search_api_material.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/motorista.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/motorista.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg_low.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg_low.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_clear_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_snackbar_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_bottom_navigation_item_background.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passeador_de_caes.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/passeador_de_caes.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_tab_indicator_material.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/encanador.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/encanador.jpg"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_text_cursor_material.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/side_nav_bar.xml",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/side_nav_bar.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_text_cursor_material.xml"
-=======
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passadeira.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/passadeira.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_icon_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_voice_search_api_material.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg_low.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_radio_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_top_material.xml"
-=======
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logojobup.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/logojobup.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_logo.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_login_logo.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_dark.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg.xml"
-=======
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_tick_mark_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/adestrador_de_caes.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/adestrador_de_caes.jpg"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_48dp.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/camera_48dp.png"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_menu_overflow_material.xml"
-=======
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_dark_normal.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/side_nav_bar.xml",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/side_nav_bar.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_dialog_material_background.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/applogojobup.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/applogojobup.png"
-=======
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/limpeza_de_piscina.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/limpeza_de_piscina.jpg"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_check_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passeador_de_caes.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/passeador_de_caes.jpg"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_vector_test.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_light.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_dialog_material_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_clear_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_header_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_auth_dialog_header_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_snackbar_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_tick_mark_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_96dp.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/camera_96dp.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passeador_de_caes.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/passeador_de_caes.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_text_cursor_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_text_cursor_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_auth_dialog_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_edit_text_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_radio_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/home_bkg.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/home_bkg.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_dialog_material_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_48dp.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/camera_48dp.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_tile_bg.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_selector.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/messenger_button_white_bg_selector.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passeador_de_caes.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/passeador_de_caes.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_vector_test.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_silver_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_login_silver_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_check_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/facebook_butt.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/facebook_butt.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/applogojobup.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/applogojobup.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_small_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/servicos.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/servicos.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_48dp.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/camera_48dp.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ratingbar_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/motorista.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/motorista.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/navigation_empty_icon.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_96dp.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/camera_96dp.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/diarista.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/diarista.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_radio_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_cancel_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/servicos.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/servicos.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_track_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_selector.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/messenger_button_blue_bg_selector.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/diarista.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/diarista.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_fab_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_light_normal.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/jobs.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/jobs.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/baba.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/baba.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_icon_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/encanador.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/encanador.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_icon.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_icon.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_internal_bg.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light_normal.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logotwitter.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/logotwitter.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/facebook_butt.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/facebook_butt.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/limpeza_de_piscina.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/limpeza_de_piscina.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/button_effect.xml",
-        "source": "/Users/luizramos/.android/build-cache/835fe41f78c87f80d68abc316cfa0fbb97913cce/output/res/drawable/button_effect.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_voice_search_api_material.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/avatar.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/avatar.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_item_background_holo_light.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_tick_mark_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/applogojobup.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/applogojobup.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/diarista.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/diarista.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/servicos.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/servicos.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_bg.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_96dp.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/camera_96dp.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_24dp.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/camera_24dp.png"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_selector.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/messenger_button_blue_bg_selector.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_track_material.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_light_normal.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/baba.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/baba.jpg"
-=======
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_internal_bg.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/pintor.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/pintor.jpg"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_borderless_material.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_skip_next.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_skip_next.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/servicos.jpg",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/servicos.jpg"
     },
     {
-<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logofacebook.png",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/logofacebook.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/encanador.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/encanador.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_internal_bg.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_disabled.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/briefcase_9_24.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/briefcase_9_24.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logotwitter.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/logotwitter.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/facebook_butt.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/facebook_butt.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_cast_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_cast_dark.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/limpeza_de_piscina.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/limpeza_de_piscina.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_forward30.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_forward30.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_rewind.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_rewind.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_dialog_material_background_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/document_32.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/document_32.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/jobs.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/jobs.png"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_icon_background.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_textfield_search_material.xml"
     },
     {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_mute.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_mute.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_on_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_media_route_on_dark.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/chat_24.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/chat_24.png"
+    },
+    {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/limpeza_de_piscina.jpg",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/limpeza_de_piscina.jpg"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_round.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/messenger_button_white_bg_round.xml"
-=======
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
-        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_disabled.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/document_16.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/document_16.png"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logo_jobup.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/logo_jobup.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_rewind30.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_rewind30.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_thumb_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_rewind30.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_rewind30.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passadeira.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/passadeira.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_skip_prev.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_skip_prev.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_closed_caption.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_closed_caption.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logofacebook.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/logofacebook.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/workers_24.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/workers_24.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_send_button_icon.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_send_button_icon.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_closed_caption.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_closed_caption.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_ab_back_material.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_favicon_blue.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_favicon_blue.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logo_jobup.png",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/logo_jobup.png"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/notification_tile_bg.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_cab_background_internal_bg.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_rewind30.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_rewind30.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_switch_thumb_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_thumb_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_stop.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_stop.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passadeira.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/passadeira.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_pause_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_pause_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_pause.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_pause.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_ab_back_material.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_vector_test.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_expanded_controller_bg_gradient_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_expanded_controller_bg_gradient_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/adestrador_de_caes.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/adestrador_de_caes.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_media_route_connecting_light.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_media_route_connecting_light.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_track_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/bell_24.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/bell_24.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/6b438857b8ea6a885b89a2dba5a4b53433577f43/output/res/drawable/com_facebook_button_login_background.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/banknotes_32.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/banknotes_32.png"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logotwitter.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/logotwitter.png"
-    },
-    {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_close_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_close_dark.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_edit_text_material.xml"
     },
     {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/adestrador_de_caes.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/adestrador_de_caes.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_pause_large.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_pause_large.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/banknotes_16.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/banknotes_16.png"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/home_bkg.png",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/home_bkg.png"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_bottom_navigation_item_background.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_ic_visibility.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_ic_visibility.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_mini_controller_forward30.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_mini_controller_forward30.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_small_icon.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_small_icon.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_24dp.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/camera_24dp.png"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_expanded_controller_seekbar_thumb.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_expanded_controller_seekbar_thumb.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_expanded_controller_play.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_expanded_controller_play.xml"
     },
     {
-<<<<<<< HEAD
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_dark_normal.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/camera_24dp.png",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/camera_24dp.png"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_play.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_play.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_rewind10.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_rewind10.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_pause.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_pause.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_disconnect.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_disconnect.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/mr_ic_pause_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/res/drawable/mr_ic_pause_dark.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/passeador_de_caes.jpg",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/passeador_de_caes.jpg"
+    },
+    {
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/handshake_24.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/handshake_24.png"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_search_api_material.xml"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cozinheira.jpg",
-        "source": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/res/drawable/cozinheira.jpg"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_search_api_material.xml"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_forward10.xml",
+        "source": "/Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/res/drawable/cast_ic_notification_forward10.xml"
     },
     {
-<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
         "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_track_material.xml"
     },
     {
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/baba.jpg",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/baba.jpg"
-=======
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_search_api_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_ic_go_search_api_material.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_edit_text_material.xml"
-    },
-    {
-<<<<<<< HEAD
         "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/facebook_butt.png",
         "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/facebook_butt.png"
-=======
-        "merged": "/Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_fab_background.xml"
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/res/drawable/design_fab_background.xml"
-    },
-    {
-        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/cozinheira.jpg",
-        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP/MOBILE/JobUp/app/src/main/res/drawable/cozinheira.jpg"
+        "merged": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/build/intermediates/res/merged/debug/drawable/logojobup.png",
+        "source": "/Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/res/drawable/logojobup.png"
     }
 ]

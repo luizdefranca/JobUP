@@ -7,19 +7,9 @@ package com.br.jobup.services.parsers;
  * Last modified 12/05/17 03:08
  */
 
-<<<<<<< HEAD
-import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
+import com.br.jobup.models.especialidade.ServicoOferta;
 import com.br.jobup.services.RetroFitInicializador;
 
-=======
-import android.util.Log;
-
-import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
-import com.br.jobup.services.RetroFitInicializador;
-import com.br.jobup.services.usuarioFullServices.UsuarioService;
-
-import java.io.IOException;
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
 import java.util.List;
 
 import retrofit2.Call;
@@ -37,11 +27,11 @@ public class ParserEspecialidadeCatalogo {
     public ParserEspecialidadeCatalogo(int idEspecialidade){
         this.idEspecialidade = idEspecialidade;
     }
-    public Call<List<EspecialidadeCatalogo>> getAll(){
-        Call<List<EspecialidadeCatalogo>> especialidadesCall = null;
+    public Call<List<ServicoOferta>> getAll(){
+        Call<List<ServicoOferta>> especialidadesCall = null;
 
             especialidadesCall =  new RetroFitInicializador()
-                    .getEspecialidadesAPI()
+                    .createEspecialidadeCatalogoAPI()
                     .getAll(this.idEspecialidade);
 
 

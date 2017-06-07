@@ -7,7 +7,7 @@ package com.br.jobup.services.interfaces;
  * Last modified 12/05/17 03:01
  */
 
-import com.br.jobup.models.especialidade.EspecialidadeCatalogo;
+import com.br.jobup.models.especialidade.ServicoOferta;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public interface IEspecialidadeCatalogoAPI {
 
 
     @GET(PATH)
-    Call<List<EspecialidadeCatalogo>> getAll(
+    Call<List<ServicoOferta>> getAll(
             @Query("idEspecialidade") int idEspecialidade
     );
 }

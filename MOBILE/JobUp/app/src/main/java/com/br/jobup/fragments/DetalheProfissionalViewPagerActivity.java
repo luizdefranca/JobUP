@@ -1,6 +1,7 @@
 package com.br.jobup.fragments;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
@@ -10,7 +11,7 @@ import android.os.Bundle;
 import com.br.jobup.R;
 import com.br.jobup.adapters.TabDetalheProfissionalAdapter;
 
-import activities.CatalogoEspecialidadeActivity;
+import com.br.jobup.activities.CatalogoEspecialidadeActivity;
 
 /*
  * Created by Luiz Carlos Ramos on 26/05/17 01:28
@@ -27,8 +28,8 @@ public class DetalheProfissionalViewPagerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalhe_profissional_view_pager);
 
         // Set Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setHomeButtonEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         // Set Title on the ActionBar
         getSupportActionBar().setTitle("Detalhe do Profissional");
@@ -55,5 +56,13 @@ public class DetalheProfissionalViewPagerActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Este método é utilizado para não pagar a activity quando usar o botao up
+     * @return
+     */
+    @Nullable
+    @Override
+    public Intent getParentActivityIntent() {
+        return super.getParentActivityIntent().addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    }
 }

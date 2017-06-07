@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.br.jobup">
 
     <!-- To auto-complete the login text field in the usuarioSignIn form with the user's emails -->
@@ -8,16 +9,32 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> -->
+    <!-- <uses-feature android:glEsVersion="0x00020000" -->
+    <!-- android:required="true"/> -->
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@drawable/applogojobup"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:screenOrientation="portrait"
-        android:theme="@style/AppTheme">
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode">
         <activity
-            android:name="activities.MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -27,49 +44,67 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="activities.LoginActivity"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name="trash.ApresentacaoActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="activities.SingInActivity"
+            android:name=".activities.SingInActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="activities.CadastroActivity"
+            android:name=".activities.CadastroActivity"
             android:label="@string/title_activity_cadastro" />
         <activity
-            android:name="activities.SignUpActivity"
+            android:name=".activities.SignUpActivity"
             android:label="Cadastro"
-            android:parentActivityName="activities.SingInActivity" />
+            android:parentActivityName=".activities.SingInActivity" />
         <activity
-            android:name="activities.ApresentacaoActivity"
+            android:name=".activities.ApresentacaoActivity"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/Splashscreen">
 
-
         </activity>
         <activity
-            android:name="activities.MensagensActivity"
+            android:name=".activities.MensagensActivity"
             android:label="@string/title_activity_mensagem" />
-
         <activity
-            android:name="activities.DetalheServicoActivity"
+            android:name=".activities.OfertarServicoActivity"
+            android:label="Contratar Serviço" />
+        <activity
+            android:name=".activities.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
-        <activity android:name="activities.ListUsuarioActivity" />
-<<<<<<< HEAD
-        <activity android:name="activities.CatalogoEspecialidadeActivity"
-            android:parentActivityName="activities.MainActivity"/>
-=======
-        <activity android:name="activities.CatalogoEspecialidadeActivity" />
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-        <activity android:name="activities.ListaNovaDeUsuariosActivity" />
-        <activity android:name=".fragments.DetalheProfissionalViewPagerActivity"
-            android:parentActivityName="activities.CatalogoEspecialidadeActivity">
+        <activity android:name=".activities.ListUsuarioActivity" />
+        <activity
+            android:name=".activities.CatalogoEspecialidadeActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity android:name=".activities.ListaNovaDeUsuariosActivity" />
+        <activity
+            android:name=".fragments.DetalheProfissionalViewPagerActivity"
+            android:parentActivityName=".activities.CatalogoEspecialidadeActivity" />
+        <activity
+            android:name=".fragments.OfertaPrivadaViewPagerActivity"
+            android:parentActivityName=".activities.MainActivity" />
 
-        </activity>
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
+        <!-- android:value="AIzaSyCWRSBi451P-5CzQjb2P-5zO4k7zC2A_pM"/> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.version" -->
+        <!-- android:value="@integer/google_play_services_version"/> -->
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".activities.MapaActivity"
+            android:parentActivityName=".activities.CatalogoEspecialidadeActivity"/>
     </application>
 
 </manifest>

@@ -1,328 +1,408 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< HEAD
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:1-70:12
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:1-110:12
 	package
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:3:5-27
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:4:5-27
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:3:5-51
 	xmlns:android
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:6:5-71
-	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:6:22-68
-uses-permission#android.permission.READ_PROFILE
 ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:7:5-71
 	android:name
 		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:7:22-68
-uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:5-72
-	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:22-69
-uses-permission#android.permission.INTERNET
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:5-67
-	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:22-64
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:10:5-79
-	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:10:22-76
-application
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:5-68:19
-MERGED from [com.android.support:design:24.0.0] /Users/luizramos/.android/build-cache/1e4b9670eae6128a30dceb1c2836eaccc8d75482/output/AndroidManifest.xml:22:5-20
-=======
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:1-62:12
-	package
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:3:5-27
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-	android:versionName
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-	xmlns:android
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:2:11-69
-	android:versionCode
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:6:5-71
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:6:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:7:5-71
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:5-71
 	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:7:22-68
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:5-72
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:5-72
 	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:8:22-69
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:22-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:5-67
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-analytics:10.2.0] /Users/luizramos/.android/build-cache/beabb786e42586a3ad63f1787ea5aac6670f631c/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-crash:10.2.0] /Users/luizramos/.android/build-cache/0f76c28ecd1bf15151049f5c9f3278696a05aab2/output/AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/luizramos/.android/build-cache/a80f0d66b627ae367db6f0bed934bf53cea0ae9a/output/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/luizramos/.android/build-cache/6daac8f6e1ff91c847e5fafb8a82b0484c495a55/output/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/147b63663fd7786a20e0f096dc7a57ace74db117/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/8bb8a2ebd12187f02893b79f055a547b803c5234/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/luizramos/.android/build-cache/b53dfb266cf043c79156950d2359bd5678637ec0/output/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:9:22-64
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:10:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:11:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-analytics:10.2.0] /Users/luizramos/.android/build-cache/beabb786e42586a3ad63f1787ea5aac6670f631c/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-nearby:10.2.0] /Users/luizramos/.android/build-cache/429cfc84634d4f0b498a2c672f6cbf0193758218/output/AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/147b63663fd7786a20e0f096dc7a57ace74db117/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/8bb8a2ebd12187f02893b79f055a547b803c5234/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/luizramos/.android/build-cache/b53dfb266cf043c79156950d2359bd5678637ec0/output/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:22-78
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:5-98
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:22-95
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:20:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:6-82
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:23-79
 application
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:11:5-60:19
-MERGED from [com.android.support:design:25.0.0] /Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:transition:25.0.0] /Users/luizramos/.android/build-cache/8d2dbd76ed96d846f84d3320751f75b5da042727/output/AndroidManifest.xml:22:5-20
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:9:5-20
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:26:5-108:19
+MERGED from [com.android.support:design:24.0.0] /Users/luizramos/.android/build-cache/1e4b9670eae6128a30dceb1c2836eaccc8d75482/output/AndroidManifest.xml:22:5-20
 MERGED from [com.github.hynra:GSON-SharedPreferences:1.1] /Users/luizramos/.android/build-cache/e46f0b40f3a176ef4b6f12830ee43544f2b65d1d/output/AndroidManifest.xml:11:5-15:19
+MERGED from [com.google.android.gms:play-services:10.2.0] /Users/luizramos/.android/build-cache/b2f1d560dd4a85b074bd3f90edde711aae6eeeb7/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:23:5-27:19
+MERGED from [com.google.android.gms:play-services-analytics:10.2.0] /Users/luizramos/.android/build-cache/beabb786e42586a3ad63f1787ea5aac6670f631c/output/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.0] /Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast:10.2.0] /Users/luizramos/.android/build-cache/5259d8ecfb1dc2a87545edcecc24e48b1e65b1c6/output/AndroidManifest.xml:18:5-19
+MERGED from [com.android.support:mediarouter-v7:24.0.0] /Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:palette-v7:24.0.0] /Users/luizramos/.android/build-cache/cd955e3c45098a6227b7ba5ffc82d8a366b76cf3/output/AndroidManifest.xml:22:5-23:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/88448ae9b445b0a9421d8889de4dbca4b61bb0fb/output/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.0] /Users/luizramos/.android/build-cache/c97165f829a56ab9ef892ece2e1ba7ae376dc7c8/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:10.2.0] /Users/luizramos/.android/build-cache/cd484ea0851913ed427664db3fd06677415791a6/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-awareness:10.2.0] /Users/luizramos/.android/build-cache/cf32bf26e24d6b02bddec7d6d990ec10e79e8741/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-crash:10.2.0] /Users/luizramos/.android/build-cache/0f76c28ecd1bf15151049f5c9f3278696a05aab2/output/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-auth:10.2.0] /Users/luizramos/.android/build-cache/349abd07082a004141823286a8b55ee29e98640d/output/AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.android.gms:play-services-fitness:10.2.0] /Users/luizramos/.android/build-cache/f8a43ee425ad52f73fabf98bb1312694fe6570e4/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:10.2.0] /Users/luizramos/.android/build-cache/fefcaf89a026b2e09864792ce4372001574c7421/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:10.2.0] /Users/luizramos/.android/build-cache/2eee51b924ab2037ed18ac36523571d0f7a179ad/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-gass:10.2.0] /Users/luizramos/.android/build-cache/fcab9b25f858d491b3a9137c4a81d08c6a00325e/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/luizramos/.android/build-cache/a80f0d66b627ae367db6f0bed934bf53cea0ae9a/output/AndroidManifest.xml:23:5-19
+MERGED from [com.google.firebase:firebase-appindexing:10.2.0] /Users/luizramos/.android/build-cache/43d33b52d7b9c60738756ddd4341a48cfc929446/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/luizramos/.android/build-cache/6daac8f6e1ff91c847e5fafb8a82b0484c495a55/output/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/luizramos/.android/build-cache/50d213736bf3febc384cbeab7c434a5d55fbe5ad/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-nearby:10.2.0] /Users/luizramos/.android/build-cache/429cfc84634d4f0b498a2c672f6cbf0193758218/output/AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-panorama:10.2.0] /Users/luizramos/.android/build-cache/03c3f04d49be53d9b1f8e0d325146b5d01591ab4/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-places:10.2.0] /Users/luizramos/.android/build-cache/9234fb61a09ae897460ccc7d13d7147abd0af3ea/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-plus:10.2.0] /Users/luizramos/.android/build-cache/58c5e229697ad3ed3a5ad56057c6ba85da4423f3/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.0] /Users/luizramos/.android/build-cache/19a20a582d26533b0e1a26bd3cb8a464cdf7858e/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/147b63663fd7786a20e0f096dc7a57ace74db117/output/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.0] /Users/luizramos/.android/build-cache/cc82311ba1c9fb2ba9cba1ae82e6489afad098fd/output/AndroidManifest.xml:19:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/8bb8a2ebd12187f02893b79f055a547b803c5234/output/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-vision:10.2.0] /Users/luizramos/.android/build-cache/511fb00c1aca283067ca6b743b6b79921e5ab81b/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-identity:10.2.0] /Users/luizramos/.android/build-cache/a4fe13d02f6f2ca0826c86d52e4112bf034a1d4f/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/luizramos/.android/build-cache/b53dfb266cf043c79156950d2359bd5678637ec0/output/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-wearable:10.2.0] /Users/luizramos/.android/build-cache/c70f4382fcd7427a74e30795c8bf9f707ce1bc85/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/luizramos/.android/build-cache/a7ed2bfd8b6721132cbfe838dad333ba4d0cd0d3/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:19:5-21:19
 MERGED from [com.android.support:support-v4:25.3.1] /Users/luizramos/.android/build-cache/bcdb2d04776e43a55473a447ee596d8f0cf01f7b/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/luizramos/.android/build-cache/e572c3427dbbad3b82090b548ac16ae21e949ba0/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/luizramos/.android/build-cache/fa4b6098b0132dbc3bf7197d5b1538a55b2a2379/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/luizramos/.android/build-cache/09da18f372e1791c46a79a48d60840f313afc6b8/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/luizramos/.android/build-cache/310c9bcc9ce478e447498ce79e5b772850cb82f6/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.android/build-cache/e7ca83e80b049bb2e8e89ae982cc2b80018cf017/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:9:5-20
 	android:screenOrientation
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:17:9-45
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:32:9-45
 	android:label
-<<<<<<< HEAD
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:31:9-41
 	android:supportsRtl
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:33:9-35
+	android:debuggable
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:29:9-34
+	tools:ignore
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:35:9-42
 	android:allowBackup
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:28:9-35
 	android:icon
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:14:9-46
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:30:9-46
 	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:18:9-40
-activity#activities.MainActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:19:9-28:20
-	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:21:13-45
-	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:13-56
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:34:9-40
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:20:13-51
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:27:9-68
+activity#com.br.jobup.activities.MainActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:36:9-45:20
+	android:label
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:38:13-45
+	android:theme
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:39:13-56
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:37:13-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:23:13-27:29
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:40:13-44:29
 action#android.intent.action.MAIN
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:43:17-77
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:26:27-74
-activity#activities.LoginActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:29:9-31:47
-	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:31:13-44
-	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:30:13-52
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:43:27-74
 activity#trash.ApresentacaoActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:32:9-34:47
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:46:9-48:47
 	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:34:13-44
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:48:13-44
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:33:13-54
-activity#activities.SingInActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:35:9-37:47
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:47:13-54
+activity#com.br.jobup.activities.SingInActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:49:9-51:47
 	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:37:13-44
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:51:13-44
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:36:13-53
-activity#activities.CadastroActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:38:9-40:63
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:50:13-54
+activity#com.br.jobup.activities.CadastroActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:52:9-54:63
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:40:13-60
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:54:13-60
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:39:13-55
-activity#activities.SignUpActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:41:9-44:70
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:53:13-56
+activity#com.br.jobup.activities.SignUpActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:55:9-58:71
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:43:13-37
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:57:13-37
 	android:parentActivityName
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:44:13-67
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:58:13-68
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:42:13-53
-activity#activities.ApresentacaoActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:45:9-53:20
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:56:13-54
+activity#com.br.jobup.activities.ApresentacaoActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:59:9-66:20
 	android:screenOrientation
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:49:13-49
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:63:13-49
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:47:13-45
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:61:13-45
 	android:noHistory
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:48:13-37
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:62:13-37
 	android:theme
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:50:13-48
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:64:13-48
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:46:13-59
-activity#activities.MensagensActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:54:9-56:63
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:60:13-60
+activity#com.br.jobup.activities.MensagensActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:67:9-69:63
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:56:13-60
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:69:13-60
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:55:13-56
-activity#activities.DetalheServicoActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:57:9-59:66
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:68:13-57
+activity#com.br.jobup.activities.OfertarServicoActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:70:9-72:49
 	android:label
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:59:13-63
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:72:13-46
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:58:13-61
-activity#activities.ListUsuarioActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:60:9-67
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:71:13-62
+activity#com.br.jobup.activities.DetalheServicoActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:73:9-75:66
+	android:label
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:75:13-63
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:60:19-64
-activity#activities.CatalogoEspecialidadeActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:61:9-62:67
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:74:13-62
+activity#com.br.jobup.activities.ListUsuarioActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:76:9-68
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:76:19-65
+activity#com.br.jobup.activities.CatalogoEspecialidadeActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:77:9-79:69
 	android:parentActivityName
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:62:13-65
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:79:13-66
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:61:19-74
-activity#activities.ListaNovaDeUsuariosActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:63:9-75
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:78:13-69
+activity#com.br.jobup.activities.ListaNovaDeUsuariosActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:80:9-76
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:63:19-72
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:80:19-73
 activity#com.br.jobup.fragments.DetalheProfissionalViewPagerActivity
-ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:64:9-67:20
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:81:9-83:86
 	android:parentActivityName
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:65:13-82
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:83:13-83
 	android:name
-		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:64:19-81
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:82:13-75
+activity#com.br.jobup.fragments.OfertaPrivadaViewPagerActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:84:9-86:69
+	android:parentActivityName
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:86:13-66
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:85:13-69
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:102:9-104:55
+	android:value
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:104:13-52
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:103:13-58
+activity#com.br.jobup.activities.MapaActivity
+ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:106:9-107:85
+	android:parentActivityName
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:107:13-83
+	android:name
+		ADDED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml:106:19-58
 uses-sdk
 INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.0.0] /Users/luizramos/.android/build-cache/1e4b9670eae6128a30dceb1c2836eaccc8d75482/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:24.0.0] /Users/luizramos/.android/build-cache/74ef46dc55723f8b099b59d4614dcc875570958a/output/AndroidManifest.xml:20:5-43
-=======
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:14:9-41
-	android:supportsRtl
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:15:9-35
-	android:allowBackup
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:12:9-35
-	android:icon
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:13:9-46
-	android:theme
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:16:9-40
-activity#activities.MainActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:17:9-20:59
-	android:label
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:19:13-45
-	android:theme
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:20:13-56
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:18:13-51
-activity#activities.LoginActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:21:9-24:47
-	android:label
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:23:13-57
-	android:theme
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:24:13-44
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:22:13-52
-activity#trash.ApresentacaoActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:25:9-27:47
-	android:theme
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:27:13-44
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:26:13-54
-activity#activities.SingInActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:28:9-30:56
-	android:theme
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:30:13-44
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:29:13-53
-activity#activities.CadastroActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:31:9-33:63
-	android:label
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:33:13-60
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:32:13-55
-activity#activities.SignUpActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:34:9-36:40
-	android:label
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:36:13-37
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:35:13-53
-activity#activities.ApresentacaoActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:37:9-49:20
-	android:screenOrientation
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:41:13-49
-	android:label
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:39:13-45
-	android:noHistory
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:40:13-37
-	android:theme
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:42:13-48
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:38:13-59
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:43:13-47:29
-action#android.intent.action.MAIN
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:44:17-69
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:44:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:46:17-77
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:46:27-74
-activity#activities.MensagensActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:50:9-52:63
-	android:label
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:52:13-60
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:51:13-56
-activity#activities.DetalheServicoActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:54:9-56:66
-	android:label
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:56:13-63
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:55:13-61
-activity#activities.ListUsuarioActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:57:9-67
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:57:19-64
-activity#activities.CatalogoEspecialidadeActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:58:9-77
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:58:19-74
-activity#activities.ListaNovaDeUsuariosActivity
-ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:59:9-75
-	android:name
-		ADDED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml:59:19-72
-uses-sdk
-INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.0.0] /Users/luizramos/.android/build-cache/4ef5bfd27878ab631e2927b41f08cd56e4677372/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:recyclerview-v7:25.0.0] /Users/luizramos/.android/build-cache/83d187a3105024e10c8091b233fdfac6383d04b0/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.0.0] /Users/luizramos/.android/build-cache/8d2dbd76ed96d846f84d3320751f75b5da042727/output/AndroidManifest.xml:20:5-44
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.hynra:GSON-SharedPreferences:1.1] /Users/luizramos/.android/build-cache/e46f0b40f3a176ef4b6f12830ee43544f2b65d1d/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services:10.2.0] /Users/luizramos/.android/build-cache/b2f1d560dd4a85b074bd3f90edde711aae6eeeb7/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads:10.2.0] /Users/luizramos/.android/build-cache/26d10077f6572e843dc91fde36002f0986d5fc2f/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-analytics:10.2.0] /Users/luizramos/.android/build-cache/beabb786e42586a3ad63f1787ea5aac6670f631c/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.0] /Users/luizramos/.android/build-cache/6f45a673918853a727699098924f0b34fc022cb6/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.0] /Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-cast:10.2.0] /Users/luizramos/.android/build-cache/5259d8ecfb1dc2a87545edcecc24e48b1e65b1c6/output/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:mediarouter-v7:24.0.0] /Users/luizramos/.android/build-cache/f12943bc5dbfa94cdbc6e7efc8687bcd86f45759/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:palette-v7:24.0.0] /Users/luizramos/.android/build-cache/cd955e3c45098a6227b7ba5ffc82d8a366b76cf3/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/88448ae9b445b0a9421d8889de4dbca4b61bb0fb/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.0] /Users/luizramos/.android/build-cache/c97165f829a56ab9ef892ece2e1ba7ae376dc7c8/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-config:10.2.0] /Users/luizramos/.android/build-cache/cd484ea0851913ed427664db3fd06677415791a6/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-awareness:10.2.0] /Users/luizramos/.android/build-cache/cf32bf26e24d6b02bddec7d6d990ec10e79e8741/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-crash:10.2.0] /Users/luizramos/.android/build-cache/0f76c28ecd1bf15151049f5c9f3278696a05aab2/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-auth:10.2.0] /Users/luizramos/.android/build-cache/349abd07082a004141823286a8b55ee29e98640d/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-database:10.2.0] /Users/luizramos/.android/build-cache/f9f03d03cbc2a48203ff934b7865ebc45f0d3fc1/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:10.2.0] /Users/luizramos/.android/build-cache/d2b81396635f809f6e015aa19637d9af371e86e0/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-storage:10.2.0] /Users/luizramos/.android/build-cache/cfe76adb2c736ee8e52a59c6a829f4245a4a3aab/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage-common:10.2.0] /Users/luizramos/.android/build-cache/d3796310187306270a81430dc38eaaea91c86a67/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-fitness:10.2.0] /Users/luizramos/.android/build-cache/f8a43ee425ad52f73fabf98bb1312694fe6570e4/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-games:10.2.0] /Users/luizramos/.android/build-cache/fefcaf89a026b2e09864792ce4372001574c7421/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-drive:10.2.0] /Users/luizramos/.android/build-cache/2eee51b924ab2037ed18ac36523571d0f7a179ad/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gass:10.2.0] /Users/luizramos/.android/build-cache/fcab9b25f858d491b3a9137c4a81d08c6a00325e/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/luizramos/.android/build-cache/a80f0d66b627ae367db6f0bed934bf53cea0ae9a/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-appindexing:10.2.0] /Users/luizramos/.android/build-cache/43d33b52d7b9c60738756ddd4341a48cfc929446/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/luizramos/.android/build-cache/6daac8f6e1ff91c847e5fafb8a82b0484c495a55/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-instantapps:10.2.0] /Users/luizramos/.android/build-cache/ca7e96be6abed1e7f047f84b4d546f47bb073004/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/luizramos/.android/build-cache/50d213736bf3febc384cbeab7c434a5d55fbe5ad/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-nearby:10.2.0] /Users/luizramos/.android/build-cache/429cfc84634d4f0b498a2c672f6cbf0193758218/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-panorama:10.2.0] /Users/luizramos/.android/build-cache/03c3f04d49be53d9b1f8e0d325146b5d01591ab4/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-places:10.2.0] /Users/luizramos/.android/build-cache/9234fb61a09ae897460ccc7d13d7147abd0af3ea/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-plus:10.2.0] /Users/luizramos/.android/build-cache/58c5e229697ad3ed3a5ad56057c6ba85da4423f3/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.0] /Users/luizramos/.android/build-cache/19a20a582d26533b0e1a26bd3cb8a464cdf7858e/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:10.2.0] /Users/luizramos/.android/build-cache/5f3b6323aad749594f92e633cb8ee397de3a06a4/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/147b63663fd7786a20e0f096dc7a57ace74db117/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.0] /Users/luizramos/.android/build-cache/cc82311ba1c9fb2ba9cba1ae82e6489afad098fd/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/8bb8a2ebd12187f02893b79f055a547b803c5234/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-vision:10.2.0] /Users/luizramos/.android/build-cache/511fb00c1aca283067ca6b743b6b79921e5ab81b/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-wallet:10.2.0] /Users/luizramos/.android/build-cache/9c47bb47dc77459b4c83e4411da522cfb299a80b/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-identity:10.2.0] /Users/luizramos/.android/build-cache/a4fe13d02f6f2ca0826c86d52e4112bf034a1d4f/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/luizramos/.android/build-cache/b53dfb266cf043c79156950d2359bd5678637ec0/output/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-wearable:10.2.0] /Users/luizramos/.android/build-cache/c70f4382fcd7427a74e30795c8bf9f707ce1bc85/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/luizramos/.android/build-cache/a7ed2bfd8b6721132cbfe838dad333ba4d0cd0d3/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:17:5-43
 MERGED from [com.android.support:support-v4:25.3.1] /Users/luizramos/.android/build-cache/bcdb2d04776e43a55473a447ee596d8f0cf01f7b/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/luizramos/.android/build-cache/e572c3427dbbad3b82090b548ac16ae21e949ba0/output/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/luizramos/.android/build-cache/fa4b6098b0132dbc3bf7197d5b1538a55b2a2379/output/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/luizramos/.android/build-cache/09da18f372e1791c46a79a48d60840f313afc6b8/output/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/luizramos/.android/build-cache/310c9bcc9ce478e447498ce79e5b772850cb82f6/output/AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.android/build-cache/e7ca83e80b049bb2e8e89ae982cc2b80018cf017/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:multidex:1.0.0] /Users/luizramos/.android/build-cache/9c203307507147f448b7bdb1b7f32079a7c798fe/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/luizramos/.android/build-cache/b54264d9217e50696873da03bb94ad640cd89cab/output/AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-<<<<<<< HEAD
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/luizramos/Documents/workspace_unibratec/JobUP-model/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-=======
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luizramos/Downloads/JobUP-master-2/MOBILE/JobUp/app/src/main/AndroidManifest.xml
->>>>>>> 0c51710b27bdb65c1917702af9a22ee6642305ae
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:25:9-232
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:25:72-181
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:25:182-230
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:25:19-71
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:26:9-131
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:26:92-129
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.0] /Users/luizramos/.android/build-cache/aa8b66b245f4faf03410296061efd14aae853220/output/AndroidManifest.xml:26:19-91
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-analytics:10.2.0] /Users/luizramos/.android/build-cache/beabb786e42586a3ad63f1787ea5aac6670f631c/output/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/147b63663fd7786a20e0f096dc7a57ace74db117/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/8bb8a2ebd12187f02893b79f055a547b803c5234/output/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:10.2.0] /Users/luizramos/.android/build-cache/beabb786e42586a3ad63f1787ea5aac6670f631c/output/AndroidManifest.xml:24:22-65
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:20:9-25:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:20:51-74
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:20:75-121
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:20:19-50
+intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:21:13-24:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:22:17-89
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:22:25-87
+category#android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:23:17-75
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.0] /Users/luizramos/.android/build-cache/721982e85cd0fecb1544172baba8356e12ae6202/output/AndroidManifest.xml:23:27-73
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.0] /Users/luizramos/.android/build-cache/a4af5b91a6f6ee8fff411a0f70ef0d5a89709fb3/output/AndroidManifest.xml:24:18-63
+receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] /Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/AndroidManifest.xml:5:9-99
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] /Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/AndroidManifest.xml:5:19-97
+service#com.google.android.gms.cast.framework.media.MediaNotificationService
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] /Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/AndroidManifest.xml:6:9-103
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] /Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/AndroidManifest.xml:6:18-101
+service#com.google.android.gms.cast.framework.ReconnectionService
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] /Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/AndroidManifest.xml:7:9-92
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.0] /Users/luizramos/.android/build-cache/a6bc924ade1563080ab754e4a57f2fdc117de5bb/output/AndroidManifest.xml:7:18-90
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/luizramos/.android/build-cache/60f691f6abb14c19369683a4cb67440887e8c5a6/output/AndroidManifest.xml:22:5-24:34
@@ -337,3 +417,165 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/luizramos/.androi
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:27:9-31
 	android:name
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/luizramos/.android/build-cache/ecd0503c643e4f6b7fa5a6e006aa7904b61d28f0/output/AndroidManifest.xml:26:9-47
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:23:18-87
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:24:13-26:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:24:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.0] /Users/luizramos/.android/build-cache/34e6714e84b1858abc416ac4009caa85cb3390ff/output/AndroidManifest.xml:25:25-75
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/luizramos/.android/build-cache/a80f0d66b627ae367db6f0bed934bf53cea0ae9a/output/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/luizramos/.android/build-cache/6daac8f6e1ff91c847e5fafb8a82b0484c495a55/output/AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/luizramos/.android/build-cache/a80f0d66b627ae367db6f0bed934bf53cea0ae9a/output/AndroidManifest.xml:20:22-79
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:24:9-134
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:24:110-132
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:24:85-109
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:24:18-84
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:25:9-32:20
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:25:94-118
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:25:19-93
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:26:13-31:29
+data
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:27:17-71
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:27:23-69
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:28:25-66
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.0] /Users/luizramos/.android/build-cache/1f9028b5df4b8a65688e6efb7a0b8ef781df8bc8/output/AndroidManifest.xml:30:27-75
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/147b63663fd7786a20e0f096dc7a57ace74db117/output/AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/luizramos/.android/build-cache/147b63663fd7786a20e0f096dc7a57ace74db117/output/AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/luizramos/.android/build-cache/bbd1c2b394e6b316acfada4467b53ebc032a4134/output/AndroidManifest.xml:32:16-87
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:30:9-36:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:31:13-35:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:32:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:33:17-85
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:33:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:34:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:40:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:40:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:40:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:44:9-48:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:44:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:44:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:45:13-47:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:45:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:46:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/luizramos/.android/build-cache/6698bf79541434c39221d5509f7479f0f888e7b3/output/AndroidManifest.xml:46:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/luizramos/.android/build-cache/e2203cc16ccc8d496c5c2119aab9a0960f091e0a/output/AndroidManifest.xml:6:79-143
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:10.2.0] /Users/luizramos/.android/build-cache/b53dfb266cf043c79156950d2359bd5678637ec0/output/AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:10.2.0] /Users/luizramos/.android/build-cache/b53dfb266cf043c79156950d2359bd5678637ec0/output/AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:10.2.0] /Users/luizramos/.android/build-cache/b53dfb266cf043c79156950d2359bd5678637ec0/output/AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/luizramos/.android/build-cache/3bbb4f1dac1a8f1c867c2698e89a3990b4237fa9/output/AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.2.0] /Users/luizramos/.android/build-cache/46bf93545238b4ab26ea608318662e407f19a9cd/output/AndroidManifest.xml:20:20-65
