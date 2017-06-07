@@ -63,7 +63,7 @@ namespace JOB.WEB.Controllers
         // GET: Profissional/Details/5
         public ActionResult Details(Guid id, int idEspecialidade)
         {
-            var Dominio = ctx.PerfilProfissional.First(f => f.ID_USUARIO == id);
+            var Dominio = ctx.PerfilProfissional.First(f => f.ID_USUARIO == id & f.ID_ESPECIALIDADE == idEspecialidade);
 
             var model = Mapper.Map<ProfissionalViewModel>(Dominio); //converte a classe original para o viewmodel (que é reconhecida pela view)
 
