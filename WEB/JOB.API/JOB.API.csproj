@@ -104,6 +104,8 @@
     <Compile Include="Controllers\AvaliacaoController.cs" />
     <Compile Include="Controllers\PropostaController.cs" />
     <Compile Include="Controllers\OfertaController.cs" />
+    <Compile Include="Controllers\ServicoPrivadoClienteSemPropostaController.cs" />
+    <Compile Include="Controllers\ServicoPrivadoClienteController.cs" />
     <Compile Include="Controllers\ServicoPrivadoController.cs" />
     <Compile Include="Controllers\SubEspecialidadeController.cs" />
     <Compile Include="Controllers\FormacaoController.cs" />
