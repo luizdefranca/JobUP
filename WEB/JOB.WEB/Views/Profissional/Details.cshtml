@@ -131,7 +131,7 @@
                                         </td>
                                         <td class="text-center">
                                             @Html.ActionLink(" ", "Details", "Profissional", new { id = item.ID_USUARIO, idEspecialidade = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-eye", @title = "Visualizar detalhes deste perfil" })
-                                            @Html.ActionLink(" ", "../Avaliacao/Create", new { idProfissional = item.ID_USUARIO, ID_ESPECIALIDADE = item.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-star", @title = "Avalie o Profissional" })
+                                            
                                         </td>
                                     </tr>
                                 }
@@ -177,5 +177,6 @@
     </div>
 </div>
 
-@Html.ActionLink(" Oferta Serviço", "Create", "ServicoPrivado", new { idProfissional = Model.ID_USUARIO, ID_ESPECIALIDADE = Model.ID_ESPECIALIDADE }, new { @class = "btn btn-success btn-sm fa fa-handshake-o", @title = "Ofertar Serviço para este profissional" })
+@Html.ActionLink(" Oferta Serviço", "Create", "ServicoPrivado", new { idProfissional = Model.ID_USUARIO, ID_ESPECIALIDADE = Model.ID_ESPECIALIDADE }, new { @class = "btn btn-success fa fa-handshake-o", @title = "Ofertar Serviço para este profissional" })
+@Html.ActionLink(" Avaliar", "../Avaliacao/Create", new { idProfissional = Model.ID_USUARIO, ID_ESPECIALIDADE = Model.ID_ESPECIALIDADE }, new { @class = "btn btn-primary fa fa-star", @title = "Avalie o Profissional" })
 @Html.ActionLink("Voltar", "Index", "Profissional", new { idEspecialidade = Model.ID_ESPECIALIDADE }, new { @class = "btn btn-default" })

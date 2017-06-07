@@ -1,23 +1,25 @@
-﻿using JOB.DATA;
+﻿using AutoMapper;
+using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace JOB.WEB.Controllers
 {
     public class AvaliacaoController : Controller
     {
+        private Contexto ctx = new Contexto();
 
-        Contexto ctx = new Contexto();
-        
         public ActionResult Create()
         {
             var model = new AvaliacaoViewModel();
+            var idProfissional = Guid.Parse(Request.QueryString["idProfissional"]);
+            var ID_ESPECIALIDADE = int.Parse(Request.QueryString["ID_ESPECIALIDADE"]);
+            Guid idCliente = Guid.Parse(User.Identity.GetUserId());
+
+            model = Mapper.Map<AvaliacaoViewModel>(ctx.Avaliacao.Find(idProfissional, ID_ESPECIALIDADE, idCliente));
             return View(model);
         }
 
@@ -33,7 +35,7 @@ namespace JOB.WEB.Controllers
                 ctx.Avaliacao.Add(objAv);
 
                 ctx.SaveChanges();
-                return RedirectToAction("../Home/Index");
+                return RedirectToAction("Details", "Profissional", new { id = idProfissional, idEspecialidade = ID_ESPECIALIDADE });
             }
             catch
             {
