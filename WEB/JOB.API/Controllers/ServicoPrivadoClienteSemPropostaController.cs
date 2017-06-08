@@ -3,11 +3,11 @@ using JOB.DATA;
 using JOB.WEB.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Data.Entity;
 
 namespace JOB.API.Controllers
 {
@@ -18,7 +18,7 @@ namespace JOB.API.Controllers
         public HttpResponseMessage Get(Guid idUsuarioCliente)
         {
             //TODO: nao tem que ser privado. tem q ser qualquer um
-            var domain = ctx.Servico.Include(i => i.PROPOSTAS).Where(w => w.ID_USUARIO == idUsuarioCliente & w.PUBLICO != false & !w.PROPOSTAS.Any()).ToList();
+            var domain = ctx.Servico.Include(i => i.PROPOSTAS).Include(i => i.OFERTAS).Where(w => w.ID_USUARIO == idUsuarioCliente & w.PUBLICO == false & !w.PROPOSTAS.Any()).ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
 
@@ -28,6 +28,7 @@ namespace JOB.API.Controllers
 
             foreach (var model in lstModel)
             {
+                model.ID_PROFISSIONAL = domain.First(f => f.ID_SERVICO == model.ID_SERVICO).OFERTAS.First().ID_USUARIO;
                 model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
                 model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
 
