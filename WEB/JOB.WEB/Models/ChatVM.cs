@@ -5,7 +5,9 @@ namespace JOB.WEB.Models
     public class ListaChatVM
     {
         public Guid ID_SERVICO { get; set; }
+        [Display(Name = "Descrição do Serviço")]
         public string DESC_SERVICO { get; set; }
+        [Display(Name = "Mensagens Não Lidas")]
         public int QTD_NAO_LIDAS { get; set; }
     }
 
