@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/banknotes_32"
+            android:title="Comprar créditos" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/workers_32"
+            android:title="Seja um profissional" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/document_32"
+            android:title="Ofertas de Serviços" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/handshake_32"
+            android:title="Meus Serviços Criados" />
+    </group>
+
+    <item android:title="Favoritos">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_propostas"
+                android:title="Ativar Destaque" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_perfil"
+                android:title="Perfil" />
+        </menu>
+    </item>
+
+</menu>

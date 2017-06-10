@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Luiz Carlos Ramos on 6/6/17 4:02 PM
+  ~
+  ~ Copyright (c) 2017. All rights reserved.
+  ~ Last modified 6/6/17 4:02 PM
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:id="@+id/action_mapa"
+    android:icon="@drawable/ic_map_black_32dp"
+    app:showAsAction="always"
+    android:title="Mapa" />
+</menu>

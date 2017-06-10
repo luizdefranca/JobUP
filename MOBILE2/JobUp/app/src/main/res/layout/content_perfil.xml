@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Luiz Carlos Ramos on 14/05/17 21:29
+  ~
+  ~ Copyright (c) 2017. All rights reserved.
+  ~ Last modified 08/05/17 08:31
+  -->
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.PerfilActivity"
+    tools:showIn="@layout/activity_perfil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#f9f9f9"
+            android:paddingBottom="10dp">
+
+
+
+            <TextView
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#203864"
+                android:textStyle="bold"
+                android:text="Nome" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:id="@+id/name"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textStyle="bold"
+                android:text="Nome do Usuario" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#f9f9f9"
+            android:layout_marginTop="1dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#203864"
+                android:textStyle="bold"
+                android:text="Cpf" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:id="@+id/cpf"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textStyle="bold"
+                android:text="000.000.000-00" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#f9f9f9"
+            android:layout_marginTop="1dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#203864"
+                android:textStyle="bold"
+                android:text="Email" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:id="@+id/email"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textStyle="bold"
+                android:text="usuario@usuario.com.br" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#f9f9f9"
+            android:layout_marginTop="1dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#203864"
+                android:textStyle="bold"
+                android:text="Senha" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textStyle="bold"
+                android:text="******" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:background="#000000"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/side_nav_bar"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:textColor="#ffffff"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Endereço"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="Cep" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:text="000000-000" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:layout_marginTop="1dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="Logradouro" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:text="Av Imbiribeira" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:layout_marginTop="1dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="Numero" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:text="0000" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:layout_marginTop="1dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="Bairro" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:text="Afogados" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:layout_marginTop="1dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="Cidade" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:text="Recife" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:layout_marginTop="1dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="U.F" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:text="Pernambuco" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:background="#000000"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/side_nav_bar"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:textColor="#ffffff"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Profissional"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="Especialidade" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:id="@+id/descricao"
+                    android:text="Nome da descricao" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:layout_marginTop="1dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="Disponibilidade" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:text="disponibilidade" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#f9f9f9"
+                android:layout_marginTop="1dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#203864"
+                    android:textStyle="bold"
+                    android:text="Avaliação" />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rtbEstrelas"
+                    android:stepSize="0.5"
+                    android:numStars="5"
+                    android:isIndicator="true"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

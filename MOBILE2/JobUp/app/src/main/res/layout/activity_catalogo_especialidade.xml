@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Luiz Carlos Ramos on 12/05/17 02:35
+  ~
+  ~ Copyright (c) 2017. All rights reserved.
+  ~ Last modified 08/05/17 20:51
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ListView
+            android:id="@+id/catalogo_especialidade_lstView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tabBar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            />
+        <include
+            android:id="@+id/tabBar"
+            layout="@layout/bottom_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+
+
+    </RelativeLayout>
+</LinearLayout>

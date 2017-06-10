@@ -1,0 +1,17 @@
+ {
+    "ID_USUARIO": "463ddc71-0171-4878-8eaa-e7029fbbf758",
+    "NOME": "Rafael Roberto de Queiroz Freitas",
+    "DT_NASCTO": "1995-11-13T00:00:00",
+    "ID_ESPECIALIDADE": 3,
+    "DESC_ESPECIALIDADE": "Babás",
+    "RESUMO_CURRICULO": "Sou paciente e carinhoso com seu filho(a)",
+    "DT_INCLUSAO": "0001-01-01T00:00:00",
+    "BAIRRO": null,
+    "CIDADE": null,
+    "ESTADO": null,
+    "PERFIL_DESTAQUE": false,
+    "DT_ORDENACAO": "0001-01-01T00:00:00",
+    "OUTROS_PERFIS": [],
+    "AVALIACOES": [],
+    "SERVICOS": []
+ }
