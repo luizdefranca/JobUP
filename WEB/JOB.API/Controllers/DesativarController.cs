@@ -9,8 +9,16 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API de desativar usuario
+    /// </summary>
     public class DesativarController : System.Web.Http.ApiController
     {
+        /// <summary>
+        /// Desativa um determinado usuario
+        /// </summary>
+        /// <param name="id">id do usuario</param>
+        /// <returns></returns>
         public HttpResponseMessage Get(Guid id)
         {
             using (Contexto ctx = new Contexto())

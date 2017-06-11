@@ -10,10 +10,18 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API das ofertas de servicos
+    /// </summary>
     public class OfertaController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
+        /// <summary>
+        /// Lista as ofertas de um determinado profissional
+        /// </summary>
+        /// <param name="idUsuario">id do usuario</param>
+        /// <returns></returns>
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var lstDominio = ctx.Oferta.Where(w => w.ID_USUARIO == idUsuario).ToList();

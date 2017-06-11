@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using JOB.WEB.App_Start;
+using System.Web.Mvc;
 
 namespace JOB.API
 {
@@ -7,6 +8,8 @@ namespace JOB.API
     {
         protected void Application_Start()
         {
+            AreaRegistration.RegisterAllAreas();
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
             GlobalConfiguration.Configuration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;

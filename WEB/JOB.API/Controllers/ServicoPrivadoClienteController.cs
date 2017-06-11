@@ -15,16 +15,16 @@ namespace JOB.API.Controllers
     {
         private readonly Contexto ctx = new Contexto();
 
+        /// <summary>
+        /// recupera todos os servicos privados que possuem propostas de um determinado usuario cliente (juntamente com as propostas)
+        /// </summary>
+        /// <param name="idUsuarioCliente">id do usuario cliente</param>
+        /// <returns>classe ServicoViewModel_api</returns>
         public HttpResponseMessage Get(Guid idUsuarioCliente)
         {
-            //TODO: nao tem que ser privado. tem q ser qualquer um
             var domain = ctx.Servico.Include(i => i.PROPOSTAS).Include(i => i.OFERTAS).Where(w => w.ID_USUARIO == idUsuarioCliente & w.PUBLICO == false & w.PROPOSTAS.Any()).ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
-
-            //ClaimsIdentity claimIdenties = HttpContext.User.Identity as ClaimsIdentity;
-
-            //ViewBag.POSSUI_FACE = claimIdenties.FindFirst("FacebookAccessToken") != null;
 
             foreach (var model in lstModel)
             {

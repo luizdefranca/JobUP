@@ -47,6 +47,8 @@ namespace JOB.WEB.Models
 
         [Display(Name = "Expectativa de Prazo")]
         public string TEMPO_SERVICO_DESC { get; set; }
+
+        public List<PropostaViewModel> PROPOSTAS { get; set; }
     }
 
     public class ServicoViewModel_full

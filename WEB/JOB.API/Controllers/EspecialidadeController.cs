@@ -13,11 +13,17 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API de especialidades
+    /// </summary>
     public class EspecialidadeController : ApiController
     {
         private Contexto ctx = new Contexto();
 
-        // GET: api/Usuario
+        /// <summary>
+        /// Recupera todas as listas
+        /// </summary>
+        /// <returns></returns>
         public HttpResponseMessage Get()
         {
             var result = ctx.Especialidade.ToList();
@@ -25,7 +31,11 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        // GET: api/Usuario/5
+        /// <summary>
+        /// Recupera uma determinada especialidade
+        /// </summary>
+        /// <param name="id">id da especialidade</param>
+        /// <returns></returns>
         public HttpResponseMessage Get(int id)
         {
             var result = ctx.Especialidade.FirstOrDefault(w => w.ID_ESPECIALIDADE == id);
@@ -33,13 +43,11 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        //public HttpResponseMessage GetPorUsuario(Guid id)
-        //{
-        //    var result = ctx.PerfilProfissional.Where(w => w.ID_USUARIO == id);
-
-        //    return Request.CreateResponse(HttpStatusCode.OK, result);
-        //}
-
+        /// <summary>
+        /// Salva uma nova especialidade
+        /// </summary>
+        /// <param name="request">classe ESPECIALIDADE</param>
+        /// <returns></returns>
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {
@@ -70,7 +78,12 @@ namespace JOB.API.Controllers
             }
         }
 
-        // PUT: api/Usuario/5
+        /// <summary>
+        /// Atualiza uma especialidade
+        /// </summary>
+        /// <param name="id">id da especialidade</param>
+        /// <param name="request">classe ESPECIALIDADE</param>
+        /// <returns></returns>
         public HttpResponseMessage Put(int id, HttpRequestMessage request)
         {
             try
@@ -102,7 +115,10 @@ namespace JOB.API.Controllers
             }
         }
 
-        // DELETE: api/Usuario/5
+        /// <summary>
+        /// Deleta uma especialidade
+        /// </summary>
+        /// <param name="id">id da especialidade</param>
         public void Delete(int id)
         {
             var item = ctx.Especialidade.FirstOrDefault(w => w.ID_ESPECIALIDADE == id);

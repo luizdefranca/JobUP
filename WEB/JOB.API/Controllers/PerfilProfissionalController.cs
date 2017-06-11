@@ -15,10 +15,18 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API de perfis profissionais
+    /// </summary>
     public class PerfilProfissionalController : ApiController
     {
         private Contexto ctx = new Contexto();
 
+        /// <summary>
+        /// Recupera todos os profissionais de uma determinada especialidade
+        /// </summary>
+        /// <param name="idEspecialidade">id da especialidade</param>
+        /// <returns></returns>
         public HttpResponseMessage Get(int idEspecialidade)
         {
             //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
@@ -67,7 +75,11 @@ namespace JOB.API.Controllers
             }
         }
 
-        // GET: api/Usuario
+        /// <summary>
+        /// Recupera todas os perfis profissionais de um determinado profissional
+        /// </summary>
+        /// <param name="idUsuario"></param>
+        /// <returns></returns>
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var result = ctx.PerfilProfissional.Include(i => i.ESPECIALIDADE).Where(w => w.ID_USUARIO == idUsuario).ToList();
@@ -75,7 +87,12 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        // GET: api/Usuario/5
+        /// <summary>
+        /// Recupera dados de um determinado perfil profissional
+        /// </summary>
+        /// <param name="idUsuario">id do usuario profissional</param>
+        /// <param name="idEspecialidade">id da especialidade</param>
+        /// <returns></returns>
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade)
         {
             var result = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
@@ -83,6 +100,11 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        /// <summary>
+        /// salva um novo perfil profissional
+        /// </summary>
+        /// <param name="request">classe PERFIL_PROFISSIONAL</param>
+        /// <returns></returns>
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {
@@ -113,7 +135,13 @@ namespace JOB.API.Controllers
             }
         }
 
-        // PUT: api/Usuario/5
+        /// <summary>
+        /// atualiza um perfil profissional
+        /// </summary>
+        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idEspecialidade">id da especialidade</param>
+        /// <param name="request">classe PERFIL_PROFISSIONAL</param>
+        /// <returns></returns>
         public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, HttpRequestMessage request)
         {
             try
@@ -145,7 +173,11 @@ namespace JOB.API.Controllers
             }
         }
 
-        // DELETE: api/Usuario/5
+        /// <summary>
+        /// deleta um perfil profissional
+        /// </summary>
+        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idEspecialidade">id da especialidade</param>
         public void Delete(Guid idUsuario, int idEspecialidade)
         {
             var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);

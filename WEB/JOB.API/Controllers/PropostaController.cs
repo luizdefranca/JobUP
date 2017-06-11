@@ -10,10 +10,18 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API de propostas de servicos (resposta do profissional)
+    /// </summary>
     public class PropostaController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
+        /// <summary>
+        /// recupera todas as propostas de um determinado usuario profissional
+        /// </summary>
+        /// <param name="idUsuario">id do usuario</param>
+        /// <returns>classe PropostaViewModel</returns>
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var lstDominio = ctx.Proposta.Where(w => w.ID_USUARIO == idUsuario).ToList();

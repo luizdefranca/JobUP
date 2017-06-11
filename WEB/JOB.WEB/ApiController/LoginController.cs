@@ -1,5 +1,4 @@
 ﻿using JOB.DATA;
-using JOB.WEB.Controllers;
 using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity.Owin;
@@ -13,6 +12,9 @@ using System.Web.Http;
 
 namespace JOB.WEB.ApiController
 {
+    /// <summary>
+    /// API exclusiva para lidar com o template MVC de segurança
+    /// </summary>
     [AllowAnonymous]
     public class LoginController : System.Web.Http.ApiController
     {
@@ -21,14 +23,21 @@ namespace JOB.WEB.ApiController
         public ApplicationSignInManager SignInManager => HttpContext.Current.GetOwinContext().Get<ApplicationSignInManager>();
         public ApplicationUserManager UserManager => HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
+        /// <summary>
+        /// Realiza o login no sistema
+        /// </summary>
+        /// <param name="Email">Username do usuario</param>
+        /// <param name="Password">Senha do usuario</param>
+        /// <returns>
+        /// 200 -> login efetuado;
+        /// 403 -> usuario bloqueado;
+        /// 412 -> requer verificacao de email;
+        /// 400 -> falha no login
+        /// </returns>
         public async Task<HttpResponseMessage> Get(string Email, string Password)
         {
             var user = await UserManager.FindByNameAsync(Email);
 
-            //200 - > login efetuado; 
-            //403 -> usuario bloqueado; 
-            //412 -> requer verificacao de email; 
-            //400 -> falha no login
             var result = await SignInManager.PasswordSignInAsync(Email, Password, false, shouldLockout: true);
             switch (result)
             {
@@ -54,6 +63,16 @@ namespace JOB.WEB.ApiController
             }
         }
 
+        /// <summary>
+        /// Realiza o cadastro do login no sistema
+        /// </summary>
+        /// <param name="Login">Username do usuario</param>
+        /// <param name="Email">Email do usuario</param>
+        /// <param name="Password">Senha do usuario</param>
+        /// <returns>
+        /// 200 -> cadastro efetuado;
+        /// 400 -> falha no cadastro
+        /// </returns>
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
         {
             var user = new ApplicationUser { UserName = Login, Email = Email, EmailConfirmed = true };

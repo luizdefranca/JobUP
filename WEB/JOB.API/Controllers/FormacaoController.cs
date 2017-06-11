@@ -13,11 +13,19 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API das formacoes dos profisionais
+    /// </summary>
     public class FormacaoController : ApiController
     {
         private Contexto ctx = new Contexto();
 
-        // GET: api/Usuario
+        /// <summary>
+        /// Lista as formacoes de um usuario de uma determinada especialidade
+        /// </summary>
+        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idEspecialidade">id da especialidade</param>
+        /// <returns></returns>
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade)
         {
             var result = ctx.Formacao.Where(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade).ToList();
@@ -25,7 +33,13 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        // GET: api/Usuario/5
+        /// <summary>
+        /// Recupera uma formacao especifica de um perfil profissional
+        /// </summary>
+        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idEspecialidade">id da especialidade</param>
+        /// <param name="idFormacao">id da formacao</param>
+        /// <returns></returns>
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade, int idFormacao)
         {
             var result = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);
@@ -33,6 +47,11 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        /// <summary>
+        /// Salva uma nova formacao
+        /// </summary>
+        /// <param name="request">classe FORMACAO</param>
+        /// <returns></returns>
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {
@@ -59,13 +78,18 @@ namespace JOB.API.Controllers
             }
             catch (Exception)
             {
-
                 throw;
             }
-
         }
 
-        // PUT: api/Usuario/5
+        /// <summary>
+        /// Atualiza uma formacao
+        /// </summary>
+        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idEspecialidade">id da especialidade</param>
+        /// <param name="idFormacao">id da formacao</param>
+        /// <param name="request">classe FORMACAO</param>
+        /// <returns></returns>
         public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, int idFormacao, HttpRequestMessage request)
         {
             try
@@ -97,7 +121,12 @@ namespace JOB.API.Controllers
             }
         }
 
-        // DELETE: api/Usuario/5
+        /// <summary>
+        /// Deleta uma formacao
+        /// </summary>
+        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idEspecialidade">id da especialidade</param>
+        /// <param name="idFormacao">id da formacao</param>
         public void Delete(Guid idUsuario, int idEspecialidade, int idFormacao)
         {
             var item = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);
