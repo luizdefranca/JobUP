@@ -84,8 +84,6 @@ public class MainActivity extends AppCompatActivity
         GSONSharedPreferences gsonSharedPrefs = new GSONSharedPreferences(this, "UsuarioCorrent");
         try {
              usuarioCorrente = (Usuario) gsonSharedPrefs.getObject(new Usuario());
-//            Log.i("test", usuarioCorrente.getNome());
-  //          Toast.makeText(this, "usuario corrente "+ usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
         } catch (ParsingException e) {
             e.printStackTrace();
         }
@@ -131,28 +129,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        // Init TabBar buttons
-        Button tab_fav = (Button) findViewById(R.id.tab_fav);
-        Button tab_account = (Button) findViewById(R.id.tab_account);
-
-        tab_fav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // startActivity(new Intent(Home.this, Favorites.class));
-            }
-        });
-
-        tab_account.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                if (ParseUser.getCurrentUser().getUsername() != null) {
-//                    startActivity(new Intent(Home.this, AccountScreen.class));
-//                } else {
-//                    startActivity(new Intent(Home.this, UsuarioSignIn.class));
-//                }
-            }
-        });
 
 
        // Init the Categories GridView

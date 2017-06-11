@@ -38,18 +38,18 @@ public interface IPropostaAPI {
     );
 
     @POST(PATH)
-    Call<Servico> post(
+    Call<Void> post(
             @Body Servico servico
     );
 
     @PUT(PATH+"{id}")
-    Call<Servico> put(
+    Call<Void> put(
             @Path("id") String id,
             @Body Servico Servico
     );
 
     @DELETE(PATH+"{id}")
-    Call<Servico> delete(
+    Call<Void> delete(
             @Path("id") String id
 
     );

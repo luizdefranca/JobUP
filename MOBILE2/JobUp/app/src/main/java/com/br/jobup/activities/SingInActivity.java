@@ -79,11 +79,12 @@ public class SingInActivity extends AppCompatActivity {
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // Set Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setHomeButtonEnabled(false);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+//        getSupportActionBar().setHomeButtonEnabled(false);
 
         // Set Title on the ActionBar
-        getSupportActionBar().setTitle("UsuarioSignIn");
+//        getSupportActionBar().setTitle("UsuarioSignIn");
+
 
 
         // Init a ProgressDialog

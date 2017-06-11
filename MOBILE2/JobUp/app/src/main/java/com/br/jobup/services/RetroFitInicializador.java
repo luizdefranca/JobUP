@@ -8,6 +8,7 @@ import com.br.jobup.services.interfaces.IDesativarAPI;
 import com.br.jobup.services.interfaces.IEspecialidadeCatalogoAPI;
 import com.br.jobup.services.interfaces.IOfertaAPI;
 import com.br.jobup.services.interfaces.IPerfilProfissional;
+import com.br.jobup.services.interfaces.IPropostaAPI;
 import com.br.jobup.services.interfaces.IServicoPrivadoAPI;
 import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
@@ -141,6 +142,10 @@ public class RetroFitInicializador<T> {
 
     public IPerfilProfissional createPerfilProfissionalAPI(){
         return retrofit.create(IPerfilProfissional.class);
+    }
+
+    public IPropostaAPI createPropostaAPI(){
+        return retrofit.create(IPropostaAPI.class);
     }
 
     /**

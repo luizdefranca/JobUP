@@ -37,16 +37,13 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/home_bkg"
-            android:background="#111"
+
+            android:background="@color/colorPrimaryLight"
             android:alpha="0.5"
             android:layout_above="@+id/tabBar"/>
 
-
-
-
         <!-- TAB BAR -->
-        <include layout="@layout/bottom_menu"/>
+        <!--<include layout="@layout/bottom_menu"/>-->
 
         <GridView
             android:layout_width="match_parent"

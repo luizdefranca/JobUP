@@ -3,6 +3,7 @@ package com.br.jobup.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -53,6 +54,13 @@ public class OfertarServicoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oferta_servico);
+
+        // Set Back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        // Set Title on the ActionBar
+        getSupportActionBar().setTitle("Contratar Servico");
 
         //Pega informacoes do Bundle DETALHE_CONTRATAR_SERVICO
         //Tais como o idUsuario, IdProfissional, idEspecialidade
@@ -130,6 +138,17 @@ public class OfertarServicoActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+//    Truque para não reiniciar a activity pai quando o botao up é acionado
+    @Nullable
+    @Override
+    public Intent getParentActivityIntent() {
+        Intent it = super.getParentActivityIntent();
+        if(it != null){
+            it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        }
+        return it;
     }
 }
 

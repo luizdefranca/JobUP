@@ -48,7 +48,6 @@ public class DetalheProfissionalViewPagerActivity extends AppCompatActivity {
 
 
         final FragmentManager fragmentManager = getSupportFragmentManager();
-//        fragmentManager.findFragmentById(R.layout.fragment_detalhe_profissional);
 
         //Cria o TabLayout e insere o viewPageAdapter
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tblt_detalheProfissional);

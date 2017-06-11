@@ -16,11 +16,15 @@ import com.br.jobup.R;
 import com.br.jobup.adapters.CatalogoEspecialidadeAdapter;
 import com.br.jobup.fragments.DetalheProfissionalViewPagerActivity;
 import com.br.jobup.models.especialidade.ServicoOferta;
+import com.br.jobup.models.especialidade.ServicoOfertaOrdenadoPorAvaliacao;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.preferencesPersistence.PreferencePersistence;
 import com.br.jobup.services.parsers.ParserEspecialidadeCatalogo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -270,5 +274,12 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
     }
 
+private List<ServicoOferta> ordenaPorAvaliacao(List<ServicoOferta> especialidadeList){
+//    List<ServicoOfertaOrdenadoPorAvaliacao> listaOrdenadaPorAvaliacao = new ArrayList<ServicoOfertaOrdenadoPorAvaliacao>((List< ServicoOfertaOrdenadoPorAvaliacao>) Arrays.asList(especialidadeList));
+//    Collections.sort(listaOrdenadaPorAvaliacao);
+
+
+    return null;
+}
 
 }

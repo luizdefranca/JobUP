@@ -37,11 +37,7 @@
             android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="trash.ApresentacaoActivity"
@@ -62,14 +58,19 @@
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.MensagensActivity"
             android:label="@string/title_activity_mensagem" />
         <activity
             android:name=".activities.OfertarServicoActivity"
-            android:label="Contratar Serviço" />
+            android:label="Contratar Serviço"
+            android:parentActivityName=".activities.CatalogoEspecialidadeActivity"/>
         <activity
             android:name=".activities.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />

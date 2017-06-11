@@ -42,7 +42,8 @@ public class Parsers {
 
         DateFormat dataFormat = new SimpleDateFormat("dd/MM/yyyy");
 
-        return dataFormat.format(data);
+        final String dataNormal = dataFormat.format(data);
+        return dataNormal;
     }
 
 }

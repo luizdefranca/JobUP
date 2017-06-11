@@ -57,6 +57,11 @@ public class ServicoOferta implements Serializable, Parcelable {
     @Expose
     public String estado;
 
+    @SerializedName("AVALIACAO")
+    @Expose
+    public int avaliacao;
+
+
 
     public ServicoOferta(String idUsuario, String nome, Date dtNascimento, int idEspecialidade, String descEspecialidade, String resumoCurriculo, String bairro, String cidade, String estado) {
         this.idUsuario = idUsuario;
