@@ -24,7 +24,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -267,7 +266,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_logout) {
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
             return true;
@@ -285,13 +284,13 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_comprar_creditos) {
 //            Intent CadastroActivity = new Intent(MainActivity.this, MapsActivity.class);
 //            startActivity(CadastroActivity);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_seja_um_profissional) {
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_minhas_ofertas_servicos) {
             final UsuarioSignIn usuarioSignIn = new UsuarioSignIn("luizramospe", "Teste12345");
             ParserUsuarioSignIn parse = new ParserUsuarioSignIn(usuarioSignIn);
              Call<Usuario> loginCall = parse.get();
@@ -318,11 +317,11 @@ public class MainActivity extends AppCompatActivity
             });
 
         //Inicializa Activity de Oferta Privada
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_meus_servicos_criados) {
             Intent ofertaPrivadaIntent = new Intent(MainActivity.this, OfertaPrivadaViewPagerActivity.class);
             startActivity(ofertaPrivadaIntent);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_ativar_destaque) {
 //            Intent DetalheServicoActivity = new Intent(MainActivity.this, DetalheServicoActivity.class);
 //            startActivity(DetalheServicoActivity);
             IUsuarioDao dao = new UsuarioDao(this);
@@ -347,7 +346,7 @@ public class MainActivity extends AppCompatActivity
             });
             Log.e(TAG, "onNavigationItemSelected: "+ "mensagem enviada" );
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_perfil) {
             mLoaderManager.initLoader(0, null, new LoaderUsuarioFullGetAll(this));
 
 

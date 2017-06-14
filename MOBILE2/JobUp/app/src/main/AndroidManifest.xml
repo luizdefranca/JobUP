@@ -44,7 +44,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activities.SingInActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.CadastroActivity"
             android:label="@string/title_activity_cadastro" />
