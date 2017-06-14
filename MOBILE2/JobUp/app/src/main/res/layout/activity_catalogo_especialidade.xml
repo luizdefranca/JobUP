@@ -9,33 +9,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="@color/colorPrimaryLight"
+   >
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryLight"
-        android:layout_gravity="center_horizontal">
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
 
-        <ListView
-            android:id="@+id/catalogo_especialidade_lstView"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/tabBar"
-            android:layout_alignParentTop="true"
-            android:elevation="8dp"
-            android:layout_centerHorizontal="true"
-            />
-        <include
-            android:id="@+id/tabBar"
-            layout="@layout/bottom_menu"
-            android:layout_width="wrap_content"
+            android:text="Ordernar Por:"
+            android:textColor="@color/primaryText"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+
+        <RadioGroup
+            android:id="@+id/rd_group_ordenacao"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
 
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal" />
+            <RadioButton
+                android:id="@+id/rd_bt_avaliacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Avaliações"
+                android:textColor="@color/secondaryText" />
+
+            <RadioButton
+                android:id="@+id/rd_bt_nServicos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nº de Serviços"
+                android:textColor="@color/secondaryText"/>
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/catalogo_especialidade_lstView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="16dp" />
 
 
-    </RelativeLayout>
 </LinearLayout>

@@ -8,6 +8,7 @@
     <color name="secondaryText">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
-    <color name="black_overlay">#66000000</color>
+    <color name="black_overlay">#660000</color>
+    <color name="tabColor">#56CCF2</color>
 
 </resources>
