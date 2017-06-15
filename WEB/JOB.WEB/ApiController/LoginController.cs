@@ -1,4 +1,5 @@
 ﻿using JOB.DATA;
+using JOB.DATA.Domain;
 using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity.Owin;
@@ -13,7 +14,7 @@ using System.Web.Http;
 namespace JOB.WEB.ApiController
 {
     /// <summary>
-    /// API exclusiva para lidar com o template MVC de segurança
+    /// API exclusiva para lidar com o template MVC de segurança (logins e cadastros de usuarios)
     /// </summary>
     [AllowAnonymous]
     public class LoginController : System.Web.Http.ApiController
@@ -29,7 +30,7 @@ namespace JOB.WEB.ApiController
         /// <param name="Email">Username do usuario</param>
         /// <param name="Password">Senha do usuario</param>
         /// <returns>
-        /// 200 -> login efetuado;
+        /// 200 -> login efetuado (retorna a classe usuario);
         /// 403 -> usuario bloqueado;
         /// 412 -> requer verificacao de email;
         /// 400 -> falha no login
@@ -64,13 +65,13 @@ namespace JOB.WEB.ApiController
         }
 
         /// <summary>
-        /// Realiza o cadastro do login no sistema
+        /// Realiza o cadastro do usuario de login no sistema
         /// </summary>
         /// <param name="Login">Username do usuario</param>
         /// <param name="Email">Email do usuario</param>
         /// <param name="Password">Senha do usuario</param>
         /// <returns>
-        /// 200 -> cadastro efetuado;
+        /// 200 -> cadastro efetuado (retorna o ID do usuario);
         /// 400 -> falha no cadastro
         /// </returns>
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)

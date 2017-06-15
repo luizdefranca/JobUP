@@ -6,7 +6,7 @@
     <members>
         <member name="T:JOB.WEB.ApiController.LoginController">
             <summary>
-            API exclusiva para lidar com o template MVC de segurança
+            API exclusiva para lidar com o template MVC de segurança (logins e cadastros de usuarios)
             </summary>
         </member>
         <member name="M:JOB.WEB.ApiController.LoginController.Get(System.String,System.String)">
@@ -16,7 +16,7 @@
             <param name="Email">Username do usuario</param>
             <param name="Password">Senha do usuario</param>
             <returns>
-            200 -> login efetuado;
+            200 -> login efetuado (retorna a classe usuario);
             403 -> usuario bloqueado;
             412 -> requer verificacao de email;
             400 -> falha no login
@@ -24,13 +24,13 @@
         </member>
         <member name="M:JOB.WEB.ApiController.LoginController.Get(System.String,System.String,System.String)">
             <summary>
-            Realiza o cadastro do login no sistema
+            Realiza o cadastro do usuario de login no sistema
             </summary>
             <param name="Login">Username do usuario</param>
             <param name="Email">Email do usuario</param>
             <param name="Password">Senha do usuario</param>
             <returns>
-            200 -> cadastro efetuado;
+            200 -> cadastro efetuado (retorna o ID do usuario);
             400 -> falha no cadastro
             </returns>
         </member>

@@ -481,12 +481,22 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:JOB.API.Controllers.AprovarController">
+            <summary>
+            API de aprovacao de usuarios
+            </summary>
+        </member>
         <member name="M:JOB.API.Controllers.AprovarController.Get(System.Guid)">
             <summary>
             Aprova o cadastro do usuario
             </summary>
             <param name="id">id do usuario</param>
             <returns></returns>
+        </member>
+        <member name="T:JOB.API.Controllers.ClientesController">
+            <summary>
+            API de usuario clientes
+            </summary>
         </member>
         <member name="M:JOB.API.Controllers.ClientesController.Get(System.Guid)">
             <summary>
@@ -495,12 +505,22 @@
             <param name="id">id do usuario</param>
             <returns></returns>
         </member>
+        <member name="T:JOB.API.Controllers.DesativarController">
+            <summary>
+            API de desativar usuario
+            </summary>
+        </member>
         <member name="M:JOB.API.Controllers.DesativarController.Get(System.Guid)">
             <summary>
             Desativa um determinado usuario
             </summary>
             <param name="id">id do usuario</param>
             <returns></returns>
+        </member>
+        <member name="T:JOB.API.Controllers.AvaliacaoController">
+            <summary>
+            API de avaliacao de profissionais
+            </summary>
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Get(System.Guid,System.Int32)">
             <summary>
@@ -544,6 +564,11 @@
             <param name="idEspecialidade">id da especialidade</param>
             <param name="idCliente">id do cliente</param>
         </member>
+        <member name="T:JOB.API.Controllers.PropostaController">
+            <summary>
+            API de propostas de servicos (resposta do profissional)
+            </summary>
+        </member>
         <member name="M:JOB.API.Controllers.PropostaController.Get(System.Guid)">
             <summary>
             recupera todas as propostas de um determinado usuario profissional
@@ -551,12 +576,22 @@
             <param name="idUsuario">id do usuario</param>
             <returns>classe PropostaViewModel</returns>
         </member>
+        <member name="T:JOB.API.Controllers.OfertaController">
+            <summary>
+            API das ofertas de servicos
+            </summary>
+        </member>
         <member name="M:JOB.API.Controllers.OfertaController.Get(System.Guid)">
             <summary>
             Lista as ofertas de um determinado profissional
             </summary>
             <param name="idUsuario">id do usuario</param>
             <returns></returns>
+        </member>
+        <member name="T:JOB.API.Controllers.RejeitarServicoController">
+            <summary>
+            API de rejeicao de servico
+            </summary>
         </member>
         <member name="M:JOB.API.Controllers.RejeitarServicoController.Get(System.Guid)">
             <summary>
@@ -578,6 +613,11 @@
             </summary>
             <param name="idUsuarioCliente">id do usuario cliente</param>
             <returns>classe ServicoViewModel_api</returns>
+        </member>
+        <member name="T:JOB.API.Controllers.FormacaoController">
+            <summary>
+            API das formacoes dos profisionais
+            </summary>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Get(System.Guid,System.Int32)">
             <summary>
@@ -620,6 +660,11 @@
             <param name="idUsuario">id do usuario</param>
             <param name="idEspecialidade">id da especialidade</param>
             <param name="idFormacao">id da formacao</param>
+        </member>
+        <member name="T:JOB.API.Controllers.PerfilProfissionalController">
+            <summary>
+            API de perfis profissionais
+            </summary>
         </member>
         <member name="M:JOB.API.Controllers.PerfilProfissionalController.Get(System.Int32)">
             <summary>
@@ -665,6 +710,11 @@
             </summary>
             <param name="idUsuario">id do usuario</param>
             <param name="idEspecialidade">id da especialidade</param>
+        </member>
+        <member name="T:JOB.API.Controllers.EspecialidadeController">
+            <summary>
+            API de especialidades
+            </summary>
         </member>
         <member name="M:JOB.API.Controllers.EspecialidadeController.Get">
             <summary>
