@@ -635,6 +635,26 @@
             <param name="request">classe ServicoViewModel_api</param>
             <returns>retorna HttpStatusCode.Created = 200</returns>
         </member>
+        <member name="T:JOB.API.Controllers.SubEspecialidadeController">
+            <summary>
+            API de sub especialidades (aprofundamento de especialidade)
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.SubEspecialidadeController.Get(System.Int32)">
+            <summary>
+            recupera todas as subespecialidades de uma determinada especialidade
+            </summary>
+            <param name="idEspecialidade">id da especialidade</param>
+            <returns></returns>
+        </member>
+        <member name="M:JOB.API.Controllers.SubEspecialidadeController.Get(System.Int32,System.Int32)">
+            <summary>
+            recupera uma determinada subespecialidade
+            </summary>
+            <param name="idEspecialidade">id da especialidade</param>
+            <param name="id">id da subespecialidade</param>
+            <returns></returns>
+        </member>
         <member name="T:JOB.API.Controllers.FormacaoController">
             <summary>
             API das formacoes dos profisionais
@@ -791,7 +811,7 @@
         </member>
         <member name="T:JOB.API.Controllers.UsuarioController">
             <summary>
-            APi de usuarios
+            API de usuarios
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.UsuarioController.Get">

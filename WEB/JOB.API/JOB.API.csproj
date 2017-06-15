@@ -173,7 +173,6 @@
     <Compile Include="Controllers\PerfilProfissionalController.cs" />
     <Compile Include="Controllers\EspecialidadeController.cs" />
     <Compile Include="Controllers\ServicoPublicoController.cs" />
-    <Compile Include="Controllers\UsuarioFullController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -205,9 +204,7 @@
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\jobupapi - Web Deploy.pubxml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\ServicoPrivadoRejeitar\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\JOB.DATA\JOB.DATA.csproj">
       <Project>{1793dd30-c3b2-4795-aa65-7566eb29be8c}</Project>
