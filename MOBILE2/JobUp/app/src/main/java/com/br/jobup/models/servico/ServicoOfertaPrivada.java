@@ -14,6 +14,8 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Created by luizramos on 28/05/17.
@@ -22,37 +24,43 @@ import java.io.Serializable;
 public class ServicoOfertaPrivada implements Serializable, Parcelable{
 
     @SerializedName("ID_SERVICO")
-    private String idServico;
+    protected String idServico;
 
     @SerializedName("ID_USUARIO")
-    private String idUsuario;
+    protected String idUsuario;
 
     @SerializedName("ID_PROFISSIONAL")
-    private String idProfissional;
+    protected String idProfissional;
 
     @SerializedName("NOME")
-    private String nome;
+    protected String nome;
 
     @SerializedName("ID_ESPECIALIDADE")
-    private int idEspecialidade;
+    protected int idEspecialidade;
 
+    @SerializedName("DESC_ESPECIALIDADE")
+    protected String descEspecialidade;
 
-    private String descEspecialidade;
+    @SerializedName("DT_CADASTRO")
+    protected Date dtCadastro;
 
     @SerializedName("DS_TITULO")
-    private String titulo;
+    protected String titulo;
 
     @SerializedName("DS_OBSERVACOES")
-    private String observacoes;
+    protected String observacoes;
 
     @SerializedName("TEMPO_SERVICO")
-    private int tpServico;
+    protected int tpServico;
 
     @SerializedName("VL_SUGERIDO")
-    private double valorSugerido;
+    protected double valorSugerido;
 
+    @SerializedName("TEMPO_SERVICO_DESC")
+    protected String desTempoServico;
 
-    private String desTempoServico;
+    @SerializedName("PROPOSTAS")
+    protected List<Proposta> propostas;
 
     public ServicoOfertaPrivada(String idUsuario,
                                 String idProfissional,
@@ -101,6 +109,45 @@ public class ServicoOfertaPrivada implements Serializable, Parcelable{
 
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescEspecialidade() {
+        return descEspecialidade;
+    }
+
+    public void setDescEspecialidade(String descEspecialidade) {
+        this.descEspecialidade = descEspecialidade;
+    }
+
+    public Date getDtCadastro() {
+        return dtCadastro;
+    }
+
+    public void setDtCadastro(Date dtCadastro) {
+        this.dtCadastro = dtCadastro;
+    }
+
+    public String getDesTempoServico() {
+        return desTempoServico;
+    }
+
+    public void setDesTempoServico(String desTempoServico) {
+        this.desTempoServico = desTempoServico;
+    }
+
+    public List<Proposta> getPropostas() {
+        return propostas;
+    }
+
+    public void setPropostas(List<Proposta> propostas) {
+        this.propostas = propostas;
+    }
 
     public String getIdServico() {
         return idServico;

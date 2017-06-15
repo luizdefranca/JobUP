@@ -78,7 +78,7 @@ public class OfertaPrivadaFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        mView = inflater.inflate(R.layout.fragment_oferta_privada, container, false);
+        mView = inflater.inflate(R.layout.fragment_oferta_privada_cliente_sem_proposta, container, false);
 
         lstView = (ListView) mView.findViewById(R.id.lstViewOfertaPrivada);
         final PreferencePersistence<Usuario> persistence = new PreferencePersistence<>(getContext());

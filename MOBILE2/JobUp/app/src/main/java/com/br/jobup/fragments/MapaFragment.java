@@ -9,9 +9,13 @@ package com.br.jobup.fragments;
 
 import android.location.Address;
 import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
 
+import com.br.jobup.maps.Localizador;
 import com.br.jobup.models.especialidade.ServicoOferta;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -48,6 +52,7 @@ public class MapaFragment extends SupportMapFragment implements OnMapReadyCallba
         super.onCreate(bundle);
         getMapAsync(this);
 
+
         Bundle arguments = this.getArguments();
         listaEspecialidades = arguments.getParcelableArrayList(LISTA_DE_ESPECIALIDADES);
 
@@ -57,6 +62,10 @@ public class MapaFragment extends SupportMapFragment implements OnMapReadyCallba
     public void centralizaEm(LatLng coordenada) {
         if (mapa != null) {
             CameraUpdate update = CameraUpdateFactory.newLatLngZoom(coordenada, 11);
+            MarkerOptions marcador = new MarkerOptions();
+            marcador.position(coordenada);
+            marcador.title("Estou Aqui");
+            mapa.addMarker(marcador);
             mapa.moveCamera(update);
         }
     }
@@ -71,11 +80,14 @@ public class MapaFragment extends SupportMapFragment implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
+
         LatLng posicaoUsuario = pegaCoordenadaDoEndereco("Várzea, Recife, PE");
         if (posicaoUsuario != null) {
             CameraUpdate update = CameraUpdateFactory.newLatLngZoom(posicaoUsuario, 11);
             googleMap.moveCamera(update);
         }
+
+
 
         for (ServicoOferta profissional : listaEspecialidades) {
             String enderecoDoProfissional = pegaEndereco(profissional);
@@ -88,6 +100,7 @@ public class MapaFragment extends SupportMapFragment implements OnMapReadyCallba
                 googleMap.addMarker(marcador);
             }
         }
+
     }
 
 

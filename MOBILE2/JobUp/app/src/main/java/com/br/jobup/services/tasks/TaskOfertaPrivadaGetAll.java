@@ -34,31 +34,31 @@ import java.util.List;
             this.idUsuario = idUsuario;
         }
 
-        @Override
-        protected void onStartLoading() {
-            super.onStartLoading();
+    @Override
+    protected void onStartLoading() {
+        super.onStartLoading();
 
-            if (mOferta == null){
-                Log.e(TAG, "onStartLoading: forceLoad" );
-                forceLoad();
-            }else {
-                Log.e(TAG, "onStartLoading: deliverResult");
-                deliverResult(mOferta);
-            }
+        if (mOferta == null) {
+            Log.e(TAG, "onStartLoading: forceLoad");
+            forceLoad();
+        } else {
+            Log.e(TAG, "onStartLoading: deliverResult");
+            deliverResult(mOferta);
         }
+    }
 
-        @Override
-        public List<Oferta> loadInBackground() {
+    @Override
+    public List<Oferta> loadInBackground() {
 
-            ParserOfertaPrivada parser = new ParserOfertaPrivada(idUsuario);
+        ParserOfertaPrivada parser = new ParserOfertaPrivada(idUsuario);
 
-            mOferta = parser.getAllPorIdUsuario();
-            return mOferta;
-        }
+        mOferta = parser.getAllPorIdUsuario();
+        return mOferta;
+    }
 
     @Override
     public void deliverResult(List<Oferta> data) {
-        if(isStarted() && ! isReset()) {
+        if (isStarted() && !isReset()) {
             super.deliverResult(data);
         }
     }
