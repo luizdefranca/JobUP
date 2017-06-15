@@ -26,10 +26,9 @@ namespace JOB.API.Controllers
         /// Recupera todos os profissionais de uma determinada especialidade
         /// </summary>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <returns></returns>
+        /// <returns>retorna uma lista da classe ProfissionalViewModel</returns>
         public HttpResponseMessage Get(int idEspecialidade)
         {
-            //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
             try
             {
                 var lstDominio = ctx.PerfilProfissional.Where(f => f.ID_ESPECIALIDADE == idEspecialidade).ToList();
@@ -79,7 +78,7 @@ namespace JOB.API.Controllers
         /// Recupera todas os perfis profissionais de um determinado profissional
         /// </summary>
         /// <param name="idUsuario"></param>
-        /// <returns></returns>
+        /// <returns>retorna uma lista da classe PERFIL_PROFISSIONAL</returns>
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var result = ctx.PerfilProfissional.Include(i => i.ESPECIALIDADE).Where(w => w.ID_USUARIO == idUsuario).ToList();
@@ -92,7 +91,7 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idUsuario">id do usuario profissional</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <returns></returns>
+        /// <returns>retorna a classe PERFIL_PROFISSIONAL</returns>
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade)
         {
             var result = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
@@ -104,7 +103,7 @@ namespace JOB.API.Controllers
         /// salva um novo perfil profissional
         /// </summary>
         /// <param name="request">classe PERFIL_PROFISSIONAL</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.Created = 200</returns>
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {
@@ -141,7 +140,7 @@ namespace JOB.API.Controllers
         /// <param name="idUsuario">id do usuario</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <param name="request">classe PERFIL_PROFISSIONAL</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, HttpRequestMessage request)
         {
             try

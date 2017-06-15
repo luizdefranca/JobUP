@@ -18,7 +18,7 @@ namespace JOB.API.Controllers
         /// Desativa um determinado usuario
         /// </summary>
         /// <param name="id">id do usuario</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Get(Guid id)
         {
             using (Contexto ctx = new Contexto())

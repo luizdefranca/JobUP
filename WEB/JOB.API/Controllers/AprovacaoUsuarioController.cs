@@ -10,15 +10,15 @@ using System.Web.Http;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de usuario clientes
+    /// API de aprovacao de usuario
     /// </summary>
-    public class ClientesController : ApiController
+    public class AprovacaoUsuarioController : ApiController
     {
         /// <summary>
         /// Aprova um determinado usuario
         /// </summary>
         /// <param name="id">id do usuario</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Get(Guid id)
         {
             using (Contexto ctx = new Contexto())

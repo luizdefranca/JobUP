@@ -21,7 +21,7 @@ namespace JOB.API.Controllers
         /// recupera todas as propostas de um determinado usuario profissional
         /// </summary>
         /// <param name="idUsuario">id do usuario</param>
-        /// <returns>classe PropostaViewModel</returns>
+        /// <returns>retorna uma lista da classe PropostaViewModel</returns>
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var lstDominio = ctx.Proposta.Where(w => w.ID_USUARIO == idUsuario).ToList();

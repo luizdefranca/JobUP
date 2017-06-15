@@ -23,7 +23,7 @@ namespace JOB.API.Controllers
         /// <summary>
         /// Recupera todas as listas
         /// </summary>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Get()
         {
             var result = ctx.Especialidade.ToList();
@@ -35,7 +35,7 @@ namespace JOB.API.Controllers
         /// Recupera uma determinada especialidade
         /// </summary>
         /// <param name="id">id da especialidade</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Get(int id)
         {
             var result = ctx.Especialidade.FirstOrDefault(w => w.ID_ESPECIALIDADE == id);
@@ -47,7 +47,7 @@ namespace JOB.API.Controllers
         /// Salva uma nova especialidade
         /// </summary>
         /// <param name="request">classe ESPECIALIDADE</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.Created = 201</returns>
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {
@@ -83,7 +83,7 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="id">id da especialidade</param>
         /// <param name="request">classe ESPECIALIDADE</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Put(int id, HttpRequestMessage request)
         {
             try

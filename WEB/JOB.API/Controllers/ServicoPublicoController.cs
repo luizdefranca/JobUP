@@ -15,10 +15,17 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API se servicos publicos (direcionados para todos os profissionais cadastrados no site que tenha a especialidade selecionada)
+    /// </summary>
     public class ServicoPublicoController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
+        /// <summary>
+        /// recupera todos os servios publicos
+        /// </summary>
+        /// <returns>retorna uma lista da classe ServicoViewModel_api</returns>
         public HttpResponseMessage Get()
         {
             var lstDominio = ctx.Servico.Where(w => w.PUBLICO).ToList();
@@ -41,6 +48,11 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, lstModel);
         }
 
+        /// <summary>
+        /// insere um novo servico public (remove 100 moedas do usuario)
+        /// </summary>
+        /// <param name="request">classe ServicoViewModel_api</param>
+        /// <returns>retorna HttpStatusCode.Created = 200</returns>
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {

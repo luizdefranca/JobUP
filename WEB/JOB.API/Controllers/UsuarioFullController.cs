@@ -13,11 +13,17 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API de usuarios
+    /// </summary>
     public class UsuarioFullController : ApiController
     {
         private Contexto ctx = new Contexto();
 
-        // GET: api/Usuario
+        /// <summary>
+        /// recupera todos os usuarios
+        /// </summary>
+        /// <returns>retorna lista da classe USUARIO</returns>
         public HttpResponseMessage Get()
         {
             var result = ctx.Usuario.ToList();
@@ -25,7 +31,11 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        // GET: api/Usuario/5
+        /// <summary>
+        /// recupera um determinado usuario
+        /// </summary>
+        /// <param name="id">id do usuario</param>
+        /// <returns>retorna classe USUARIO</returns>
         public HttpResponseMessage Get(Guid id)
         {
             var result = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
@@ -33,6 +43,11 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        /// <summary>
+        /// insere um novo usuario
+        /// </summary>
+        /// <param name="request">classe USUARIO</param>
+        /// <returns>retorna HttpStatusCode.Created = 201</returns>
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {
@@ -63,7 +78,12 @@ namespace JOB.API.Controllers
             }
         }
 
-        // PUT: api/Usuario/5
+        /// <summary>
+        /// atualiza um determinado usuario
+        /// </summary>
+        /// <param name="id">id do usuario</param>
+        /// <param name="request">classe USUARIO</param>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Put(Guid id, HttpRequestMessage request)
         {
             try
@@ -95,7 +115,10 @@ namespace JOB.API.Controllers
             }
         }
 
-        // DELETE: api/Usuario/5
+        /// <summary>
+        /// deleta um determinado usuario
+        /// </summary>
+        /// <param name="id">id do usuario</param>
         public void Delete(Guid id)
         {
             var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);

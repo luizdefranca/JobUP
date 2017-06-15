@@ -491,19 +491,19 @@
             Aprova o cadastro do usuario
             </summary>
             <param name="id">id do usuario</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
-        <member name="T:JOB.API.Controllers.ClientesController">
+        <member name="T:JOB.API.Controllers.AprovacaoUsuarioController">
             <summary>
-            API de usuario clientes
+            API de aprovacao de usuario
             </summary>
         </member>
-        <member name="M:JOB.API.Controllers.ClientesController.Get(System.Guid)">
+        <member name="M:JOB.API.Controllers.AprovacaoUsuarioController.Get(System.Guid)">
             <summary>
             Aprova um determinado usuario
             </summary>
             <param name="id">id do usuario</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="T:JOB.API.Controllers.DesativarController">
             <summary>
@@ -515,7 +515,7 @@
             Desativa um determinado usuario
             </summary>
             <param name="id">id do usuario</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="T:JOB.API.Controllers.AvaliacaoController">
             <summary>
@@ -524,11 +524,11 @@
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Get(System.Guid,System.Int32)">
             <summary>
-            Recupera todas as formacoes do usuario
+            Recupera todas as formacoes do usuario profissional
             </summary>
             <param name="idUsuario">id do usuario</param>
             <param name="idEspecialidade">id da especialidade</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Get(System.Guid,System.Int32,System.Guid)">
             <summary>
@@ -537,14 +537,14 @@
             <param name="idUsuario">id do usuario</param>
             <param name="idEspecialidade">id da especialidade</param>
             <param name="idCliente">id do cliente</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Post(System.Net.Http.HttpRequestMessage)">
             <summary>
             Salva uma nova avaliacao
             </summary>
             <param name="request">classe AVALIACAO</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.Created = 201</returns>
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Put(System.Guid,System.Int32,System.Guid,System.Net.Http.HttpRequestMessage)">
             <summary>
@@ -554,15 +554,7 @@
             <param name="idEspecialidade">id da especialidade</param>
             <param name="idCliente">id do cliente</param>
             <param name="request">classe AVALIACAO</param>
-            <returns></returns>
-        </member>
-        <member name="M:JOB.API.Controllers.AvaliacaoController.Delete(System.Guid,System.Int32,System.Guid)">
-            <summary>
-            Deleta a avaliacao
-            </summary>
-            <param name="idUsuario">id do usuario</param>
-            <param name="idEspecialidade">id da especialidade</param>
-            <param name="idCliente">id do cliente</param>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="T:JOB.API.Controllers.PropostaController">
             <summary>
@@ -574,7 +566,7 @@
             recupera todas as propostas de um determinado usuario profissional
             </summary>
             <param name="idUsuario">id do usuario</param>
-            <returns>classe PropostaViewModel</returns>
+            <returns>retorna uma lista da classe PropostaViewModel</returns>
         </member>
         <member name="T:JOB.API.Controllers.OfertaController">
             <summary>
@@ -586,7 +578,7 @@
             Lista as ofertas de um determinado profissional
             </summary>
             <param name="idUsuario">id do usuario</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="T:JOB.API.Controllers.RejeitarServicoController">
             <summary>
@@ -598,21 +590,50 @@
             Rejeita um determinado servico
             </summary>
             <param name="id">id do servico</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
+        </member>
+        <member name="T:JOB.API.Controllers.ServicoPrivadoClienteSemPropostaController">
+            <summary>
+            API de servico privado (direcionada diretamente para o profissional)
+            </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoClienteSemPropostaController.Get(System.Guid)">
             <summary>
             recupera todos os servicos privados que nao possuem propostas de um determinado usuario cliente
             </summary>
             <param name="idUsuarioCliente">id do usuario cliente</param>
-            <returns>classe ServicoViewModel_api</returns>
+            <returns>retorna uma lista da classe ServicoViewModel_api</returns>
+        </member>
+        <member name="T:JOB.API.Controllers.ServicoPrivadoClienteController">
+            <summary>
+            API de servico privado (direcionada diretamente para o profissional)
+            </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoClienteController.Get(System.Guid)">
             <summary>
             recupera todos os servicos privados que possuem propostas de um determinado usuario cliente (juntamente com as propostas)
             </summary>
             <param name="idUsuarioCliente">id do usuario cliente</param>
-            <returns>classe ServicoViewModel_api</returns>
+            <returns>retorna uma lista da classe ServicoViewModel_api</returns>
+        </member>
+        <member name="T:JOB.API.Controllers.ServicoPrivadoController">
+            <summary>
+            API de servico privado (direcionada diretamente para o profissional)
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.ServicoPrivadoController.Get(System.Guid)">
+            <summary>
+            recupera todos os servicos privados que possuem propostas de um determinado usuario profissional
+            </summary>
+            <param name="idUsuarioProfissional">id do usuario profissional</param>
+            <returns>retorna uma lista da classe ServicoViewModel_api</returns>
+        </member>
+        <member name="M:JOB.API.Controllers.ServicoPrivadoController.Post(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            insere um novo servico privado (direcionado diretamente para um profissional)
+            </summary>
+            <param name="request">classe ServicoViewModel_api</param>
+            <returns>retorna HttpStatusCode.Created = 200</returns>
         </member>
         <member name="T:JOB.API.Controllers.FormacaoController">
             <summary>
@@ -621,11 +642,11 @@
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Get(System.Guid,System.Int32)">
             <summary>
-            Lista as formacoes de um usuario de uma determinada especialidade
+            Lista as formacoes de um usuario e uma determinada especialidade
             </summary>
             <param name="idUsuario">id do usuario</param>
             <param name="idEspecialidade">id da especialidade</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Get(System.Guid,System.Int32,System.Int32)">
             <summary>
@@ -634,14 +655,14 @@
             <param name="idUsuario">id do usuario</param>
             <param name="idEspecialidade">id da especialidade</param>
             <param name="idFormacao">id da formacao</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Post(System.Net.Http.HttpRequestMessage)">
             <summary>
             Salva uma nova formacao
             </summary>
             <param name="request">classe FORMACAO</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.Created = 201</returns>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Put(System.Guid,System.Int32,System.Int32,System.Net.Http.HttpRequestMessage)">
             <summary>
@@ -651,7 +672,7 @@
             <param name="idEspecialidade">id da especialidade</param>
             <param name="idFormacao">id da formacao</param>
             <param name="request">classe FORMACAO</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Delete(System.Guid,System.Int32,System.Int32)">
             <summary>
@@ -671,14 +692,14 @@
             Recupera todos os profissionais de uma determinada especialidade
             </summary>
             <param name="idEspecialidade">id da especialidade</param>
-            <returns></returns>
+            <returns>retorna uma lista da classe ProfissionalViewModel</returns>
         </member>
         <member name="M:JOB.API.Controllers.PerfilProfissionalController.Get(System.Guid)">
             <summary>
             Recupera todas os perfis profissionais de um determinado profissional
             </summary>
             <param name="idUsuario"></param>
-            <returns></returns>
+            <returns>retorna uma lista da classe PERFIL_PROFISSIONAL</returns>
         </member>
         <member name="M:JOB.API.Controllers.PerfilProfissionalController.Get(System.Guid,System.Int32)">
             <summary>
@@ -686,14 +707,14 @@
             </summary>
             <param name="idUsuario">id do usuario profissional</param>
             <param name="idEspecialidade">id da especialidade</param>
-            <returns></returns>
+            <returns>retorna a classe PERFIL_PROFISSIONAL</returns>
         </member>
         <member name="M:JOB.API.Controllers.PerfilProfissionalController.Post(System.Net.Http.HttpRequestMessage)">
             <summary>
             salva um novo perfil profissional
             </summary>
             <param name="request">classe PERFIL_PROFISSIONAL</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.Created = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.PerfilProfissionalController.Put(System.Guid,System.Int32,System.Net.Http.HttpRequestMessage)">
             <summary>
@@ -702,7 +723,7 @@
             <param name="idUsuario">id do usuario</param>
             <param name="idEspecialidade">id da especialidade</param>
             <param name="request">classe PERFIL_PROFISSIONAL</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.PerfilProfissionalController.Delete(System.Guid,System.Int32)">
             <summary>
@@ -720,21 +741,21 @@
             <summary>
             Recupera todas as listas
             </summary>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.EspecialidadeController.Get(System.Int32)">
             <summary>
             Recupera uma determinada especialidade
             </summary>
             <param name="id">id da especialidade</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.EspecialidadeController.Post(System.Net.Http.HttpRequestMessage)">
             <summary>
             Salva uma nova especialidade
             </summary>
             <param name="request">classe ESPECIALIDADE</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.Created = 201</returns>
         </member>
         <member name="M:JOB.API.Controllers.EspecialidadeController.Put(System.Int32,System.Net.Http.HttpRequestMessage)">
             <summary>
@@ -742,13 +763,70 @@
             </summary>
             <param name="id">id da especialidade</param>
             <param name="request">classe ESPECIALIDADE</param>
-            <returns></returns>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
         </member>
         <member name="M:JOB.API.Controllers.EspecialidadeController.Delete(System.Int32)">
             <summary>
             Deleta uma especialidade
             </summary>
             <param name="id">id da especialidade</param>
+        </member>
+        <member name="T:JOB.API.Controllers.ServicoPublicoController">
+            <summary>
+            API se servicos publicos (direcionados para todos os profissionais cadastrados no site que tenha a especialidade selecionada)
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.ServicoPublicoController.Get">
+            <summary>
+            recupera todos os servios publicos
+            </summary>
+            <returns>retorna uma lista da classe ServicoViewModel_api</returns>
+        </member>
+        <member name="M:JOB.API.Controllers.ServicoPublicoController.Post(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            insere um novo servico public (remove 100 moedas do usuario)
+            </summary>
+            <param name="request">classe ServicoViewModel_api</param>
+            <returns>retorna HttpStatusCode.Created = 200</returns>
+        </member>
+        <member name="T:JOB.API.Controllers.UsuarioController">
+            <summary>
+            APi de usuarios
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.UsuarioController.Get">
+            <summary>
+            recupera todos os usuarios
+            </summary>
+            <returns>retorna lista da classe USUARIO</returns>
+        </member>
+        <member name="M:JOB.API.Controllers.UsuarioController.Get(System.Guid)">
+            <summary>
+            recupera um determinado usuario
+            </summary>
+            <param name="id">id do usuario</param>
+            <returns>retorna classe USUARIO</returns>
+        </member>
+        <member name="M:JOB.API.Controllers.UsuarioController.Post(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            insere um novo usuario
+            </summary>
+            <param name="request">classe USUARIO</param>
+            <returns>retorna HttpStatusCode.Created = 201</returns>
+        </member>
+        <member name="M:JOB.API.Controllers.UsuarioController.Put(System.Guid,System.Net.Http.HttpRequestMessage)">
+            <summary>
+            atualiza um determinado usuario
+            </summary>
+            <param name="id">id do usuario</param>
+            <param name="request">classe USUARIO</param>
+            <returns>retorna HttpStatusCode.OK = 200</returns>
+        </member>
+        <member name="M:JOB.API.Controllers.UsuarioController.Delete(System.Guid)">
+            <summary>
+            deleta um determinado usuario
+            </summary>
+            <param name="id">id do usuario</param>
         </member>
     </members>
 </doc>

@@ -16,23 +16,31 @@ using System.Web.Http;
 
 namespace JOB.API.Controllers
 {
+    /// <summary>
+    /// API de servico privado (direcionada diretamente para o profissional)
+    /// </summary>
     public class ServicoPrivadoController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
+        /// <summary>
+        /// recupera todos os servicos privados que possuem propostas de um determinado usuario profissional
+        /// </summary>
+        /// <param name="idUsuarioProfissional">id do usuario profissional</param>
+        /// <returns>retorna uma lista da classe ServicoViewModel_api</returns>
         public HttpResponseMessage Get(Guid idUsuarioProfissional)
         {
-            //recupera apenas os serviços privados que tenha uma oferta para um usuário profissional especifico
             var lstDominio = ctx.Servico.Include(i => i.OFERTAS).Where(w => w.PUBLICO == false & w.OFERTAS.Any(a => a.ID_USUARIO == idUsuarioProfissional)).ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(lstDominio);
 
             foreach (var model in lstModel)
             {
+                model.ID_PROFISSIONAL = lstDominio.First(f => f.ID_SERVICO == model.ID_SERVICO).OFERTAS.First().ID_USUARIO;
                 model.NOME = ctx.Usuario.First(f => f.ID_USUARIO == model.ID_USUARIO).NOME;
                 model.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).DESCRICAO;
 
-                if (model.ID_SUB_ESPECIALIDADE != null)
+                if (model.ID_SUB_ESPECIALIDADE != null && model.ID_SUB_ESPECIALIDADE != 0)
                 {
                     model.DESC_SUB_ESPECIALIDADE = ctx.SubEspecialidade.First(f => f.ID_SUB_ESPECIALIDADE == model.ID_SUB_ESPECIALIDADE).DESCRICAO;
                 }
@@ -43,6 +51,11 @@ namespace JOB.API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, lstModel);
         }
 
+        /// <summary>
+        /// insere um novo servico privado (direcionado diretamente para um profissional)
+        /// </summary>
+        /// <param name="request">classe ServicoViewModel_api</param>
+        /// <returns>retorna HttpStatusCode.Created = 200</returns>
         [HttpPost]
         public HttpResponseMessage Post(HttpRequestMessage request)
         {

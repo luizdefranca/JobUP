@@ -21,7 +21,7 @@ namespace JOB.API.Controllers
         /// Lista as ofertas de um determinado profissional
         /// </summary>
         /// <param name="idUsuario">id do usuario</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var lstDominio = ctx.Oferta.Where(w => w.ID_USUARIO == idUsuario).ToList();

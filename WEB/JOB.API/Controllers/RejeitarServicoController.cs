@@ -19,7 +19,7 @@ namespace JOB.API.Controllers
         /// Rejeita um determinado servico
         /// </summary>
         /// <param name="id">id do servico</param>
-        /// <returns></returns>
+        /// <returns>retorna HttpStatusCode.OK = 200</returns>
         public HttpResponseMessage Get(Guid id)
         {
             var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
