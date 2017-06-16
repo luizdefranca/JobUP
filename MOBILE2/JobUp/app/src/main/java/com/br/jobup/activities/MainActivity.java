@@ -290,31 +290,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_seja_um_profissional) {
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
-        } else if (id == R.id.nav_minhas_ofertas_servicos) {
-            final UsuarioSignIn usuarioSignIn = new UsuarioSignIn("luizramospe", "Teste12345");
-            ParserUsuarioSignIn parse = new ParserUsuarioSignIn(usuarioSignIn);
-             Call<Usuario> loginCall = parse.get();
-            loginCall.enqueue(new Callback<Usuario>() {
-                @Override
-                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                    if(response.code() == 200 && response.message().equals("Success")){
-                        Log.e(TAG, "onResponse: " + "UsuarioSignIn efetuado com sucesso" );
-                    }else if(response.message()
-                            .equals("You must have a confirmed email to log on. The confirmation"
-                                    + " token has been resent to your email account.") 
-                            && response.code() == 400){
-                        Log.e(TAG, "onResponse: " + "You must have a confirmed email to log on. The confirmation token has been resent to your email account." );
-                    }else if (response.code() == 400 && response.message().equals("LockedOut"))
-                        Log.e(TAG, "onResponse: usuario bloqueado");
-                    Toast.makeText(MainActivity.this, response.message(), Toast.LENGTH_LONG).show();
-                }
 
-                @Override
-                public void onFailure(Call<Usuario> call, Throwable t) {
-                    Log.e(TAG, "onFailure: " + t.getMessage(), t );
-                    Toast.makeText(MainActivity.this, "onFailure: " + t.getMessage() , Toast.LENGTH_LONG).show();
-                }
-            });
+
+        } else if (id == R.id.nav_minhas_ofertas_servicos) {
+            Intent ListaPropostaActivity = new Intent(MainActivity.this, ListaPropostaActivity.class);
+            startActivity(ListaPropostaActivity);
+
 
         //Inicializa Activity de Oferta Privada
         } else if (id == R.id.nav_meus_servicos_criados) {
