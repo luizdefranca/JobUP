@@ -17,7 +17,7 @@ using System.Web.Http;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de servico privado (direcionada diretamente para o profissional)
+    /// API de servico privado (feito exclusivamente para um determinado profissional)
     /// </summary>
     public class ServicoPrivadoController : ApiController
     {

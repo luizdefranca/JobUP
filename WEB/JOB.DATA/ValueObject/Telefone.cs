@@ -4,8 +4,8 @@ namespace JOB.DATA.ValueObject
 {
     public class Telefone
     {
-        //public string DDD { get; private set; }
-        public string NrTelefone { get; private set; }
+        //public string DDD { get; set; }
+        public string NrTelefone { get; set; }
 
         /// <summary>
         /// usado pelo entity framework

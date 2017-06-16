@@ -88,6 +88,8 @@ namespace JOB.WEB.Controllers
         {
             var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
 
+            MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
+
             domain.Aprovar();
             ctx.Entry(domain).State = EntityState.Modified;
             ctx.SaveChanges();

@@ -1,5 +1,6 @@
 ﻿using JOB.DATA;
 using JOB.HELPERS.Validation;
+using JOB.WEB.Helper;
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -26,6 +27,8 @@ namespace JOB.API.Controllers
                 try
                 {
                     var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
+
+                    MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
 
                     domain.Aprovar();
                     ctx.Entry(domain).State = EntityState.Modified;

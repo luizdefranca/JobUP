@@ -56,18 +56,18 @@ namespace JOB.DATA.Domain
             this.PROPOSTAS = new HashSet<PROPOSTA_SERVICO>();
         }
 
-        public Guid ID_SERVICO { get; private set; }
-        public Guid ID_USUARIO { get; private set; }
-        public int ID_ESPECIALIDADE { get; private set; }
-        public int? ID_SUB_ESPECIALIDADE { get; private set; }
-        public DateTime DT_CADASTRO { get; private set; }
-        public bool PUBLICO { get; private set; }
-        public string DS_TITULO { get; private set; }
-        public string DS_OBSERVACOES { get; private set; }
-        public double? VL_SUGERIDO { get; private set; }
-        public EnumTempoServico TEMPO_SERVICO { get; private set; }
+        public Guid ID_SERVICO { get; set; }
+        public Guid ID_USUARIO { get; set; }
+        public int ID_ESPECIALIDADE { get; set; }
+        public int? ID_SUB_ESPECIALIDADE { get; set; }
+        public DateTime DT_CADASTRO { get; set; }
+        public bool PUBLICO { get; set; }
+        public string DS_TITULO { get; set; }
+        public string DS_OBSERVACOES { get; set; }
+        public double? VL_SUGERIDO { get; set; }
+        public EnumTempoServico TEMPO_SERVICO { get; set; }
 
-        public ICollection<OFERTA_SERVICO> OFERTAS { get; private set; }
-        public ICollection<PROPOSTA_SERVICO> PROPOSTAS { get; private set; }
+        public ICollection<OFERTA_SERVICO> OFERTAS { get; set; }
+        public ICollection<PROPOSTA_SERVICO> PROPOSTAS { get; set; }
     }
 }

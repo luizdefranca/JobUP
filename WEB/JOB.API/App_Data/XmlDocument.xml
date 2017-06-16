@@ -594,7 +594,7 @@
         </member>
         <member name="T:JOB.API.Controllers.ServicoPrivadoClienteSemPropostaController">
             <summary>
-            API de servico privado (direcionada diretamente para o profissional)
+            API de servico privado (feito exclusivamente para um determinado profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoClienteSemPropostaController.Get(System.Guid)">
@@ -606,7 +606,7 @@
         </member>
         <member name="T:JOB.API.Controllers.ServicoPrivadoClienteController">
             <summary>
-            API de servico privado (direcionada diretamente para o profissional)
+            API de servico privado (feito exclusivamente para um determinado profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoClienteController.Get(System.Guid)">
@@ -618,7 +618,7 @@
         </member>
         <member name="T:JOB.API.Controllers.ServicoPrivadoController">
             <summary>
-            API de servico privado (direcionada diretamente para o profissional)
+            API de servico privado (feito exclusivamente para um determinado profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoController.Get(System.Guid)">
@@ -818,29 +818,29 @@
             <summary>
             recupera todos os usuarios
             </summary>
-            <returns>retorna lista da classe USUARIO</returns>
+            <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.UsuarioController.Get(System.Guid)">
             <summary>
             recupera um determinado usuario
             </summary>
             <param name="id">id do usuario</param>
-            <returns>retorna classe USUARIO</returns>
+            <returns></returns>
         </member>
-        <member name="M:JOB.API.Controllers.UsuarioController.Post(System.Net.Http.HttpRequestMessage)">
+        <member name="M:JOB.API.Controllers.UsuarioController.Post(JOB.DATA.Domain.USUARIO)">
             <summary>
-            insere um novo usuario
+            Insere um novo usuario
             </summary>
-            <param name="request">classe USUARIO</param>
-            <returns>retorna HttpStatusCode.Created = 201</returns>
+            <param name="obj"></param>
+            <returns></returns>
         </member>
-        <member name="M:JOB.API.Controllers.UsuarioController.Put(System.Guid,System.Net.Http.HttpRequestMessage)">
+        <member name="M:JOB.API.Controllers.UsuarioController.Put(System.Guid,JOB.DATA.Domain.USUARIO)">
             <summary>
             atualiza um determinado usuario
             </summary>
             <param name="id">id do usuario</param>
-            <param name="request">classe USUARIO</param>
-            <returns>retorna HttpStatusCode.OK = 200</returns>
+            <param name="obj"></param>
+            <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.UsuarioController.Delete(System.Guid)">
             <summary>

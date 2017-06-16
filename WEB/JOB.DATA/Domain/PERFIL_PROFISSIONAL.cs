@@ -47,16 +47,16 @@ namespace JOB.DATA.Domain
             this.FORMACOES = new HashSet<FORMACAO>();
         }
 
-        public Guid ID_USUARIO { get; private set; }
-        public int ID_ESPECIALIDADE { get; private set; }
-        public DateTime? DT_APROVACAO { get; private set; }
-        public bool APROVADO { get; private set; }
-        public string RESUMO_CURRICULO { get; private set; }
+        public Guid ID_USUARIO { get; set; }
+        public int ID_ESPECIALIDADE { get; set; }
+        public DateTime? DT_APROVACAO { get; set; }
+        public bool APROVADO { get; set; }
+        public string RESUMO_CURRICULO { get; set; }
 
-        public USUARIO USUARIO { get; private set; }
-        public ESPECIALIDADE ESPECIALIDADE { get; private set; }
+        public USUARIO USUARIO { get; set; }
+        public ESPECIALIDADE ESPECIALIDADE { get; set; }
 
-        public ICollection<AVALIACAO> AVALIACOES { get; private set; }
-        public ICollection<FORMACAO> FORMACOES { get; private set; }
+        public ICollection<AVALIACAO> AVALIACOES { get; set; }
+        public ICollection<FORMACAO> FORMACOES { get; set; }
     }
 }

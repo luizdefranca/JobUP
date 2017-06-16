@@ -7,7 +7,7 @@ namespace JOB.DATA.ValueObject
     public class Email
     {
         public const int EnderecoMaxLength = 254;
-        public string EMail { get; private set; }
+        public string EMail { get; set; }
 
         /// <summary>
         /// usado pelo entity framework

@@ -37,10 +37,10 @@ namespace JOB.DATA.Domain
             //this.PERFIS_PROFISSIONAIS = new HashSet<PERFIL_PROFISSIONAL>();
         }
 
-        public int ID_ESPECIALIDADE { get; private set; }
-        public int ID_SUB_ESPECIALIDADE { get; private set; }
-        public string DESCRICAO { get; private set; }
+        public int ID_ESPECIALIDADE { get; set; }
+        public int ID_SUB_ESPECIALIDADE { get; set; }
+        public string DESCRICAO { get; set; }
 
-        public ESPECIALIDADE ESPECIALIDADE { get; private set; }
+        public ESPECIALIDADE ESPECIALIDADE { get; set; }
     }
 }

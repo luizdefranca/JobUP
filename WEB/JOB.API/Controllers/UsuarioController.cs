@@ -1,15 +1,14 @@
 ﻿using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.HELPERS.Validation;
-using JsonNet.PrivateSettersContractResolvers;
-using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -23,7 +22,8 @@ namespace JOB.API.Controllers
         /// <summary>
         /// recupera todos os usuarios
         /// </summary>
-        /// <returns>retorna lista da classe USUARIO</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(List<USUARIO>))]
         public HttpResponseMessage Get()
         {
             var result = ctx.Usuario.ToList();
@@ -35,7 +35,8 @@ namespace JOB.API.Controllers
         /// recupera um determinado usuario
         /// </summary>
         /// <param name="id">id do usuario</param>
-        /// <returns>retorna classe USUARIO</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(USUARIO))]
         public HttpResponseMessage Get(Guid id)
         {
             var result = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
@@ -44,25 +45,16 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// insere um novo usuario
+        /// Insere um novo usuario
         /// </summary>
-        /// <param name="request">classe USUARIO</param>
-        /// <returns>retorna HttpStatusCode.Created = 201</returns>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage Post(HttpRequestMessage request)
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Post(USUARIO obj)
         {
             try
             {
-                var values = request.Content.ReadAsStringAsync().Result;
-
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver(),
-                    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
-                };
-
-                var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
-
                 Validate(obj);
                 if (!ModelState.IsValid)
                     return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
@@ -82,21 +74,14 @@ namespace JOB.API.Controllers
         /// atualiza um determinado usuario
         /// </summary>
         /// <param name="id">id do usuario</param>
-        /// <param name="request">classe USUARIO</param>
-        /// <returns>retorna HttpStatusCode.OK = 200</returns>
-        public HttpResponseMessage Put(Guid id, HttpRequestMessage request)
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Put(Guid id, USUARIO obj)
         {
             try
             {
-                var values = request.Content.ReadAsStringAsync().Result;
-
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver()
-                };
-
                 var item = ctx.Usuario.FirstOrDefault(w => w.ID_USUARIO == id);
-                var obj = JsonConvert.DeserializeObject<USUARIO>(values, settings);
 
                 item.AtualizaDados(obj.NOME, obj.CPF, obj.RG, obj.DT_NASCIMENTO);
                 ctx.Entry(item).State = EntityState.Modified;

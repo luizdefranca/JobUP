@@ -1,6 +1,4 @@
 ﻿using JOB.DATA;
-using JOB.DATA.Domain;
-using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity.Owin;
 using System;
@@ -76,16 +74,20 @@ namespace JOB.WEB.ApiController
         /// </returns>
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
         {
-            var user = new ApplicationUser { UserName = Login, Email = Email, EmailConfirmed = true };
-            var result = await UserManager.CreateAsync(user, Password);
-            if (result.Succeeded)
+            try
             {
-                Guid id = Guid.Parse(user.Id);
-                MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
-
-                return Request.CreateResponse(HttpStatusCode.OK, user.Id);
+                var user = new ApplicationUser { UserName = Login, Email = Email, EmailConfirmed = true };
+                var result = await UserManager.CreateAsync(user, Password);
+                if (result.Succeeded)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, user.Id);
+                }
+                return Request.CreateResponse(HttpStatusCode.BadRequest, result);
             }
-            return Request.CreateResponse(HttpStatusCode.BadRequest, result);
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
         }
     }
 }

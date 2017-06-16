@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\EnumHelper.cs" />
     <Compile Include="Validation\AssertionConcern.cs" />
     <Compile Include="Validation\ExceptionManager.cs" />
     <Compile Include="Validation\PasswordAssertionConcern.cs" />

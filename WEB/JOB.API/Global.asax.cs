@@ -1,5 +1,6 @@
-﻿using System.Web.Http;
-using JOB.WEB.App_Start;
+﻿using JOB.API.App_Start;
+using System.Web.Http;
+//using JOB.WEB.App_Start;
 using System.Web.Mvc;
 
 namespace JOB.API

@@ -248,33 +248,22 @@
     <Compile Include="CustomFilters\ClearModelErrorsAttribute.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\IdentityExtensions.cs" />
-    <Compile Include="Helper\DadosMenu.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\DadosMenu.cs" />
     <Compile Include="Helper\EmailHelper.cs" />
-    <Compile Include="Helper\EnumHelper.cs" />
     <Compile Include="Helper\FacebookHelper.cs" />
     <Compile Include="Helper\MoedaHelper.cs" />
     <Compile Include="JsonNet.PrivateSettersContractResolvers\PrivateSettersContractResolvers.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
-    <Compile Include="Models\AvaliacaoViewModel.cs" />
-    <Compile Include="Models\ChatVM.cs" />
-    <Compile Include="Models\EspecialidadeViewModel.cs" />
     <Compile Include="Models\FacebookVM.cs" />
-    <Compile Include="Models\FinalizarNegociacaoVM.cs" />
-    <Compile Include="Models\HistoricoMoedaVM.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MenuViewModel.cs" />
     <Compile Include="Models\JobViewModel.cs" />
-    <Compile Include="Models\PropostaViewModel.cs" />
-    <Compile Include="Models\OfertaViewModel.cs" />
-    <Compile Include="Models\ProfissionalViewModel.cs" />
-    <Compile Include="Models\ServicoViewModel.cs" />
-    <Compile Include="Models\UsuarioViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

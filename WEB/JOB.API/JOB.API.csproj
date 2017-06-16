@@ -44,8 +44,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+    <Reference Include="AutoMapper, Version=6.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.0\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -177,6 +177,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\MoedaHelper.cs" />
     <Compile Include="JsonNet.PrivateSettersContractResolvers\PrivateSettersContractResolvers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -213,10 +214,6 @@
     <ProjectReference Include="..\JOB.HELPERS\JOB.HELPERS.csproj">
       <Project>{ac41adda-32af-40e5-83f4-91d4ac103be7}</Project>
       <Name>JOB.HELPERS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JOB.WEB\JOB.WEB.csproj">
-      <Project>{CEE973D5-3804-40BF-89DC-F3E48DA3FFFC}</Project>
-      <Name>JOB.WEB</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
