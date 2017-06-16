@@ -70,7 +70,7 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter implements GoogleA
         ServicoOferta especialidade = especialidadesList.get(position);
 
 
-        View view = LayoutInflater.from(this.context).inflate(R.layout.item_especialidade_catalogo, null);
+        View view = LayoutInflater.from(this.context).inflate(R.layout.row_catalogo_especialidade, null);
         TextView txtNome = (TextView) view.findViewById(R.id.item_especialidade_txtNome);
 //        TextView txtDtNascimento        = (TextView) view.findViewById(R.id.item_especialidade_txtDtNascimento);
         TextView txtDescEspecialidade = (TextView) view.findViewById(R.id.item_especialidade_txtDescricao);

@@ -21,13 +21,13 @@ import retrofit2.http.Query;
  * Created by luizramos on 15/06/17.
  */
 
-public interface IServicoPrivadoClienteSemProposta {
+public interface IServicoPrivadoClienteSemPropostaAPI {
 
     public static final String PATH = "ServicoPrivadoClienteSemProposta/";
 
 
     @GET(PATH)
-    List<ServicoOfertaPrivada> getAll(
+    Call<List<ServicoOfertaPrivada>> getAll(
             @Query("idUsuarioCliente") String idUsuarioCliente
     );
 }

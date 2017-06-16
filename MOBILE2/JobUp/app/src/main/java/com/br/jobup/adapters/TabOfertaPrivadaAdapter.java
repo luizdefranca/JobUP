@@ -7,11 +7,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 
-import com.br.jobup.fragments.AvaliacoesProfissionalFragment;
-import com.br.jobup.fragments.DetalheProfissionalFragment;
-import com.br.jobup.fragments.OfertaPrivadaFragment;
+import com.br.jobup.fragments.ServicoPrivadoClienteSemPropostaFragment;
 import com.br.jobup.fragments.PropostaPrivadaFragment;
-import com.br.jobup.fragments.ServicosProfissionalFragment;
 
 /*
  * Created by Luiz Carlos Ramos on 30/05/17 10:07
@@ -51,7 +48,7 @@ public class TabOfertaPrivadaAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
 
         if (position == 0) {
-            return OfertaPrivadaFragment.getInstance(bundle);
+            return ServicoPrivadoClienteSemPropostaFragment.getInstance(bundle);
         } else {
             return PropostaPrivadaFragment.getInstance(bundle);
         }

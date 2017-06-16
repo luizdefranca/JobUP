@@ -64,10 +64,6 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo_especialidade);
 
-
-
-
-        //TODO: Ver como implementar o BackButton sem destruir a Activity
         // Set Back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

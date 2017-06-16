@@ -28,6 +28,7 @@ public class TaskOfertaPrivadaClientesSemPropostaGetAll extends AsyncTaskLoader<
 
     public TaskOfertaPrivadaClientesSemPropostaGetAll(Context context, String idUsuarioCliente) {
         super(context);
+        this.idUsuarioCliente = idUsuarioCliente;
     }
 
     @Override

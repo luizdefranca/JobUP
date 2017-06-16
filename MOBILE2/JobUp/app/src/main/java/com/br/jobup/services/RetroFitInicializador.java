@@ -10,7 +10,7 @@ import com.br.jobup.services.interfaces.IOfertaAPI;
 import com.br.jobup.services.interfaces.IPerfilProfissional;
 import com.br.jobup.services.interfaces.IPropostaAPI;
 import com.br.jobup.services.interfaces.IServicoPrivadoAPI;
-import com.br.jobup.services.interfaces.IServicoPrivadoClienteSemProposta;
+import com.br.jobup.services.interfaces.IServicoPrivadoClienteSemPropostaAPI;
 import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
 import com.br.jobup.services.interfaces.IUsuarioFullAPI;
@@ -171,7 +171,7 @@ public class RetroFitInicializador<T> {
         return retrofit.create(IServicoPrivadoAPI.class);
     }
 
-    public IServicoPrivadoClienteSemProposta createServicoPrivadoClienteSemPropostaAPI(){
-        return retrofit.create(IServicoPrivadoClienteSemProposta.class);
+    public IServicoPrivadoClienteSemPropostaAPI createServicoPrivadoClienteSemPropostaAPI(){
+        return retrofit.create(IServicoPrivadoClienteSemPropostaAPI.class);
     }
 }
