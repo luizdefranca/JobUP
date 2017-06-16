@@ -10,11 +10,10 @@ import com.br.jobup.services.interfaces.IOfertaAPI;
 import com.br.jobup.services.interfaces.IPerfilProfissional;
 import com.br.jobup.services.interfaces.IPropostaAPI;
 import com.br.jobup.services.interfaces.IServicoPrivadoAPI;
-import com.br.jobup.services.interfaces.IServicoPrivadoClienteAPI;
 import com.br.jobup.services.interfaces.IServicoPrivadoClienteSemPropostaAPI;
-import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
 import com.br.jobup.services.interfaces.IUsuarioFullAPI;
+import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioSignUpAPI;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -29,13 +28,20 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
+/*
+ * Created by Luiz Carlos Ramos on 6/15/17 11:42 PM
+ *
+ * Copyright (c) 2017. All rights reserved.
+ * Last modified 6/15/17 11:31 PM
+ */
+
 /**
  * Created by luizramos on 27/04/17.
  */
 
-public class RetroFitInicializador<T> {
+public class RetroFitInicializadorLogin<T> {
 
-    String API_BASE_URL = "http://jobupapi.azurewebsites.net/api/";
+    String API_BASE_URL = "http://jobup.azurewebsites.net/api/";
 
     private final Retrofit retrofit;
 
@@ -65,7 +71,7 @@ public class RetroFitInicializador<T> {
                     .build())
             .build();
 
-    public  RetroFitInicializador() {
+    public RetroFitInicializadorLogin() {
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create();
         retrofit = new Retrofit.Builder()
                 .baseUrl(API_BASE_URL)
@@ -174,8 +180,5 @@ public class RetroFitInicializador<T> {
 
     public IServicoPrivadoClienteSemPropostaAPI createServicoPrivadoClienteSemPropostaAPI(){
         return retrofit.create(IServicoPrivadoClienteSemPropostaAPI.class);
-    }
-    public IServicoPrivadoClienteAPI createServicoPrivadoClienteAPI(){
-        return retrofit.create(IServicoPrivadoClienteAPI.class);
     }
 }
