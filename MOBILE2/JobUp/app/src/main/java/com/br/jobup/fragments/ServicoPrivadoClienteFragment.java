@@ -13,25 +13,27 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.br.jobup.R;
+import com.br.jobup.adapters.ServicoPrivadoClienteAdapter;
 import com.br.jobup.adapters.ServicoPrivadoClienteSemPropostaAdapter;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.preferencesPersistence.PreferencePersistence;
+import com.br.jobup.services.tasks.TaskOfertaPrivadaClientes;
 import com.br.jobup.services.tasks.TaskOfertaPrivadaClientesSemPropostaGetAll;
 
 import java.util.List;
 
 /*
- * Created by Luiz Carlos Ramos on 30/05/17 10:11
+ * Created by Luiz Carlos Ramos on 6/16/17 7:48 PM
  *
  * Copyright (c) 2017. All rights reserved.
- * Last modified 27/05/17 03:30
+ * Last modified 6/15/17 11:10 PM
  */
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
+public class ServicoPrivadoClienteFragment extends Fragment {
 
     public static final String ARGUMENTO_AVALIACOES_PROFISSIONAIS = "arg_avaliacoes";
     private LoaderManager mLoaderManager;
@@ -41,7 +43,7 @@ public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
 
     private ListView mLstOfertaPrivada;
 
-    public ServicoPrivadoClienteSemPropostaFragment() {
+    public ServicoPrivadoClienteFragment() {
     }
 
     /**
@@ -50,9 +52,9 @@ public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
      * @param bundle
      * @return
      */
-    public static ServicoPrivadoClienteSemPropostaFragment getInstance(Bundle bundle) {
+    public static ServicoPrivadoClienteFragment getInstance(Bundle bundle) {
 
-        ServicoPrivadoClienteSemPropostaFragment frag = new ServicoPrivadoClienteSemPropostaFragment();
+        ServicoPrivadoClienteFragment frag = new ServicoPrivadoClienteFragment();
         Bundle args = new Bundle();
 //        args.putBundle(ARGUMENTO_AVALIACOES_PROFISSIONAIS, bundle);
 
@@ -81,9 +83,9 @@ public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        mView = inflater.inflate(R.layout.fragment_servico_privado_cliente_sem_proposta, container, false);
+        mView = inflater.inflate(R.layout.fragment_servico_privado_cliente_com_proposta, container, false);
 
-        lstView = (ListView) mView.findViewById(R.id.lstViewOfertaPrivadaClienteSemProposta);
+        lstView = (ListView) mView.findViewById(R.id.lstViewOfertaPrivadaClienteComProposta);
         final PreferencePersistence<Usuario> persistence = new PreferencePersistence<>(getContext());
         final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
                 "com.br.jobup.models.usuario.Usuario");
@@ -116,7 +118,7 @@ public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
         }
         @Override
         public Loader<List<ServicoOfertaPrivada>> onCreateLoader(int id, Bundle args) {
-            return new TaskOfertaPrivadaClientesSemPropostaGetAll(context, idUsuarioCliente);
+            return new TaskOfertaPrivadaClientes(context, idUsuarioCliente);
         }
 
 
@@ -125,7 +127,7 @@ public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
         public void onLoadFinished(Loader<List<ServicoOfertaPrivada>> loader, List<ServicoOfertaPrivada> Ofertas) {
 
             if(Ofertas != null) {
-                ServicoPrivadoClienteSemPropostaAdapter adapter = new ServicoPrivadoClienteSemPropostaAdapter(context, Ofertas);
+                ServicoPrivadoClienteAdapter adapter = new ServicoPrivadoClienteAdapter(context, Ofertas);
                 lstView.setAdapter(adapter);
             }
         }

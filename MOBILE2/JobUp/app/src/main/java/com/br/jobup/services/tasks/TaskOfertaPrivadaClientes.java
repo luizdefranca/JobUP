@@ -20,7 +20,7 @@ public class TaskOfertaPrivadaClientes extends AsyncTaskLoader<List<ServicoOfert
 
     public static final String TAG = "LCFR -> " + TaskOfertaPrivadaClientes.class.getSimpleName();
     private String idUsuarioCliente;
-    List<ServicoOfertaPrivada> mOfertasPrivadasSemPropostas;
+    List<ServicoOfertaPrivada> mOfertasPrivadasComPropostas;
 
 
     public TaskOfertaPrivadaClientes(Context context, String idUsuarioCliente) {
@@ -32,12 +32,12 @@ public class TaskOfertaPrivadaClientes extends AsyncTaskLoader<List<ServicoOfert
     protected void onStartLoading() {
         super.onStartLoading();
 
-        if (mOfertasPrivadasSemPropostas == null){
+        if (mOfertasPrivadasComPropostas == null){
             Log.e(TAG, "onStartLoading: forceLoad" );
             forceLoad();
         }else {
             Log.e(TAG, "onStartLoading: deliverResult");
-            deliverResult(mOfertasPrivadasSemPropostas);
+            deliverResult(mOfertasPrivadasComPropostas);
         }
     }
 
@@ -46,8 +46,8 @@ public class TaskOfertaPrivadaClientes extends AsyncTaskLoader<List<ServicoOfert
 
         ParserOfertaPrivadaClienteSemProposta parser = new ParserOfertaPrivadaClienteSemProposta(idUsuarioCliente);
 
-        mOfertasPrivadasSemPropostas = parser.getAllPorIdUsuarioCliente();
-        return mOfertasPrivadasSemPropostas;
+        mOfertasPrivadasComPropostas = parser.getAllPorIdUsuarioCliente();
+        return mOfertasPrivadasComPropostas;
     }
 
     @Override

@@ -24,6 +24,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -49,7 +50,11 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter implements GoogleA
     boolean mResolvingError;
 
     public CatalogoEspecialidadeAdapter(Context context, List<ServicoOferta> especialidadesCatalogo) {
-        this.especialidadesList = especialidadesCatalogo;
+        if(especialidadesCatalogo == null) {
+            this.especialidadesList = new ArrayList<>();
+        } else {
+            this.especialidadesList = especialidadesCatalogo;
+        }
         this.context = context;
         setupGoogleApiClient(context);
         obterUltimaLocalizacao();

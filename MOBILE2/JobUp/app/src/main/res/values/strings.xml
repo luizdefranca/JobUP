@@ -59,7 +59,12 @@
         <item>Adicionar a favoritos</item>
         <item>Contratar servicos</item>
         <item>Fechar</item>
-
+    </string-array>
+    <string-array name="duracao_servico">
+        <item>hora(s)</item>
+        <item>dia(s)</item>
+        <item>semana(s)</item>
+        <item>mês(es)</item>
     </string-array>
     <string name="title_activity_tab_detalhe_profissional">TabDetalheProfissionalActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>

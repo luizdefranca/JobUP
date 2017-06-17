@@ -32,15 +32,15 @@ public class Proposta implements Serializable {
 
     @SerializedName("DURACAO_SERVICO")
     @Expose
-    private Integer duracaoServico;
+    private int duracaoServico;
 
     @SerializedName("VALOR_DURACAO_SERVICO")
     @Expose
-    private Integer valorDuracaoServico;
+    private int valorDuracaoServico;
 
     @SerializedName("VL_PROPOSTA")
     @Expose
-    private Integer vlProposta;
+    private double vlProposta;
 
     @SerializedName("JUSTIFICATIVA")
     @Expose
@@ -84,27 +84,27 @@ public class Proposta implements Serializable {
         this.dtProposta = dtProposta;
     }
 
-    public Integer getDuracaoServico() {
+    public int getDuracaoServico() {
         return duracaoServico;
     }
 
-    public void setDuracaoServico(Integer duracaoServico) {
+    public void setDuracaoServico(int duracaoServico) {
         this.duracaoServico = duracaoServico;
     }
 
-    public Integer getValorDuracaoServico() {
+    public int getValorDuracaoServico() {
         return valorDuracaoServico;
     }
 
-    public void setValorDuracaoServico(Integer valorDuracaoServico) {
+    public void setValorDuracaoServico(int valorDuracaoServico) {
         this.valorDuracaoServico = valorDuracaoServico;
     }
 
-    public Integer getVlProposta() {
+    public double getVlProposta() {
         return vlProposta;
     }
 
-    public void setVlProposta(Integer vlProposta) {
+    public void setVlProposta(double vlProposta) {
         this.vlProposta = vlProposta;
     }
 

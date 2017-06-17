@@ -110,3 +110,34 @@
   ║ "The NOME field is required.The CEP field is required.The LOGRADOURO field is required.The BAIRRO field is req
   ║ uired.The CIDADE field is required."
   ╚═══════════════════════════════════════════════════════════════════════════════════════
+
+ /api/perfilprofissional/ - is success : false - Received in: 249ms
+
+ Status Code: 400
+
+ Body:
+ "Error mapping types.\r\n\r\nMapping types:\r\nSERVICO -> ServicoViewModel_api\r\nJOB.DATA.Domain.SERVICO -> J
+ OB.WEB.Models.ServicoViewModel_api\r\n\r\nType Map configuration:\r\nSERVICO -> ServicoViewModel_api\r\nJOB.DA
+ TA.Domain.SERVICO -> JOB.WEB.Models.ServicoViewModel_api\r\n\r\nProperty:\r\nPROPOSTAS"
+
+ ╔══════ Response ═══════════════════════════════════════════════════════════════════════
+ ║ /api/usuario/ - is success : false - Received in: 1202ms
+ ║
+ ║ Status Code: 400
+ ║
+ ║ Body:
+ ║ {
+ ║    "Message": "The request is invalid.",
+ ║    "ModelState": {
+ ║       "obj.Cpf": [
+ ║          "CPF inválido: "
+ ║       ],
+ ║       "obj.Email": [
+ ║          "E-mail"
+ ║       ],
+ ║       "obj.Rg": [
+ ║          "NR RG"
+ ║       ]
+ ║    }
+ ║ }
+ ╚═══════════════════════════════════════════════════════════════════════════════════════

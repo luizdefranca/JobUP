@@ -16,15 +16,13 @@ import com.br.jobup.R;
 import com.br.jobup.adapters.CatalogoEspecialidadeAdapter;
 import com.br.jobup.fragments.DetalheProfissionalViewPagerActivity;
 import com.br.jobup.models.especialidade.ServicoOferta;
-import com.br.jobup.models.especialidade.ServicoOfertaOrdenadoPorAvaliacao;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.preferencesPersistence.PreferencePersistence;
 import com.br.jobup.services.parsers.ParserEspecialidadeCatalogo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -75,13 +73,13 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
         mListCatalogoEspecialidade = (ListView) findViewById(R.id.catalogo_especialidade_lstView);
 
         //Recupera o valor do idCAtegoria
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             Log.e(TAG, "onCreate antes: idCategoria -> " + idCategoria);
             idCategoria = savedInstanceState.getInt(ID_ESPECIALIDADE);
-        } else{
+        } else {
             idCategoria = getIntent().getIntExtra(ID_ESPECIALIDADE, idCategoria);
         }
-        Log.e(TAG, "onCreate depois: idCategoria -> "+ idCategoria );
+        Log.e(TAG, "onCreate depois: idCategoria -> " + idCategoria);
 
 
         //Seta o subtitle na ActionBar para o da categoria
@@ -102,9 +100,9 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                         final ServicoOferta especialidadeDetalhe = (ServicoOferta) mListCatalogoEspecialidade.getItemAtPosition(position);
 
 //                              Pega o id do Profissional da especialidade selecionada
-                        idProfissinal= especialidadeDetalhe.getIdUsuario();
+                        idProfissinal = especialidadeDetalhe.getIdUsuario();
                         nomeProfissional = especialidadeDetalhe.getNome();
-                        switch (which){
+                        switch (which) {
 
                             //Ver detalhe do Profissional
                             case 0:
@@ -112,9 +110,9 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
 //
                                 Bundle baseBundle = new Bundle();
-                                baseBundle.putString(ID_PROFISSIONAL, idProfissinal );
+                                baseBundle.putString(ID_PROFISSIONAL, idProfissinal);
                                 baseBundle.putInt(ID_ESPECIALIDADE, idCategoria);
-                                baseBundle.putSerializable(ESPECIALIDADE_DETALHE, especialidadeDetalhe );
+                                baseBundle.putSerializable(ESPECIALIDADE_DETALHE, especialidadeDetalhe);
                                 intentDetalheUsuario.putExtra(DETALHE_PROFISSIONAL, baseBundle);
                                 startActivity(intentDetalheUsuario);
                                 break;
@@ -137,7 +135,7 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                                 final Intent intent = new Intent(CatalogoEspecialidadeActivity.this, OfertarServicoActivity.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString(ID_USUARIO, usuarioCorrente.idUsuario);
-                                bundle.putString(ID_PROFISSIONAL, idProfissinal );
+                                bundle.putString(ID_PROFISSIONAL, idProfissinal);
                                 bundle.putInt(ID_ESPECIALIDADE, idCategoria);
                                 bundle.putString(NOME_PROFISSIONAL, nomeProfissional);
                                 intent.putExtra(DETALHE_CONTRATAR_SERVICO, bundle);
@@ -162,13 +160,11 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
             }
 
 
-
         });
 
-        Log.e("LCFR " + TAG, "onCreate: " );
+        Log.e("LCFR " + TAG, "onCreate: ");
         //Fim do método onCreate
     }
-
 
 
     //METODOS DA ACTION BAR
@@ -184,7 +180,7 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.action_mapa){
+        if (id == R.id.action_mapa) {
 
             Intent intent = new Intent(CatalogoEspecialidadeActivity.this, MapaActivity.class);
 
@@ -202,26 +198,23 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         carregaCatalogoEspecialidade();
-        Log.e("LCFR " + TAG, "onStart: -> "+ idCategoria );
+        Log.e("LCFR " + TAG, "onStart: -> " + idCategoria);
         getBaseContext();
     }
-
 
 
     @Override
     protected void onRestart() {
         super.onRestart();
         carregaCatalogoEspecialidade();
-        Log.e("LCFR " + TAG, "onRestart:  -> "+ idCategoria );
+        Log.e("LCFR " + TAG, "onRestart:  -> " + idCategoria);
     }
-
-
 
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
 
-        Log.e(TAG, "onSaveInstanceState: " + idCategoria );
+        Log.e(TAG, "onSaveInstanceState: " + idCategoria);
         outState.putInt(ID_ESPECIALIDADE, idCategoria);
         super.onSaveInstanceState(outState);
     }
@@ -230,8 +223,9 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         idCategoria = savedInstanceState.getInt(ID_ESPECIALIDADE);
-        Log.e(TAG, "onRestoreInstanceState: " + idCategoria );
+        Log.e(TAG, "onRestoreInstanceState: " + idCategoria);
     }
+
     protected String pegaNomeDaCategoriaPeloId(int idCategoria) {
         final Map<Integer, String> categoriaMap = new HashMap<>();
         categoriaMap.put(2, "Adestrador de cães");
@@ -249,16 +243,17 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
     //Faz a chamada à API e carrega a ListView
     private void carregaCatalogoEspecialidade() {
-        Log.e("LCFR " + TAG, "Entrada no método carregaCatalogoEspecialidade: " );
+        Log.e("LCFR " + TAG, "Entrada no método carregaCatalogoEspecialidade: ");
 
         final ParserEspecialidadeCatalogo parser = new ParserEspecialidadeCatalogo(idCategoria);
         parser.getAll().enqueue(new Callback<List<ServicoOferta>>() {
             @Override
             public void onResponse(Call<List<ServicoOferta>> call, Response<List<ServicoOferta>> response) {
                 especialidadeList = response.body();
-                catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this,  especialidadeList);
+                ordenaPorAvaliacao(especialidadeList);
+                catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
                 mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
-                Log.e("LCFR " + TAG, "Chamada do método onResponse: " );
+                Log.e("LCFR " + TAG, "Chamada do método onResponse: ");
             }
 
             @Override
@@ -270,12 +265,33 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
     }
 
-private List<ServicoOferta> ordenaPorAvaliacao(List<ServicoOferta> especialidadeList){
-//    List<ServicoOfertaOrdenadoPorAvaliacao> listaOrdenadaPorAvaliacao = new ArrayList<ServicoOfertaOrdenadoPorAvaliacao>((List< ServicoOfertaOrdenadoPorAvaliacao>) Arrays.asList(especialidadeList));
-//    Collections.sort(listaOrdenadaPorAvaliacao);
+    private void ordenaPorAvaliacao(List<ServicoOferta> lista) {
 
+        Collections.sort(lista, new Comparator<ServicoOferta>() {
+            @Override
+            public int compare(ServicoOferta s1, ServicoOferta s2) {
+                if (s1.avaliacao > s2.avaliacao)
+                    return 1;
+                else  if (s1.avaliacao < s2.avaliacao)
+                        return -1;
+                else return 0;
 
-    return null;
-}
+            }
+        });
+    }
 
+    private void ordenaPorNumeroPropostas(List<ServicoOferta> lista) {
+
+        Collections.sort(lista, new Comparator<ServicoOferta>() {
+            @Override
+            public int compare(ServicoOferta s1, ServicoOferta s2) {
+                if (s1.propostas.size() > s2.propostas.size())
+                    return 1;
+                else  if (s1.propostas.size() < s2.propostas.size())
+                    return -1;
+                else return 0;
+
+            }
+        });
+    }
 }
