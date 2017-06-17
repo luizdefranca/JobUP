@@ -61,6 +61,8 @@ namespace JOB.API.Controllers
 
                     if (MEUS_SERVICOS != null) model.SERVICOS.AddRange(Mapper.Map<List<ServicoViewModel_api>>(MEUS_SERVICOS));
 
+                    if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = null;
+
                     foreach (var item in model.OUTROS_PERFIS)
                     {
                         item.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).DESCRICAO;

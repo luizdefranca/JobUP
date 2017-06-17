@@ -47,6 +47,9 @@ namespace JOB.WEB.Models
         [Display(Name = "Destaque")]
         public bool PERFIL_DESTAQUE { get; set; }
 
+        [Display(Name = "Media das Avaliacoes")]
+        public double? MEDIA_AVALIACOES_FEITAS { get; set; }
+
         public DateTime DT_ORDENACAO { get; set; }
 
         public List<ProfissionalViewModel> OUTROS_PERFIS { get; set; }
