@@ -544,6 +544,18 @@
             <param name="obj"></param>
             <returns></returns>
         </member>
+        <member name="T:JOB.API.Controllers.ProfissionaisMaisPropostasAceitasController">
+            <summary>
+            API de profissionais com maiores quantidades de propostas aceitas
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.ProfissionaisMaisPropostasAceitasController.Get(System.Int32)">
+            <summary>
+            Recupera uma lista com os profissionais filtrados por uma determinada especialidade
+            </summary>
+            <param name="idEspecialidade">id da especialidade</param>
+            <returns></returns>
+        </member>
         <member name="T:JOB.API.Controllers.ProfissionaisMelhoresAvaliadosController">
             <summary>
             API de profissionais melhores avaliados

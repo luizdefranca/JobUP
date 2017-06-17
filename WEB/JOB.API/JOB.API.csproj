@@ -155,6 +155,7 @@
     <Compile Include="Controllers\AprovacaoUsuarioController.cs" />
     <Compile Include="Controllers\DesativarController.cs" />
     <Compile Include="Controllers\AvaliacaoController.cs" />
+    <Compile Include="Controllers\ProfissionaisMaisPropostasAceitasController.cs" />
     <Compile Include="Controllers\ProfissionaisMelhoresAvaliadosController.cs" />
     <Compile Include="Controllers\PropostaController.cs" />
     <Compile Include="Controllers\OfertaController.cs" />

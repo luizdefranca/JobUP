@@ -49,6 +49,7 @@ namespace JOB.WEB.Models
 
         [Display(Name = "Media das Avaliacoes")]
         public double? MEDIA_AVALIACOES_FEITAS { get; set; }
+        public int? QTD_PROPOSTAS_ACEITAS { get; set; }
 
         public DateTime DT_ORDENACAO { get; set; }
 
