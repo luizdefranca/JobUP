@@ -1,8 +1,10 @@
 ﻿using JOB.DATA;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -18,6 +20,7 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <returns></returns>
+        [ResponseType(typeof(List<DATA.Domain.SUB_ESPECIALIDADE>))]
         public HttpResponseMessage Get(int idEspecialidade)
         {
             var result = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade).ToList();
@@ -31,6 +34,7 @@ namespace JOB.API.Controllers
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <param name="id">id da subespecialidade</param>
         /// <returns></returns>
+        [ResponseType(typeof(List<DATA.Domain.SUB_ESPECIALIDADE>))]
         public HttpResponseMessage Get(int idEspecialidade, int id)
         {
             var result = ctx.SubEspecialidade.Where(w => w.ID_ESPECIALIDADE == idEspecialidade & w.ID_SUB_ESPECIALIDADE == id).ToList();

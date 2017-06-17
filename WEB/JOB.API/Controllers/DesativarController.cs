@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -18,7 +18,8 @@ namespace JOB.API.Controllers
         /// Desativa um determinado usuario
         /// </summary>
         /// <param name="id">id do usuario</param>
-        /// <returns>retorna HttpStatusCode.OK = 200</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
         public HttpResponseMessage Get(Guid id)
         {
             using (Contexto ctx = new Contexto())

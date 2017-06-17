@@ -15,12 +15,7 @@
             </summary>
             <param name="Email">Username do usuario</param>
             <param name="Password">Senha do usuario</param>
-            <returns>
-            200 -> login efetuado (retorna a classe usuario);
-            403 -> usuario bloqueado;
-            412 -> requer verificacao de email;
-            400 -> falha no login
-            </returns>
+            <returns></returns>
         </member>
         <member name="M:JOB.WEB.ApiController.LoginController.Get(System.String,System.String,System.String)">
             <summary>
@@ -29,10 +24,7 @@
             <param name="Login">Username do usuario</param>
             <param name="Email">Email do usuario</param>
             <param name="Password">Senha do usuario</param>
-            <returns>
-            200 -> cadastro efetuado (retorna o ID do usuario);
-            400 -> falha no cadastro
-            </returns>
+            <returns></returns>
         </member>
         <member name="M:JOB.WEB.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>

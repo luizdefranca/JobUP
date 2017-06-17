@@ -7,11 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de propostas de servicos (resposta do profissional)
+    /// API de propostas de servicos (resposta do profissional a uma oferta de servico)
     /// </summary>
     public class PropostaController : ApiController
     {
@@ -21,7 +22,8 @@ namespace JOB.API.Controllers
         /// recupera todas as propostas de um determinado usuario profissional
         /// </summary>
         /// <param name="idUsuario">id do usuario</param>
-        /// <returns>retorna uma lista da classe PropostaViewModel</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(List<PropostaViewModel>))]
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var lstDominio = ctx.Proposta.Where(w => w.ID_USUARIO == idUsuario).ToList();

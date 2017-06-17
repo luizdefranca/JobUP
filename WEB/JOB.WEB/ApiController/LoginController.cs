@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.WEB.ApiController
 {
@@ -27,12 +28,8 @@ namespace JOB.WEB.ApiController
         /// </summary>
         /// <param name="Email">Username do usuario</param>
         /// <param name="Password">Senha do usuario</param>
-        /// <returns>
-        /// 200 -> login efetuado (retorna a classe usuario);
-        /// 403 -> usuario bloqueado;
-        /// 412 -> requer verificacao de email;
-        /// 400 -> falha no login
-        /// </returns>
+        /// <returns></returns>
+        [ResponseType(typeof(SignInStatus))]
         public async Task<HttpResponseMessage> Get(string Email, string Password)
         {
             var user = await UserManager.FindByNameAsync(Email);
@@ -68,10 +65,8 @@ namespace JOB.WEB.ApiController
         /// <param name="Login">Username do usuario</param>
         /// <param name="Email">Email do usuario</param>
         /// <param name="Password">Senha do usuario</param>
-        /// <returns>
-        /// 200 -> cadastro efetuado (retorna o ID do usuario);
-        /// 400 -> falha no cadastro
-        /// </returns>
+        /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
         {
             try

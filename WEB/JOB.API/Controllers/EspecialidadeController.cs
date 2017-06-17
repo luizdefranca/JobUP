@@ -1,15 +1,14 @@
 ﻿using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.HELPERS.Validation;
-using JsonNet.PrivateSettersContractResolvers;
-using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -23,7 +22,8 @@ namespace JOB.API.Controllers
         /// <summary>
         /// Recupera todas as listas
         /// </summary>
-        /// <returns>retorna HttpStatusCode.OK = 200</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(List<ESPECIALIDADE>))]
         public HttpResponseMessage Get()
         {
             var result = ctx.Especialidade.ToList();
@@ -35,7 +35,8 @@ namespace JOB.API.Controllers
         /// Recupera uma determinada especialidade
         /// </summary>
         /// <param name="id">id da especialidade</param>
-        /// <returns>retorna HttpStatusCode.OK = 200</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(ESPECIALIDADE))]
         public HttpResponseMessage Get(int id)
         {
             var result = ctx.Especialidade.FirstOrDefault(w => w.ID_ESPECIALIDADE == id);
@@ -46,23 +47,14 @@ namespace JOB.API.Controllers
         /// <summary>
         /// Salva uma nova especialidade
         /// </summary>
-        /// <param name="request">classe ESPECIALIDADE</param>
-        /// <returns>retorna HttpStatusCode.Created = 201</returns>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage Post(HttpRequestMessage request)
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Post(ESPECIALIDADE obj)
         {
             try
             {
-                var values = request.Content.ReadAsStringAsync().Result;
-
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver(),
-                    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
-                };
-
-                var obj = JsonConvert.DeserializeObject<ESPECIALIDADE>(values, settings);
-
                 Validate(obj);
                 if (!ModelState.IsValid)
                     return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
@@ -82,21 +74,14 @@ namespace JOB.API.Controllers
         /// Atualiza uma especialidade
         /// </summary>
         /// <param name="id">id da especialidade</param>
-        /// <param name="request">classe ESPECIALIDADE</param>
-        /// <returns>retorna HttpStatusCode.OK = 200</returns>
-        public HttpResponseMessage Put(int id, HttpRequestMessage request)
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Put(int id, ESPECIALIDADE obj)
         {
             try
             {
-                var values = request.Content.ReadAsStringAsync().Result;
-
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver()
-                };
-
                 var item = ctx.Especialidade.FirstOrDefault(w => w.ID_ESPECIALIDADE == id);
-                var obj = JsonConvert.DeserializeObject<ESPECIALIDADE>(values, settings);
 
                 item.AtualizaDados(obj.DESCRICAO, obj.EXIGIR_COMPROVACAO);
                 ctx.Entry(item).State = EntityState.Modified;

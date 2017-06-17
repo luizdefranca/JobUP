@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -21,7 +22,8 @@ namespace JOB.API.Controllers
         /// Lista as ofertas de um determinado profissional
         /// </summary>
         /// <param name="idUsuario">id do usuario</param>
-        /// <returns>retorna HttpStatusCode.OK = 200</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(List<OfertaViewModel>))]
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var lstDominio = ctx.Oferta.Where(w => w.ID_USUARIO == idUsuario).ToList();

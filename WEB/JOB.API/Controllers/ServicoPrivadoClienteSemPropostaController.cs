@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -23,7 +24,8 @@ namespace JOB.API.Controllers
         /// recupera todos os servicos privados que nao possuem propostas de um determinado usuario cliente
         /// </summary>
         /// <param name="idUsuarioCliente">id do usuario cliente</param>
-        /// <returns>retorna uma lista da classe ServicoViewModel_api</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(List<ServicoViewModel_api>))]
         public HttpResponseMessage Get(Guid idUsuarioCliente)
         {
             var lstDominio = ctx.Servico.Include(i => i.PROPOSTAS).Include(i => i.OFERTAS).Where(w => w.ID_USUARIO == idUsuarioCliente & w.PUBLICO == false & !w.PROPOSTAS.Any()).ToList();

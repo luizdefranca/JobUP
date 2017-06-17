@@ -3,8 +3,6 @@ using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.HELPERS.Validation;
 using JOB.WEB.Models;
-using JsonNet.PrivateSettersContractResolvers;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,6 +10,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -26,7 +25,8 @@ namespace JOB.API.Controllers
         /// Recupera todos os profissionais de uma determinada especialidade
         /// </summary>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <returns>retorna uma lista da classe ProfissionalViewModel</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(List<ProfissionalViewModel>))]
         public HttpResponseMessage Get(int idEspecialidade)
         {
             try
@@ -78,7 +78,8 @@ namespace JOB.API.Controllers
         /// Recupera todas os perfis profissionais de um determinado profissional
         /// </summary>
         /// <param name="idUsuario"></param>
-        /// <returns>retorna uma lista da classe PERFIL_PROFISSIONAL</returns>
+        /// <returns></returns>
+        [ResponseType(typeof(List<PERFIL_PROFISSIONAL>))]
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var result = ctx.PerfilProfissional.Include(i => i.ESPECIALIDADE).Where(w => w.ID_USUARIO == idUsuario).ToList();
@@ -92,6 +93,7 @@ namespace JOB.API.Controllers
         /// <param name="idUsuario">id do usuario profissional</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <returns>retorna a classe PERFIL_PROFISSIONAL</returns>
+        [ResponseType(typeof(PERFIL_PROFISSIONAL))]
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade)
         {
             var result = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
@@ -102,23 +104,14 @@ namespace JOB.API.Controllers
         /// <summary>
         /// salva um novo perfil profissional
         /// </summary>
-        /// <param name="request">classe PERFIL_PROFISSIONAL</param>
-        /// <returns>retorna HttpStatusCode.Created = 200</returns>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage Post(HttpRequestMessage request)
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Post(PERFIL_PROFISSIONAL obj)
         {
             try
             {
-                var values = request.Content.ReadAsStringAsync().Result;
-
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver(),
-                    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
-                };
-
-                var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
-
                 Validate(obj);
                 if (!ModelState.IsValid)
                     return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
@@ -139,21 +132,14 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idUsuario">id do usuario</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <param name="request">classe PERFIL_PROFISSIONAL</param>
-        /// <returns>retorna HttpStatusCode.OK = 200</returns>
-        public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, HttpRequestMessage request)
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, PERFIL_PROFISSIONAL obj)
         {
             try
             {
-                var values = request.Content.ReadAsStringAsync().Result;
-
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver()
-                };
-
                 var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
-                var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
 
                 item.AtualizaValores(obj.RESUMO_CURRICULO);
                 ctx.Entry(item).State = EntityState.Modified;
@@ -177,6 +163,7 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idUsuario">id do usuario</param>
         /// <param name="idEspecialidade">id da especialidade</param>
+        [ResponseType(typeof(HttpStatusCode))]
         public void Delete(Guid idUsuario, int idEspecialidade)
         {
             var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
