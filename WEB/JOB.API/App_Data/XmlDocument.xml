@@ -544,6 +544,18 @@
             <param name="obj"></param>
             <returns></returns>
         </member>
+        <member name="T:JOB.API.Controllers.ProfissionaisMelhoresAvaliadosController">
+            <summary>
+            API de profissionais melhores avaliados
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.ProfissionaisMelhoresAvaliadosController.Get(System.Int32)">
+            <summary>
+            Recupera uma lista com os profissionais filtrados por uma determinada especialidade
+            </summary>
+            <param name="idEspecialidade">id da especialidade</param>
+            <returns></returns>
+        </member>
         <member name="T:JOB.API.Controllers.PropostaController">
             <summary>
             API de propostas de servicos (resposta do profissional a uma oferta de servico)
@@ -554,6 +566,13 @@
             recupera todas as propostas de um determinado usuario profissional
             </summary>
             <param name="idUsuario">id do usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:JOB.API.Controllers.PropostaController.Post(JOB.DATA.Domain.PROPOSTA_SERVICO)">
+            <summary>
+            Profissional aceita uma oferta de servico e gera uma proposta
+            </summary>
+            <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.OfertaController">
@@ -835,6 +854,16 @@
             deleta um determinado usuario
             </summary>
             <param name="id">id do usuario</param>
+        </member>
+        <member name="T:JOB.API.WebApiApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JOB.API.WebApiApplication.Application_Start">
+            <summary>
+            
+            </summary>
         </member>
     </members>
 </doc>

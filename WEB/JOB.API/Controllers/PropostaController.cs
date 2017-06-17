@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using JOB.DATA;
+using JOB.DATA.Domain;
+using JOB.HELPERS.Validation;
 using JOB.WEB.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -37,6 +40,39 @@ namespace JOB.API.Controllers
             }
 
             return Request.CreateResponse(HttpStatusCode.OK, lstModel);
+        }
+
+        /// <summary>
+        /// Profissional aceita uma oferta de servico e gera uma proposta
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Post(PROPOSTA_SERVICO obj)
+        {
+            try
+            {
+                Validate(obj);
+                if (!ModelState.IsValid)
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+
+                var domain = ctx.Oferta.First(f => f.ID_SERVICO == obj.ID_SERVICO);
+
+                domain.AceitarOferta();
+                ctx.Entry(domain).State = EntityState.Modified;
+
+                var proposta = new PROPOSTA_SERVICO(obj.ID_SERVICO, obj.ID_USUARIO, obj.VL_PROPOSTA, obj.JUSTIFICATIVA, obj.DURACAO_SERVICO, obj.VALOR_DURACAO_SERVICO);
+                ctx.Proposta.Add(proposta);
+
+                ctx.SaveChanges();
+
+                return Request.CreateResponse(HttpStatusCode.Created);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.TratarMensagem());
+            }
         }
     }
 }
