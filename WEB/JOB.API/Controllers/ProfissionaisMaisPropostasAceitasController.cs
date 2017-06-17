@@ -64,7 +64,7 @@ namespace JOB.API.Controllers
 
                     if (MEUS_SERVICOS != null) model.SERVICOS.AddRange(Mapper.Map<List<ServicoViewModel_api>>(MEUS_SERVICOS));
 
-                    if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = null;
+                    if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = 0;
 
                     model.QTD_PROPOSTAS_ACEITAS = usuario.PROPOSTAS_SERVICO.Count(C => C.ACEITA & C.USUARIO.PERFIS_PROFISSIONAIS.Select(S => S.ID_ESPECIALIDADE).Contains(model.ID_ESPECIALIDADE));
 

@@ -30,9 +30,11 @@ namespace JOB.API.Controllers
         {
             try
             {
-                var lstDominio = ctx.PerfilProfissional.Include(i => i.AVALIACOES)
+                var lstDominio = ctx.PerfilProfissional
+                    .Include(i => i.AVALIACOES)
                     .Where(f => f.ID_ESPECIALIDADE == idEspecialidade)
-                    .OrderByDescending(o => Enumerable.Average(o.AVALIACOES.Select(s => (int)s.NOTA))).ToList();
+                    .OrderByDescending(o => Enumerable.Average(o.AVALIACOES.Select(s => (int)s.NOTA)))
+                    .ToList();
 
                 var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
 
@@ -61,7 +63,7 @@ namespace JOB.API.Controllers
 
                     if (MEUS_SERVICOS != null) model.SERVICOS.AddRange(Mapper.Map<List<ServicoViewModel_api>>(MEUS_SERVICOS));
 
-                    if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = null;
+                    if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = 0;
 
                     foreach (var item in model.OUTROS_PERFIS)
                     {
