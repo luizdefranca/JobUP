@@ -75,9 +75,11 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         txtDesEspecialidade.setText(getDescricaoEspecialidadePorId(servico.getIdEspecialidade()));
         txtObservacao.setText(servico.getObservacoes());
         txtTitulo.setText(servico.getTitulo());
-        txtValor.setText(String.valueOf(servico.getValorSugerido()));
+        String valorSugerido = String.format("%.2f", servico.getValorSugerido());
+        txtValor.setText(String.valueOf(valorSugerido));
         txtDtProposta.setText(Parsers.parseDataToStringNormal(servico.getDtCadastro()));
-        txtValorProposta.setText("R$ " + getProposta(servico).getVlProposta());
+        String valorProposta = String.format("%.2f", getProposta(servico).getVlProposta());
+        txtValorProposta.setText("R$ " + valorProposta);
         txtDuracaoServico.setText(getProposta(servico).getValorDuracaoServico()
                 + " "
                 + pegaDescricaoDuracaoServico(view, getProposta(servico).getDuracaoServico()) );
@@ -86,7 +88,9 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
     }
 
     private Proposta getProposta(ServicoOfertaPrivada servico) {
-        return servico.getPropostas().get(0);
+        final List<Proposta> propostas = servico.getPropostas();
+        final Proposta proposta = propostas.get(0);
+        return proposta;
     }
 
 

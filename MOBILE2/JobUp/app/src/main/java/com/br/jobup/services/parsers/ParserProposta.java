@@ -20,23 +20,24 @@ public class ParserProposta {
     public List<Proposta> getAllPorIdUsuario(){
         List<Proposta> propostas = null;
 
-        try {
-            propostas =  new RetroFitInicializador()
-                    .createPropostaAPI()
-                    .getPropostas(this.idUsuario)
-                    .execute()
-                    .body();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e(TAG, "getAllPorIdUsuario: ",e );
-        }
+////        try {
+////            propostas =  new RetroFitInicializador()
+////                    .createPropostaAPI()
+////                    .getPropostas(this.idUsuario)
+////                    .execute()
+////                    .body();
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////            Log.e(TAG, "getAllPorIdUsuario: ",e );
+//        }
         return propostas;
     }
     public Call<Void> post(Proposta proposta) {
-        final Call<Void> callPost = new RetroFitInicializador()
-                .createServicoPrivadoAPI()
-                .post(proposta);
+//        final Call<Void> callPost = new RetroFitInicializador()
+//                .createServicoPrivadoAPI()
+//                .post(proposta);
 
-        return callPost;
+//        return callPost;
+        return null;
     }
 }

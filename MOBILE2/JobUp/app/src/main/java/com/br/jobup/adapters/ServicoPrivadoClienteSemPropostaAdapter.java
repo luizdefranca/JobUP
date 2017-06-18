@@ -69,7 +69,8 @@ public class ServicoPrivadoClienteSemPropostaAdapter extends BaseAdapter {
         txtDesEspecialidade.setText(getDescricaoEspecialidadePorId(servico.getIdEspecialidade()));
         txtObservacao.setText(servico.getObservacoes());
         txtTitulo.setText(servico.getTitulo());
-        txtValor.setText(String.valueOf(servico.getValorSugerido()));
+        String valor = String.format("%.2f", servico.getValorSugerido());
+        txtValor.setText("R$ " + String.valueOf(valor));
         txtDtProposta.setText(Parsers.parseDataToStringNormal(servico.getDtCadastro()));
         return view;
     }

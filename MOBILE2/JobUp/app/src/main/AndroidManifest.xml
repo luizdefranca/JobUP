@@ -81,7 +81,7 @@
             android:name=".fragments.DetalheProfissionalViewPagerActivity"
             android:parentActivityName=".activities.CatalogoEspecialidadeActivity" />
         <activity
-            android:name=".fragments.OfertaPrivadaViewPagerActivity"
+            android:name=".fragments.ServicoPrivadoClienteViewPagerActivity"
             android:parentActivityName=".activities.MainActivity" />
 
         <!-- <meta-data -->

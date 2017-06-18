@@ -27,17 +27,14 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.br.jobup.R;
 import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
-import com.br.jobup.fragments.OfertaPrivadaViewPagerActivity;
-import com.br.jobup.models.login.UsuarioSignIn;
+import com.br.jobup.fragments.ServicoPrivadoClienteViewPagerActivity;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
-import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 import com.br.jobup.util.Validations.TextHelper;
 import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
 import com.github.hynra.gsonsharedpreferences.ParsingException;
@@ -299,7 +296,7 @@ public class MainActivity extends AppCompatActivity
 
         //Inicializa Activity de Oferta Privada
         } else if (id == R.id.nav_meus_servicos_criados) {
-            Intent ofertaPrivadaIntent = new Intent(MainActivity.this, OfertaPrivadaViewPagerActivity.class);
+            Intent ofertaPrivadaIntent = new Intent(MainActivity.this, ServicoPrivadoClienteViewPagerActivity.class);
             startActivity(ofertaPrivadaIntent);
 
         } else if (id == R.id.nav_ativar_destaque) {

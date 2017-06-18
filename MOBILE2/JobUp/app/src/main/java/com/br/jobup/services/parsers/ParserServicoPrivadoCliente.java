@@ -17,12 +17,12 @@ import java.util.List;
  * Created by luizramos on 28/05/17.
  */
 
-public class ParserOfertaPrivadaCliente {
-    public static final String TAG = "LCFR/" + ParserOfertaPrivadaCliente.class.getSimpleName();
+public class ParserServicoPrivadoCliente {
+    public static final String TAG = "LCFR/" + ParserServicoPrivadoCliente.class.getSimpleName();
 
     private final String idUsuarioCliente;
 
-    public ParserOfertaPrivadaCliente(String idUsuarioCliente) {
+    public ParserServicoPrivadoCliente(String idUsuarioCliente) {
         this.idUsuarioCliente = idUsuarioCliente;
     }
 

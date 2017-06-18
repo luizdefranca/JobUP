@@ -5,7 +5,7 @@ import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
-import com.br.jobup.services.parsers.ParserOfertaPrivadaClienteSemProposta;
+import com.br.jobup.services.parsers.ParserServicoPrivadoCliente;
 
 import java.util.List;
 
@@ -16,14 +16,14 @@ import java.util.List;
  * Last modified 6/15/17 11:10 PM
  */
 
-public class TaskOfertaPrivadaClientes extends AsyncTaskLoader<List<ServicoOfertaPrivada>> {
+public class TaskServicoPrivadoCliente extends AsyncTaskLoader<List<ServicoOfertaPrivada>> {
 
-    public static final String TAG = "LCFR -> " + TaskOfertaPrivadaClientes.class.getSimpleName();
+    public static final String TAG = "LCFR -> " + TaskServicoPrivadoCliente.class.getSimpleName();
     private String idUsuarioCliente;
     List<ServicoOfertaPrivada> mOfertasPrivadasComPropostas;
 
 
-    public TaskOfertaPrivadaClientes(Context context, String idUsuarioCliente) {
+    public TaskServicoPrivadoCliente(Context context, String idUsuarioCliente) {
         super(context);
         this.idUsuarioCliente = idUsuarioCliente;
     }
@@ -44,7 +44,7 @@ public class TaskOfertaPrivadaClientes extends AsyncTaskLoader<List<ServicoOfert
     @Override
     public List<ServicoOfertaPrivada> loadInBackground() {
 
-        ParserOfertaPrivadaClienteSemProposta parser = new ParserOfertaPrivadaClienteSemProposta(idUsuarioCliente);
+        ParserServicoPrivadoCliente parser = new ParserServicoPrivadoCliente(idUsuarioCliente);
 
         mOfertasPrivadasComPropostas = parser.getAllPorIdUsuarioCliente();
         return mOfertasPrivadasComPropostas;

@@ -21,7 +21,7 @@ import retrofit2.http.Query;
 
 public interface IServicoPrivadoClienteAPI {
 
-    public static final String PATH = "ServicoPrivadoClienteAdapter/";
+    public static final String PATH = "ServicoPrivadoCliente/";
 
 
     @GET(PATH)

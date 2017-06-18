@@ -24,10 +24,10 @@ public class ListaPropostaActivity extends AppCompatActivity {
     }
 
     private void carregaListaPropostas(){
-        IPropostaDao dao = new PropostaDao(this);
-        List<Proposta> propostas = dao.getAll();
-        dao.close();
-        PropostaAdapter adapter = new PropostaAdapter(this, propostas);
-        mListPropostas.setAdapter(adapter);
+//        IPropostaDao dao = new PropostaDao(this);
+//        List<Proposta> propostas = dao.getAll();
+//        dao.close();
+//        PropostaAdapter adapter = new PropostaAdapter(this, propostas);
+//        mListPropostas.setAdapter(adapter);
     }
 }

@@ -53,10 +53,12 @@ public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
     public static ServicoPrivadoClienteSemPropostaFragment getInstance(Bundle bundle) {
 
         ServicoPrivadoClienteSemPropostaFragment frag = new ServicoPrivadoClienteSemPropostaFragment();
-        Bundle args = new Bundle();
-//        args.putBundle(ARGUMENTO_AVALIACOES_PROFISSIONAIS, bundle);
 
-        frag.setArguments(args);
+    //ESTAS INSTRUÇÕES ABAIXO SÓ SÃO NECESSÁRIAS SE FOR PASSADA ALGUMA INFORMAÇÃO VIA BUNDLE
+//        Bundle args = new Bundle();
+//        args.putBundle(ARGUMENTO_AVALIACOES_PROFISSIONAIS, bundle);
+//
+//        frag.setArguments(args);
 
         return frag;
     }
@@ -65,6 +67,9 @@ public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //ESTAS INSTRUÇÕES ABAIXO SÓ SÃO NECESSÁRIAS SE FOR PASSADA ALGUMA INFORMAÇÃO VIA BUNDLE
+        //SÃO NECESSÁRIAS PARA PEGAR AS INFORMAÇÕES PASSADAS
 //        mBundle = getArguments().getBundle(ARGUMENTO_AVALIACOES_PROFISSIONAIS);
 //        idProfissional = mBundle.getString(CatalogoEspecialidadeActivity.ID_PROFISSIONAL);
 //        idEspecialidade = mBundle.getInt(CatalogoEspecialidadeActivity.ID_ESPECIALIDADE);
@@ -88,7 +93,7 @@ public class ServicoPrivadoClienteSemPropostaFragment extends Fragment {
         final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
                 "com.br.jobup.models.usuario.Usuario");
 
-        //Executa o LoaderOfertaPrivadaClienteSemProposta que vai fazer a chamada
+        //Executa o LoaderOfertaPrivadaCliente que vai fazer a chamada
         //a task TaskOfertaPrivadaSemProposta
         mLoaderManager.initLoader(12, null, new LoaderOfertaPrivadaClienteSemProposta(getContext(), usuarioCorrente.idUsuario));
         return mView;

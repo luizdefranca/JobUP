@@ -3,6 +3,7 @@ package com.br.jobup.activities;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 
 import com.br.jobup.R;
 import com.br.jobup.adapters.CatalogoEspecialidadeAdapter;
@@ -21,6 +23,7 @@ import com.br.jobup.preferencesPersistence.PreferencePersistence;
 import com.br.jobup.services.parsers.ParserEspecialidadeCatalogo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -56,6 +59,7 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
     private String idProfissinal;
     private String nomeProfissional;
     CatalogoEspecialidadeAdapter catalogoAdapter;
+    private RadioGroup rgFiltros;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +72,32 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
         // Set Title on the ActionBar
         getSupportActionBar().setTitle("Profissionais");
+
+        //Inicializa o RadioGroup
+        rgFiltros = (RadioGroup) findViewById(R.id.rd_group_ordenacao);
+
+        rgFiltros.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int botao) {
+
+                switch (botao){
+                    //Opcao de ordernar por avaliacao
+                    case R.id.rd_bt_avaliacao:
+                        ordenaPorAvaliacao(especialidadeList);
+                        catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
+                        mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
+                        catalogoAdapter.notifyDataSetChanged();
+                        break;
+                    //Opcao de ordernar por avaliacao
+                    case R.id.rd_bt_nServicos:
+                        ordenaPorNumeroServicos(especialidadeList);
+                        catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
+                        mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
+                        catalogoAdapter.notifyDataSetChanged();
+                        break;
+                }
+            }
+        });
 
         //Inicializa a ListView
         mListCatalogoEspecialidade = (ListView) findViewById(R.id.catalogo_especialidade_lstView);
@@ -176,6 +206,9 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
         return true;
     }
 
+    //Define os métodos para o RadioGroup
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -280,11 +313,13 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
         });
     }
 
-    private void ordenaPorNumeroPropostas(List<ServicoOferta> lista) {
+    private void ordenaPorNumeroServicos(List<ServicoOferta> lista) {
 
         Collections.sort(lista, new Comparator<ServicoOferta>() {
             @Override
             public int compare(ServicoOferta s1, ServicoOferta s2) {
+                if(s1.propostas == null) s1.propostas = Arrays.asList();
+                if(s2.propostas == null) s2.propostas = Arrays.asList();
                 if (s1.propostas.size() > s2.propostas.size())
                     return 1;
                 else  if (s1.propostas.size() < s2.propostas.size())

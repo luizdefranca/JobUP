@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +15,10 @@ import android.widget.ListView;
 
 import com.br.jobup.R;
 import com.br.jobup.adapters.ServicoPrivadoClienteAdapter;
-import com.br.jobup.adapters.ServicoPrivadoClienteSemPropostaAdapter;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.preferencesPersistence.PreferencePersistence;
-import com.br.jobup.services.tasks.TaskOfertaPrivadaClientes;
-import com.br.jobup.services.tasks.TaskOfertaPrivadaClientesSemPropostaGetAll;
+import com.br.jobup.services.tasks.TaskServicoPrivadoCliente;
 
 import java.util.List;
 
@@ -90,9 +89,9 @@ public class ServicoPrivadoClienteFragment extends Fragment {
         final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
                 "com.br.jobup.models.usuario.Usuario");
 
-        //Executa o LoaderOfertaPrivadaClienteSemProposta que vai fazer a chamada
+        //Executa o LoaderOfertaPrivadaCliente que vai fazer a chamada
         //a task TaskOfertaPrivadaSemProposta
-        mLoaderManager.initLoader(12, null, new LoaderOfertaPrivadaClienteSemProposta(getContext(), usuarioCorrente.idUsuario));
+        mLoaderManager.initLoader(11, null, new LoaderOfertaPrivadaCliente(getContext(), usuarioCorrente.idUsuario));
         return mView;
     }
 
@@ -103,31 +102,32 @@ public class ServicoPrivadoClienteFragment extends Fragment {
      * Created by luizramos on 30/04/17.
      */
 
-    public class LoaderOfertaPrivadaClienteSemProposta implements LoaderManager.LoaderCallbacks<List<ServicoOfertaPrivada>>{
+    public class LoaderOfertaPrivadaCliente implements LoaderManager.LoaderCallbacks<List<ServicoOfertaPrivada>>{
 
         private final Context context;
 
         private String idUsuarioCliente;
 
-        public LoaderOfertaPrivadaClienteSemProposta(Context context){
+        public LoaderOfertaPrivadaCliente(Context context){
             this.context = context;
         }
-        public LoaderOfertaPrivadaClienteSemProposta(Context context, String idUsuarioCliente){
+        public LoaderOfertaPrivadaCliente(Context context, String idUsuarioCliente){
             this.context = context;
             this.idUsuarioCliente = idUsuarioCliente;
         }
         @Override
         public Loader<List<ServicoOfertaPrivada>> onCreateLoader(int id, Bundle args) {
-            return new TaskOfertaPrivadaClientes(context, idUsuarioCliente);
+            return new TaskServicoPrivadoCliente(context, idUsuarioCliente);
         }
 
 
 
         @Override
-        public void onLoadFinished(Loader<List<ServicoOfertaPrivada>> loader, List<ServicoOfertaPrivada> Ofertas) {
+        public void onLoadFinished(Loader<List<ServicoOfertaPrivada>> loader, List<ServicoOfertaPrivada> ofertas) {
 
-            if(Ofertas != null) {
-                ServicoPrivadoClienteAdapter adapter = new ServicoPrivadoClienteAdapter(context, Ofertas);
+            Log.e("LCFR -> ", "onLoadFinished: " + ofertas.toString() );
+            if(ofertas != null) {
+                ServicoPrivadoClienteAdapter adapter = new ServicoPrivadoClienteAdapter(context, ofertas);
                 lstView.setAdapter(adapter);
             }
         }

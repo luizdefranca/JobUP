@@ -246,6 +246,37 @@
         </LinearLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Recusar"
+            android:layout_margin="@dimen/appbar_padding_top"
+            android:background="@android:color/holo_red_dark"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Aceitar"
+            android:layout_margin="@dimen/appbar_padding_top"
+            android:background="@android:color/holo_green_dark"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/appbar_padding_top"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Avaliar"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>
