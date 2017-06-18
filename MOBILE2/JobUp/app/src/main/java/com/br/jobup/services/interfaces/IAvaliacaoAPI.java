@@ -42,8 +42,8 @@ public interface IAvaliacaoAPI {
     );
 
     @POST(PATH)
-    Call<Avaliacao> post(
-            @Body Usuario avaliacao
+    Call<Void> post(
+            @Body Avaliacao avaliacao
     );
 
     @PUT(PATH+"{id}")

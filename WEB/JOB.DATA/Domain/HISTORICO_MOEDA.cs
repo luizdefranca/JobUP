@@ -5,10 +5,10 @@ namespace JOB.DATA.Domain
 {
     public class HISTORICO_MOEDA
     {
-        public Guid ID_USUARIO { get; private set; }
-        public DateTime DT_MOVIMENTACAO { get; private set; }
-        public Int16 VALOR_MOVIMENTADO { get; private set; }
-        public string MOTIVO { get; private set; }
+        public Guid ID_USUARIO { get; set; }
+        public DateTime DT_MOVIMENTACAO { get; set; }
+        public Int16 VALOR_MOVIMENTADO { get; set; }
+        public string MOTIVO { get; set; }
 
         /// <summary>
         /// ENTITY

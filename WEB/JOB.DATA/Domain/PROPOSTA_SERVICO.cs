@@ -46,16 +46,16 @@ namespace JOB.DATA.Domain
             //this.PROPOSTAS = new HashSet<PROPOSTA_SERVICO>();
         }
 
-        public Guid ID_SERVICO { get; private set; }
-        public Guid ID_USUARIO { get; private set; }
-        public DateTime DT_PROPOSTA { get; private set; }
-        public EnumDuracaoServico DURACAO_SERVICO { get; private set; }
-        public int VALOR_DURACAO_SERVICO { get; private set; }
-        public double VL_PROPOSTA { get; private set; }
-        public string JUSTIFICATIVA { get; private set; }
-        public bool ACEITA { get; private set; }
+        public Guid ID_SERVICO { get; set; }
+        public Guid ID_USUARIO { get; set; }
+        public DateTime DT_PROPOSTA { get; set; }
+        public EnumDuracaoServico DURACAO_SERVICO { get; set; }
+        public int VALOR_DURACAO_SERVICO { get; set; }
+        public double VL_PROPOSTA { get; set; }
+        public string JUSTIFICATIVA { get; set; }
+        public bool ACEITA { get; set; }
 
-        public SERVICO SERVICO { get; private set; }
-        public USUARIO USUARIO { get; private set; }
+        public SERVICO SERVICO { get; set; }
+        public USUARIO USUARIO { get; set; }
     }
 }

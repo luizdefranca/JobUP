@@ -41,12 +41,12 @@ namespace JOB.DATA.Domain
             this.ACEITA = false;
         }
 
-        public Guid ID_SERVICO { get; private set; }
-        public Guid ID_USUARIO { get; private set; }
-        public DateTime DT_OFERTA { get; private set; }
-        public bool? ACEITA { get; private set; }
+        public Guid ID_SERVICO { get; set; }
+        public Guid ID_USUARIO { get; set; }
+        public DateTime DT_OFERTA { get; set; }
+        public bool? ACEITA { get; set; }
 
-        public SERVICO SERVICO { get; private set; }
-        public USUARIO USUARIO { get; private set; }
+        public SERVICO SERVICO { get; set; }
+        public USUARIO USUARIO { get; set; }
     }
 }

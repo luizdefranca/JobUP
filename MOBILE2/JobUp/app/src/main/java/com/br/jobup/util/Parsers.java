@@ -41,9 +41,12 @@ public class Parsers {
     public static String parseDataToStringNormal(Date data){
 
         DateFormat dataFormat = new SimpleDateFormat("dd/MM/yyyy");
+        if(data != null) {
+            final String dataNormal = dataFormat.format(data);
 
-        final String dataNormal = dataFormat.format(data);
-        return dataNormal;
+            return dataNormal;
+        }
+        return "";
     }
 
 }

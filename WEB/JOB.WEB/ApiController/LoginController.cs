@@ -1,5 +1,4 @@
 ﻿using JOB.DATA;
-using JOB.WEB.Helper;
 using JOB.WEB.Models;
 using Microsoft.AspNet.Identity.Owin;
 using System;
@@ -9,11 +8,12 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.WEB.ApiController
 {
     /// <summary>
-    /// API exclusiva para lidar com o template MVC de segurança
+    /// API exclusiva para lidar com o template MVC de segurança (logins e cadastros de usuarios)
     /// </summary>
     [AllowAnonymous]
     public class LoginController : System.Web.Http.ApiController
@@ -28,12 +28,8 @@ namespace JOB.WEB.ApiController
         /// </summary>
         /// <param name="Email">Username do usuario</param>
         /// <param name="Password">Senha do usuario</param>
-        /// <returns>
-        /// 200 -> login efetuado;
-        /// 403 -> usuario bloqueado;
-        /// 412 -> requer verificacao de email;
-        /// 400 -> falha no login
-        /// </returns>
+        /// <returns></returns>
+        [ResponseType(typeof(SignInStatus))]
         public async Task<HttpResponseMessage> Get(string Email, string Password)
         {
             var user = await UserManager.FindByNameAsync(Email);
@@ -64,27 +60,29 @@ namespace JOB.WEB.ApiController
         }
 
         /// <summary>
-        /// Realiza o cadastro do login no sistema
+        /// Realiza o cadastro do usuario de login no sistema
         /// </summary>
         /// <param name="Login">Username do usuario</param>
         /// <param name="Email">Email do usuario</param>
         /// <param name="Password">Senha do usuario</param>
-        /// <returns>
-        /// 200 -> cadastro efetuado;
-        /// 400 -> falha no cadastro
-        /// </returns>
+        /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
         public async Task<HttpResponseMessage> Get(string Login, string Email, string Password)
         {
-            var user = new ApplicationUser { UserName = Login, Email = Email, EmailConfirmed = true };
-            var result = await UserManager.CreateAsync(user, Password);
-            if (result.Succeeded)
+            try
             {
-                Guid id = Guid.Parse(user.Id);
-                MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
-
-                return Request.CreateResponse(HttpStatusCode.OK, user.Id);
+                var user = new ApplicationUser { UserName = Login, Email = Email, EmailConfirmed = true };
+                var result = await UserManager.CreateAsync(user, Password);
+                if (result.Succeeded)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, user.Id);
+                }
+                return Request.CreateResponse(HttpStatusCode.BadRequest, result);
             }
-            return Request.CreateResponse(HttpStatusCode.BadRequest, result);
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
         }
     }
 }

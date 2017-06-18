@@ -52,15 +52,15 @@ namespace JOB.DATA.Domain
             //this.GUIAS = new HashSet<GUIA>();
         }
 
-        public Guid ID_USUARIO { get; private set; }
-        public int ID_ESPECIALIDADE { get; private set; }
-        public int ID_FORMACAO { get; private set; }
-        public string INSTITUICAO { get; private set; }
-        public string NOME_CURSO { get; private set; }
-        public Int16 ANO_FORMACAO { get; private set; }
-        public DateTime? DT_APROVACAO { get; private set; }
-        public bool APROVADO { get; private set; }
+        public Guid ID_USUARIO { get; set; }
+        public int ID_ESPECIALIDADE { get; set; }
+        public int ID_FORMACAO { get; set; }
+        public string INSTITUICAO { get; set; }
+        public string NOME_CURSO { get; set; }
+        public Int16 ANO_FORMACAO { get; set; }
+        public DateTime? DT_APROVACAO { get; set; }
+        public bool APROVADO { get; set; }
 
-        public PERFIL_PROFISSIONAL PERFIL_PROFISSIONAL { get; private set; }
+        public PERFIL_PROFISSIONAL PERFIL_PROFISSIONAL { get; set; }
     }
 }

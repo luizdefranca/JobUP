@@ -14,11 +14,13 @@ package com.br.jobup.models.especialidade;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.br.jobup.models.servico.Proposta;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class ServicoOferta implements Serializable, Parcelable {
 
@@ -60,6 +62,10 @@ public class ServicoOferta implements Serializable, Parcelable {
     @SerializedName("AVALIACAO")
     @Expose
     public int avaliacao;
+
+    @Expose
+    @SerializedName("PROPOSTAS")
+    public List<Proposta> propostas;
 
 
 

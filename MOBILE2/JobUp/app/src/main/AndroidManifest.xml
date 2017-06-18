@@ -18,8 +18,8 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> -->
     <!-- <uses-feature android:glEsVersion="0x00020000" -->
     <!-- android:required="true"/> -->
@@ -36,15 +36,13 @@
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="trash.ApresentacaoActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activities.SingInActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.CadastroActivity"
             android:label="@string/title_activity_cadastro" />
@@ -70,7 +68,7 @@
         <activity
             android:name=".activities.OfertarServicoActivity"
             android:label="Contratar Serviço"
-            android:parentActivityName=".activities.CatalogoEspecialidadeActivity"/>
+            android:parentActivityName=".activities.CatalogoEspecialidadeActivity" />
         <activity
             android:name=".activities.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
@@ -83,7 +81,7 @@
             android:name=".fragments.DetalheProfissionalViewPagerActivity"
             android:parentActivityName=".activities.CatalogoEspecialidadeActivity" />
         <activity
-            android:name=".fragments.OfertaPrivadaViewPagerActivity"
+            android:name=".fragments.ServicoPrivadoClienteViewPagerActivity"
             android:parentActivityName=".activities.MainActivity" />
 
         <!-- <meta-data -->
@@ -104,8 +102,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".activities.MapaActivity"
-            android:parentActivityName=".activities.CatalogoEspecialidadeActivity"/>
+        <activity
+            android:name=".activities.MapaActivity"
+            android:parentActivityName=".activities.CatalogoEspecialidadeActivity" />
+        <activity android:name=".activities.ContraPropostaActivity" />
+        <activity android:name=".activities.ListaPropostaActivity"></activity>
     </application>
 
 </manifest>

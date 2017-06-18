@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -20,6 +21,7 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="id">id do servico</param>
         /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
         public HttpResponseMessage Get(Guid id)
         {
             var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);

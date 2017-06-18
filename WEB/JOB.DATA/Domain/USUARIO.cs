@@ -130,37 +130,37 @@ namespace JOB.DATA.Domain
             this.HISTORICOS_MOEDA = new HashSet<HISTORICO_MOEDA>();
         }
 
-        public Guid ID_USUARIO { get; private set; }
-        public string NOME { get; private set; }
-        public CPF CPF { get; private set; }
-        public RG RG { get; private set; }
-        public DateTime DT_NASCIMENTO { get; private set; }
-        public DateTime DT_INCLUSAO { get; private set; }
-        public DateTime? DT_ALTERACAO { get; private set; }
-        public DateTime? DT_APROVACAO { get; private set; }
-        public DateTime? DT_ATIVACAO { get; private set; }
-        public DateTime DT_ORDENACAO { get; private set; }
-        public bool APROVADO { get; private set; }
-        public bool ATIVO { get; private set; }
-        public bool BLOQUEADO { get; private set; }
-        public bool PERFIL_DESTAQUE { get; private set; }
+        public Guid ID_USUARIO { get; set; }
+        public string NOME { get; set; }
+        public CPF CPF { get; set; }
+        public RG RG { get; set; }
+        public DateTime DT_NASCIMENTO { get; set; }
+        public DateTime DT_INCLUSAO { get; set; }
+        public DateTime? DT_ALTERACAO { get; set; }
+        public DateTime? DT_APROVACAO { get; set; }
+        public DateTime? DT_ATIVACAO { get; set; }
+        public DateTime DT_ORDENACAO { get; set; }
+        public bool APROVADO { get; set; }
+        public bool ATIVO { get; set; }
+        public bool BLOQUEADO { get; set; }
+        public bool PERFIL_DESTAQUE { get; set; }
 
-        public EnumUF UF { get; private set; }
-        public string CEP { get; private set; }
-        public string LOGRADOURO { get; private set; }
-        public string COMPLEMENTO { get; private set; }
-        public string BAIRRO { get; private set; }
-        public string CIDADE { get; private set; }
+        public EnumUF UF { get; set; }
+        public string CEP { get; set; }
+        public string LOGRADOURO { get; set; }
+        public string COMPLEMENTO { get; set; }
+        public string BAIRRO { get; set; }
+        public string CIDADE { get; set; }
 
-        public Telefone FIXO { get; private set; }
-        public Telefone CELULAR { get; private set; }
-        public Email EMAIL { get; private set; }
+        public Telefone FIXO { get; set; }
+        public Telefone CELULAR { get; set; }
+        public Email EMAIL { get; set; }
 
         public Int16 MOEDA { get; set; }
 
-        public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; private set; }
-        public ICollection<OFERTA_SERVICO> OFERTAS_SERVICO { get; private set; }
-        public ICollection<PROPOSTA_SERVICO> PROPOSTAS_SERVICO { get; private set; }
-        public ICollection<HISTORICO_MOEDA> HISTORICOS_MOEDA { get; private set; }
+        public ICollection<PERFIL_PROFISSIONAL> PERFIS_PROFISSIONAIS { get; set; }
+        public ICollection<OFERTA_SERVICO> OFERTAS_SERVICO { get; set; }
+        public ICollection<PROPOSTA_SERVICO> PROPOSTAS_SERVICO { get; set; }
+        public ICollection<HISTORICO_MOEDA> HISTORICOS_MOEDA { get; set; }
     }
 }

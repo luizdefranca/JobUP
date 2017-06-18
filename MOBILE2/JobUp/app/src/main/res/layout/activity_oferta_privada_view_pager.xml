@@ -12,7 +12,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.br.jobup.fragments.OfertaPrivadaViewPagerActivity">
+    tools:context="com.br.jobup.fragments.ServicoPrivadoClienteViewPagerActivity">
     <android.support.design.widget.TabLayout
         android:id="@+id/tblt_oferta_privada"
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Logout</string>
     <string name="agendamentos">Serviços Agendados</string>
     <string name="action_salvar">Salvar</string>
     <string name="title_activity_login">Sign in</string>
@@ -59,7 +59,12 @@
         <item>Adicionar a favoritos</item>
         <item>Contratar servicos</item>
         <item>Fechar</item>
-
+    </string-array>
+    <string-array name="duracao_servico">
+        <item>hora(s)</item>
+        <item>dia(s)</item>
+        <item>semana(s)</item>
+        <item>mês(es)</item>
     </string-array>
     <string name="title_activity_tab_detalhe_profissional">TabDetalheProfissionalActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>

@@ -5,8 +5,8 @@ namespace JOB.DATA.ValueObject
 {
     public class RG
     {
-        public EnumUF UF { get; private set; }
-        public string NR { get; private set; }
+        public EnumUF UF { get; set; }
+        public string NR { get; set; }
 
         /// <summary>
         /// usado pelo entity framework

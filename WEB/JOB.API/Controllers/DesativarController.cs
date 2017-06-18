@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -19,6 +19,7 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="id">id do usuario</param>
         /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
         public HttpResponseMessage Get(Guid id)
         {
             using (Contexto ctx = new Contexto())

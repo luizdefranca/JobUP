@@ -14,6 +14,7 @@ import android.support.annotation.Nullable;
 
 import com.br.jobup.fragments.MapaFragment;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderApi;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
@@ -30,6 +31,9 @@ public class Localizador implements GoogleApiClient.ConnectionCallbacks, Locatio
 
     private final GoogleApiClient client;
     private MapaFragment mapaFragment;
+    LatLng coordenada;
+    public LatLng myLocation;
+    FusedLocationProviderApi locationApi;
     public Localizador(Context context, MapaFragment mapaFragment) {
         client = new GoogleApiClient.Builder(context)
                 .addApi(LocationServices.API)
@@ -48,7 +52,9 @@ public class Localizador implements GoogleApiClient.ConnectionCallbacks, Locatio
         request.setInterval(1000);
         request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
-        LocationServices.FusedLocationApi.requestLocationUpdates(client, request, this);
+        locationApi= LocationServices.FusedLocationApi;
+        locationApi.requestLocationUpdates(client, request, this);
+        pegarMinhaCoordenada();
     }
 
     @Override
@@ -56,6 +62,11 @@ public class Localizador implements GoogleApiClient.ConnectionCallbacks, Locatio
 
     }
 
+    public void pegarMinhaCoordenada(){
+        Location location = locationApi.getLastLocation(client);
+        myLocation =  new LatLng(location.getLatitude(), location.getLongitude());
+        mapaFragment.centralizaEm(myLocation);
+    }
 
     @Override
     public void onLocationChanged(Location location) {

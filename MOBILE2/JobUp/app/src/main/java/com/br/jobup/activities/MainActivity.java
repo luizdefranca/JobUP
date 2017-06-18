@@ -24,21 +24,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.br.jobup.R;
 import com.br.jobup.dao.usuario.IUsuarioDao;
 import com.br.jobup.dao.usuario.UsuarioDao;
-import com.br.jobup.fragments.OfertaPrivadaViewPagerActivity;
-import com.br.jobup.models.login.UsuarioSignIn;
+import com.br.jobup.fragments.ServicoPrivadoClienteViewPagerActivity;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.services.usuarioFullServices.loaders.LoaderUsuarioFullGetAll;
 import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioFull;
-import com.br.jobup.services.usuarioFullServices.parsers.ParserUsuarioSignIn;
 import com.br.jobup.util.Validations.TextHelper;
 import com.github.hynra.gsonsharedpreferences.GSONSharedPreferences;
 import com.github.hynra.gsonsharedpreferences.ParsingException;
@@ -267,7 +263,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_logout) {
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
             return true;
@@ -285,44 +281,25 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_comprar_creditos) {
 //            Intent CadastroActivity = new Intent(MainActivity.this, MapsActivity.class);
 //            startActivity(CadastroActivity);
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_seja_um_profissional) {
             Intent AgendamentoActivity = new Intent(MainActivity.this, ListaNovaDeUsuariosActivity.class);
             startActivity(AgendamentoActivity);
-        } else if (id == R.id.nav_slideshow) {
-            final UsuarioSignIn usuarioSignIn = new UsuarioSignIn("luizramospe", "Teste12345");
-            ParserUsuarioSignIn parse = new ParserUsuarioSignIn(usuarioSignIn);
-             Call<Usuario> loginCall = parse.get();
-            loginCall.enqueue(new Callback<Usuario>() {
-                @Override
-                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                    if(response.code() == 200 && response.message().equals("Success")){
-                        Log.e(TAG, "onResponse: " + "UsuarioSignIn efetuado com sucesso" );
-                    }else if(response.message()
-                            .equals("You must have a confirmed email to log on. The confirmation"
-                                    + " token has been resent to your email account.") 
-                            && response.code() == 400){
-                        Log.e(TAG, "onResponse: " + "You must have a confirmed email to log on. The confirmation token has been resent to your email account." );
-                    }else if (response.code() == 400 && response.message().equals("LockedOut"))
-                        Log.e(TAG, "onResponse: usuario bloqueado");
-                    Toast.makeText(MainActivity.this, response.message(), Toast.LENGTH_LONG).show();
-                }
 
-                @Override
-                public void onFailure(Call<Usuario> call, Throwable t) {
-                    Log.e(TAG, "onFailure: " + t.getMessage(), t );
-                    Toast.makeText(MainActivity.this, "onFailure: " + t.getMessage() , Toast.LENGTH_LONG).show();
-                }
-            });
+
+        } else if (id == R.id.nav_minhas_ofertas_servicos) {
+            Intent ListaPropostaActivity = new Intent(MainActivity.this, ListaPropostaActivity.class);
+            startActivity(ListaPropostaActivity);
+
 
         //Inicializa Activity de Oferta Privada
-        } else if (id == R.id.nav_manage) {
-            Intent ofertaPrivadaIntent = new Intent(MainActivity.this, OfertaPrivadaViewPagerActivity.class);
+        } else if (id == R.id.nav_meus_servicos_criados) {
+            Intent ofertaPrivadaIntent = new Intent(MainActivity.this, ServicoPrivadoClienteViewPagerActivity.class);
             startActivity(ofertaPrivadaIntent);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_ativar_destaque) {
 //            Intent DetalheServicoActivity = new Intent(MainActivity.this, DetalheServicoActivity.class);
 //            startActivity(DetalheServicoActivity);
             IUsuarioDao dao = new UsuarioDao(this);
@@ -347,7 +324,7 @@ public class MainActivity extends AppCompatActivity
             });
             Log.e(TAG, "onNavigationItemSelected: "+ "mensagem enviada" );
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_perfil) {
             mLoaderManager.initLoader(0, null, new LoaderUsuarioFullGetAll(this));
 
 

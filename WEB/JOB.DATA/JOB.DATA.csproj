@@ -168,6 +168,16 @@
       <DependentUpon>201705300245394_chat2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\AvaliacaoViewModel.cs" />
+    <Compile Include="Model\ChatVM.cs" />
+    <Compile Include="Model\EspecialidadeViewModel.cs" />
+    <Compile Include="Model\FinalizarNegociacaoVM.cs" />
+    <Compile Include="Model\HistoricoMoedaVM.cs" />
+    <Compile Include="Model\OfertaViewModel.cs" />
+    <Compile Include="Model\ProfissionalViewModel.cs" />
+    <Compile Include="Model\PropostaViewModel.cs" />
+    <Compile Include="Model\ServicoViewModel.cs" />
+    <Compile Include="Model\UsuarioViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Config\UsuarioConfig.cs" />
     <Compile Include="ValueObject\CPF.cs" />

@@ -6,7 +6,7 @@
     <members>
         <member name="T:JOB.WEB.ApiController.LoginController">
             <summary>
-            API exclusiva para lidar com o template MVC de segurança
+            API exclusiva para lidar com o template MVC de segurança (logins e cadastros de usuarios)
             </summary>
         </member>
         <member name="M:JOB.WEB.ApiController.LoginController.Get(System.String,System.String)">
@@ -15,24 +15,16 @@
             </summary>
             <param name="Email">Username do usuario</param>
             <param name="Password">Senha do usuario</param>
-            <returns>
-            200 -> login efetuado;
-            403 -> usuario bloqueado;
-            412 -> requer verificacao de email;
-            400 -> falha no login
-            </returns>
+            <returns></returns>
         </member>
         <member name="M:JOB.WEB.ApiController.LoginController.Get(System.String,System.String,System.String)">
             <summary>
-            Realiza o cadastro do login no sistema
+            Realiza o cadastro do usuario de login no sistema
             </summary>
             <param name="Login">Username do usuario</param>
             <param name="Email">Email do usuario</param>
             <param name="Password">Senha do usuario</param>
-            <returns>
-            200 -> cadastro efetuado;
-            400 -> falha no cadastro
-            </returns>
+            <returns></returns>
         </member>
         <member name="M:JOB.WEB.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>

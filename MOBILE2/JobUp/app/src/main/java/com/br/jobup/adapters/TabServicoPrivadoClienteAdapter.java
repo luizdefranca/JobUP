@@ -7,11 +7,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 
-import com.br.jobup.fragments.AvaliacoesProfissionalFragment;
-import com.br.jobup.fragments.DetalheProfissionalFragment;
-import com.br.jobup.fragments.OfertaPrivadaFragment;
+import com.br.jobup.fragments.ServicoPrivadoClienteFragment;
+import com.br.jobup.fragments.ServicoPrivadoClienteSemPropostaFragment;
 import com.br.jobup.fragments.PropostaPrivadaFragment;
-import com.br.jobup.fragments.ServicosProfissionalFragment;
 
 /*
  * Created by Luiz Carlos Ramos on 30/05/17 10:07
@@ -24,26 +22,26 @@ import com.br.jobup.fragments.ServicosProfissionalFragment;
  * Created by luizramos on 25/05/17.
  */
 
-public class TabOfertaPrivadaAdapter extends FragmentPagerAdapter {
+public class TabServicoPrivadoClienteAdapter extends FragmentPagerAdapter {
 
-    public static final String TAG = TabOfertaPrivadaAdapter.class.getSimpleName();
+    public static final String TAG = TabServicoPrivadoClienteAdapter.class.getSimpleName();
     private Context context;
     private Bundle bundle;
     private static final int NUM_TABS = 2;
     private static final String[] TABS = {"Ofertas Feitas", "Propostas Aceitas"};
 
-    public TabOfertaPrivadaAdapter(Context context, FragmentManager fm) {
+    public TabServicoPrivadoClienteAdapter(Context context, FragmentManager fm) {
         super(fm);
         this.context = context;
     }
 
-    public TabOfertaPrivadaAdapter(Bundle bundle, FragmentManager fm) {
+    public TabServicoPrivadoClienteAdapter(Bundle bundle, FragmentManager fm) {
         super(fm);
         this.bundle = bundle;
-        Log.e(TAG, "TabOfertaPrivadaAdapter: " + bundle.toString() );
+        Log.e(TAG, "TabServicoPrivadoClienteAdapter: " + bundle.toString() );
     }
 
-    public TabOfertaPrivadaAdapter(FragmentManager fm) {
+    public TabServicoPrivadoClienteAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -51,9 +49,9 @@ public class TabOfertaPrivadaAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
 
         if (position == 0) {
-            return OfertaPrivadaFragment.getInstance(bundle);
+            return ServicoPrivadoClienteSemPropostaFragment.getInstance(bundle);
         } else {
-            return PropostaPrivadaFragment.getInstance(bundle);
+            return ServicoPrivadoClienteFragment.getInstance(bundle);
         }
     }
 

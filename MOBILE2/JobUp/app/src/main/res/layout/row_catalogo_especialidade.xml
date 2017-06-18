@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Created by Luiz Carlos Ramos on 12/05/17 02:27
   ~
   ~ Copyright (c) 2017. All rights reserved.
@@ -7,42 +6,42 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="5dp"
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
+
     android:paddingTop="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#98aeff">
+        android:background="#98aeff"
+        android:orientation="horizontal">
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:paddingLeft="10dp"
         android:layout_height="wrap_content"
+        android:background="#ffffff"
         android:orientation="horizontal"
-        android:background="#ffffff">
+        android:paddingLeft="10dp">
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_usuario"
-            android:id="@+id/imageView"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_usuario" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
 
 
             <LinearLayout
@@ -58,6 +57,7 @@
                     android:layout_weight="2"
                     android:text="Nome do Usuario"
                     android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
 
@@ -75,8 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_weight="3"
-                    android:text="Especialidade: "
-                    />
+                    android:text="Especialidade: " />
 
                 <TextView
 
@@ -92,13 +91,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:text="Currículo: "
-                    />
+                    android:text="Currículo: " />
 
                 <TextView
                     android:id="@+id/item_especialidade_txtCurriculo"
@@ -120,16 +119,15 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_weight="3"
-                    android:text="Bairro: "
-                     />
+                    android:text="Bairro: " />
 
                 <TextView
 
+                    android:id="@+id/item_especialidade_txtBairro"
                     android:layout_width="0dp"
-                    android:layout_weight="5"
                     android:layout_height="wrap_content"
-                    android:text="Várzea"
-                    android:id="@+id/item_especialidade_txtBairro" />
+                    android:layout_weight="5"
+                    android:text="Várzea" />
 
             </LinearLayout>
 
@@ -144,18 +142,18 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_weight="3"
-                    android:text="Cidade: "
-                     />
+                    android:text="Cidade: " />
 
                 <TextView
 
+                    android:id="@+id/item_especialidade_txtCidade"
                     android:layout_width="0dp"
-                    android:layout_weight="5"
                     android:layout_height="wrap_content"
-                    android:text="Recife"
-                    android:id="@+id/item_especialidade_txtCidade" />
+                    android:layout_weight="5"
+                    android:text="Recife" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -167,21 +165,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_weight="3"
-                    android:text="Estado: "
-                     />
+                    android:text="Estado: " />
 
                 <TextView
 
+                    android:id="@+id/item_especialidade_txtEstado"
                     android:layout_width="0dp"
-                    android:layout_weight="5"
                     android:layout_height="wrap_content"
-                    android:text="PE"
-                    android:id="@+id/item_especialidade_txtEstado" />
+                    android:layout_weight="5"
+                    android:text="PE" />
 
             </LinearLayout>
-
-
-
 
 
             <LinearLayout
@@ -190,11 +184,19 @@
                 android:orientation="horizontal">
 
                 <TextView
+
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Distancia:"
-                    android:id="@+id/item_especialidade_txtDistancia"/>
+                    android:layout_gravity="end"
+                    android:layout_weight="3"
+                    android:text="Distância: " />
+
+                <TextView
+                    android:id="@+id/item_especialidade_txtDistancia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="8 Km" />
             </LinearLayout>
 
 

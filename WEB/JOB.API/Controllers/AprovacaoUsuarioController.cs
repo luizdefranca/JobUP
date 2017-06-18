@@ -1,24 +1,27 @@
 ﻿using JOB.DATA;
 using JOB.HELPERS.Validation;
+using JOB.WEB.Helper;
 using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de usuario clientes
+    /// API de aprovacao de usuario
     /// </summary>
-    public class ClientesController : ApiController
+    public class AprovacaoUsuarioController : ApiController
     {
         /// <summary>
         /// Aprova um determinado usuario
         /// </summary>
         /// <param name="id">id do usuario</param>
         /// <returns></returns>
+        [ResponseType(typeof(HttpStatusCode))]
         public HttpResponseMessage Get(Guid id)
         {
             using (Contexto ctx = new Contexto())
@@ -26,6 +29,8 @@ namespace JOB.API.Controllers
                 try
                 {
                     var domain = ctx.Usuario.First(w => w.ID_USUARIO == id);
+
+                    MoedaHelper.Movimentar(ctx, id, 1000, "CADASTRO NO SISTEMA");
 
                     domain.Aprovar();
                     ctx.Entry(domain).State = EntityState.Modified;

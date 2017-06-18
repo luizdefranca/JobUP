@@ -31,3 +31,113 @@
     "ID_ESPECIALIDADE": 6,
     "TEMPO_SERVICO": 2
  }
+
+╔══════ Request ════════════════════════════════════════════════════════════════════════
+║ URL: http://jobupapi.azurewebsites.net/api/login/?Login=joseramos&Email=joseramos@hotmail.com&Password=Teste12
+║ 345
+║
+║ Method: @GET
+║
+║ Omitted request body
+╚═══════════════════════════════════════════════════════════════════════════════════════
+ ╔══════ Response ═══════════════════════════════════════════════════════════════════════
+ ║ /api/login/ - is success : false - Received in: 7589ms
+ ║
+ ║ Status Code: 500
+ ║
+ ║ Body:
+ ║ {
+ ║    "Message": "An error has occurred.",
+ ║    "ExceptionMessage": "Object reference not set to an instance of an object.",
+ ║    "ExceptionType": "System.NullReferenceException",
+ ║    "StackTrace": "   at JOB.WEB.Helper.MoedaHelper.Movimentar(Contexto ctx, Guid idUsuario, Int16 valor, Strin
+ ║ g motivo)\r\n   at JOB.WEB.ApiController.LoginController.<Get>d__6.MoveNext()\r\n--- End of stack trace from p
+ ║ revious location where exception was thrown ---\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForN
+ ║ onSuccess(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotificat
+ ║ ion(Task task)\r\n   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()\r\n--- En
+ ║ d of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.CompilerService
+ ║ s.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSucc
+ ║ essAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeA
+ ║ ctionAsyncCore>d__0.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---
+ ║ \r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at System.Runtime.Co
+ ║ mpilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Control
+ ║ lers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()\r\n--- End of stack trace from previous location where e
+ ║ xception was thrown ---\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n
+ ║    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at
+ ║ System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext()"
+ ║ }
+ ╚═══════════════════════════════════════════════════════════════════════════════════════
+
+ ╔══════ Request ════════════════════════════════════════════════════════════════════════
+ ║ URL: http://jobupapi.azurewebsites.net/api/usuario/
+ ║
+ ║ Method: @POST
+ ║
+ ║ Body:
+ ║ {
+ ║    "BAIRRO": "Brasilia Teimosa",
+ ║    "Celular": {
+ ║       "NrTelefone": "81984203179"
+ ║    },
+ ║    "CEP": "",
+ ║    "CIDADE": "Recife",
+ ║    "COMPLEMENTO": "822",
+ ║    "Cpf": {
+ ║       "NR": ""
+ ║    },
+ ║    "Email": {
+ ║       "EMail": "ricardo.vinicius@hotmail.com"
+ ║    },
+ ║    "Fixo": {
+ ║       "NrTelefone": "8128687912"
+ ║    },
+ ║    "ID_USUARIO": "a25ac840-540e-4f8d-882a-6e2d0f58f77d",
+ ║    "LOGRADOURO": "Rua Pirauna",
+ ║    "NOME": "Ricardo Vinicius",
+ ║    "Rg": {
+ ║       "NR": "",
+ ║       "UF": 0
+ ║    },
+ ║    "UF": 16
+ ║ }
+ ╚═══════════════════════════════════════════════════════════════════════════════════════
+  ╔══════ Response ═══════════════════════════════════════════════════════════════════════
+  ║ /api/usuario/ - is success : false - Received in: 1696ms
+  ║
+  ║ Status Code: 400
+  ║
+  ║ Body:
+  ║ "The NOME field is required.The CEP field is required.The LOGRADOURO field is required.The BAIRRO field is req
+  ║ uired.The CIDADE field is required."
+  ╚═══════════════════════════════════════════════════════════════════════════════════════
+
+ /api/perfilprofissional/ - is success : false - Received in: 249ms
+
+ Status Code: 400
+
+ Body:
+ "Error mapping types.\r\n\r\nMapping types:\r\nSERVICO -> ServicoViewModel_api\r\nJOB.DATA.Domain.SERVICO -> J
+ OB.WEB.Models.ServicoViewModel_api\r\n\r\nType Map configuration:\r\nSERVICO -> ServicoViewModel_api\r\nJOB.DA
+ TA.Domain.SERVICO -> JOB.WEB.Models.ServicoViewModel_api\r\n\r\nProperty:\r\nPROPOSTAS"
+
+ ╔══════ Response ═══════════════════════════════════════════════════════════════════════
+ ║ /api/usuario/ - is success : false - Received in: 1202ms
+ ║
+ ║ Status Code: 400
+ ║
+ ║ Body:
+ ║ {
+ ║    "Message": "The request is invalid.",
+ ║    "ModelState": {
+ ║       "obj.Cpf": [
+ ║          "CPF inválido: "
+ ║       ],
+ ║       "obj.Email": [
+ ║          "E-mail"
+ ║       ],
+ ║       "obj.Rg": [
+ ║          "NR RG"
+ ║       ]
+ ║    }
+ ║ }
+ ╚═══════════════════════════════════════════════════════════════════════════════════════

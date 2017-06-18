@@ -24,6 +24,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -49,7 +50,11 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter implements GoogleA
     boolean mResolvingError;
 
     public CatalogoEspecialidadeAdapter(Context context, List<ServicoOferta> especialidadesCatalogo) {
-        this.especialidadesList = especialidadesCatalogo;
+        if(especialidadesCatalogo == null) {
+            this.especialidadesList = new ArrayList<>();
+        } else {
+            this.especialidadesList = especialidadesCatalogo;
+        }
         this.context = context;
         setupGoogleApiClient(context);
         obterUltimaLocalizacao();
@@ -70,7 +75,7 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter implements GoogleA
         ServicoOferta especialidade = especialidadesList.get(position);
 
 
-        View view = LayoutInflater.from(this.context).inflate(R.layout.item_especialidade_catalogo, null);
+        View view = LayoutInflater.from(this.context).inflate(R.layout.row_catalogo_especialidade, null);
         TextView txtNome = (TextView) view.findViewById(R.id.item_especialidade_txtNome);
 //        TextView txtDtNascimento        = (TextView) view.findViewById(R.id.item_especialidade_txtDtNascimento);
         TextView txtDescEspecialidade = (TextView) view.findViewById(R.id.item_especialidade_txtDescricao);

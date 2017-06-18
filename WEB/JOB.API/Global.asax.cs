@@ -1,11 +1,17 @@
-﻿using System.Web.Http;
-using JOB.WEB.App_Start;
+﻿using JOB.API.App_Start;
+using System.Web.Http;
 using System.Web.Mvc;
 
 namespace JOB.API
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class WebApiApplication : System.Web.HttpApplication
     {
+        /// <summary>
+        /// 
+        /// </summary>
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryLight"
-        app:tabBackground="@color/colorPrimary"
+        app:tabBackground="@color/tabColor"
         app:tabSelectedTextColor="@color/secondaryText"
         app:tabTextColor="@color/primaryText"/>
 

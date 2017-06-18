@@ -3,8 +3,6 @@ using JOB.DATA;
 using JOB.DATA.Domain;
 using JOB.HELPERS.Validation;
 using JOB.WEB.Models;
-using JsonNet.PrivateSettersContractResolvers;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,6 +10,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace JOB.API.Controllers
 {
@@ -27,12 +26,16 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <returns></returns>
+        [ResponseType(typeof(List<ProfissionalViewModel>))]
         public HttpResponseMessage Get(int idEspecialidade)
         {
-            //var lstDominio = ctx.PerfilProfissional.Where(f => f.APROVADO == true).ToList();
             try
             {
-                var lstDominio = ctx.PerfilProfissional.Where(f => f.ID_ESPECIALIDADE == idEspecialidade).ToList();
+                var lstDominio = ctx.PerfilProfissional
+                    .Include(i => i.AVALIACOES)
+                    .Include(i => i.USUARIO.PROPOSTAS_SERVICO)
+                    .Where(f => f.ID_ESPECIALIDADE == idEspecialidade)
+                    .ToList();
 
                 var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
 
@@ -61,6 +64,10 @@ namespace JOB.API.Controllers
 
                     if (MEUS_SERVICOS != null) model.SERVICOS.AddRange(Mapper.Map<List<ServicoViewModel_api>>(MEUS_SERVICOS));
 
+                    if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = 0;
+
+                    model.QTD_PROPOSTAS_ACEITAS = usuario.PROPOSTAS_SERVICO.Count(C => C.ACEITA & C.USUARIO.PERFIS_PROFISSIONAIS.Select(S => S.ID_ESPECIALIDADE).Contains(model.ID_ESPECIALIDADE));
+
                     foreach (var item in model.OUTROS_PERFIS)
                     {
                         item.DESC_ESPECIALIDADE = ctx.Especialidade.First(f => f.ID_ESPECIALIDADE == item.ID_ESPECIALIDADE).DESCRICAO;
@@ -80,6 +87,7 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idUsuario"></param>
         /// <returns></returns>
+        [ResponseType(typeof(List<PERFIL_PROFISSIONAL>))]
         public HttpResponseMessage Get(Guid idUsuario)
         {
             var result = ctx.PerfilProfissional.Include(i => i.ESPECIALIDADE).Where(w => w.ID_USUARIO == idUsuario).ToList();
@@ -92,7 +100,8 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idUsuario">id do usuario profissional</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <returns></returns>
+        /// <returns>retorna a classe PERFIL_PROFISSIONAL</returns>
+        [ResponseType(typeof(PERFIL_PROFISSIONAL))]
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade)
         {
             var result = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
@@ -103,23 +112,14 @@ namespace JOB.API.Controllers
         /// <summary>
         /// salva um novo perfil profissional
         /// </summary>
-        /// <param name="request">classe PERFIL_PROFISSIONAL</param>
+        /// <param name="obj"></param>
         /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage Post(HttpRequestMessage request)
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Post(PERFIL_PROFISSIONAL obj)
         {
             try
             {
-                var values = request.Content.ReadAsStringAsync().Result;
-
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver(),
-                    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
-                };
-
-                var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
-
                 Validate(obj);
                 if (!ModelState.IsValid)
                     return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
@@ -140,21 +140,14 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idUsuario">id do usuario</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <param name="request">classe PERFIL_PROFISSIONAL</param>
+        /// <param name="obj"></param>
         /// <returns></returns>
-        public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, HttpRequestMessage request)
+        [ResponseType(typeof(HttpStatusCode))]
+        public HttpResponseMessage Put(Guid idUsuario, int idEspecialidade, PERFIL_PROFISSIONAL obj)
         {
             try
             {
-                var values = request.Content.ReadAsStringAsync().Result;
-
-                var settings = new JsonSerializerSettings
-                {
-                    ContractResolver = new PrivateSetterContractResolver()
-                };
-
                 var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);
-                var obj = JsonConvert.DeserializeObject<PERFIL_PROFISSIONAL>(values, settings);
 
                 item.AtualizaValores(obj.RESUMO_CURRICULO);
                 ctx.Entry(item).State = EntityState.Modified;
@@ -178,6 +171,7 @@ namespace JOB.API.Controllers
         /// </summary>
         /// <param name="idUsuario">id do usuario</param>
         /// <param name="idEspecialidade">id da especialidade</param>
+        [ResponseType(typeof(HttpStatusCode))]
         public void Delete(Guid idUsuario, int idEspecialidade)
         {
             var item = ctx.PerfilProfissional.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade);

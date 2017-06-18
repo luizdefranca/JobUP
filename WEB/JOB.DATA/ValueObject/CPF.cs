@@ -8,7 +8,7 @@ namespace JOB.DATA.ValueObject
         /// valor alfanumérico de 14 digitos
         /// <para>se for uma incrição com menos digitos, então estará preenchido com zeros a esquerda</para>
         /// </summary>
-        public string NR { get; private set; }
+        public string NR { get; set; }
 
         /// <summary>
         /// usado pelo entity framework

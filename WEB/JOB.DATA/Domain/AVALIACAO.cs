@@ -38,13 +38,13 @@ namespace JOB.DATA.Domain
             //this.GUIAS = new HashSet<GUIA>();
         }
 
-        public Guid ID_USUARIO { get; private set; }
-        public int ID_ESPECIALIDADE { get; private set; }
-        public Guid ID_CLIENTE { get; private set; }
-        public DateTime DT_ULT_AVALIACAO { get; private set; }
-        public Int16 NOTA { get; private set; }
-        public string COMENTARIO { get; private set; }
+        public Guid ID_USUARIO { get; set; }
+        public int ID_ESPECIALIDADE { get; set; }
+        public Guid ID_CLIENTE { get; set; }
+        public DateTime DT_ULT_AVALIACAO { get; set; }
+        public Int16 NOTA { get; set; }
+        public string COMENTARIO { get; set; }
 
-        public PERFIL_PROFISSIONAL PERFIL_PROFISSIONAL { get; private set; }
+        public PERFIL_PROFISSIONAL PERFIL_PROFISSIONAL { get; set; }
     }
 }
