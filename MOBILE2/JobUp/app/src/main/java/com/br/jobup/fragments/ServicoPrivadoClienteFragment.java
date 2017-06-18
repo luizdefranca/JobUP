@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.br.jobup.R;
@@ -39,6 +40,9 @@ public class ServicoPrivadoClienteFragment extends Fragment {
     private View mView;
     private Bundle mBundle;
     ListView lstView;
+    private Button btnAceitar;
+    private Button btnRecusar;
+    private Button btnAvaliar;
 
     private ListView mLstOfertaPrivada;
 
@@ -85,6 +89,10 @@ public class ServicoPrivadoClienteFragment extends Fragment {
         mView = inflater.inflate(R.layout.fragment_servico_privado_cliente_com_proposta, container, false);
 
         lstView = (ListView) mView.findViewById(R.id.lstViewOfertaPrivadaClienteComProposta);
+
+        btnAceitar = (Button) mView.findViewById(R.id.btn_aceitar);
+        btnRecusar = (Button) mView.findViewById(R.id.btn_recusar);
+        btnAvaliar = (Button) mView.findViewById(R.id.btn_avaliar);
         final PreferencePersistence<Usuario> persistence = new PreferencePersistence<>(getContext());
         final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
                 "com.br.jobup.models.usuario.Usuario");

@@ -1,22 +1,28 @@
 package com.br.jobup.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.br.jobup.R;
 import com.br.jobup.models.servico.Proposta;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
+import com.br.jobup.models.usuario.Avaliacao;
 import com.br.jobup.util.Parsers;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 /*
  * Created by Luiz Carlos Ramos on 6/16/17 7:12 PM
@@ -71,6 +77,15 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         TextView txtValorProposta = (TextView) view.findViewById(R.id.text_view_valor_proposta);
         TextView txtDuracaoServico = (TextView) view.findViewById(R.id.text_view_duracao_servico);
         TextView txtJustificativa = (TextView) view.findViewById(R.id.text_view_justificativa);
+        Button btnAceitar = (Button) view.findViewById(R.id.btn_aceitar);
+        Button btnRecusar = (Button) view.findViewById(R.id.btn_recusar);
+        Button btnAvaliar = (Button) view.findViewById(R.id.btn_avaliar);
+
+        if(getProposta(servico).getAceita()){
+            btnAceitar.setVisibility(View.GONE);
+            btnRecusar.setVisibility(View.GONE);
+            btnAvaliar.setVisibility(View.VISIBLE);
+        }
 
         txtDesEspecialidade.setText(getDescricaoEspecialidadePorId(servico.getIdEspecialidade()));
         txtObservacao.setText(servico.getObservacoes());
@@ -84,6 +99,31 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
                 + " "
                 + pegaDescricaoDuracaoServico(view, getProposta(servico).getDuracaoServico()) );
         txtJustificativa.setText(getProposta(servico).getJustificativa());
+
+        btnAceitar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "Aceita Funciona", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnAvaliar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Avaliacao.class);
+                v.getContext().startActivity(intent);
+
+            }
+        });
+
+        btnRecusar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "Recusa Funciona", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         return view;
     }
 

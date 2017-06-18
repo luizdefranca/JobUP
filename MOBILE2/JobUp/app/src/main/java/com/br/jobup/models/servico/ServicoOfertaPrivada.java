@@ -59,6 +59,8 @@ public class ServicoOfertaPrivada implements Serializable, Parcelable{
     @SerializedName("TEMPO_SERVICO_DESC")
     protected String desTempoServico;
 
+
+
     @SerializedName("PROPOSTAS")
     protected List<Proposta> propostas;
 

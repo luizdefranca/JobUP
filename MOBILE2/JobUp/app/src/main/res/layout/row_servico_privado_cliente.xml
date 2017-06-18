@@ -255,6 +255,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:id="@+id/btn_recusar"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -262,6 +263,7 @@
             android:layout_margin="@dimen/appbar_padding_top"
             android:background="@android:color/holo_red_dark"/>
         <Button
+            android:id="@+id/btn_aceitar"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -269,6 +271,7 @@
             android:layout_margin="@dimen/appbar_padding_top"
             android:background="@android:color/holo_green_dark"/>
         <Button
+            android:id="@+id/btn_avaliar"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
