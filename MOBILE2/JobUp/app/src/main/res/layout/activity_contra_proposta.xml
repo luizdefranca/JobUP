@@ -25,6 +25,18 @@
                 android:text="Contra Proposta"
                 android:textSize="20dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título *" />
+
+            <EditText
+                android:id="@+id/contratacao_servico_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords" />
+
 
             <TextView
                 android:layout_width="wrap_content"
