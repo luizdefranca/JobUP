@@ -11,6 +11,7 @@ import android.util.Log;
 
 import com.br.jobup.models.servico.Oferta;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
+import com.br.jobup.models.usuario.Avaliacao;
 import com.br.jobup.services.RetroFitInicializador;
 
 import java.io.IOException;
@@ -26,17 +27,17 @@ public class ParserAvaliarProfissional {
 
     public static final String TAG = "LCFR/"+ParserAvaliarProfissional.class.getSimpleName();
 
-    private final String idUsuario;
+    private final Avaliacao avaliacao;
 
-    public ParserAvaliarProfissional(String idUsuario){
-        this.idUsuario = idUsuario;
+    public ParserAvaliarProfissional(Avaliacao avaliacao){
+        this.avaliacao = avaliacao;
     }
 
 
 
-    public Call<Void> post(ServicoOfertaPrivada avaliacao) {
+    public Call<Void> post(Avaliacao avaliacao) {
         final Call<Void> callPost = new RetroFitInicializador()
-                .createServicoPrivadoAPI()
+                .createAvaliacaoAPI()
                 .post(avaliacao);
 
         return callPost;
