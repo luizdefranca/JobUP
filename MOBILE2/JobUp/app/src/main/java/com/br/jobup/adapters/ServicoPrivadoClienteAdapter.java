@@ -28,6 +28,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static java.security.AccessController.getContext;
+
 /*
  * Created by Luiz Carlos Ramos on 6/16/17 7:12 PM
  *
@@ -71,8 +73,10 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
 
         final ServicoOfertaPrivada servico = servicoOfertaPrivadasComProposta.get(position);
 
-        View view = LayoutInflater.from(this.context).inflate(R.layout.row_servico_privado_cliente,
+        final View view = LayoutInflater.from(this.context).inflate(R.layout.row_servico_privado_cliente,
                 parent, false);
+
+
 
         TextView txtDesEspecialidade = (TextView) view.findViewById(R.id.text_view_des_especialidade);
         TextView txtTitulo = (TextView) view.findViewById(R.id.text_view_titulo);
@@ -90,6 +94,9 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
             btnAceitar.setVisibility(View.GONE);
             btnRecusar.setVisibility(View.GONE);
             btnAvaliar.setVisibility(View.VISIBLE);
+//            btnAceitar.setEnabled(false);
+        }else {
+            btnAvaliar.setVisibility(View.GONE);
         }
 
         txtDesEspecialidade.setText(getDescricaoEspecialidadePorId(servico.getIdEspecialidade()));
@@ -104,6 +111,13 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
                 + " "
                 + pegaDescricaoDuracaoServico(view, getProposta(servico).getDuracaoServico()));
         txtJustificativa.setText(getProposta(servico).getJustificativa());
+
+        adicionaDialogo(servico, view);
+
+
+
+
+
 
         btnRecusar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +138,8 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
                     }
                 });
 
+                btnAceitar.setVisibility(View.GONE);
+                btnRecusar.setVisibility(View.GONE);
 
             }
         });
@@ -149,6 +165,35 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
 
 
         return view;
+    }
+
+    public void adicionaDialogo(ServicoOfertaPrivada servico, final View view) {
+        final CharSequence[] opcaoAceitaRejeita = {"Aceitar proposta", "Recusar proposta"};
+        final CharSequence[] opcaoAvaliar = {"Avaliar profissional"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+        if(servico.getPropostas().get(0).getAceita()){
+            builder.setItems(opcaoAvaliar, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(view.getContext(), Avaliacao.class);
+                    view.getContext().startActivity(intent);
+                }
+            });
+        } else {
+            builder.setItems(opcaoAceitaRejeita, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int opcao) {
+                    switch (opcao){
+                        case 0:
+
+                            break;
+                        case 1:
+
+                            break;
+                    }
+                }
+            });
+        }
     }
 
     private Proposta getProposta(ServicoOfertaPrivada servico) {

@@ -303,9 +303,9 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
         Collections.sort(lista, new Comparator<ServicoOferta>() {
             @Override
             public int compare(ServicoOferta s1, ServicoOferta s2) {
-                if (s1.avaliacao > s2.avaliacao)
+                if (s1.mediaAvaliacoes > s2.mediaAvaliacoes)
                     return 1;
-                else  if (s1.avaliacao < s2.avaliacao)
+                else  if (s1.mediaAvaliacoes < s2.mediaAvaliacoes)
                         return -1;
                 else return 0;
 
@@ -318,11 +318,10 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
         Collections.sort(lista, new Comparator<ServicoOferta>() {
             @Override
             public int compare(ServicoOferta s1, ServicoOferta s2) {
-                if(s1.propostas == null) s1.propostas = Arrays.asList();
-                if(s2.propostas == null) s2.propostas = Arrays.asList();
-                if (s1.propostas.size() > s2.propostas.size())
+
+                if (s1.qtPropostasAceitas > s2.qtPropostasAceitas)
                     return 1;
-                else  if (s1.propostas.size() < s2.propostas.size())
+                else  if (s1.qtPropostasAceitas < s2.qtPropostasAceitas)
                     return -1;
                 else return 0;
 

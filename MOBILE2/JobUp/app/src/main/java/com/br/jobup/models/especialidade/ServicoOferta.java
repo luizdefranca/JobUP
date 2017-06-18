@@ -67,7 +67,11 @@ public class ServicoOferta implements Serializable, Parcelable {
     @SerializedName("PROPOSTAS")
     public List<Proposta> propostas;
 
+    @SerializedName("MEDIA_AVALIACOES_FEITAS")
+    public double mediaAvaliacoes;
 
+    @SerializedName("QTD_PROPOSTAS_ACEITAS")
+    public int qtPropostasAceitas;
 
     public ServicoOferta(String idUsuario, String nome, Date dtNascimento, int idEspecialidade, String descEspecialidade, String resumoCurriculo, String bairro, String cidade, String estado) {
         this.idUsuario = idUsuario;
