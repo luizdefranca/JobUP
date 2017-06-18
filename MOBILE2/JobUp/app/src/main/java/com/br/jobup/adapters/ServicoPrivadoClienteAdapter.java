@@ -1,8 +1,10 @@
 package com.br.jobup.adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +17,16 @@ import com.br.jobup.R;
 import com.br.jobup.models.servico.Proposta;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
 import com.br.jobup.models.usuario.Avaliacao;
+import com.br.jobup.services.parsers.ParserRejeitarServico;
 import com.br.jobup.util.Parsers;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.StringTokenizer;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /*
  * Created by Luiz Carlos Ramos on 6/16/17 7:12 PM
@@ -39,8 +43,9 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
 
     private final List<ServicoOfertaPrivada> servicoOfertaPrivadasComProposta;
     private final Context context;
-
-
+    private Button btnAceitar;
+    private Button btnRecusar;
+    private Button btnAvaliar;
     public ServicoPrivadoClienteAdapter(Context context, List<ServicoOfertaPrivada> servicoOfertaPrivadasComProposta) {
         this.servicoOfertaPrivadasComProposta = servicoOfertaPrivadasComProposta;
         this.context = context;
@@ -64,7 +69,7 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ServicoOfertaPrivada servico = servicoOfertaPrivadasComProposta.get(position);
+        final ServicoOfertaPrivada servico = servicoOfertaPrivadasComProposta.get(position);
 
         View view = LayoutInflater.from(this.context).inflate(R.layout.row_servico_privado_cliente,
                 parent, false);
@@ -77,11 +82,11 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         TextView txtValorProposta = (TextView) view.findViewById(R.id.text_view_valor_proposta);
         TextView txtDuracaoServico = (TextView) view.findViewById(R.id.text_view_duracao_servico);
         TextView txtJustificativa = (TextView) view.findViewById(R.id.text_view_justificativa);
-        Button btnAceitar = (Button) view.findViewById(R.id.btn_aceitar);
-        Button btnRecusar = (Button) view.findViewById(R.id.btn_recusar);
-        Button btnAvaliar = (Button) view.findViewById(R.id.btn_avaliar);
+        btnAceitar = (Button) view.findViewById(R.id.btn_aceitar);
+        btnRecusar = (Button) view.findViewById(R.id.btn_recusar);
+        btnAvaliar = (Button) view.findViewById(R.id.btn_avaliar);
 
-        if(getProposta(servico).getAceita()){
+        if (getProposta(servico).getAceita()) {
             btnAceitar.setVisibility(View.GONE);
             btnRecusar.setVisibility(View.GONE);
             btnAvaliar.setVisibility(View.VISIBLE);
@@ -91,21 +96,47 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         txtObservacao.setText(servico.getObservacoes());
         txtTitulo.setText(servico.getTitulo());
         String valorSugerido = String.format("%.2f", servico.getValorSugerido());
-        txtValor.setText(String.valueOf(valorSugerido));
+        txtValor.setText("R$ " + String.valueOf(valorSugerido));
         txtDtProposta.setText(Parsers.parseDataToStringNormal(servico.getDtCadastro()));
         String valorProposta = String.format("%.2f", getProposta(servico).getVlProposta());
         txtValorProposta.setText("R$ " + valorProposta);
         txtDuracaoServico.setText(getProposta(servico).getValorDuracaoServico()
                 + " "
-                + pegaDescricaoDuracaoServico(view, getProposta(servico).getDuracaoServico()) );
+                + pegaDescricaoDuracaoServico(view, getProposta(servico).getDuracaoServico()));
         txtJustificativa.setText(getProposta(servico).getJustificativa());
+
+        btnRecusar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                ParserRejeitarServico parser = new ParserRejeitarServico(servico.getIdServico());
+                parser.rejeitarServico().enqueue(new Callback<Void>() {
+                    @Override
+                    public void onResponse(Call<Void> call, Response<Void> response) {
+                        if(response.isSuccessful()){
+                            mostraDialog("Serviço Recusado",
+                                    "O serviço: " + servico.getTitulo() + "foi recusado.", false);
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Void> call, Throwable t) {
+                        Toast.makeText(v.getContext(), "Falha de comunicação com o servidor.", Toast.LENGTH_LONG).show();
+                    }
+                });
+
+
+            }
+        });
+
 
         btnAceitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Aceita Funciona", Toast.LENGTH_SHORT).show();
+                mostraDialog("Serviço Aceito",
+                        "O serviço: " + servico.getTitulo() + "foi aceito.", false);
             }
         });
+
 
         btnAvaliar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,13 +144,6 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
                 Intent intent = new Intent(v.getContext(), Avaliacao.class);
                 v.getContext().startActivity(intent);
 
-            }
-        });
-
-        btnRecusar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Recusa Funciona", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -149,9 +173,23 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         return categoriaMap.get(idEspecialidade);
     }
 
-    private String pegaDescricaoDuracaoServico(View view, int tempo){
+    private String pegaDescricaoDuracaoServico(View view, int tempo) {
         final String[] descricoes = view.getResources().getStringArray(R.array.duracao_servico);
         final String descricao = descricoes[tempo];
         return descricao;
     }
+
+    private void mostraDialog(String title, String descricao, final boolean ativaBtnAvaliacao ){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        alertDialogBuilder.setTitle(title).setMessage(descricao).setPositiveButton("Fechar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                btnAceitar.setVisibility(View.GONE);
+                btnRecusar.setVisibility(View.GONE);
+                if(ativaBtnAvaliacao){
+                    btnAvaliar.setVisibility(View.VISIBLE);
+                }
+            }
+        }).show();
+    }
+
 }
