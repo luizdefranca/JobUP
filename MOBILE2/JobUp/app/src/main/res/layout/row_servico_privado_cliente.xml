@@ -274,7 +274,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/appbar_padding_top"
             android:background="@android:color/holo_blue_dark"
-            android:text="Avaliar"/>
+            android:text="Avaliar"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
