@@ -105,8 +105,8 @@
         <activity
             android:name=".activities.MapaActivity"
             android:parentActivityName=".activities.CatalogoEspecialidadeActivity" />
-        <activity android:name=".activities.ContraPropostaActivity" />
-        <activity android:name=".activities.ListaPropostaActivity"></activity>
+        <activity android:name=".activities.PropostaActivity" />
+        <activity android:name=".activities.ListaOfertaActivity"></activity>
     </application>
 
 </manifest>

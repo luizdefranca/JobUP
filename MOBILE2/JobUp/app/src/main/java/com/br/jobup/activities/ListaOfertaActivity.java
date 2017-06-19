@@ -5,20 +5,16 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.br.jobup.R;
-import com.br.jobup.adapters.PropostaAdapter;
-import com.br.jobup.models.servico.Proposta;
-
-import java.util.List;
 
 
-public class ListaPropostaActivity extends AppCompatActivity {
+public class ListaOfertaActivity extends AppCompatActivity {
 
     private ListView mListPropostas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_proposta);
+        setContentView(R.layout.activity_lista_oferta);
 
         mListPropostas = (ListView) findViewById(R.id.lVPropostas);
     }
@@ -27,7 +23,7 @@ public class ListaPropostaActivity extends AppCompatActivity {
 //        IPropostaDao dao = new PropostaDao(this);
 //        List<Proposta> propostas = dao.getAll();
 //        dao.close();
-//        PropostaAdapter adapter = new PropostaAdapter(this, propostas);
+//        OfertaAdapter adapter = new OfertaAdapter(this, propostas);
 //        mListPropostas.setAdapter(adapter);
     }
 }

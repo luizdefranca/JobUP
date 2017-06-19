@@ -290,7 +290,7 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_minhas_ofertas_servicos) {
-            Intent ListaPropostaActivity = new Intent(MainActivity.this, ListaPropostaActivity.class);
+            Intent ListaPropostaActivity = new Intent(MainActivity.this, ListaOfertaActivity.class);
             startActivity(ListaPropostaActivity);
 
 

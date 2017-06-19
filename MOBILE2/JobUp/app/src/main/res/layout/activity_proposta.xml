@@ -22,7 +22,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_marginTop="16dp"
-                android:text="Contra Proposta"
+                android:text="Proposta"
                 android:textSize="20dp" />
 
             <TextView
@@ -78,7 +78,7 @@
                 android:layout_marginTop="@dimen/text_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar Contra Proposta"/>
+                android:text="Enviar Proposta"/>
         </LinearLayout>
         <include
             android:id="@+id/tabBar"
