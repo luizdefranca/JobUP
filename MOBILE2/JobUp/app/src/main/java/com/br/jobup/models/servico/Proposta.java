@@ -60,6 +60,7 @@ public class Proposta implements Serializable {
 
 
     public Proposta(){}
+
     public String getIdServico() {
         return idServico;
     }

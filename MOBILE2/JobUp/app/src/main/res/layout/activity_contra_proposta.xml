@@ -4,17 +4,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_above="@+id/tabBar">
+            android:padding="16dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,15 +50,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Valor Sugerido"
-                />
+                android:text="Valor Sugerido" />
 
             <EditText
                 android:id="@+id/valor_sugerido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -72,24 +68,16 @@
                 android:id="@+id/spnPrazo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:imeOptions="actionDone"/>
+                android:imeOptions="actionDone" />
+
             <Button
                 android:id="@+id/contratacao_servico_contratar"
-                android:layout_marginTop="@dimen/text_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enviar Contra Proposta"/>
+                android:layout_marginTop="@dimen/text_margin"
+                android:text="Enviar Contra Proposta" />
         </LinearLayout>
-        <include
-            android:id="@+id/tabBar"
-            layout="@layout/bottom_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
 
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            />
-    </RelativeLayout>
+
 
 </LinearLayout>

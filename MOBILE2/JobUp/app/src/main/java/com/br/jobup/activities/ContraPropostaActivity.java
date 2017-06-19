@@ -57,29 +57,28 @@ public class ContraPropostaActivity extends AppCompatActivity {
 
 
 
-        mBtnEnviarContraProposta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String titulo = mServicoTitulo.getText().toString();
-                String observacao = mObsContraProposta.getText().toString();
-                double valorSugerido = (mValorSugeridoContraProposta.getText().toString() != "") ? Double.parseDouble(mValorSugeridoContraProposta.getText().toString()): 0.0;
-                int tempoServico = mPrazo.getSelectedItemPosition();
-                Proposta proposta =
-                        new Proposta(idUsuario,
-                                idProfissional,
-                                idEspecialidade,
-                                titulo,
-                                e,
-                                observacao,
-                                tempoServico,
-                                valorSugerido);
-
-                String idServico = Util.getUUID();
-                proposta.setIdServico(idServico);
-                enviaContraProposta(proposta);
-                startActivity(new Intent(ContraPropostaActivity.this, MainActivity.class));
-            }
-        });
+//        mBtnEnviarContraProposta.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String titulo = mServicoTitulo.getText().toString();
+//                String observacao = mObsContraProposta.getText().toString();
+//                double valorSugerido = (mValorSugeridoContraProposta.getText().toString() != "") ? Double.parseDouble(mValorSugeridoContraProposta.getText().toString()): 0.0;
+//                int tempoServico = mPrazo.getSelectedItemPosition();
+//                Proposta proposta =
+//                        new Proposta(idUsuario,
+//                                idProfissional,
+//                                idEspecialidade,
+//                                titulo,
+//                                observacao,
+//                                tempoServico,
+//                                valorSugerido);
+//
+//                String idServico = Util.getUUID();
+//                proposta.setIdServico(idServico);
+//                enviaContraProposta(proposta);
+//                startActivity(new Intent(ContraPropostaActivity.this, MainActivity.class));
+//            }
+//        });
 
     }
 
