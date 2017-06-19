@@ -20,7 +20,7 @@ import retrofit2.Response;
 
 public class ContraPropostaActivity extends AppCompatActivity {
 
-    private static final String[] opcoes = {"O quanto antes possível", "nos próximos 30 dias",
+    /*private static final String[] opcoes = {"O quanto antes possível", "nos próximos 30 dias",
             "Nos próximos três meses", "Não tenho certeza"};
     private static final String TAG = ContraPropostaActivity.class.getSimpleName();
 
@@ -106,5 +106,5 @@ public class ContraPropostaActivity extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 }

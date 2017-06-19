@@ -17,8 +17,8 @@ import java.util.Date;
  */
 
 public class ServicoOfertaOrdenadoPorAvaliacao extends ServicoOferta implements Comparable<ServicoOfertaOrdenadoPorAvaliacao> {
-    public ServicoOfertaOrdenadoPorAvaliacao(String idUsuario, String nome, Date dtNascimento, int idEspecialidade, String descEspecialidade, String resumoCurriculo, String bairro, String cidade, String estado) {
-        super(idUsuario, nome, dtNascimento, idEspecialidade, descEspecialidade, resumoCurriculo, bairro, cidade, estado);
+    public ServicoOfertaOrdenadoPorAvaliacao(String idUsuario, String nome, Date dtNascimento, int idEspecialidade, String descEspecialidade, String resumoCurriculo, String bairro, String cidade, String estado, double mediaAvaliacoes , int qtPropostasAceitas) {
+        super(idUsuario, nome, dtNascimento, idEspecialidade, descEspecialidade, resumoCurriculo, bairro, cidade, estado, mediaAvaliacoes , qtPropostasAceitas);
     }
 
     protected ServicoOfertaOrdenadoPorAvaliacao(Parcel in) {

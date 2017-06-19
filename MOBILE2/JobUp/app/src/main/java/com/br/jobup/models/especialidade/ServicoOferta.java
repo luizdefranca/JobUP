@@ -73,7 +73,7 @@ public class ServicoOferta implements Serializable, Parcelable {
     @SerializedName("QTD_PROPOSTAS_ACEITAS")
     public int qtPropostasAceitas;
 
-    public ServicoOferta(String idUsuario, String nome, Date dtNascimento, int idEspecialidade, String descEspecialidade, String resumoCurriculo, String bairro, String cidade, String estado) {
+    public ServicoOferta(String idUsuario, String nome, Date dtNascimento, int idEspecialidade, String descEspecialidade, String resumoCurriculo, String bairro, String cidade, String estado, double mediaAvaliacoes, int qtPropostasAceitas) {
         this.idUsuario = idUsuario;
         this.nome = nome;
         this.dtNascimento = dtNascimento;
@@ -83,6 +83,8 @@ public class ServicoOferta implements Serializable, Parcelable {
         this.bairro = bairro;
         this.cidade = cidade;
         this.estado = estado;
+        this.mediaAvaliacoes = mediaAvaliacoes;
+        this.qtPropostasAceitas = qtPropostasAceitas;
     }
 
     protected ServicoOferta(Parcel in) {
@@ -94,6 +96,8 @@ public class ServicoOferta implements Serializable, Parcelable {
         bairro = in.readString();
         cidade = in.readString();
         estado = in.readString();
+        mediaAvaliacoes = in.readDouble();
+        qtPropostasAceitas = in.readInt();
     }
 
     public static final Creator<ServicoOferta> CREATOR = new Creator<ServicoOferta>() {
@@ -188,6 +192,22 @@ public class ServicoOferta implements Serializable, Parcelable {
         this.estado = estado;
     }
 
+    public double getMediaAvaliacoes() {
+        return mediaAvaliacoes;
+    }
+
+    public void setMediaAvalaicoes() {
+        this.mediaAvaliacoes = mediaAvaliacoes;
+    }
+
+    public int getQtPropostasAceitas() {
+        return qtPropostasAceitas;
+    }
+
+    public void setQtPropostasAceitas() {
+        this.qtPropostasAceitas = qtPropostasAceitas;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -203,5 +223,7 @@ public class ServicoOferta implements Serializable, Parcelable {
         dest.writeString(bairro);
         dest.writeString(cidade);
         dest.writeString(estado);
+        dest.writeInt(qtPropostasAceitas);
+        dest.writeDouble(mediaAvaliacoes);
     }
 }
