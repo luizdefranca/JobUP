@@ -20,18 +20,21 @@ import retrofit2.Response;
 
 public class PropostaActivity extends AppCompatActivity {
 
-    private static final String[] opcoes = {"O quanto antes possível", "nos próximos 30 dias",
-            "Nos próximos três meses", "Não tenho certeza"};
+    private static final String[] opcoes = {"6(HORAS)", "12(HORAS)", "24(HORAS)", "36(HORAS)", "48(HORAS)",
+            "1(SEMANA)","2(SEMANAS)", "3(SEMANAS)", "Tempo Indeterminado"};
     private static final String TAG = PropostaActivity.class.getSimpleName();
 
     ArrayAdapter<String> aOpcoes;
     Spinner mPrazo;
+    private String idServico;
     private String idUsuario;
-    private String idProfissional;
-    private int idEspecialidade;
-    private EditText mObsProposta;
-    private EditText mServicoTitulo;
-    private EditText mValorSugeridoProposta;
+    private String dtProposta;
+    private int duracaoServico;
+    private int valorDuracaoServico;
+    private EditText vlProposta;
+    private EditText mJustificativa;
+    private EditText dsTitulo;
+    private String dsObservacoes;
     private Button mBtnEnviarProposta;
 
     @Override
@@ -39,61 +42,32 @@ public class PropostaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proposta);
 
-        final Bundle bundle = getIntent()
-                .getBundleExtra(CatalogoEspecialidadeActivity.DETALHE_CONTRATAR_SERVICO);
-        idUsuario = bundle.getString(CatalogoEspecialidadeActivity.ID_USUARIO);
-        idProfissional = bundle.getString(CatalogoEspecialidadeActivity.ID_PROFISSIONAL);
-        idEspecialidade = bundle.getInt(CatalogoEspecialidadeActivity.ID_ESPECIALIDADE);
-
-
-        mObsProposta = (EditText) findViewById(R.id.contratacao_servico_observacao);
-        mValorSugeridoProposta = (EditText) findViewById(R.id.valor_sugerido);
-        mBtnEnviarProposta = (Button) findViewById(R.id.contratacao_servico_contratar);
-        mServicoTitulo = (EditText) findViewById(R.id.contratacao_servico_titulo);
+        vlProposta = (EditText) findViewById(R.id.valor_proposta);
+        mJustificativa = (EditText) findViewById(R.id.proposta_justificativa);
+        mBtnEnviarProposta = (Button) findViewById(R.id.enviar_proposta);
+        dsTitulo = (EditText) findViewById(R.id.proposta_titulo);
         aOpcoes = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, opcoes);
-        mPrazo = (Spinner) findViewById(R.id.spnPrazo);
+        mPrazo = (Spinner) findViewById(R.id.spnDuracaoServico);
         mPrazo.setAdapter(aOpcoes);
 
         mBtnEnviarProposta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String titulo = mServicoTitulo.getText().toString();
-                String observacao = mObsProposta.getText().toString();
-                double valorSugerido = (mValorSugeridoProposta.getText().toString() != "") ? Double.parseDouble(mValorSugeridoProposta.getText().toString()): 0.0;
-                int tempoServico = mPrazo.getSelectedItemPosition();
-                Proposta proposta =
-                        new Proposta(idUsuario,
-                                idProfissional,
-                                idEspecialidade,
-                                titulo,
-                                e,
-                                observacao,
-                                tempoServico,
-                                valorSugerido);
 
-                String idServico = Util.getUUID();
-                proposta.setIdServico(idServico);
-                enviaContraProposta(proposta);
-                startActivity(new Intent(PropostaActivity.this, MainActivity.class));
-            }
-        });
-        mBtnEnviarContraProposta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String titulo = mServicoTitulo.getText().toString();
-                String observacao = mObsContraProposta.getText().toString();
-                double valorSugerido = (mValorSugeridoContraProposta.getText().toString() != "") ? Double.parseDouble(mValorSugeridoContraProposta.getText().toString()): 0.0;
+                String mTitulo = dsTitulo.getText().toString();
+                String mVlProposta = vlProposta.getText().toString();
+                String justificativa = mJustificativa.getText().toString();
                 int tempoServico = mPrazo.getSelectedItemPosition();
                 Proposta proposta =
                         new Proposta(idUsuario,
-                                idProfissional,
-                                idEspecialidade,
-                                titulo,
-                                e,
-                                observacao,
-                                tempoServico,
-                                valorSugerido);
+                                idServico,
+                                dtProposta,
+                                duracaoServico,
+                                mTitulo,
+                                mVlProposta,
+                                justificativa,
+                                tempoServico);
 
                 String idServico = Util.getUUID();
                 proposta.setIdServico(idServico);
@@ -106,7 +80,6 @@ public class PropostaActivity extends AppCompatActivity {
 
     private void enviaProposta(Proposta proposta) {
         Log.e("LCFR " + TAG, "Entrada no método carregaCatalogoEspecialidade: " );
-
 
         final ParserProposta parser = new ParserProposta(idProfissional);
         parser.post(proposta).enqueue(new Callback<Void>() {

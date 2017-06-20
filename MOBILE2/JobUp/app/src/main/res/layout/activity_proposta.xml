@@ -10,16 +10,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="30dp"
-                android:layout_marginTop="16dp"
                 android:text="Proposta"
+                android:layout_marginTop="16dp"
                 android:textSize="20dp" />
 
             <TextView
@@ -28,20 +26,19 @@
                 android:text="Título *" />
 
             <EditText
-                android:id="@+id/contratacao_servico_titulo"
+                android:id="@+id/proposta_titulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
                 android:inputType="textCapWords" />
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Observação *" />
+                android:text="Data" />
 
             <EditText
-                android:id="@+id/contratacao_servico_observacao"
+                android:id="@+id/dataProposta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
@@ -50,29 +47,54 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Valor Sugerido" />
+                android:text="Duração do Serviço" />
+
+            <Spinner
+                android:id="@+id/spnDuracaoServico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:imeOptions="actionDone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor Proposta" />
 
             <EditText
-                android:id="@+id/valor_sugerido"
+                android:id="@+id/valor_proposta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
                 android:inputType="numberDecimal" />
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prazo *" />
+                android:text="Justificativa" />
 
-            <Spinner
-                android:id="@+id/spnPrazo"
+            <EditText
+                android:id="@+id/proposta_justificativa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:imeOptions="actionDone" />
+                android:imeOptions="actionNext"
+                android:inputType="text" />
 
             <Button
-                android:id="@+id/contratacao_servico_contratar"
+                android:id="@+id/enviar_proposta"
                 android:layout_width="match_parent"
+                android:background="#1e49d6"
+                android:textColor="#ffffff"
+                android:text="Enviar Proposta"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:layout_marginTop="5dp"
+                android:id="@+id/contratacao_servico_recusar"
+                android:layout_width="match_parent"
+                android:text="Recusar Proposta"
+                android:textColor="#ffffff"
+                android:background="#d61e1e"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 

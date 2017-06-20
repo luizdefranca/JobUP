@@ -16,7 +16,7 @@ public class ListaOfertaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_oferta);
 
-        mListPropostas = (ListView) findViewById(R.id.lVPropostas);
+        mListPropostas = (ListView) findViewById(R.id.lVOfertas);
     }
 
     private void carregaListaPropostas(){
