@@ -1,9 +1,11 @@
 package com.br.jobup.adapters;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.br.jobup.R;
+import com.br.jobup.activities.RecusaPropostaDialogFragment;
 import com.br.jobup.models.servico.Proposta;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
 import com.br.jobup.models.usuario.Avaliacao;
@@ -48,9 +51,11 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
     private Button btnAceitar;
     private Button btnRecusar;
     private Button btnAvaliar;
-    public ServicoPrivadoClienteAdapter(Context context, List<ServicoOfertaPrivada> servicoOfertaPrivadasComProposta) {
+    private Activity activity;
+    public ServicoPrivadoClienteAdapter(Context context, List<ServicoOfertaPrivada> servicoOfertaPrivadasComProposta, Activity activity) {
         this.servicoOfertaPrivadasComProposta = servicoOfertaPrivadasComProposta;
         this.context = context;
+        this.activity = activity;
     }
 
     @Override
@@ -122,21 +127,28 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         btnRecusar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                ParserRejeitarServico parser = new ParserRejeitarServico(servico.getIdServico());
-                parser.rejeitarServico().enqueue(new Callback<Void>() {
-                    @Override
-                    public void onResponse(Call<Void> call, Response<Void> response) {
-                        if(response.isSuccessful()){
-                            mostraDialog("Serviço Recusado",
-                                    "O serviço: " + servico.getTitulo() + "foi recusado.", false);
-                        }
-                    }
 
-                    @Override
-                    public void onFailure(Call<Void> call, Throwable t) {
-                        Toast.makeText(v.getContext(), "Falha de comunicação com o servidor.", Toast.LENGTH_LONG).show();
-                    }
-                });
+                RecusaPropostaDialogFragment recusaFragmentDialog = new RecusaPropostaDialogFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("ID_PROPOSTA", "id_proposta");
+                recusaFragmentDialog.setArguments(bundle);
+
+                recusaFragmentDialog.show(activity.getFragmentManager(), "RECUSAR_TAG");
+//                ParserRejeitarServico parser = new ParserRejeitarServico(servico.getIdServico());
+//                parser.rejeitarServico().enqueue(new Callback<Void>() {
+//                    @Override
+//                    public void onResponse(Call<Void> call, Response<Void> response) {
+//                        if(response.isSuccessful()){
+//                            mostraDialog("Serviço Recusado",
+//                                    "O serviço: " + servico.getTitulo() + "foi recusado.", false);
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<Void> call, Throwable t) {
+//                        Toast.makeText(v.getContext(), "Falha de comunicação com o servidor.", Toast.LENGTH_LONG).show();
+//                    }
+//                });
 
                 btnAceitar.setVisibility(View.GONE);
                 btnRecusar.setVisibility(View.GONE);
