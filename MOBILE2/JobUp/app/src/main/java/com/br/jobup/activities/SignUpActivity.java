@@ -56,7 +56,7 @@ public class SignUpActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
         // Set Title on the ActionBar
-        getSupportActionBar().setTitle("Cadastro de Usuario");
+        getSupportActionBar().setTitle("Faça seu cadastro!");
 
         // Init views
         usernameTxt = (EditText) findViewById(R.id.usernameTxt2);

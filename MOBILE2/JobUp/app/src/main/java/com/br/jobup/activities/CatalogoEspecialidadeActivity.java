@@ -83,17 +83,21 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                 switch (botao){
                     //Opcao de ordernar por avaliacao
                     case R.id.rd_bt_avaliacao:
-                        ordenaPorAvaliacao(especialidadeList);
-                        catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
-                        mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
-                        catalogoAdapter.notifyDataSetChanged();
+                        if(especialidadeList != null){
+                            ordenaPorAvaliacao(especialidadeList);
+                            catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
+                            mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
+                            catalogoAdapter.notifyDataSetChanged();
+                        }
                         break;
                     //Opcao de ordernar por avaliacao
                     case R.id.rd_bt_nServicos:
-                        ordenaPorNumeroServicos(especialidadeList);
-                        catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
-                        mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
-                        catalogoAdapter.notifyDataSetChanged();
+                        if(especialidadeList != null){
+                            ordenaPorNumeroServicos(especialidadeList);
+                            catalogoAdapter = new CatalogoEspecialidadeAdapter(CatalogoEspecialidadeActivity.this, especialidadeList);
+                            mListCatalogoEspecialidade.setAdapter(catalogoAdapter);
+                            catalogoAdapter.notifyDataSetChanged();
+                        }
                         break;
                 }
             }
@@ -213,8 +217,6 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
     }
 
     //Define os métodos para o RadioGroup
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
