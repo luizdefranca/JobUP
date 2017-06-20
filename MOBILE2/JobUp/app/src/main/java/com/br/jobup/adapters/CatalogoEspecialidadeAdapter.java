@@ -84,7 +84,8 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter implements GoogleA
         TextView txtBairro = (TextView) view.findViewById(R.id.item_especialidade_txtBairro);
         TextView txtCidade = (TextView) view.findViewById(R.id.item_especialidade_txtCidade);
         TextView txtEstado = (TextView) view.findViewById(R.id.item_especialidade_txtEstado);
-
+        TextView txtNumCon = (TextView) view.findViewById(R.id.item_especialidade_txtNumCon);
+        TextView txtMedAv = (TextView) view.findViewById(R.id.item_especialidade_txtMediaAv);
 
         txtNome.setText(especialidade.getNome());
 //        txtDtNascimento.setText(Parsers.parseDataToStringNormal(especialidade.getDtNascimento()));
@@ -94,6 +95,9 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter implements GoogleA
         txtBairro.setText(especialidade.getBairro());
         txtCidade.setText(especialidade.getCidade());
         txtEstado.setText(especialidade.getEstado());
+        txtNumCon.setText(""+especialidade.getQtPropostasAceitas());
+        txtMedAv.setText(Double.toString(especialidade.getMediaAvaliacoes()));
+
         return view;
     }
 
@@ -169,6 +173,8 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter implements GoogleA
         TextView txtBairro;
         TextView txtCidade;
         TextView txtEstado;
+        TextView txtNumCon;
+        TextView txtMedAv;
 
 
     }

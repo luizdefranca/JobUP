@@ -55,8 +55,6 @@ public class PropostaActivity extends AppCompatActivity {
         mPrazo = (Spinner) findViewById(R.id.spnPrazo);
         mPrazo.setAdapter(aOpcoes);
 
-
-
         mBtnEnviarProposta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,10 +78,33 @@ public class PropostaActivity extends AppCompatActivity {
                 startActivity(new Intent(PropostaActivity.this, MainActivity.class));
             }
         });
+        mBtnEnviarContraProposta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String titulo = mServicoTitulo.getText().toString();
+                String observacao = mObsContraProposta.getText().toString();
+                double valorSugerido = (mValorSugeridoContraProposta.getText().toString() != "") ? Double.parseDouble(mValorSugeridoContraProposta.getText().toString()): 0.0;
+                int tempoServico = mPrazo.getSelectedItemPosition();
+                Proposta proposta =
+                        new Proposta(idUsuario,
+                                idProfissional,
+                                idEspecialidade,
+                                titulo,
+                                e,
+                                observacao,
+                                tempoServico,
+                                valorSugerido);
+
+                String idServico = Util.getUUID();
+                proposta.setIdServico(idServico);
+                enviaProposta(proposta);
+                startActivity(new Intent(PropostaActivity.this, MainActivity.class));
+            }
+        });
 
     }
 
-    private void enviaContraProposta(Proposta proposta) {
+    private void enviaProposta(Proposta proposta) {
         Log.e("LCFR " + TAG, "Entrada no método carregaCatalogoEspecialidade: " );
 
 
@@ -106,5 +127,5 @@ public class PropostaActivity extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 }

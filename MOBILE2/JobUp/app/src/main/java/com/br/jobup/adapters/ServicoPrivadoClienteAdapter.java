@@ -148,8 +148,13 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         btnAceitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mostraDialog("Serviço Aceito",
-                        "O serviço: " + servico.getTitulo() + "foi aceito.", false);
+
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(), R.layout.activity_avaliacao);
+                builder.show();
+//                mostraDialog("Serviço Aceito",
+//                        "O serviço: " + servico.getTitulo() + "foi aceito.", false);
             }
         });
 
@@ -157,8 +162,11 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         btnAvaliar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), Avaliacao.class);
-                v.getContext().startActivity(intent);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(), R.layout.activity_avaliacao);
+                builder.show();
+//                Intent intent = new Intent(v.getContext(), Avaliacao.class);
+//                v.getContext().startActivity(intent);
 
             }
         });

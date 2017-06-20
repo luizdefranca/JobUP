@@ -56,7 +56,7 @@
     </string-array>
     <string-array name="especialidade_opcoes">
         <item>Visualizar perfil</item>
-        <item>Adicionar a favoritos</item>
+        <item>Avaliar Profissional</item>
         <item>Contratar servicos</item>
         <item>Fechar</item>
     </string-array>

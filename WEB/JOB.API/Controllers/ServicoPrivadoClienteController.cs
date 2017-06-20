@@ -28,7 +28,11 @@ namespace JOB.API.Controllers
         [ResponseType(typeof(List<ServicoViewModel_api>))]
         public HttpResponseMessage Get(Guid idUsuarioCliente)
         {
-            var lstDominio = ctx.Servico.Include(i => i.PROPOSTAS).Include(i => i.OFERTAS).Where(w => w.ID_USUARIO == idUsuarioCliente & w.PUBLICO == false & w.PROPOSTAS.Any()).ToList();
+            var lstDominio = ctx.Servico
+                .Include(i => i.PROPOSTAS)
+                .Include(i => i.OFERTAS)
+                .Where(w => w.ID_USUARIO == idUsuarioCliente & w.PUBLICO == false & w.PROPOSTAS.Any())
+                .ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(lstDominio);
 
