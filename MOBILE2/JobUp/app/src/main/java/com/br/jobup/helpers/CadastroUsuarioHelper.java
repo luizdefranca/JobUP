@@ -11,6 +11,7 @@ import com.br.jobup.models.usuario.Email;
 import com.br.jobup.models.usuario.Rg;
 import com.br.jobup.models.usuario.Telefone;
 import com.br.jobup.models.usuario.Usuario;
+import com.br.jobup.util.Mask;
 import com.br.jobup.util.Parsers;
 import com.br.jobup.util.Validations.TextHelper;
 
@@ -41,17 +42,22 @@ public class CadastroUsuarioHelper {
         this.activity = activity;
         campoNome = (EditText) activity.findViewById(R.id.nomeCadastroView);
         campoCpf = (EditText) activity.findViewById(R.id.cpfCadastroView);
+        campoCpf.addTextChangedListener(Mask.insert("###.###.###-##", campoCpf));
         campoRgNr = (EditText) activity.findViewById(R.id.rgNrCadastroView);
         campoRgUf = (Spinner) activity.findViewById(R.id.rgUfCadastroView);
         campoDtNascimento = (EditText) activity.findViewById(R.id.dtNascimentoCadastroView);
+        campoDtNascimento.addTextChangedListener(Mask.insert("##/##/####", campoDtNascimento));
         campoCep = (EditText) activity.findViewById(R.id.cepCadastroView);
+        campoCep.addTextChangedListener(Mask.insert("##.###-###", campoCep));
         campoUf = (Spinner) activity.findViewById(R.id.ufCadastroView);
         campoLogradouro = (EditText) activity.findViewById(R.id.logradouroCadastroView);
         campoComplemento = (EditText) activity.findViewById(R.id.complementoEnderecoCadastroView);
         campoBairro = (EditText) activity.findViewById(R.id.bairroCadastroView);
         campoCidade = (EditText) activity.findViewById(R.id.cidadeCadastroView);
         campoFixo = (EditText) activity.findViewById(R.id.fixoCadastroView);
+        campoFixo.addTextChangedListener(Mask.insert("(##)####-####", campoFixo));
         campoCelular = (EditText) activity.findViewById(R.id.celularCadastroView);
+        campoCelular.addTextChangedListener(Mask.insert("(##)####-####", campoCelular));
 
         usuario = new Usuario();
     }

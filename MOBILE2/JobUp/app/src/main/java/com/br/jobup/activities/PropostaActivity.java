@@ -60,7 +60,7 @@ public class PropostaActivity extends AppCompatActivity {
                 String justificativa = mJustificativa.getText().toString();
                 int tempoServico = mPrazo.getSelectedItemPosition();
 
-                
+
                //TODO Fazer construtor para a classe Proposta conforme abaixo
                 Proposta proposta =
                         new Proposta(

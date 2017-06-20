@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scrollView"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
-        >
+        android:padding="16dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,15 +48,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Valor Sugerido"
-            />
+            android:text="Valor Sugerido" />
 
         <EditText
             android:id="@+id/valor_sugerido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionNext"
-            android:inputType="numberDecimal"/>
+            android:inputType="numberDecimal" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,13 +66,14 @@
             android:id="@+id/spnPrazo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:imeOptions="actionDone"/>
+            android:imeOptions="actionDone" />
+
         <Button
             android:id="@+id/contratacao_servico_contratar"
-            android:layout_marginTop="@dimen/text_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contratar"/>
+            android:layout_marginTop="@dimen/text_margin"
+            android:text="Contratar" />
     </LinearLayout>
 
 

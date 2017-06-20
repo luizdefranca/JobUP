@@ -50,7 +50,7 @@
                 android:layout_marginTop="50dp"
                 android:hint="Nome do usuario"
                 android:imeOptions="actionNext"
-                android:singleLine="true"
+                android:inputType="textEmailAddress"
                 android:textAlignment="center"
                 android:textColor="#111"
                 android:textSize="12sp"/>
@@ -99,6 +99,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="10dp"
                 android:hint="Redigite a sua senha"
+                android:inputType="textPassword"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
                 android:textAlignment="center"

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Created by Luiz Carlos Ramos on 6/19/17 11:15 PM
   ~
   ~ Copyright (c) 2017. All rights reserved.
@@ -18,13 +17,12 @@
     tools:context=".activities.DetalheServicoActivity">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#edecec"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
         <TextView
             android:id="@+id/textViewComentario"
@@ -42,8 +40,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:lines="4"
-            android:singleLine="true" />
+            android:lines="4" />
 
     </LinearLayout>
 </LinearLayout>
