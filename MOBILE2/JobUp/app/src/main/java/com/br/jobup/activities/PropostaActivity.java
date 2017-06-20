@@ -100,5 +100,5 @@ public class PropostaActivity extends AppCompatActivity {
             }
         });
 
-    }*/
+    }
 }
