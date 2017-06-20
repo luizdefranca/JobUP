@@ -66,7 +66,7 @@ public class SingInActivity extends AppCompatActivity {
             usuarioCorrente = (Usuario) gsonSharedPrefs.getObject(new Usuario());
             if (usuarioCorrente != null) {
                 Log.i("test", usuarioCorrente.getNome());
-                Toast.makeText(SingInActivity.this, "usuario corrente " + usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(SingInActivity.this, "usuario corrente " + usuarioCorrente.getNome(), Toast.LENGTH_SHORT).show();
             }
         } catch (ParsingException e) {
             e.printStackTrace();

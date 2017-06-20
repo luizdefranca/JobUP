@@ -125,8 +125,6 @@ public class SignUpActivity extends AppCompatActivity {
 
                             if (response.isSuccessful()) {
                                 final String idUsuario = response.body().toString();
-                                Toast.makeText(SignUpActivity.this, "usário com id=" + idUsuario +
-                                        " cadastrado", Toast.LENGTH_SHORT).show();
                                 Log.e("LCFR", "onResponse: " + idUsuario);
 
                                 final AlertDialog alert =
