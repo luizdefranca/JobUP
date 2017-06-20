@@ -7,6 +7,7 @@ package com.br.jobup.services.interfaces;
  * Last modified 28/05/17 19:59
  */
 
+import com.br.jobup.models.servico.Proposta;
 import com.br.jobup.models.servico.Servico;
 
 import java.util.List;
@@ -39,7 +40,7 @@ public interface IPropostaAPI {
 
     @POST(PATH)
     Call<Void> post(
-            @Body Servico servico
+            @Body Proposta proposta
     );
 
     @PUT(PATH+"{id}")

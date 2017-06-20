@@ -59,15 +59,20 @@ public class PropostaActivity extends AppCompatActivity {
                 String mVlProposta = vlProposta.getText().toString();
                 String justificativa = mJustificativa.getText().toString();
                 int tempoServico = mPrazo.getSelectedItemPosition();
+
+                
+               //TODO Fazer construtor para a classe Proposta conforme abaixo
                 Proposta proposta =
-                        new Proposta(idUsuario,
-                                idServico,
-                                dtProposta,
-                                duracaoServico,
-                                mTitulo,
-                                mVlProposta,
-                                justificativa,
-                                tempoServico);
+                        new Proposta(
+//                                idUsuario,
+//                                idServico,
+//                                dtProposta,
+//                                duracaoServico,
+//                                mTitulo,
+//                                mVlProposta,
+//                                justificativa,
+//                                tempoServico
+                        );
 
                 String idServico = Util.getUUID();
                 proposta.setIdServico(idServico);
@@ -81,7 +86,7 @@ public class PropostaActivity extends AppCompatActivity {
     private void enviaProposta(Proposta proposta) {
         Log.e("LCFR " + TAG, "Entrada no método carregaCatalogoEspecialidade: " );
 
-        final ParserProposta parser = new ParserProposta(idProfissional);
+        final ParserProposta parser = new ParserProposta();
         parser.post(proposta).enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
