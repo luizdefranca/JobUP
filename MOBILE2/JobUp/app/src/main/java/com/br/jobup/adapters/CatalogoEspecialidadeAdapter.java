@@ -95,7 +95,7 @@ public class CatalogoEspecialidadeAdapter extends BaseAdapter implements GoogleA
         txtBairro.setText(especialidade.getBairro());
         txtCidade.setText(especialidade.getCidade());
         txtEstado.setText(especialidade.getEstado());
-        txtNumCon.setText(especialidade.getQtPropostasAceitas());
+        txtNumCon.setText(""+especialidade.getQtPropostasAceitas());
         txtMedAv.setText(Double.toString(especialidade.getMediaAvaliacoes()));
 
         return view;

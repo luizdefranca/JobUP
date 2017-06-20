@@ -148,7 +148,13 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
                                 break;
 
                             case 1:
-                                //TODO: ADICIONAR A FAVORITOS
+                                //TODO: AVALIAR PROFISSIONAL
+
+                                final Intent intentAvaliacao = new Intent(CatalogoEspecialidadeActivity.this, AvaliacaoActivity.class);
+                                intentAvaliacao.putExtra("ID_PROFISSIONAL", idProfissinal);
+                                startActivity(intentAvaliacao);
+
+
                                 break;
                             case 2:
                                 //TODO: CONTRATAR SERVICO
@@ -304,9 +310,9 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
             @Override
             public int compare(ServicoOferta s1, ServicoOferta s2) {
                 if (s1.mediaAvaliacoes > s2.mediaAvaliacoes)
-                    return 1;
+                    return -1;
                 else  if (s1.mediaAvaliacoes < s2.mediaAvaliacoes)
-                        return -1;
+                        return 1;
                 else return 0;
 
             }
@@ -320,9 +326,9 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
             public int compare(ServicoOferta s1, ServicoOferta s2) {
 
                 if (s1.qtPropostasAceitas > s2.qtPropostasAceitas)
-                    return 1;
-                else  if (s1.qtPropostasAceitas < s2.qtPropostasAceitas)
                     return -1;
+                else  if (s1.qtPropostasAceitas < s2.qtPropostasAceitas)
+                    return 1;
                 else return 0;
 
             }

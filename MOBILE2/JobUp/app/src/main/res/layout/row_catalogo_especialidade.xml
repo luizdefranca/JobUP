@@ -210,7 +210,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_weight="3"
-                    android:text="N° de Contratações: " />
+                    android:text="Serv. Prestados: " />
 
                 <TextView
                     android:id="@+id/item_especialidade_txtNumCon"
