@@ -24,9 +24,14 @@ import com.br.jobup.adapters.ServicoPrivadoClienteAdapter;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
 import com.br.jobup.models.usuario.Usuario;
 import com.br.jobup.preferencesPersistence.PreferencePersistence;
+import com.br.jobup.services.parsers.ParserServicoPrivadoCliente2;
 import com.br.jobup.services.tasks.TaskServicoPrivadoCliente;
 
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /*
  * Created by Luiz Carlos Ramos on 6/16/17 7:48 PM
@@ -178,8 +183,8 @@ public class ServicoPrivadoClienteFragment extends Fragment {
             final PreferencePersistence<Usuario> persistence = new PreferencePersistence<>(getContext());
             final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
                     "com.br.jobup.models.usuario.Usuario");
-            mLoaderManager.initLoader(11, null, new LoaderOfertaPrivadaCliente(getContext(), usuarioCorrente.idUsuario));
-        adapter.notifyDataSetChanged();
+
+
         return super.onOptionsItemSelected(item);
     }
 

@@ -14,6 +14,7 @@ import com.br.jobup.services.interfaces.IRejeitarPropostaAPI;
 import com.br.jobup.services.interfaces.IRejeitarServicoAPI;
 import com.br.jobup.services.interfaces.IServicoPrivadoAPI;
 import com.br.jobup.services.interfaces.IServicoPrivadoClienteAPI;
+import com.br.jobup.services.interfaces.IServicoPrivadoClienteAPI2;
 import com.br.jobup.services.interfaces.IServicoPrivadoClienteSemPropostaAPI;
 import com.br.jobup.services.interfaces.IUsuarioSignInAPI;
 import com.br.jobup.services.interfaces.IUsuarioAPI;
@@ -191,5 +192,9 @@ public class RetroFitInicializador<T> {
 
     public IAceitarPropostaAPI createAceitarPropostaAPI(){
         return retrofit.create(IAceitarPropostaAPI.class);
+    }
+
+    public IServicoPrivadoClienteAPI2 createServicoPrivadoAPI2(){
+        return retrofit.create(IServicoPrivadoClienteAPI2.class);
     }
 }
