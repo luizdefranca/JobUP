@@ -24,6 +24,7 @@ import static android.R.attr.value;
 public class RecusaPropostaDialogFragment extends DialogFragment implements
     DialogInterface.OnClickListener {
   private View form=null;
+    public static final String TAG = "LCFR";
 
   @Override
   public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -36,12 +37,17 @@ public class RecusaPropostaDialogFragment extends DialogFragment implements
     return(builder.setTitle("Recusar Proposta").setView(form)
                   .setPositiveButton(android.R.string.ok, this)
                   .setNegativeButton(android.R.string.cancel, null).create());
+
   }
 
   @Override
   public void onClick(DialogInterface dialog, int which) {
 
     EditText name=(EditText)form.findViewById(R.id.editTextJustificativa);
+
+      final Bundle bundle = getArguments();
+      final String idProposta = bundle.getString("RECUSAR_TAG");
+      Log.e(TAG, idProposta );
 
   }
   

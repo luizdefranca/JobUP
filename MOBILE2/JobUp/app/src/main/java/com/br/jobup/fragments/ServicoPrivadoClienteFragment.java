@@ -147,7 +147,7 @@ public class ServicoPrivadoClienteFragment extends Fragment {
 
             Log.e("LCFR -> ", "onLoadFinished: " + ofertas.toString());
             if (ofertas != null) {
-                adapter = new ServicoPrivadoClienteAdapter(context, ofertas);
+                adapter = new ServicoPrivadoClienteAdapter(context, ofertas, getActivity());
                 lstView.setAdapter(adapter);
             }
         }
