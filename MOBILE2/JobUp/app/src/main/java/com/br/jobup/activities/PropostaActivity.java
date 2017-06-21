@@ -1,5 +1,8 @@
 package com.br.jobup.activities;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,59 +23,61 @@ import retrofit2.Response;
 
 public class PropostaActivity extends AppCompatActivity {
 
-    private static final String[] opcoes = {"6(HORAS)", "12(HORAS)", "24(HORAS)", "36(HORAS)", "48(HORAS)",
-            "1(SEMANA)","2(SEMANAS)", "3(SEMANAS)", "Tempo Indeterminado"};
     private static final String TAG = PropostaActivity.class.getSimpleName();
 
-    ArrayAdapter<String> aOpcoes;
-    Spinner mPrazo;
+    private int idProposta;
     private String idServico;
     private String idUsuario;
     private String dtProposta;
     private int duracaoServico;
-    private int valorDuracaoServico;
-    private EditText vlProposta;
+    private EditText mDuracaoServico;
+    private EditText mValorDuracaoServico;
+    private EditText mDsObservacoes;
+    private EditText mVlProposta;
     private EditText mJustificativa;
-    private EditText dsTitulo;
-    private String dsObservacoes;
+    private EditText mTitulo;
     private Button mBtnEnviarProposta;
+    private Button mBtnRejeitarProposta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proposta);
 
-        vlProposta = (EditText) findViewById(R.id.valor_proposta);
+        mVlProposta = (EditText) findViewById(R.id.valor_proposta);
+        mDuracaoServico = (EditText) findViewById(R.id.duracao_servico);
+        mValorDuracaoServico = (EditText) findViewById(R.id.valor_duracao_servico);
+        mDsObservacoes = (EditText) findViewById(R.id.observacoes);
         mJustificativa = (EditText) findViewById(R.id.proposta_justificativa);
-        mBtnEnviarProposta = (Button) findViewById(R.id.enviar_proposta);
-        dsTitulo = (EditText) findViewById(R.id.proposta_titulo);
-        aOpcoes = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, opcoes);
-        mPrazo = (Spinner) findViewById(R.id.spnDuracaoServico);
-        mPrazo.setAdapter(aOpcoes);
+        mTitulo = (EditText) findViewById(R.id.proposta_titulo);
 
+        mBtnRejeitarProposta = (Button) findViewById(R.id.rejeitar_proposta);
+
+        mBtnEnviarProposta = (Button) findViewById(R.id.enviar_proposta);
         mBtnEnviarProposta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String mTitulo = dsTitulo.getText().toString();
-                String mVlProposta = vlProposta.getText().toString();
+                int duracaoServico = (int) ((mDuracaoServico.getText().toString() != "") ? Double.parseDouble(mDuracaoServico.getText().toString()): 0.0);
+                int valorDuracaoServico = (int) ((mValorDuracaoServico.getText().toString() != "") ? Double.parseDouble(mValorDuracaoServico.getText().toString()): 0.0);
+                double vlProposta = (mVlProposta.getText().toString() != "") ? Double.parseDouble(mVlProposta.getText().toString()): 0.0;
                 String justificativa = mJustificativa.getText().toString();
-                int tempoServico = mPrazo.getSelectedItemPosition();
+                String dsTitulo = mTitulo.getText().toString();
+                String dsObservacoes = mDsObservacoes.getText().toString();
 
 
                //TODO Fazer construtor para a classe Proposta conforme abaixo
                 Proposta proposta =
                         new Proposta(
-//                                idUsuario,
-//                                idServico,
-//                                dtProposta,
-//                                duracaoServico,
-//                                mTitulo,
-//                                mVlProposta,
-//                                justificativa,
-//                                tempoServico
-                        );
+                                idServico,
+                                idUsuario,
+                                dtProposta,
+                                duracaoServico,
+                                valorDuracaoServico,
+                                vlProposta,
+                                justificativa,
+                                dsTitulo,
+                                dsObservacoes);
 
                 String idServico = Util.getUUID();
                 proposta.setIdServico(idServico);
@@ -82,6 +87,28 @@ public class PropostaActivity extends AppCompatActivity {
         });
 
     }
+
+
+    public Button mBtnRejeitarProposta() {
+        rejeitarProposta(idProposta);
+        return null;
+    }
+    private void rejeitarProposta(int position) {
+        new AlertDialog.Builder(this)
+                .setTitle("Rejeitar Proposta")
+                .setMessage("Tem certeza que deseja Rejeitar essa Proposta?")
+                .setPositiveButton("sim",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //adapter.notifyDataSetChanged();
+                                //listaDeCursos.remove(position);
+                            }
+                        })
+                .setNegativeButton("não", null)
+                .show();
+    }
+
 
     private void enviaProposta(Proposta proposta) {
         Log.e("LCFR " + TAG, "Entrada no método carregaCatalogoEspecialidade: " );
