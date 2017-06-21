@@ -370,7 +370,7 @@
         </member>
         <member name="P:JOB.WEB.Models.OfertaViewModel.ACEITA">
             <summary>
-            Indica se o profissional aceitou ou recusou a oferta de serviço do cliente
+            Indica se o profissional aceitou ou recusou a oferta de serviço do cliente (se estiver nulo, ainda nao foi respondido)
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ProfissionalViewModel.PERFIL_DESTAQUE">
@@ -410,7 +410,7 @@
         </member>
         <member name="P:JOB.WEB.Models.PropostaViewModel.ACEITA">
             <summary>
-            Indica se o cliente aceitou ou recusou a proposta do profissional
+            Indica se o cliente aceitou ou recusou a proposta do profissional (se estiver nulo, ainda nao foi respondido)
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ServicoViewModel_api.NOME">

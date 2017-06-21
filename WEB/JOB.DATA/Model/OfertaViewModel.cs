@@ -18,7 +18,7 @@ namespace JOB.WEB.Models
         public DateTime DT_OFERTA { get; set; }
 
         /// <summary>
-        /// Indica se o profissional aceitou ou recusou a oferta de serviço do cliente
+        /// Indica se o profissional aceitou ou recusou a oferta de serviço do cliente (se estiver nulo, ainda nao foi respondido)
         /// </summary>
         [Display(Name = "Aceitar?")]
         public bool? ACEITA { get; set; }

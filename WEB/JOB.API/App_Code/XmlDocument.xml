@@ -599,6 +599,19 @@
             <param name="idUsuario">id do usuario</param>
             <returns></returns>
         </member>
+        <member name="T:JOB.API.Controllers.RejeitarPropostaController">
+            <summary>
+            API de rejeicao de propostas feita pelo profissional
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.RejeitarPropostaController.Get(System.Guid,System.Guid)">
+            <summary>
+            Rejeita uma determinada proposta
+            </summary>
+            <param name="id">id do servico</param>
+            <param name="ID_USUARIO">id do profissional dono da proposta</param>
+            <returns></returns>
+        </member>
         <member name="T:JOB.API.Controllers.RejeitarServicoController">
             <summary>
             API de rejeicao de servico
