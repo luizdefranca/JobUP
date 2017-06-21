@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using JOB.DATA.Enum;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using JOB.DATA.Enum;
 
 namespace JOB.DATA.Domain
 {
@@ -14,7 +14,7 @@ namespace JOB.DATA.Domain
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="ID_SERVICO"></param>
         /// <param name="ID_USUARIO">ID DO CLIENTE</param>

@@ -1,8 +1,7 @@
 namespace JOB.DATA.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class servico_plus_dois_3 : DbMigration
     {
         public override void Up()
@@ -12,7 +11,7 @@ namespace JOB.DATA.Migrations
             AddForeignKey("jobup.OFERTA_SERVICO", "ID_USUARIO", "jobup.USUARIO", "ID_USUARIO");
             AddForeignKey("jobup.PROPOSTA_SERVICO", "ID_USUARIO", "jobup.USUARIO", "ID_USUARIO");
         }
-        
+
         public override void Down()
         {
             DropForeignKey("jobup.PROPOSTA_SERVICO", "ID_USUARIO", "jobup.USUARIO");

@@ -76,7 +76,7 @@ namespace JOB.DATA
             modelBuilder.Configurations.Add(new ServicoConfig());
             modelBuilder.Configurations.Add(new OfertaConfig());
             modelBuilder.Configurations.Add(new PropostaConfig());
-            modelBuilder.Configurations.Add(new  HistoricoMoedaConfig());
+            modelBuilder.Configurations.Add(new HistoricoMoedaConfig());
             modelBuilder.Configurations.Add(new ChatConfig());
         }
     }

@@ -1,8 +1,7 @@
 namespace JOB.DATA.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class servico_plus : DbMigration
     {
         public override void Up()
@@ -25,7 +24,7 @@ namespace JOB.DATA.Migrations
             CreateIndex("jobup.PERFIL_SUB_ESPECIALIDADES", new[] { "SUB_ESPECIALIDADE_ID_ESPECIALIDADE", "SUB_ESPECIALIDADE_ID_SUB_ESPECIALIDADE" });
             AddForeignKey("jobup.PERFIL_SUB_ESPECIALIDADES", new[] { "SUB_ESPECIALIDADE_ID_ESPECIALIDADE", "SUB_ESPECIALIDADE_ID_SUB_ESPECIALIDADE" }, "jobup.SUB_ESPECIALIDADE", new[] { "ID_ESPECIALIDADE", "ID_SUB_ESPECIALIDADE" });
         }
-        
+
         public override void Down()
         {
             DropForeignKey("jobup.PERFIL_SUB_ESPECIALIDADES", new[] { "SUB_ESPECIALIDADE_ID_ESPECIALIDADE", "SUB_ESPECIALIDADE_ID_SUB_ESPECIALIDADE" }, "jobup.SUB_ESPECIALIDADE");

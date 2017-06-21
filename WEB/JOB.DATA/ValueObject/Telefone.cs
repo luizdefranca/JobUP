@@ -12,7 +12,6 @@ namespace JOB.DATA.ValueObject
         /// </summary>
         protected Telefone()
         {
-
         }
 
         public Telefone(string nr_telefone)

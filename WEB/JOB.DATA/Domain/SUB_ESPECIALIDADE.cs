@@ -1,6 +1,5 @@
 ﻿using JOB.HELPERS.Validation;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace JOB.DATA.Domain
 {

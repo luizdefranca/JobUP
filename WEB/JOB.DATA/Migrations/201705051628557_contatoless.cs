@@ -1,8 +1,7 @@
 namespace JOB.DATA.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class contatoless : DbMigration
     {
         public override void Up()
@@ -23,34 +22,34 @@ namespace JOB.DATA.Migrations
             DropTable("jobup.CONTATO");
             DropTable("jobup.ENDERECO");
         }
-        
+
         public override void Down()
         {
             CreateTable(
                 "jobup.ENDERECO",
                 c => new
-                    {
-                        ID_USUARIO = c.Guid(nullable: false),
-                        UF = c.Int(nullable: false),
-                        CEP = c.String(nullable: false, maxLength: 8, unicode: false),
-                        LOGRADOURO = c.String(nullable: false, maxLength: 254, unicode: false),
-                        COMPLEMENTO = c.String(maxLength: 254, unicode: false),
-                        BAIRRO = c.String(nullable: false, maxLength: 254, unicode: false),
-                        CIDADE = c.String(nullable: false, maxLength: 254, unicode: false),
-                    })
+                {
+                    ID_USUARIO = c.Guid(nullable: false),
+                    UF = c.Int(nullable: false),
+                    CEP = c.String(nullable: false, maxLength: 8, unicode: false),
+                    LOGRADOURO = c.String(nullable: false, maxLength: 254, unicode: false),
+                    COMPLEMENTO = c.String(maxLength: 254, unicode: false),
+                    BAIRRO = c.String(nullable: false, maxLength: 254, unicode: false),
+                    CIDADE = c.String(nullable: false, maxLength: 254, unicode: false),
+                })
                 .PrimaryKey(t => t.ID_USUARIO);
-            
+
             CreateTable(
                 "jobup.CONTATO",
                 c => new
-                    {
-                        ID_USUARIO = c.Guid(nullable: false),
-                        FIXO = c.String(maxLength: 14, unicode: false),
-                        CELULAR = c.String(maxLength: 14, unicode: false),
-                        EMAIL = c.String(nullable: false, maxLength: 254, unicode: false),
-                    })
+                {
+                    ID_USUARIO = c.Guid(nullable: false),
+                    FIXO = c.String(maxLength: 14, unicode: false),
+                    CELULAR = c.String(maxLength: 14, unicode: false),
+                    EMAIL = c.String(nullable: false, maxLength: 254, unicode: false),
+                })
                 .PrimaryKey(t => t.ID_USUARIO);
-            
+
             DropColumn("jobup.USUARIO", "EMAIL");
             DropColumn("jobup.USUARIO", "CELULAR");
             DropColumn("jobup.USUARIO", "FIXO");

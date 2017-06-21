@@ -12,7 +12,7 @@ namespace JOB.DATA.Domain
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="ID_SERVICO"></param>
         /// <param name="ID_USUARIO">ID DO PROFISSIONAL (EXCLUSIVO SERVIÇO PRIVADO)</param>
