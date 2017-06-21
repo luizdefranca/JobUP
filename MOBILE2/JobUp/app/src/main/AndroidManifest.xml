@@ -72,6 +72,10 @@
         <activity
             android:name=".activities.DetalheServicoActivity"
             android:label="@string/title_activity_confirmacao" />
+        <activity
+            android:name=".activities.AvaliacaoActivity"
+            android:label="Avaliar Profissional"
+            android:parentActivityName=".activities.CatalogoEspecialidadeActivity"/>
         <activity android:name=".activities.ListUsuarioActivity" />
         <activity
             android:name=".activities.CatalogoEspecialidadeActivity"

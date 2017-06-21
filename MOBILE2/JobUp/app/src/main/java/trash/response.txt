@@ -141,3 +141,21 @@
  ║    }
  ║ }
  ╚═══════════════════════════════════════════════════════════════════════════════════════
+ URL: http://jobupapi.azurewebsites.net/api/RejeitarProposta/7ea1bc10-af5d-4ff8-90af-256bf0048de0?ID_USUARIO=11
+ 95470d-51b2-4a52-8ea5-5e3b994321cd
+
+ Method: @GET
+
+ Omitted request body
+═══════════════════════════════════════════════════════════════════════════════════════
+╔══════ Response ═══════════════════════════════════════════════════════════════════════
+║ /api/RejeitarProposta/7ea1bc10-af5d-4ff8-90af-256bf0048de0 - is success : false - Received in: 1052ms
+║
+║ Status Code: 500
+║
+║ Body:
+║ {
+║    "Message": "An error has occurred.",
+║    "ExceptionMessage": "Sequence contains no elements",
+║    "ExceptionType": "System.InvalidOperationException",
+║    "StackTrace": "   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)\r\n   at System.Data

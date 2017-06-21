@@ -29,9 +29,9 @@ public class ParserRejeitarServico {
     public Call<Void> rejeitarServico(){
         Call<Void> servico = null;
 
-            servico =  new RetroFitInicializador()
-                    .createRejeitarServicoAPI()
-                    .rejeitarServico(this.id);
+        servico =  new RetroFitInicializador()
+                .createRejeitarServicoAPI()
+                .rejeitarServico(this.id);
         return servico;
     }
 }

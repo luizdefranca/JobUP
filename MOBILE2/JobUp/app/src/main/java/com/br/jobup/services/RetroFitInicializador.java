@@ -1,6 +1,7 @@
 package com.br.jobup.services;
 
 import com.br.jobup.BuildConfig;
+import com.br.jobup.services.interfaces.IAceitarPropostaAPI;
 import com.br.jobup.services.interfaces.IAprovarAPI;
 import com.br.jobup.services.interfaces.IAvaliacaoAPI;
 import com.br.jobup.services.interfaces.IClienteAPI;
@@ -9,6 +10,7 @@ import com.br.jobup.services.interfaces.IEspecialidadeCatalogoAPI;
 import com.br.jobup.services.interfaces.IOfertaAPI;
 import com.br.jobup.services.interfaces.IPerfilProfissional;
 import com.br.jobup.services.interfaces.IPropostaAPI;
+import com.br.jobup.services.interfaces.IRejeitarPropostaAPI;
 import com.br.jobup.services.interfaces.IRejeitarServicoAPI;
 import com.br.jobup.services.interfaces.IServicoPrivadoAPI;
 import com.br.jobup.services.interfaces.IServicoPrivadoClienteAPI;
@@ -181,5 +183,13 @@ public class RetroFitInicializador<T> {
     }
     public IRejeitarServicoAPI createRejeitarServicoAPI(){
         return retrofit.create(IRejeitarServicoAPI.class);
+    }
+
+    public IRejeitarPropostaAPI createRejeitarPropostaAPI(){
+        return retrofit.create(IRejeitarPropostaAPI.class);
+    }
+
+    public IAceitarPropostaAPI createAceitarPropostaAPI(){
+        return retrofit.create(IAceitarPropostaAPI.class);
     }
 }

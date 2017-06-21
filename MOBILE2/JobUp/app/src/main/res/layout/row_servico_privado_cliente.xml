@@ -14,8 +14,16 @@
     
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
-    android:paddingTop="5dp">
-
+    android:layout_margin="10dp">
+    <TextView
+        android:id="@+id/txt_view_Concluido"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Concluído"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="@android:color/holo_orange_light"
+        android:visibility="visible"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -265,6 +273,7 @@
             android:layout_margin="@dimen/appbar_padding_top"
             android:layout_weight="1"
             android:background="@android:color/holo_red_dark"
+            android:visibility="gone"
             android:text="Recusar" />
 
         <Button
@@ -273,17 +282,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/appbar_padding_top"
             android:layout_weight="1"
+            android:visibility="gone"
             android:background="@android:color/holo_green_dark"
             android:text="Aceitar" />
 
-        <Button
-            android:id="@+id/btn_avaliar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/appbar_padding_top"
-            android:layout_weight="1"
-            android:background="@android:color/holo_blue_dark"
-            android:text="Avaliar" />
+
 
     </LinearLayout>
 

@@ -33,6 +33,7 @@ public interface IPropostaAPI {
             @Query("idUsuario") String idUsuario
     );
 
+
     @GET(PATH)
     Call<Servico> getServicoPorServico(
             @Query("idServico") String idServico

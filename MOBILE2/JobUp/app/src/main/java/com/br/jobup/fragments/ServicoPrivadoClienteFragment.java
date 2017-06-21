@@ -97,7 +97,6 @@ public class ServicoPrivadoClienteFragment extends Fragment {
 
         btnAceitar = (Button) mView.findViewById(R.id.btn_aceitar);
         btnRecusar = (Button) mView.findViewById(R.id.btn_recusar);
-        btnAvaliar = (Button) mView.findViewById(R.id.btn_avaliar);
         final PreferencePersistence<Usuario> persistence = new PreferencePersistence<>(getContext());
         final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
                 "com.br.jobup.models.usuario.Usuario");
@@ -116,6 +115,14 @@ public class ServicoPrivadoClienteFragment extends Fragment {
         return mView;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        final PreferencePersistence<Usuario> persistence = new PreferencePersistence<>(getContext());
+        final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
+                "com.br.jobup.models.usuario.Usuario");
+        mLoaderManager.initLoader(11, null, new LoaderOfertaPrivadaCliente(getContext(), usuarioCorrente.idUsuario));
+    }
 
     /**
      * Created by luizramos on 30/04/17.

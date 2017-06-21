@@ -20,6 +20,7 @@ import com.br.jobup.activities.RecusaPropostaDialogFragment;
 import com.br.jobup.models.servico.Proposta;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
 import com.br.jobup.models.usuario.Avaliacao;
+import com.br.jobup.services.parsers.ParserAceitarProposta;
 import com.br.jobup.services.parsers.ParserRejeitarServico;
 import com.br.jobup.util.Parsers;
 
@@ -52,6 +53,7 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
     private Button btnRecusar;
     private Button btnAvaliar;
     private Activity activity;
+    private TextView concluido;
     public ServicoPrivadoClienteAdapter(Context context, List<ServicoOfertaPrivada> servicoOfertaPrivadasComProposta, Activity activity) {
         this.servicoOfertaPrivadasComProposta = servicoOfertaPrivadasComProposta;
         this.context = context;
@@ -91,17 +93,17 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         TextView txtValorProposta = (TextView) view.findViewById(R.id.text_view_valor_proposta);
         TextView txtDuracaoServico = (TextView) view.findViewById(R.id.text_view_duracao_servico);
         TextView txtJustificativa = (TextView) view.findViewById(R.id.text_view_justificativa);
+        concluido = (TextView) view.findViewById(R.id.txt_view_Concluido);
         btnAceitar = (Button) view.findViewById(R.id.btn_aceitar);
         btnRecusar = (Button) view.findViewById(R.id.btn_recusar);
-        btnAvaliar = (Button) view.findViewById(R.id.btn_avaliar);
 
-        if (getProposta(servico).getAceita()) {
-            btnAceitar.setVisibility(View.GONE);
-            btnRecusar.setVisibility(View.GONE);
-            btnAvaliar.setVisibility(View.VISIBLE);
+        if (!getProposta(servico).getAceita()) {
+            btnAceitar.setVisibility(View.VISIBLE);
+            btnRecusar.setVisibility(View.VISIBLE);
+            concluido.setVisibility(View.GONE);
 //            btnAceitar.setEnabled(false);
-        }else {
-            btnAvaliar.setVisibility(View.GONE);
+        } else {
+            concluido.setVisibility(View.VISIBLE);
         }
 
         txtDesEspecialidade.setText(getDescricaoEspecialidadePorId(servico.getIdEspecialidade()));
@@ -128,11 +130,14 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
             @Override
             public void onClick(final View v) {
 
-                RecusaPropostaDialogFragment recusaFragmentDialog = new RecusaPropostaDialogFragment();
                 Bundle bundle = new Bundle();
-                bundle.putString("ID_PROPOSTA", "id_proposta");
+                bundle.putString("ID_PROPOSTA", servico.getIdServico());
+                bundle.putString("ID_USUARIO", servico.getIdProfissional());
+                RecusaPropostaDialogFragment recusaFragmentDialog = RecusaPropostaDialogFragment.getInstance(bundle, activity);
                 recusaFragmentDialog.setArguments(bundle);
-
+                btnAceitar.setVisibility(View.GONE);
+                btnRecusar.setVisibility(View.GONE);
+                concluido.setVisibility(View.VISIBLE);
                 recusaFragmentDialog.show(activity.getFragmentManager(), "RECUSAR_TAG");
 //                ParserRejeitarServico parser = new ParserRejeitarServico(servico.getIdServico());
 //                parser.rejeitarServico().enqueue(new Callback<Void>() {
@@ -152,6 +157,7 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
 
                 btnAceitar.setVisibility(View.GONE);
                 btnRecusar.setVisibility(View.GONE);
+                concluido.setVisibility(View.VISIBLE);
 
             }
         });
@@ -159,31 +165,31 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
 
         btnAceitar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
+
+                ParserAceitarProposta parser = new ParserAceitarProposta(servico.getIdServico(),
+                        servico.getIdProfissional());
+                parser.rejeitarServico().enqueue(new Callback<Void>() {
+                    @Override
+                    public void onResponse(Call<Void> call, Response<Void> response) {
+                        if(response.isSuccessful()){
+                            Toast.makeText(v.getContext(), "Serviço Cancelado com Sucesso", Toast.LENGTH_SHORT).show();
+
+                        } else {
+                            Toast.makeText(v.getContext(), "Falha ao cancelar o serviço", Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Void> call, Throwable t) {
+                        Toast.makeText(v.getContext(), "Falha no servidor", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
 
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(), R.layout.activity_avaliacao);
-                builder.show();
-//                mostraDialog("Serviço Aceito",
-//                        "O serviço: " + servico.getTitulo() + "foi aceito.", false);
             }
         });
-
-
-        btnAvaliar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(), R.layout.activity_avaliacao);
-                builder.show();
-//                Intent intent = new Intent(v.getContext(), Avaliacao.class);
-//                v.getContext().startActivity(intent);
-
-            }
-        });
-
-
         return view;
     }
 
@@ -250,11 +256,10 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
             public void onClick(DialogInterface dialog, int which) {
                 btnAceitar.setVisibility(View.GONE);
                 btnRecusar.setVisibility(View.GONE);
-                if(ativaBtnAvaliacao){
-                    btnAvaliar.setVisibility(View.VISIBLE);
-                }
             }
         }).show();
     }
+
+
 
 }

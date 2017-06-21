@@ -9,20 +9,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.br.jobup.fragments.ServicoPrivadoClienteSemPropostaFragment"
     android:background="@color/colorPrimaryLight"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    tools:context="com.br.jobup.fragments.ServicoPrivadoClienteSemPropostaFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
-        <ListView
-            android:id="@+id/lstViewOfertaPrivadaClienteComProposta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:elevation="16dp"
-            />
+    <ListView
+        android:id="@+id/lstViewOfertaPrivadaClienteComProposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="16dp"
+        android:padding="8dp" />
 
 </FrameLayout>
