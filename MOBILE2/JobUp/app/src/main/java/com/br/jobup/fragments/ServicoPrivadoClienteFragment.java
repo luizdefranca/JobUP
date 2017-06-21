@@ -116,12 +116,12 @@ public class ServicoPrivadoClienteFragment extends Fragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onResume() {
+        super.onResume();
         final PreferencePersistence<Usuario> persistence = new PreferencePersistence<>(getContext());
         final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
                 "com.br.jobup.models.usuario.Usuario");
-        mLoaderManager.initLoader(11, null, new LoaderOfertaPrivadaCliente(getContext(), usuarioCorrente.idUsuario));
+        mLoaderManager.initLoader(23, null, new LoaderOfertaPrivadaCliente(getContext(), usuarioCorrente.idUsuario));
     }
 
     /**
@@ -137,6 +137,8 @@ public class ServicoPrivadoClienteFragment extends Fragment {
         public LoaderOfertaPrivadaCliente(Context context) {
             this.context = context;
         }
+
+
 
         public LoaderOfertaPrivadaCliente(Context context, String idUsuarioCliente) {
             this.context = context;
@@ -154,7 +156,7 @@ public class ServicoPrivadoClienteFragment extends Fragment {
 
             Log.e("LCFR -> ", "onLoadFinished: " + ofertas.toString());
             if (ofertas != null) {
-                adapter = new ServicoPrivadoClienteAdapter(context, ofertas, getActivity());
+                adapter = new ServicoPrivadoClienteAdapter(context, ofertas, getActivity(), ServicoPrivadoClienteFragment.this);
                 lstView.setAdapter(adapter);
             }
         }
@@ -163,6 +165,13 @@ public class ServicoPrivadoClienteFragment extends Fragment {
         public void onLoaderReset(Loader<List<ServicoOfertaPrivada>> loader) {
 
         }
+
+
     }
+
+    public  void atualizarLista(){
+        adapter.notifyDataSetChanged();
+    }
+
 
 }

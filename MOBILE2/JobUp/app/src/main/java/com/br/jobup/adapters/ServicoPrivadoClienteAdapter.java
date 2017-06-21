@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +16,11 @@ import android.widget.Toast;
 
 import com.br.jobup.R;
 import com.br.jobup.activities.RecusaPropostaDialogFragment;
+import com.br.jobup.fragments.ServicoPrivadoClienteFragment;
 import com.br.jobup.models.servico.Proposta;
 import com.br.jobup.models.servico.ServicoOfertaPrivada;
 import com.br.jobup.models.usuario.Avaliacao;
 import com.br.jobup.services.parsers.ParserAceitarProposta;
-import com.br.jobup.services.parsers.ParserRejeitarServico;
 import com.br.jobup.util.Parsers;
 
 import java.util.HashMap;
@@ -31,8 +30,6 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static java.security.AccessController.getContext;
 
 /*
  * Created by Luiz Carlos Ramos on 6/16/17 7:12 PM
@@ -54,10 +51,13 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
     private Button btnAvaliar;
     private Activity activity;
     private TextView concluido;
-    public ServicoPrivadoClienteAdapter(Context context, List<ServicoOfertaPrivada> servicoOfertaPrivadasComProposta, Activity activity) {
+    final private ServicoPrivadoClienteFragment fragment;
+
+    public ServicoPrivadoClienteAdapter(Context context, List<ServicoOfertaPrivada> servicoOfertaPrivadasComProposta, Activity activity, ServicoPrivadoClienteFragment fragment) {
         this.servicoOfertaPrivadasComProposta = servicoOfertaPrivadasComProposta;
         this.context = context;
         this.activity = activity;
+        this.fragment = fragment;
     }
 
     @Override
@@ -84,7 +84,6 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
                 parent, false);
 
 
-
         TextView txtDesEspecialidade = (TextView) view.findViewById(R.id.text_view_des_especialidade);
         TextView txtTitulo = (TextView) view.findViewById(R.id.text_view_titulo);
         TextView txtObservacao = (TextView) view.findViewById(R.id.text_view_observacao);
@@ -97,7 +96,7 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         btnAceitar = (Button) view.findViewById(R.id.btn_aceitar);
         btnRecusar = (Button) view.findViewById(R.id.btn_recusar);
 
-        if (!getProposta(servico).getAceita()) {
+        if (getProposta(servico).getAceita() == null) {
             btnAceitar.setVisibility(View.VISIBLE);
             btnRecusar.setVisibility(View.VISIBLE);
             concluido.setVisibility(View.GONE);
@@ -120,10 +119,6 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         txtJustificativa.setText(getProposta(servico).getJustificativa());
 
         adicionaDialogo(servico, view);
-
-
-
-
 
 
         btnRecusar.setOnClickListener(new View.OnClickListener() {
@@ -158,6 +153,7 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
                 btnAceitar.setVisibility(View.GONE);
                 btnRecusar.setVisibility(View.GONE);
                 concluido.setVisibility(View.VISIBLE);
+                fragment.atualizarLista();
 
             }
         });
@@ -172,11 +168,11 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
                 parser.rejeitarServico().enqueue(new Callback<Void>() {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
-                        if(response.isSuccessful()){
-                            Toast.makeText(v.getContext(), "Serviço Cancelado com Sucesso", Toast.LENGTH_SHORT).show();
+                        if (response.isSuccessful()) {
+                            Toast.makeText(v.getContext(), "Obrigado por aceitar o servico", Toast.LENGTH_SHORT).show();
 
                         } else {
-                            Toast.makeText(v.getContext(), "Falha ao cancelar o serviço", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(v.getContext(), "Falha ao aceitar o serviço", Toast.LENGTH_SHORT).show();
 
                         }
                     }
@@ -187,8 +183,9 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
                     }
                 });
 
-
+                fragment.atualizarLista();
             }
+
         });
         return view;
     }
@@ -197,28 +194,31 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         final CharSequence[] opcaoAceitaRejeita = {"Aceitar proposta", "Recusar proposta"};
         final CharSequence[] opcaoAvaliar = {"Avaliar profissional"};
         AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-        if(servico.getPropostas().get(0).getAceita()){
-            builder.setItems(opcaoAvaliar, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(view.getContext(), Avaliacao.class);
-                    view.getContext().startActivity(intent);
-                }
-            });
-        } else {
-            builder.setItems(opcaoAceitaRejeita, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int opcao) {
-                    switch (opcao){
-                        case 0:
-
-                            break;
-                        case 1:
-
-                            break;
+        if (servico.getPropostas().get(0).getAceita() != null) {
+            if (servico.getPropostas().get(0).getAceita()) {
+                builder.setItems(opcaoAvaliar, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(view.getContext(), Avaliacao.class);
+                        view.getContext().startActivity(intent);
                     }
-                }
-            });
+                });
+            } else {
+                builder.setItems(opcaoAceitaRejeita, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int opcao) {
+                        switch (opcao) {
+                            case 0:
+
+                                break;
+                            case 1:
+
+                                break;
+                        }
+                    }
+                });
+            }
+
         }
     }
 
@@ -250,7 +250,7 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
         return descricao;
     }
 
-    private void mostraDialog(String title, String descricao, final boolean ativaBtnAvaliacao ){
+    private void mostraDialog(String title, String descricao, final boolean ativaBtnAvaliacao) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
         alertDialogBuilder.setTitle(title).setMessage(descricao).setPositiveButton("Fechar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
@@ -259,7 +259,6 @@ public class ServicoPrivadoClienteAdapter extends BaseAdapter {
             }
         }).show();
     }
-
 
 
 }

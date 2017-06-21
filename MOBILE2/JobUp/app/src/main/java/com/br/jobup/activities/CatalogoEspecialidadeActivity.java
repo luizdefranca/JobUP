@@ -33,6 +33,7 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.HEAD;
 
 /*
  * Created by Luiz Carlos Ramos on 6/7/17 12:01 AM
@@ -156,11 +157,7 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
                                 final Intent intentAvaliacao = new Intent(CatalogoEspecialidadeActivity.this, AvaliacaoActivity.class);
                                 intentAvaliacao.putExtra("ID_PROFISSIONAL", idProfissinal);
-<<<<<<< HEAD
                                 intentAvaliacao.putExtra("ID_ESPECIALIDADE", idCategoria);
-=======
-                                intentAvaliacao.putExtra("ID_ESPECIALIDADE",idCategoria);
->>>>>>> origin/master
                                 startActivity(intentAvaliacao);
 
 

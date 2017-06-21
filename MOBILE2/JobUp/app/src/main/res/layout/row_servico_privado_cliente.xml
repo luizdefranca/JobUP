@@ -11,7 +11,7 @@
     android:background="#ffffff"
     android:orientation="vertical"
     android:layout_marginBottom="32dp"
-    
+    android:elevation="@dimen/activity_horizontal_margin"
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
     android:layout_margin="10dp">
@@ -290,5 +290,10 @@
 
     </LinearLayout>
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="8dp"
+    android:background="@color/colorPrimaryLight"
+    android:layout_margin="0dp"
+    android:padding="0dp"/>
 </LinearLayout>

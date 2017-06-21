@@ -59,6 +59,8 @@ public class TaskOfertaPrivadaClientesSemPropostaGetAll extends AsyncTaskLoader<
             super.deliverResult(data);
         }
     }
+
+
 }
 
 

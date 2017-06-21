@@ -8,8 +8,8 @@
         <option name="gradleHome" value="C:\Program Files\Android\Android Studio\gradle\gradle-2.10" />
         <option name="modules">
           <set>
-            <option value="/Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp" />
-            <option value="/Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/app" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

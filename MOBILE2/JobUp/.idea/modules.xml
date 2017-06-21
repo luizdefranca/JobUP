@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file:///Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/JobUp.iml" filepath="/Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/JobUp.iml" />
       <module fileurl="file://$PROJECT_DIR$/JobUp.iml" filepath="$PROJECT_DIR$/JobUp.iml" />
-      <module fileurl="file:///Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/app/app.iml" filepath="/Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/app/app.iml" />
+      <module fileurl="file:///Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/JobUp.iml" filepath="/Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/JobUp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file:///Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/app/app.iml" filepath="/Volumes/Transcend/Documents/workspace-mobile/JobUP/MOBILE2/JobUp/app/app.iml" />
     </modules>
   </component>
 </project>

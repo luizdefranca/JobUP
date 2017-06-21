@@ -7,18 +7,17 @@ package com.br.jobup.activities;
  * Last modified 17/06/17 22:42
  */
 
-<<<<<<< HEAD
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-=======
+
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.SupportActivity;
->>>>>>> origin/master
+
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +31,7 @@ import com.br.jobup.services.parsers.ParserAvaliarProfissional;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.HEAD;
 
 /**
  * Created by andre on 17/06/2017.
@@ -64,15 +64,11 @@ public class AvaliacaoActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
+
 
                 Avaliacao avaliacao = new Avaliacao();
                 //AQUI
-=======
-                Toast.makeText(AvaliacaoActivity.this,
-                        String.valueOf(ratingbar.getRating()), Toast.LENGTH_SHORT).show();
-                Avaliacao avaliacao = new Avaliacao();
->>>>>>> origin/master
+
                 ParserAvaliarProfissional parser = new ParserAvaliarProfissional(avaliacao);
                 parser.post(avaliacao).enqueue(new Callback<Void>() {
                     @Override
