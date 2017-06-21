@@ -66,6 +66,10 @@
             android:name=".activities.MensagensActivity"
             android:label="@string/title_activity_mensagem" />
         <activity
+            android:name=".activities.AvaliacaoActivity"
+            android:label="Avaliar Profissional"
+            android:parentActivityName=".activities.CatalogoEspecialidadeActivity"/>
+        <activity
             android:name=".activities.OfertarServicoActivity"
             android:label="Contratar Serviço"
             android:parentActivityName=".activities.CatalogoEspecialidadeActivity" />
