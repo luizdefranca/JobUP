@@ -10,24 +10,24 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de rejeição da oferta de serviço (visão profissional)
+    /// API de rejeição de propostas (visão cliente)
     /// </summary>
-    public class RejeitarServicoController : ApiController
+    public class RejeitarPropostaController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
         /// <summary>
-        /// Profissional rejeita a oferta de serviço oferecida pelo cliente
+        /// Cliente rejeita a proposta oferecida pelo profissional
         /// </summary>
-        /// <param name="id">id do servico</param>
-        /// <param name="JUSTIFICATIVA">justificativa da rejeiçao</param>
+        /// <param name="id">id do serviço</param>
+        /// <param name="ID_USUARIO">id do profissional (dono da proposta)</param>
         /// <returns></returns>
         [ResponseType(typeof(HttpStatusCode))]
-        public HttpResponseMessage Get(Guid id, string JUSTIFICATIVA)
+        public HttpResponseMessage Get(Guid id, Guid ID_USUARIO)
         {
-            var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
+            var domain = ctx.Proposta.First(f => f.ID_SERVICO == id & f.ID_USUARIO == ID_USUARIO);
 
-            domain.RejeitarOferta(JUSTIFICATIVA);
+            domain.RejeitarProposta();
             ctx.Entry(domain).State = EntityState.Modified;
             ctx.SaveChanges();
 

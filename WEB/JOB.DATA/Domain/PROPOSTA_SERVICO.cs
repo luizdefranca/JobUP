@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using JOB.DATA.Enum;
+using Newtonsoft.Json;
 using System;
-using JOB.DATA.Enum;
 
 namespace JOB.DATA.Domain
 {
@@ -13,7 +13,7 @@ namespace JOB.DATA.Domain
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="ID_SERVICO"></param>
         /// <param name="ID_USUARIO">ID DO PROFISSIONAL</param>
@@ -40,6 +40,11 @@ namespace JOB.DATA.Domain
             this.ACEITA = true;
         }
 
+        public void RejeitarProposta()
+        {
+            this.ACEITA = false;
+        }
+
         private void InicializaVariaveis()
         {
             //this.OFERTAS = new HashSet<OFERTA_SERVICO>();
@@ -53,7 +58,7 @@ namespace JOB.DATA.Domain
         public int VALOR_DURACAO_SERVICO { get; set; }
         public double VL_PROPOSTA { get; set; }
         public string JUSTIFICATIVA { get; set; }
-        public bool ACEITA { get; set; }
+        public bool? ACEITA { get; set; }
 
         public SERVICO SERVICO { get; set; }
         public USUARIO USUARIO { get; set; }

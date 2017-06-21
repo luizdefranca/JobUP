@@ -43,12 +43,12 @@
                         @Html.DisplayFor(modelItem => item.JUSTIFICATIVA)
                     </td>
                     <td class="text-center">
-                        @Html.DisplayFor(modelItem => item.ACEITA)
+                        @Html.DisplayFor(modelItem => item.ACEITA.Value)
                     </td>
                     <td class="text-center">
-                        @if (Model.Any(f => f.ACEITA))
+                        @if (Model.Any(f => f.ACEITA.HasValue && f.ACEITA.Value))
                         {
-                            if (item.ACEITA)
+                            if (item.ACEITA.HasValue && item.ACEITA.Value)
                             {
                                 @Html.ActionLink(" ", "FinalizarNegociacao", new { ID_SERVICO = item.ID_SERVICO }, new { @class = "btn btn-sm btn-primary fa fa-handshake-o", @title = "Finalizar Negociação" })
                             }

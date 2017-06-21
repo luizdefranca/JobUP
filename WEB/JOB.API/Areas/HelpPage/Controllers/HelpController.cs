@@ -1,8 +1,8 @@
+using JOB.API.Areas.HelpPage.ModelDescriptions;
+using JOB.API.Areas.HelpPage.Models;
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using JOB.API.Areas.HelpPage.ModelDescriptions;
-using JOB.API.Areas.HelpPage.Models;
 
 namespace JOB.API.Areas.HelpPage.Controllers
 {

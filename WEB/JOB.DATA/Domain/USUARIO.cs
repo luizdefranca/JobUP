@@ -1,10 +1,10 @@
 ﻿using AgendaCirurgicaBeta.Domain.Core;
 using JOB.DATA.Enum;
 using JOB.DATA.ValueObject;
+using JOB.HELPERS.Validation;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using JOB.HELPERS.Validation;
 
 namespace JOB.DATA.Domain
 {

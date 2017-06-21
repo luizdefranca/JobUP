@@ -17,7 +17,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Proposta"
-                android:layout_marginTop="16dp"
                 android:textSize="20dp" />
 
             <TextView
@@ -35,27 +34,38 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data"
-                android:inputType="date"/>
+                android:text="Duração do Serviço" />
 
             <EditText
-                android:id="@+id/dataProposta"
+                android:id="@+id/duracao_servico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
-                android:inputType="text" />
+                android:inputType="numberDecimal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor da Duraçao do Serviço" />
+
+            <EditText
+                android:id="@+id/valor_duracao_servico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Duração do Serviço" />
+                android:text="Obsrvaçoes"
+                android:inputType="date"/>
 
-            <Spinner
-                android:id="@+id/spnDuracaoServico"
+            <EditText
+                android:id="@+id/observacoes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:imeOptions="actionDone" />
+                android:imeOptions="actionNext"
+                android:inputType="text" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -90,10 +100,10 @@
                 android:text="Enviar Proposta"
                 android:layout_height="wrap_content"/>
             <Button
-                android:layout_marginTop="5dp"
-                android:id="@+id/contratacao_servico_recusar"
+                android:layout_marginTop="2dp"
+                android:id="@+id/rejeitar_proposta"
                 android:layout_width="match_parent"
-                android:text="Recusar Proposta"
+                android:text="Rejeitar Proposta"
                 android:textColor="#ffffff"
                 android:background="#d61e1e"
                 android:layout_height="wrap_content"/>

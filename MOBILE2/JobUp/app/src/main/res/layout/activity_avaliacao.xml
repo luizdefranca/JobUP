@@ -19,24 +19,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textViewServico"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingLeft="150dp"
-            android:text="Serviço"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textStyle="bold" />
-        <TextView
-            android:id="@+id/textViewServicoDescricao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:paddingLeft="110dp"
-            android:text="Descrição do serviço"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-             />
+
 
         <TextView
             android:id="@+id/textViewComentario"

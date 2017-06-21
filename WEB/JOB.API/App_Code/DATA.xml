@@ -1,0 +1,472 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JOB.DATA</name>
+    </assembly>
+    <members>
+        <member name="M:JOB.DATA.Domain.AVALIACAO.#ctor">
+            <summary>
+            ENTITY
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.Domain.HISTORICO_MOEDA.#ctor">
+            <summary>
+            ENTITY
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.Domain.CHAT.#ctor">
+            <summary>
+            ENTITY
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.Domain.SUB_ESPECIALIDADE.#ctor">
+            <summary>
+            ENTITY
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.Domain.ESPECIALIDADE.#ctor">
+            <summary>
+            ENTITY
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.Domain.FORMACAO.#ctor">
+            <summary>
+            ENTITY
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.Domain.OFERTA_SERVICO.#ctor(System.Guid,System.Guid)">
+             <summary>
+            
+             </summary>
+             <param name="ID_SERVICO"></param>
+             <param name="ID_USUARIO">ID DO PROFISSIONAL (EXCLUSIVO SERVIÇO PRIVADO)</param>
+        </member>
+        <member name="M:JOB.DATA.Domain.PERFIL_PROFISSIONAL.#ctor">
+            <summary>
+            ENTITY
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.Domain.PROPOSTA_SERVICO.#ctor(System.Guid,System.Guid,System.Double,System.String,JOB.DATA.Enum.EnumDuracaoServico,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="ID_SERVICO"></param>
+             <param name="ID_USUARIO">ID DO PROFISSIONAL</param>
+             <param name="VL_PROPOSTA"></param>
+             <param name="JUSTIFICATIVA"></param>
+             <param name="DURACAO_SERVICO"></param>
+             <param name="VALOR_DURACAO_SERVICO"></param>
+        </member>
+        <member name="M:JOB.DATA.Domain.SERVICO.#ctor(System.Guid,System.Guid,System.Int32,System.Nullable{System.Int32},System.Boolean,System.String,System.String,System.Nullable{System.Double},JOB.DATA.Enum.EnumTempoServico)">
+             <summary>
+            
+             </summary>
+             <param name="ID_SERVICO"></param>
+             <param name="ID_USUARIO">ID DO CLIENTE</param>
+             <param name="ID_ESPECIALIDADE"></param>
+             <param name="ID_SUB_ESPECIALIDADE"></param>
+             <param name="PUBLICO"></param>
+             <param name="DS_TITULO"></param>
+             <param name="DS_OBSERVACOES"></param>
+             <param name="VL_SUGERIDO"></param>
+             <param name="TEMPO_SERVICO"></param>
+        </member>
+        <member name="M:JOB.DATA.Domain.USUARIO.#ctor">
+            <summary>
+            ENTITY
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumDuracaoServico.HORA">
+            <summary>
+            Duracao do servico estimada em horas
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumDuracaoServico.DIA">
+            <summary>
+            Duracao do servico estimada em dias
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumDuracaoServico.SEMANA">
+            <summary>
+            Duracao do servico estimada em semanas
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumDuracaoServico.MES">
+            <summary>
+            Duracao do servico estimada em meses
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumEstadoCivil.CASADO">
+            <summary>
+            Estado civil de casado
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumEstadoCivil.SOLTEIRO">
+            <summary>
+            Estado civil de solteiro
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumEstadoCivil.OUTRO">
+            <summary>
+            Estado civil nao especificado
+            </summary>
+        </member>
+        <member name="T:JOB.DATA.Enum.EnumSexo">
+            <summary>
+            TABELA TUSS - 43
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumSexo.MASCULINO">
+            <summary>
+            Masculino
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumSexo.FEMININO">
+            <summary>
+            Feminino
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumTempoServico.QUANTO_ANTES">
+            <summary>
+            O quanto antes possível
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumTempoServico.TRINTA_DIAS">
+            <summary>
+            Nos próximos 30 dias
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumTempoServico.TRES_MESES">
+            <summary>
+            Nos próximos 3 meses
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumTempoServico.NAO_SEI">
+            <summary>
+            Não tenho certeza
+            </summary>
+        </member>
+        <member name="T:JOB.DATA.Enum.EnumUF">
+            <summary>
+            TABELA TUSS - 59
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.AC">
+            <summary>
+            Acre
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.AL">
+            <summary>
+            Alagoas
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.AP">
+            <summary>
+            Amapá
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.AM">
+            <summary>
+            Amazonas
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.BA">
+            <summary>
+            Bahia
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.CE">
+            <summary>
+            Ceará
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.DF">
+            <summary>
+            Distrito Federal
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.ES">
+            <summary>
+            Espírito Santo
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.GO">
+            <summary>
+            Goiás
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.MA">
+            <summary>
+            Maranhão
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.MT">
+            <summary>
+            Mato Grosso
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.MS">
+            <summary>
+            Mato Grosso do Sul
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.MG">
+            <summary>
+            Minas Gerais
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.PR">
+            <summary>
+            Paraná
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.PB">
+            <summary>
+            Paraíba
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.PA">
+            <summary>
+            Pará
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.PE">
+            <summary>
+            Pernambuco
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.PI">
+            <summary>
+            Piauí
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.RJ">
+            <summary>
+            Rio de Janeiro
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.RN">
+            <summary>
+            Rio Grande do Norte
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.RS">
+            <summary>
+            Rio Grande do Sul
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.RO">
+            <summary>
+            Rondônia
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.RR">
+            <summary>
+            Roraima
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.SC">
+            <summary>
+            Santa Catarina
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.SE">
+            <summary>
+            Sergipe
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.SP">
+            <summary>
+            São Paulo
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.TO">
+            <summary>
+            Tocantins
+            </summary>
+        </member>
+        <member name="F:JOB.DATA.Enum.EnumUF.EX">
+            <summary>
+            Países Estrangeiros
+            </summary>
+        </member>
+        <member name="P:JOB.DATA.ValueObject.CPF.NR">
+            <summary>
+            valor alfanumérico de 14 digitos
+            <para>se for uma incrição com menos digitos, então estará preenchido com zeros a esquerda</para>
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.ValueObject.CPF.#ctor">
+            <summary>
+            usado pelo entity framework
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.ValueObject.CPF.#ctor(System.String)">
+            <summary>
+            CNPJ (XX.XXX.XXX/YYYY-ZZ) = Cadastro Nacional de Pessoas Jurídicas - Brasil
+            </summary>
+            <param name="NR"></param>
+        </member>
+        <member name="M:JOB.DATA.ValueObject.Email.#ctor">
+            <summary>
+            usado pelo entity framework
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.ValueObject.RG.#ctor">
+            <summary>
+            usado pelo entity framework
+            </summary>
+        </member>
+        <member name="M:JOB.DATA.ValueObject.Telefone.#ctor">
+            <summary>
+            usado pelo entity framework
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.AvaliacaoViewModel.DT_ULT_AVALIACAO">
+            <summary>
+            Data da ultima avaliação realizada por um determinado cliente
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.AvaliacaoViewModel.NOTA">
+            <summary>
+            Última nota recebida como avaliação de um determinado cliente
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.AvaliacaoViewModel.COMENTARIO">
+            <summary>
+            Último comentário recebido como avaliação de um determinado cliente
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.EspecialidadeViewModel.EXIGIR_COMPROVACAO">
+            <summary>
+            Especialidade exige comprovante por parte do profissional?
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.EspecialidadeViewModel.IMAGEM">
+            <summary>
+            Ícone para ser exibido no sistema
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.EspecialidadeViewModel.QTD_PROFISSIONAIS">
+            <summary>
+            Quantidade de profissionais cadastrados para esta especialidade
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.HistoricoMoedaVM.VALOR_MOVIMENTADO">
+            <summary>
+            Valor de moedas que foi movimentado
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.HistoricoMoedaVM.MOTIVO">
+            <summary>
+            Motivo da movimentação
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.OfertaViewModel.DT_OFERTA">
+            <summary>
+            Data de cadastro do serviço
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.OfertaViewModel.ACEITA">
+            <summary>
+            Indica se o profissional aceitou ou recusou a oferta de serviço do cliente (se estiver nulo, ainda não foi respondido)
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ProfissionalViewModel.PERFIL_DESTAQUE">
+            <summary>
+            Destaque de perfil ativado
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ProfissionalViewModel.MEDIA_AVALIACOES_FEITAS">
+            <summary>
+            Média de todas as avalições recebidas pelo profissional neste perfil
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ProfissionalViewModel.QTD_PROPOSTAS_ACEITAS">
+            <summary>
+            Total de propostas aceitas por este profissional neste perfil
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ProfissionalViewModel.DT_ORDENACAO">
+            <summary>
+            Data de priorização padrão na lista de perfis (mais novos primeiro ou quem pagou para ter destaque)
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ProfissionalViewModel.OUTROS_PERFIS">
+            <summary>
+            Outros perfis cadastrados para este profissional
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ProfissionalViewModel.AVALIACOES">
+            <summary>
+            Avaliações feitas para este perfil profissional
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ProfissionalViewModel.SERVICOS">
+            <summary>
+            serviços dos quais o profissional fez uma proposta
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.PropostaViewModel.ACEITA">
+            <summary>
+            Indica se o cliente aceitou ou recusou a proposta do profissional (se estiver nulo, ainda não foi respondido)
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ServicoViewModel_api.NOME">
+            <summary>
+            Nome do Profissional
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ServicoViewModel_api.TEMPO_SERVICO">
+            <summary>
+            Expectativa de Prazo
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ServicoViewModel_api.TEMPO_SERVICO_DESC">
+            <summary>
+            Expectativa de Prazo
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ServicoViewModel_api.PROPOSTAS">
+            <summary>
+            Propostas recebidas do profissional (serviço privado) ou dos profissionais (serviço publico)
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.ServicoViewModel_api.OFERTAS">
+            <summary>
+            Oferta oferecida para um determinado profissional (apenas em servicos privados)
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.UsuarioViewModel_VW.APROVADO">
+            <summary>
+            Indica se o cadastro do usuário foi aprovado pelo administrador
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.UsuarioViewModel_VW.ATIVO">
+            <summary>
+            Indica se o cadastro do usuário esta ativo
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.UsuarioViewModel.APROVADO">
+            <summary>
+            Indica se o cadastro do usuário foi aprovado pelo administrador
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.UsuarioViewModel.ATIVO">
+            <summary>
+            Indica se o cadastro do usuário esta ativo
+            </summary>
+        </member>
+        <member name="P:JOB.WEB.Models.UsuarioViewModel.PERFIL_DESTAQUE">
+            <summary>
+            Destaque de perfil ativado
+            </summary>
+        </member>
+        <member name="T:AgendaCirurgicaBeta.Domain.Core.EntityBase">
+            <summary>
+            classe base para todas as entities
+            </summary>
+        </member>
+    </members>
+</doc>

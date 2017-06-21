@@ -13,14 +13,14 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de usuarios
+    /// API de usuários
     /// </summary>
     public class UsuarioController : ApiController
     {
         private Contexto ctx = new Contexto();
 
         /// <summary>
-        /// recupera todos os usuarios
+        /// recupera todos os usuários
         /// </summary>
         /// <returns></returns>
         [ResponseType(typeof(List<USUARIO>))]
@@ -32,9 +32,9 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// recupera um determinado usuario
+        /// recupera um determinado usuário
         /// </summary>
-        /// <param name="id">id do usuario</param>
+        /// <param name="id">id do usuário</param>
         /// <returns></returns>
         [ResponseType(typeof(USUARIO))]
         public HttpResponseMessage Get(Guid id)
@@ -71,9 +71,9 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// atualiza um determinado usuario
+        /// atualiza um determinado usuário
         /// </summary>
-        /// <param name="id">id do usuario</param>
+        /// <param name="id">id do usuário</param>
         /// <param name="obj"></param>
         /// <returns></returns>
         [ResponseType(typeof(HttpStatusCode))]
@@ -101,9 +101,9 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// deleta um determinado usuario
+        /// deleta um determinado usuário
         /// </summary>
-        /// <param name="id">id do usuario</param>
+        /// <param name="id">id do usuário</param>
         public void Delete(Guid id)
         {
             try

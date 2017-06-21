@@ -11,9 +11,15 @@ namespace JOB.WEB.Models
         [Key]
         public Guid ID_USUARIO { get; set; }
 
+        /// <summary>
+        /// Data de cadastro do serviço
+        /// </summary>
         [Display(Name = "Data Oferta")]
         public DateTime DT_OFERTA { get; set; }
 
+        /// <summary>
+        /// Indica se o profissional aceitou ou recusou a oferta de serviço do cliente (se estiver nulo, ainda não foi respondido)
+        /// </summary>
         [Display(Name = "Aceitar?")]
         public bool? ACEITA { get; set; }
 

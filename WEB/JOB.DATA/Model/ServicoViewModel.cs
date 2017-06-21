@@ -14,6 +14,9 @@ namespace JOB.WEB.Models
         public Guid ID_USUARIO { get; set; }
         public Guid ID_PROFISSIONAL { get; set; }
 
+        /// <summary>
+        /// Nome do Profissional
+        /// </summary>
         public string NOME { get; set; }
 
         public int ID_ESPECIALIDADE { get; set; }
@@ -41,14 +44,27 @@ namespace JOB.WEB.Models
         [Display(Name = "Valor Sugerido")]
         public double? VL_SUGERIDO { get; set; }
 
+        /// <summary>
+        /// Expectativa de Prazo
+        /// </summary>
         [Required]
         [Display(Name = "Expectativa de Prazo")]
         public EnumTempoServico TEMPO_SERVICO { get; set; }
 
+        /// <summary>
+        /// Expectativa de Prazo
+        /// </summary>
         [Display(Name = "Expectativa de Prazo")]
         public string TEMPO_SERVICO_DESC { get; set; }
 
+        /// <summary>
+        /// Propostas recebidas do profissional (serviço privado) ou dos profissionais (serviço publico)
+        /// </summary>
         public List<PropostaViewModel> PROPOSTAS { get; set; }
+
+        /// <summary>
+        /// Oferta oferecida para um determinado profissional (apenas em servicos privados)
+        /// </summary>
         public List<OfertaViewModel> OFERTAS { get; set; }
     }
 

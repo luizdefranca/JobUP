@@ -12,7 +12,7 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API das ofertas de servicos
+    /// API das ofertas de serviços
     /// </summary>
     public class OfertaController : ApiController
     {
@@ -21,7 +21,7 @@ namespace JOB.API.Controllers
         /// <summary>
         /// Lista as ofertas de um determinado profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <returns></returns>
         [ResponseType(typeof(List<OfertaViewModel>))]
         public HttpResponseMessage Get(Guid idUsuario)

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace JOB.WEB.Models
 {
@@ -17,12 +14,21 @@ namespace JOB.WEB.Models
         [Key]
         public Guid ID_CLIENTE { get; set; }
 
+        /// <summary>
+        /// Data da ultima avaliação realizada por um determinado cliente
+        /// </summary>
         [Display(Name = "Data da Avaliação")]
         public DateTime DT_ULT_AVALIACAO { get; set; }
 
+        /// <summary>
+        /// Última nota recebida como avaliação de um determinado cliente
+        /// </summary>
         [Display(Name = "Nota")]
         public Int16 NOTA { get; set; }
 
+        /// <summary>
+        /// Último comentário recebido como avaliação de um determinado cliente
+        /// </summary>
         [DataType(DataType.MultilineText)]
         [Display(Name = "Comentário")]
         public string COMENTARIO { get; set; }

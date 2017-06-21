@@ -1,8 +1,7 @@
 namespace JOB.DATA.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class idsemmudar : DbMigration
     {
         public override void Up()
@@ -17,7 +16,7 @@ namespace JOB.DATA.Migrations
             AddForeignKey("jobup.ENDERECO", "ID_USUARIO", "jobup.USUARIO", "ID_USUARIO", cascadeDelete: true);
             AddForeignKey("jobup.PERFIL_PROFISSIONAL", "ID_USUARIO", "jobup.USUARIO", "ID_USUARIO", cascadeDelete: true);
         }
-        
+
         public override void Down()
         {
             DropForeignKey("jobup.PERFIL_PROFISSIONAL", "ID_USUARIO", "jobup.USUARIO");

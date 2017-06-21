@@ -316,7 +316,7 @@
         </member>
         <member name="M:JOB.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
             <summary>
-            Gets the sample object that will be serialized by the formatters. 
+            Gets the sample object that will be serialized by the formatters.
             First, it will look at the <see cref="P:JOB.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
             one using <see cref="M:JOB.API.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(JOB.API.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:JOB.API.Areas.HelpPage.ObjectGenerator"/>) and other
             factories in <see cref="P:JOB.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
@@ -483,62 +483,62 @@
         </member>
         <member name="T:JOB.API.Controllers.AprovacaoUsuarioController">
             <summary>
-            API de aprovacao de usuario
+            API de aprovação de usuário (cliente ou profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.AprovacaoUsuarioController.Get(System.Guid)">
             <summary>
-            Aprova um determinado usuario
+            Aprova um determinado usuário
             </summary>
-            <param name="id">id do usuario</param>
+            <param name="id">id do usuário</param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.DesativarController">
             <summary>
-            API de desativar usuario
+            API de desativar usuário
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.DesativarController.Get(System.Guid)">
             <summary>
-            Desativa um determinado usuario
+            Desativa um determinado usuário
             </summary>
-            <param name="id">id do usuario</param>
+            <param name="id">id do usuário</param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.AvaliacaoController">
             <summary>
-            API de avaliacao de profissionais
+            API de avaliação de profissionais
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Get(System.Guid,System.Int32)">
             <summary>
-            Recupera todas as formacoes do usuario profissional
+            Recupera todas as formações do usuário profissional
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Get(System.Guid,System.Int32,System.Guid)">
             <summary>
-            Recupera todas as avaliacoes do usuario, por especialidade e enviadas por um determinado cliente
+            Recupera todas as avaliações do usuário, por especialidade e enviadas por um determinado cliente
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
             <param name="idCliente">id do cliente</param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Post(JOB.DATA.Domain.AVALIACAO)">
             <summary>
-            Salva uma nova avaliacao
+            Salva uma nova avaliação
             </summary>
             <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.AvaliacaoController.Put(System.Guid,System.Int32,System.Guid,JOB.DATA.Domain.AVALIACAO)">
             <summary>
-            Atualiza a avaliacao (nota e comentario)
+            Atualiza a avaliação (nota e comentário)
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
             <param name="idCliente">id do cliente</param>
             <param name="obj"></param>
@@ -570,88 +570,115 @@
         </member>
         <member name="T:JOB.API.Controllers.PropostaController">
             <summary>
-            API de propostas de servicos (resposta do profissional a uma oferta de servico)
+            API de propostas de serviços (resposta do profissional a uma oferta de serviço)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.PropostaController.Get(System.Guid)">
             <summary>
-            recupera todas as propostas de um determinado usuario profissional
+            recupera todas as propostas de um determinado usuário profissional
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.PropostaController.Post(JOB.DATA.Domain.PROPOSTA_SERVICO)">
             <summary>
-            Profissional aceita uma oferta de servico e gera uma proposta
+            Profissional aceita a oferta de serviço oferecida pelo cliente e gera uma proposta
             </summary>
             <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.OfertaController">
             <summary>
-            API das ofertas de servicos
+            API das ofertas de serviços
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.OfertaController.Get(System.Guid)">
             <summary>
             Lista as ofertas de um determinado profissional
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
+            <returns></returns>
+        </member>
+        <member name="T:JOB.API.Controllers.AceitarPropostaController">
+            <summary>
+            API de aceitação de propostas (visão cliente)
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.AceitarPropostaController.Get(System.Guid,System.Guid)">
+            <summary>
+            Cliente aceita a proposta oferecida pelo profissional
+            </summary>
+            <param name="id">id do servico</param>
+            <param name="ID_USUARIO">id do profissional (dono da proposta)</param>
+            <returns></returns>
+        </member>
+        <member name="T:JOB.API.Controllers.RejeitarPropostaController">
+            <summary>
+            API de rejeição de propostas (visão cliente)
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.RejeitarPropostaController.Get(System.Guid,System.Guid)">
+            <summary>
+            Cliente rejeita a proposta oferecida pelo profissional
+            </summary>
+            <param name="id">id do serviço</param>
+            <param name="ID_USUARIO">id do profissional (dono da proposta)</param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.RejeitarServicoController">
             <summary>
-            API de rejeicao de servico
+            API de rejeição da oferta de serviço (visão profissional)
             </summary>
         </member>
-        <member name="M:JOB.API.Controllers.RejeitarServicoController.Get(System.Guid)">
+        <member name="M:JOB.API.Controllers.RejeitarServicoController.Get(System.Guid,System.String)">
             <summary>
-            Rejeita um determinado servico
+            Profissional rejeita a oferta de serviço oferecida pelo cliente
             </summary>
             <param name="id">id do servico</param>
+            <param name="JUSTIFICATIVA">justificativa da rejeiçao</param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.ServicoPrivadoClienteSemPropostaController">
             <summary>
-            API de servico privado (feito exclusivamente para um determinado profissional)
+            API de serviço privado (feito exclusivamente para um determinado profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoClienteSemPropostaController.Get(System.Guid)">
             <summary>
-            recupera todos os servicos privados que nao possuem propostas de um determinado usuario cliente
+            recupera todos os serviços privados que não possuem propostas de um determinado usuário cliente
             </summary>
-            <param name="idUsuarioCliente">id do usuario cliente</param>
+            <param name="idUsuarioCliente">id do usuário cliente</param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.ServicoPrivadoClienteController">
             <summary>
-            API de servico privado (feito exclusivamente para um determinado profissional)
+            API de serviço privado (feito exclusivamente para um determinado profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoClienteController.Get(System.Guid)">
             <summary>
-            recupera todos os servicos privados que possuem propostas de um determinado usuario cliente (juntamente com as propostas)
+            recupera todos os serviços privados que possuem propostas de um determinado usuário cliente (juntamente com as propostas)
             </summary>
-            <param name="idUsuarioCliente">id do usuario cliente</param>
+            <param name="idUsuarioCliente">id do usuário cliente</param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.ServicoPrivadoController">
             <summary>
-            API de servico privado (feito exclusivamente para um determinado profissional)
+            API de serviço privado (feito exclusivamente para um determinado profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoController.Get(System.Guid)">
             <summary>
-            recupera todos os servicos privados que possuem propostas de um determinado usuario profissional
+            recupera todos os serviços privados que possuem propostas de um determinado usuário profissional
             </summary>
-            <param name="idUsuarioProfissional">id do usuario profissional</param>
+            <param name="idUsuarioProfissional">id do usuário profissional</param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPrivadoController.Post(JOB.WEB.Models.ServicoViewModel_api)">
             <summary>
-            insere um novo servico privado (direcionado diretamente para um profissional)
+            insere um novo serviço privado (direcionado diretamente para um profissional)
             </summary>
-            <param name="obj">classe ServicoViewModel_api</param>
+            <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.SubEspecialidadeController">
@@ -676,50 +703,50 @@
         </member>
         <member name="T:JOB.API.Controllers.FormacaoController">
             <summary>
-            API das formacoes dos profisionais
+            API das formações dos profisionais
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Get(System.Guid,System.Int32)">
             <summary>
-            Lista as formacoes de um usuario e uma determinada especialidade
+            Lista as formações de um usuário e uma determinada especialidade
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Get(System.Guid,System.Int32,System.Int32)">
             <summary>
-            Recupera uma formacao especifica de um perfil profissional
+            Recupera uma formação específica de um perfil profissional
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
-            <param name="idFormacao">id da formacao</param>
+            <param name="idFormacao">id da formação</param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Post(JOB.DATA.Domain.FORMACAO)">
             <summary>
-            Salva uma nova formacao
+            Salva uma nova formação
             </summary>
             <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Put(System.Guid,System.Int32,System.Int32,JOB.DATA.Domain.FORMACAO)">
             <summary>
-            Atualiza uma formacao
+            Atualiza uma formação
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
-            <param name="idFormacao">id da formacao</param>
+            <param name="idFormacao">id da formação</param>
             <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.FormacaoController.Delete(System.Guid,System.Int32,System.Int32)">
             <summary>
-            Deleta uma formacao
+            Deleta uma formação
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
-            <param name="idFormacao">id da formacao</param>
+            <param name="idFormacao">id da formação</param>
         </member>
         <member name="T:JOB.API.Controllers.PerfilProfissionalController">
             <summary>
@@ -744,9 +771,9 @@
             <summary>
             Recupera dados de um determinado perfil profissional
             </summary>
-            <param name="idUsuario">id do usuario profissional</param>
+            <param name="idUsuario">id do usuário profissional</param>
             <param name="idEspecialidade">id da especialidade</param>
-            <returns>retorna a classe PERFIL_PROFISSIONAL</returns>
+            <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.PerfilProfissionalController.Post(JOB.DATA.Domain.PERFIL_PROFISSIONAL)">
             <summary>
@@ -759,7 +786,7 @@
             <summary>
             atualiza um perfil profissional
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
             <param name="obj"></param>
             <returns></returns>
@@ -768,7 +795,7 @@
             <summary>
             deleta um perfil profissional
             </summary>
-            <param name="idUsuario">id do usuario</param>
+            <param name="idUsuario">id do usuário</param>
             <param name="idEspecialidade">id da especialidade</param>
         </member>
         <member name="T:JOB.API.Controllers.EspecialidadeController">
@@ -812,38 +839,38 @@
         </member>
         <member name="T:JOB.API.Controllers.ServicoPublicoController">
             <summary>
-            API se servicos publicos (direcionados para todos os profissionais cadastrados no site que tenha a especialidade selecionada)
+            API se serviços publicos (direcionados para todos os profissionais cadastrados no site que tenha a especialidade selecionada)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPublicoController.Get">
             <summary>
-            recupera todos os servios publicos
+            recupera todos os serviços públicos
             </summary>
-            <returns>retorna uma lista da classe ServicoViewModel_api</returns>
+            <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.ServicoPublicoController.Post(JOB.WEB.Models.ServicoViewModel_api)">
             <summary>
-            insere um novo servico public (remove 100 moedas do usuario)
+            insere um novo serviço publico (remove 100 moedas do usuario)
             </summary>
-            <param name="obj">classe ServicoViewModel_api</param>
+            <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.UsuarioController">
             <summary>
-            API de usuarios
+            API de usuários
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.UsuarioController.Get">
             <summary>
-            recupera todos os usuarios
+            recupera todos os usuários
             </summary>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.UsuarioController.Get(System.Guid)">
             <summary>
-            recupera um determinado usuario
+            recupera um determinado usuário
             </summary>
-            <param name="id">id do usuario</param>
+            <param name="id">id do usuário</param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.UsuarioController.Post(JOB.DATA.Domain.USUARIO)">
@@ -855,27 +882,27 @@
         </member>
         <member name="M:JOB.API.Controllers.UsuarioController.Put(System.Guid,JOB.DATA.Domain.USUARIO)">
             <summary>
-            atualiza um determinado usuario
+            atualiza um determinado usuário
             </summary>
-            <param name="id">id do usuario</param>
+            <param name="id">id do usuário</param>
             <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="M:JOB.API.Controllers.UsuarioController.Delete(System.Guid)">
             <summary>
-            deleta um determinado usuario
+            deleta um determinado usuário
             </summary>
-            <param name="id">id do usuario</param>
+            <param name="id">id do usuário</param>
         </member>
         <member name="T:JOB.API.WebApiApplication">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="M:JOB.API.WebApiApplication.Application_Start">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
     </members>
 </doc>

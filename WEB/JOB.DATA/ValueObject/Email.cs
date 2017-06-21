@@ -14,7 +14,6 @@ namespace JOB.DATA.ValueObject
         /// </summary>
         protected Email()
         {
-
         }
 
         public Email(string endereco)

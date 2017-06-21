@@ -55,7 +55,6 @@ namespace JOB.DATA.Config
                 .HasColumnName("EMAIL")
                 .IsRequired();
 
-
             HasMany(n => n.PERFIS_PROFISSIONAIS)
                 .WithRequired(n => n.USUARIO)
                 .HasForeignKey(n => n.ID_USUARIO)

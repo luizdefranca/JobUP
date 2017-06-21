@@ -59,7 +59,22 @@ public class Proposta implements Serializable {
     private String dsObservacoes;
 
 
-    public Proposta(){}
+    public Proposta(String idServico, String idUsuario, String dtProposta, int duracaoServico, int valorDuracaoServico, double vlProposta, String justificativa, String dsTitulo, String dsObservacoes){}
+
+    public Proposta(String idServico, String idUsuario, String dtProposta, int duracaoServico, int valorDuracaoServico,
+                    double vlProposta, String justificativa, Boolean aceita,
+                    String dsTitulo, String dsObservacoes) {
+        this.idServico = idServico;
+        this.idUsuario = idUsuario;
+        this.dtProposta = dtProposta;
+        this.duracaoServico = duracaoServico;
+        this.valorDuracaoServico = valorDuracaoServico;
+        this.vlProposta = vlProposta;
+        this.justificativa = justificativa;
+        this.aceita = aceita;
+        this.dsTitulo = dsTitulo;
+        this.dsObservacoes = dsObservacoes;
+    }
 
     public String getIdServico() {
         return idServico;

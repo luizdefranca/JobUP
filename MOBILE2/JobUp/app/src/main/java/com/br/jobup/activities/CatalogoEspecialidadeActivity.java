@@ -156,8 +156,16 @@ public class CatalogoEspecialidadeActivity extends AppCompatActivity {
 
                                 final Intent intentAvaliacao = new Intent(CatalogoEspecialidadeActivity.this, AvaliacaoActivity.class);
                                 intentAvaliacao.putExtra("ID_PROFISSIONAL", idProfissinal);
+<<<<<<< HEAD
                                 intentAvaliacao.putExtra("ID_ESPECIALIDADE", idCategoria);
+=======
+                                intentAvaliacao.putExtra("ID_ESPECIALIDADE",idCategoria);
+>>>>>>> origin/master
                                 startActivity(intentAvaliacao);
+
+
+
+
 
 
                                 break;

@@ -60,13 +60,13 @@ namespace JOB.API.Controllers
                     model.OUTROS_PERFIS = Mapper.Map<List<ProfissionalViewModel>>(usuario.PERFIS_PROFISSIONAIS.Where(w => w.ID_ESPECIALIDADE != idEspecialidade));
                     model.AVALIACOES = Mapper.Map<List<AvaliacaoViewModel>>(ctx.Avaliacao.Where(w => w.ID_USUARIO == model.ID_USUARIO & w.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).ToList());
 
-                    var MEUS_SERVICOS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA == true).Select(s => s.SERVICO);
+                    var MEUS_SERVICOS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA.HasValue).Where(w => w.ACEITA.Value).Select(s => s.SERVICO);
 
                     if (MEUS_SERVICOS != null) model.SERVICOS.AddRange(Mapper.Map<List<ServicoViewModel_api>>(MEUS_SERVICOS));
 
                     if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = 0;
 
-                    model.QTD_PROPOSTAS_ACEITAS = usuario.PROPOSTAS_SERVICO.Count(C => C.ACEITA & C.USUARIO.PERFIS_PROFISSIONAIS.Select(S => S.ID_ESPECIALIDADE).Contains(model.ID_ESPECIALIDADE));
+                    model.QTD_PROPOSTAS_ACEITAS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA.HasValue).Count(C => C.ACEITA.Value & C.USUARIO.PERFIS_PROFISSIONAIS.Select(S => S.ID_ESPECIALIDADE).Contains(model.ID_ESPECIALIDADE));
 
                     foreach (var item in model.OUTROS_PERFIS)
                     {
@@ -98,9 +98,9 @@ namespace JOB.API.Controllers
         /// <summary>
         /// Recupera dados de um determinado perfil profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario profissional</param>
+        /// <param name="idUsuario">id do usuário profissional</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <returns>retorna a classe PERFIL_PROFISSIONAL</returns>
+        /// <returns></returns>
         [ResponseType(typeof(PERFIL_PROFISSIONAL))]
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade)
         {
@@ -138,7 +138,7 @@ namespace JOB.API.Controllers
         /// <summary>
         /// atualiza um perfil profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -169,7 +169,7 @@ namespace JOB.API.Controllers
         /// <summary>
         /// deleta um perfil profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         [ResponseType(typeof(HttpStatusCode))]
         public void Delete(Guid idUsuario, int idEspecialidade)

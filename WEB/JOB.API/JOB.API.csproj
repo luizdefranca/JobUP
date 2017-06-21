@@ -31,7 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>App_Data\XmlDocument.xml</DocumentationFile>
+    <DocumentationFile>App_Code\XmlDocument.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -114,7 +114,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\XmlDocument.xml" />
+    <Content Include="App_Code\DATA.xml" />
+    <Content Include="App_Code\XmlDocument.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
@@ -159,6 +160,8 @@
     <Compile Include="Controllers\ProfissionaisMelhoresAvaliadosController.cs" />
     <Compile Include="Controllers\PropostaController.cs" />
     <Compile Include="Controllers\OfertaController.cs" />
+    <Compile Include="Controllers\AceitarPropostaController.cs" />
+    <Compile Include="Controllers\RejeitarPropostaController.cs" />
     <Compile Include="Controllers\RejeitarServicoController.cs" />
     <Compile Include="Controllers\ServicoPrivadoClienteSemPropostaController.cs" />
     <Compile Include="Controllers\ServicoPrivadoClienteController.cs" />

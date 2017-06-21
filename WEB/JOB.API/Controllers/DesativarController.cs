@@ -10,14 +10,14 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de desativar usuario
+    /// API de desativar usuário
     /// </summary>
     public class DesativarController : System.Web.Http.ApiController
     {
         /// <summary>
-        /// Desativa um determinado usuario
+        /// Desativa um determinado usuário
         /// </summary>
-        /// <param name="id">id do usuario</param>
+        /// <param name="id">id do usuário</param>
         /// <returns></returns>
         [ResponseType(typeof(HttpStatusCode))]
         public HttpResponseMessage Get(Guid id)

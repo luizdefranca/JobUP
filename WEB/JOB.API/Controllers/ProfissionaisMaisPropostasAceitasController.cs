@@ -34,7 +34,7 @@ namespace JOB.API.Controllers
                     .Include(i => i.AVALIACOES)
                     .Include(i => i.USUARIO.PROPOSTAS_SERVICO)
                     .Where(f => f.ID_ESPECIALIDADE == idEspecialidade)
-                    .Where(f => f.USUARIO.PROPOSTAS_SERVICO.Any(a => a.ACEITA))
+                    .Where(f => f.USUARIO.PROPOSTAS_SERVICO.Where(w => w.ACEITA.HasValue).Any(a => a.ACEITA.Value))
                     .OrderByDescending(o => o.USUARIO.PROPOSTAS_SERVICO.Count).ToList();
 
                 var lstModel = Mapper.Map<List<ProfissionalViewModel>>(lstDominio);
@@ -60,13 +60,13 @@ namespace JOB.API.Controllers
                     model.OUTROS_PERFIS = Mapper.Map<List<ProfissionalViewModel>>(usuario.PERFIS_PROFISSIONAIS.Where(w => w.ID_ESPECIALIDADE != idEspecialidade));
                     model.AVALIACOES = Mapper.Map<List<AvaliacaoViewModel>>(ctx.Avaliacao.Where(w => w.ID_USUARIO == model.ID_USUARIO & w.ID_ESPECIALIDADE == model.ID_ESPECIALIDADE).ToList());
 
-                    var MEUS_SERVICOS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA == true).Select(s => s.SERVICO);
+                    var MEUS_SERVICOS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA.HasValue).Where(w => w.ACEITA.Value).Select(s => s.SERVICO);
 
                     if (MEUS_SERVICOS != null) model.SERVICOS.AddRange(Mapper.Map<List<ServicoViewModel_api>>(MEUS_SERVICOS));
 
                     if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = 0;
 
-                    model.QTD_PROPOSTAS_ACEITAS = usuario.PROPOSTAS_SERVICO.Count(C => C.ACEITA & C.USUARIO.PERFIS_PROFISSIONAIS.Select(S => S.ID_ESPECIALIDADE).Contains(model.ID_ESPECIALIDADE));
+                    model.QTD_PROPOSTAS_ACEITAS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA.HasValue).Count(C => C.ACEITA.Value & C.USUARIO.PERFIS_PROFISSIONAIS.Select(S => S.ID_ESPECIALIDADE).Contains(model.ID_ESPECIALIDADE));
 
                     foreach (var item in model.OUTROS_PERFIS)
                     {
