@@ -12,7 +12,7 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de aprovacao de usuario
+    /// API de aprovacao de usuario (cliente ou profissional)
     /// </summary>
     public class AprovacaoUsuarioController : ApiController
     {

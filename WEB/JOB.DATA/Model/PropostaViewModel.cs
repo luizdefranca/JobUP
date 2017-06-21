@@ -28,6 +28,9 @@ namespace JOB.WEB.Models
         [Display(Name = "Justificativa")]
         public string JUSTIFICATIVA { get; set; }
 
+        /// <summary>
+        /// Indica se o cliente aceitou ou recusou a proposta do profissional
+        /// </summary>
         [Display(Name = "Aceita?")]
         public bool ACEITA { get; set; }
 

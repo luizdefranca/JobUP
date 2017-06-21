@@ -6,6 +6,9 @@ using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
 using JOB.API.Areas.HelpPage.ModelDescriptions;
+using System.Xml.Linq;
+using System.IO;
+using System.Web;
 
 namespace JOB.API.Areas.HelpPage
 {
@@ -27,12 +30,31 @@ namespace JOB.API.Areas.HelpPage
         /// <param name="documentPath">The physical path to XML document.</param>
         public XmlDocumentationProvider(string documentPath)
         {
-            if (documentPath == null)
+            //if (documentPath == null)
+            //{
+            //    throw new ArgumentNullException("documentPath");
+            //}
+            //XPathDocument xpath = new XPathDocument(documentPath);
+            //_documentNavigator = xpath.CreateNavigator();
+
+            XDocument finalDoc = null;
+            foreach (string file in Directory.GetFiles(HttpContext.Current.Server.MapPath("~/App_Code/"), "*.xml"))
             {
-                throw new ArgumentNullException("documentPath");
+                if (finalDoc == null)
+                {
+                    finalDoc = XDocument.Load(File.OpenRead(file));
+                }
+                else
+                {
+                    XDocument xdocAdditional = XDocument.Load(File.OpenRead(file));
+
+                    finalDoc.Root.XPathSelectElement("/doc/members")
+                                 .Add(xdocAdditional.Root.XPathSelectElement("/doc/members").Elements());
+                }
             }
-            XPathDocument xpath = new XPathDocument(documentPath);
-            _documentNavigator = xpath.CreateNavigator();
+
+            // Supply the navigator that rest of the XmlDocumentationProvider code looks for
+            _documentNavigator = finalDoc.CreateNavigator();
         }
 
         public string GetDocumentation(HttpControllerDescriptor controllerDescriptor)

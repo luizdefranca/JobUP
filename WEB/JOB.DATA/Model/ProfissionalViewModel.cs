@@ -44,17 +44,41 @@ namespace JOB.WEB.Models
         [Display(Name = "Estado")]
         public string ESTADO { get; set; }
 
+        /// <summary>
+        /// Destaque de perfil ativado
+        /// </summary>
         [Display(Name = "Destaque")]
         public bool PERFIL_DESTAQUE { get; set; }
 
+        /// <summary>
+        /// Media de todas as avalicoes recebidas pelo profissional neste perfil
+        /// </summary>
         [Display(Name = "Media das Avaliacoes")]
         public double MEDIA_AVALIACOES_FEITAS { get; set; }
+
+        /// <summary>
+        /// Total de propostas aceitas por este profissional neste perfil
+        /// </summary>
         public int? QTD_PROPOSTAS_ACEITAS { get; set; }
 
+        /// <summary>
+        /// Data de priorizacao padrao na lista de perfis (mais novos primeiro ou quem pagou para ter destaque)
+        /// </summary>
         public DateTime DT_ORDENACAO { get; set; }
 
+        /// <summary>
+        /// outros perfis cadastrados para este profissional
+        /// </summary>
         public List<ProfissionalViewModel> OUTROS_PERFIS { get; set; }
+
+        /// <summary>
+        /// avaliacoes feitas para este perfil profissional
+        /// </summary>
         public List<AvaliacaoViewModel> AVALIACOES { get; set; }
+
+        /// <summary>
+        /// servicos dos quais o profissional fez uma proposta
+        /// </summary>
         public List<ServicoViewModel_api> SERVICOS { get; set; }
     }
 
