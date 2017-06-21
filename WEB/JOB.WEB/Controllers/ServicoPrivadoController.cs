@@ -23,7 +23,7 @@ namespace JOB.WEB.Controllers
         public ActionResult Index()
         {
             //busca as ofertas que nao foram negadas (ou seja, novas ou aceitas)
-            var domain = ctx.Oferta.Where(w => w.ID_USUARIO == id & w.ACEITA != false).Select(s => s.SERVICO).ToList();
+            var domain = ctx.Oferta.Where(w => w.ACEITA.HasValue).Where(w => w.ID_USUARIO == id & w.ACEITA.Value != false).Select(s => s.SERVICO).ToList();
 
             var lstModel = Mapper.Map<List<ServicoViewModel_api>>(domain);
 

@@ -42,7 +42,7 @@ namespace JOB.WEB.Extensions
                 {
                     var id = identity.GetId();
                     var user = ctx.Usuario.Include(i => i.OFERTAS_SERVICO).FirstOrDefault(f => f.ID_USUARIO == id);
-                    return user != null ? user.OFERTAS_SERVICO.Count(w => w.ACEITA != false) : 0;
+                    return user != null ? user.OFERTAS_SERVICO.Where(w => w.ACEITA.HasValue).Count(w => w.ACEITA.Value != false) : 0;
                 }
                 else
                 {
