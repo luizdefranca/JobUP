@@ -582,7 +582,7 @@
         </member>
         <member name="M:JOB.API.Controllers.PropostaController.Post(JOB.DATA.Domain.PROPOSTA_SERVICO)">
             <summary>
-            Profissional aceita uma oferta de servico e gera uma proposta
+            Profissional aceita a oferta de servico oferecida pelo cliente e gera uma proposta
             </summary>
             <param name="obj"></param>
             <returns></returns>
@@ -599,14 +599,27 @@
             <param name="idUsuario">id do usuario</param>
             <returns></returns>
         </member>
+        <member name="T:JOB.API.Controllers.AceitarPropostaController">
+            <summary>
+            API de aceitação de propostas (visão cliente)
+            </summary>
+        </member>
+        <member name="M:JOB.API.Controllers.AceitarPropostaController.Get(System.Guid,System.Guid)">
+            <summary>
+            Cliente aceita a proposta oferecida pelo profissional
+            </summary>
+            <param name="id">id do servico</param>
+            <param name="ID_USUARIO">id do profissional dono da proposta</param>
+            <returns></returns>
+        </member>
         <member name="T:JOB.API.Controllers.RejeitarPropostaController">
             <summary>
-            API de rejeicao de propostas feita pelo profissional
+            API de rejeição de propostas (visão cliente)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.RejeitarPropostaController.Get(System.Guid,System.Guid)">
             <summary>
-            Rejeita uma determinada proposta
+            Cliente rejeita a proposta oferecida pelo profissional
             </summary>
             <param name="id">id do servico</param>
             <param name="ID_USUARIO">id do profissional dono da proposta</param>
@@ -614,12 +627,12 @@
         </member>
         <member name="T:JOB.API.Controllers.RejeitarServicoController">
             <summary>
-            API de rejeicao de servico
+            API de rejeicao da oferta de serviço (visão profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.RejeitarServicoController.Get(System.Guid,System.String)">
             <summary>
-            Rejeita um determinado servico
+            Profissional rejeita a oferta de serviço oferecida pelo cliente
             </summary>
             <param name="id">id do servico</param>
             <param name="JUSTIFICATIVA">justificativa da rejeiçao</param>

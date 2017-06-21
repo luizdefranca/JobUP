@@ -43,7 +43,7 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Profissional aceita uma oferta de servico e gera uma proposta
+        /// Profissional aceita a oferta de servico oferecida pelo cliente e gera uma proposta
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>

@@ -10,14 +10,14 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de rejeicao de servico
+    /// API de rejeicao da oferta de serviço (visão profissional)
     /// </summary>
     public class RejeitarServicoController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
         /// <summary>
-        /// Rejeita um determinado servico
+        /// Profissional rejeita a oferta de serviço oferecida pelo cliente
         /// </summary>
         /// <param name="id">id do servico</param>
         /// <param name="JUSTIFICATIVA">justificativa da rejeiçao</param>

@@ -10,14 +10,14 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de rejeição de propostas (visão cliente)
+    /// API de aceitação de propostas (visão cliente)
     /// </summary>
-    public class RejeitarPropostaController : ApiController
+    public class AceitarPropostaController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
         /// <summary>
-        /// Cliente rejeita a proposta oferecida pelo profissional
+        /// Cliente aceita a proposta oferecida pelo profissional
         /// </summary>
         /// <param name="id">id do servico</param>
         /// <param name="ID_USUARIO">id do profissional dono da proposta</param>
@@ -27,7 +27,7 @@ namespace JOB.API.Controllers
         {
             var domain = ctx.Proposta.First(f => f.ID_SERVICO == id & f.ID_USUARIO == ID_USUARIO);
 
-            domain.RejeitarProposta();
+            domain.AceitarProposta();
             ctx.Entry(domain).State = EntityState.Modified;
             ctx.SaveChanges();
 
