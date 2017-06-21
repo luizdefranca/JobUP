@@ -14,16 +14,16 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de servico privado (feito exclusivamente para um determinado profissional)
+    /// API de serviço privado (feito exclusivamente para um determinado profissional)
     /// </summary>
     public class ServicoPrivadoClienteController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
         /// <summary>
-        /// recupera todos os servicos privados que possuem propostas de um determinado usuario cliente (juntamente com as propostas)
+        /// recupera todos os serviços privados que possuem propostas de um determinado usuário cliente (juntamente com as propostas)
         /// </summary>
-        /// <param name="idUsuarioCliente">id do usuario cliente</param>
+        /// <param name="idUsuarioCliente">id do usuário cliente</param>
         /// <returns></returns>
         [ResponseType(typeof(List<ServicoViewModel_api>))]
         public HttpResponseMessage Get(Guid idUsuarioCliente)

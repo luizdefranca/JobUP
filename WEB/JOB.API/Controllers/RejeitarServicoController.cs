@@ -10,7 +10,7 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de rejeicao da oferta de serviço (visão profissional)
+    /// API de rejeição da oferta de serviço (visão profissional)
     /// </summary>
     public class RejeitarServicoController : ApiController
     {

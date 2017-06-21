@@ -16,16 +16,16 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de servico privado (feito exclusivamente para um determinado profissional)
+    /// API de serviço privado (feito exclusivamente para um determinado profissional)
     /// </summary>
     public class ServicoPrivadoController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
         /// <summary>
-        /// recupera todos os servicos privados que possuem propostas de um determinado usuario profissional
+        /// recupera todos os serviços privados que possuem propostas de um determinado usuário profissional
         /// </summary>
-        /// <param name="idUsuarioProfissional">id do usuario profissional</param>
+        /// <param name="idUsuarioProfissional">id do usuário profissional</param>
         /// <returns></returns>
         [ResponseType(typeof(List<ServicoViewModel_api>))]
         public HttpResponseMessage Get(Guid idUsuarioProfissional)
@@ -52,9 +52,9 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// insere um novo servico privado (direcionado diretamente para um profissional)
+        /// insere um novo serviço privado (direcionado diretamente para um profissional)
         /// </summary>
-        /// <param name="obj">classe ServicoViewModel_api</param>
+        /// <param name="obj"></param>
         /// <returns></returns>
         [HttpPost]
         [ResponseType(typeof(HttpStatusCode))]

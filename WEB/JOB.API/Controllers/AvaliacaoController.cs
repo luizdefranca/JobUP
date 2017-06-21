@@ -13,16 +13,16 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de avaliacao de profissionais
+    /// API de avaliação de profissionais
     /// </summary>
     public class AvaliacaoController : ApiController
     {
         private Contexto ctx = new Contexto();
 
         /// <summary>
-        /// Recupera todas as formacoes do usuario profissional
+        /// Recupera todas as formações do usuário profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <returns></returns>
         [ResponseType(typeof(List<FORMACAO>))]
@@ -34,9 +34,9 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Recupera todas as avaliacoes do usuario, por especialidade e enviadas por um determinado cliente
+        /// Recupera todas as avaliações do usuário, por especialidade e enviadas por um determinado cliente
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <param name="idCliente">id do cliente</param>
         /// <returns></returns>
@@ -49,7 +49,7 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Salva uma nova avaliacao
+        /// Salva uma nova avaliação
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -75,9 +75,9 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Atualiza a avaliacao (nota e comentario)
+        /// Atualiza a avaliação (nota e comentário)
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <param name="idCliente">id do cliente</param>
         /// <param name="obj"></param>

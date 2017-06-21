@@ -15,16 +15,16 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API se servicos publicos (direcionados para todos os profissionais cadastrados no site que tenha a especialidade selecionada)
+    /// API se serviços publicos (direcionados para todos os profissionais cadastrados no site que tenha a especialidade selecionada)
     /// </summary>
     public class ServicoPublicoController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
         /// <summary>
-        /// recupera todos os servios publicos
+        /// recupera todos os serviços públicos
         /// </summary>
-        /// <returns>retorna uma lista da classe ServicoViewModel_api</returns>
+        /// <returns></returns>
         [ResponseType(typeof(List<ServicoViewModel_api>))]
         public HttpResponseMessage Get()
         {
@@ -49,9 +49,9 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// insere um novo servico public (remove 100 moedas do usuario)
+        /// insere um novo serviço publico (remove 100 moedas do usuario)
         /// </summary>
-        /// <param name="obj">classe ServicoViewModel_api</param>
+        /// <param name="obj"></param>
         /// <returns></returns>
         [HttpPost]
         [ResponseType(typeof(HttpStatusCode))]

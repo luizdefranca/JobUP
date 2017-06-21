@@ -58,7 +58,7 @@ namespace JOB.WEB.Models
         public string TEMPO_SERVICO_DESC { get; set; }
 
         /// <summary>
-        /// Propostas recebidas do profissional (servico privado) ou dos profissionais (serviço publico)
+        /// Propostas recebidas do profissional (serviço privado) ou dos profissionais (serviço publico)
         /// </summary>
         public List<PropostaViewModel> PROPOSTAS { get; set; }
 

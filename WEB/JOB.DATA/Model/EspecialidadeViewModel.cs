@@ -11,13 +11,13 @@ namespace JOB.WEB.Models
         public string DESCRICAO { get; set; }
 
         /// <summary>
-        /// Especialidade exige comprovante por parte do profissional
+        /// Especialidade exige comprovante por parte do profissional?
         /// </summary>
         [Display(Name = "Exige Comprovação?")]
         public bool EXIGIR_COMPROVACAO { get; set; }
 
         /// <summary>
-        /// icone para ser exibido no sistema
+        /// Ícone para ser exibido no sistema
         /// </summary>
         public string IMAGEM { get; set; }
 

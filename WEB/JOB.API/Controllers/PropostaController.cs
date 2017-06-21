@@ -15,16 +15,16 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de propostas de servicos (resposta do profissional a uma oferta de servico)
+    /// API de propostas de serviços (resposta do profissional a uma oferta de serviço)
     /// </summary>
     public class PropostaController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
         /// <summary>
-        /// recupera todas as propostas de um determinado usuario profissional
+        /// recupera todas as propostas de um determinado usuário profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <returns></returns>
         [ResponseType(typeof(List<PropostaViewModel>))]
         public HttpResponseMessage Get(Guid idUsuario)
@@ -43,7 +43,7 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Profissional aceita a oferta de servico oferecida pelo cliente e gera uma proposta
+        /// Profissional aceita a oferta de serviço oferecida pelo cliente e gera uma proposta
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>

@@ -20,7 +20,7 @@ namespace JOB.API.Controllers
         /// Cliente aceita a proposta oferecida pelo profissional
         /// </summary>
         /// <param name="id">id do servico</param>
-        /// <param name="ID_USUARIO">id do profissional dono da proposta</param>
+        /// <param name="ID_USUARIO">id do profissional (dono da proposta)</param>
         /// <returns></returns>
         [ResponseType(typeof(HttpStatusCode))]
         public HttpResponseMessage Get(Guid id, Guid ID_USUARIO)

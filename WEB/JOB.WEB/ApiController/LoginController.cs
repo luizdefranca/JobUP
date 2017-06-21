@@ -13,7 +13,7 @@ using System.Web.Http.Description;
 namespace JOB.WEB.ApiController
 {
     /// <summary>
-    /// API exclusiva para lidar com o template MVC de segurança (logins e cadastros de usuarios)
+    /// API exclusiva para lidar com o template MVC de segurança (logins e cadastros de usuários)
     /// </summary>
     [AllowAnonymous]
     public class LoginController : System.Web.Http.ApiController
@@ -60,7 +60,7 @@ namespace JOB.WEB.ApiController
         }
 
         /// <summary>
-        /// Realiza o cadastro do usuario de login no sistema
+        /// Realiza o cadastro do usuário de login no sistema
         /// </summary>
         /// <param name="Login">Username do usuario</param>
         /// <param name="Email">Email do usuario</param>

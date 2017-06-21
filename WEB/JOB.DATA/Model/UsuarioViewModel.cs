@@ -32,14 +32,14 @@ namespace JOB.WEB.Models
         public DateTime DT_NASCIMENTO { get; set; }
 
         /// <summary>
-        /// Indica se o cadastro do usuario foi aprovado pelo administrador
+        /// Indica se o cadastro do usuário foi aprovado pelo administrador
         /// </summary>
         [ScaffoldColumn(false)]
         [Display(Name = "Aprovado")]
         public bool APROVADO { get; set; }
 
         /// <summary>
-        /// Indica se o cadastro do usuario esta ativo
+        /// Indica se o cadastro do usuário esta ativo
         /// </summary>
         [ScaffoldColumn(false)]
         [Display(Name = "Ativo")]
@@ -98,14 +98,14 @@ namespace JOB.WEB.Models
         public DateTime DT_ORDENACAO { get; set; }
 
         /// <summary>
-        /// Indica se o cadastro do usuario foi aprovado pelo administrador
+        /// Indica se o cadastro do usuário foi aprovado pelo administrador
         /// </summary>
         [ScaffoldColumn(false)]
         [Display(Name = "Aprovado")]
         public bool APROVADO { get; set; }
 
         /// <summary>
-        /// Indica se o cadastro do usuario esta ativo
+        /// Indica se o cadastro do usuário esta ativo
         /// </summary>
         [ScaffoldColumn(false)]
         [Display(Name = "Ativo")]

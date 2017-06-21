@@ -13,16 +13,16 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API das formacoes dos profisionais
+    /// API das formações dos profisionais
     /// </summary>
     public class FormacaoController : ApiController
     {
         private Contexto ctx = new Contexto();
 
         /// <summary>
-        /// Lista as formacoes de um usuario e uma determinada especialidade
+        /// Lista as formações de um usuário e uma determinada especialidade
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <returns></returns>
         [ResponseType(typeof(List<FORMACAO>))]
@@ -34,11 +34,11 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Recupera uma formacao especifica de um perfil profissional
+        /// Recupera uma formação específica de um perfil profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <param name="idFormacao">id da formacao</param>
+        /// <param name="idFormacao">id da formação</param>
         /// <returns></returns>
         [ResponseType(typeof(FORMACAO))]
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade, int idFormacao)
@@ -49,7 +49,7 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Salva uma nova formacao
+        /// Salva uma nova formação
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -75,11 +75,11 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Atualiza uma formacao
+        /// Atualiza uma formação
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <param name="idFormacao">id da formacao</param>
+        /// <param name="idFormacao">id da formação</param>
         /// <param name="obj"></param>
         /// <returns></returns>
         [ResponseType(typeof(HttpStatusCode))]
@@ -107,11 +107,11 @@ namespace JOB.API.Controllers
         }
 
         /// <summary>
-        /// Deleta uma formacao
+        /// Deleta uma formação
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <param name="idFormacao">id da formacao</param>
+        /// <param name="idFormacao">id da formação</param>
         public void Delete(Guid idUsuario, int idEspecialidade, int idFormacao)
         {
             var item = ctx.Formacao.FirstOrDefault(w => w.ID_USUARIO == idUsuario & w.ID_ESPECIALIDADE == idEspecialidade & w.ID_FORMACAO == idFormacao);

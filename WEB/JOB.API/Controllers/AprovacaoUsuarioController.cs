@@ -12,14 +12,14 @@ using System.Web.Http.Description;
 namespace JOB.API.Controllers
 {
     /// <summary>
-    /// API de aprovacao de usuario (cliente ou profissional)
+    /// API de aprovação de usuário (cliente ou profissional)
     /// </summary>
     public class AprovacaoUsuarioController : ApiController
     {
         /// <summary>
-        /// Aprova um determinado usuario
+        /// Aprova um determinado usuário
         /// </summary>
-        /// <param name="id">id do usuario</param>
+        /// <param name="id">id do usuário</param>
         /// <returns></returns>
         [ResponseType(typeof(HttpStatusCode))]
         public HttpResponseMessage Get(Guid id)

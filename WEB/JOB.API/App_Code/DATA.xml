@@ -325,27 +325,27 @@
         </member>
         <member name="P:JOB.WEB.Models.AvaliacaoViewModel.DT_ULT_AVALIACAO">
             <summary>
-            Data da ultima avaliacao realizada por um determinado cliente
+            Data da ultima avaliação realizada por um determinado cliente
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.AvaliacaoViewModel.NOTA">
             <summary>
-            Ultima nota recebida como avaliacao de um determinado cliente
+            Última nota recebida como avaliação de um determinado cliente
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.AvaliacaoViewModel.COMENTARIO">
             <summary>
-            Ultimo comentario recebido como avaliacao de um determinado cliente
+            Último comentário recebido como avaliação de um determinado cliente
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.EspecialidadeViewModel.EXIGIR_COMPROVACAO">
             <summary>
-            Especialidade exige comprovante por parte do profissional
+            Especialidade exige comprovante por parte do profissional?
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.EspecialidadeViewModel.IMAGEM">
             <summary>
-            icone para ser exibido no sistema
+            Ícone para ser exibido no sistema
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.EspecialidadeViewModel.QTD_PROFISSIONAIS">
@@ -360,17 +360,17 @@
         </member>
         <member name="P:JOB.WEB.Models.HistoricoMoedaVM.MOTIVO">
             <summary>
-            Motivo da movimentacao
+            Motivo da movimentação
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.OfertaViewModel.DT_OFERTA">
             <summary>
-            Data de cadastro do servico
+            Data de cadastro do serviço
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.OfertaViewModel.ACEITA">
             <summary>
-            Indica se o profissional aceitou ou recusou a oferta de serviço do cliente (se estiver nulo, ainda nao foi respondido)
+            Indica se o profissional aceitou ou recusou a oferta de serviço do cliente (se estiver nulo, ainda não foi respondido)
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ProfissionalViewModel.PERFIL_DESTAQUE">
@@ -380,7 +380,7 @@
         </member>
         <member name="P:JOB.WEB.Models.ProfissionalViewModel.MEDIA_AVALIACOES_FEITAS">
             <summary>
-            Media de todas as avalicoes recebidas pelo profissional neste perfil
+            Média de todas as avalições recebidas pelo profissional neste perfil
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ProfissionalViewModel.QTD_PROPOSTAS_ACEITAS">
@@ -390,27 +390,27 @@
         </member>
         <member name="P:JOB.WEB.Models.ProfissionalViewModel.DT_ORDENACAO">
             <summary>
-            Data de priorizacao padrao na lista de perfis (mais novos primeiro ou quem pagou para ter destaque)
+            Data de priorização padrão na lista de perfis (mais novos primeiro ou quem pagou para ter destaque)
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ProfissionalViewModel.OUTROS_PERFIS">
             <summary>
-            outros perfis cadastrados para este profissional
+            Outros perfis cadastrados para este profissional
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ProfissionalViewModel.AVALIACOES">
             <summary>
-            avaliacoes feitas para este perfil profissional
+            Avaliações feitas para este perfil profissional
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ProfissionalViewModel.SERVICOS">
             <summary>
-            servicos dos quais o profissional fez uma proposta
+            serviços dos quais o profissional fez uma proposta
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.PropostaViewModel.ACEITA">
             <summary>
-            Indica se o cliente aceitou ou recusou a proposta do profissional (se estiver nulo, ainda nao foi respondido)
+            Indica se o cliente aceitou ou recusou a proposta do profissional (se estiver nulo, ainda não foi respondido)
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ServicoViewModel_api.NOME">
@@ -430,7 +430,7 @@
         </member>
         <member name="P:JOB.WEB.Models.ServicoViewModel_api.PROPOSTAS">
             <summary>
-            Propostas recebidas do profissional (servico privado) ou dos profissionais (serviço publico)
+            Propostas recebidas do profissional (serviço privado) ou dos profissionais (serviço publico)
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.ServicoViewModel_api.OFERTAS">
@@ -440,22 +440,22 @@
         </member>
         <member name="P:JOB.WEB.Models.UsuarioViewModel_VW.APROVADO">
             <summary>
-            Indica se o cadastro do usuario foi aprovado pelo administrador
+            Indica se o cadastro do usuário foi aprovado pelo administrador
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.UsuarioViewModel_VW.ATIVO">
             <summary>
-            Indica se o cadastro do usuario esta ativo
+            Indica se o cadastro do usuário esta ativo
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.UsuarioViewModel.APROVADO">
             <summary>
-            Indica se o cadastro do usuario foi aprovado pelo administrador
+            Indica se o cadastro do usuário foi aprovado pelo administrador
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.UsuarioViewModel.ATIVO">
             <summary>
-            Indica se o cadastro do usuario esta ativo
+            Indica se o cadastro do usuário esta ativo
             </summary>
         </member>
         <member name="P:JOB.WEB.Models.UsuarioViewModel.PERFIL_DESTAQUE">

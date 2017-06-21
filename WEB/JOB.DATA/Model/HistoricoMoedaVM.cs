@@ -19,7 +19,7 @@ namespace JOB.WEB.Models
         public Int16 VALOR_MOVIMENTADO { get; set; }
 
         /// <summary>
-        /// Motivo da movimentacao
+        /// Motivo da movimentação
         /// </summary>
         [Display(Name = "Motivo")]
         public string MOTIVO { get; set; }

@@ -51,7 +51,7 @@ namespace JOB.WEB.Models
         public bool PERFIL_DESTAQUE { get; set; }
 
         /// <summary>
-        /// Media de todas as avalicoes recebidas pelo profissional neste perfil
+        /// Média de todas as avalições recebidas pelo profissional neste perfil
         /// </summary>
         [Display(Name = "Media das Avaliacoes")]
         public double MEDIA_AVALIACOES_FEITAS { get; set; }
@@ -62,22 +62,22 @@ namespace JOB.WEB.Models
         public int? QTD_PROPOSTAS_ACEITAS { get; set; }
 
         /// <summary>
-        /// Data de priorizacao padrao na lista de perfis (mais novos primeiro ou quem pagou para ter destaque)
+        /// Data de priorização padrão na lista de perfis (mais novos primeiro ou quem pagou para ter destaque)
         /// </summary>
         public DateTime DT_ORDENACAO { get; set; }
 
         /// <summary>
-        /// outros perfis cadastrados para este profissional
+        /// Outros perfis cadastrados para este profissional
         /// </summary>
         public List<ProfissionalViewModel> OUTROS_PERFIS { get; set; }
 
         /// <summary>
-        /// avaliacoes feitas para este perfil profissional
+        /// Avaliações feitas para este perfil profissional
         /// </summary>
         public List<AvaliacaoViewModel> AVALIACOES { get; set; }
 
         /// <summary>
-        /// servicos dos quais o profissional fez uma proposta
+        /// serviços dos quais o profissional fez uma proposta
         /// </summary>
         public List<ServicoViewModel_api> SERVICOS { get; set; }
     }

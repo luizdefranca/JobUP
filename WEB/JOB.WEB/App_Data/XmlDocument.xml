@@ -6,7 +6,7 @@
     <members>
         <member name="T:JOB.WEB.ApiController.LoginController">
             <summary>
-            API exclusiva para lidar com o template MVC de segurança (logins e cadastros de usuarios)
+            API exclusiva para lidar com o template MVC de segurança (logins e cadastros de usuários)
             </summary>
         </member>
         <member name="M:JOB.WEB.ApiController.LoginController.Get(System.String,System.String)">
@@ -19,7 +19,7 @@
         </member>
         <member name="M:JOB.WEB.ApiController.LoginController.Get(System.String,System.String,System.String)">
             <summary>
-            Realiza o cadastro do usuario de login no sistema
+            Realiza o cadastro do usuário de login no sistema
             </summary>
             <param name="Login">Username do usuario</param>
             <param name="Email">Email do usuario</param>

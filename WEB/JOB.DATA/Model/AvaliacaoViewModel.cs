@@ -15,19 +15,19 @@ namespace JOB.WEB.Models
         public Guid ID_CLIENTE { get; set; }
 
         /// <summary>
-        /// Data da ultima avaliacao realizada por um determinado cliente
+        /// Data da ultima avaliação realizada por um determinado cliente
         /// </summary>
         [Display(Name = "Data da Avaliação")]
         public DateTime DT_ULT_AVALIACAO { get; set; }
 
         /// <summary>
-        /// Ultima nota recebida como avaliacao de um determinado cliente
+        /// Última nota recebida como avaliação de um determinado cliente
         /// </summary>
         [Display(Name = "Nota")]
         public Int16 NOTA { get; set; }
 
         /// <summary>
-        /// Ultimo comentario recebido como avaliacao de um determinado cliente
+        /// Último comentário recebido como avaliação de um determinado cliente
         /// </summary>
         [DataType(DataType.MultilineText)]
         [Display(Name = "Comentário")]

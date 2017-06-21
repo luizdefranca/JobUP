@@ -98,9 +98,9 @@ namespace JOB.API.Controllers
         /// <summary>
         /// Recupera dados de um determinado perfil profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario profissional</param>
+        /// <param name="idUsuario">id do usuário profissional</param>
         /// <param name="idEspecialidade">id da especialidade</param>
-        /// <returns>retorna a classe PERFIL_PROFISSIONAL</returns>
+        /// <returns></returns>
         [ResponseType(typeof(PERFIL_PROFISSIONAL))]
         public HttpResponseMessage Get(Guid idUsuario, int idEspecialidade)
         {
@@ -138,7 +138,7 @@ namespace JOB.API.Controllers
         /// <summary>
         /// atualiza um perfil profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -169,7 +169,7 @@ namespace JOB.API.Controllers
         /// <summary>
         /// deleta um perfil profissional
         /// </summary>
-        /// <param name="idUsuario">id do usuario</param>
+        /// <param name="idUsuario">id do usuário</param>
         /// <param name="idEspecialidade">id da especialidade</param>
         [ResponseType(typeof(HttpStatusCode))]
         public void Delete(Guid idUsuario, int idEspecialidade)
