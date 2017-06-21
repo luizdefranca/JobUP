@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Luiz Carlos Ramos on 6/21/17 3:44 PM
+  ~
+  ~ Copyright (c) 2017. All rights reserved.
+  ~ Last modified 6/21/17 3:44 PM
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.ServicoPrivadoClienteViewPagerActivity">
+    <item
+        android:id="@+id/menu_atualizar"
+        android:title="Atualizar"
+        app:showAsAction="always"
+        android:icon="@drawable/available_updates"/>
+
+</menu>

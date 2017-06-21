@@ -9,6 +9,9 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
@@ -81,6 +84,7 @@ public class ServicoPrivadoClienteFragment extends Fragment {
         //Inicializa o LoaderManager
         mLoaderManager = getActivity().getSupportLoaderManager();
         setRetainInstance(true);
+        setHasOptionsMenu(true);
 
     }
 
@@ -169,7 +173,25 @@ public class ServicoPrivadoClienteFragment extends Fragment {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+            final PreferencePersistence<Usuario> persistence = new PreferencePersistence<>(getContext());
+            final Usuario usuarioCorrente = persistence.getObjectSavedInPreferences("UsuarioCorrent",
+                    "com.br.jobup.models.usuario.Usuario");
+            mLoaderManager.initLoader(11, null, new LoaderOfertaPrivadaCliente(getContext(), usuarioCorrente.idUsuario));
+        adapter.notifyDataSetChanged();
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.atualizar, menu);
+    }
+
     public  void atualizarLista(){
+
         adapter.notifyDataSetChanged();
     }
 
