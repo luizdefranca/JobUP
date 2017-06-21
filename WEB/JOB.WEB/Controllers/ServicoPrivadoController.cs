@@ -131,7 +131,7 @@ namespace JOB.WEB.Controllers
         {
             var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
 
-            domain.RejeitarOferta();
+            domain.RejeitarOferta(null);
             ctx.Entry(domain).State = EntityState.Modified;
             ctx.SaveChanges();
 

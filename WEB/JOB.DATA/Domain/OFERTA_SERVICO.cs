@@ -36,15 +36,17 @@ namespace JOB.DATA.Domain
             this.ACEITA = true;
         }
 
-        public void RejeitarOferta()
+        public void RejeitarOferta(string JUSTIFICATIVA)
         {
             this.ACEITA = false;
+            this.JUSTIFICATIVA = JUSTIFICATIVA;
         }
 
         public Guid ID_SERVICO { get; set; }
         public Guid ID_USUARIO { get; set; }
         public DateTime DT_OFERTA { get; set; }
         public bool? ACEITA { get; set; }
+        public string JUSTIFICATIVA { get; set; }
 
         public SERVICO SERVICO { get; set; }
         public USUARIO USUARIO { get; set; }

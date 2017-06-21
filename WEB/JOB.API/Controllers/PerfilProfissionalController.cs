@@ -66,7 +66,7 @@ namespace JOB.API.Controllers
 
                     if (model.AVALIACOES.Any()) model.MEDIA_AVALIACOES_FEITAS = model.AVALIACOES.Select(s => (int)s.NOTA).Average(); else model.MEDIA_AVALIACOES_FEITAS = 0;
 
-                    model.QTD_PROPOSTAS_ACEITAS = usuario.PROPOSTAS_SERVICO.Count(C => C.ACEITA & C.USUARIO.PERFIS_PROFISSIONAIS.Select(S => S.ID_ESPECIALIDADE).Contains(model.ID_ESPECIALIDADE));
+                    model.QTD_PROPOSTAS_ACEITAS = usuario.PROPOSTAS_SERVICO.Where(w => w.ACEITA.HasValue).Count(C => C.ACEITA.Value & C.USUARIO.PERFIS_PROFISSIONAIS.Select(S => S.ID_ESPECIALIDADE).Contains(model.ID_ESPECIALIDADE));
 
                     foreach (var item in model.OUTROS_PERFIS)
                     {

@@ -32,7 +32,7 @@ namespace JOB.WEB.Models
         /// Indica se o cliente aceitou ou recusou a proposta do profissional
         /// </summary>
         [Display(Name = "Aceita?")]
-        public bool ACEITA { get; set; }
+        public bool? ACEITA { get; set; }
 
         [Display(Name = "Título")]
         public string DS_TITULO { get; set; }

@@ -12,7 +12,7 @@ namespace JOB.API.Controllers
     /// <summary>
     /// API de rejeicao de servico
     /// </summary>
-    public class RejeitarServicoController : ApiController
+    public class RejeitarPropostaController : ApiController
     {
         private readonly Contexto ctx = new Contexto();
 
@@ -20,14 +20,14 @@ namespace JOB.API.Controllers
         /// Rejeita um determinado servico
         /// </summary>
         /// <param name="id">id do servico</param>
-        /// <param name="JUSTIFICATIVA">justificativa da rejeiçao</param>
+        /// <param name="ID_USUARIO">id do profissional dono da proposta</param>
         /// <returns></returns>
         [ResponseType(typeof(HttpStatusCode))]
-        public HttpResponseMessage Get(Guid id, string JUSTIFICATIVA)
+        public HttpResponseMessage Get(Guid id, Guid ID_USUARIO)
         {
-            var domain = ctx.Oferta.First(f => f.ID_SERVICO == id);
+            var domain = ctx.Proposta.First(f => f.ID_SERVICO == id & f.ID_USUARIO == ID_USUARIO);
 
-            domain.RejeitarOferta(JUSTIFICATIVA);
+            domain.RejeitarProposta();
             ctx.Entry(domain).State = EntityState.Modified;
             ctx.SaveChanges();
 

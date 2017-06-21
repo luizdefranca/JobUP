@@ -316,7 +316,7 @@
         </member>
         <member name="M:JOB.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
             <summary>
-            Gets the sample object that will be serialized by the formatters. 
+            Gets the sample object that will be serialized by the formatters.
             First, it will look at the <see cref="P:JOB.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
             one using <see cref="M:JOB.API.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(JOB.API.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:JOB.API.Areas.HelpPage.ObjectGenerator"/>) and other
             factories in <see cref="P:JOB.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
@@ -483,7 +483,7 @@
         </member>
         <member name="T:JOB.API.Controllers.AprovacaoUsuarioController">
             <summary>
-            API de aprovacao de usuario
+            API de aprovacao de usuario (cliente ou profissional)
             </summary>
         </member>
         <member name="M:JOB.API.Controllers.AprovacaoUsuarioController.Get(System.Guid)">
@@ -604,11 +604,12 @@
             API de rejeicao de servico
             </summary>
         </member>
-        <member name="M:JOB.API.Controllers.RejeitarServicoController.Get(System.Guid)">
+        <member name="M:JOB.API.Controllers.RejeitarServicoController.Get(System.Guid,System.String)">
             <summary>
             Rejeita um determinado servico
             </summary>
             <param name="id">id do servico</param>
+            <param name="JUSTIFICATIVA">justificativa da rejeiçao</param>
             <returns></returns>
         </member>
         <member name="T:JOB.API.Controllers.ServicoPrivadoClienteSemPropostaController">
@@ -868,14 +869,14 @@
             <param name="id">id do usuario</param>
         </member>
         <member name="T:JOB.API.WebApiApplication">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="M:JOB.API.WebApiApplication.Application_Start">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
     </members>
 </doc>

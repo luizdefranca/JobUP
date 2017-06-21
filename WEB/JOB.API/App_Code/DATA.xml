@@ -35,11 +35,11 @@
             </summary>
         </member>
         <member name="M:JOB.DATA.Domain.OFERTA_SERVICO.#ctor(System.Guid,System.Guid)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="ID_SERVICO"></param>
-            <param name="ID_USUARIO">ID DO PROFISSIONAL (EXCLUSIVO SERVIÇO PRIVADO)</param>
+             </summary>
+             <param name="ID_SERVICO"></param>
+             <param name="ID_USUARIO">ID DO PROFISSIONAL (EXCLUSIVO SERVIÇO PRIVADO)</param>
         </member>
         <member name="M:JOB.DATA.Domain.PERFIL_PROFISSIONAL.#ctor">
             <summary>
@@ -47,29 +47,29 @@
             </summary>
         </member>
         <member name="M:JOB.DATA.Domain.PROPOSTA_SERVICO.#ctor(System.Guid,System.Guid,System.Double,System.String,JOB.DATA.Enum.EnumDuracaoServico,System.Int32)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="ID_SERVICO"></param>
-            <param name="ID_USUARIO">ID DO PROFISSIONAL</param>
-            <param name="VL_PROPOSTA"></param>
-            <param name="JUSTIFICATIVA"></param>
-            <param name="DURACAO_SERVICO"></param>
-            <param name="VALOR_DURACAO_SERVICO"></param>
+             </summary>
+             <param name="ID_SERVICO"></param>
+             <param name="ID_USUARIO">ID DO PROFISSIONAL</param>
+             <param name="VL_PROPOSTA"></param>
+             <param name="JUSTIFICATIVA"></param>
+             <param name="DURACAO_SERVICO"></param>
+             <param name="VALOR_DURACAO_SERVICO"></param>
         </member>
         <member name="M:JOB.DATA.Domain.SERVICO.#ctor(System.Guid,System.Guid,System.Int32,System.Nullable{System.Int32},System.Boolean,System.String,System.String,System.Nullable{System.Double},JOB.DATA.Enum.EnumTempoServico)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="ID_SERVICO"></param>
-            <param name="ID_USUARIO">ID DO CLIENTE</param>
-            <param name="ID_ESPECIALIDADE"></param>
-            <param name="ID_SUB_ESPECIALIDADE"></param>
-            <param name="PUBLICO"></param>
-            <param name="DS_TITULO"></param>
-            <param name="DS_OBSERVACOES"></param>
-            <param name="VL_SUGERIDO"></param>
-            <param name="TEMPO_SERVICO"></param>
+             </summary>
+             <param name="ID_SERVICO"></param>
+             <param name="ID_USUARIO">ID DO CLIENTE</param>
+             <param name="ID_ESPECIALIDADE"></param>
+             <param name="ID_SUB_ESPECIALIDADE"></param>
+             <param name="PUBLICO"></param>
+             <param name="DS_TITULO"></param>
+             <param name="DS_OBSERVACOES"></param>
+             <param name="VL_SUGERIDO"></param>
+             <param name="TEMPO_SERVICO"></param>
         </member>
         <member name="M:JOB.DATA.Domain.USUARIO.#ctor">
             <summary>

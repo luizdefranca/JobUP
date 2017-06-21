@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201705300245394_chat2.Designer.cs">
       <DependentUpon>201705300245394_chat2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706210336396_updates.cs" />
+    <Compile Include="Migrations\201706210336396_updates.Designer.cs">
+      <DependentUpon>201706210336396_updates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AvaliacaoViewModel.cs" />
     <Compile Include="Model\ChatVM.cs" />
@@ -262,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705300245394_chat2.resx">
       <DependentUpon>201705300245394_chat2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706210336396_updates.resx">
+      <DependentUpon>201706210336396_updates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
