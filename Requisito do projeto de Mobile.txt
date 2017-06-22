@@ -1,0 +1,11 @@
+Requisitos Mínimos do Projeto 
+1. Pelo menos duas classes de Modelo ok
+2. CRUD para uma delas persistindo em Banco de Dados SQLite ok
+3. Consumir um web service REST(JSON) para um segundo modelo
+4. Em pelo menos uma tela fazer um layout específico landscape e Tablets. ok
+5. Fazer um tratamento para trabalhar com Fragments ao invés de apenas uma activity
+6. Planejar uma activity para trabalhar usando PageViewer(Slider, Spinner ou Tabs). 
+7. Projeto em duas línguas (sugestão, pt e en).ok
+8. Uma Activity para Mapa.ok
+9. Usar Toolbar ok
+10. Qualquer outro recurso adicional que queiram usar.
